@@ -28,13 +28,13 @@
 <title>cluster_WorkflowModule_declarations</title>
 <polygon fill="none" stroke="black" points="264,-78 264,-130 418,-130 418,-78 264,-78"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_WorkflowModule_imports</title>
-<polygon fill="none" stroke="black" points="78,-78 78,-130 256,-130 256,-78 78,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_WorkflowModule_exports</title>
 <polygon fill="none" stroke="black" points="174,-208 174,-260 332,-260 332,-208 174,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_WorkflowModule_imports</title>
+<polygon fill="none" stroke="black" points="78,-78 78,-130 256,-130 256,-78 78,-78"/>
 </g>
 <!-- WorkflowComponent -->
 <g id="node1" class="node">
