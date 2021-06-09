@@ -697,6 +697,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/QueryBuilderService.html" data-type="entity-link">QueryBuilderService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/SafeApiProxyService.html" data-type="entity-link">SafeApiProxyService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/SafeApplicationService.html" data-type="entity-link">SafeApplicationService</a>
                                 </li>
                                 <li class="link">
@@ -769,6 +772,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/AddSubscriptionMutationResponse.html" data-type="entity-link">AddSubscriptionMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ApiConfiguration.html" data-type="entity-link">ApiConfiguration</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Application.html" data-type="entity-link">Application</a>

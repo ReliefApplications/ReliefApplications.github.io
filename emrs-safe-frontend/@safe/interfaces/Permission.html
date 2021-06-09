@@ -253,7 +253,8 @@ export enum Permissions {
     canSeeRoles &#x3D; &#x27;can_see_roles&#x27;,
     canManageForms &#x3D; &#x27;can_manage_forms&#x27;,
     canManageResources &#x3D; &#x27;can_manage_resources&#x27;,
-    canManageApplications &#x3D; &#x27;can_manage_applications&#x27;
+    canManageApplications &#x3D; &#x27;can_manage_applications&#x27;,
+    canManageApiConfigurations &#x3D; &#x27;can_manage_api_configurations&#x27;
 }
 
 /*  Enum of permissions types.
@@ -283,6 +284,9 @@ export class PermissionsManagement {
             },
             roles: {
                 access: Permissions.canSeeRoles
+            },
+            apiconfigurations: {
+                create: Permissions.canManageApiConfigurations
             }
         },
         applications: {
