@@ -160,7 +160,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {gql} from &#x27;apollo-angular&#x27;;
 
-import { Dashboard, Form, Resource, Role, User, Record, Application, Page, Workflow, Step, Channel } from &#x27;@safe/builder&#x27;;
+import { Dashboard, Form, Resource, Role, User, Record, Application, Page, Workflow, Step, ApiConfiguration } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; EDIT USER &#x3D;&#x3D;&#x3D;
 export const EDIT_USER &#x3D; gql&#x60;
@@ -771,6 +771,115 @@ mutation editStep($id: ID!, $name: String, $type: String, $content: ID, $permiss
 export interface EditStepMutationResponse {
   loading: boolean;
   editStep: Step;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT RECORD &#x3D;&#x3D;&#x3D;
+export const EDIT_RECORD &#x3D; gql&#x60;
+mutation editRecord($id: ID!, $data: JSON, $version: ID, $display: Boolean) {
+  editRecord(id: $id, data: $data, version: $version) {
+    id
+    data(display: $display)
+    createdAt
+    modifiedAt
+  }
+}&#x60;;
+
+export interface EditRecordMutationResponse {
+  loading: boolean;
+  editRecord: Record;
+}
+
+// &#x3D;&#x3D;&#x3D; ADD API CONFIGURATION &#x3D;&#x3D;&#x3D;
+export const ADD_API_CONFIGURATIION &#x3D; gql&#x60;
+mutation addApiConfiguration($name: String!) {
+  addApiConfiguration(name: $name) {
+    id
+    name
+    status
+    authType
+    endpoint
+    pingUrl
+    settings
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    canDelete
+  }
+}&#x60;;
+
+export interface AddApiConfigurationMutationResponse {
+  loading: boolean;
+  addApiConfiguration: ApiConfiguration;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE API CONFIGURATION &#x3D;&#x3D;&#x3D;
+export const DELETE_API_CONFIGURATIION &#x3D; gql&#x60;
+mutation deleteApiConfiguration($id: ID!) {
+  deleteApiConfiguration(id: $id) {
+    id
+  }
+}&#x60;;
+
+export interface DeleteApiConfigurationMutationResponse {
+  loading: boolean;
+  deleteApiConfiguration: ApiConfiguration;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT API CONFIGURATION &#x3D;&#x3D;&#x3D;
+export const EDIT_API_CONFIGURATIION &#x3D; gql&#x60;
+mutation editApiConfiguration($id: ID!, $name: String, $status: Status, $authType: String, $endpoint: String, $pingUrl: String, $settings: JSON, $permissions: JSON) {
+  editApiConfiguration(id: $id, name: $name, status: $status, authType: $authType, endpoint: $endpoint, pingUrl: $pingUrl, settings: $settings, permissions: $permissions) {
+    id
+    name
+    status
+    authType
+    endpoint
+    pingUrl
+    settings
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    canDelete
+  }
+}&#x60;;
+
+export interface EditApiConfigurationMutationResponse {
+  loading: boolean;
+  editApiConfiguration: ApiConfiguration;
 }
 </code></pre>
     </div>

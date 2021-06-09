@@ -216,6 +216,23 @@ export const routes &#x3D; [
                         // canActivate: [SafePermissionGuard]
                     },
                     {
+                        path: &#x27;apiconfigurations&#x27;,
+                        children: [
+                            {
+                                path: &#x27;&#x27;,
+                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/api-configurations/api-configurations.module&#x27;)
+                                .then(m &#x3D;&gt; m.ApiConfigurationsModule),
+                                // canActivate: [SafePermissionGuard]
+                            },
+                            {
+                                path: &#x27;:id&#x27;,
+                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/api-configuration/api-configuration.module&#x27;)
+                                    .then(m &#x3D;&gt; m.ApiConfigurationModule),
+                                // canActivate: [SafePermissionGuard]
+                            }
+                        ]
+                    },
+                    {
                         path: &#x27;**&#x27;,
                         pathMatch: &#x27;full&#x27;,
                         redirectTo: &#x27;users&#x27;

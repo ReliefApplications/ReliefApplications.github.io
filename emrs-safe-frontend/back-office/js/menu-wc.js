@@ -117,6 +117,52 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AddStepRoutingModule.html" data-type="entity-link">AddStepRoutingModule</a>
                             </li>
                             <li class="link">
+                                <a href="modules/ApiConfigurationModule.html" data-type="entity-link">ApiConfigurationModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ApiConfigurationModule-937d0004cc0aefd58eae55ce066401d6"' : 'data-target="#xs-components-links-module-ApiConfigurationModule-937d0004cc0aefd58eae55ce066401d6"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApiConfigurationModule-937d0004cc0aefd58eae55ce066401d6"' :
+                                            'id="xs-components-links-module-ApiConfigurationModule-937d0004cc0aefd58eae55ce066401d6"' }>
+                                            <li class="link">
+                                                <a href="components/ApiConfigurationComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ApiConfigurationComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ApiConfigurationRoutingModule.html" data-type="entity-link">ApiConfigurationRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ApiConfigurationsModule.html" data-type="entity-link">ApiConfigurationsModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ApiConfigurationsModule-81448e7ad6b482ddc4bd38c89314942e"' : 'data-target="#xs-components-links-module-ApiConfigurationsModule-81448e7ad6b482ddc4bd38c89314942e"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApiConfigurationsModule-81448e7ad6b482ddc4bd38c89314942e"' :
+                                            'id="xs-components-links-module-ApiConfigurationsModule-81448e7ad6b482ddc4bd38c89314942e"' }>
+                                            <li class="link">
+                                                <a href="components/AddApiConfigurationComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AddApiConfigurationComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ApiConfigurationsComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ApiConfigurationsComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ApiConfigurationsRoutingModule.html" data-type="entity-link">ApiConfigurationsRoutingModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/ApplicationModule.html" data-type="entity-link">ApplicationModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -970,6 +1016,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
+                                <a href="interfaces/AddApiConfigurationMutationResponse.html" data-type="entity-link">AddApiConfigurationMutationResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/AddApplicationMutationResponse.html" data-type="entity-link">AddApplicationMutationResponse</a>
                             </li>
                             <li class="link">
@@ -986,6 +1035,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/CanComponentDeactivate.html" data-type="entity-link">CanComponentDeactivate</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DeleteApiConfigurationMutationResponse.html" data-type="entity-link">DeleteApiConfigurationMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/DeleteApplicationMutationResponse.html" data-type="entity-link">DeleteApplicationMutationResponse</a>
@@ -1013,6 +1065,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/DuplicateApplicationMutationResponse.html" data-type="entity-link">DuplicateApplicationMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EditApiConfigurationMutationResponse.html" data-type="entity-link">EditApiConfigurationMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditApplicationMutationResponse.html" data-type="entity-link">EditApplicationMutationResponse</a>
@@ -1043,6 +1098,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditWorkflowMutationResponse.html" data-type="entity-link">EditWorkflowMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetApiConfigurationQueryResponse.html" data-type="entity-link">GetApiConfigurationQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetApiConfigurationsQueryResponse.html" data-type="entity-link">GetApiConfigurationsQueryResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetApplicationByIdQueryResponse.html" data-type="entity-link">GetApplicationByIdQueryResponse</a>

@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/graphql/queries.ts</code>
+            <code>projects/back-office/src/app/graphql/mutations.ts</code>
         </p>
 
 
@@ -158,39 +158,34 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import {
-  Dashboard, Form, Permission, Resource, Role, User, Record,
-  Application, Page, Workflow, Step, PositionAttribute
-} from &#x27;@safe/builder&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {gql} from &#x27;apollo-angular&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET USERS &#x3D;&#x3D;&#x3D;
-export const GET_USERS &#x3D; gql&#x60;
-{
-  users {
+import { Dashboard, Form, Resource, Role, User, Record, Application, Page, Workflow, Step, ApiConfiguration } from &#x27;@safe/builder&#x27;;
+
+// &#x3D;&#x3D;&#x3D; EDIT USER &#x3D;&#x3D;&#x3D;
+export const EDIT_USER &#x3D; gql&#x60;
+mutation editUser($id: ID!, $roles: [ID]!, $application: ID) {
+  editUser(id: $id, roles: $roles, application: $application) {
     id
     username
     name
     roles {
       id
       title
-      application {
-        id
-      }
     }
     oid
   }
 }&#x60;;
 
-export interface GetUsersQueryResponse {
+export interface EditUserMutationResponse {
   loading: boolean;
-  users: User[];
+  editUser: User;
 }
 
-// &#x3D;&#x3D;&#x3D; GET ROLES &#x3D;&#x3D;&#x3D;
-export const GET_ROLES &#x3D; gql&#x60;
-query GetRoles($all: Boolean, $application: ID) {
-  roles(all: $all, application: $application) {
+// &#x3D;&#x3D;&#x3D; ADD ROLE &#x3D;&#x3D;&#x3D;
+export const ADD_ROLE &#x3D; gql&#x60;
+mutation addRole($title: String!, $application: ID) {
+  addRole(title: $title, application: $application) {
     id
     title
     permissions {
@@ -201,143 +196,113 @@ query GetRoles($all: Boolean, $application: ID) {
   }
 }&#x60;;
 
-
-export interface GetRolesQueryResponse {
+export interface AddRoleMutationResponse {
   loading: boolean;
-  roles: Role[];
+  addRole: Role;
 }
 
-// &#x3D;&#x3D;&#x3D; GET PERMISSIONS &#x3D;&#x3D;&#x3D;
-export const GET_PERMISSIONS &#x3D; gql&#x60;
-query GetPermissions($application: Boolean) {
-  permissions(application: $application) {
+// &#x3D;&#x3D;&#x3D; EDIT ROLE &#x3D;&#x3D;&#x3D;
+export const EDIT_ROLE &#x3D; gql&#x60;
+mutation editRole($id: ID!, $permissions: [ID]!) {
+  editRole(id: $id, permissions: $permissions) {
     id
-    type
-    global
+    title
+    usersCount
   }
 }&#x60;;
 
-export interface GetPermissionsQueryResponse {
+export interface EditRoleMutationResponse {
   loading: boolean;
-  permissions: Permission[];
+  editRole: Role;
 }
 
-// &#x3D;&#x3D;&#x3D; GET DASHBOARDS &#x3D;&#x3D;&#x3D;
-export const GET_DASHBOARDS &#x3D; gql&#x60;
-{
-  dashboards {
+// &#x3D;&#x3D;&#x3D; DELETE ROLE &#x3D;&#x3D;&#x3D;
+export const DELETE_ROLE &#x3D; gql&#x60;
+mutation deleteRole($id: ID!) {
+  deleteRole(id: $id) {
     id
-    name
-    createdAt
-    structure
-    canDelete
   }
 }&#x60;;
 
-export interface GetDashboardsQueryResponse {
+export interface DeleteRoleMutationResponse {
   loading: boolean;
-  dashboards: Dashboard[];
+  deleteRole: Role;
 }
 
-// &#x3D;&#x3D;&#x3D; GET FORMS &#x3D;&#x3D;&#x3D;
-export const GET_FORM_NAMES &#x3D; gql&#x60;
-query GetFormNames {
-  forms {
-    id
-    name
-  }
-}&#x60;;
 
-export const GET_SHORT_FORMS &#x3D; gql&#x60;
-query GetShortForms {
-  forms {
-    id
-    name
-    createdAt
-    status
-    versionsCount
-    recordsCount
-    core
-    canSee
-    canCreate
-    canUpdate
-    canDelete
-    resource {
-      id
-      coreForm {
-        id
-        name
-      }
-    }
-  }
-}&#x60;;
 
-export interface GetFormsQueryResponse {
-  loading: boolean;
-  forms: Form[];
-}
-
-// &#x3D;&#x3D;&#x3D; GET FORM BY ID &#x3D;&#x3D;&#x3D;
-export const GET_SHORT_FORM_BY_ID &#x3D; gql&#x60;
-query GetShortFormById($id: ID!) {
-  form(id: $id) {
+// &#x3D;&#x3D;&#x3D; ADD DASHBOARD &#x3D;&#x3D;&#x3D;
+export const ADD_DASHBOARD &#x3D; gql&#x60;
+mutation addDashboard($name: String!) {
+  addDashboard(name: $name){
     id
     name
     structure
-    fields
-    status
-    canCreateRecords
-    uniqueRecord {
-      id
-      modifiedAt
-      data
-    }
-    canUpdate
+    createdAt
   }
 }&#x60;;
 
-export const GET_FORM_BY_ID &#x3D; gql&#x60;
-query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
-  form(id: $id) {
+export interface AddDashboardMutationResponse {
+  loading: boolean;
+  addDashboard: Dashboard;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE DASHBOARD &#x3D;&#x3D;&#x3D;
+export const DELETE_DASHBOARD &#x3D; gql&#x60;
+mutation deleteDashboard($id: ID!) {
+  deleteDashboard(id: $id){
+    id
+    name
+  }
+}&#x60;;
+
+export interface DeleteDashboardMutationResponse {
+  loading: boolean;
+  deleteDashboard: Dashboard;
+}
+
+// &#x3D;&#x3D;&#x3D; ADD FORM &#x3D;&#x3D;&#x3D;
+export const ADD_FORM &#x3D; gql&#x60;
+mutation addForm($name: String!, $newResource: Boolean, $resource: ID, $template: ID) {
+  addForm(name: $name, newResource: $newResource, resource: $resource, template: $template) {
     id
     name
     createdAt
-    structure
-    fields
     status
     versions {
       id
-      createdAt
-      data
-    }
-    records(filters: $filters) {
-      id
-      data(display: $display)
-      versions {
-        id
-        createdAt
-        data
-      }
     }
   }
 }&#x60;;
 
-export interface GetFormByIdQueryResponse {
+export interface AddFormMutationResponse {
   loading: boolean;
-  form: Form;
-  errors: any;
+  addForm: Form;
 }
 
-// &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
-export const GET_RESOURCE_BY_ID &#x3D; gql&#x60;
-query GetResourceById($id: ID!, $filters: JSON, $display: Boolean) {
-  resource(id: $id) {
+// &#x3D;&#x3D;&#x3D; DELETE FORM &#x3D;&#x3D;&#x3D;
+export const DELETE_FORM &#x3D; gql&#x60;
+mutation deleteForm($id: ID!) {
+  deleteForm(id: $id) {
+    id
+  }
+}&#x60;;
+
+export interface DeleteFormMutationResponse {
+  loading: boolean;
+  deleteForm: Form;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT RESOURCE &#x3D;&#x3D;&#x3D;
+export const EDIT_RESOURCE &#x3D; gql&#x60;
+mutation editResource($id: ID!, $permissions: JSON) {
+  editResource(id: $id, permissions: $permissions) {
     id
     name
     createdAt
-    records(filters: $filters) {
+    records {
       id
-      data(display: $display)
+      data(display: true)
     }
     fields
     forms {
@@ -369,130 +334,289 @@ query GetResourceById($id: ID!, $filters: JSON, $display: Boolean) {
         title
       }
     }
-    canCreate
     canUpdate
   }
 }&#x60;;
 
-export interface GetResourceByIdQueryResponse {
+export interface EditResourceMutationResponse {
   loading: boolean;
-  resource: Resource;
+  editResource: Resource;
 }
 
-// &#x3D;&#x3D;&#x3D; GET RESOURCES &#x3D;&#x3D;&#x3D;
-export const GET_RESOURCES &#x3D; gql&#x60;
-{
-  resources {
+
+// &#x3D;&#x3D; DELETE RESOURCE &#x3D;&#x3D;
+
+export const DELETE_RESOURCE &#x3D; gql&#x60;
+mutation deleteResource($id: ID!){
+  deleteResource(id: $id){
+    id
+  }
+}&#x60;;
+
+export interface DeleteResourceMutationResponse{
+  loading: boolean;
+  deletedResource: Resource;
+}
+
+
+// &#x3D;&#x3D;&#x3D; DELETE RECORD &#x3D;&#x3D;&#x3D;
+export const DELETE_RECORD &#x3D; gql&#x60;
+mutation deleteRecord($id: ID!) {
+  deleteRecord(id: $id) {
+    id
+  }
+}&#x60;;
+
+export interface DeleteRecordMutationResponse {
+  loading: boolean;
+  deleteRecord: Record;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT FORM &#x3D;&#x3D;&#x3D;
+export const EDIT_FORM_STRUCTURE &#x3D; gql&#x60;
+mutation editForm($id: ID!, $structure: JSON!) {
+  editForm(id: $id, structure: $structure) {
     id
     name
-    forms {
+    createdAt
+    status
+    versions {
+      id
+      createdAt
+      data
+    }
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canUpdate
+  }
+}&#x60;;
+
+export const EDIT_FORM_STATUS &#x3D; gql&#x60;
+mutation editForm($id: ID!, $status: String!) {
+  editForm(id: $id, status: $status) {
+    status
+  }
+}&#x60;;
+
+export const EDIT_FORM_NAME &#x3D; gql&#x60;
+mutation editForm($id: ID!, $name: String!){
+  editForm(id: $id, name: $name){
+    id
+    name
+    createdAt
+    status
+    versions {
+      id
+      createdAt
+      data
+    }
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canUpdate
+  }
+}&#x60;;
+
+export const EDIT_FORM_PERMISSIONS &#x3D; gql&#x60;
+mutation editForm($id: ID!, $permissions: JSON!){
+  editForm(id: $id, permissions: $permissions){
+    id
+    name
+    createdAt
+    status
+    versions {
+      id
+      createdAt
+      data
+    }
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canUpdate
+  }
+}&#x60;;
+
+
+export interface EditFormMutationResponse {
+  loading: boolean;
+  editForm: Form;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT DASHBOARD &#x3D;&#x3D;&#x3D;
+export const EDIT_DASHBOARD &#x3D; gql&#x60;
+mutation editDashboard($id: ID!, $structure: JSON, $name: String) {
+  editDashboard(id: $id, structure: $structure, name: $name) {
+    id
+    name
+    structure
+    modifiedAt
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    page {
       id
       name
+      application {
+        id
+      }
     }
   }
 }&#x60;;
 
-export const GET_RESOURCES_EXTENDED &#x3D; gql&#x60;
-{
-  resources {
+export interface EditDashboardMutationResponse {
+  loading: boolean;
+  editDashboard: Dashboard;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE APPLICATION &#x3D;&#x3D;&#x3D;
+export const DELETE_APPLICATION &#x3D; gql&#x60;
+mutation deleteApplication($id: ID!) {
+  deleteApplication(id: $id){
     id
     name
-    createdAt
-    recordsCount
   }
 }&#x60;;
 
-export interface GetResourcesQueryResponse {
+export interface DeleteApplicationMutationResponse {
   loading: boolean;
-  resources: Resource[];
+  deleteApplication: Application;
 }
 
-// &#x3D;&#x3D;&#x3D; GET RECORD BY ID &#x3D;&#x3D;&#x3D;
-export const GET_RECORD_BY_ID &#x3D; gql&#x60;
-query GetRecordById($id: ID!) {
-  record(id: $id) {
+// &#x3D;&#x3D;&#x3D; ADD APPLICATION &#x3D;&#x3D;&#x3D;
+export const ADD_APPLICATION &#x3D; gql&#x60;
+mutation addApplication($name: String!) {
+  addApplication(name: $name){
     id
-    createdAt
-    modifiedAt
-    data
-    modifiedAt
-    form {
-      id
-      structure
-    }
-  }
-}&#x60;;
-
-export interface GetRecordByIdQueryResponse {
-  loading: boolean;
-  record: Record;
-}
-
-// &#x3D;&#x3D;&#x3D; GET DASHBOARD BY ID &#x3D;&#x3D;&#x3D;
-export const GET_DASHBOARD_BY_ID &#x3D; gql&#x60;
-  query GetDashboardById($id: ID!){
-    dashboard(id: $id){
+    name
+    pages {
       id
       name
       createdAt
-      structure
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canCreate {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-      page {
-        id
-        application {
-          id
-        }
-        canUpdate
-      }
-      step {
-        id
-        workflow {
-          id
-          page {
-            id
-            application {
-              id
-            }
-          }
-        }
-        canUpdate
-      }
+      type
+      content
     }
+    createdAt
   }
-&#x60;;
+}&#x60;;
 
-export interface GetDashboardByIdQueryResponse {
+export interface AddApplicationMutationResponse {
   loading: boolean;
-  dashboard: Dashboard;
+  addApplication: Application;
 }
 
-// &#x3D;&#x3D;&#x3D; GET APPLICATIONS &#x3D;&#x3D;&#x3D;
-export const GET_APPLICATIONS &#x3D; gql&#x60;
-{
-  applications {
+// &#x3D;&#x3D;&#x3D; EDIT APPLICATION &#x3D;&#x3D;&#x3D;
+export const EDIT_APPLICATION &#x3D; gql&#x60;
+mutation editApplication($id: ID!, $name: String, $status: String, $pages: [ID], $permissions: JSON, $description: String) {
+  editApplication(id: $id, name: $name, status: $status, pages: $pages, permissions: $permissions, description: $description) {
     id
+    description
     name
     createdAt
     modifiedAt
+    status
+    pages {
+      id
+      name
+      createdAt
+      type
+      content
+    }
+    settings
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    canDelete
+  }
+}&#x60;;
+
+export interface EditApplicationMutationResponse {
+  loading: boolean;
+  editApplication: Application;
+}
+
+// &#x3D;&#x3D;&#x3D; DUPLICATE APPLICATION &#x3D;&#x3D;&#x3D;
+export const DUPLICATE_APPLICATION &#x3D; gql&#x60;
+mutation duplicateApplication($name: String!, $application: ID! ) {
+  duplicateApplication(name: $name, application: $application){
+    id
+    name
+    createdAt
     status
     permissions {
       canSee {
@@ -514,305 +638,139 @@ export const GET_APPLICATIONS &#x3D; gql&#x60;
     usersCount
   }
 }&#x60;;
+// in () input parameters, in {} return values
 
-export interface GetApplicationsQueryResponse {
+export interface DuplicateApplicationMutationResponse {
   loading: boolean;
-  applications: Application[];
+  duplicateApplication: Application;
 }
 
-// &#x3D;&#x3D;&#x3D; GET APPLICATION BY ID &#x3D;&#x3D;&#x3D;
-export const GET_APPLICATION_BY_ID &#x3D; gql&#x60;
-  query GetApplicationById($id: ID!, $asRole: ID){
-    application(id: $id, asRole: $asRole){
-      id
-      name
-      description
-      createdAt
-      status
-      pages {
-        id
-        name
-        type
-        content
-        createdAt
-        canSee
-        canUpdate
-        canDelete
-      }
-      roles {
-        id
-        title
-        permissions {
-          id
-          type
-        }
-        usersCount
-      }
-      users {
-        id
-        username
-        name
-        roles {
-          id
-          title
-        }
-        oid
-      }
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canCreate {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-    }
+// &#x3D;&#x3D;&#x3D; DELETE PAGE &#x3D;&#x3D;&#x3D;
+export const DELETE_PAGE &#x3D; gql&#x60;
+mutation deletePage($id: ID!) {
+  deletePage(id: $id){
+    id
   }
-&#x60;;
+}&#x60;;
 
-export interface GetApplicationByIdQueryResponse {
+export interface DeletePageMutationResponse {
   loading: boolean;
-  application: Application;
+  deletePage: Page;
 }
 
-// &#x3D;&#x3D;&#x3D; GET PAGE BY ID &#x3D;&#x3D;&#x3D;
-export const GET_PAGE_BY_ID &#x3D; gql&#x60;
-  query GetPageById($id: ID!){
-    page(id: $id){
-      id
-      name
-      createdAt
-      modifiedAt
-      type
-      content
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canCreate {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      application {
-        id
-      }
-      canSee
-      canUpdate
-      canDelete
-    }
-  }
-&#x60;;
-
-export interface GetPageByIdQueryResponse {
-  loading: boolean;
-  page: Page;
-}
-
-// &#x3D;&#x3D;&#x3D; GET WORKFLOW BY ID &#x3D;&#x3D;&#x3D;
-export const GET_WORKFLOW_BY_ID &#x3D; gql&#x60;
-  query GetWorkflowById($id: ID!, $asRole: ID){
-    workflow(id: $id, asRole: $asRole){
-      id
-      name
-      createdAt
-      modifiedAt
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canCreate {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      steps {
-        id
-        name
-        type
-        content
-        createdAt
-      }
-      page {
-        id
-        name
-        canUpdate
-        permissions {
-          canSee {
-            id
-            title
-          }
-          canCreate {
-            id
-            title
-          }
-          canUpdate {
-            id
-            title
-          }
-          canDelete {
-            id
-            title
-          }
-        }
-        application {
-          id
-        }
-      }
-    }
-  }
-&#x60;;
-
-export interface GetWorkflowByIdQueryResponse {
-  loading: boolean;
-  workflow: Workflow;
-}
-
-// &#x3D;&#x3D;&#x3D; GET STEP BY ID &#x3D;&#x3D;&#x3D;
-export const GET_STEP_BY_ID &#x3D; gql&#x60;
-  query GetStepById($id: ID!){
-    step(id: $id){
-      id
-      name
-      createdAt
-      modifiedAt
-      content
-      workflow {
-        id
-        name
-        page {
-          id
-          application {
-            id
-          }
-        }
-      }
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canCreate {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-      canDelete
-    }
-  }
-&#x60;;
-
-export interface GetStepByIdQueryResponse {
-  loading: boolean;
-  step: Step;
-}
-
-// &#x3D;&#x3D;&#x3D; GET ROUTING KEYS &#x3D;&#x3D;&#x3D;
-export const GET_ROUTING_KEYS &#x3D; gql&#x60;
-query GetRoutingKeys {
-  applications {
+// &#x3D;&#x3D;&#x3D; ADD PAGE &#x3D;&#x3D;&#x3D;
+export const ADD_PAGE &#x3D; gql&#x60;
+mutation addPage($name: String, $type: String!, $content: ID, $application: ID!) {
+  addPage(name: $name, type: $type, content: $content, application: $application){
     id
     name
-    channels {
-      id
-      title
-      routingKey
-    }
-  }
-}&#x60;;
-
-export interface GetRoutingKeysQueryResponse {
-  loading: boolean;
-  applications: Application[];
-}
-
-// &#x3D;&#x3D;&#x3D; GET POSITION ATTRIBUTES FORM CATEGORY &#x3D;&#x3D;&#x3D;
-export const GET_POSITION_ATTRIBUTES_FROM_CATEGORY &#x3D; gql&#x60;
-query GetPositionAttributesFromCategory($id: ID!) {
-  positionAttributes(category: $id) {
-    value
-    category {
-      title
-    }
-    usersCount
-  }
-}&#x60;;
-
-export interface GetPositionAttributesFromCategoryQueryResponse {
-  loading: boolean;
-  positionAttributes: PositionAttribute[];
-}
-
-// &#x3D;&#x3D;&#x3D; GET RECORD DETAILS &#x3D;&#x3D;&#x3D;
-export const GET_RECORD_DETAILS &#x3D; gql&#x60;
-query GetRecordDetails($id: ID!) {
-  record(id: $id) {
-    id
-    data
+    type
+    content
     createdAt
-    modifiedAt
-    form {
-      id
-      name
-      createdAt
-      structure
-      fields
-      core
-    }
-    versions {
-      id
-      createdAt
-      data
-      createdBy {
-        name
+    canSee
+    canUpdate
+    canDelete
+  }
+}&#x60;;
+
+export interface AddPageMutationResponse {
+  loading: boolean;
+  addPage: Page;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT PAGE &#x3D;&#x3D;&#x3D;
+export const EDIT_PAGE &#x3D; gql&#x60;
+mutation editPage($id: ID!, $name: String, $permissions: JSON) {
+  editPage(id: $id, name: $name, permissions: $permissions){
+    id
+    name
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
       }
     }
   }
 }&#x60;;
 
-export interface GetRecordDetailsQueryResponse {
+export interface EditPageMutationResponse {
   loading: boolean;
-  record: Record;
+  editPage: Page;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT WORKFLOW &#x3D;&#x3D;&#x3D;
+export const EDIT_WORKFLOW &#x3D; gql&#x60;
+mutation editWorkflow($id: ID!, $name: String, $steps: [ID]) {
+  editWorkflow(id: $id, name: $name, steps: $steps){
+    id
+    name
+  }
+}&#x60;;
+
+export interface EditWorkflowMutationResponse {
+  loading: boolean;
+  editWorkflow: Workflow;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE STEP &#x3D;&#x3D;&#x3D;
+export const DELETE_STEP &#x3D; gql&#x60;
+mutation deleteStep($id: ID!) {
+  deleteStep(id: $id){
+    id
+    name
+  }
+}&#x60;;
+
+export interface DeleteStepMutationResponse {
+  loading: boolean;
+  deleteStep: Step;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT STEP &#x3D;&#x3D;&#x3D;
+export const EDIT_STEP &#x3D; gql&#x60;
+mutation editStep($id: ID!, $name: String, $type: String, $content: ID, $permissions: JSON) {
+  editStep(id: $id, name: $name, type: $type, content: $content, permissions: $permissions) {
+    id
+    name
+    type
+    content
+    createdAt
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+  }
+}&#x60;;
+
+export interface EditStepMutationResponse {
+  loading: boolean;
+  editStep: Step;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT RECORD &#x3D;&#x3D;&#x3D;
@@ -829,6 +787,99 @@ mutation editRecord($id: ID!, $data: JSON, $version: ID, $display: Boolean) {
 export interface EditRecordMutationResponse {
   loading: boolean;
   editRecord: Record;
+}
+
+// &#x3D;&#x3D;&#x3D; ADD API CONFIGURATION &#x3D;&#x3D;&#x3D;
+export const ADD_API_CONFIGURATIION &#x3D; gql&#x60;
+mutation addApiConfiguration($name: String!) {
+  addApiConfiguration(name: $name) {
+    id
+    name
+    status
+    authType
+    endpoint
+    pingUrl
+    settings
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    canDelete
+  }
+}&#x60;;
+
+export interface AddApiConfigurationMutationResponse {
+  loading: boolean;
+  addApiConfiguration: ApiConfiguration;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE API CONFIGURATION &#x3D;&#x3D;&#x3D;
+export const DELETE_API_CONFIGURATIION &#x3D; gql&#x60;
+mutation deleteApiConfiguration($id: ID!) {
+  deleteApiConfiguration(id: $id) {
+    id
+  }
+}&#x60;;
+
+export interface DeleteApiConfigurationMutationResponse {
+  loading: boolean;
+  deleteApiConfiguration: ApiConfiguration;
+}
+
+// &#x3D;&#x3D;&#x3D; EDIT API CONFIGURATION &#x3D;&#x3D;&#x3D;
+export const EDIT_API_CONFIGURATIION &#x3D; gql&#x60;
+mutation editApiConfiguration($id: ID!, $name: String, $status: Status, $authType: String, $endpoint: String, $pingUrl: String, $settings: JSON, $permissions: JSON) {
+  editApiConfiguration(id: $id, name: $name, status: $status, authType: $authType, endpoint: $endpoint, pingUrl: $pingUrl, settings: $settings, permissions: $permissions) {
+    id
+    name
+    status
+    authType
+    endpoint
+    pingUrl
+    settings
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canCreate {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    canDelete
+  }
+}&#x60;;
+
+export interface EditApiConfigurationMutationResponse {
+  loading: boolean;
+  editApiConfiguration: ApiConfiguration;
 }
 </code></pre>
     </div>
