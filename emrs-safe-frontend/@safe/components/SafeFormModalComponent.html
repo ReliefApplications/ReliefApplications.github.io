@@ -1363,7 +1363,7 @@ export class SafeFormModalComponent implements OnInit {
           }
         }).toPromise();
         if (res.errors) {
-          this.snackBar.openSnackBar(&#x27;Upload failed.&#x27;, { error: true });
+          this.snackBar.openSnackBar(res.errors[0].message, { error: true });
           return;
         } else {
           data[name][index].content &#x3D; res.data?.uploadFile;

@@ -28,13 +28,13 @@
 <title>cluster_SafeFormModule_imports</title>
 <polygon fill="none" stroke="black" points="176,-78 176,-130 512,-130 512,-78 176,-78"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeFormModule_exports</title>
-<polygon fill="none" stroke="black" points="181,-208 181,-260 337,-260 337,-208 181,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeFormModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 168,-130 168,-78 16,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeFormModule_exports</title>
+<polygon fill="none" stroke="black" points="181,-208 181,-260 337,-260 337,-208 181,-208"/>
 </g>
 <!-- SafeFormComponent -->
 <g id="node1" class="node">
