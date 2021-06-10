@@ -145,6 +145,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#hideNewRecord">hideNewRecord</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#isStep">isStep</a>
                             </li>
                             <li>
@@ -219,7 +223,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -310,8 +314,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:54</a></div>
                 </td>
             </tr>
 
@@ -349,8 +353,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:35</a></div>
                 </td>
             </tr>
 
@@ -381,15 +385,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onComplete(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>onComplete(e: literal type)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:49</a></div>
                 </td>
             </tr>
 
@@ -411,7 +415,7 @@
                                 <tr>
                                     <td>e</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>literal type</code>
                                     </td>
 
                                     <td>
@@ -540,6 +544,33 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="hideNewRecord"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            hideNewRecord</b>
+                            <a href="#hideNewRecord"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="isStep"></a>
                         <span class="name">
                             <b>
@@ -556,7 +587,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -612,7 +643,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -641,7 +672,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/web-element/src/app/components/form/form.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -675,6 +706,7 @@ export class FormComponent implements OnInit {
   public loading &#x3D; true;
   public form?: Form;
   public completed &#x3D; false;
+  public hideNewRecord &#x3D; false;
 
   // &#x3D;&#x3D;&#x3D; ROUTER &#x3D;&#x3D;&#x3D;
   public page?: Page;
@@ -701,8 +733,9 @@ export class FormComponent implements OnInit {
     });
   }
 
-  onComplete(e: any): void {
-    this.completed &#x3D; e;
+  onComplete(e: {completed: boolean, hideNewRecord?: boolean}): void {
+    this.completed &#x3D; e.completed;
+    this.hideNewRecord &#x3D; e.hideNewRecord || false;
   }
 
   clearForm(): void {
@@ -716,7 +749,7 @@ export class FormComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;mat-spinner diameter&#x3D;&quot;45&quot; class&#x3D;&quot;page-loader&quot; *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/mat-spinner&gt;
 &lt;ng-container *ngIf&#x3D;&quot;!loading &amp;&amp; form&quot;&gt;
     &lt;safe-form [form]&#x3D;&quot;form&quot; (save)&#x3D;&quot;onComplete($event)&quot;&gt;&lt;/safe-form&gt;
-    &lt;ng-container *ngIf&#x3D;&quot;completed &amp;&amp; !form.uniqueRecord&quot;&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;completed &amp;&amp; !form.uniqueRecord &amp;&amp; !hideNewRecord&quot;&gt;
         &lt;button mat-flat-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;clearForm()&quot;&gt;New record&lt;/button&gt;
     &lt;/ng-container&gt;
 &lt;/ng-container&gt;</code></pre>
@@ -754,7 +787,7 @@ export class FormComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && form">    <safe-form [form]="form" (save)="onComplete($event)"></safe-form>    <ng-container *ngIf="completed && !form.uniqueRecord">        <button mat-flat-button color="primary" (click)="clearForm()">New record</button>    </ng-container></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && form">    <safe-form [form]="form" (save)="onComplete($event)"></safe-form>    <ng-container *ngIf="completed && !form.uniqueRecord && !hideNewRecord">        <button mat-flat-button color="primary" (click)="clearForm()">New record</button>    </ng-container></ng-container></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'WebApplicationComponent', 'selector': 'app-web-application'},{'name': 'WebDashboardComponent', 'selector': 'app-web-dashboard'},{'name': 'WebFormComponent', 'selector': 'app-web-form'},{'name': 'WebWorkflowComponent', 'selector': 'app-web-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FormComponent'};
