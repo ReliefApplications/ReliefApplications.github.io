@@ -780,6 +780,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Application.html" data-type="entity-link">Application</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ApplicationEditedSubscriptionResponse.html" data-type="entity-link">ApplicationEditedSubscriptionResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Channel.html" data-type="entity-link">Channel</a>
                             </li>
                             <li class="link">

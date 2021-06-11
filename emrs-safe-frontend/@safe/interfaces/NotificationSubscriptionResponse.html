@@ -130,6 +130,7 @@
 
 import { Notification } from &#x27;../models/notification.model&#x27;;
 import { Record } from &#x27;../models/record.model&#x27;;
+import { Application } from &#x27;../models/application.model&#x27;;
 
 export const NOTIFICATION_SUBSCRIPTION &#x3D; gql&#x60;
 subscription NotificationSubscription {
@@ -166,6 +167,24 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
 
 export interface RecordAddedSubscriptionResponse {
     recordAdded: Record;
+}
+
+export const APPLICATION_EDITED_SUBSCRIPTION &#x3D; gql&#x60;
+  subscription applicationEdited($id: ID!){
+    applicationEdited(id: $id){
+      id
+      name
+      description
+      createdAt
+      status
+      canSee
+      canUpdate
+    }
+  }
+&#x60;;
+
+export interface ApplicationEditedSubscriptionResponse {
+    applicationEdited: Application;
 }
 </code></pre>
     </div>
