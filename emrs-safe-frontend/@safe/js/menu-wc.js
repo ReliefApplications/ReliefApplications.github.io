@@ -783,6 +783,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ApplicationEditedSubscriptionResponse.html" data-type="entity-link">ApplicationEditedSubscriptionResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ApplicationUnlockedSubscriptionResponse.html" data-type="entity-link">ApplicationUnlockedSubscriptionResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Channel.html" data-type="entity-link">Channel</a>
                             </li>
                             <li class="link">
@@ -946,6 +949,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/Subscription.html" data-type="entity-link">Subscription</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ToggleApplicationLockMutationResponse.html" data-type="entity-link">ToggleApplicationLockMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/UploadFileMutationResponse.html" data-type="entity-link">UploadFileMutationResponse</a>

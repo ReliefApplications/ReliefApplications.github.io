@@ -541,6 +541,8 @@ mutation editApplication($id: ID!, $name: String, $status: String, $pages: [ID],
     canSee
     canUpdate
     canDelete
+    locked
+    lockedByUser
   }
 }&#x60;;
 
@@ -748,6 +750,21 @@ mutation addStep($name: String, $type: String!, $content: ID, $workflow: ID!) {
 export interface AddStepMutationResponse {
   loading: boolean;
   addStep: Step;
+}
+
+// &#x3D;&#x3D;&#x3D; TOGGLE APPLICATION LOCK &#x3D;&#x3D;&#x3D;
+export const TOGGLE_APPLICATION_LOCK &#x3D; gql&#x60;
+mutation toggleApplicationLock($id: ID!, $lock: Boolean!) {
+  toggleApplicationLock(id: $id, lock: $lock) {
+    id
+    locked
+    lockedByUser
+  }
+}&#x60;;
+
+export interface ToggleApplicationLockMutationResponse {
+  loading: boolean;
+  toggleApplicationLock: Application;
 }
 </code></pre>
     </div>

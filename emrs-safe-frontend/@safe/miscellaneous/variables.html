@@ -85,6 +85,9 @@
                             <a href="#APPLICATION_EDITED_SUBSCRIPTION" title="projects/safe/src/lib/graphql/subscriptions.ts"><b>APPLICATION_EDITED_SUBSCRIPTION</b>&nbsp;&nbsp;&nbsp;(projects/.../subscriptions.ts)</a>
                         </li>
                         <li>
+                            <a href="#APPLICATION_UNLOCKED_SUBSCRIPTION" title="projects/safe/src/lib/graphql/subscriptions.ts"><b>APPLICATION_UNLOCKED_SUBSCRIPTION</b>&nbsp;&nbsp;&nbsp;(projects/.../subscriptions.ts)</a>
+                        </li>
+                        <li>
                             <a href="#AVAILABLE_TILES" title="projects/safe/src/lib/utils/available-tiles.ts"><b>AVAILABLE_TILES</b>&nbsp;&nbsp;&nbsp;(projects/.../available-tiles.ts)</a>
                         </li>
                         <li>
@@ -293,6 +296,9 @@
                         </li>
                         <li>
                             <a href="#TITLE_POSITIONS" title="projects/safe/src/lib/components/widgets/chart-settings/constants.ts"><b>TITLE_POSITIONS</b>&nbsp;&nbsp;&nbsp;(projects/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TOGGLE_APPLICATION_LOCK" title="projects/safe/src/lib/graphql/mutations.ts"><b>TOGGLE_APPLICATION_LOCK</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
                             <a href="#UPLOAD_FILE" title="projects/safe/src/lib/graphql/mutations.ts"><b>UPLOAD_FILE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
@@ -861,6 +867,8 @@ mutation editApplication($id: ID!, $name: String, $status: String, $pages: [ID],
     canSee
     canUpdate
     canDelete
+    locked
+    lockedByUser
   }
 }&#x60;</code>
                         </td>
@@ -1259,6 +1267,34 @@ mutation seeNotifications($ids: [ID]!) {
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="TOGGLE_APPLICATION_LOCK"></a>
+                        <span class="name">
+                            <b>
+                            TOGGLE_APPLICATION_LOCK</b>
+                            <a href="#TOGGLE_APPLICATION_LOCK"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation toggleApplicationLock($id: ID!, $lock: Boolean!) {
+  toggleApplicationLock(id: $id, lock: $lock) {
+    id
+    locked
+    lockedByUser
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="UPLOAD_FILE"></a>
                         <span class="name">
                             <b>
@@ -1299,13 +1335,46 @@ mutation uploadFile($file: Upload!, $form: ID!) {
                             <i>Default value : </i><code>gql&#x60;
   subscription applicationEdited($id: ID!){
     applicationEdited(id: $id){
-      id
-      name
-      description
-      createdAt
-      status
-      canSee
-      canUpdate
+        id
+        name
+        description
+        createdAt
+        status
+        canSee
+        canUpdate
+        lockedBy {
+            id
+            name
+        }
+    }
+  }
+&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="APPLICATION_UNLOCKED_SUBSCRIPTION"></a>
+                        <span class="name">
+                            <b>
+                            APPLICATION_UNLOCKED_SUBSCRIPTION</b>
+                            <a href="#APPLICATION_UNLOCKED_SUBSCRIPTION"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+  subscription applicationUnlocked($id: ID!){
+    applicationUnlocked(id: $id){
+        id
+        locked
+        lockedByUser
     }
   }
 &#x60;</code>
@@ -2273,6 +2342,8 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
         id
         title
       }
+      locked
+      lockedByUser
     }
   }
 &#x60;</code>
@@ -3876,7 +3947,7 @@ query GetType($name: String!) {
     accessNotProvided(type: any): string  { return &#x60;No access provided to this ${type}.&#x60;; } ,
     userRolesUpdated(username: any): string  { return &#x60;${username} roles updated.&#x60;; },
     usersActions(type: any, length: any): string  { return length &gt; 1 ? &#x60;${length} users were ${type}.&#x60; : &#x60;user was ${type}.&#x60;; }, //
-    objectNotUpdated(type: any, error: any): string  { return &#x60;The ${type} was not updated. ${error}&#x60;; },
+    objectNotUpdated(type: any, error: any): string  { return &#x60;${type} is locked for edition. ${error}&#x60;; },
     objectEdited(type: any, name: any): string  { return &#x60;${name} ${type} edited.&#x60;; }, //
     objectDuplicated(type: any, name: any): string  { return &#x60;The ${type} ${name} was successfully  duplicated.&#x60;; },
     objectNotDuplicated(type: any, error: any): string  { return &#x60;The ${type} was not duplicated. ${error}&#x60;; },
@@ -3886,6 +3957,8 @@ query GetType($name: String!) {
     objectDeleted(value: any): string  { return &#x60;${value} deleted.&#x60;; },
     objectReordered(type: any): string  { return &#x60;${type} reordered.&#x60;; },
     objectLoadedFromCache(type: string): string { return &#x60;${type} loaded from cache.&#x60;; },
+    objectIsLocked(name: any): string { return &#x60;${name} edition is locked by another user.&#x60;; },
+    objectUnlocked(name: any): string { return &#x60;${name} edition has been unlocked by another user.&#x60;; },
     goToStep(step: any): string  { return &#x60;Back to ${step} step.&#x60;; },
     statusUpdated(status: any): string  { return &#x60;Status updated to ${status}.&#x60;; },
     noObjectOpened(value: any): string  { return &#x60;No opened ${value}.&#x60;; },

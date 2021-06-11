@@ -126,9 +126,9 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {gql} from &#x27;apollo-angular&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 
-import { Notification } from &#x27;../models/notification.model&#x27;;
+import { Notification } from &#x27;../models/notification.model&#x27;;
 import { Record } from &#x27;../models/record.model&#x27;;
 import { Application } from &#x27;../models/application.model&#x27;;
 
@@ -169,20 +169,37 @@ export interface RecordAddedSubscriptionResponse {
     recordAdded: Record;
 }
 
-export const APPLICATION_EDITED_SUBSCRIPTION &#x3D; gql&#x60;
-  subscription applicationEdited($id: ID!){
-    applicationEdited(id: $id){
-      id
-      name
-      description
-      createdAt
-      status
-      canSee
-      canUpdate
+export const APPLICATION_UNLOCKED_SUBSCRIPTION &#x3D; gql&#x60;
+  subscription applicationUnlocked($id: ID!){
+    applicationUnlocked(id: $id){
+        id
+        locked
+        lockedByUser
     }
   }
 &#x60;;
 
+export const APPLICATION_EDITED_SUBSCRIPTION &#x3D; gql&#x60;
+  subscription applicationEdited($id: ID!){
+    applicationEdited(id: $id){
+        id
+        name
+        description
+        createdAt
+        status
+        canSee
+        canUpdate
+        lockedBy {
+            id
+            name
+        }
+    }
+  }
+&#x60;;
+
+export interface ApplicationUnlockedSubscriptionResponse {
+    applicationUnlocked: Application;
+}
 export interface ApplicationEditedSubscriptionResponse {
     applicationEdited: Application;
 }
