@@ -103,7 +103,11 @@ You can execute following command for that:</p>
 <p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
 <h2 id="further-help">Further help</h2>
 <p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
-
+<h1 id="common-issues">Common issues</h1>
+<h2 id="javascript-heap-out-of-memory">Javascript heap out of memory</h2>
+<p>Error can appear when executing the front-end due to a memory limit.</p>
+<p>You can use this command to serve the front-end if the error occurs:</p>
+<div><pre class="line-numbers"><code class="language-none">node --max_old_space_size=8048 ./node_modules/&#64;angular/cli/bin/ng serve</code></pre></div>
 
 
 
