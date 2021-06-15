@@ -692,6 +692,31 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ProfileRoutingModule.html" data-type="entity-link">ProfileRoutingModule</a>
                             </li>
                             <li class="link">
+                                <a href="modules/PullJobsModule.html" data-type="entity-link">PullJobsModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-PullJobsModule-71927b16758571d1646bcc7b4b9b496f"' : 'data-target="#xs-components-links-module-PullJobsModule-71927b16758571d1646bcc7b4b9b496f"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-71927b16758571d1646bcc7b4b9b496f"' :
+                                            'id="xs-components-links-module-PullJobsModule-71927b16758571d1646bcc7b4b9b496f"' }>
+                                            <li class="link">
+                                                <a href="components/PullJobModalComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PullJobModalComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/PullJobsComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PullJobsComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/PullJobsRoutingModule.html" data-type="entity-link">PullJobsRoutingModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/ResourceModule.html" data-type="entity-link">ResourceModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -1031,6 +1056,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/AddPageMutationResponse.html" data-type="entity-link">AddPageMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/AddPullJobMutationResponse.html" data-type="entity-link">AddPullJobMutationResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/AddRoleMutationResponse.html" data-type="entity-link">AddRoleMutationResponse</a>
                             </li>
                             <li class="link">
@@ -1050,6 +1078,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/DeletePageMutationResponse.html" data-type="entity-link">DeletePageMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DeletePullJobMutationResponse.html" data-type="entity-link">DeletePullJobMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/DeleteRecordMutationResponse.html" data-type="entity-link">DeleteRecordMutationResponse</a>
@@ -1080,6 +1111,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditPageMutationResponse.html" data-type="entity-link">EditPageMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EditPullJobMutationResponse.html" data-type="entity-link">EditPullJobMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditRecordMutationResponse.html" data-type="entity-link">EditRecordMutationResponse</a>

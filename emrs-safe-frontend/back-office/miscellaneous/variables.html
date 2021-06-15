@@ -73,6 +73,9 @@
                             <a href="#ADD_PAGE" title="projects/back-office/src/app/graphql/mutations.ts"><b>ADD_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
+                            <a href="#ADD_PULL_JOB" title="projects/back-office/src/app/graphql/mutations.ts"><b>ADD_PULL_JOB</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
                             <a href="#ADD_ROLE" title="projects/back-office/src/app/graphql/mutations.ts"><b>ADD_ROLE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -92,6 +95,9 @@
                         </li>
                         <li>
                             <a href="#DELETE_PAGE" title="projects/back-office/src/app/graphql/mutations.ts"><b>DELETE_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DELETE_PULL_JOB" title="projects/back-office/src/app/graphql/mutations.ts"><b>DELETE_PULL_JOB</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
                             <a href="#DELETE_RECORD" title="projects/back-office/src/app/graphql/mutations.ts"><b>DELETE_RECORD</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
@@ -131,6 +137,9 @@
                         </li>
                         <li>
                             <a href="#EDIT_PAGE" title="projects/back-office/src/app/graphql/mutations.ts"><b>EDIT_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#EDIT_PULL_JOB" title="projects/back-office/src/app/graphql/mutations.ts"><b>EDIT_PULL_JOB</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
                             <a href="#EDIT_RECORD" title="projects/back-office/src/app/graphql/mutations.ts"><b>EDIT_RECORD</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
@@ -441,6 +450,48 @@ mutation addPage($name: String, $type: String!, $content: ID, $application: ID!)
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="ADD_PULL_JOB"></a>
+                        <span class="name">
+                            <b>
+                            ADD_PULL_JOB</b>
+                            <a href="#ADD_PULL_JOB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation addPullJob($application: ID!, $name: String!, $status: Status!, $apiConfiguration: ID!, $schedule: String, $convertTo: ID, $mapping: JSON, $channel: ID) {
+  addPullJob(application: $application, name: $name, status: $status, apiConfiguration: $apiConfiguration, schedule: $schedule, convertTo: $convertTo, mapping: $mapping, channel: $channel) {
+    id
+    name
+    status
+    apiConfiguration {
+      id
+      name
+    }
+    schedule
+    convertTo {
+      id
+      name
+    }
+    mapping
+    channel {
+      id
+      title
+    }
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="ADD_ROLE"></a>
                         <span class="name">
                             <b>
@@ -592,6 +643,32 @@ mutation deleteForm($id: ID!) {
                             <i>Default value : </i><code>gql&#x60;
 mutation deletePage($id: ID!) {
   deletePage(id: $id){
+    id
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="DELETE_PULL_JOB"></a>
+                        <span class="name">
+                            <b>
+                            DELETE_PULL_JOB</b>
+                            <a href="#DELETE_PULL_JOB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation deletePullJob($application: ID!, $id: ID!) {
+  deletePullJob(application: $application, id: $id) {
     id
   }
 }&#x60;</code>
@@ -1141,6 +1218,48 @@ mutation editPage($id: ID!, $name: String, $permissions: JSON) {
         id
         title
       }
+    }
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="EDIT_PULL_JOB"></a>
+                        <span class="name">
+                            <b>
+                            EDIT_PULL_JOB</b>
+                            <a href="#EDIT_PULL_JOB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation editPullJob($application: ID!, $id: ID! $name: String, $status: Status, $apiConfiguration: ID, $schedule: String, $convertTo: ID, $mapping: JSON, $channel: ID) {
+  editPullJob(application: $application, id: $id, name: $name, status: $status, apiConfiguration: $apiConfiguration, schedule: $schedule, convertTo: $convertTo, mapping: $mapping, channel: $channel) {
+    id
+    name
+    status
+    apiConfiguration {
+      id
+      name
+    }
+    schedule
+    convertTo {
+      id
+      name
+    }
+    mapping
+    channel {
+      id
+      title
     }
   }
 }&#x60;</code>
