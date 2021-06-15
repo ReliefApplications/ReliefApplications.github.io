@@ -924,6 +924,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/PublishNotificationMutationResponse.html" data-type="entity-link">PublishNotificationMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/PullJob.html" data-type="entity-link">PullJob</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Record.html" data-type="entity-link">Record</a>
                             </li>
                             <li class="link">
