@@ -446,13 +446,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeRecordHistoryModule.html" data-type="entity-link">SafeRecordHistoryModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeRecordHistoryModule-305774676daa68646a2d38bb8201f372"' : 'data-target="#xs-components-links-module-SafeRecordHistoryModule-305774676daa68646a2d38bb8201f372"' }>
+                                            'data-target="#components-links-module-SafeRecordHistoryModule-b3c389ed4c7bcbc88625a97e80d0db58"' : 'data-target="#xs-components-links-module-SafeRecordHistoryModule-b3c389ed4c7bcbc88625a97e80d0db58"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeRecordHistoryModule-305774676daa68646a2d38bb8201f372"' :
-                                            'id="xs-components-links-module-SafeRecordHistoryModule-305774676daa68646a2d38bb8201f372"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeRecordHistoryModule-b3c389ed4c7bcbc88625a97e80d0db58"' :
+                                            'id="xs-components-links-module-SafeRecordHistoryModule-b3c389ed4c7bcbc88625a97e80d0db58"' }>
                                             <li class="link">
                                                 <a href="components/SafeRecordHistoryComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeRecordHistoryComponent</a>
