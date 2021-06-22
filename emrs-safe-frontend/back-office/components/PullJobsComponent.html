@@ -314,8 +314,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="174"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:174</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:176</a></div>
                 </td>
             </tr>
 
@@ -431,8 +431,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:95</a></div>
                 </td>
             </tr>
 
@@ -501,8 +501,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="124"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:124</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:125</a></div>
                 </td>
             </tr>
 
@@ -840,8 +840,9 @@ export class PullJobsComponent implements OnInit, OnDestroy {
       apiConfiguration: string;
       schedule?: string;
       convertTo?: string;
-      mapping?: any;
       channel?: string;
+      mapping?: any;
+      rawMapping?: any;
     }) &#x3D;&gt; {
       if (value) {
         const variables &#x3D; {
@@ -853,8 +854,8 @@ export class PullJobsComponent implements OnInit, OnDestroy {
         Object.assign(variables,
           value.schedule &amp;&amp; { schedule: value.schedule },
           value.convertTo &amp;&amp; { convertTo: value.convertTo },
-          value.mapping &amp;&amp; { mapping: value.mapping },
           value.channel &amp;&amp; { channel: value.channel },
+          value.rawMapping &amp;&amp; { mapping: JSON.parse(value.rawMapping) },
         );
         this.apollo.mutate&lt;AddPullJobMutationResponse&gt;({
           mutation: ADD_PULL_JOB,
@@ -914,8 +915,9 @@ export class PullJobsComponent implements OnInit, OnDestroy {
       apiConfiguration: string;
       schedule?: string;
       convertTo?: string;
-      mapping?: any;
       channel?: string;
+      mapping?: any;
+      rawMapping?: any;
     }) &#x3D;&gt; {
       if (value) {
         const variables &#x3D; {
@@ -928,8 +930,8 @@ export class PullJobsComponent implements OnInit, OnDestroy {
           value.apiConfiguration &amp;&amp; { apiConfiguration: value.apiConfiguration },
           value.schedule &amp;&amp; { schedule: value.schedule },
           value.convertTo &amp;&amp; { convertTo: value.convertTo },
-          value.mapping &amp;&amp; { mapping: value.mapping },
           value.channel &amp;&amp; { channel: value.channel },
+          value.rawMapping &amp;&amp; { mapping: JSON.parse(value.rawMapping) },
         );
         this.apollo.mutate&lt;EditPullJobMutationResponse&gt;({
           mutation: EDIT_PULL_JOB,
