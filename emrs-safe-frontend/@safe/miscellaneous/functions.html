@@ -88,10 +88,13 @@
                             <a href="#initCustomWidgets" title="projects/safe/src/lib/survey/init.ts"><b>initCustomWidgets</b>&nbsp;&nbsp;&nbsp;(projects/.../init.ts)</a>
                         </li>
                         <li>
+                            <a href="#scrollFactory" title="projects/safe/src/lib/components/config-display-grid-fields-modal/config-display-grid-fields-modal.component.ts"><b>scrollFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../config-display-grid-fields-modal.component.ts)</a>
+                        </li>
+                        <li>
                             <a href="#scrollFactory" title="projects/safe/src/lib/components/query-builder/query-builder.component.ts"><b>scrollFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../query-builder.component.ts)</a>
                         </li>
                         <li>
-                            <a href="#scrollFactory" title="projects/safe/src/lib/components/survey/survey-grid/survey-grid.component.ts"><b>scrollFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../survey-grid.component.ts)</a>
+                            <a href="#scrollFactory" title="projects/safe/src/lib/components/resource-grid/resource-grid.component.ts"><b>scrollFactory</b>&nbsp;&nbsp;&nbsp;(projects/.../resource-grid.component.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -544,7 +547,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>init(Survey: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, apollo)</code>
+<code>init(Survey: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, apollo, dialog, formBuilder)</code>
                 </td>
             </tr>
 
@@ -579,6 +582,28 @@
                                 </tr>
                                 <tr>
                                     <td>apollo</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>dialog</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>formBuilder</td>
                                     <td>
                                     </td>
 
@@ -621,7 +646,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>init(Survey: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, apollo)</code>
+<code>init(Survey: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, apollo, dialog, formBuilder)</code>
                 </td>
             </tr>
 
@@ -656,6 +681,28 @@
                                 </tr>
                                 <tr>
                                     <td>apollo</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>dialog</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>formBuilder</td>
                                     <td>
                                     </td>
 
@@ -764,7 +811,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>initCustomWidgets(Survey: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, domService, dialog, apollo)</code>
+<code>initCustomWidgets(Survey: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, domService, dialog, apollo, formBuilder)</code>
                 </td>
             </tr>
 
@@ -830,6 +877,17 @@
 
 
                                 </tr>
+                                <tr>
+                                    <td>formBuilder</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -837,6 +895,68 @@
                     </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>projects/safe/src/lib/components/config-display-grid-fields-modal/config-display-grid-fields-modal.component.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="scrollFactory"></a>
+                    <span class="name">
+                        <b>
+                            scrollFactory
+                        </b>
+                        <a href="#scrollFactory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>scrollFactory(overlay)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>overlay</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>BlockScrollStrategy</code>
 
                     </div>
                     <div class="io-description">
@@ -908,7 +1028,7 @@
             </tr>
         </tbody>
     </table>
-</section>    <h3>projects/safe/src/lib/components/survey/survey-grid/survey-grid.component.ts</h3>
+</section>    <h3>projects/safe/src/lib/components/resource-grid/resource-grid.component.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>

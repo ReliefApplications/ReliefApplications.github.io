@@ -28,13 +28,13 @@
 <title>cluster_SafeWidgetGridModule_declarations</title>
 <polygon fill="none" stroke="black" points="166,-78 166,-130 1373,-130 1373,-78 166,-78"/>
 </g>
-<g id="clust10" class="cluster">
-<title>cluster_SafeWidgetGridModule_exports</title>
-<polygon fill="none" stroke="black" points="538,-208 538,-260 730,-260 730,-208 538,-208"/>
-</g>
 <g id="clust9" class="cluster">
 <title>cluster_SafeWidgetGridModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 158,-130 158,-78 16,-78"/>
+</g>
+<g id="clust10" class="cluster">
+<title>cluster_SafeWidgetGridModule_exports</title>
+<polygon fill="none" stroke="black" points="538,-208 538,-260 730,-260 730,-208 538,-208"/>
 </g>
 <!-- SafeDashboardMenuComponent -->
 <g id="node1" class="node">
