@@ -102,7 +102,13 @@
                                 <a href="#checkAccount">checkAccount</a>
                             </li>
                             <li>
+                                <a href="#getAccountIfNull">getAccountIfNull</a>
+                            </li>
+                            <li>
                                 <a href="#getProfile">getProfile</a>
+                            </li>
+                            <li>
+                                <a href="#getProfileIfNull">getProfileIfNull</a>
                             </li>
                             <li>
                                 <a href="#logout">logout</a>
@@ -248,6 +254,45 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getAccountIfNull"></a>
+                    <span class="name">
+                        <b>
+                            getAccountIfNull
+                        </b>
+                        <a href="#getAccountIfNull"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAccountIfNull()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getProfile"></a>
                     <span class="name">
                         <b>
@@ -268,6 +313,45 @@
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="78"
                             class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProfileIfNull"></a>
+                    <span class="name">
+                        <b>
+                            getProfileIfNull
+                        </b>
+                        <a href="#getProfileIfNull"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProfileIfNull()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:98</a></div>
                 </td>
             </tr>
 
@@ -634,6 +718,24 @@ export class SafeAuthService {
   get user(): Observable&lt;User | null&gt; {
     return this._user.asObservable();
   }
+
+  /* Check if user exist and fetch it if not
+  */
+  getProfileIfNull(): void {
+    const user &#x3D; this._user.getValue();
+    if (!user) {
+      this.getProfile();
+    }
+  }
+
+  /* Check if account exist and fetch it if not
+  */
+  getAccountIfNull(): void {
+    if (!this.account) {
+      this.checkAccount();
+    }
+  }
+
 }
 </code></pre>
     </div>
