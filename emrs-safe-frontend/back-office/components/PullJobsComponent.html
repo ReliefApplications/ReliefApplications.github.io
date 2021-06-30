@@ -314,8 +314,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="176"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:176</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:180</a></div>
                 </td>
             </tr>
 
@@ -431,8 +431,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="95"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:95</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:97</a></div>
                 </td>
             </tr>
 
@@ -501,8 +501,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="125"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:125</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.component.ts:127</a></div>
                 </td>
             </tr>
 
@@ -843,6 +843,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
       channel?: string;
       mapping?: any;
       rawMapping?: any;
+      uniqueIdentifiers?: any;
     }) &#x3D;&gt; {
       if (value) {
         const variables &#x3D; {
@@ -856,6 +857,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
           value.convertTo &amp;&amp; { convertTo: value.convertTo },
           value.channel &amp;&amp; { channel: value.channel },
           value.rawMapping &amp;&amp; { mapping: JSON.parse(value.rawMapping) },
+          value.uniqueIdentifiers &amp;&amp; { uniqueIdentifiers: value.uniqueIdentifiers }
         );
         this.apollo.mutate&lt;AddPullJobMutationResponse&gt;({
           mutation: ADD_PULL_JOB,
@@ -918,6 +920,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
       channel?: string;
       mapping?: any;
       rawMapping?: any;
+      uniqueIdentifiers?: any;
     }) &#x3D;&gt; {
       if (value) {
         const variables &#x3D; {
@@ -932,6 +935,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
           value.convertTo &amp;&amp; { convertTo: value.convertTo },
           value.channel &amp;&amp; { channel: value.channel },
           value.rawMapping &amp;&amp; { mapping: JSON.parse(value.rawMapping) },
+          value.uniqueIdentifiers &amp;&amp; { uniqueIdentifiers: value.uniqueIdentifiers }
         );
         this.apollo.mutate&lt;EditPullJobMutationResponse&gt;({
           mutation: EDIT_PULL_JOB,
@@ -976,7 +980,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
           &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{ element.name }}&lt;/td&gt;
         &lt;/ng-container&gt;
         &lt;ng-container matColumnDef&#x3D;&quot;status&quot;&gt;
-            &lt;th mat-header-cell *matHeaderCellDef&gt;Convert to&lt;/th&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Status&lt;/th&gt;
             &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{ element.status }}&lt;/td&gt;
         &lt;/ng-container&gt;
         &lt;ng-container matColumnDef&#x3D;&quot;apiConfiguration&quot;&gt;
@@ -984,7 +988,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
             &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{ element.apiConfiguration ? element.apiConfiguration.name : &#x27;-&#x27; }}&lt;/td&gt;
         &lt;/ng-container&gt;
         &lt;ng-container matColumnDef&#x3D;&quot;convertTo&quot;&gt;
-            &lt;th mat-header-cell *matHeaderCellDef&gt;Notify on&lt;/th&gt;
+            &lt;th mat-header-cell *matHeaderCellDef&gt;Convert to&lt;/th&gt;
             &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{ element.convertTo ? element.convertTo.name : &#x27;-&#x27; }}&lt;/td&gt;
         &lt;/ng-container&gt;  
         &lt;ng-container matColumnDef&#x3D;&quot;actions&quot;&gt;
@@ -1048,7 +1052,7 @@ export class PullJobsComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading">    <div class="actions">        <button mat-flat-button color="primary" (click)="onAdd()">            <mat-icon>add</mat-icon>            Create a pull job        </button>    </div>    <table mat-table [dataSource]="pullJobs">        <ng-container matColumnDef="name">          <th mat-header-cell *matHeaderCellDef>Pull job name</th>          <td mat-cell *matCellDef="let element">{{ element.name }}</td>        </ng-container>        <ng-container matColumnDef="status">            <th mat-header-cell *matHeaderCellDef>Convert to</th>            <td mat-cell *matCellDef="let element">{{ element.status }}</td>        </ng-container>        <ng-container matColumnDef="apiConfiguration">            <th mat-header-cell *matHeaderCellDef>API Configuration</th>            <td mat-cell *matCellDef="let element">{{ element.apiConfiguration ? element.apiConfiguration.name : \'-\' }}</td>        </ng-container>        <ng-container matColumnDef="convertTo">            <th mat-header-cell *matHeaderCellDef>Notify on</th>            <td mat-cell *matCellDef="let element">{{ element.convertTo ? element.convertTo.name : \'-\' }}</td>        </ng-container>          <ng-container matColumnDef="actions">            <th mat-header-cell *matHeaderCellDef></th>            <td mat-cell *matCellDef="let element">              <button mat-icon-button [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()">                <mat-icon>more_vert</mat-icon>              </button>              <mat-menu #menu="matMenu">                <button mat-menu-item (click)="onEdit(element)">                  <mat-icon>edit</mat-icon>                  Edit                </button>                <button mat-menu-item color="warn" (click)="onDelete(element)">                  <mat-icon>delete</mat-icon>                  Delete                </button>              </mat-menu>            </td>          </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>    </table></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading">    <div class="actions">        <button mat-flat-button color="primary" (click)="onAdd()">            <mat-icon>add</mat-icon>            Create a pull job        </button>    </div>    <table mat-table [dataSource]="pullJobs">        <ng-container matColumnDef="name">          <th mat-header-cell *matHeaderCellDef>Pull job name</th>          <td mat-cell *matCellDef="let element">{{ element.name }}</td>        </ng-container>        <ng-container matColumnDef="status">            <th mat-header-cell *matHeaderCellDef>Status</th>            <td mat-cell *matCellDef="let element">{{ element.status }}</td>        </ng-container>        <ng-container matColumnDef="apiConfiguration">            <th mat-header-cell *matHeaderCellDef>API Configuration</th>            <td mat-cell *matCellDef="let element">{{ element.apiConfiguration ? element.apiConfiguration.name : \'-\' }}</td>        </ng-container>        <ng-container matColumnDef="convertTo">            <th mat-header-cell *matHeaderCellDef>Convert to</th>            <td mat-cell *matCellDef="let element">{{ element.convertTo ? element.convertTo.name : \'-\' }}</td>        </ng-container>          <ng-container matColumnDef="actions">            <th mat-header-cell *matHeaderCellDef></th>            <td mat-cell *matCellDef="let element">              <button mat-icon-button [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()">                <mat-icon>more_vert</mat-icon>              </button>              <mat-menu #menu="matMenu">                <button mat-menu-item (click)="onEdit(element)">                  <mat-icon>edit</mat-icon>                  Edit                </button>                <button mat-menu-item color="warn" (click)="onDelete(element)">                  <mat-icon>delete</mat-icon>                  Delete                </button>              </mat-menu>            </td>          </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>    </table></ng-container></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddApplicationComponent', 'selector': 'app-add-application'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PullJobsComponent'};
