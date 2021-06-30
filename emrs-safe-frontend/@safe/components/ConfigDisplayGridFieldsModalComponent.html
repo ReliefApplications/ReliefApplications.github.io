@@ -185,7 +185,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(componentFactoryResolver: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>, data: literal type, queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>)</code>
+<code>constructor(data: literal type, queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -207,18 +207,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                                <tr>
-                                                        <td>componentFactoryResolver</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
                                                 <tr>
                                                         <td>data</td>
                                                   
@@ -283,8 +271,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">projects/safe/src/lib/components/config-display-grid-fields-modal/config-display-grid-fields-modal.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">projects/safe/src/lib/components/config-display-grid-fields-modal/config-display-grid-fields-modal.component.ts:36</a></div>
                 </td>
             </tr>
 
@@ -336,7 +324,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/components/config-display-grid-fields-modal/config-display-grid-fields-modal.component.ts:33</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/config-display-grid-fields-modal/config-display-grid-fields-modal.component.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -445,7 +433,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ComponentFactoryResolver, Inject, OnInit, ViewChild, ViewContainerRef } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit, ViewChild, ViewContainerRef } from &#x27;@angular/core&#x27;;
 import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 import { QueryBuilderService } from &#x27;../../services/query-builder.service&#x27;;
 import { FormGroup } from &#x27;@angular/forms&#x27;;
@@ -476,7 +464,6 @@ export class ConfigDisplayGridFieldsModalComponent implements OnInit {
   @ViewChild(&#x27;settingsContainer&#x27;, { read: ViewContainerRef }) settingsContainer: any;
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver,
     @Inject(MAT_DIALOG_DATA) public data: { form: any, resourceName: string },
     private queryBuilder: QueryBuilderService) {
   }
