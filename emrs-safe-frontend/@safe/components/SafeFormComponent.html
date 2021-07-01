@@ -1873,7 +1873,7 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
       // TODO: check
       this.survey.locale &#x3D; &#x27;en&#x27;;
     }
-    
+
     this.survey.onComplete.add(this.complete);
     this.survey.showCompletedPage &#x3D; false;
     if (!this.record &amp;&amp; !this.form.canCreateRecords) {
