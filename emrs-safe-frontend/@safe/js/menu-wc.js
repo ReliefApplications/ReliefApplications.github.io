@@ -843,6 +843,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/DeleteRecordMutationResponse.html" data-type="entity-link">DeleteRecordMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/DeleteRecordsMutationResponse.html" data-type="entity-link">DeleteRecordsMutationResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/DeleteRoleMutationResponse.html" data-type="entity-link">DeleteRoleMutationResponse</a>
                             </li>
                             <li class="link">
@@ -868,6 +871,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditRecordMutationResponse.html" data-type="entity-link">EditRecordMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EditRecordsMutationResponse.html" data-type="entity-link">EditRecordsMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditRoleMutationResponse.html" data-type="entity-link">EditRoleMutationResponse</a>
