@@ -397,8 +397,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="180"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:180</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:185</a></div>
                 </td>
             </tr>
 
@@ -510,8 +510,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="186"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:186</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="191"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:191</a></div>
                 </td>
             </tr>
 
@@ -954,24 +954,29 @@ export class SafeGridSettingsComponent implements OnInit {
       attachToRecord: [value &amp;&amp; value.attachToRecord ? value.attachToRecord : false],
       targetForm: [value &amp;&amp; value.targetForm ? value.targetForm : null],
       targetFormField: [value &amp;&amp; value.targetFormField ? value.targetFormField : null],
-      targetFormQuery: this.queryBuilder.createQueryForm(value?.targetFormQuery || null),
+      targetFormQuery: value &amp;&amp; value.targetForm ? this.queryBuilder.createQueryForm(value?.targetFormQuery || null)
+        : this.queryBuilder.createQueryForm(value?.targetFormQuery || null).setValidators(null),
       notify: [value &amp;&amp; value.notify ? value.notify : false],
       notificationChannel: [value &amp;&amp; value.notificationChannel ? value.notificationChannel : null,
-      value &amp;&amp; value.notify ? Validators.required : null],
+        value &amp;&amp; value.notify ? Validators.required : null],
       notificationMessage: [value &amp;&amp; value.notificationMessage ? value.notificationMessage : &#x27;Records update&#x27;],
       publish: [value &amp;&amp; value.publish ? value.publish : false],
       publicationChannel: [value &amp;&amp; value.publicationChannel ? value.publicationChannel : null,
-      value &amp;&amp; value.publish ? Validators.required : null],
+        value &amp;&amp; value.publish ? Validators.required : null],
       sendMail: [value &amp;&amp; value.sendMail ? value.sendMail : false],
       distributionList: [value &amp;&amp; value.distributionList ? value.distributionList : [],
-      value &amp;&amp; value.sendMail ? Validators.required : null],
+        value &amp;&amp; value.sendMail ? Validators.required : null],
       subject: [value &amp;&amp; value.subject ? value.subject : &#x27;&#x27;,
-      value &amp;&amp; value.sendMail ? Validators.required : null],
+        value &amp;&amp; value.sendMail ? Validators.required : null],
       // attachment: [value &amp;&amp; value.attachment ? value.attachment : false]
     });
     buttonForm.get(&#x27;targetForm&#x27;)?.valueChanges.subscribe(target &#x3D;&gt; {
       const queryName &#x3D; this.queryBuilder.getQueryNameFromResourceName(target?.name || &#x27;&#x27;);
-      buttonForm.get(&#x27;targetFormQuery&#x27;)?.get(&#x27;name&#x27;)?.setValue(queryName);
+      const targetFormQuery &#x3D; buttonForm.get(&#x27;targetFormQuery&#x27;);
+      if (!target) {
+        targetFormQuery?.setValidators(null);
+      }
+      targetFormQuery?.get(&#x27;name&#x27;)?.setValue(queryName);
     });
     return buttonForm;
   }
