@@ -24,83 +24,83 @@
 <title>cluster_DashboardsModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 680,-268 680,-70 8,-70"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_DashboardsModule_imports</title>
+<polygon fill="none" stroke="black" points="372,-78 372,-130 672,-130 672,-78 372,-78"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_DashboardsModule_declarations</title>
-<polygon fill="none" stroke="black" points="324,-78 324,-130 672,-130 672,-78 324,-78"/>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 364,-130 364,-78 16,-78"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_DashboardsModule_exports</title>
-<polygon fill="none" stroke="black" points="231,-208 231,-260 397,-260 397,-208 231,-208"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_DashboardsModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 316,-130 316,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="267,-208 267,-260 433,-260 433,-208 267,-208"/>
 </g>
 <!-- AddDashboardComponent -->
 <g id="node1" class="node">
 <title>AddDashboardComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="664.08,-122 497.92,-122 497.92,-86 664.08,-86 664.08,-122"/>
-<text text-anchor="middle" x="581" y="-99.8" font-family="Times,serif" font-size="14.00">AddDashboardComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="356.08,-122 189.92,-122 189.92,-86 356.08,-86 356.08,-122"/>
+<text text-anchor="middle" x="273" y="-99.8" font-family="Times,serif" font-size="14.00">AddDashboardComponent</text>
 </g>
 <!-- DashboardsModule -->
 <g id="node3" class="node">
 <title>DashboardsModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="376.64,-187 373.64,-191 352.64,-191 349.64,-187 251.36,-187 251.36,-151 376.64,-151 376.64,-187"/>
-<text text-anchor="middle" x="314" y="-164.8" font-family="Times,serif" font-size="14.00">DashboardsModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="412.64,-187 409.64,-191 388.64,-191 385.64,-187 287.36,-187 287.36,-151 412.64,-151 412.64,-187"/>
+<text text-anchor="middle" x="350" y="-164.8" font-family="Times,serif" font-size="14.00">DashboardsModule</text>
 </g>
 <!-- AddDashboardComponent&#45;&gt;DashboardsModule -->
 <g id="edge1" class="edge">
 <title>AddDashboardComponent&#45;&gt;DashboardsModule</title>
-<path fill="none" stroke="black" d="M581,-122.11C581,-141.34 581,-169 581,-169 581,-169 386.94,-169 386.94,-169"/>
-<polygon fill="black" stroke="black" points="386.94,-165.5 376.94,-169 386.94,-172.5 386.94,-165.5"/>
+<path fill="none" stroke="black" d="M321.61,-122.11C321.61,-122.11 321.61,-140.99 321.61,-140.99"/>
+<polygon fill="black" stroke="black" points="318.11,-140.99 321.61,-150.99 325.11,-140.99 318.11,-140.99"/>
 </g>
 <!-- DashboardsComponent -->
 <g id="node2" class="node">
 <title>DashboardsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="479.92,-122 332.08,-122 332.08,-86 479.92,-86 479.92,-122"/>
-<text text-anchor="middle" x="406" y="-99.8" font-family="Times,serif" font-size="14.00">DashboardsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="171.92,-122 24.08,-122 24.08,-86 171.92,-86 171.92,-122"/>
+<text text-anchor="middle" x="98" y="-99.8" font-family="Times,serif" font-size="14.00">DashboardsComponent</text>
 </g>
 <!-- DashboardsComponent&#45;&gt;DashboardsModule -->
 <g id="edge2" class="edge">
 <title>DashboardsComponent&#45;&gt;DashboardsModule</title>
-<path fill="none" stroke="black" d="M354.55,-122.11C354.55,-122.11 354.55,-140.99 354.55,-140.99"/>
-<polygon fill="black" stroke="black" points="351.05,-140.99 354.55,-150.99 358.05,-140.99 351.05,-140.99"/>
+<path fill="none" stroke="black" d="M98,-122.11C98,-141.34 98,-169 98,-169 98,-169 277.06,-169 277.06,-169"/>
+<polygon fill="black" stroke="black" points="277.06,-172.5 287.06,-169 277.06,-165.5 277.06,-172.5"/>
 </g>
 <!-- DashboardsComponent  -->
 <g id="node6" class="node">
 <title>DashboardsComponent </title>
-<polygon fill="#fb8072" stroke="black" points="389.42,-252 238.58,-252 238.58,-216 389.42,-216 389.42,-252"/>
-<text text-anchor="middle" x="314" y="-229.8" font-family="Times,serif" font-size="14.00">DashboardsComponent </text>
+<polygon fill="#fb8072" stroke="black" points="425.42,-252 274.58,-252 274.58,-216 425.42,-216 425.42,-252"/>
+<text text-anchor="middle" x="350" y="-229.8" font-family="Times,serif" font-size="14.00">DashboardsComponent </text>
 </g>
 <!-- DashboardsModule&#45;&gt;DashboardsComponent  -->
 <g id="edge5" class="edge">
 <title>DashboardsModule&#45;&gt;DashboardsComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M314,-187.11C314,-187.11 314,-205.99 314,-205.99"/>
-<polygon fill="black" stroke="black" points="310.5,-205.99 314,-215.99 317.5,-205.99 310.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M350,-187.11C350,-187.11 350,-205.99 350,-205.99"/>
+<polygon fill="black" stroke="black" points="346.5,-205.99 350,-215.99 353.5,-205.99 346.5,-205.99"/>
 </g>
 <!-- DashboardsRoutingModule -->
 <g id="node4" class="node">
 <title>DashboardsRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="308.25,-122 305.25,-126 284.25,-126 281.25,-122 137.75,-122 137.75,-86 308.25,-86 308.25,-122"/>
-<text text-anchor="middle" x="223" y="-99.8" font-family="Times,serif" font-size="14.00">DashboardsRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="664.25,-122 661.25,-126 640.25,-126 637.25,-122 493.75,-122 493.75,-86 664.25,-86 664.25,-122"/>
+<text text-anchor="middle" x="579" y="-99.8" font-family="Times,serif" font-size="14.00">DashboardsRoutingModule</text>
 </g>
 <!-- DashboardsRoutingModule&#45;&gt;DashboardsModule -->
 <g id="edge3" class="edge">
 <title>DashboardsRoutingModule&#45;&gt;DashboardsModule</title>
-<path fill="none" stroke="black" d="M279.78,-122.11C279.78,-122.11 279.78,-140.99 279.78,-140.99"/>
-<polygon fill="black" stroke="black" points="276.28,-140.99 279.78,-150.99 283.28,-140.99 276.28,-140.99"/>
+<path fill="none" stroke="black" d="M579,-122.11C579,-141.34 579,-169 579,-169 579,-169 422.88,-169 422.88,-169"/>
+<polygon fill="black" stroke="black" points="422.88,-165.5 412.88,-169 422.88,-172.5 422.88,-165.5"/>
 </g>
 <!-- FormsModule -->
 <g id="node5" class="node">
 <title>FormsModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="119.83,-122 116.83,-126 95.83,-126 92.83,-122 24.17,-122 24.17,-86 119.83,-86 119.83,-122"/>
-<text text-anchor="middle" x="72" y="-99.8" font-family="Times,serif" font-size="14.00">FormsModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="475.83,-122 472.83,-126 451.83,-126 448.83,-122 380.17,-122 380.17,-86 475.83,-86 475.83,-122"/>
+<text text-anchor="middle" x="428" y="-99.8" font-family="Times,serif" font-size="14.00">FormsModule</text>
 </g>
 <!-- FormsModule&#45;&gt;DashboardsModule -->
 <g id="edge4" class="edge">
 <title>FormsModule&#45;&gt;DashboardsModule</title>
-<path fill="none" stroke="black" d="M72,-122.11C72,-141.34 72,-169 72,-169 72,-169 241.05,-169 241.05,-169"/>
-<polygon fill="black" stroke="black" points="241.05,-172.5 251.05,-169 241.05,-165.5 241.05,-172.5"/>
+<path fill="none" stroke="black" d="M396.58,-122.11C396.58,-122.11 396.58,-140.99 396.58,-140.99"/>
+<polygon fill="black" stroke="black" points="393.08,-140.99 396.58,-150.99 400.08,-140.99 393.08,-140.99"/>
 </g>
 </g>
 </svg>
