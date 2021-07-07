@@ -955,7 +955,7 @@ export class SafeGridSettingsComponent implements OnInit {
       targetForm: [value &amp;&amp; value.targetForm ? value.targetForm : null],
       targetFormField: [value &amp;&amp; value.targetFormField ? value.targetFormField : null],
       targetFormQuery: value &amp;&amp; value.targetForm ? this.queryBuilder.createQueryForm(value?.targetFormQuery || null)
-        : this.queryBuilder.createQueryForm(value?.targetFormQuery || null).setValidators(null),
+        : this.queryBuilder.createQueryForm(null).setValidators(null),
       notify: [value &amp;&amp; value.notify ? value.notify : false],
       notificationChannel: [value &amp;&amp; value.notificationChannel ? value.notificationChannel : null,
         value &amp;&amp; value.notify ? Validators.required : null],
@@ -971,12 +971,12 @@ export class SafeGridSettingsComponent implements OnInit {
       // attachment: [value &amp;&amp; value.attachment ? value.attachment : false]
     });
     buttonForm.get(&#x27;targetForm&#x27;)?.valueChanges.subscribe(target &#x3D;&gt; {
-      const queryName &#x3D; this.queryBuilder.getQueryNameFromResourceName(target?.name || &#x27;&#x27;);
-      const targetFormQuery &#x3D; buttonForm.get(&#x27;targetFormQuery&#x27;);
-      if (!target) {
-        targetFormQuery?.setValidators(null);
+      if (target?.name) {
+        const queryName &#x3D; this.queryBuilder.getQueryNameFromResourceName(target?.name || &#x27;&#x27;);
+        buttonForm.get(&#x27;targetFormQuery&#x27;)?.setValue(this.queryBuilder.createQueryForm({name: queryName}));
+      } else {
+        buttonForm.get(&#x27;targetFormQuery&#x27;)?.setValue(this.queryBuilder.createQueryForm(null).setValidators(null));
       }
-      targetFormQuery?.get(&#x27;name&#x27;)?.setValue(queryName);
     });
     return buttonForm;
   }
