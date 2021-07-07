@@ -24,10 +24,6 @@
 <title>cluster_FormAnswerModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 512,-268 512,-70 8,-70"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_FormAnswerModule_exports</title>
-<polygon fill="none" stroke="black" points="140,-208 140,-260 314,-260 314,-208 140,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_FormAnswerModule_declarations</title>
 <polygon fill="none" stroke="black" points="332,-78 332,-130 504,-130 504,-78 332,-78"/>
@@ -35,6 +31,10 @@
 <g id="clust4" class="cluster">
 <title>cluster_FormAnswerModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 324,-130 324,-78 16,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_FormAnswerModule_exports</title>
+<polygon fill="none" stroke="black" points="140,-208 140,-260 314,-260 314,-208 140,-208"/>
 </g>
 <!-- FormAnswerComponent -->
 <g id="node1" class="node">
