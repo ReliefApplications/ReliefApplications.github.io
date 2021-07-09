@@ -65,13 +65,13 @@
 <title>cluster_SafeRolesModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 718,-268 718,-70 8,-70"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_SafeRolesModule_imports</title>
-<polygon fill="none" stroke="black" points="526,-78 526,-130 710,-130 710,-78 526,-78"/>
-</g>
 <g id="clust7" class="cluster">
 <title>cluster_SafeRolesModule_exports</title>
 <polygon fill="none" stroke="black" points="266,-208 266,-260 424,-260 424,-208 266,-208"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_SafeRolesModule_imports</title>
+<polygon fill="none" stroke="black" points="526,-78 526,-130 710,-130 710,-78 526,-78"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeRolesModule_declarations</title>
@@ -240,6 +240,7 @@ import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
 import { SafeConfirmModalModule } from &#x27;../confirm-modal/confirm-modal.module&#x27;;
 import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
+import { MatAutocompleteModule } from &#x27;@angular/material/autocomplete&#x27;;
 
 
 @NgModule({
@@ -258,7 +259,8 @@ import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
     MatMenuModule,
     MatIconModule,
     SafeConfirmModalModule,
-    MatSortModule
+    MatSortModule,
+    MatAutocompleteModule
   ],
   exports: [SafeRolesComponent]
 })

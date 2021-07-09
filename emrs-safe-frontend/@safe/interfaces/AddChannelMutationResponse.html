@@ -628,6 +628,20 @@ export interface AddChannelMutationResponse {
   addChannel: Channel;
 }
 
+// &#x3D;&#x3D;&#x3D; EDIT CHANNEL &#x3D;&#x3D;&#x3D;
+export const EDIT_CHANNEL &#x3D; gql&#x60;
+mutation editChannel($id: ID!, $title: String!) {
+  editChannel(id: $id, title: $title){
+    id
+    title
+  }
+}&#x60;;
+
+export interface EditChannelMutationResponse {
+  loading: boolean;
+  editChannel: Channel;
+}
+
 // &#x3D;&#x3D;&#x3D; DELETE CHANNEL &#x3D;&#x3D;&#x3D;
 export const DELETE_CHANNEL &#x3D; gql&#x60;
 mutation deleteChannel($id: ID!) {

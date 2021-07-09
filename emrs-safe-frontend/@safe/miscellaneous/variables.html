@@ -163,6 +163,9 @@
                             <a href="#EDIT_APPLICATION" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_APPLICATION</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
+                            <a href="#EDIT_CHANNEL" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_CHANNEL</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
                             <a href="#EDIT_FORM_STRUCTURE" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_FORM_STRUCTURE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -914,6 +917,33 @@ mutation editApplication($id: ID!, $name: String, $status: String, $pages: [ID],
     canDelete
     locked
     lockedByUser
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="EDIT_CHANNEL"></a>
+                        <span class="name">
+                            <b>
+                            EDIT_CHANNEL</b>
+                            <a href="#EDIT_CHANNEL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation editChannel($id: ID!, $title: String!) {
+  editChannel(id: $id, title: $title){
+    id
+    title
   }
 }&#x60;</code>
                         </td>

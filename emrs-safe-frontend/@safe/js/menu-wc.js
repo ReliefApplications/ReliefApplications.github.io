@@ -518,13 +518,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeRolesModule.html" data-type="entity-link">SafeRolesModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeRolesModule-9b025a763ac595a311678764b2f12003"' : 'data-target="#xs-components-links-module-SafeRolesModule-9b025a763ac595a311678764b2f12003"' }>
+                                            'data-target="#components-links-module-SafeRolesModule-037a940b6e223556d559c24fe3c9f09b"' : 'data-target="#xs-components-links-module-SafeRolesModule-037a940b6e223556d559c24fe3c9f09b"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeRolesModule-9b025a763ac595a311678764b2f12003"' :
-                                            'id="xs-components-links-module-SafeRolesModule-9b025a763ac595a311678764b2f12003"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeRolesModule-037a940b6e223556d559c24fe3c9f09b"' :
+                                            'id="xs-components-links-module-SafeRolesModule-037a940b6e223556d559c24fe3c9f09b"' }>
                                             <li class="link">
                                                 <a href="components/SafeAddRoleComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeAddRoleComponent</a>
@@ -825,6 +825,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Channel.html" data-type="entity-link">Channel</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ChannelDisplay.html" data-type="entity-link">ChannelDisplay</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/ConvertRecordMutationResponse.html" data-type="entity-link">ConvertRecordMutationResponse</a>
                             </li>
                             <li class="link">
@@ -862,6 +865,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditApplicationMutationResponse.html" data-type="entity-link">EditApplicationMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/EditChannelMutationResponse.html" data-type="entity-link">EditChannelMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditFormMutationResponse.html" data-type="entity-link">EditFormMutationResponse</a>
