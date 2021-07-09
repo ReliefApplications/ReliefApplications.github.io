@@ -306,8 +306,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="543"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:543</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="544"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:544</a></div>
                 </td>
             </tr>
 
@@ -446,8 +446,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="462"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:462</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="463"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:463</a></div>
                 </td>
             </tr>
 
@@ -586,8 +586,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="587"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:587</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="588"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:588</a></div>
                 </td>
             </tr>
 
@@ -656,8 +656,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="564"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:564</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="565"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:565</a></div>
                 </td>
             </tr>
 
@@ -796,8 +796,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="486"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:486</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="487"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:487</a></div>
                 </td>
             </tr>
 
@@ -936,8 +936,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="615"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:615</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="616"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:616</a></div>
                 </td>
             </tr>
 
@@ -1158,8 +1158,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="511"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:511</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="512"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:512</a></div>
                 </td>
             </tr>
 
@@ -1322,8 +1322,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="634"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:634</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="635"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:635</a></div>
                 </td>
             </tr>
 
@@ -1895,8 +1895,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="667"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:667</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="668"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:668</a></div>
                 </td>
             </tr>
 
@@ -2566,12 +2566,13 @@ export class SafeApplicationService {
         }
       }).subscribe(res &#x3D;&gt; {
         if (res.data) {
+          const newUser &#x3D; res.data.editUser;
           this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;roles&#x27;, user.username));
-          const index &#x3D; application.users?.indexOf(user);
-          if (application.users &amp;&amp; index) {
-            application.users[index] &#x3D; res.data.editUser;
-          }
-          this._application.next(application);
+          const newApplication: Application &#x3D; {
+            ...application,
+            users: application.users?.map(x &#x3D;&gt; String(x.id) &#x3D;&#x3D;&#x3D; String(user.id) ? newUser || null : x) || []
+          };
+          this._application.next(newApplication);
         }
       });
     }
