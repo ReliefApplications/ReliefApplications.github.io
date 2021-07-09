@@ -278,8 +278,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="231"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:231</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:232</a></div>
                 </td>
             </tr>
 
@@ -811,8 +811,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="214"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:214</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="215"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:215</a></div>
                 </td>
             </tr>
 
@@ -888,7 +888,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>createQueryForm(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>createQueryForm(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, validators)</code>
                 </td>
             </tr>
 
@@ -912,6 +912,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Default value</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -925,6 +926,22 @@
                                         No
                                     </td>
 
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>validators</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
 
                                 </tr>
                             </tbody>
@@ -1471,8 +1488,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="267"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:267</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:268</a></div>
                 </td>
             </tr>
 
@@ -1819,10 +1836,11 @@ export class QueryBuilderService {
     return str + &#x27;]&#x27;;
   }
 
-  public createQueryForm(value: any): FormGroup {
+  public createQueryForm(value: any, validators &#x3D; true): FormGroup {
     return this.formBuilder.group({
-      name: [value ? value.name : &#x27;&#x27;, Validators.required],
-      fields: this.formBuilder.array((value &amp;&amp; value.fields) ? value.fields.map((x: any) &#x3D;&gt; this.addNewField(x)) : [], Validators.required),
+      name: [value ? value.name : &#x27;&#x27;, validators ? Validators.required : null],
+      fields: this.formBuilder.array((value &amp;&amp; value.fields) ? value.fields.map((x: any) &#x3D;&gt; this.addNewField(x)) : [],
+       validators ? Validators.required : null),
       sort: this.formBuilder.group({
         field: [(value &amp;&amp; value.sort) ? value.sort.field : &#x27;&#x27;],
         order: [(value &amp;&amp; value.sort) ? value.sort.order : &#x27;asc&#x27;]

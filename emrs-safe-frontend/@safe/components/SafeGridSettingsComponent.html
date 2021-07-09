@@ -397,8 +397,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="185"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:185</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:181</a></div>
                 </td>
             </tr>
 
@@ -438,8 +438,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="141"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:141</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:143</a></div>
                 </td>
             </tr>
 
@@ -510,8 +510,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="191"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:191</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:187</a></div>
                 </td>
             </tr>
 
@@ -897,13 +897,15 @@ export class SafeGridSettingsComponent implements OnInit {
 
     this.tileForm.get(&#x27;query&#x27;)?.valueChanges.subscribe(res &#x3D;&gt; {
       if (res.name) {
-        // Check if the query changed to clean modifications in floating button if any
+        // Check if the query changed to clean modifications and fields for email in floating button if any
         if (this.fields &amp;&amp; (res.name !&#x3D;&#x3D; this.queryName)) {
           const floatingButtons &#x3D; this.tileForm?.get(&#x27;floatingButtons&#x27;) as FormArray;
           for (const floatingButton of floatingButtons.controls) {
             const modifications &#x3D; floatingButton.get(&#x27;modifications&#x27;) as FormArray;
             modifications.clear();
             this.tileForm?.get(&#x27;floatingButton.modifySelectedRows&#x27;)?.setValue(false);
+            const bodyFields &#x3D;  floatingButton.get(&#x27;bodyFields&#x27;) as FormArray;
+            bodyFields.clear();
           }
         }
         this.fields &#x3D; this.queryBuilder.getFields(res.name);
@@ -954,8 +956,8 @@ export class SafeGridSettingsComponent implements OnInit {
       attachToRecord: [value &amp;&amp; value.attachToRecord ? value.attachToRecord : false],
       targetForm: [value &amp;&amp; value.targetForm ? value.targetForm : null],
       targetFormField: [value &amp;&amp; value.targetFormField ? value.targetFormField : null],
-      targetFormQuery: value &amp;&amp; value.targetForm ? this.queryBuilder.createQueryForm(value?.targetFormQuery || null)
-        : this.queryBuilder.createQueryForm(null).setValidators(null),
+      targetFormQuery: this.queryBuilder.createQueryForm(value &amp;&amp; value.targetFormQuery ? value.targetFormQuery : null,
+        Boolean(value &amp;&amp; value.targetForm)),
       notify: [value &amp;&amp; value.notify ? value.notify : false],
       notificationChannel: [value &amp;&amp; value.notificationChannel ? value.notificationChannel : null,
         value &amp;&amp; value.notify ? Validators.required : null],
@@ -968,15 +970,9 @@ export class SafeGridSettingsComponent implements OnInit {
         value &amp;&amp; value.sendMail ? Validators.required : null],
       subject: [value &amp;&amp; value.subject ? value.subject : &#x27;&#x27;,
         value &amp;&amp; value.sendMail ? Validators.required : null],
+      bodyFields: this.formBuilder.array(value &amp;&amp; value.bodyFields ? value.bodyFields : [],
+        value &amp;&amp; value.sendMail ? Validators.required : null),
       // attachment: [value &amp;&amp; value.attachment ? value.attachment : false]
-    });
-    buttonForm.get(&#x27;targetForm&#x27;)?.valueChanges.subscribe(target &#x3D;&gt; {
-      if (target?.name) {
-        const queryName &#x3D; this.queryBuilder.getQueryNameFromResourceName(target?.name || &#x27;&#x27;);
-        buttonForm.get(&#x27;targetFormQuery&#x27;)?.setValue(this.queryBuilder.createQueryForm({name: queryName}));
-      } else {
-        buttonForm.get(&#x27;targetFormQuery&#x27;)?.setValue(this.queryBuilder.createQueryForm(null).setValidators(null));
-      }
     });
     return buttonForm;
   }

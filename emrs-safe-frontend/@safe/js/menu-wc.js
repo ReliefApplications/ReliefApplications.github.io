@@ -434,13 +434,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeQueryBuilderModule.html" data-type="entity-link">SafeQueryBuilderModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeQueryBuilderModule-ed35f45f0bf9b25369456522afd1831c"' : 'data-target="#xs-components-links-module-SafeQueryBuilderModule-ed35f45f0bf9b25369456522afd1831c"' }>
+                                            'data-target="#components-links-module-SafeQueryBuilderModule-2f102fd356476368b0859e5719457dc8"' : 'data-target="#xs-components-links-module-SafeQueryBuilderModule-2f102fd356476368b0859e5719457dc8"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeQueryBuilderModule-ed35f45f0bf9b25369456522afd1831c"' :
-                                            'id="xs-components-links-module-SafeQueryBuilderModule-ed35f45f0bf9b25369456522afd1831c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeQueryBuilderModule-2f102fd356476368b0859e5719457dc8"' :
+                                            'id="xs-components-links-module-SafeQueryBuilderModule-2f102fd356476368b0859e5719457dc8"' }>
                                             <li class="link">
                                                 <a href="components/SafeQueryBuilderComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeQueryBuilderComponent</a>
