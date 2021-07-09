@@ -1148,9 +1148,12 @@ export class SafeFormBuilderComponent implements OnInit, OnChanges {
                 <p class="comment">
                     <code>./form-builder.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">::ng-deep .svd_content {
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../style/survey.scss&#x27;;
+
+::ng-deep .svd_content {
     padding: 8px 0 !important;
-}</code></pre>
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">

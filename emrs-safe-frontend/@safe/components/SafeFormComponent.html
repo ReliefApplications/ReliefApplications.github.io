@@ -2152,7 +2152,9 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
                 <p class="comment">
                     <code>./form.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">:host {
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../style/survey.scss&#x27;;
+
+:host {
   position: relative;
 }
 
@@ -2195,7 +2197,8 @@ mat-tab-group {
   justify-content: flex-end !important;
   text-align: end;
   margin-left: auto;
-}</code></pre>
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
