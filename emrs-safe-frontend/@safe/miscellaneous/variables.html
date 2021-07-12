@@ -100,6 +100,9 @@
                             <a href="#cloneData" title="projects/safe/src/lib/components/widgets/grid/grid.component.ts"><b>cloneData</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.component.ts)</a>
                         </li>
                         <li>
+                            <a href="#contains" title="projects/safe/src/lib/utils/array-filter.ts"><b>contains</b>&nbsp;&nbsp;&nbsp;(projects/.../array-filter.ts)</a>
+                        </li>
+                        <li>
                             <a href="#context" title="projects/safe/src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
                         </li>
                         <li>
@@ -190,6 +193,9 @@
                             <a href="#EDIT_USER_PROFILE" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_USER_PROFILE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
+                            <a href="#equals" title="projects/safe/src/lib/utils/array-filter.ts"><b>equals</b>&nbsp;&nbsp;&nbsp;(projects/.../array-filter.ts)</a>
+                        </li>
+                        <li>
                             <a href="#GET_APPLICATION_BY_ID" title="projects/safe/src/lib/graphql/queries.ts"><b>GET_APPLICATION_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
                         </li>
                         <li>
@@ -272,6 +278,12 @@
                         </li>
                         <li>
                             <a href="#MULTISELECT_TYPES" title="projects/safe/src/lib/components/widgets/grid/grid.component.ts"><b>MULTISELECT_TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#notContains" title="projects/safe/src/lib/utils/array-filter.ts"><b>notContains</b>&nbsp;&nbsp;&nbsp;(projects/.../array-filter.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#notEquals" title="projects/safe/src/lib/utils/array-filter.ts"><b>notEquals</b>&nbsp;&nbsp;&nbsp;(projects/.../array-filter.ts)</a>
                         </li>
                         <li>
                             <a href="#NOTIFICATION_SUBSCRIPTION" title="projects/safe/src/lib/graphql/subscriptions.ts"><b>NOTIFICATION_SUBSCRIPTION</b>&nbsp;&nbsp;&nbsp;(projects/.../subscriptions.ts)</a>
@@ -2180,6 +2192,101 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
   checkboxOnly: true,
   mode: &#x27;multiple&#x27;,
   drag: false
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/safe/src/lib/utils/array-filter.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contains"></a>
+                        <span class="name">
+                            <b>
+                            contains</b>
+                            <a href="#contains"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(itemValue: any, filterValue: any): boolean &#x3D;&gt; {
+    return filterValue.every((i: any) &#x3D;&gt; itemValue.includes(i));
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="equals"></a>
+                        <span class="name">
+                            <b>
+                            equals</b>
+                            <a href="#equals"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(itemValue: any, filterValue: any): boolean &#x3D;&gt; {
+    return contains(itemValue, filterValue) &amp;&amp; contains(filterValue, itemValue);
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notContains"></a>
+                        <span class="name">
+                            <b>
+                            notContains</b>
+                            <a href="#notContains"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(itemValue: any, filterValue: any): boolean &#x3D;&gt; {
+    return !filterValue.some((i: any) &#x3D;&gt; itemValue.includes(i));
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notEquals"></a>
+                        <span class="name">
+                            <b>
+                            notEquals</b>
+                            <a href="#notEquals"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(itemValue: any, filterValue: any): boolean &#x3D;&gt; {
+    return !equals(itemValue, filterValue);
 }</code>
                         </td>
                     </tr>

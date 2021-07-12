@@ -100,6 +100,42 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeArrayFilterMenuModule.html" data-type="entity-link">SafeArrayFilterMenuModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeArrayFilterMenuModule-035220cb9c9ee585e22d604ab179fcd9"' : 'data-target="#xs-components-links-module-SafeArrayFilterMenuModule-035220cb9c9ee585e22d604ab179fcd9"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeArrayFilterMenuModule-035220cb9c9ee585e22d604ab179fcd9"' :
+                                            'id="xs-components-links-module-SafeArrayFilterMenuModule-035220cb9c9ee585e22d604ab179fcd9"' }>
+                                            <li class="link">
+                                                <a href="components/SafeArrayFilterMenuComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeArrayFilterMenuComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeArrayFilterModule.html" data-type="entity-link">SafeArrayFilterModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeArrayFilterModule-c1fd418b25b624d09da433878170db96"' : 'data-target="#xs-components-links-module-SafeArrayFilterModule-c1fd418b25b624d09da433878170db96"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeArrayFilterModule-c1fd418b25b624d09da433878170db96"' :
+                                            'id="xs-components-links-module-SafeArrayFilterModule-c1fd418b25b624d09da433878170db96"' }>
+                                            <li class="link">
+                                                <a href="components/SafeArrayFilterComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeArrayFilterComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeChartModule.html" data-type="entity-link">SafeChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -301,13 +337,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeGridModule.html" data-type="entity-link">SafeGridModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeGridModule-8ee3bc2bfb5d50e35b824c0cae8bbf01"' : 'data-target="#xs-components-links-module-SafeGridModule-8ee3bc2bfb5d50e35b824c0cae8bbf01"' }>
+                                            'data-target="#components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' : 'data-target="#xs-components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridModule-8ee3bc2bfb5d50e35b824c0cae8bbf01"' :
-                                            'id="xs-components-links-module-SafeGridModule-8ee3bc2bfb5d50e35b824c0cae8bbf01"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' :
+                                            'id="xs-components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' }>
                                             <li class="link">
                                                 <a href="components/SafeGridComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeGridComponent</a>
