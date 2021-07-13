@@ -337,13 +337,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeGridModule.html" data-type="entity-link">SafeGridModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' : 'data-target="#xs-components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' }>
+                                            'data-target="#components-links-module-SafeGridModule-ddac5600d9d89848d105ffd82f13f4ab"' : 'data-target="#xs-components-links-module-SafeGridModule-ddac5600d9d89848d105ffd82f13f4ab"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' :
-                                            'id="xs-components-links-module-SafeGridModule-b76e63c31d238f25816f8a0db314ef2f"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridModule-ddac5600d9d89848d105ffd82f13f4ab"' :
+                                            'id="xs-components-links-module-SafeGridModule-ddac5600d9d89848d105ffd82f13f4ab"' }>
                                             <li class="link">
                                                 <a href="components/SafeGridComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeGridComponent</a>

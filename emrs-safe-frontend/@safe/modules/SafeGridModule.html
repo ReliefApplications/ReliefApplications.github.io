@@ -65,6 +65,10 @@
 <title>cluster_SafeGridModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 1325,-268 1325,-70 8,-70"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeGridModule_exports</title>
+<polygon fill="none" stroke="black" points="612,-208 612,-260 764,-260 764,-208 612,-208"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeGridModule_declarations</title>
 <polygon fill="none" stroke="black" points="1169,-78 1169,-130 1317,-130 1317,-78 1169,-78"/>
@@ -72,10 +76,6 @@
 <g id="clust4" class="cluster">
 <title>cluster_SafeGridModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 1161,-130 1161,-78 16,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeGridModule_exports</title>
-<polygon fill="none" stroke="black" points="612,-208 612,-260 764,-260 764,-208 612,-208"/>
 </g>
 <!-- SafeGridComponent -->
 <g id="node1" class="node">
@@ -289,6 +289,7 @@ import { SafeExpandedCommentModule } from &#x27;./expanded-comment/expanded-comm
 import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
 import { SafeArrayFilterModule } from &#x27;./array-filter/array-filter.module&#x27;;
 import { SafeArrayFilterMenuModule } from &#x27;./array-filter-menu/array-filter-menu.module&#x27;;
+import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 
 @NgModule({
   declarations: [
@@ -318,7 +319,8 @@ import { SafeArrayFilterMenuModule } from &#x27;./array-filter-menu/array-filter
     MatTooltipModule,
     ButtonsModule,
     SafeArrayFilterModule,
-    SafeArrayFilterMenuModule
+    SafeArrayFilterMenuModule,
+    MatDividerModule
   ],
   exports: [SafeGridComponent]
 })
