@@ -217,28 +217,30 @@ import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;;
 import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
 import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
 import { MatRippleModule } from &#x27;@angular/material/core&#x27;;
+import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 
 @NgModule({
   declarations: [SafeUsersComponent, SafeEditUserComponent, SafeInviteUserComponent],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatTableModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatIconModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    MatSortModule,
-    MatChipsModule,
-    MatRippleModule,
-    MatCheckboxModule,
-    MatProgressSpinnerModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatTableModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatIconModule,
+        MatInputModule,
+        MatAutocompleteModule,
+        MatSortModule,
+        MatChipsModule,
+        MatRippleModule,
+        MatCheckboxModule,
+        MatProgressSpinnerModule,
+        MatDividerModule
+    ],
   exports: [SafeUsersComponent]
 })
 export class SafeUsersModule { }
