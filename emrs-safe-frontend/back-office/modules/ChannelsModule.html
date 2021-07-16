@@ -231,25 +231,27 @@ import { SafeConfirmModalModule } from &#x27;@safe/builder&#x27;;
 import { AddChannelComponent } from &#x27;./components/add-channel/add-channel.component&#x27;;
 import { EditChannelComponent } from &#x27;./components/edit-channel/edit-channel.component&#x27;;
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
+import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 
 @NgModule({
   declarations: [ChannelsComponent, AddChannelComponent, EditChannelComponent],
-  imports: [
-    CommonModule,
-    ChannelsRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatMenuModule,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    MatSelectModule,
-    SafeConfirmModalModule
-  ]
+    imports: [
+        CommonModule,
+        ChannelsRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatMenuModule,
+        MatProgressSpinnerModule,
+        MatTableModule,
+        MatSelectModule,
+        SafeConfirmModalModule,
+        MatDividerModule
+    ]
 })
 export class ChannelsModule { }
 </code></pre>

@@ -187,13 +187,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ApplicationsModule.html" data-type="entity-link">ApplicationsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ApplicationsModule-db95c6e89d747b7ce80f29bf57387dc1"' : 'data-target="#xs-components-links-module-ApplicationsModule-db95c6e89d747b7ce80f29bf57387dc1"' }>
+                                            'data-target="#components-links-module-ApplicationsModule-b15aa4ae5189f086a6bd7949f5b18d75"' : 'data-target="#xs-components-links-module-ApplicationsModule-b15aa4ae5189f086a6bd7949f5b18d75"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApplicationsModule-db95c6e89d747b7ce80f29bf57387dc1"' :
-                                            'id="xs-components-links-module-ApplicationsModule-db95c6e89d747b7ce80f29bf57387dc1"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApplicationsModule-b15aa4ae5189f086a6bd7949f5b18d75"' :
+                                            'id="xs-components-links-module-ApplicationsModule-b15aa4ae5189f086a6bd7949f5b18d75"' }>
                                             <li class="link">
                                                 <a href="components/AddApplicationComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AddApplicationComponent</a>
@@ -282,13 +282,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ChannelsModule.html" data-type="entity-link">ChannelsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ChannelsModule-f9107ef39f5f78dee7e9026dae24ff2c"' : 'data-target="#xs-components-links-module-ChannelsModule-f9107ef39f5f78dee7e9026dae24ff2c"' }>
+                                            'data-target="#components-links-module-ChannelsModule-fbd6fc113afe3242f527100c5ffcc473"' : 'data-target="#xs-components-links-module-ChannelsModule-fbd6fc113afe3242f527100c5ffcc473"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ChannelsModule-f9107ef39f5f78dee7e9026dae24ff2c"' :
-                                            'id="xs-components-links-module-ChannelsModule-f9107ef39f5f78dee7e9026dae24ff2c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ChannelsModule-fbd6fc113afe3242f527100c5ffcc473"' :
+                                            'id="xs-components-links-module-ChannelsModule-fbd6fc113afe3242f527100c5ffcc473"' }>
                                             <li class="link">
                                                 <a href="components/AddChannelComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AddChannelComponent</a>
@@ -503,13 +503,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FormRecordsModule.html" data-type="entity-link">FormRecordsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormRecordsModule-7bb3cd19b9f87c4fdade06d17f348f06"' : 'data-target="#xs-components-links-module-FormRecordsModule-7bb3cd19b9f87c4fdade06d17f348f06"' }>
+                                            'data-target="#components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' : 'data-target="#xs-components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-7bb3cd19b9f87c4fdade06d17f348f06"' :
-                                            'id="xs-components-links-module-FormRecordsModule-7bb3cd19b9f87c4fdade06d17f348f06"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' :
+                                            'id="xs-components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' }>
                                             <li class="link">
                                                 <a href="components/FormRecordsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormRecordsComponent</a>
@@ -530,13 +530,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FormsModule.html" data-type="entity-link">FormsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormsModule-985c7765c8ecb7269277fdad8e6fa0c2"' : 'data-target="#xs-components-links-module-FormsModule-985c7765c8ecb7269277fdad8e6fa0c2"' }>
+                                            'data-target="#components-links-module-FormsModule-2815aee5be8b1b0a04e72cbe6a051d18"' : 'data-target="#xs-components-links-module-FormsModule-2815aee5be8b1b0a04e72cbe6a051d18"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormsModule-985c7765c8ecb7269277fdad8e6fa0c2"' :
-                                            'id="xs-components-links-module-FormsModule-985c7765c8ecb7269277fdad8e6fa0c2"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormsModule-2815aee5be8b1b0a04e72cbe6a051d18"' :
+                                            'id="xs-components-links-module-FormsModule-2815aee5be8b1b0a04e72cbe6a051d18"' }>
                                             <li class="link">
                                                 <a href="components/FormsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormsComponent</a>
@@ -699,13 +699,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PullJobsModule.html" data-type="entity-link">PullJobsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-PullJobsModule-7afb8e27e18f146244a53432b89a02df"' : 'data-target="#xs-components-links-module-PullJobsModule-7afb8e27e18f146244a53432b89a02df"' }>
+                                            'data-target="#components-links-module-PullJobsModule-4dcfec288ab26a9d8ac798192dcc88af"' : 'data-target="#xs-components-links-module-PullJobsModule-4dcfec288ab26a9d8ac798192dcc88af"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-7afb8e27e18f146244a53432b89a02df"' :
-                                            'id="xs-components-links-module-PullJobsModule-7afb8e27e18f146244a53432b89a02df"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-4dcfec288ab26a9d8ac798192dcc88af"' :
+                                            'id="xs-components-links-module-PullJobsModule-4dcfec288ab26a9d8ac798192dcc88af"' }>
                                             <li class="link">
                                                 <a href="components/PullJobModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">PullJobModalComponent</a>
@@ -858,13 +858,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SubscriptionsModule.html" data-type="entity-link">SubscriptionsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SubscriptionsModule-a903a77a9858fe443bb8d7db1befd8cd"' : 'data-target="#xs-components-links-module-SubscriptionsModule-a903a77a9858fe443bb8d7db1befd8cd"' }>
+                                            'data-target="#components-links-module-SubscriptionsModule-48d2ee677429c9df57969ea5cba9b4fb"' : 'data-target="#xs-components-links-module-SubscriptionsModule-48d2ee677429c9df57969ea5cba9b4fb"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SubscriptionsModule-a903a77a9858fe443bb8d7db1befd8cd"' :
-                                            'id="xs-components-links-module-SubscriptionsModule-a903a77a9858fe443bb8d7db1befd8cd"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SubscriptionsModule-48d2ee677429c9df57969ea5cba9b4fb"' :
+                                            'id="xs-components-links-module-SubscriptionsModule-48d2ee677429c9df57969ea5cba9b4fb"' }>
                                             <li class="link">
                                                 <a href="components/SubscriptionModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SubscriptionModalComponent</a>
