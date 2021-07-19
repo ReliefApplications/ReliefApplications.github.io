@@ -520,8 +520,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:66</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:75</a></div>
                 </td>
             </tr>
 
@@ -561,8 +561,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:98</a></div>
                 </td>
             </tr>
 
@@ -633,8 +633,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:79</a></div>
                 </td>
             </tr>
 
@@ -705,8 +705,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-fields/tab-fields.component.ts:106</a></div>
                 </td>
             </tr>
 
@@ -948,21 +948,30 @@ export class SafeTabFieldsComponent implements OnInit, OnChanges {
     if (event.previousContainer &#x3D;&#x3D;&#x3D; event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
       if (this.selectedFields &#x3D;&#x3D;&#x3D; event.container.data) {
-        const fieldTomove &#x3D; this.form.at(event.previousIndex);
+        const fieldToMove &#x3D; this.form.at(event.previousIndex);
         this.form.removeAt(event.previousIndex);
-        this.form.insert(event.currentIndex, fieldTomove);
+        this.form.insert(event.currentIndex, fieldToMove);
       }
     } else {
-      transferArrayItem(event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
       if (this.selectedFields &#x3D;&#x3D;&#x3D; event.previousContainer.data) {
         if (this.fieldForm &#x3D;&#x3D;&#x3D; this.form.at(event.previousIndex) as FormGroup) {
           this.fieldForm &#x3D; new FormGroup({});
         }
-        this.form.removeAt(event.previousIndex);
+        if (this.form.at(event.previousIndex).errors?.invalid) {
+          this.form.removeAt(event.previousIndex);
+          this.selectedFields.splice(event.previousIndex, 1);
+        } else {
+          transferArrayItem(event.previousContainer.data,
+            event.container.data,
+            event.previousIndex,
+            event.currentIndex);
+          this.form.removeAt(event.previousIndex);
+        }
       } else {
+        transferArrayItem(event.previousContainer.data,
+          event.container.data,
+          event.previousIndex,
+          event.currentIndex);
         this.form.insert(event.currentIndex, this.queryBuilder.addNewField(this.selectedFields[event.currentIndex], true));
       }
     }
