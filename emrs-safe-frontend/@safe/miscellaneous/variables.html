@@ -2217,7 +2217,7 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(itemValue: any, filterValue: any): boolean &#x3D;&gt; {
-    return filterValue.every((i: any) &#x3D;&gt; itemValue.includes(i));
+    return filterValue?.every((i: any) &#x3D;&gt; itemValue?.includes(i));
 }</code>
                         </td>
                     </tr>
@@ -2263,7 +2263,7 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(itemValue: any, filterValue: any): boolean &#x3D;&gt; {
-    return !filterValue.some((i: any) &#x3D;&gt; itemValue.includes(i));
+    return !filterValue?.some((i: any) &#x3D;&gt; itemValue?.includes(i));
 }</code>
                         </td>
                     </tr>
