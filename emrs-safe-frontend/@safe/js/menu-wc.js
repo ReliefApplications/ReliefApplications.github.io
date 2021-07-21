@@ -900,6 +900,48 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/DialogData.html" data-type="entity-link">DialogData</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/DialogData-1.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-2.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-3.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-4.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-5.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-6.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-7.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-8.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-9.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-10.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-11.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-12.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-13.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-14.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EditApplicationMutationResponse.html" data-type="entity-link">EditApplicationMutationResponse</a>
                             </li>
                             <li class="link">

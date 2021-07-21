@@ -176,12 +176,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(formBuilder: <a href="../interfaces/Form.html">FormBuilder</a>, dialogRef: <a href="../components/SafeTileDisplayComponent.html">MatDialogRef<SafeTileDisplayComponent></a>, data: literal type)</code>
+<code>constructor(formBuilder: <a href="../interfaces/Form.html">FormBuilder</a>, dialogRef: <a href="../components/SafeTileDisplayComponent.html">MatDialogRef<SafeTileDisplayComponent></a>, data: <a href="../interfaces/DialogData.html">DialogData</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -226,7 +226,7 @@
                                                         <td>data</td>
                                                   
                                                         <td>
-                                                                    <code>literal type</code>
+                                                                        <code><a href="../interfaces/DialogData.html" target="_self" >DialogData</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -274,8 +274,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:29</a></div>
                 </td>
             </tr>
 
@@ -313,8 +313,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:39</a></div>
                 </td>
             </tr>
 
@@ -351,7 +351,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>literal type</code>
+                            <i>Type : </i>        <code><a href="../interfaces/DialogData.html" target="_self" >DialogData</a></code>
 
                         </td>
                     </tr>
@@ -366,7 +366,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:24</a></div>
                             </td>
                         </tr>
 
@@ -394,7 +394,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -426,7 +426,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -443,6 +443,10 @@
 import { MAT_DIALOG_DATA, MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 
+interface DialogData {
+  tile: any;
+}
+
 @Component({
   selector: &#x27;safe-tile-display&#x27;,
   templateUrl: &#x27;./tile-display.component.html&#x27;,
@@ -458,9 +462,7 @@ export class SafeTileDisplayComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     public dialogRef: MatDialogRef&lt;SafeTileDisplayComponent&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: {
-      tile: any
-    }
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) { }
 
   /*  Build the form.
