@@ -858,8 +858,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="982"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:982</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="996"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:996</a></div>
                 </td>
             </tr>
 
@@ -942,8 +942,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="995"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:995</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="1009"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:1009</a></div>
                 </td>
             </tr>
 
@@ -2072,8 +2072,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="1020"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:1020</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="1034"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:1034</a></div>
                 </td>
             </tr>
 
@@ -5828,6 +5828,20 @@ export class SafeGridComponent implements OnInit, OnChanges, OnDestroy {
    */
   public onToggleFilter(): void {
     this.showFilter &#x3D; !this.showFilter;
+    if (this.showFilter) {
+      this.fields.filter(x &#x3D;&gt; !x.disabled).forEach((field, index) &#x3D;&gt; {
+        if (field.type !&#x3D;&#x3D; &#x27;JSON&#x27; || this.multiSelectTypes.includes(field.meta.type)) {
+          if ((field.meta.type &#x3D;&#x3D;&#x3D; &#x27;dropdown&#x27; || this.multiSelectTypes.includes(field.meta.type)) &amp;&amp; field.meta.choicesByUrl) {
+            this.http.get(field.meta.choicesByUrl.url).toPromise().then((res: any) &#x3D;&gt; {
+              this.fields[index] &#x3D; {
+                ...field,
+                meta: { ...field.meta, choices: field.meta.choicesByUrl.path ? res[field.meta.choicesByUrl.path] : res }
+              };
+            });
+          }
+        }
+      });
+    }
   }
 
   /*
