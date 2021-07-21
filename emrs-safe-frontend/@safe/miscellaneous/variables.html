@@ -402,7 +402,7 @@ mutation addChannel($title: String!, $application: ID!) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation addPage($name: String, $type: String!, $content: ID, $application: ID!) {
+mutation addPage($name: String, $type: ContentEnumType!, $content: ID, $application: ID!) {
   addPage(name: $name, type: $type, content: $content, application: $application){
     id
     name
@@ -894,7 +894,7 @@ mutation deleteUsersFromApplication($ids: [ID]!, $application: ID!) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation editApplication($id: ID!, $name: String, $status: String, $pages: [ID], $permissions: JSON, $description: String) {
+mutation editApplication($id: ID!, $name: String, $status: Status, $pages: [ID], $permissions: JSON, $description: String) {
   editApplication(id: $id, name: $name, status: $status, pages: $pages, permissions: $permissions, description: $description) {
     id
     description
