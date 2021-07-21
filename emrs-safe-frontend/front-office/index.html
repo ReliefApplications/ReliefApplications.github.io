@@ -92,9 +92,9 @@ You can execute following command for that:</p>
 <li><p>check that the current package version isn&#39;t already deployed. Increase it if a version exists.</p>
 </li>
 <li><p>Build the package:</p>
-<div><pre class="line-numbers"><code class="language-none">ng build --project=safe</code></pre></div></li>
+<div><pre class="line-numbers"><code class="language-none">ng build --prod safe</code></pre></div></li>
 <li><p>Deploy the package ( subsequent command can be executed if you&#39;re at the root of the project. Otherwise, change the path ):</p>
-<div><pre class="line-numbers"><code class="language-none">npm publish ./projects/safe</code></pre></div></li>
+<div><pre class="line-numbers"><code class="language-none">npm publish ./dist/safe</code></pre></div></li>
 </ul>
 <h2 id="build-the-web-components">Build the web components</h2>
 <p>We first need to generate the elements, using this command:</p>
