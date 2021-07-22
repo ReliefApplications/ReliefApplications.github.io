@@ -1468,10 +1468,10 @@ export class FormRecordsComponent implements OnInit {
         this.snackBar.openSnackBar(NOTIFICATIONS.recordUploadSuccess);
         this.getFormData();
       }
-    }, (error &#x3D;&gt; {
+    }, (error: any) &#x3D;&gt; {
       this.snackBar.openSnackBar(error.error, {error: true});
       this.xlsxFile.nativeElement.value &#x3D; &#x27;&#x27;;
-    }));
+    });
   }
 }
 </code></pre>
