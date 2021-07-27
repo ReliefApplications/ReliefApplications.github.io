@@ -28,9 +28,13 @@
 <title>cluster_SafeResourceGridModule_exports</title>
 <polygon fill="none" stroke="black" points="1111,-273 1111,-325 1315,-325 1315,-273 1111,-273"/>
 </g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeResourceGridModule_declarations</title>
+<polygon fill="none" stroke="black" points="1113,-143 1113,-195 1313,-195 1313,-143 1113,-143"/>
+</g>
 <g id="clust3" class="cluster">
 <title>cluster_SafeResourceGridModule_SafeResourceGridComponent_providers</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-195 1756,-195 1756,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 1756,-130 1756,-78 16,-78"/>
 </g>
 <!-- SafeResourceGridComponent -->
 <g id="node1" class="node">
