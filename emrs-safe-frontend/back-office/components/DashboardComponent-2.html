@@ -791,8 +791,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="230"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:230</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:232</a></div>
                 </td>
             </tr>
 
@@ -830,8 +830,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="166"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:166</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:168</a></div>
                 </td>
             </tr>
 
@@ -900,8 +900,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="196"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:196</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:198</a></div>
                 </td>
             </tr>
 
@@ -939,8 +939,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="190"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:190</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:192</a></div>
                 </td>
             </tr>
 
@@ -1421,6 +1421,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   /*  Save the dashboard changes in the database.
   */
   private autoSaveChanges(): void {
+    this.loading &#x3D; true;
     this.apollo.mutate&lt;EditDashboardMutationResponse&gt;({
       mutation: EDIT_DASHBOARD,
       variables: {
@@ -1429,7 +1430,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
       }
     }).subscribe(res &#x3D;&gt; {
       this.tiles &#x3D; res.data?.editDashboard.structure;
-    });
+      this.loading &#x3D; false;
+    }, error &#x3D;&gt; this.loading &#x3D; false);
   }
 
   /*  Edit the permissions layer.
