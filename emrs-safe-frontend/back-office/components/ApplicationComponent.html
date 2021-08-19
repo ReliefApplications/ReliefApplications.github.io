@@ -821,7 +821,7 @@ export class ApplicationComponent implements OnInit, OnDestroy {
             name: &#x27;Display&#x27;,
             callback: (event: any) &#x3D;&gt; this.onReorder(event),
             navItems: navItems
-            .concat(application.pages?.filter(x &#x3D;&gt; x.content).map(x &#x3D;&gt; {
+            .concat(application.pages?.filter((x: any) &#x3D;&gt; x.content).map((x: any) &#x3D;&gt; {
               return {
                 id: x.id,
                 name: x.name,
