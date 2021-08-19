@@ -503,13 +503,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FormRecordsModule.html" data-type="entity-link">FormRecordsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' : 'data-target="#xs-components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' }>
+                                            'data-target="#components-links-module-FormRecordsModule-74ba4b11f49b756098644f62ac69daf8"' : 'data-target="#xs-components-links-module-FormRecordsModule-74ba4b11f49b756098644f62ac69daf8"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' :
-                                            'id="xs-components-links-module-FormRecordsModule-4abd8fa9aec77d06d3e103eafe558bff"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-74ba4b11f49b756098644f62ac69daf8"' :
+                                            'id="xs-components-links-module-FormRecordsModule-74ba4b11f49b756098644f62ac69daf8"' }>
                                             <li class="link">
                                                 <a href="components/FormRecordsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormRecordsComponent</a>
