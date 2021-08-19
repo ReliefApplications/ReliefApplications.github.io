@@ -24,23 +24,23 @@
 <title>cluster_SafeChooseRecordModalModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="26,-70 26,-268 470,-268 470,-70 26,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeChooseRecordModalModule_declarations</title>
-<polygon fill="none" stroke="black" points="220,-78 220,-130 462,-130 462,-78 220,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeChooseRecordModalModule_exports</title>
 <polygon fill="none" stroke="black" points="126,-208 126,-260 370,-260 370,-208 126,-208"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeChooseRecordModalModule_imports</title>
-<polygon fill="none" stroke="black" points="34,-78 34,-130 212,-130 212,-78 34,-78"/>
+<polygon fill="none" stroke="black" points="284,-78 284,-130 462,-130 462,-78 284,-78"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeChooseRecordModalModule_declarations</title>
+<polygon fill="none" stroke="black" points="34,-78 34,-130 276,-130 276,-78 34,-78"/>
 </g>
 <!-- SafeChooseRecordModalComponent -->
 <g id="node1" class="node">
 <title>SafeChooseRecordModalComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="453.68,-122 228.32,-122 228.32,-86 453.68,-86 453.68,-122"/>
-<text text-anchor="middle" x="341" y="-99.8" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="267.68,-122 42.32,-122 42.32,-86 267.68,-86 267.68,-122"/>
+<text text-anchor="middle" x="155" y="-99.8" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalComponent</text>
 </g>
 <!-- SafeChooseRecordModalModule -->
 <g id="node2" class="node">
@@ -51,8 +51,8 @@
 <!-- SafeChooseRecordModalComponent&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge1" class="edge">
 <title>SafeChooseRecordModalComponent&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M289.05,-122.11C289.05,-122.11 289.05,-140.99 289.05,-140.99"/>
-<polygon fill="black" stroke="black" points="285.55,-140.99 289.05,-150.99 292.55,-140.99 285.55,-140.99"/>
+<path fill="none" stroke="black" d="M206.95,-122.11C206.95,-122.11 206.95,-140.99 206.95,-140.99"/>
+<polygon fill="black" stroke="black" points="203.45,-140.99 206.95,-150.99 210.45,-140.99 203.45,-140.99"/>
 </g>
 <!-- SafeChooseRecordModalComponent  -->
 <g id="node4" class="node">
@@ -69,14 +69,14 @@
 <!-- SafeResourceGridModule -->
 <g id="node3" class="node">
 <title>SafeResourceGridModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="204.17,-122 201.17,-126 180.17,-126 177.17,-122 41.83,-122 41.83,-86 204.17,-86 204.17,-122"/>
-<text text-anchor="middle" x="123" y="-99.8" font-family="Times,serif" font-size="14.00">SafeResourceGridModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="454.17,-122 451.17,-126 430.17,-126 427.17,-122 291.83,-122 291.83,-86 454.17,-86 454.17,-122"/>
+<text text-anchor="middle" x="373" y="-99.8" font-family="Times,serif" font-size="14.00">SafeResourceGridModule</text>
 </g>
 <!-- SafeResourceGridModule&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge2" class="edge">
 <title>SafeResourceGridModule&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M175.19,-122.11C175.19,-122.11 175.19,-140.99 175.19,-140.99"/>
-<polygon fill="black" stroke="black" points="171.69,-140.99 175.19,-150.99 178.69,-140.99 171.69,-140.99"/>
+<path fill="none" stroke="black" d="M320.81,-122.11C320.81,-122.11 320.81,-140.99 320.81,-140.99"/>
+<polygon fill="black" stroke="black" points="317.31,-140.99 320.81,-150.99 324.31,-140.99 317.31,-140.99"/>
 </g>
 </g>
 </svg>
