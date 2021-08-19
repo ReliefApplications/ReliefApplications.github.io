@@ -212,6 +212,7 @@ import * as Survey from &#x27;survey-angular&#x27;;
 import { GetRecordByIdQueryResponse, GET_RECORD_BY_ID } from &#x27;../../graphql/queries&#x27;;
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
+import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
 
 interface DialogData {
   recordId: string;
@@ -248,7 +249,8 @@ export class SafeRecordModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private apollo: Apollo,
     public dialog: MatDialog,
-    private downloadService: SafeDownloadService
+    private downloadService: SafeDownloadService,
+    private authService: SafeAuthService
   ) {
     this.containerId &#x3D; uuidv4();
     if (this.data.compareTo) {
@@ -277,7 +279,7 @@ export class SafeRecordModalComponent implements OnInit {
       this.modifiedAt &#x3D; this.record.modifiedAt || null;
       this.form &#x3D; this.record.form;
       this.loading &#x3D; res.loading;
-      addCustomFunctions(Survey, this.record);
+      addCustomFunctions(Survey, this.authService, this.record);
       this.survey &#x3D; new Survey.Model(this.form?.structure);
       for (const page of this.survey.pages) {
         if (page.isVisible) {

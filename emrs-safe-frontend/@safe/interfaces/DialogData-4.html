@@ -226,6 +226,7 @@ import { SafeConfirmModalComponent } from &#x27;../confirm-modal/confirm-modal.c
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeSnackBarService } from &#x27;../../services/snackbar.service&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
+import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
 
 interface DialogData {
   template?: string;
@@ -261,7 +262,8 @@ export class SafeFormModalComponent implements OnInit {
     private apollo: Apollo,
     public dialog: MatDialog,
     private snackBar: SafeSnackBarService,
-    private downloadService: SafeDownloadService
+    private downloadService: SafeDownloadService,
+    private authService: SafeAuthService
   ) {
     this.containerId &#x3D; uuidv4();
   }
@@ -290,7 +292,7 @@ export class SafeFormModalComponent implements OnInit {
         this.form &#x3D; record.form;
         this.modifiedAt &#x3D; this.isMultiEdition ? null : record.modifiedAt || null;
         this.loading &#x3D; false;
-        addCustomFunctions(Survey, record);
+        addCustomFunctions(Survey, this.authService, record);
         this.survey &#x3D; new Survey.Model(this.form?.structure);
         this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
         this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));

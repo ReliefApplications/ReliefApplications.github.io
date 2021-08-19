@@ -467,11 +467,17 @@ mutation addRecord($form: ID!, $data: JSON!, $display: Boolean) {
     id
     createdAt
     modifiedAt
+    createdBy {
+      name
+    }
     data(display: $display)
     form {
       uniqueRecord {
         id
         modifiedAt
+        createdBy {
+          name
+        }
         data
       }
     }
@@ -1065,6 +1071,9 @@ mutation editRecord($id: ID!, $data: JSON, $version: ID, $display: Boolean) {
     data(display: $display)
     createdAt
     modifiedAt
+    createdBy {
+      name
+    }
   }
 }&#x60;</code>
                         </td>
@@ -3089,6 +3098,9 @@ query GetRecordById($id: ID!) {
     data
     createdAt
     modifiedAt
+    createdBy {
+      name
+    }
     form {
       id
       structure

@@ -138,6 +138,9 @@
                                 <li>
                                     <a href="#user">user</a>
                                 </li>
+                                <li>
+                                    <a href="#userValue">userValue</a>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -272,8 +275,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:113</a></div>
                 </td>
             </tr>
 
@@ -350,8 +353,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="98"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:98</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:104</a></div>
                 </td>
             </tr>
 
@@ -619,6 +622,28 @@
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userValue"></a>
+                        <span class="name"><b>userValue</b><a href="#userValue"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>userValue()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:98</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
 </section>
     </div>
 
@@ -717,6 +742,12 @@ export class SafeAuthService {
   */
   get user(): Observable&lt;User | null&gt; {
     return this._user.asObservable();
+  }
+
+  /* Return the logged user value.
+  */
+  get userValue(): User | null {
+    return this._user.getValue();
   }
 
   /* Check if user exist and fetch it if not
