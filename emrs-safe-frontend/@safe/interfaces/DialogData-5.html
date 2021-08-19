@@ -80,6 +80,10 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
+                                        <a href="#canUpdate">canUpdate</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#compareTo">compareTo</a>
                                 </li>
                                 <li>
@@ -100,6 +104,40 @@
 
             <section>
                 <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="canUpdate"></a>
+                                        <span class="name"><b>canUpdate</b><a href="#canUpdate"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>canUpdate:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
@@ -212,12 +250,14 @@ import * as Survey from &#x27;survey-angular&#x27;;
 import { GetRecordByIdQueryResponse, GET_RECORD_BY_ID } from &#x27;../../graphql/queries&#x27;;
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
+import { EditRecordMutationResponse, EDIT_RECORD } from &#x27;../../graphql/mutations&#x27;;
 import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
 
 interface DialogData {
   recordId: string;
   locale?: string;
   compareTo?: any;
+  canUpdate?: boolean;
 }
 
 @Component({
@@ -235,6 +275,7 @@ export class SafeRecordModalComponent implements OnInit {
   public survey!: Survey.Model;
   public surveyNext: Survey.Model | null &#x3D; null;
   public formPages: any[] &#x3D; [];
+  public canEdit: boolean | undefined &#x3D; false;
 
   public containerId: string;
   public containerNextId &#x3D; &#x27;&#x27;;
@@ -259,6 +300,7 @@ export class SafeRecordModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.canEdit &#x3D; this.data.canUpdate;
     const defaultThemeColorsSurvey &#x3D; Survey
       .StylesManager
       .ThemeColors.default;
@@ -293,7 +335,6 @@ export class SafeRecordModalComponent implements OnInit {
       this.survey.showNavigationButtons &#x3D; &#x27;none&#x27;;
       this.survey.showProgressBar &#x3D; &#x27;off&#x27;;
       this.survey.render(this.containerId);
-
       if (this.data.compareTo) {
         this.surveyNext &#x3D; new Survey.Model(this.form?.structure);
         this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
@@ -356,6 +397,10 @@ export class SafeRecordModalComponent implements OnInit {
       reader.readAsDataURL(file);
     };
     xhr.send();
+  }
+
+  public onEdit(): void {
+    this.dialogRef.close(true);
   }
 
   /* Close the modal without sending any data.
