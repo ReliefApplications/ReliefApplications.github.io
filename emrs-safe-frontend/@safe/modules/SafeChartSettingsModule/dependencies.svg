@@ -24,13 +24,13 @@
 <title>cluster_SafeChartSettingsModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 541,-268 541,-70 8,-70"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeChartSettingsModule_imports</title>
-<polygon fill="none" stroke="black" points="222,-78 222,-130 533,-130 533,-78 222,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeChartSettingsModule_exports</title>
 <polygon fill="none" stroke="black" points="210,-208 210,-260 412,-260 412,-208 210,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeChartSettingsModule_imports</title>
+<polygon fill="none" stroke="black" points="222,-78 222,-130 533,-130 533,-78 222,-78"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeChartSettingsModule_declarations</title>
