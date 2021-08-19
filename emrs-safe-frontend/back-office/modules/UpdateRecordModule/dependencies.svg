@@ -28,13 +28,13 @@
 <title>cluster_UpdateRecordModule_imports</title>
 <polygon fill="none" stroke="black" points="240,-78 240,-130 442,-130 442,-78 240,-78"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_UpdateRecordModule_exports</title>
-<polygon fill="none" stroke="black" points="152,-208 152,-260 334,-260 334,-208 152,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_UpdateRecordModule_declarations</title>
 <polygon fill="none" stroke="black" points="54,-78 54,-130 232,-130 232,-78 54,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_UpdateRecordModule_exports</title>
+<polygon fill="none" stroke="black" points="152,-208 152,-260 334,-260 334,-208 152,-208"/>
 </g>
 <!-- UpdateRecordComponent -->
 <g id="node1" class="node">
