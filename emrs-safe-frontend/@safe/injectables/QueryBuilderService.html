@@ -1488,8 +1488,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="270"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:270</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:269</a></div>
                 </td>
             </tr>
 
@@ -1868,7 +1868,6 @@ export class QueryBuilderService {
   }
 
   public addNewField(field: any, newField?: boolean): FormGroup {
-    console.log(field);
     switch (newField ? field.type.kind : field.kind) {
       case &#x27;LIST&#x27;: {
         return this.formBuilder.group({
