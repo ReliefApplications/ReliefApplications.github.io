@@ -309,8 +309,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="555"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:555</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="558"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:558</a></div>
                 </td>
             </tr>
 
@@ -449,8 +449,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="474"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:474</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="477"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:477</a></div>
                 </td>
             </tr>
 
@@ -589,8 +589,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="624"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:624</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="627"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:627</a></div>
                 </td>
             </tr>
 
@@ -659,8 +659,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="601"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:601</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="604"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:604</a></div>
                 </td>
             </tr>
 
@@ -799,8 +799,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="498"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:498</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="501"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:501</a></div>
                 </td>
             </tr>
 
@@ -939,8 +939,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="652"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:652</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="655"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:655</a></div>
                 </td>
             </tr>
 
@@ -1161,8 +1161,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="575"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:575</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="578"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:578</a></div>
                 </td>
             </tr>
 
@@ -1243,8 +1243,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="523"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:523</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="526"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:526</a></div>
                 </td>
             </tr>
 
@@ -1407,8 +1407,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="671"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:671</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="674"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:674</a></div>
                 </td>
             </tr>
 
@@ -1980,8 +1980,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="704"
-                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:704</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="707"
+                            class="link-to-prism">projects/safe/src/lib/services/application.service.ts:707</a></div>
                 </td>
             </tr>
 
@@ -2657,18 +2657,21 @@ export class SafeApplicationService {
         mutation: EDIT_USER,
         variables: {
           id: user.id,
-          roles: [value.role],
+          roles: value.roles,
           application: application.id
         }
       }).subscribe(res &#x3D;&gt; {
         if (res.data) {
           const newUser &#x3D; res.data.editUser;
           this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;roles&#x27;, user.username));
-          const newApplication: Application &#x3D; {
-            ...application,
-            users: application.users?.map(x &#x3D;&gt; String(x.id) &#x3D;&#x3D;&#x3D; String(user.id) ? newUser || null : x) || []
-          };
-          this._application.next(newApplication);
+          const index &#x3D; application?.users?.indexOf(user);
+          if (application?.users &amp;&amp; index) {
+            const newApplication: Application &#x3D; {
+              ...application,
+              users: application.users?.map(x &#x3D;&gt; String(x.id) &#x3D;&#x3D;&#x3D; String(user.id) ? newUser || null : x) || []
+            };
+            this._application.next(newApplication);
+          }
         }
       });
     }
