@@ -28,13 +28,13 @@
 <title>cluster_SafeQueryBuilderModule_SafeQueryBuilderComponent_providers</title>
 <polygon fill="none" stroke="black" points="548,-78 548,-195 1422,-195 1422,-78 548,-78"/>
 </g>
-<g id="clust8" class="cluster">
-<title>cluster_SafeQueryBuilderModule_exports</title>
-<polygon fill="none" stroke="black" points="174,-273 174,-325 560,-325 560,-273 174,-273"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeQueryBuilderModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-143 16,-195 540,-195 540,-143 16,-143"/>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_SafeQueryBuilderModule_exports</title>
+<polygon fill="none" stroke="black" points="174,-273 174,-325 560,-325 560,-273 174,-273"/>
 </g>
 <!-- SafeQueryBuilderComponent -->
 <g id="node1" class="node">
