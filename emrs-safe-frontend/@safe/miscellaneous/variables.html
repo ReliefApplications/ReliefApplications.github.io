@@ -295,6 +295,9 @@
                             <a href="#PAGER_SETTINGS" title="projects/safe/src/lib/components/widgets/grid/grid.component.ts"><b>PAGER_SETTINGS</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.component.ts)</a>
                         </li>
                         <li>
+                            <a href="#prettifyLabel" title="projects/safe/src/lib/utils/prettify.ts"><b>prettifyLabel</b>&nbsp;&nbsp;&nbsp;(projects/.../prettify.ts)</a>
+                        </li>
+                        <li>
                             <a href="#PUBLISH" title="projects/safe/src/lib/graphql/mutations.ts"><b>PUBLISH</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -4384,6 +4387,40 @@ query GetType($name: String!) {
                         </td>
                     </tr>
 
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/safe/src/lib/utils/prettify.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="prettifyLabel"></a>
+                        <span class="name">
+                            <b>
+                            prettifyLabel</b>
+                            <a href="#prettifyLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(label: string): string &#x3D;&gt; {
+    label &#x3D; label.replace(/_/g, &#x27; &#x27;).replace(/([a-z])([A-Z])/g, &#x27;$1 $2&#x27;);
+    label &#x3D; label.charAt(0).toUpperCase() + label.slice(1);
+    return label;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Prettify field label</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
