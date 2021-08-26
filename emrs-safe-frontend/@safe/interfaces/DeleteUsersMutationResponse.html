@@ -261,46 +261,6 @@ export interface UploadFileMutationResponse {
   uploadFile: string;
 }
 
-// &#x3D;&#x3D;&#x3D; EDIT FORM &#x3D;&#x3D;&#x3D;
-export const EDIT_FORM_STRUCTURE &#x3D; gql&#x60;
-mutation editForm($id: ID!, $structure: JSON!) {
-  editForm(id: $id, structure: $structure) {
-    id
-    name
-    createdAt
-    status
-    versions {
-      id
-      createdAt
-      data
-    }
-    permissions {
-      canSee {
-        id
-        title
-      }
-      canCreate {
-        id
-        title
-      }
-      canUpdate {
-        id
-        title
-      }
-      canDelete {
-        id
-        title
-      }
-    }
-    canUpdate
-  }
-}&#x60;;
-
-export interface EditFormMutationResponse {
-  loading: boolean;
-  editForm: Form;
-}
-
 // &#x3D;&#x3D;&#x3D; EDIT USER &#x3D;&#x3D;&#x3D;
 export const EDIT_USER &#x3D; gql&#x60;
 mutation editUser($id: ID!, $roles: [ID]!, $application: ID) {

@@ -948,9 +948,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/EditChannelMutationResponse.html" data-type="entity-link">EditChannelMutationResponse</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/EditFormMutationResponse.html" data-type="entity-link">EditFormMutationResponse</a>
-                            </li>
-                            <li class="link">
                                 <a href="interfaces/EditPositionAttributeCategoryMutationResponse.html" data-type="entity-link">EditPositionAttributeCategoryMutationResponse</a>
                             </li>
                             <li class="link">
