@@ -216,13 +216,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ApplicationToolbarModule.html" data-type="entity-link">ApplicationToolbarModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ApplicationToolbarModule-b03804c1acf6be6546e7e41ee6d1afe0"' : 'data-target="#xs-components-links-module-ApplicationToolbarModule-b03804c1acf6be6546e7e41ee6d1afe0"' }>
+                                            'data-target="#components-links-module-ApplicationToolbarModule-f90510d938ae6bb37f9eb0f91e6bc456"' : 'data-target="#xs-components-links-module-ApplicationToolbarModule-f90510d938ae6bb37f9eb0f91e6bc456"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApplicationToolbarModule-b03804c1acf6be6546e7e41ee6d1afe0"' :
-                                            'id="xs-components-links-module-ApplicationToolbarModule-b03804c1acf6be6546e7e41ee6d1afe0"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApplicationToolbarModule-f90510d938ae6bb37f9eb0f91e6bc456"' :
+                                            'id="xs-components-links-module-ApplicationToolbarModule-f90510d938ae6bb37f9eb0f91e6bc456"' }>
                                             <li class="link">
                                                 <a href="components/ApplicationToolbarComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ApplicationToolbarComponent</a>
