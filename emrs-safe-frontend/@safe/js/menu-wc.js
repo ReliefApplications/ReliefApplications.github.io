@@ -832,6 +832,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/SafeAuthService.html" data-type="entity-link">SafeAuthService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/SafeDashboardService.html" data-type="entity-link">SafeDashboardService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/SafeDownloadService.html" data-type="entity-link">SafeDownloadService</a>
                                 </li>
                                 <li class="link">
@@ -1075,6 +1078,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetWorkflowByIdQueryResponse.html" data-type="entity-link">GetWorkflowByIdQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GridLayout.html" data-type="entity-link">GridLayout</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Notification.html" data-type="entity-link">Notification</a>
