@@ -850,7 +850,7 @@ export interface DeleteApiConfigurationMutationResponse {
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT API CONFIGURATION &#x3D;&#x3D;&#x3D;
-export const EDIT_API_CONFIGURATIION &#x3D; gql&#x60;
+export const EDIT_API_CONFIGURATION &#x3D; gql&#x60;
 mutation editApiConfiguration($id: ID!, $name: String, $status: Status, $authType: AuthType, $endpoint: String, $pingUrl: String, $settings: JSON, $permissions: JSON) {
   editApiConfiguration(id: $id, name: $name, status: $status, authType: $authType, endpoint: $endpoint, pingUrl: $pingUrl, settings: $settings, permissions: $permissions) {
     id

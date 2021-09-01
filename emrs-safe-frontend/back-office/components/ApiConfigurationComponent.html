@@ -345,8 +345,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:86</a></div>
                 </td>
             </tr>
 
@@ -415,8 +415,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:78</a></div>
                 </td>
             </tr>
 
@@ -493,8 +493,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="152"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:152</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="162"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:162</a></div>
                 </td>
             </tr>
 
@@ -532,8 +532,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="124"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:124</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:130</a></div>
                 </td>
             </tr>
 
@@ -571,8 +571,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="103"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:103</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:109</a></div>
                 </td>
             </tr>
 
@@ -843,7 +843,7 @@ import { ApiConfiguration, authType, NOTIFICATIONS, SafeSnackBarService } from &
 import { Apollo } from &#x27;apollo-angular&#x27;;
 import { SafeApiProxyService, status } from &#x27;projects/safe/src/public-api&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
-import { EditApiConfigurationMutationResponse, EDIT_API_CONFIGURATIION } from &#x27;../../../graphql/mutations&#x27;;
+import { EditApiConfigurationMutationResponse, EDIT_API_CONFIGURATION } from &#x27;../../../graphql/mutations&#x27;;
 import { GetApiConfigurationQueryResponse, GET_API_CONFIGURATION } from &#x27;../../../graphql/queries&#x27;;
 
 @Component({
@@ -894,6 +894,11 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
               settings: this.buildSettingsForm(this.apiConfiguration?.authType || &#x27;&#x27;)
             }
           );
+          this.apiForm.get(&#x27;authType&#x27;)?.valueChanges.subscribe(value &#x3D;&gt; {
+            this.apiForm.controls.settings.clearValidators();
+            this.apiForm.controls.settings &#x3D; this.buildSettingsForm(value);
+            this.apiForm.controls.settings.updateValueAndValidity();
+          });
           this.loading &#x3D; res.data.loading;
         } else {
           this.snackBar.openSnackBar(NOTIFICATIONS.accessNotProvided(&#x27;resource&#x27;), { error: true });
@@ -904,10 +909,6 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
         this.router.navigate([&#x27;/settings/apiconfigurations&#x27;]);
       });
     }
-
-    this.apiForm.get(&#x27;authType&#x27;)?.valueChanges.subscribe(value &#x3D;&gt; {
-      this.apiForm.controls.settings &#x3D; this.buildSettingsForm(value);
-    });
   }
 
   /*  Unsubscribe from the apollo subscription if needed
@@ -921,7 +922,7 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
   /*  Create the settings form depending on the authType
   */
   private buildSettingsForm(type: string): FormGroup {
-    if (type &#x3D;&#x3D;&#x3D; &#x27;serviceToService&#x27;) {
+    if (type &#x3D;&#x3D;&#x3D; authType.serviceToService) {
       return this.formBuilder.group({
         authTargetUrl: [this.apiConfiguration?.settings &amp;&amp; this.apiConfiguration?.settings.authTargetUrl
           ? &#x27;●●●●●●●●●●●●●&#x27; : &#x27;&#x27;, Validators.required],
@@ -931,6 +932,11 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
           ? &#x27;●●●●●●●●●●●●●&#x27; : &#x27;&#x27;, Validators.minLength(3)],
         safeID: [this.apiConfiguration?.settings &amp;&amp; this.apiConfiguration?.settings.safeID
           ? &#x27;●●●●●●●●●●●●●&#x27; : &#x27;&#x27;, Validators.minLength(3)]
+      });
+    } else if (type &#x3D;&#x3D;&#x3D; authType.userToService) {
+      return this.formBuilder.group({
+        token: [this.apiConfiguration?.settings &amp;&amp; this.apiConfiguration?.settings.token
+          ? &#x27;●●●●●●●●●●●●●&#x27; : &#x27;&#x27;, Validators.required]
       });
     }
     return this.formBuilder.group({});
@@ -944,7 +950,7 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
     }
     this.loading &#x3D; true;
     this.apollo.mutate&lt;EditApiConfigurationMutationResponse&gt;({
-      mutation: EDIT_API_CONFIGURATIION,
+      mutation: EDIT_API_CONFIGURATION,
       variables: {
         id: this.id,
         permissions: e
@@ -964,23 +970,27 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
       this.apolloSubscription.unsubscribe();
     }
     this.loading &#x3D; true;
+    const variables &#x3D; { id: this.id };
+    Object.assign(variables,
+      this.apiForm.value.name !&#x3D;&#x3D; this.apiConfiguration?.name &amp;&amp; { name: this.apiForm.value.name },
+      this.apiForm.value.status !&#x3D;&#x3D; this.apiConfiguration?.status &amp;&amp; { status: this.apiForm.value.status },
+      this.apiForm.value.authType !&#x3D;&#x3D; this.apiConfiguration?.authType &amp;&amp; { authType: this.apiForm.value.authType },
+      this.apiForm.value.endpoint !&#x3D;&#x3D; this.apiConfiguration?.endpoint &amp;&amp; { endpoint: this.apiForm.value.endpoint },
+      this.apiForm.value.pingUrl !&#x3D;&#x3D; this.apiConfiguration?.pingUrl &amp;&amp; { pingUrl: this.apiForm.value.pingUrl },
+      this.apiForm.controls.settings.touched &amp;&amp; { settings: this.apiForm.controls.settings.value }
+    );
     this.apollo.mutate&lt;EditApiConfigurationMutationResponse&gt;({
-      mutation: EDIT_API_CONFIGURATIION,
-      variables: {
-        id: this.id,
-        name: this.apiForm.value.name,
-        status: this.apiForm.value.status,
-        authType: this.apiForm.value.authType,
-        endpoint: this.apiForm.value.endpoint,
-        pingUrl: this.apiForm.value.pingUrl,
-        settings: this.apiForm.controls.settings.value // Fix problem if we pass ●●●●●●●●●●●●●
-      }
+      mutation: EDIT_API_CONFIGURATION,
+      variables
     }).subscribe(res &#x3D;&gt; {
-      if (res.data) {
-        this.apiConfiguration &#x3D; res.data.editApiConfiguration;
+      if (res.errors) {
+        this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;ApiConfiguration&#x27;, res.errors[0].message), { error: true });
+        this.loading &#x3D; false;
+      } else {
+        this.apiConfiguration &#x3D; res.data?.editApiConfiguration;
         this.apiForm.controls.settings &#x3D; this.buildSettingsForm(this.apiForm.value.authType);
         this.apiForm.markAsPristine();
-        this.loading &#x3D; res.data.loading;
+        this.loading &#x3D; res.data?.loading || false;
       }
     });
   }
@@ -1098,6 +1108,16 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
               &lt;/mat-form-field&gt;
             &lt;/div&gt;
           &lt;/ng-container&gt;
+          &lt;ng-container *ngIf&#x3D;&quot;apiForm.value.authType &#x3D;&#x3D;&#x3D; &#x27;userToService&#x27;&quot;&gt;
+            &lt;div formGroupName&#x3D;&quot;settings&quot; class&#x3D;&quot;form-group&quot;&gt;
+              &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;
+                  Token
+                &lt;/mat-label&gt;
+                &lt;input matInput formControlName&#x3D;&quot;token&quot; type&#x3D;&#x27;text&#x27; placeholder&#x3D;&quot;Enter the token used to authenticate to the Endpoint&quot; onfocus&#x3D;&quot;this.value&#x3D;&#x27;&#x27;&quot;/&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/ng-container&gt;
         &lt;/div&gt;
         &lt;button mat-flat-button (click)&#x3D;&quot;onSave()&quot; color&#x3D;&quot;primary&quot; [disabled]&#x3D;&quot;apiForm.invalid || !apiForm.dirty&quot;&gt;Save changes&lt;/button&gt;
       &lt;/form&gt;
@@ -1145,7 +1165,7 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && apiConfiguration">    <div class="page-header">      <safe-previous-button path="/settings/apiconfigurations"></safe-previous-button>      <h1 class="page-title">          {{apiConfiguration?.name}}      </h1>      <safe-access [access]="apiConfiguration?.permissions" (save)="saveAccess($event)" *ngIf="apiConfiguration?.canUpdate"></safe-access>    </div>    <form [formGroup]="apiForm" *ngIf="apiForm">        <h1>General</h1>        <div class="form-group">          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                API Configuration Name              </mat-label>              <input matInput formControlName="name" type=\'text\' placeholder="Enter a name for the API Configuration" />            </mat-form-field>                    <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Status              </mat-label>              <mat-select formControlName="status">                <mat-option *ngFor="let statusChoice of statusChoices" [value]=statusChoice>{{ statusChoice }}</mat-option>              </mat-select>            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">                <mat-label>                  Authentication type                </mat-label>                <mat-select formControlName="authType">                  <mat-option *ngFor="let authTypeChoice of authTypeChoices" [value]=authTypeChoice>{{ authTypeChoice }}</mat-option>                </mat-select>              </mat-form-field>          </div>          <h1>Endpoint</h1>          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                Main endpoint              </mat-label>              <input matInput formControlName="endpoint" type=\'text\' placeholder="Base URL for the API" />            </mat-form-field>                    <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Ping extension              </mat-label>              <input matInput formControlName="pingUrl" type=\'text\' placeholder="Ping extension URL" />            </mat-form-field>            <div class="ping-button-container">              <button mat-flat-button color="primary" (click)="onPing()" [disabled]="!apiForm.value.pingUrl || !apiForm.value.endpoint">                Send ping request                <mat-icon>online_prediction</mat-icon>              </button>            </div>          </div>                    <h1>API authentication settings</h1>          <ng-container *ngIf="apiForm.value.authType === \'serviceToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Authentication target URL                </mat-label>                <input matInput formControlName="authTargetUrl" type=\'text\' placeholder="Enter the authentication target URL" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  External API client ID                </mat-label>                <input matInput formControlName="apiClientID" type=\'text\' placeholder="Enter the external API client ID" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  SAFE secret                </mat-label>                <input matInput formControlName="safeSecret" type=\'text\' placeholder="Enter the SAFE secret" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  SAFE ID                </mat-label>                <input matInput formControlName="safeID" type=\'text\' placeholder="Enter the SAFE ID" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>        </div>        <button mat-flat-button (click)="onSave()" color="primary" [disabled]="apiForm.invalid || !apiForm.dirty">Save changes</button>      </form></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && apiConfiguration">    <div class="page-header">      <safe-previous-button path="/settings/apiconfigurations"></safe-previous-button>      <h1 class="page-title">          {{apiConfiguration?.name}}      </h1>      <safe-access [access]="apiConfiguration?.permissions" (save)="saveAccess($event)" *ngIf="apiConfiguration?.canUpdate"></safe-access>    </div>    <form [formGroup]="apiForm" *ngIf="apiForm">        <h1>General</h1>        <div class="form-group">          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                API Configuration Name              </mat-label>              <input matInput formControlName="name" type=\'text\' placeholder="Enter a name for the API Configuration" />            </mat-form-field>                    <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Status              </mat-label>              <mat-select formControlName="status">                <mat-option *ngFor="let statusChoice of statusChoices" [value]=statusChoice>{{ statusChoice }}</mat-option>              </mat-select>            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">                <mat-label>                  Authentication type                </mat-label>                <mat-select formControlName="authType">                  <mat-option *ngFor="let authTypeChoice of authTypeChoices" [value]=authTypeChoice>{{ authTypeChoice }}</mat-option>                </mat-select>              </mat-form-field>          </div>          <h1>Endpoint</h1>          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                Main endpoint              </mat-label>              <input matInput formControlName="endpoint" type=\'text\' placeholder="Base URL for the API" />            </mat-form-field>                    <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Ping extension              </mat-label>              <input matInput formControlName="pingUrl" type=\'text\' placeholder="Ping extension URL" />            </mat-form-field>            <div class="ping-button-container">              <button mat-flat-button color="primary" (click)="onPing()" [disabled]="!apiForm.value.pingUrl || !apiForm.value.endpoint">                Send ping request                <mat-icon>online_prediction</mat-icon>              </button>            </div>          </div>                    <h1>API authentication settings</h1>          <ng-container *ngIf="apiForm.value.authType === \'serviceToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Authentication target URL                </mat-label>                <input matInput formControlName="authTargetUrl" type=\'text\' placeholder="Enter the authentication target URL" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  External API client ID                </mat-label>                <input matInput formControlName="apiClientID" type=\'text\' placeholder="Enter the external API client ID" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  SAFE secret                </mat-label>                <input matInput formControlName="safeSecret" type=\'text\' placeholder="Enter the SAFE secret" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  SAFE ID                </mat-label>                <input matInput formControlName="safeID" type=\'text\' placeholder="Enter the SAFE ID" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>          <ng-container *ngIf="apiForm.value.authType === \'userToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Token                </mat-label>                <input matInput formControlName="token" type=\'text\' placeholder="Enter the token used to authenticate to the Endpoint" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>        </div>        <button mat-flat-button (click)="onSave()" color="primary" [disabled]="apiForm.invalid || !apiForm.dirty">Save changes</button>      </form></ng-container></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddApplicationComponent', 'selector': 'app-add-application'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ApiConfigurationComponent'};
