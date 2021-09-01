@@ -206,7 +206,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(apollo: Apollo, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dialog: MatDialog, snackBar: SafeSnackBarService)</code>
+<code>constructor(apollo: Apollo, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dialog: MatDialog, snackBar: SafeSnackBarService, dashboardService: SafeDashboardService)</code>
                     </td>
                 </tr>
                         <tr>
@@ -288,6 +288,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>dashboardService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeDashboardService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -351,8 +363,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/dashboard/dashboard.component.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/dashboard/dashboard.component.ts:65</a></div>
                 </td>
             </tr>
 
@@ -390,8 +402,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/dashboard/dashboard.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/dashboard/dashboard.component.ts:38</a></div>
                 </td>
             </tr>
 
@@ -604,7 +616,7 @@ import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
 
 import { GetDashboardByIdQueryResponse, GET_DASHBOARD_BY_ID } from &#x27;../../../graphql/queries&#x27;;
-import { Dashboard, SafeSnackBarService, NOTIFICATIONS } from &#x27;@safe/builder&#x27;;
+import { Dashboard, SafeSnackBarService, NOTIFICATIONS, SafeDashboardService } from &#x27;@safe/builder&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
 
 @Component({
@@ -631,7 +643,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     public dialog: MatDialog,
-    private snackBar: SafeSnackBarService
+    private snackBar: SafeSnackBarService,
+    private dashboardService: SafeDashboardService
   ) { }
 
   ngOnInit(): void {
@@ -645,6 +658,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       }).valueChanges.subscribe((res) &#x3D;&gt; {
         if (res.data.dashboard) {
           this.dashboard &#x3D; res.data.dashboard;
+          this.dashboardService.openDashboard(this.dashboard);
           this.tiles &#x3D; res.data.dashboard.structure ? res.data.dashboard.structure : [];
           this.loading &#x3D; res.loading;
         } else {
@@ -664,6 +678,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     if (this.routeSubscription) {
       this.routeSubscription.unsubscribe();
     }
+    this.dashboardService.closeDashboard();
   }
 
 }
