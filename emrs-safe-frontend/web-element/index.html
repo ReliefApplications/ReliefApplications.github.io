@@ -99,7 +99,20 @@ You can execute following command for that:</p>
 <h2 id="build-the-web-components">Build the web components</h2>
 <p>We first need to generate the elements, using this command:</p>
 <div><pre class="line-numbers"><code class="language-none">npm run build:elem</code></pre></div><p>Then, a bundle can be generated from the files using this command:</p>
-<div><pre class="line-numbers"><code class="language-none">npm run bundle:elem</code></pre></div><h2 id="running-unit-tests">Running unit tests</h2>
+<div><pre class="line-numbers"><code class="language-none">npm run bundle:elem</code></pre></div><h2 id="deploy-a-release">Deploy a release</h2>
+<p><a href="https://github.com/conventional-changelog/standard-version">Standard Version library</a> is used by the project.</p>
+<p>In order to increase the versions of the code, you can use the related commands:</p>
+<ul>
+<li>For a minor version:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">npm run release:minor</code></pre></div><ul>
+<li>For a patch:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">npm run release:patch</code></pre></div><ul>
+<li>For a major version:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">npm run release:major</code></pre></div><p>The cli should indicate the next command to run, in order to deploy the version.</p>
+<h2 id="running-unit-tests">Running unit tests</h2>
 <p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
 <h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
 <p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
