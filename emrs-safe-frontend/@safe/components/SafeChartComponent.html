@@ -775,7 +775,7 @@ export class SafeChartComponent implements OnChanges, OnDestroy {
       if ([&#x27;pie&#x27;, &#x27;donut&#x27;, &#x27;line&#x27;].includes(this.settings.chart.type)) {
         this.series &#x3D; [
           {
-            data: res.data.recordsAggregation
+            data: JSON.parse(JSON.stringify(res.data.recordsAggregation))
           }
         ];
       } else {
