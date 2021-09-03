@@ -65,13 +65,13 @@
 <title>cluster_SafePieChartModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="153,-70 153,-268 343,-268 343,-70 153,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafePieChartModule_declarations</title>
-<polygon fill="none" stroke="black" points="162,-78 162,-130 334,-130 334,-78 162,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafePieChartModule_exports</title>
 <polygon fill="none" stroke="black" points="161,-208 161,-260 335,-260 335,-208 161,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafePieChartModule_declarations</title>
+<polygon fill="none" stroke="black" points="162,-78 162,-130 334,-130 334,-78 162,-78"/>
 </g>
 <!-- SafePieChartComponent -->
 <g id="node1" class="node">
@@ -171,7 +171,6 @@
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { SafePieChartComponent } from &#x27;./pie-chart.component&#x27;;
 import { ChartsModule } from &#x27;@progress/kendo-angular-charts&#x27;;
-import { BrowserAnimationsModule } from &#x27;@angular/platform-browser/animations&#x27;;
 import &#x27;hammerjs&#x27;;
 
 @NgModule({
@@ -180,7 +179,6 @@ import &#x27;hammerjs&#x27;;
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     ChartsModule
   ],
   exports: [

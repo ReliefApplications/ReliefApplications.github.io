@@ -798,46 +798,50 @@ export class SafeChartComponent implements OnChanges, OnDestroy {
     &lt;button mat-icon-button class&#x3D;&quot;export-button&quot; (click)&#x3D;&quot;onExport()&quot; *ngIf&#x3D;&quot;export&quot;&gt;
         &lt;mat-icon&gt;get_app&lt;/mat-icon&gt;
     &lt;/button&gt;
-    &lt;kendo-chart #chart class&#x3D;&quot;widget-content&quot; [categoryAxis]&#x3D;&quot;settings.chart.type &#x3D;&#x3D;&#x3D; &#x27;line&#x27; ? categoryAxis : &#x27;&#x27;&quot; *ngIf&#x3D;&quot;settings.chart&quot;&gt;
-        &lt;kendo-chart-title *ngIf&#x3D;&quot;settings.chart.title&quot; [visible]&#x3D;&#x27;settings.chart.title.visible&#x27; [text]&#x3D;&#x27;settings.chart.title.text&#x27;
-            [position]&#x3D;&#x27;settings.chart.title.position&#x27;&gt;&lt;/kendo-chart-title&gt;
-        &lt;kendo-chart-legend *ngIf&#x3D;&quot;settings.chart.legend&quot; [visible]&#x3D;&#x27;settings.chart.legend.visible&#x27; [position]&#x3D;&#x27;settings.chart.legend.position&#x27;
-            [orientation]&#x3D;&#x27;settings.chart.legend.orientation&#x27;&gt;&lt;/kendo-chart-legend&gt;
+    &lt;ng-container [ngSwitch]&#x3D;&quot;settings.chart.type&quot;&gt;
+        &lt;safe-line-chart class&#x3D;&quot;widget-content&quot; *ngSwitchCase&#x3D;&quot;&#x27;line&#x27;&quot; [legend]&#x3D;&quot;settings.chart.legend&quot;
+            [series]&#x3D;&quot;series&quot;&gt;&lt;/safe-line-chart&gt;
+        &lt;safe-pie-chart class&#x3D;&quot;widget-content&quot; *ngSwitchCase&#x3D;&quot;&#x27;pie&#x27;&quot; [legend]&#x3D;&quot;settings.chart.legend&quot; [series]&#x3D;&quot;series&quot;&gt;
+        &lt;/safe-pie-chart&gt;
+        &lt;safe-donut-chart class&#x3D;&quot;widget-content&quot; *ngSwitchCase&#x3D;&quot;&#x27;donut&#x27;&quot; [legend]&#x3D;&quot;settings.chart.legend&quot;
+            [series]&#x3D;&quot;series&quot;&gt;&lt;/safe-donut-chart&gt;
+    &lt;/ng-container&gt;
+    &lt;mat-spinner [diameter]&#x3D;&quot;30&quot; *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/mat-spinner&gt;
+&lt;/div&gt;
+&lt;!-- &lt;kendo-chart #chart class&#x3D;&quot;widget-content&quot; [categoryAxis]&#x3D;&quot;settings.chart.type &#x3D;&#x3D;&#x3D; &#x27;line&#x27; ? categoryAxis : &#x27;&#x27;&quot;
+        *ngIf&#x3D;&quot;settings.chart&quot;&gt;
+        &lt;kendo-chart-title *ngIf&#x3D;&quot;settings.chart.title&quot; [visible]&#x3D;&#x27;settings.chart.title.visible&#x27;
+            [text]&#x3D;&#x27;settings.chart.title.text&#x27; [position]&#x3D;&#x27;settings.chart.title.position&#x27;&gt;&lt;/kendo-chart-title&gt;
+        &lt;kendo-chart-legend *ngIf&#x3D;&quot;settings.chart.legend&quot; [visible]&#x3D;&#x27;settings.chart.legend.visible&#x27;
+            [position]&#x3D;&#x27;settings.chart.legend.position&#x27; [orientation]&#x3D;&#x27;settings.chart.legend.orientation&#x27;&gt;
+        &lt;/kendo-chart-legend&gt;
         &lt;kendo-chart-tooltip format&#x3D;&#x27;{0}&#x27;&gt;&lt;/kendo-chart-tooltip&gt;
         &lt;kendo-chart-series&gt;
-            &lt;!-- BAR --&gt;
             &lt;ng-container *ngIf&#x3D;&quot;[&#x27;bar&#x27;].includes(settings.chart.type)&quot;&gt;
-                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27;
-                    [type]&#x3D;&#x27;settings.chart.type&#x27; [style]&#x3D;&#x27;item.style&#x27; [stack]&#x3D;&quot;{ type: &#x27;100%&#x27; }&quot; [data]&#x3D;&#x27;item.data&#x27; [name]&#x3D;&quot;item.name&quot; field&#x3D;&quot;field&quot; categoryField&#x3D;&quot;category&quot;&gt;
+                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27; [type]&#x3D;&#x27;settings.chart.type&#x27; [style]&#x3D;&#x27;item.style&#x27;
+                    [stack]&#x3D;&quot;{ type: &#x27;100%&#x27; }&quot; [data]&#x3D;&#x27;item.data&#x27; [name]&#x3D;&quot;item.name&quot; field&#x3D;&quot;field&quot;
+                    categoryField&#x3D;&quot;category&quot;&gt;
                 &lt;/kendo-chart-series-item&gt;
             &lt;/ng-container&gt;
-            &lt;!-- LINE --&gt;
             &lt;ng-container *ngIf&#x3D;&quot;[&#x27;line&#x27;].includes(settings.chart.type)&quot;&gt;
-                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27;
-                    [type]&#x3D;&#x27;settings.chart.type&#x27; [style]&#x3D;&#x27;item.style&#x27; [data]&#x3D;&#x27;item.data&#x27; field&#x3D;&quot;field&quot; categoryField&#x3D;&quot;category&quot;&gt;
+                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27; [type]&#x3D;&#x27;settings.chart.type&#x27; [style]&#x3D;&#x27;item.style&#x27;
+                    [data]&#x3D;&#x27;item.data&#x27; field&#x3D;&quot;field&quot; categoryField&#x3D;&quot;category&quot;&gt;
                 &lt;/kendo-chart-series-item&gt;
             &lt;/ng-container&gt;
-            &lt;!-- PIE - DONUT --&gt;
             &lt;ng-container *ngIf&#x3D;&quot;[&#x27;pie&#x27;, &#x27;donut&#x27;].includes(settings.chart.type)&quot;&gt;
-                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27;
-                    [type]&#x3D;&quot;settings.chart.type&quot;
-                    [data]&#x3D;&quot;item.data&quot;
-                    field&#x3D;&quot;field&quot;
-                    categoryField&#x3D;&quot;category&quot;
-                &gt;&lt;/kendo-chart-series-item&gt;
+                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27; [type]&#x3D;&quot;settings.chart.type&quot; [data]&#x3D;&quot;item.data&quot;
+                    field&#x3D;&quot;field&quot; categoryField&#x3D;&quot;category&quot;&gt;&lt;/kendo-chart-series-item&gt;
             &lt;/ng-container&gt;
-            &lt;!-- &lt;ng-container *ngIf&#x3D;&quot;[&#x27;scatter&#x27;, &#x27;scatterLine&#x27;].includes(settings.chart.type)&quot;&gt;
-                &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27;
-                    [name]&#x3D;&quot;item.name&quot;
-                    [type]&#x3D;&quot;settings.chart.type&quot;
-                    [data]&#x3D;&quot;item.data&quot;
-                    xField&#x3D;&quot;xField&quot; yField&#x3D;&quot;yField&quot;&gt;
-                &lt;/kendo-chart-series-item&gt;
-            &lt;/ng-container&gt; --&gt;
         &lt;/kendo-chart-series&gt;
-    &lt;/kendo-chart&gt;
-    &lt;mat-spinner [diameter]&#x3D;&quot;30&quot; *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/mat-spinner&gt;
-&lt;/div&gt;</code></pre>
+    &lt;/kendo-chart&gt; --&gt;
+&lt;!-- &lt;ng-container *ngIf&#x3D;&quot;[&#x27;scatter&#x27;, &#x27;scatterLine&#x27;].includes(settings.chart.type)&quot;&gt;
+    &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27;
+        [name]&#x3D;&quot;item.name&quot;
+        [type]&#x3D;&quot;settings.chart.type&quot;
+        [data]&#x3D;&quot;item.data&quot;
+        xField&#x3D;&quot;xField&quot; yField&#x3D;&quot;yField&quot;&gt;
+    &lt;/kendo-chart-series-item&gt;
+&lt;/ng-container&gt; --&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -878,7 +882,7 @@ export class SafeChartComponent implements OnChanges, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="widget-container">    <div class="widget-header" *ngIf="header">{{settings.title}}</div>    <button mat-icon-button class="export-button" (click)="onExport()" *ngIf="export">        <mat-icon>get_app</mat-icon>    </button>    <kendo-chart #chart class="widget-content" [categoryAxis]="settings.chart.type === \'line\' ? categoryAxis : \'\'" *ngIf="settings.chart">        <kendo-chart-title *ngIf="settings.chart.title" [visible]=\'settings.chart.title.visible\' [text]=\'settings.chart.title.text\'            [position]=\'settings.chart.title.position\'></kendo-chart-title>        <kendo-chart-legend *ngIf="settings.chart.legend" [visible]=\'settings.chart.legend.visible\' [position]=\'settings.chart.legend.position\'            [orientation]=\'settings.chart.legend.orientation\'></kendo-chart-legend>        <kendo-chart-tooltip format=\'{0}\'></kendo-chart-tooltip>        <kendo-chart-series>            <!-- BAR -->            <ng-container *ngIf="[\'bar\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\'                    [type]=\'settings.chart.type\' [style]=\'item.style\' [stack]="{ type: \'100%\' }" [data]=\'item.data\' [name]="item.name" field="field" categoryField="category">                </kendo-chart-series-item>            </ng-container>            <!-- LINE -->            <ng-container *ngIf="[\'line\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\'                    [type]=\'settings.chart.type\' [style]=\'item.style\' [data]=\'item.data\' field="field" categoryField="category">                </kendo-chart-series-item>            </ng-container>            <!-- PIE - DONUT -->            <ng-container *ngIf="[\'pie\', \'donut\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\'                    [type]="settings.chart.type"                    [data]="item.data"                    field="field"                    categoryField="category"                ></kendo-chart-series-item>            </ng-container>            <!-- <ng-container *ngIf="[\'scatter\', \'scatterLine\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\'                    [name]="item.name"                    [type]="settings.chart.type"                    [data]="item.data"                    xField="xField" yField="yField">                </kendo-chart-series-item>            </ng-container> -->        </kendo-chart-series>    </kendo-chart>    <mat-spinner [diameter]="30" *ngIf="loading"></mat-spinner></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="widget-container">    <div class="widget-header" *ngIf="header">{{settings.title}}</div>    <button mat-icon-button class="export-button" (click)="onExport()" *ngIf="export">        <mat-icon>get_app</mat-icon>    </button>    <ng-container [ngSwitch]="settings.chart.type">        <safe-line-chart class="widget-content" *ngSwitchCase="\'line\'" [legend]="settings.chart.legend"            [series]="series"></safe-line-chart>        <safe-pie-chart class="widget-content" *ngSwitchCase="\'pie\'" [legend]="settings.chart.legend" [series]="series">        </safe-pie-chart>        <safe-donut-chart class="widget-content" *ngSwitchCase="\'donut\'" [legend]="settings.chart.legend"            [series]="series"></safe-donut-chart>    </ng-container>    <mat-spinner [diameter]="30" *ngIf="loading"></mat-spinner></div><!-- <kendo-chart #chart class="widget-content" [categoryAxis]="settings.chart.type === \'line\' ? categoryAxis : \'\'"        *ngIf="settings.chart">        <kendo-chart-title *ngIf="settings.chart.title" [visible]=\'settings.chart.title.visible\'            [text]=\'settings.chart.title.text\' [position]=\'settings.chart.title.position\'></kendo-chart-title>        <kendo-chart-legend *ngIf="settings.chart.legend" [visible]=\'settings.chart.legend.visible\'            [position]=\'settings.chart.legend.position\' [orientation]=\'settings.chart.legend.orientation\'>        </kendo-chart-legend>        <kendo-chart-tooltip format=\'{0}\'></kendo-chart-tooltip>        <kendo-chart-series>            <ng-container *ngIf="[\'bar\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\' [type]=\'settings.chart.type\' [style]=\'item.style\'                    [stack]="{ type: \'100%\' }" [data]=\'item.data\' [name]="item.name" field="field"                    categoryField="category">                </kendo-chart-series-item>            </ng-container>            <ng-container *ngIf="[\'line\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\' [type]=\'settings.chart.type\' [style]=\'item.style\'                    [data]=\'item.data\' field="field" categoryField="category">                </kendo-chart-series-item>            </ng-container>            <ng-container *ngIf="[\'pie\', \'donut\'].includes(settings.chart.type)">                <kendo-chart-series-item *ngFor=\'let item of series\' [type]="settings.chart.type" [data]="item.data"                    field="field" categoryField="category"></kendo-chart-series-item>            </ng-container>        </kendo-chart-series>    </kendo-chart> --><!-- <ng-container *ngIf="[\'scatter\', \'scatterLine\'].includes(settings.chart.type)">    <kendo-chart-series-item *ngFor=\'let item of series\'        [name]="item.name"        [type]="settings.chart.type"        [data]="item.data"        xField="xField" yField="yField">    </kendo-chart-series-item></ng-container> --></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDashboardMenuComponent', 'selector': 'safe-dashboard-menu'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUserComponent', 'selector': 'safe-invite-user'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeChartComponent'};

@@ -79,15 +79,12 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
                                         <a href="#orientation">orientation</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
                                         <a href="#position">position</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
                                         <a href="#visible">visible</a>
                                 </li>
                             </ul>
@@ -111,7 +108,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>orientation:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>orientation:     <code>&quot;horizontal&quot; | &quot;vertical&quot;</code>
 </code>
                                     </td>
                                 </tr>
@@ -119,16 +116,11 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code>&quot;horizontal&quot; | &quot;vertical&quot;</code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -145,7 +137,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>position:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>position:     <code>&quot;top&quot; | &quot;bottom&quot; | &quot;left&quot; | &quot;right&quot;</code>
 </code>
                                     </td>
                                 </tr>
@@ -153,16 +145,11 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code>&quot;top&quot; | &quot;bottom&quot; | &quot;left&quot; | &quot;right&quot;</code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -192,11 +179,6 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -209,11 +191,18 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { CategoryAxis } from &#x27;@progress/kendo-angular-charts&#x27;;
+
+interface ChartTitle {
+  visible: boolean;
+  text: string;
+  position: &#x27;top&#x27; | &#x27;bottom&#x27;;
+}
 
 interface ChartLegend {
-  visible?: boolean;
-  orientation?: string;
-  position?: string;
+  visible: boolean;
+  orientation: &#x27;horizontal&#x27; | &#x27;vertical&#x27;;
+  position: &#x27;top&#x27; | &#x27;bottom&#x27; | &#x27;left&#x27; | &#x27;right&#x27;;
 }
 
 interface ChartSeries {
@@ -232,11 +221,13 @@ interface ChartSeries {
 })
 export class SafeLineChartComponent implements OnInit {
 
+  @Input() title: ChartTitle | undefined;
+
   @Input() legend: ChartLegend | undefined;
 
   @Input() series: ChartSeries[] &#x3D; [];
 
-  public categoryAxis: any &#x3D; {
+  public categoryAxis: CategoryAxis &#x3D; {
     type: &#x27;date&#x27;,
     maxDivisions: 10
   };

@@ -162,13 +162,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeChartModule.html" data-type="entity-link">SafeChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeChartModule-72c2112063dd7fece040da6fb7ba36c1"' : 'data-target="#xs-components-links-module-SafeChartModule-72c2112063dd7fece040da6fb7ba36c1"' }>
+                                            'data-target="#components-links-module-SafeChartModule-b64a17e62213d93aa3ca56bfa01b37ff"' : 'data-target="#xs-components-links-module-SafeChartModule-b64a17e62213d93aa3ca56bfa01b37ff"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChartModule-72c2112063dd7fece040da6fb7ba36c1"' :
-                                            'id="xs-components-links-module-SafeChartModule-72c2112063dd7fece040da6fb7ba36c1"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChartModule-b64a17e62213d93aa3ca56bfa01b37ff"' :
+                                            'id="xs-components-links-module-SafeChartModule-b64a17e62213d93aa3ca56bfa01b37ff"' }>
                                             <li class="link">
                                                 <a href="components/SafeChartComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeChartComponent</a>
@@ -252,13 +252,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeDonutChartModule.html" data-type="entity-link">SafeDonutChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' : 'data-target="#xs-components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' }>
+                                            'data-target="#components-links-module-SafeDonutChartModule-d99809be7ef64888a97f938e7fb485f3"' : 'data-target="#xs-components-links-module-SafeDonutChartModule-d99809be7ef64888a97f938e7fb485f3"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' :
-                                            'id="xs-components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeDonutChartModule-d99809be7ef64888a97f938e7fb485f3"' :
+                                            'id="xs-components-links-module-SafeDonutChartModule-d99809be7ef64888a97f938e7fb485f3"' }>
                                             <li class="link">
                                                 <a href="components/SafeDonutChartComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeDonutChartComponent</a>
@@ -454,13 +454,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeLineChartModule.html" data-type="entity-link">SafeLineChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' : 'data-target="#xs-components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' }>
+                                            'data-target="#components-links-module-SafeLineChartModule-634c81d1e08c0fff2a660b486f68a98a"' : 'data-target="#xs-components-links-module-SafeLineChartModule-634c81d1e08c0fff2a660b486f68a98a"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' :
-                                            'id="xs-components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeLineChartModule-634c81d1e08c0fff2a660b486f68a98a"' :
+                                            'id="xs-components-links-module-SafeLineChartModule-634c81d1e08c0fff2a660b486f68a98a"' }>
                                             <li class="link">
                                                 <a href="components/SafeLineChartComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeLineChartComponent</a>
@@ -511,13 +511,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafePieChartModule.html" data-type="entity-link">SafePieChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' : 'data-target="#xs-components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' }>
+                                            'data-target="#components-links-module-SafePieChartModule-7f94e35315932a38f8d62f3de425064c"' : 'data-target="#xs-components-links-module-SafePieChartModule-7f94e35315932a38f8d62f3de425064c"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' :
-                                            'id="xs-components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePieChartModule-7f94e35315932a38f8d62f3de425064c"' :
+                                            'id="xs-components-links-module-SafePieChartModule-7f94e35315932a38f8d62f3de425064c"' }>
                                             <li class="link">
                                                 <a href="components/SafePieChartComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafePieChartComponent</a>
@@ -996,6 +996,15 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ChartSeries-2.html" data-type="entity-link">ChartSeries</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartTitle.html" data-type="entity-link">ChartTitle</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartTitle-1.html" data-type="entity-link">ChartTitle</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartTitle-2.html" data-type="entity-link">ChartTitle</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/ConvertRecordMutationResponse.html" data-type="entity-link">ConvertRecordMutationResponse</a>

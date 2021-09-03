@@ -128,10 +128,16 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
 
+interface ChartTitle {
+  visible: boolean;
+  text: string;
+  position: &#x27;top&#x27; | &#x27;bottom&#x27;;
+}
+
 interface ChartLegend {
-  visible?: boolean;
-  orientation?: string;
-  position?: string;
+  visible: boolean;
+  orientation: &#x27;horizontal&#x27; | &#x27;vertical&#x27;;
+  position: &#x27;top&#x27; | &#x27;bottom&#x27; | &#x27;left&#x27; | &#x27;right&#x27;;
 }
 
 interface ChartSeries {
@@ -148,6 +154,8 @@ interface ChartSeries {
   styleUrls: [&#x27;./pie-chart.component.scss&#x27;]
 })
 export class SafePieChartComponent implements OnInit {
+
+  @Input() title: ChartTitle | undefined;
 
   @Input() legend: ChartLegend | undefined;
 
