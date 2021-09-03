@@ -190,7 +190,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ChartComponent } from &#x27;@progress/kendo-angular-charts&#x27;;
 
 interface ChartTitle {
   visible: boolean;
@@ -224,6 +225,9 @@ export class SafePieChartComponent implements OnInit {
   @Input() legend: ChartLegend | undefined;
 
   @Input() series: ChartSeries[] &#x3D; [];
+
+  @ViewChild(&#x27;chart&#x27;)
+  public chart?: ChartComponent;
 
   constructor() { }
 
