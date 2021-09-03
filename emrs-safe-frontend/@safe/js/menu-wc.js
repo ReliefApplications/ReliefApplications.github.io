@@ -249,6 +249,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeDonutChartModule.html" data-type="entity-link">SafeDonutChartModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' : 'data-target="#xs-components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' :
+                                            'id="xs-components-links-module-SafeDonutChartModule-189831e3938e36e2e370dddef3aa0621"' }>
+                                            <li class="link">
+                                                <a href="components/SafeDonutChartComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeDonutChartComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeEditorModule.html" data-type="entity-link">SafeEditorModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -433,6 +451,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeLineChartModule.html" data-type="entity-link">SafeLineChartModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' : 'data-target="#xs-components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' :
+                                            'id="xs-components-links-module-SafeLineChartModule-46597b07fbb5b583e02b78c0cb7467fa"' }>
+                                            <li class="link">
+                                                <a href="components/SafeLineChartComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeLineChartComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeMapModule.html" data-type="entity-link">SafeMapModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -470,6 +506,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/SafeModule.html" data-type="entity-link">SafeModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafePieChartModule.html" data-type="entity-link">SafePieChartModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' : 'data-target="#xs-components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' :
+                                            'id="xs-components-links-module-SafePieChartModule-73674824d97ac7fffb71b976a3d90180"' }>
+                                            <li class="link">
+                                                <a href="components/SafePieChartComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafePieChartComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/SafePreviousButtonModule.html" data-type="entity-link">SafePreviousButtonModule</a>
@@ -924,6 +978,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ChannelDisplay.html" data-type="entity-link">ChannelDisplay</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartLegend.html" data-type="entity-link">ChartLegend</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartLegend-1.html" data-type="entity-link">ChartLegend</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartLegend-2.html" data-type="entity-link">ChartLegend</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartSeries.html" data-type="entity-link">ChartSeries</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartSeries-1.html" data-type="entity-link">ChartSeries</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartSeries-2.html" data-type="entity-link">ChartSeries</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/ConvertRecordMutationResponse.html" data-type="entity-link">ConvertRecordMutationResponse</a>

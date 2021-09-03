@@ -28,17 +28,17 @@
 <title>cluster_ConfigDisplayGridFieldsModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="1075,-143 1075,-195 1351,-195 1351,-143 1075,-143"/>
 </g>
-<g id="clust3" class="cluster">
-<title>cluster_ConfigDisplayGridFieldsModalModule_ConfigDisplayGridFieldsModalComponent_providers</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 1756,-130 1756,-78 16,-78"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_ConfigDisplayGridFieldsModalModule_imports</title>
-<polygon fill="none" stroke="black" points="889,-143 889,-195 1067,-195 1067,-143 889,-143"/>
+<polygon fill="none" stroke="black" points="1359,-143 1359,-195 1537,-195 1537,-143 1359,-143"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_ConfigDisplayGridFieldsModalModule_exports</title>
-<polygon fill="none" stroke="black" points="955,-273 955,-325 1235,-325 1235,-273 955,-273"/>
+<polygon fill="none" stroke="black" points="1190,-273 1190,-325 1470,-325 1470,-273 1190,-273"/>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_ConfigDisplayGridFieldsModalModule_ConfigDisplayGridFieldsModalComponent_providers</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 1756,-130 1756,-78 16,-78"/>
 </g>
 <!-- ConfigDisplayGridFieldsModalComponent -->
 <g id="node1" class="node">
@@ -49,26 +49,26 @@
 <!-- ConfigDisplayGridFieldsModalModule -->
 <g id="node2" class="node">
 <title>ConfigDisplayGridFieldsModalModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="1214.42,-252 1211.42,-256 1190.42,-256 1187.42,-252 975.58,-252 975.58,-216 1214.42,-216 1214.42,-252"/>
-<text text-anchor="middle" x="1095" y="-229.8" font-family="Times,serif" font-size="14.00">ConfigDisplayGridFieldsModalModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="1449.42,-252 1446.42,-256 1425.42,-256 1422.42,-252 1210.58,-252 1210.58,-216 1449.42,-216 1449.42,-252"/>
+<text text-anchor="middle" x="1330" y="-229.8" font-family="Times,serif" font-size="14.00">ConfigDisplayGridFieldsModalModule</text>
 </g>
 <!-- ConfigDisplayGridFieldsModalComponent&#45;&gt;ConfigDisplayGridFieldsModalModule -->
 <g id="edge1" class="edge">
 <title>ConfigDisplayGridFieldsModalComponent&#45;&gt;ConfigDisplayGridFieldsModalModule</title>
-<path fill="none" stroke="black" d="M1170.44,-187.11C1170.44,-187.11 1170.44,-205.99 1170.44,-205.99"/>
-<polygon fill="black" stroke="black" points="1166.94,-205.99 1170.44,-215.99 1173.94,-205.99 1166.94,-205.99"/>
+<path fill="none" stroke="black" d="M1254.89,-187.11C1254.89,-187.11 1254.89,-205.99 1254.89,-205.99"/>
+<polygon fill="black" stroke="black" points="1251.39,-205.99 1254.89,-215.99 1258.39,-205.99 1251.39,-205.99"/>
 </g>
 <!-- ConfigDisplayGridFieldsModalComponent  -->
 <g id="node7" class="node">
 <title>ConfigDisplayGridFieldsModalComponent </title>
-<polygon fill="#fb8072" stroke="black" points="1226.7,-317 963.3,-317 963.3,-281 1226.7,-281 1226.7,-317"/>
-<text text-anchor="middle" x="1095" y="-294.8" font-family="Times,serif" font-size="14.00">ConfigDisplayGridFieldsModalComponent </text>
+<polygon fill="#fb8072" stroke="black" points="1461.7,-317 1198.3,-317 1198.3,-281 1461.7,-281 1461.7,-317"/>
+<text text-anchor="middle" x="1330" y="-294.8" font-family="Times,serif" font-size="14.00">ConfigDisplayGridFieldsModalComponent </text>
 </g>
 <!-- ConfigDisplayGridFieldsModalModule&#45;&gt;ConfigDisplayGridFieldsModalComponent  -->
 <g id="edge6" class="edge">
 <title>ConfigDisplayGridFieldsModalModule&#45;&gt;ConfigDisplayGridFieldsModalComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1095,-252.11C1095,-252.11 1095,-270.99 1095,-270.99"/>
-<polygon fill="black" stroke="black" points="1091.5,-270.99 1095,-280.99 1098.5,-270.99 1091.5,-270.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1330,-252.11C1330,-252.11 1330,-270.99 1330,-270.99"/>
+<polygon fill="black" stroke="black" points="1326.5,-270.99 1330,-280.99 1333.5,-270.99 1326.5,-270.99"/>
 </g>
 <!-- PopupService -->
 <g id="node3" class="node">
@@ -79,8 +79,8 @@
 <!-- PopupService&#45;&gt;ConfigDisplayGridFieldsModalComponent -->
 <g id="edge2" class="edge">
 <title>PopupService&#45;&gt;ConfigDisplayGridFieldsModalComponent</title>
-<path fill="none" stroke="black" d="M1683,-122.11C1683,-141.34 1683,-169 1683,-169 1683,-169 1353.3,-169 1353.3,-169"/>
-<polygon fill="black" stroke="black" points="1353.3,-165.5 1343.3,-169 1353.3,-172.5 1353.3,-165.5"/>
+<path fill="none" stroke="black" d="M1683,-122.43C1683,-150.82 1683,-202 1683,-202 1683,-202 1299,-202 1299,-202 1299,-202 1299,-197.04 1299,-197.04"/>
+<polygon fill="black" stroke="black" points="1302.5,-197.04 1299,-187.04 1295.5,-197.04 1302.5,-197.04"/>
 </g>
 <!-- { provide: MAT_SELECT_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] } -->
 <g id="node4" class="node">
@@ -103,20 +103,20 @@
 <!-- { provide: MAT_TOOLTIP_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }&#45;&gt;ConfigDisplayGridFieldsModalComponent -->
 <g id="edge4" class="edge">
 <title>{ provide: MAT_TOOLTIP_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }&#45;&gt;ConfigDisplayGridFieldsModalComponent</title>
-<path fill="none" stroke="black" d="M416,-122.43C416,-150.82 416,-202 416,-202 416,-202 1126.67,-202 1126.67,-202 1126.67,-202 1126.67,-197.04 1126.67,-197.04"/>
-<polygon fill="black" stroke="black" points="1130.17,-197.04 1126.67,-187.04 1123.17,-197.04 1130.17,-197.04"/>
+<path fill="none" stroke="black" d="M416,-122.11C416,-141.34 416,-169 416,-169 416,-169 1072.73,-169 1072.73,-169"/>
+<polygon fill="black" stroke="black" points="1072.73,-172.5 1082.73,-169 1072.73,-165.5 1072.73,-172.5"/>
 </g>
 <!-- SafeQueryBuilderModule -->
 <g id="node6" class="node">
 <title>SafeQueryBuilderModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="1058.9,-187 1055.9,-191 1034.9,-191 1031.9,-187 897.1,-187 897.1,-151 1058.9,-151 1058.9,-187"/>
-<text text-anchor="middle" x="978" y="-164.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="1528.9,-187 1525.9,-191 1504.9,-191 1501.9,-187 1367.1,-187 1367.1,-151 1528.9,-151 1528.9,-187"/>
+<text text-anchor="middle" x="1448" y="-164.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderModule</text>
 </g>
 <!-- SafeQueryBuilderModule&#45;&gt;ConfigDisplayGridFieldsModalModule -->
 <g id="edge5" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;ConfigDisplayGridFieldsModalModule</title>
-<path fill="none" stroke="black" d="M1017.25,-187.11C1017.25,-187.11 1017.25,-205.99 1017.25,-205.99"/>
-<polygon fill="black" stroke="black" points="1013.75,-205.99 1017.25,-215.99 1020.75,-205.99 1013.75,-205.99"/>
+<path fill="none" stroke="black" d="M1408.25,-187.11C1408.25,-187.11 1408.25,-205.99 1408.25,-205.99"/>
+<polygon fill="black" stroke="black" points="1404.75,-205.99 1408.25,-215.99 1411.75,-205.99 1404.75,-205.99"/>
 </g>
 </g>
 </svg>
