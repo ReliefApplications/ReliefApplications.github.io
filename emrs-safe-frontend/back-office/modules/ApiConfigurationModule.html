@@ -169,20 +169,16 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-
 import { ApiConfigurationRoutingModule } from &#x27;./api-configuration-routing.module&#x27;;
 import { ApiConfigurationComponent } from &#x27;./api-configuration.component&#x27;;
 import { SafeAccessModule, SafePreviousButtonModule } from &#x27;@safe/builder&#x27;;
 import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
 import { MatInputModule } from &#x27;@angular/material/input&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
-import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatOptionModule } from &#x27;@angular/material/core&#x27;;
-
-
+import { SafeButtonModule } from &#x27;@safe/builder&#x27;;
 
 @NgModule({
   declarations: [
@@ -196,11 +192,10 @@ import { MatOptionModule } from &#x27;@angular/material/core&#x27;;
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    SafeButtonModule
   ]
 })
 export class ApiConfigurationModule { }

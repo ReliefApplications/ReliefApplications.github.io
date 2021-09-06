@@ -197,26 +197,25 @@ import { CommonModule } from &#x27;@angular/common&#x27;;
 import { FormRecordsRoutingModule } from &#x27;./form-records-routing.module&#x27;;
 import { FormRecordsComponent } from &#x27;./form-records.component&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
-import { SafeRecordHistoryModule } from &#x27;@safe/builder&#x27;;
+import { SafeRecordHistoryModule, SafeButtonModule } from &#x27;@safe/builder&#x27;;
 import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
 
 @NgModule({
   declarations: [FormRecordsComponent],
-    imports: [
-        CommonModule,
-        FormRecordsRoutingModule,
-        MatTableModule,
-        MatButtonModule,
-        MatIconModule,
-        MatMenuModule,
-        SafeRecordHistoryModule,
-        MatDividerModule,
-        MatTooltipModule
-    ],
+  imports: [
+    CommonModule,
+    FormRecordsRoutingModule,
+    MatTableModule,
+    MatIconModule,
+    MatMenuModule,
+    SafeRecordHistoryModule,
+    MatDividerModule,
+    MatTooltipModule,
+    SafeButtonModule
+  ],
   exports: [FormRecordsComponent]
 })
 export class FormRecordsModule { }

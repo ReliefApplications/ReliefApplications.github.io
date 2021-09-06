@@ -224,21 +224,19 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-
 import { PositionRoutingModule } from &#x27;./position-routing.module&#x27;;
 import { PositionComponent } from &#x27;./position.component&#x27;;
 import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
-import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatInputModule } from &#x27;@angular/material/input&#x27;;
 import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
 import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-import { SafeConfirmModalModule } from &#x27;@safe/builder&#x27;;
+import { SafeConfirmModalModule, SafeButtonModule } from &#x27;@safe/builder&#x27;;
 import { AddPositionComponent } from &#x27;./components/position-modal/position-modal.component&#x27;;
+import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 
 @NgModule({
   declarations: [
@@ -256,10 +254,10 @@ import { AddPositionComponent } from &#x27;./components/position-modal/position-
     MatProgressSpinnerModule,
     MatTableModule,
     MatDialogModule,
-    MatButtonModule,
-    MatMenuModule,
     MatIconModule,
-    SafeConfirmModalModule
+    MatMenuModule,
+    SafeConfirmModalModule,
+    SafeButtonModule
   ],
   exports: [PositionComponent]
 })

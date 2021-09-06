@@ -202,7 +202,6 @@ import { CommonModule } from &#x27;@angular/common&#x27;;
 import { PullJobsRoutingModule } from &#x27;./pull-jobs-routing.module&#x27;;
 import { PullJobsComponent } from &#x27;./pull-jobs.component&#x27;;
 import { PullJobModalComponent } from &#x27;./components/pull-job-modal/pull-job-modal.component&#x27;;
-
 import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
@@ -212,7 +211,7 @@ import { MatInputModule } from &#x27;@angular/material/input&#x27;;
 import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
 import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-import { SafeConfirmModalModule } from &#x27;@safe/builder&#x27;;
+import { SafeConfirmModalModule, SafeButtonModule } from &#x27;@safe/builder&#x27;;
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
 import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
@@ -240,6 +239,7 @@ import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
         SafeConfirmModalModule,
         MatExpansionModule,
         MatDividerModule,
+        SafeButtonModule
     ]
 })
 export class PullJobsModule { }

@@ -196,18 +196,18 @@
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { LoginRoutingModule } from &#x27;./login-routing.module&#x27;;
 import { LoginComponent } from &#x27;./login.component&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
 import { MatGridListModule } from &#x27;@angular/material/grid-list&#x27;;
+import { SafeButtonModule } from &#x27;@safe/builder&#x27;;
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
     CommonModule,
-    MatButtonModule,
     MatFormFieldModule,
     LoginRoutingModule,
-    MatGridListModule
+    MatGridListModule,
+    SafeButtonModule
   ],
   exports: [LoginComponent]
 })

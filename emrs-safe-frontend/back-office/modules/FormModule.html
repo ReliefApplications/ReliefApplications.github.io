@@ -194,19 +194,17 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-
 import { FormRoutingModule } from &#x27;./form-routing.module&#x27;;
 import { FormComponent } from &#x27;./form.component&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
-import { SafeFormModule } from &#x27;@safe/builder&#x27;;
+import { SafeFormModule, SafeButtonModule } from &#x27;@safe/builder&#x27;;
 
 @NgModule({
   declarations: [FormComponent],
   imports: [
     CommonModule,
     FormRoutingModule,
-    MatButtonModule,
-    SafeFormModule
+    SafeFormModule,
+    SafeButtonModule
   ],
   exports: [FormComponent]
 })

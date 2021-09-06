@@ -209,11 +209,8 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-
 import { ApiConfigurationsRoutingModule } from &#x27;./api-configurations-routing.module&#x27;;
 import { ApiConfigurationsComponent } from &#x27;./api-configurations.component&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
-import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
 import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
@@ -225,6 +222,8 @@ import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { FormsModule as AngularFormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 import { AddApiConfigurationComponent } from &#x27;./components/add-api-configuration/add-api-configuration.component&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
+import { SafeButtonModule } from &#x27;@safe/builder&#x27;;
+import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 
 @NgModule({
   declarations: [
@@ -234,8 +233,6 @@ import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
   imports: [
     CommonModule,
     ApiConfigurationsRoutingModule,
-    MatButtonModule,
-    MatIconModule,
     MatMenuModule,
     MatProgressSpinnerModule,
     MatTableModule,
@@ -246,7 +243,9 @@ import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
     MatSelectModule,
     AngularFormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    SafeButtonModule,
+    MatIconModule
   ],
   exports: [ApiConfigurationsComponent]
 })

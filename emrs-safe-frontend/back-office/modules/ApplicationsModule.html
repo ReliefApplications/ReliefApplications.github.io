@@ -254,11 +254,9 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-
 import { ApplicationsRoutingModule } from &#x27;./applications-routing.module&#x27;;
 import { ApplicationsComponent } from &#x27;./applications.component&#x27;;
 import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
@@ -268,7 +266,7 @@ import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinne
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
 import { AddApplicationComponent } from &#x27;./components/add-application/add-application.component&#x27;;
-import { SafeAccessModule, SafeConfirmModalModule } from &#x27;@safe/builder&#x27;;
+import { SafeAccessModule, SafeConfirmModalModule, SafeButtonModule } from &#x27;@safe/builder&#x27;;
 import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
 import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
 import { ChoseRoleComponent } from &#x27;./components/chose-role/chose-role.component&#x27;;
@@ -279,29 +277,29 @@ import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 
 @NgModule({
   declarations: [ApplicationsComponent, AddApplicationComponent, ChoseRoleComponent],
-    imports: [
-        CommonModule,
-        ApplicationsRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatSelectModule,
-        MatProgressSpinnerModule,
-        MatTableModule,
-        MatSortModule,
-        MatDialogModule,
-        MatButtonModule,
-        MatMenuModule,
-        MatIconModule,
-        MatChipsModule,
-        SafeConfirmModalModule,
-        SafeAccessModule,
-        DuplicateApplicationModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatDividerModule
-    ],
+  imports: [
+    CommonModule,
+    ApplicationsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatSortModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatIconModule,
+    MatChipsModule,
+    SafeConfirmModalModule,
+    SafeAccessModule,
+    DuplicateApplicationModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDividerModule,
+    SafeButtonModule
+  ],
   exports: [ApplicationsComponent]
 })
 export class ApplicationsModule { }

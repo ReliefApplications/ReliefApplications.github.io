@@ -224,15 +224,12 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-
 import { FormBuilderRoutingModule } from &#x27;./form-builder-routing.module&#x27;;
 import { FormBuilderComponent } from &#x27;./form-builder.component&#x27;;
-import { SafeAccessModule, SafeFormBuilderModule } from &#x27;@safe/builder&#x27;;
+import { SafeAccessModule, SafeFormBuilderModule, SafeButtonModule } from &#x27;@safe/builder&#x27;;
 import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
 import { HistoryComponent } from &#x27;./components/history/history.component&#x27;;
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
-import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
 import { MatInputModule } from &#x27;@angular/material/input&#x27;;
 import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
@@ -247,13 +244,12 @@ import { MatButtonToggleModule } from &#x27;@angular/material/button-toggle&#x27
     ReactiveFormsModule,
     MatProgressSpinnerModule,
     MatTableModule,
-    MatButtonModule,
-    MatIconModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonToggleModule,
     SafeFormBuilderModule,
-    SafeAccessModule
+    SafeAccessModule,
+    SafeButtonModule
   ],
   exports: [FormBuilderComponent]
 })

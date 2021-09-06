@@ -215,7 +215,6 @@ import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinne
 import { MatTableModule } from &#x27;@angular/material/table&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
 import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
 import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
@@ -223,6 +222,7 @@ import { MatInputModule } from &#x27;@angular/material/input&#x27;;
 import { MatDatepickerModule } from &#x27;@angular/material/datepicker&#x27;;
 import { MatNativeDateModule } from &#x27;@angular/material/core&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
+import { SafeButtonModule } from &#x27;@safe/builder&#x27;;
 
 @NgModule({
   declarations: [ResourcesComponent],
@@ -233,14 +233,14 @@ import { FormsModule } from &#x27;@angular/forms&#x27;;
     MatTableModule,
     MatIconModule,
     MatDialogModule,
-    MatButtonModule,
     MatMenuModule,
     MatSortModule,
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    SafeButtonModule
   ],
   exports: [ResourcesComponent]
 })
