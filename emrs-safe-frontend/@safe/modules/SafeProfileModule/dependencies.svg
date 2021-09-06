@@ -22,11 +22,15 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_SafeProfileModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="158,-70 158,-268 338,-268 338,-70 158,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="87,-70 87,-268 409,-268 409,-70 87,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeProfileModule_declarations</title>
-<polygon fill="none" stroke="black" points="168,-78 168,-130 328,-130 328,-78 168,-78"/>
+<polygon fill="none" stroke="black" points="241,-78 241,-130 401,-130 401,-78 241,-78"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeProfileModule_imports</title>
+<polygon fill="none" stroke="black" points="95,-78 95,-130 233,-130 233,-78 95,-78"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeProfileModule_exports</title>
@@ -35,8 +39,8 @@
 <!-- SafeProfileComponent -->
 <g id="node1" class="node">
 <title>SafeProfileComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="320.3,-122 175.7,-122 175.7,-86 320.3,-86 320.3,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">SafeProfileComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="393.3,-122 248.7,-122 248.7,-86 393.3,-86 393.3,-122"/>
+<text text-anchor="middle" x="321" y="-99.8" font-family="Times,serif" font-size="14.00">SafeProfileComponent</text>
 </g>
 <!-- SafeProfileModule -->
 <g id="node2" class="node">
@@ -47,20 +51,32 @@
 <!-- SafeProfileComponent&#45;&gt;SafeProfileModule -->
 <g id="edge1" class="edge">
 <title>SafeProfileComponent&#45;&gt;SafeProfileModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<path fill="none" stroke="black" d="M279.05,-122.11C279.05,-122.11 279.05,-140.99 279.05,-140.99"/>
+<polygon fill="black" stroke="black" points="275.55,-140.99 279.05,-150.99 282.55,-140.99 275.55,-140.99"/>
 </g>
 <!-- SafeProfileComponent  -->
-<g id="node3" class="node">
+<g id="node4" class="node">
 <title>SafeProfileComponent </title>
 <polygon fill="#fb8072" stroke="black" points="321.8,-252 174.2,-252 174.2,-216 321.8,-216 321.8,-252"/>
 <text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00">SafeProfileComponent </text>
 </g>
 <!-- SafeProfileModule&#45;&gt;SafeProfileComponent  -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>SafeProfileModule&#45;&gt;SafeProfileComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M248,-187.11C248,-187.11 248,-205.99 248,-205.99"/>
 <polygon fill="black" stroke="black" points="244.5,-205.99 248,-215.99 251.5,-205.99 244.5,-205.99"/>
+</g>
+<!-- SafeButtonModule -->
+<g id="node3" class="node">
+<title>SafeButtonModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="225.04,-122 222.04,-126 201.04,-126 198.04,-122 102.96,-122 102.96,-86 225.04,-86 225.04,-122"/>
+<text text-anchor="middle" x="164" y="-99.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
+</g>
+<!-- SafeButtonModule&#45;&gt;SafeProfileModule -->
+<g id="edge2" class="edge">
+<title>SafeButtonModule&#45;&gt;SafeProfileModule</title>
+<path fill="none" stroke="black" d="M206,-122.11C206,-122.11 206,-140.99 206,-140.99"/>
+<polygon fill="black" stroke="black" points="202.5,-140.99 206,-150.99 209.5,-140.99 202.5,-140.99"/>
 </g>
 </g>
 </svg>

@@ -1764,9 +1764,8 @@ export class SafeRecordHistoryComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;history-header&quot;&gt;
   &lt;div&gt;
     &lt;h2&gt;History&lt;/h2&gt;
-    &lt;button style&#x3D;&quot;float: right&quot; mat-icon-button (click)&#x3D;&quot;onCancel()&quot;&gt;
-      &lt;mat-icon&gt;close&lt;/mat-icon&gt;
-    &lt;/button&gt;
+    &lt;safe-button [isIcon]&#x3D;&quot;true&quot; icon&#x3D;&quot;close&quot; style&#x3D;&quot;float: right&quot; (click)&#x3D;&quot;onCancel()&quot;&gt;
+    &lt;/safe-button&gt;
   &lt;/div&gt;
   &lt;div style&#x3D;&quot;clear: both&quot;&gt;
     &lt;mat-form-field&gt;
@@ -1778,16 +1777,16 @@ export class SafeRecordHistoryComponent implements OnInit {
       &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;rangePicker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
       &lt;mat-date-range-picker #rangePicker&gt;
         &lt;mat-date-range-picker-actions&gt;
-          &lt;button mat-button matDateRangePickerCancel (click)&#x3D;&quot;clearDateFilter()&quot;&gt;Clear range&lt;/button&gt;
-          &lt;button mat-raised-button color&#x3D;&quot;primary&quot; matDateRangePickerApply (click)&#x3D;&quot;applyFilter()&quot;&gt;Apply&lt;/button&gt;
+          &lt;safe-button matDateRangePickerCancel (click)&#x3D;&quot;clearDateFilter()&quot;&gt;Clear range&lt;/safe-button&gt;
+          &lt;safe-button category&#x3D;&quot;secondary&quot; variant&#x3D;&quot;primary&quot; matDateRangePickerApply (click)&#x3D;&quot;applyFilter()&quot;&gt;Apply&lt;/safe-button&gt;
         &lt;/mat-date-range-picker-actions&gt;
       &lt;/mat-date-range-picker&gt;
     &lt;/mat-form-field&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;actions&quot;&gt;
-    &lt;button mat-flat-button color&#x3D;&quot;primary&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;
+    &lt;safe-button category&#x3D;&quot;secondary&quot; variant&#x3D;&quot;primary&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;
       Download history
-    &lt;/button&gt;
+    &lt;/safe-button&gt;
     &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
       &lt;button mat-menu-item (click)&#x3D;&quot;onDownload(&#x27;csv&#x27;)&quot;&gt;.csv&lt;/button&gt;
       &lt;button mat-menu-item (click)&#x3D;&quot;onDownload(&#x27;xlsx&#x27;)&quot;&gt;.xlsx&lt;/button&gt;
@@ -1808,14 +1807,18 @@ export class SafeRecordHistoryComponent implements OnInit {
       &lt;ng-template matExpansionPanelContent&gt;
         &lt;div class&#x3D;&quot;changes-content&quot; *ngFor&#x3D;&quot;let value of showMore ? item.changes : item.changes.slice(0, 4)&quot;
           [innerHTML]&#x3D;&quot;value&quot;&gt;&lt;/div&gt;
-        &lt;div class&#x3D;&quot;full-history&quot;&gt;&lt;button mat-button color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;!showMore &amp;&amp; item.changes.length &gt; 4&quot;
-            (click)&#x3D;&quot;showMore &#x3D; true&quot;&gt;Show more ({{item.changes.length - 4}})&lt;/button&gt;&lt;/div&gt;
-        &lt;button class&#x3D;&quot;revert-icon&quot; (click)&#x3D;&quot;onRevert(item)&quot; mat-stroked-button *ngIf&#x3D;&quot;index &gt; 0&quot;&gt;Preview and revert
-          &lt;mat-icon&gt;update&lt;/mat-icon&gt;&lt;/button&gt;
+        &lt;div class&#x3D;&quot;full-history&quot;&gt;
+          &lt;safe-button variant&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;!showMore &amp;&amp; item.changes.length &gt; 4&quot;
+            (click)&#x3D;&quot;showMore &#x3D; true&quot;&gt;Show more ({{item.changes.length - 4}})&lt;/safe-button&gt;
+        &lt;/div&gt;
+        &lt;safe-button icon&#x3D;&quot;update&quot; class&#x3D;&quot;revert-icon&quot; (click)&#x3D;&quot;onRevert(item)&quot; *ngIf&#x3D;&quot;index &gt; 0&quot;&gt;
+          Preview and revert
+        &lt;/safe-button&gt;
       &lt;/ng-template&gt;
     &lt;/mat-expansion-panel&gt;
   &lt;/ng-container&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -1940,7 +1943,7 @@ mat-expansion-panel {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="history-header">  <div>    <h2>History</h2>    <button style="float: right" mat-icon-button (click)="onCancel()">      <mat-icon>close</mat-icon>    </button>  </div>  <div style="clear: both">    <mat-form-field>      <mat-date-range-input (click)="rangePicker.open()" [rangePicker]="rangePicker">        <input #startDate (dateInput)="filtersDate[\'startDate\'] = $event.value" matStartDate placeholder="Start date"          readonly>        <input #endDate (dateInput)="filtersDate[\'endDate\'] = $event.value" matEndDate placeholder="End date" readonly>      </mat-date-range-input>      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <button mat-button matDateRangePickerCancel (click)="clearDateFilter()">Clear range</button>          <button mat-raised-button color="primary" matDateRangePickerApply (click)="applyFilter()">Apply</button>        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>  </div>  <div class="actions">    <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">      Download history    </button>    <mat-menu #menu="matMenu">      <button mat-menu-item (click)="onDownload(\'csv\')">.csv</button>      <button mat-menu-item (click)="onDownload(\'xlsx\')">.xlsx</button>    </mat-menu>  </div></div><div class="history-container">  <ng-container *ngFor="let item of filterHistory; let index=index">    <mat-expansion-panel (closed)="showMore = false">      <mat-expansion-panel-header>        <mat-panel-title>          <span class="history-date">{{item.created | date:\'dd/MM/yyyy\'}}</span>          {{item.created | date:\'HH:mm\'}}          <span class="history-user" *ngIf="item.createdBy">{{item.createdBy}}</span>        </mat-panel-title>      </mat-expansion-panel-header>      <ng-template matExpansionPanelContent>        <div class="changes-content" *ngFor="let value of showMore ? item.changes : item.changes.slice(0, 4)"          [innerHTML]="value"></div>        <div class="full-history"><button mat-button color="primary" *ngIf="!showMore && item.changes.length > 4"            (click)="showMore = true">Show more ({{item.changes.length - 4}})</button></div>        <button class="revert-icon" (click)="onRevert(item)" mat-stroked-button *ngIf="index > 0">Preview and revert          <mat-icon>update</mat-icon></button>      </ng-template>    </mat-expansion-panel>  </ng-container></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="history-header">  <div>    <h2>History</h2>    <safe-button [isIcon]="true" icon="close" style="float: right" (click)="onCancel()">    </safe-button>  </div>  <div style="clear: both">    <mat-form-field>      <mat-date-range-input (click)="rangePicker.open()" [rangePicker]="rangePicker">        <input #startDate (dateInput)="filtersDate[\'startDate\'] = $event.value" matStartDate placeholder="Start date"          readonly>        <input #endDate (dateInput)="filtersDate[\'endDate\'] = $event.value" matEndDate placeholder="End date" readonly>      </mat-date-range-input>      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <safe-button matDateRangePickerCancel (click)="clearDateFilter()">Clear range</safe-button>          <safe-button category="secondary" variant="primary" matDateRangePickerApply (click)="applyFilter()">Apply</safe-button>        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>  </div>  <div class="actions">    <safe-button category="secondary" variant="primary" [matMenuTriggerFor]="menu">      Download history    </safe-button>    <mat-menu #menu="matMenu">      <button mat-menu-item (click)="onDownload(\'csv\')">.csv</button>      <button mat-menu-item (click)="onDownload(\'xlsx\')">.xlsx</button>    </mat-menu>  </div></div><div class="history-container">  <ng-container *ngFor="let item of filterHistory; let index=index">    <mat-expansion-panel (closed)="showMore = false">      <mat-expansion-panel-header>        <mat-panel-title>          <span class="history-date">{{item.created | date:\'dd/MM/yyyy\'}}</span>          {{item.created | date:\'HH:mm\'}}          <span class="history-user" *ngIf="item.createdBy">{{item.createdBy}}</span>        </mat-panel-title>      </mat-expansion-panel-header>      <ng-template matExpansionPanelContent>        <div class="changes-content" *ngFor="let value of showMore ? item.changes : item.changes.slice(0, 4)"          [innerHTML]="value"></div>        <div class="full-history">          <safe-button variant="primary" *ngIf="!showMore && item.changes.length > 4"            (click)="showMore = true">Show more ({{item.changes.length - 4}})</safe-button>        </div>        <safe-button icon="update" class="revert-icon" (click)="onRevert(item)" *ngIf="index > 0">          Preview and revert        </safe-button>      </ng-template>    </mat-expansion-panel>  </ng-container></div></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDashboardMenuComponent', 'selector': 'safe-dashboard-menu'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUserComponent', 'selector': 'safe-invite-user'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeRecordHistoryComponent'};

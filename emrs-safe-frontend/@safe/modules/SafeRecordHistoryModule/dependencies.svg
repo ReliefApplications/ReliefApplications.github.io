@@ -22,11 +22,15 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_SafeRecordHistoryModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="136,-70 136,-268 360,-268 360,-70 136,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="65,-70 65,-268 431,-268 431,-70 65,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeRecordHistoryModule_declarations</title>
-<polygon fill="none" stroke="black" points="146,-78 146,-130 350,-130 350,-78 146,-78"/>
+<polygon fill="none" stroke="black" points="219,-78 219,-130 423,-130 423,-78 219,-78"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeRecordHistoryModule_imports</title>
+<polygon fill="none" stroke="black" points="73,-78 73,-130 211,-130 211,-78 73,-78"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeRecordHistoryModule_exports</title>
@@ -35,8 +39,8 @@
 <!-- SafeRecordHistoryComponent -->
 <g id="node1" class="node">
 <title>SafeRecordHistoryComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="342.12,-122 153.88,-122 153.88,-86 342.12,-86 342.12,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">SafeRecordHistoryComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="415.12,-122 226.88,-122 226.88,-86 415.12,-86 415.12,-122"/>
+<text text-anchor="middle" x="321" y="-99.8" font-family="Times,serif" font-size="14.00">SafeRecordHistoryComponent</text>
 </g>
 <!-- SafeRecordHistoryModule -->
 <g id="node2" class="node">
@@ -47,20 +51,32 @@
 <!-- SafeRecordHistoryComponent&#45;&gt;SafeRecordHistoryModule -->
 <g id="edge1" class="edge">
 <title>SafeRecordHistoryComponent&#45;&gt;SafeRecordHistoryModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<path fill="none" stroke="black" d="M279.05,-122.11C279.05,-122.11 279.05,-140.99 279.05,-140.99"/>
+<polygon fill="black" stroke="black" points="275.55,-140.99 279.05,-150.99 282.55,-140.99 275.55,-140.99"/>
 </g>
 <!-- SafeRecordHistoryComponent  -->
-<g id="node3" class="node">
+<g id="node4" class="node">
 <title>SafeRecordHistoryComponent </title>
 <polygon fill="#fb8072" stroke="black" points="344.12,-252 151.88,-252 151.88,-216 344.12,-216 344.12,-252"/>
 <text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00">SafeRecordHistoryComponent </text>
 </g>
 <!-- SafeRecordHistoryModule&#45;&gt;SafeRecordHistoryComponent  -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>SafeRecordHistoryModule&#45;&gt;SafeRecordHistoryComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M248,-187.11C248,-187.11 248,-205.99 248,-205.99"/>
 <polygon fill="black" stroke="black" points="244.5,-205.99 248,-215.99 251.5,-205.99 244.5,-205.99"/>
+</g>
+<!-- SafeButtonModule -->
+<g id="node3" class="node">
+<title>SafeButtonModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="203.04,-122 200.04,-126 179.04,-126 176.04,-122 80.96,-122 80.96,-86 203.04,-86 203.04,-122"/>
+<text text-anchor="middle" x="142" y="-99.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
+</g>
+<!-- SafeButtonModule&#45;&gt;SafeRecordHistoryModule -->
+<g id="edge2" class="edge">
+<title>SafeButtonModule&#45;&gt;SafeRecordHistoryModule</title>
+<path fill="none" stroke="black" d="M183.92,-122.11C183.92,-122.11 183.92,-140.99 183.92,-140.99"/>
+<polygon fill="black" stroke="black" points="180.42,-140.99 183.92,-150.99 187.42,-140.99 180.42,-140.99"/>
 </g>
 </g>
 </svg>
