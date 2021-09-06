@@ -895,8 +895,7 @@ export class FormComponent implements OnInit, OnDestroy {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;Answer the form&lt;/h1&gt;
-&lt;ng-container *ngIf&#x3D;&quot;!loading &amp;&amp; form&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;!loading &amp;&amp; form&quot;&gt;
     &lt;safe-form [form]&#x3D;&quot;form&quot; (save)&#x3D;&quot;onComplete($event)&quot;&gt;&lt;/safe-form&gt;
     &lt;ng-container *ngIf&#x3D;&quot;completed &amp;&amp; !form.uniqueRecord &amp;&amp; !hideNewRecord&quot;&gt;
         &lt;button mat-flat-button (click)&#x3D;&quot;clearForm()&quot;&gt;New record&lt;/button&gt;
@@ -937,7 +936,7 @@ export class FormComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1>Answer the form</h1><ng-container *ngIf="!loading && form">    <safe-form [form]="form" (save)="onComplete($event)"></safe-form>    <ng-container *ngIf="completed && !form.uniqueRecord && !hideNewRecord">        <button mat-flat-button (click)="clearForm()">New record</button>    </ng-container></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!loading && form">    <safe-form [form]="form" (save)="onComplete($event)"></safe-form>    <ng-container *ngIf="completed && !form.uniqueRecord && !hideNewRecord">        <button mat-flat-button (click)="clearForm()">New record</button>    </ng-container></ng-container></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FormComponent'};
