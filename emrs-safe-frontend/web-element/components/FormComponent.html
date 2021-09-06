@@ -750,9 +750,10 @@ export class FormComponent implements OnInit {
 &lt;ng-container *ngIf&#x3D;&quot;!loading &amp;&amp; form&quot;&gt;
     &lt;safe-form [form]&#x3D;&quot;form&quot; (save)&#x3D;&quot;onComplete($event)&quot;&gt;&lt;/safe-form&gt;
     &lt;ng-container *ngIf&#x3D;&quot;completed &amp;&amp; !form.uniqueRecord &amp;&amp; !hideNewRecord&quot;&gt;
-        &lt;button mat-flat-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;clearForm()&quot;&gt;New record&lt;/button&gt;
+      &lt;safe-button category&#x3D;&quot;secondary&quot; (click)&#x3D;&quot;clearForm()&quot;&gt;New record&lt;/safe-button&gt;
     &lt;/ng-container&gt;
-&lt;/ng-container&gt;</code></pre>
+&lt;/ng-container&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -787,7 +788,7 @@ export class FormComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && form">    <safe-form [form]="form" (save)="onComplete($event)"></safe-form>    <ng-container *ngIf="completed && !form.uniqueRecord && !hideNewRecord">        <button mat-flat-button color="primary" (click)="clearForm()">New record</button>    </ng-container></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && form">    <safe-form [form]="form" (save)="onComplete($event)"></safe-form>    <ng-container *ngIf="completed && !form.uniqueRecord && !hideNewRecord">      <safe-button category="secondary" (click)="clearForm()">New record</safe-button>    </ng-container></ng-container></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'WebApplicationComponent', 'selector': 'app-web-application'},{'name': 'WebDashboardComponent', 'selector': 'app-web-dashboard'},{'name': 'WebFormComponent', 'selector': 'app-web-form'},{'name': 'WebWorkflowComponent', 'selector': 'app-web-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FormComponent'};
