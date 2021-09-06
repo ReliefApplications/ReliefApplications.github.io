@@ -24,83 +24,83 @@
 <title>cluster_SafeChartModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 663,-268 663,-70 8,-70"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeChartModule_exports</title>
-<polygon fill="none" stroke="black" points="252,-208 252,-260 408,-260 408,-208 252,-208"/>
+<g id="clust2" class="cluster">
+<title>cluster_SafeChartModule_declarations</title>
+<polygon fill="none" stroke="black" points="501,-78 501,-130 655,-130 655,-78 501,-78"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeChartModule_imports</title>
-<polygon fill="none" stroke="black" points="178,-78 178,-130 655,-130 655,-78 178,-78"/>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 493,-130 493,-78 16,-78"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeChartModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 170,-130 170,-78 16,-78"/>
+<g id="clust5" class="cluster">
+<title>cluster_SafeChartModule_exports</title>
+<polygon fill="none" stroke="black" points="250,-208 250,-260 406,-260 406,-208 250,-208"/>
 </g>
 <!-- SafeChartComponent -->
 <g id="node1" class="node">
 <title>SafeChartComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="161.81,-122 24.19,-122 24.19,-86 161.81,-86 161.81,-122"/>
-<text text-anchor="middle" x="93" y="-99.8" font-family="Times,serif" font-size="14.00">SafeChartComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="646.81,-122 509.19,-122 509.19,-86 646.81,-86 646.81,-122"/>
+<text text-anchor="middle" x="578" y="-99.8" font-family="Times,serif" font-size="14.00">SafeChartComponent</text>
 </g>
 <!-- SafeChartModule -->
 <g id="node2" class="node">
 <title>SafeChartModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="387.53,-187 384.53,-191 363.53,-191 360.53,-187 272.47,-187 272.47,-151 387.53,-151 387.53,-187"/>
-<text text-anchor="middle" x="330" y="-164.8" font-family="Times,serif" font-size="14.00">SafeChartModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="385.53,-187 382.53,-191 361.53,-191 358.53,-187 270.47,-187 270.47,-151 385.53,-151 385.53,-187"/>
+<text text-anchor="middle" x="328" y="-164.8" font-family="Times,serif" font-size="14.00">SafeChartModule</text>
 </g>
 <!-- SafeChartComponent&#45;&gt;SafeChartModule -->
 <g id="edge1" class="edge">
 <title>SafeChartComponent&#45;&gt;SafeChartModule</title>
-<path fill="none" stroke="black" d="M93,-122.11C93,-141.34 93,-169 93,-169 93,-169 262.33,-169 262.33,-169"/>
-<polygon fill="black" stroke="black" points="262.33,-172.5 272.33,-169 262.33,-165.5 262.33,-172.5"/>
+<path fill="none" stroke="black" d="M578,-122.11C578,-141.34 578,-169 578,-169 578,-169 395.67,-169 395.67,-169"/>
+<polygon fill="black" stroke="black" points="395.67,-165.5 385.67,-169 395.67,-172.5 395.67,-165.5"/>
 </g>
 <!-- SafeChartComponent  -->
 <g id="node6" class="node">
 <title>SafeChartComponent </title>
-<polygon fill="#fb8072" stroke="black" points="400.31,-252 259.69,-252 259.69,-216 400.31,-216 400.31,-252"/>
-<text text-anchor="middle" x="330" y="-229.8" font-family="Times,serif" font-size="14.00">SafeChartComponent </text>
+<polygon fill="#fb8072" stroke="black" points="398.31,-252 257.69,-252 257.69,-216 398.31,-216 398.31,-252"/>
+<text text-anchor="middle" x="328" y="-229.8" font-family="Times,serif" font-size="14.00">SafeChartComponent </text>
 </g>
 <!-- SafeChartModule&#45;&gt;SafeChartComponent  -->
 <g id="edge5" class="edge">
 <title>SafeChartModule&#45;&gt;SafeChartComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M330,-187.11C330,-187.11 330,-205.99 330,-205.99"/>
-<polygon fill="black" stroke="black" points="326.5,-205.99 330,-215.99 333.5,-205.99 326.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M328,-187.11C328,-187.11 328,-205.99 328,-205.99"/>
+<polygon fill="black" stroke="black" points="324.5,-205.99 328,-215.99 331.5,-205.99 324.5,-205.99"/>
 </g>
 <!-- SafeDonutChartModule -->
 <g id="node3" class="node">
 <title>SafeDonutChartModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="647.02,-122 644.02,-126 623.02,-126 620.02,-122 496.98,-122 496.98,-86 647.02,-86 647.02,-122"/>
-<text text-anchor="middle" x="572" y="-99.8" font-family="Times,serif" font-size="14.00">SafeDonutChartModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="485.02,-122 482.02,-126 461.02,-126 458.02,-122 334.98,-122 334.98,-86 485.02,-86 485.02,-122"/>
+<text text-anchor="middle" x="410" y="-99.8" font-family="Times,serif" font-size="14.00">SafeDonutChartModule</text>
 </g>
 <!-- SafeDonutChartModule&#45;&gt;SafeChartModule -->
 <g id="edge2" class="edge">
 <title>SafeDonutChartModule&#45;&gt;SafeChartModule</title>
-<path fill="none" stroke="black" d="M572,-122.11C572,-141.34 572,-169 572,-169 572,-169 397.66,-169 397.66,-169"/>
-<polygon fill="black" stroke="black" points="397.66,-165.5 387.66,-169 397.66,-172.5 397.66,-165.5"/>
+<path fill="none" stroke="black" d="M360.25,-122.11C360.25,-122.11 360.25,-140.99 360.25,-140.99"/>
+<polygon fill="black" stroke="black" points="356.75,-140.99 360.25,-150.99 363.75,-140.99 356.75,-140.99"/>
 </g>
 <!-- SafeLineChartModule -->
 <g id="node4" class="node">
 <title>SafeLineChartModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="478.68,-122 475.68,-126 454.68,-126 451.68,-122 337.32,-122 337.32,-86 478.68,-86 478.68,-122"/>
-<text text-anchor="middle" x="408" y="-99.8" font-family="Times,serif" font-size="14.00">SafeLineChartModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="316.68,-122 313.68,-126 292.68,-126 289.68,-122 175.32,-122 175.32,-86 316.68,-86 316.68,-122"/>
+<text text-anchor="middle" x="246" y="-99.8" font-family="Times,serif" font-size="14.00">SafeLineChartModule</text>
 </g>
 <!-- SafeLineChartModule&#45;&gt;SafeChartModule -->
 <g id="edge3" class="edge">
 <title>SafeLineChartModule&#45;&gt;SafeChartModule</title>
-<path fill="none" stroke="black" d="M362.59,-122.11C362.59,-122.11 362.59,-140.99 362.59,-140.99"/>
-<polygon fill="black" stroke="black" points="359.09,-140.99 362.59,-150.99 366.09,-140.99 359.09,-140.99"/>
+<path fill="none" stroke="black" d="M293.41,-122.11C293.41,-122.11 293.41,-140.99 293.41,-140.99"/>
+<polygon fill="black" stroke="black" points="289.91,-140.99 293.41,-150.99 296.91,-140.99 289.91,-140.99"/>
 </g>
 <!-- SafePieChartModule -->
 <g id="node5" class="node">
 <title>SafePieChartModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="319.91,-122 316.91,-126 295.91,-126 292.91,-122 186.09,-122 186.09,-86 319.91,-86 319.91,-122"/>
-<text text-anchor="middle" x="253" y="-99.8" font-family="Times,serif" font-size="14.00">SafePieChartModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="157.91,-122 154.91,-126 133.91,-126 130.91,-122 24.09,-122 24.09,-86 157.91,-86 157.91,-122"/>
+<text text-anchor="middle" x="91" y="-99.8" font-family="Times,serif" font-size="14.00">SafePieChartModule</text>
 </g>
 <!-- SafePieChartModule&#45;&gt;SafeChartModule -->
 <g id="edge4" class="edge">
 <title>SafePieChartModule&#45;&gt;SafeChartModule</title>
-<path fill="none" stroke="black" d="M295.97,-122.11C295.97,-122.11 295.97,-140.99 295.97,-140.99"/>
-<polygon fill="black" stroke="black" points="292.47,-140.99 295.97,-150.99 299.47,-140.99 292.47,-140.99"/>
+<path fill="none" stroke="black" d="M91,-122.11C91,-141.34 91,-169 91,-169 91,-169 260.33,-169 260.33,-169"/>
+<polygon fill="black" stroke="black" points="260.33,-172.5 270.33,-169 260.33,-165.5 260.33,-172.5"/>
 </g>
 </g>
 </svg>
