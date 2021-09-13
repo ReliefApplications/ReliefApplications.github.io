@@ -361,8 +361,8 @@ export interface DeleteResourceMutationResponse{
 
 // &#x3D;&#x3D;&#x3D; DELETE RECORD &#x3D;&#x3D;&#x3D;
 export const DELETE_RECORD &#x3D; gql&#x60;
-mutation deleteRecord($id: ID!) {
-  deleteRecord(id: $id) {
+mutation deleteRecord($id: ID!, $hardDelete: Boolean) {
+  deleteRecord(id: $id, hardDelete: $hardDelete) {
     id
   }
 }&#x60;;
@@ -370,6 +370,19 @@ mutation deleteRecord($id: ID!) {
 export interface DeleteRecordMutationResponse {
   loading: boolean;
   deleteRecord: Record;
+}
+
+// &#x3D;&#x3D;&#x3D; RESTORE RECORD &#x3D;&#x3D;&#x3D;
+export const RESTORE_RECORD &#x3D; gql&#x60;
+mutation restoreRecord($id: ID!) {
+  restoreRecord(id: $id) {
+    id
+  }
+}&#x60;;
+
+export interface RestoreRecordMutationResponse {
+  loading: boolean;
+  restoreRecord: Record;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT FORM &#x3D;&#x3D;&#x3D;

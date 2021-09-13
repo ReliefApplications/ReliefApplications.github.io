@@ -256,6 +256,9 @@
                             <a href="#require" title="projects/back-office/src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
                         </li>
                         <li>
+                            <a href="#RESTORE_RECORD" title="projects/back-office/src/app/graphql/mutations.ts"><b>RESTORE_RECORD</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
                             <a href="#routes" title="projects/back-office/src/app/auth/auth-routing.module.ts"><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../auth-routing.module.ts)</a>
                         </li>
                         <li>
@@ -700,8 +703,8 @@ mutation deletePullJob($application: ID!, $id: ID!) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation deleteRecord($id: ID!) {
-  deleteRecord(id: $id) {
+mutation deleteRecord($id: ID!, $hardDelete: Boolean) {
+  deleteRecord(id: $id, hardDelete: $hardDelete) {
     id
   }
 }&#x60;</code>
@@ -1510,6 +1513,32 @@ mutation editWorkflow($id: ID!, $name: String, $steps: [ID]) {
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="RESTORE_RECORD"></a>
+                        <span class="name">
+                            <b>
+                            RESTORE_RECORD</b>
+                            <a href="#RESTORE_RECORD"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation restoreRecord($id: ID!) {
+  restoreRecord(id: $id) {
+    id
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
 </section>
     <h3>projects/back-office/src/test.ts</h3>
     <section>
@@ -2155,7 +2184,7 @@ query GetApiConfigurations {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
+query GetFormById($id: ID!, $filters: JSON, $display: Boolean, $showDeletedRecords: Boolean) {
   form(id: $id) {
     id
     name
@@ -2168,7 +2197,7 @@ query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
       createdAt
       data
     }
-    records(filters: $filters) {
+    records(filters: $filters, archived: $showDeletedRecords) {
       id
       data(display: $display)
       versions {
@@ -2177,6 +2206,7 @@ query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
         data
       }
     }
+    canUpdate
   }
 }&#x60;</code>
                         </td>
@@ -2422,12 +2452,12 @@ query GetRecordDetails($id: ID!) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-query GetResourceById($id: ID!, $filters: JSON, $display: Boolean) {
+query GetResourceById($id: ID!, $filters: JSON, $display: Boolean, $showDeletedRecords: Boolean) {
   resource(id: $id) {
     id
     name
     createdAt
-    records(filters: $filters) {
+    records(filters: $filters, archived: $showDeletedRecords) {
       id
       data(display: $display)
     }

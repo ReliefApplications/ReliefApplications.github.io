@@ -71,6 +71,7 @@
     </p>
     <p class="comment">
                     <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
     </p>
 
 
@@ -153,6 +154,14 @@
                                     <span class="modifier">Public</span>
                                 <a href="#resource">resource</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#resourceSubscription">resourceSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#showDeletedRecords">showDeletedRecords</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -169,6 +178,7 @@
                                 <a href="#deleteForm">deleteForm</a>
                             </li>
                             <li>
+                                    <span class="modifier">Private</span>
                                 <a href="#deleteRecord">deleteRecord</a>
                             </li>
                             <li>
@@ -176,10 +186,28 @@
                                 <a href="#filterCore">filterCore</a>
                             </li>
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getResourceData">getResourceData</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onDeleteRecord">onDeleteRecord</a>
+                            </li>
+                            <li>
                                 <a href="#onDownload">onDownload</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onRestoreRecord">onRestoreRecord</a>
+                            </li>
+                            <li>
+                                <a href="#onSwitchView">onSwitchView</a>
                             </li>
                             <li>
                                 <a href="#saveAccess">saveAccess</a>
@@ -206,12 +234,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(apollo: Apollo, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, snackBar: SafeSnackBarService, downloadService: SafeDownloadService)</code>
+<code>constructor(apollo: Apollo, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, snackBar: SafeSnackBarService, downloadService: SafeDownloadService, dialog: MatDialog)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -288,6 +316,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -328,8 +368,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="108"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:108</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:156</a></div>
                 </td>
             </tr>
 
@@ -395,6 +435,7 @@
                     <a name="deleteRecord"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Private</span>
                             deleteRecord
                         </b>
                         <a href="#deleteRecord"><span class="icon ion-ios-link"></span></a>
@@ -403,21 +444,24 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>deleteRecord(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteRecord(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="91"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:91</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:139</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sends mutation to delete record.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -427,13 +471,14 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -441,18 +486,10 @@
                                     </td>
 
 
-                                </tr>
-                                <tr>
-                                    <td>e</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <p>Id of record to delete.</p>
+
                                     </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
                                 </tr>
                             </tbody>
                         </table>
@@ -494,8 +531,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:105</a></div>
                 </td>
             </tr>
 
@@ -546,6 +583,90 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getResourceData"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getResourceData
+                        </b>
+                        <a href="#getResourceData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getResourceData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads resoource data.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="226"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:226</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Unsubscribe to subscriptions before destroying component.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
@@ -564,8 +685,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -576,6 +697,101 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDeleteRecord"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onDeleteRecord
+                        </b>
+                        <a href="#onDeleteRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onDeleteRecord(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a record if authorized, open a confirmation modal if it&#39;s a hard delete.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of record to delete.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>click event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -603,8 +819,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="139"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:139</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:187</a></div>
                 </td>
             </tr>
 
@@ -655,6 +871,178 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="onRestoreRecord"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onRestoreRecord
+                        </b>
+                        <a href="#onRestoreRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onRestoreRecord(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="209"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:209</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Restores an archived record.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of record to restore.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>click event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSwitchView"></a>
+                    <span class="name">
+                        <b>
+                            onSwitchView
+                        </b>
+                        <a href="#onSwitchView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSwitchView(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:198</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggle archive / active view.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>click event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="saveAccess"></a>
                     <span class="name">
                         <b>
@@ -673,8 +1061,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="125"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:125</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:173</a></div>
                 </td>
             </tr>
 
@@ -745,14 +1133,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:90</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Changes the list of displayed columns.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -762,6 +1152,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -776,6 +1167,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Is the form core.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -824,7 +1219,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -856,7 +1251,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -888,7 +1283,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -920,7 +1315,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -953,7 +1348,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -980,7 +1375,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -1008,7 +1403,62 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resourceSubscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Optional</span>
+                            resourceSubscription</b>
+                            <a href="#resourceSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showDeletedRecords"></a>
+                        <span class="name">
+                            <b>
+                            showDeletedRecords</b>
+                            <a href="#showDeletedRecords"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/resource.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -1022,21 +1472,24 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
-import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
-import { SafeDownloadService, SafeSnackBarService, NOTIFICATIONS } from &#x27;@safe/builder&#x27;;
+import { SafeDownloadService, SafeSnackBarService, NOTIFICATIONS, SafeConfirmModalComponent } from &#x27;@safe/builder&#x27;;
 import { DeleteFormMutationResponse, DeleteRecordMutationResponse, DELETE_FORM,
-  DELETE_RECORD, EditResourceMutationResponse, EDIT_RESOURCE } from &#x27;../../../graphql/mutations&#x27;;
+  DELETE_RECORD, EditResourceMutationResponse, EDIT_RESOURCE, RestoreRecordMutationResponse, RESTORE_RECORD } from &#x27;../../../graphql/mutations&#x27;;
 import { GetResourceByIdQueryResponse, GET_RESOURCE_BY_ID } from &#x27;../../../graphql/queries&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 
 @Component({
   selector: &#x27;app-resource&#x27;,
   templateUrl: &#x27;./resource.component.html&#x27;,
   styleUrls: [&#x27;./resource.component.scss&#x27;]
 })
-export class ResourceComponent implements OnInit {
+export class ResourceComponent implements OnInit, OnDestroy {
 
   // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
+  private resourceSubscription?: Subscription;
   public loading &#x3D; true;
   public id &#x3D; &#x27;&#x27;;
   public resource: any;
@@ -1049,12 +1502,16 @@ export class ResourceComponent implements OnInit {
   displayedColumnsForms: string[] &#x3D; [&#x27;name&#x27;, &#x27;createdAt&#x27;, &#x27;status&#x27;, &#x27;recordsCount&#x27;, &#x27;core&#x27;, &#x27;_actions&#x27;];
   dataSourceForms: any[] &#x3D; [];
 
+  // &#x3D;&#x3D;&#x3D; SHOW DELETED RECORDS &#x3D;&#x3D;&#x3D;
+  showDeletedRecords &#x3D; false;
+
   constructor(
     private apollo: Apollo,
     private route: ActivatedRoute,
     private router: Router,
     private snackBar: SafeSnackBarService,
-    private downloadService: SafeDownloadService
+    private downloadService: SafeDownloadService,
+    private dialog: MatDialog
   ) { }
 
   /*  Load data from the id of the resource passed as a parameter.
@@ -1062,34 +1519,47 @@ export class ResourceComponent implements OnInit {
   ngOnInit(): void {
     this.id &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;) || &#x27;&#x27;;
     if (this.id !&#x3D;&#x3D; null) {
-      this.apollo.watchQuery&lt;GetResourceByIdQueryResponse&gt;({
-        query: GET_RESOURCE_BY_ID,
-        variables: {
-          id: this.id,
-          display: true
-        }
-      }).valueChanges.subscribe((res) &#x3D;&gt; {
-        if (res.data.resource) {
-          this.resource &#x3D; res.data.resource;
-          this.dataSourceRecords &#x3D; this.resource.records;
-          this.dataSourceForms &#x3D; this.resource.forms;
-          this.setDisplayedColumns(false);
-          this.loading &#x3D; res.loading;
-        } else {
-          this.snackBar.openSnackBar(NOTIFICATIONS.accessNotProvided(&#x27;resource&#x27;), { error: true });
-          this.router.navigate([&#x27;/resources&#x27;]);
-        }
-      }, (err) &#x3D;&gt; {
-        this.snackBar.openSnackBar(err.message, { error: true });
-        this.router.navigate([&#x27;/resources&#x27;]);
-      });
+      this.getResourceData();
     } else {
       this.router.navigate([&#x27;/resources&#x27;]);
     }
   }
 
-  /*  Change the list of displayed columns.
-  */
+  /**
+   * Loads resoource data.
+   */
+  private getResourceData(): void {
+    if (this.resourceSubscription) {
+      this.resourceSubscription.unsubscribe();
+    }
+    this.resourceSubscription &#x3D; this.apollo.watchQuery&lt;GetResourceByIdQueryResponse&gt;({
+      query: GET_RESOURCE_BY_ID,
+      variables: {
+        id: this.id,
+        display: true,
+        showDeletedRecords: this.showDeletedRecords
+      }
+    }).valueChanges.subscribe((res) &#x3D;&gt; {
+      if (res.data.resource) {
+        this.resource &#x3D; res.data.resource;
+        this.dataSourceRecords &#x3D; this.resource.records;
+        this.dataSourceForms &#x3D; this.resource.forms;
+        this.setDisplayedColumns(false);
+        this.loading &#x3D; res.loading;
+      } else {
+        this.snackBar.openSnackBar(NOTIFICATIONS.accessNotProvided(&#x27;resource&#x27;), { error: true });
+        this.router.navigate([&#x27;/resources&#x27;]);
+      }
+    }, (err) &#x3D;&gt; {
+      this.snackBar.openSnackBar(err.message, { error: true });
+      this.router.navigate([&#x27;/resources&#x27;]);
+    });
+  }
+
+  /**
+   * Changes the list of displayed columns.
+   * @param core Is the form core.
+   */
   private setDisplayedColumns(core: boolean): void {
     const columns &#x3D; [];
     if (core) {
@@ -1109,14 +1579,42 @@ export class ResourceComponent implements OnInit {
     this.setDisplayedColumns(event.value);
   }
 
-  /*  Delete a record if authorized.
-  */
-  deleteRecord(id: any, e: any): void {
+  /**
+   * Deletes a record if authorized, open a confirmation modal if it&#x27;s a hard delete.
+   * @param id Id of record to delete.
+   * @param e click event.
+   */
+  public onDeleteRecord(id: string, e: any): void {
     e.stopPropagation();
+    if (this.showDeletedRecords) {
+      const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
+        data: {
+          title: &#x27;Delete record permanently&#x27;,
+          content: &#x60;Do you confirm the hard deletion of this record ?&#x60;,
+          confirmText: &#x27;Delete&#x27;,
+          confirmColor: &#x27;warn&#x27;
+        }
+      });
+      dialogRef.afterClosed().subscribe(value &#x3D;&gt; {
+        if (value) {
+          this.deleteRecord(id);
+        }
+      });
+    } else {
+      this.deleteRecord(id);
+    }
+  }
+
+  /**
+   * Sends mutation to delete record.
+   * @param id Id of record to delete.
+   */
+  private deleteRecord(id: string): void {
     this.apollo.mutate&lt;DeleteRecordMutationResponse&gt;({
       mutation: DELETE_RECORD,
       variables: {
-        id
+        id,
+        hardDelete: this.showDeletedRecords
       }
     }).subscribe(res &#x3D;&gt; {
       this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Record&#x27;), { duration: 1000 });
@@ -1165,6 +1663,44 @@ export class ResourceComponent implements OnInit {
     const queryString &#x3D; new URLSearchParams({ type }).toString();
     this.downloadService.getFile(&#x60;${path}?${queryString}&#x60;, &#x60;text/${type};charset&#x3D;utf-8;&#x60;, fileName);
   }
+
+  /**
+   * Toggle archive / active view.
+   * @param e click event.
+   */
+  onSwitchView(e: any): void {
+    e.stopPropagation();
+    this.showDeletedRecords &#x3D; !this.showDeletedRecords;
+    this.getResourceData();
+  }
+
+  /**
+   * Restores an archived record.
+   * @param id Id of record to restore.
+   * @param e click event.
+   */
+  public onRestoreRecord(id: string, e: any): void {
+    e.stopPropagation();
+    this.apollo.mutate&lt;RestoreRecordMutationResponse&gt;({
+      mutation: RESTORE_RECORD,
+      variables: {
+        id,
+      }
+    }).subscribe(res &#x3D;&gt; {
+      this.dataSourceRecords &#x3D; this.dataSourceRecords.filter(x &#x3D;&gt; {
+        return x.id !&#x3D;&#x3D; id;
+      });
+    });
+  }
+
+  /**
+   * Unsubscribe to subscriptions before destroying component.
+   */
+  ngOnDestroy(): void {
+    if (this.resourceSubscription) {
+      this.resourceSubscription.unsubscribe();
+    }
+  }
 }
 </code></pre>
     </div>
@@ -1179,6 +1715,12 @@ export class ResourceComponent implements OnInit {
         &lt;/h1&gt;
         &lt;safe-access [access]&#x3D;&quot;resource.permissions&quot; (save)&#x3D;&quot;saveAccess($event)&quot; *ngIf&#x3D;&quot;resource.canUpdate&quot;&gt;&lt;/safe-access&gt;
         &lt;div class&#x3D;&quot;actions&quot;&gt;
+            &lt;safe-button *ngIf&#x3D;&quot;resource.canUpdate &amp;&amp; !showDeletedRecords&quot; icon&#x3D;&quot;search_off&quot; category&#x3D;&quot;primary&quot; variant&#x3D;&quot;danger&quot; (click)&#x3D;&quot;onSwitchView($event)&quot;&gt;
+                Show archived records
+            &lt;/safe-button&gt;
+            &lt;safe-button *ngIf&#x3D;&quot;resource.canUpdate &amp;&amp; showDeletedRecords&quot; icon&#x3D;&quot;restore_page&quot; category&#x3D;&quot;primary&quot; variant&#x3D;&quot;success&quot; (click)&#x3D;&quot;onSwitchView($event)&quot;&gt;
+                Show active records
+            &lt;/safe-button&gt;
             &lt;safe-button icon&#x3D;&quot;file_download&quot; category&#x3D;&quot;secondary&quot; variant&#x3D;&quot;primary&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot; &gt;
               Download records
             &lt;/safe-button&gt;
@@ -1191,7 +1733,7 @@ export class ResourceComponent implements OnInit {
     &lt;mat-tab-group dynamicHeight&gt;
         &lt;mat-tab&gt;
             &lt;ng-template mat-tab-label&gt;
-                Records ( {{resource.records.length}} )
+                Records ( {{dataSourceRecords.length}} )
             &lt;/ng-template&gt;
             &lt;table mat-table [dataSource]&#x3D;&quot;dataSourceRecords&quot;&gt;
                 &lt;ng-container *ngFor&#x3D;&quot;let column of displayedColumnsRecords&quot; [matColumnDef]&#x3D;&quot;column&quot;&gt;
@@ -1209,9 +1751,17 @@ export class ResourceComponent implements OnInit {
                                     &lt;mat-icon&gt;edit&lt;/mat-icon&gt;
                                     Edit
                                 &lt;/button&gt;
-                                &lt;button mat-menu-item (click)&#x3D;&quot;deleteRecord(element.id, $event)&quot;&gt;
+                                &lt;button *ngIf&#x3D;&quot;!showDeletedRecords&quot; mat-menu-item (click)&#x3D;&quot;onDeleteRecord(element.id, $event)&quot;&gt;
                                     &lt;mat-icon&gt;delete&lt;/mat-icon&gt;
                                     Delete
+                                &lt;/button&gt;
+                                &lt;button *ngIf&#x3D;&quot;showDeletedRecords&quot; mat-menu-item (click)&#x3D;&quot;onDeleteRecord(element.id, $event)&quot;&gt;
+                                    &lt;mat-icon&gt;delete_forever&lt;/mat-icon&gt;
+                                    Delete permanently
+                                &lt;/button&gt;
+                                &lt;button *ngIf&#x3D;&quot;showDeletedRecords&quot; mat-menu-item (click)&#x3D;&quot;onRestoreRecord(element.id, $event)&quot;&gt;
+                                    &lt;mat-icon&gt;unarchive&lt;/mat-icon&gt;
+                                    Restore
                                 &lt;/button&gt;
                             &lt;/mat-menu&gt;
                         &lt;/td&gt;
@@ -1341,7 +1891,7 @@ export class ResourceComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && resource">    <div class="page-header">        <safe-previous-button path="/resources"></safe-previous-button>        <h1 class="page-title">            {{resource.name}}        </h1>        <safe-access [access]="resource.permissions" (save)="saveAccess($event)" *ngIf="resource.canUpdate"></safe-access>        <div class="actions">            <safe-button icon="file_download" category="secondary" variant="primary" [matMenuTriggerFor]="menu" >              Download records            </safe-button>            <mat-menu #menu="matMenu">              <button mat-menu-item (click)="onDownload(\'csv\')">.csv</button>              <button mat-menu-item (click)="onDownload(\'xlsx\')">.xlsx</button>            </mat-menu>        </div>    </div>    <mat-tab-group dynamicHeight>        <mat-tab>            <ng-template mat-tab-label>                Records ( {{resource.records.length}} )            </ng-template>            <table mat-table [dataSource]="dataSourceRecords">                <ng-container *ngFor="let column of displayedColumnsRecords" [matColumnDef]="column">                    <ng-container *ngIf="column !== \'_actions\'">                        <th mat-header-cell *matHeaderCellDef>{{column}}</th>                        <td mat-cell *matCellDef="let element"> {{element.data[column]}} </td>                    </ng-container>                    <ng-container *ngIf="column === \'_actions\'">                        <th mat-header-cell *matHeaderCellDef></th>                        <td mat-cell *matCellDef="let element">                            <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="recMenu" (click)="$event.stopPropagation()">                            </safe-button>                            <mat-menu #recMenu="matMenu">                                <button mat-menu-item [routerLink]="[\'./update\', element.id]">                                    <mat-icon>edit</mat-icon>                                    Edit                                </button>                                <button mat-menu-item (click)="deleteRecord(element.id, $event)">                                    <mat-icon>delete</mat-icon>                                    Delete                                </button>                            </mat-menu>                        </td>                    </ng-container>                </ng-container>                <tr mat-header-row *matHeaderRowDef="displayedColumnsRecords"></tr>                <tr mat-row *matRowDef="let row; columns: displayedColumnsRecords;"></tr>            </table>        </mat-tab>        <mat-tab>            <ng-template mat-tab-label>                Forms ( {{resource.forms.length}} )            </ng-template>            <ng-container *ngIf="!loading">                <table mat-table [dataSource]="dataSourceForms">                    <ng-container matColumnDef="name">                        <th mat-header-cell *matHeaderCellDef> Name </th>                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>                    </ng-container>                    <ng-container matColumnDef="createdAt">                        <th mat-header-cell *matHeaderCellDef> Created on </th>                        <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>                    </ng-container>                    <ng-container matColumnDef="status">                        <th mat-header-cell *matHeaderCellDef> Status </th>                        <td mat-cell *matCellDef="let element">                            <mat-chip-list>                                <mat-chip class="success-chip" disabled                                    *ngIf="element.status === \'active\'">                                    {{ element.status | titlecase }}                                </mat-chip>                                <mat-chip class="accent-chip" disabled color="accent"                                    *ngIf="element.status === \'pending\'">                                    {{ element.status | titlecase }}                                </mat-chip>                                <mat-chip class="warn-chip" disabled color="warn" *ngIf="element.status === \'archived\'">                                    {{ element.status | titlecase }}                                </mat-chip>                            </mat-chip-list>                        </td>                    </ng-container>                    <ng-container matColumnDef="recordsCount">                        <th mat-header-cell *matHeaderCellDef> Records </th>                        <td mat-cell *matCellDef="let element"> {{element.recordsCount}} </td>                    </ng-container>                    <ng-container matColumnDef="core">                        <th mat-header-cell *matHeaderCellDef> Is Core </th>                        <td mat-cell *matCellDef="let element">                            <mat-chip-list *ngIf="element.core">                                <mat-chip class="primary-chip" disabled>Core</mat-chip>                            </mat-chip-list>                        </td>                    </ng-container>                    <ng-container matColumnDef="_actions">                        <th mat-header-cell *matHeaderCellDef></th>                        <td mat-cell *matCellDef="let element">                            <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="resMenu" (click)="$event.stopPropagation()" [disabled]="!(element.canUpdate || element.canDelete )">                            </safe-button>                            <mat-menu #resMenu="matMenu">                                <button mat-menu-item [routerLink]="[\'/forms/builder\', element.id]" *ngIf="element.canUpdate">                                    <mat-icon>edit</mat-icon>                                    Edit                                </button>                                <button mat-menu-item (click)="deleteForm(element.id, $event)" *ngIf="element.canDelete">                                    <mat-icon>delete</mat-icon>                                    Delete                                </button>                            </mat-menu>                        </td>                    </ng-container>                    <tr mat-header-row *matHeaderRowDef="displayedColumnsForms"></tr>                    <tr mat-row *matRowDef="let row; columns: displayedColumnsForms;" [ngClass]="{\'clickable\': ( row.canCreate && (row.status === \'active\') )}"                        [routerLink]="( row.canCreate && (row.status === \'active\') ) ? [\'/forms/answer\', row.id] : []"></tr>                </table>            </ng-container>        </mat-tab>    </mat-tab-group></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && resource">    <div class="page-header">        <safe-previous-button path="/resources"></safe-previous-button>        <h1 class="page-title">            {{resource.name}}        </h1>        <safe-access [access]="resource.permissions" (save)="saveAccess($event)" *ngIf="resource.canUpdate"></safe-access>        <div class="actions">            <safe-button *ngIf="resource.canUpdate && !showDeletedRecords" icon="search_off" category="primary" variant="danger" (click)="onSwitchView($event)">                Show archived records            </safe-button>            <safe-button *ngIf="resource.canUpdate && showDeletedRecords" icon="restore_page" category="primary" variant="success" (click)="onSwitchView($event)">                Show active records            </safe-button>            <safe-button icon="file_download" category="secondary" variant="primary" [matMenuTriggerFor]="menu" >              Download records            </safe-button>            <mat-menu #menu="matMenu">              <button mat-menu-item (click)="onDownload(\'csv\')">.csv</button>              <button mat-menu-item (click)="onDownload(\'xlsx\')">.xlsx</button>            </mat-menu>        </div>    </div>    <mat-tab-group dynamicHeight>        <mat-tab>            <ng-template mat-tab-label>                Records ( {{dataSourceRecords.length}} )            </ng-template>            <table mat-table [dataSource]="dataSourceRecords">                <ng-container *ngFor="let column of displayedColumnsRecords" [matColumnDef]="column">                    <ng-container *ngIf="column !== \'_actions\'">                        <th mat-header-cell *matHeaderCellDef>{{column}}</th>                        <td mat-cell *matCellDef="let element"> {{element.data[column]}} </td>                    </ng-container>                    <ng-container *ngIf="column === \'_actions\'">                        <th mat-header-cell *matHeaderCellDef></th>                        <td mat-cell *matCellDef="let element">                            <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="recMenu" (click)="$event.stopPropagation()">                            </safe-button>                            <mat-menu #recMenu="matMenu">                                <button mat-menu-item [routerLink]="[\'./update\', element.id]">                                    <mat-icon>edit</mat-icon>                                    Edit                                </button>                                <button *ngIf="!showDeletedRecords" mat-menu-item (click)="onDeleteRecord(element.id, $event)">                                    <mat-icon>delete</mat-icon>                                    Delete                                </button>                                <button *ngIf="showDeletedRecords" mat-menu-item (click)="onDeleteRecord(element.id, $event)">                                    <mat-icon>delete_forever</mat-icon>                                    Delete permanently                                </button>                                <button *ngIf="showDeletedRecords" mat-menu-item (click)="onRestoreRecord(element.id, $event)">                                    <mat-icon>unarchive</mat-icon>                                    Restore                                </button>                            </mat-menu>                        </td>                    </ng-container>                </ng-container>                <tr mat-header-row *matHeaderRowDef="displayedColumnsRecords"></tr>                <tr mat-row *matRowDef="let row; columns: displayedColumnsRecords;"></tr>            </table>        </mat-tab>        <mat-tab>            <ng-template mat-tab-label>                Forms ( {{resource.forms.length}} )            </ng-template>            <ng-container *ngIf="!loading">                <table mat-table [dataSource]="dataSourceForms">                    <ng-container matColumnDef="name">                        <th mat-header-cell *matHeaderCellDef> Name </th>                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>                    </ng-container>                    <ng-container matColumnDef="createdAt">                        <th mat-header-cell *matHeaderCellDef> Created on </th>                        <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>                    </ng-container>                    <ng-container matColumnDef="status">                        <th mat-header-cell *matHeaderCellDef> Status </th>                        <td mat-cell *matCellDef="let element">                            <mat-chip-list>                                <mat-chip class="success-chip" disabled                                    *ngIf="element.status === \'active\'">                                    {{ element.status | titlecase }}                                </mat-chip>                                <mat-chip class="accent-chip" disabled color="accent"                                    *ngIf="element.status === \'pending\'">                                    {{ element.status | titlecase }}                                </mat-chip>                                <mat-chip class="warn-chip" disabled color="warn" *ngIf="element.status === \'archived\'">                                    {{ element.status | titlecase }}                                </mat-chip>                            </mat-chip-list>                        </td>                    </ng-container>                    <ng-container matColumnDef="recordsCount">                        <th mat-header-cell *matHeaderCellDef> Records </th>                        <td mat-cell *matCellDef="let element"> {{element.recordsCount}} </td>                    </ng-container>                    <ng-container matColumnDef="core">                        <th mat-header-cell *matHeaderCellDef> Is Core </th>                        <td mat-cell *matCellDef="let element">                            <mat-chip-list *ngIf="element.core">                                <mat-chip class="primary-chip" disabled>Core</mat-chip>                            </mat-chip-list>                        </td>                    </ng-container>                    <ng-container matColumnDef="_actions">                        <th mat-header-cell *matHeaderCellDef></th>                        <td mat-cell *matCellDef="let element">                            <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="resMenu" (click)="$event.stopPropagation()" [disabled]="!(element.canUpdate || element.canDelete )">                            </safe-button>                            <mat-menu #resMenu="matMenu">                                <button mat-menu-item [routerLink]="[\'/forms/builder\', element.id]" *ngIf="element.canUpdate">                                    <mat-icon>edit</mat-icon>                                    Edit                                </button>                                <button mat-menu-item (click)="deleteForm(element.id, $event)" *ngIf="element.canDelete">                                    <mat-icon>delete</mat-icon>                                    Delete                                </button>                            </mat-menu>                        </td>                    </ng-container>                    <tr mat-header-row *matHeaderRowDef="displayedColumnsForms"></tr>                    <tr mat-row *matRowDef="let row; columns: displayedColumnsForms;" [ngClass]="{\'clickable\': ( row.canCreate && (row.status === \'active\') )}"                        [routerLink]="( row.canCreate && (row.status === \'active\') ) ? [\'/forms/answer\', row.id] : []"></tr>                </table>            </ng-container>        </mat-tab>    </mat-tab-group></ng-container></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddApplicationComponent', 'selector': 'app-add-application'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ResourceComponent'};

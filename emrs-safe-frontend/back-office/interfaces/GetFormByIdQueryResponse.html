@@ -351,7 +351,7 @@ query GetShortFormById($id: ID!) {
 }&#x60;;
 
 export const GET_FORM_BY_ID &#x3D; gql&#x60;
-query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
+query GetFormById($id: ID!, $filters: JSON, $display: Boolean, $showDeletedRecords: Boolean) {
   form(id: $id) {
     id
     name
@@ -364,7 +364,7 @@ query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
       createdAt
       data
     }
-    records(filters: $filters) {
+    records(filters: $filters, archived: $showDeletedRecords) {
       id
       data(display: $display)
       versions {
@@ -373,6 +373,7 @@ query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
         data
       }
     }
+    canUpdate
   }
 }&#x60;;
 
@@ -384,12 +385,12 @@ export interface GetFormByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
 export const GET_RESOURCE_BY_ID &#x3D; gql&#x60;
-query GetResourceById($id: ID!, $filters: JSON, $display: Boolean) {
+query GetResourceById($id: ID!, $filters: JSON, $display: Boolean, $showDeletedRecords: Boolean) {
   resource(id: $id) {
     id
     name
     createdAt
-    records(filters: $filters) {
+    records(filters: $filters, archived: $showDeletedRecords) {
       id
       data(display: $display)
     }

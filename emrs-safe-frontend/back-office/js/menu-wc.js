@@ -508,13 +508,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FormRecordsModule.html" data-type="entity-link">FormRecordsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormRecordsModule-cc24be58dc3b3b7669cf7057de06d157"' : 'data-target="#xs-components-links-module-FormRecordsModule-cc24be58dc3b3b7669cf7057de06d157"' }>
+                                            'data-target="#components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' : 'data-target="#xs-components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-cc24be58dc3b3b7669cf7057de06d157"' :
-                                            'id="xs-components-links-module-FormRecordsModule-cc24be58dc3b3b7669cf7057de06d157"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' :
+                                            'id="xs-components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' }>
                                             <li class="link">
                                                 <a href="components/FormRecordsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormRecordsComponent</a>
@@ -1201,6 +1201,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetWorkflowByIdQueryResponse.html" data-type="entity-link">GetWorkflowByIdQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/RestoreRecordMutationResponse.html" data-type="entity-link">RestoreRecordMutationResponse</a>
                             </li>
                         </ul>
                     </li>
