@@ -366,6 +366,25 @@ export interface AddRoleToUsersMutationResponse {
   addRoleToUsers: User[];
 }
 
+export const ADD_USERS &#x3D; gql&#x60;
+mutation addUsers($users: [UserInputType]!, $application: ID) {
+  addUsers(users: $users, application: $application) {
+    id
+    username
+    name
+    roles {
+      id
+      title
+    }
+    oid
+  }
+}&#x60;;
+
+export interface AddUsersMutationResponse {
+  loading: boolean;
+  addUsers: User[];
+}
+
 // &#x3D;&#x3D;&#x3D; EDIT ROLE &#x3D;&#x3D;&#x3D;
 export const EDIT_ROLE &#x3D; gql&#x60;
 mutation editRole($id: ID!, $permissions: [ID], $channels: [ID], $title: String) {

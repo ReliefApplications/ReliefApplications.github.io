@@ -105,6 +105,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeAddUserModule.html" data-type="entity-link">SafeAddUserModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeAddUserModule-fc513f8336a51afb9d3318bed78274ba"' : 'data-target="#xs-components-links-module-SafeAddUserModule-fc513f8336a51afb9d3318bed78274ba"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeAddUserModule-fc513f8336a51afb9d3318bed78274ba"' :
+                                            'id="xs-components-links-module-SafeAddUserModule-fc513f8336a51afb9d3318bed78274ba"' }>
+                                            <li class="link">
+                                                <a href="components/SafeAddUserComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeAddUserComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeArrayFilterMenuModule.html" data-type="entity-link">SafeArrayFilterMenuModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -428,6 +446,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/SafeIconComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeIconComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeInviteUsersModule.html" data-type="entity-link">SafeInviteUsersModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeInviteUsersModule-ce00f9c0f182f965bcc9bcc04c151b8a"' : 'data-target="#xs-components-links-module-SafeInviteUsersModule-ce00f9c0f182f965bcc9bcc04c151b8a"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeInviteUsersModule-ce00f9c0f182f965bcc9bcc04c151b8a"' :
+                                            'id="xs-components-links-module-SafeInviteUsersModule-ce00f9c0f182f965bcc9bcc04c151b8a"' }>
+                                            <li class="link">
+                                                <a href="components/SafeInviteUsersComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeInviteUsersComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -765,20 +801,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeUsersModule.html" data-type="entity-link">SafeUsersModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeUsersModule-e0fbfb5a72699632e9d7c7932309d91e"' : 'data-target="#xs-components-links-module-SafeUsersModule-e0fbfb5a72699632e9d7c7932309d91e"' }>
+                                            'data-target="#components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' : 'data-target="#xs-components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeUsersModule-e0fbfb5a72699632e9d7c7932309d91e"' :
-                                            'id="xs-components-links-module-SafeUsersModule-e0fbfb5a72699632e9d7c7932309d91e"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' :
+                                            'id="xs-components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' }>
                                             <li class="link">
                                                 <a href="components/SafeEditUserComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeEditUserComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/SafeInviteUserComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeInviteUserComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/SafeUsersComponent.html"
@@ -962,6 +994,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/AddSubscriptionMutationResponse.html" data-type="entity-link">AddSubscriptionMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/AddUser.html" data-type="entity-link">AddUser</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/AddUsersMutationResponse.html" data-type="entity-link">AddUsersMutationResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/ApiConfiguration.html" data-type="entity-link">ApiConfiguration</a>
                             </li>
                             <li class="link">
@@ -1083,6 +1121,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/DialogData-14.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DialogData-15.html" data-type="entity-link">DialogData</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/EditApplicationMutationResponse.html" data-type="entity-link">EditApplicationMutationResponse</a>
