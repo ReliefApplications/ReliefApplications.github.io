@@ -401,8 +401,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="189"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:189</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:190</a></div>
                 </td>
             </tr>
 
@@ -442,8 +442,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="151"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:151</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:152</a></div>
                 </td>
             </tr>
 
@@ -514,8 +514,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="194"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:194</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:195</a></div>
                 </td>
             </tr>
 
@@ -553,8 +553,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="122"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:122</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:123</a></div>
                 </td>
             </tr>
 
@@ -901,7 +901,7 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     const tileSettings &#x3D; this.tile.settings;
     const hasActions &#x3D; !!tileSettings &amp;&amp; !!tileSettings.actions;
-
+    console.log(tileSettings.actions);
     this.tileForm &#x3D; this.formBuilder.group({
       id: this.tile.id,
       title: [(tileSettings &amp;&amp; tileSettings.title) ? tileSettings.title : &#x27;&#x27;, Validators.required],
@@ -911,7 +911,8 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
         delete: [hasActions ? tileSettings.actions.delete : true],
         history: [hasActions ? tileSettings.actions.history : true],
         convert: [hasActions ? tileSettings.actions.convert : true],
-        update: [hasActions ? tileSettings.actions.update : true]
+        update: [hasActions ? tileSettings.actions.update : true],
+        inlineEdition: [hasActions ? tileSettings.actions.inlineEdition : true],
       }),
       floatingButtons: this.formBuilder.array(tileSettings.floatingButtons &amp;&amp; tileSettings.floatingButtons.length ?
         tileSettings.floatingButtons.map((x: any) &#x3D;&gt; this.createFloatingButtonForm(x)) : [this.createFloatingButtonForm(null)])
@@ -1070,6 +1071,9 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
       &lt;mat-slide-toggle formControlName&#x3D;&quot;update&quot;&gt;
         Update records
       &lt;/mat-slide-toggle&gt;
+      &lt;mat-slide-toggle formControlName&#x3D;&quot;inlineEdition&quot;&gt;
+        Allow inline edition
+      &lt;/mat-slide-toggle&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;form-group&quot;&gt;
       &lt;div class&#x3D;&quot;form-group-title&quot;&gt;Quick action buttons&lt;/div&gt;
@@ -1146,7 +1150,7 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="tileForm">  <form [formGroup]="tileForm">    <div class="form-group">      <div class="form-group-title">General</div>      <mat-form-field appearance="outline">        <mat-label>Title</mat-label>        <input matInput formControlName="title" type="string" />      </mat-form-field>    </div>    <div class="form-group">      <safe-query-builder [form]="$any(tileForm.controls.query)"></safe-query-builder>    </div>    <div formGroupName="actions" class="form-group">      <div class="form-group-title">Enabled actions</div>      <mat-slide-toggle formControlName="delete">        Delete records      </mat-slide-toggle>      <mat-slide-toggle formControlName="history">        Show history      </mat-slide-toggle>      <mat-slide-toggle formControlName="convert">        Convert records      </mat-slide-toggle>      <mat-slide-toggle formControlName="update">        Update records      </mat-slide-toggle>    </div>    <div class="form-group">      <div class="form-group-title">Quick action buttons</div>      <div class="info-text">Quick action buttons will appear on the widget and allow you to complete any of the actions        below.</div>      <safe-button icon="add" variant="primary" class="add-button" (click)="addFloatingButton()">        Add a button      </safe-button>      <mat-tab-group mat-align-tabs="start" animationDuration="0ms" dynamicHeight style="min-height: 500px"        [(selectedIndex)]="tabIndex" *ngIf="floatingButtons.length > 0">        <ng-container *ngFor="let floatingButton of floatingButtons.controls">          <mat-tab>            <ng-template mat-tab-label>              <mat-icon class="form-error" *ngIf="floatingButton.invalid">error</mat-icon>              {{ floatingButton.value.name }}            </ng-template>            <ng-template matTabContent>              <safe-floating-button-settings [buttonForm]="$any(floatingButton)" [fields]="fields" [channels]="channels"                [relatedForms]="relatedForms" (deleteButton)="deleteFloatingButton()"></safe-floating-button-settings>            </ng-template>          </mat-tab>        </ng-container>      </mat-tab-group>    </div>  </form></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="tileForm">  <form [formGroup]="tileForm">    <div class="form-group">      <div class="form-group-title">General</div>      <mat-form-field appearance="outline">        <mat-label>Title</mat-label>        <input matInput formControlName="title" type="string" />      </mat-form-field>    </div>    <div class="form-group">      <safe-query-builder [form]="$any(tileForm.controls.query)"></safe-query-builder>    </div>    <div formGroupName="actions" class="form-group">      <div class="form-group-title">Enabled actions</div>      <mat-slide-toggle formControlName="delete">        Delete records      </mat-slide-toggle>      <mat-slide-toggle formControlName="history">        Show history      </mat-slide-toggle>      <mat-slide-toggle formControlName="convert">        Convert records      </mat-slide-toggle>      <mat-slide-toggle formControlName="update">        Update records      </mat-slide-toggle>      <mat-slide-toggle formControlName="inlineEdition">        Allow inline edition      </mat-slide-toggle>    </div>    <div class="form-group">      <div class="form-group-title">Quick action buttons</div>      <div class="info-text">Quick action buttons will appear on the widget and allow you to complete any of the actions        below.</div>      <safe-button icon="add" variant="primary" class="add-button" (click)="addFloatingButton()">        Add a button      </safe-button>      <mat-tab-group mat-align-tabs="start" animationDuration="0ms" dynamicHeight style="min-height: 500px"        [(selectedIndex)]="tabIndex" *ngIf="floatingButtons.length > 0">        <ng-container *ngFor="let floatingButton of floatingButtons.controls">          <mat-tab>            <ng-template mat-tab-label>              <mat-icon class="form-error" *ngIf="floatingButton.invalid">error</mat-icon>              {{ floatingButton.value.name }}            </ng-template>            <ng-template matTabContent>              <safe-floating-button-settings [buttonForm]="$any(floatingButton)" [fields]="fields" [channels]="channels"                [relatedForms]="relatedForms" (deleteButton)="deleteFloatingButton()"></safe-floating-button-settings>            </ng-template>          </mat-tab>        </ng-container>      </mat-tab-group>    </div>  </form></ng-container></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDashboardMenuComponent', 'selector': 'safe-dashboard-menu'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeGridSettingsComponent'};
