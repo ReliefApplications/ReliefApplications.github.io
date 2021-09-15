@@ -224,29 +224,31 @@ import { AddApiConfigurationComponent } from &#x27;./components/add-api-configur
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
 import { SafeButtonModule } from &#x27;@safe/builder&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
+import {MatButtonModule} from &#x27;@angular/material/button&#x27;;
 
 @NgModule({
   declarations: [
     ApiConfigurationsComponent,
     AddApiConfigurationComponent,
   ],
-  imports: [
-    CommonModule,
-    ApiConfigurationsRoutingModule,
-    MatMenuModule,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    MatChipsModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    AngularFormsModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    SafeButtonModule,
-    MatIconModule
-  ],
+    imports: [
+        CommonModule,
+        ApiConfigurationsRoutingModule,
+        MatMenuModule,
+        MatProgressSpinnerModule,
+        MatTableModule,
+        MatChipsModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        AngularFormsModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        SafeButtonModule,
+        MatIconModule,
+        MatButtonModule
+    ],
   exports: [ApiConfigurationsComponent]
 })
 export class ApiConfigurationsModule { }

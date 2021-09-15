@@ -230,26 +230,28 @@ import { EditChannelComponent } from &#x27;./components/edit-channel/edit-channe
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
+import {MatButtonModule} from &#x27;@angular/material/button&#x27;;
 
 @NgModule({
   declarations: [ChannelsComponent, AddChannelComponent, EditChannelComponent],
-  imports: [
-    CommonModule,
-    ChannelsRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatMenuModule,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    MatSelectModule,
-    SafeConfirmModalModule,
-    MatDividerModule,
-    SafeButtonModule
-  ]
+    imports: [
+        CommonModule,
+        ChannelsRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatMenuModule,
+        MatProgressSpinnerModule,
+        MatTableModule,
+        MatSelectModule,
+        SafeConfirmModalModule,
+        MatDividerModule,
+        SafeButtonModule,
+        MatButtonModule
+    ]
 })
 export class ChannelsModule { }
 </code></pre>
