@@ -222,7 +222,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(dialog: MatDialog, apollo: Apollo)</code>
+<code>constructor(dialog: MatDialog, apollo: Apollo, snackBar: SafeSnackBarService)</code>
                     </td>
                 </tr>
                         <tr>
@@ -261,6 +261,18 @@
                                                   
                                                         <td>
                                                                     <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeSnackBarService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -308,8 +320,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:103</a></div>
                 </td>
             </tr>
 
@@ -390,8 +402,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="114"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:114</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:120</a></div>
                 </td>
             </tr>
 
@@ -429,8 +441,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="106"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:106</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:112</a></div>
                 </td>
             </tr>
 
@@ -470,8 +482,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="57"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:57</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:58</a></div>
                 </td>
             </tr>
 
@@ -509,8 +521,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:70</a></div>
                 </td>
             </tr>
 
@@ -548,8 +560,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:47</a></div>
                 </td>
             </tr>
 
@@ -587,8 +599,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:74</a></div>
                 </td>
             </tr>
 
@@ -1000,7 +1012,7 @@ import {AfterViewInit, Component, OnInit, ViewChild} from &#x27;@angular/core&#x
 
 import { DeleteResourceMutationResponse, DELETE_RESOURCE } from &#x27;../../../graphql/mutations&#x27;;
 import { GetResourcesQueryResponse, GET_RESOURCES_EXTENDED } from &#x27;../../../graphql/queries&#x27;;
-import { Resource, SafeConfirmModalComponent } from &#x27;@safe/builder&#x27;;
+import { Resource, SafeConfirmModalComponent, SafeSnackBarService, NOTIFICATIONS } from &#x27;@safe/builder&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
 import { MatSort } from &#x27;@angular/material/sort&#x27;;
@@ -1035,7 +1047,8 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
 
   constructor(
     private dialog: MatDialog,
-    private apollo: Apollo
+    private apollo: Apollo,
+    private snackBar: SafeSnackBarService,
   ) { }
 
   /*  Load the resources.
@@ -1085,7 +1098,12 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
             id: resource.id
           }
         }).subscribe(res &#x3D;&gt; {
-          this.dataSource.data &#x3D; this.dataSource.data.filter(x &#x3D;&gt; x.id !&#x3D;&#x3D; resource.id);
+          if (!res.errors) {
+            this.dataSource.data &#x3D; this.dataSource.data.filter(x &#x3D;&gt; x.id !&#x3D;&#x3D; resource.id);
+            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;ressource&#x27;), { duration: 1000 });
+          } else {
+            this.snackBar.openSnackBar(NOTIFICATIONS.objectNotDeleted(&#x27;ressource&#x27;, res.errors[0].message), { error: true });
+          }
         });
       }
     });
@@ -1186,7 +1204,8 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
         &lt;ng-container matColumnDef&#x3D;&quot;actions&quot;&gt;
           &lt;th mat-header-cell *matHeaderCellDef&gt;&lt;/th&gt;
           &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
-          &lt;safe-button [isIcon]&#x3D;&quot;true&quot; icon&#x3D;&quot;more_vert&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot; (click)&#x3D;&quot;$event.stopPropagation()&quot;&gt;
+          &lt;safe-button [isIcon]&#x3D;&quot;true&quot; icon&#x3D;&quot;more_vert&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot; (click)&#x3D;&quot;$event.stopPropagation()&quot;
+            [disabled]&#x3D;&quot;!element.canDelete&quot;&gt;
           &lt;/safe-button&gt;
           &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
               &lt;button mat-menu-item (click)&#x3D;&quot;onDelete(element)&quot;&gt;
@@ -1259,7 +1278,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container>  <div class="searchbar" *ngIf="!loading">    <mat-form-field appearance="outline">      <mat-icon matPrefix>search</mat-icon>      <input id="custom-search" matInput [ngModel]="searchText" (keyup)="applyFilter(\'\', $event)" type="search" placeholder="Search...">    </mat-form-field>    <safe-button icon="filter_list" category="tertiary" variant="primary" (click)="showFilters = !showFilters" class="filters-toggle">      Filter    </safe-button>  </div>  <div class="filters" [style.display]="!showFilters ? \'none\' : \'\'">    <mat-form-field appearance="outline">      <mat-label>Date Range</mat-label>      <mat-date-range-input (click)="rangePicker.open()" [rangePicker]="rangePicker">        <input #startDate (dateInput)="filtersDate[\'startDate\'] = $event.value" matStartDate               readonly>        <input #endDate (dateInput)="filtersDate[\'endDate\'] = $event.value" matEndDate readonly>      </mat-date-range-input>      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <safe-button matDateRangePickerCancel (click)="clearDateFilter()">Clear range</safe-button>          <safe-button category="secondary" variant="primary" matDateRangePickerApply (click)="applyFilter(\'createdAt\', null)">            Apply          </safe-button>        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>    <mat-form-field appearance="outline">      <input [ngModel]="recordsFilter" matInput (keyup)="applyFilter(\'recordsCount\', $event)" type="number" placeholder="Users">    </mat-form-field>    <safe-button variant="danger"(click)="clearAllFilters()">Clear Filters</safe-button>  </div>    <table mat-table [dataSource]="dataSource" matSort>      <ng-container matColumnDef="name">        <th mat-header-cell *matHeaderCellDef>            <span class="headerTitle" mat-sort-header>              Name            </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.name }}</td>      </ng-container>      <ng-container matColumnDef="createdAt">        <th mat-header-cell *matHeaderCellDef>            <span class="headerTitle" mat-sort-header>              Created on            </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.createdAt | date }}</td>      </ng-container>      <ng-container matColumnDef="recordsCount">        <th mat-header-cell *matHeaderCellDef>            <span class="headerTitle" mat-sort-header>              Records            </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.recordsCount }}</td>      </ng-container>        <ng-container matColumnDef="actions">          <th mat-header-cell *matHeaderCellDef></th>          <td mat-cell *matCellDef="let element">          <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()">          </safe-button>          <mat-menu #menu="matMenu">              <button mat-menu-item (click)="onDelete(element)">              <mat-icon>delete</mat-icon>              Delete              </button>          </mat-menu>          </td>      </ng-container>        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>        <tr class="clickable" mat-row *matRowDef="let row; columns: displayedColumns;"            [routerLink]="[\'/resources\', row.id]">          </tr>    </table></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container>  <div class="searchbar" *ngIf="!loading">    <mat-form-field appearance="outline">      <mat-icon matPrefix>search</mat-icon>      <input id="custom-search" matInput [ngModel]="searchText" (keyup)="applyFilter(\'\', $event)" type="search" placeholder="Search...">    </mat-form-field>    <safe-button icon="filter_list" category="tertiary" variant="primary" (click)="showFilters = !showFilters" class="filters-toggle">      Filter    </safe-button>  </div>  <div class="filters" [style.display]="!showFilters ? \'none\' : \'\'">    <mat-form-field appearance="outline">      <mat-label>Date Range</mat-label>      <mat-date-range-input (click)="rangePicker.open()" [rangePicker]="rangePicker">        <input #startDate (dateInput)="filtersDate[\'startDate\'] = $event.value" matStartDate               readonly>        <input #endDate (dateInput)="filtersDate[\'endDate\'] = $event.value" matEndDate readonly>      </mat-date-range-input>      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <safe-button matDateRangePickerCancel (click)="clearDateFilter()">Clear range</safe-button>          <safe-button category="secondary" variant="primary" matDateRangePickerApply (click)="applyFilter(\'createdAt\', null)">            Apply          </safe-button>        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>    <mat-form-field appearance="outline">      <input [ngModel]="recordsFilter" matInput (keyup)="applyFilter(\'recordsCount\', $event)" type="number" placeholder="Users">    </mat-form-field>    <safe-button variant="danger"(click)="clearAllFilters()">Clear Filters</safe-button>  </div>    <table mat-table [dataSource]="dataSource" matSort>      <ng-container matColumnDef="name">        <th mat-header-cell *matHeaderCellDef>            <span class="headerTitle" mat-sort-header>              Name            </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.name }}</td>      </ng-container>      <ng-container matColumnDef="createdAt">        <th mat-header-cell *matHeaderCellDef>            <span class="headerTitle" mat-sort-header>              Created on            </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.createdAt | date }}</td>      </ng-container>      <ng-container matColumnDef="recordsCount">        <th mat-header-cell *matHeaderCellDef>            <span class="headerTitle" mat-sort-header>              Records            </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.recordsCount }}</td>      </ng-container>        <ng-container matColumnDef="actions">          <th mat-header-cell *matHeaderCellDef></th>          <td mat-cell *matCellDef="let element">          <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()"            [disabled]="!element.canDelete">          </safe-button>          <mat-menu #menu="matMenu">              <button mat-menu-item (click)="onDelete(element)">              <mat-icon>delete</mat-icon>              Delete              </button>          </mat-menu>          </td>      </ng-container>        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>        <tr class="clickable" mat-row *matRowDef="let row; columns: displayedColumns;"            [routerLink]="[\'/resources\', row.id]">          </tr>    </table></ng-container></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddApplicationComponent', 'selector': 'app-add-application'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ResourcesComponent'};
