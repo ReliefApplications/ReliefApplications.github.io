@@ -268,11 +268,30 @@ export class PermissionsManagement {
                 access: Permissions.canSeeRoles
             },
             apiconfigurations: {
-                create: Permissions.canManageApiConfigurations
+                create: Permissions.canManageApiConfigurations,
+                access: Permissions.canManageApiConfigurations
+            },
+            edit: {
+                access: Permissions.canManageApplications
+            },
+            position: {
+                access: Permissions.canSeeRoles
+            },
+            channels: {
+                access: Permissions.canManageApplications
+            },
+            subscriptions: {
+                access: Permissions.canManageApplications
+            },
+            &#x27;pull-jobs&#x27;: {
+                access: Permissions.canManageApplications
             }
         },
         applications: {
             create: Permissions.canManageApplications
+        },
+        &#x27;add-page&#x27;: {
+            access: Permissions.canManageApplications
         }
     };
 

@@ -159,11 +159,30 @@
                 access: Permissions.canSeeRoles
             },
             apiconfigurations: {
-                create: Permissions.canManageApiConfigurations
+                create: Permissions.canManageApiConfigurations,
+                access: Permissions.canManageApiConfigurations
+            },
+            edit: {
+                access: Permissions.canManageApplications
+            },
+            position: {
+                access: Permissions.canSeeRoles
+            },
+            channels: {
+                access: Permissions.canManageApplications
+            },
+            subscriptions: {
+                access: Permissions.canManageApplications
+            },
+            &#x27;pull-jobs&#x27;: {
+                access: Permissions.canManageApplications
             }
         },
         applications: {
             create: Permissions.canManageApplications
+        },
+        &#x27;add-page&#x27;: {
+            access: Permissions.canManageApplications
         }
     }</code>
                         </td>
@@ -208,8 +227,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:118</a></div>
                 </td>
             </tr>
 
@@ -292,8 +311,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="87"
-                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:87</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:106</a></div>
                 </td>
             </tr>
 
@@ -440,11 +459,30 @@ export class PermissionsManagement {
                 access: Permissions.canSeeRoles
             },
             apiconfigurations: {
-                create: Permissions.canManageApiConfigurations
+                create: Permissions.canManageApiConfigurations,
+                access: Permissions.canManageApiConfigurations
+            },
+            edit: {
+                access: Permissions.canManageApplications
+            },
+            position: {
+                access: Permissions.canSeeRoles
+            },
+            channels: {
+                access: Permissions.canManageApplications
+            },
+            subscriptions: {
+                access: Permissions.canManageApplications
+            },
+            &#x27;pull-jobs&#x27;: {
+                access: Permissions.canManageApplications
             }
         },
         applications: {
             create: Permissions.canManageApplications
+        },
+        &#x27;add-page&#x27;: {
+            access: Permissions.canManageApplications
         }
     };
 
