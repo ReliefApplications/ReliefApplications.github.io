@@ -401,8 +401,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="189"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:189</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:188</a></div>
                 </td>
             </tr>
 
@@ -442,8 +442,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="151"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:151</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:150</a></div>
                 </td>
             </tr>
 
@@ -514,8 +514,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="194"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:194</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="193"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:193</a></div>
                 </td>
             </tr>
 
@@ -553,8 +553,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="122"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:122</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:123</a></div>
                 </td>
             </tr>
 
@@ -916,11 +916,13 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
       floatingButtons: this.formBuilder.array(tileSettings.floatingButtons &amp;&amp; tileSettings.floatingButtons.length ?
         tileSettings.floatingButtons.map((x: any) &#x3D;&gt; this.createFloatingButtonForm(x)) : [this.createFloatingButtonForm(null)])
     });
+    this.queryName &#x3D; this.tileForm.get(&#x27;query&#x27;)?.value.name;
 
     this.tileForm.get(&#x27;query&#x27;)?.valueChanges.subscribe(res &#x3D;&gt; {
       if (res.name) {
-        // Check if the query changed to clean modifications and fields for email in floating button if any
-        if (this.fields &amp;&amp; (res.name !&#x3D;&#x3D; this.queryName)) {
+        // Check if the query changed to clean modifications and fields for email in floating button
+        if (res.name !&#x3D;&#x3D; this.queryName) {
+          this.queryName &#x3D; res.name;
           const floatingButtons &#x3D; this.tileForm?.get(&#x27;floatingButtons&#x27;) as FormArray;
           for (const floatingButton of floatingButtons.controls) {
             const modifications &#x3D; floatingButton.get(&#x27;modifications&#x27;) as FormArray;
@@ -931,7 +933,6 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
           }
         }
         this.fields &#x3D; this.queryBuilder.getFields(res.name);
-        this.queryName &#x3D; res.name;
         const query &#x3D; this.queryBuilder.sourceQuery(this.queryName);
         if (query) {
           query.subscribe((res1: { data: any }) &#x3D;&gt; {
@@ -985,8 +986,6 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
           });
         }
       });
-
-      this.queryName &#x3D; this.tileForm.get(&#x27;query&#x27;)?.value.name;
     }
   }
 
