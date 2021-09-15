@@ -24,123 +24,123 @@
 <title>cluster_SafeQueryBuilderModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-333 1576,-333 1576,-70 8,-70"/>
 </g>
-<g id="clust7" class="cluster">
-<title>cluster_SafeQueryBuilderModule_imports</title>
-<polygon fill="none" stroke="black" points="1430,-143 1430,-195 1568,-195 1568,-143 1430,-143"/>
-</g>
 <g id="clust3" class="cluster">
 <title>cluster_SafeQueryBuilderModule_SafeQueryBuilderComponent_providers</title>
-<polygon fill="none" stroke="black" points="548,-78 548,-195 1422,-195 1422,-78 548,-78"/>
+<polygon fill="none" stroke="black" points="694,-78 694,-195 1568,-195 1568,-78 694,-78"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeQueryBuilderModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-143 16,-195 540,-195 540,-143 16,-143"/>
+<polygon fill="none" stroke="black" points="162,-143 162,-195 686,-195 686,-143 162,-143"/>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_SafeQueryBuilderModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-143 16,-195 154,-195 154,-143 16,-143"/>
 </g>
 <g id="clust8" class="cluster">
 <title>cluster_SafeQueryBuilderModule_exports</title>
-<polygon fill="none" stroke="black" points="263,-273 263,-325 649,-325 649,-273 263,-273"/>
+<polygon fill="none" stroke="black" points="231,-273 231,-325 617,-325 617,-273 231,-273"/>
 </g>
 <!-- SafeQueryBuilderComponent -->
 <g id="node1" class="node">
 <title>SafeQueryBuilderComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="907.68,-187 724.32,-187 724.32,-151 907.68,-151 907.68,-187"/>
-<text text-anchor="middle" x="816" y="-164.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1053.68,-187 870.32,-187 870.32,-151 1053.68,-151 1053.68,-187"/>
+<text text-anchor="middle" x="962" y="-164.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderComponent</text>
 </g>
 <!-- SafeQueryBuilderModule -->
 <g id="node5" class="node">
 <title>SafeQueryBuilderModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="531.9,-252 528.9,-256 507.9,-256 504.9,-252 370.1,-252 370.1,-216 531.9,-216 531.9,-252"/>
-<text text-anchor="middle" x="451" y="-229.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="499.9,-252 496.9,-256 475.9,-256 472.9,-252 338.1,-252 338.1,-216 499.9,-216 499.9,-252"/>
+<text text-anchor="middle" x="419" y="-229.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderModule</text>
 </g>
 <!-- SafeQueryBuilderComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge1" class="edge">
 <title>SafeQueryBuilderComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M816,-187.02C816,-204.37 816,-228 816,-228 816,-228 542.01,-228 542.01,-228"/>
-<polygon fill="black" stroke="black" points="542.01,-224.5 532.01,-228 542.01,-231.5 542.01,-224.5"/>
+<path fill="none" stroke="black" d="M962,-187.28C962,-208.32 962,-240 962,-240 962,-240 509.71,-240 509.71,-240"/>
+<polygon fill="black" stroke="black" points="509.71,-236.5 499.71,-240 509.71,-243.5 509.71,-236.5"/>
 </g>
 <!-- SafeTabFieldsComponent -->
 <g id="node2" class="node">
 <title>SafeTabFieldsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="532.2,-187 369.8,-187 369.8,-151 532.2,-151 532.2,-187"/>
-<text text-anchor="middle" x="451" y="-164.8" font-family="Times,serif" font-size="14.00">SafeTabFieldsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="678.2,-187 515.8,-187 515.8,-151 678.2,-151 678.2,-187"/>
+<text text-anchor="middle" x="597" y="-164.8" font-family="Times,serif" font-size="14.00">SafeTabFieldsComponent</text>
 </g>
 <!-- SafeTabFieldsComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge3" class="edge">
 <title>SafeTabFieldsComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M451,-187.11C451,-187.11 451,-205.99 451,-205.99"/>
-<polygon fill="black" stroke="black" points="447.5,-205.99 451,-215.99 454.5,-205.99 447.5,-205.99"/>
+<path fill="none" stroke="black" d="M562.62,-187.02C562.62,-204.37 562.62,-228 562.62,-228 562.62,-228 510.04,-228 510.04,-228"/>
+<polygon fill="black" stroke="black" points="510.04,-224.5 500.04,-228 510.04,-231.5 510.04,-224.5"/>
 </g>
 <!-- SafeTabFilterComponent -->
 <g id="node3" class="node">
 <title>SafeTabFilterComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="352.3,-187 193.7,-187 193.7,-151 352.3,-151 352.3,-187"/>
-<text text-anchor="middle" x="273" y="-164.8" font-family="Times,serif" font-size="14.00">SafeTabFilterComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="498.3,-187 339.7,-187 339.7,-151 498.3,-151 498.3,-187"/>
+<text text-anchor="middle" x="419" y="-164.8" font-family="Times,serif" font-size="14.00">SafeTabFilterComponent</text>
 </g>
 <!-- SafeTabFilterComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge4" class="edge">
 <title>SafeTabFilterComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M311.65,-187.02C311.65,-204.37 311.65,-228 311.65,-228 311.65,-228 359.94,-228 359.94,-228"/>
-<polygon fill="black" stroke="black" points="359.94,-231.5 369.94,-228 359.94,-224.5 359.94,-231.5"/>
+<path fill="none" stroke="black" d="M419,-187.11C419,-187.11 419,-205.99 419,-205.99"/>
+<polygon fill="black" stroke="black" points="415.5,-205.99 419,-215.99 422.5,-205.99 415.5,-205.99"/>
 </g>
 <!-- SafeTabSortComponent -->
 <g id="node4" class="node">
 <title>SafeTabSortComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="175.81,-187 24.19,-187 24.19,-151 175.81,-151 175.81,-187"/>
-<text text-anchor="middle" x="100" y="-164.8" font-family="Times,serif" font-size="14.00">SafeTabSortComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="321.81,-187 170.19,-187 170.19,-151 321.81,-151 321.81,-187"/>
+<text text-anchor="middle" x="246" y="-164.8" font-family="Times,serif" font-size="14.00">SafeTabSortComponent</text>
 </g>
 <!-- SafeTabSortComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge5" class="edge">
 <title>SafeTabSortComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M100,-187.28C100,-208.32 100,-240 100,-240 100,-240 360.03,-240 360.03,-240"/>
-<polygon fill="black" stroke="black" points="360.03,-243.5 370.03,-240 360.03,-236.5 360.03,-243.5"/>
+<path fill="none" stroke="black" d="M280.4,-187.02C280.4,-204.37 280.4,-228 280.4,-228 280.4,-228 327.98,-228 327.98,-228"/>
+<polygon fill="black" stroke="black" points="327.98,-231.5 337.98,-228 327.98,-224.5 327.98,-231.5"/>
 </g>
 <!-- SafeQueryBuilderComponent  -->
 <g id="node8" class="node">
 <title>SafeQueryBuilderComponent </title>
-<polygon fill="#fb8072" stroke="black" points="641.18,-317 454.82,-317 454.82,-281 641.18,-281 641.18,-317"/>
-<text text-anchor="middle" x="548" y="-294.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderComponent </text>
+<polygon fill="#fb8072" stroke="black" points="609.18,-317 422.82,-317 422.82,-281 609.18,-281 609.18,-317"/>
+<text text-anchor="middle" x="516" y="-294.8" font-family="Times,serif" font-size="14.00">SafeQueryBuilderComponent </text>
 </g>
 <!-- SafeQueryBuilderModule&#45;&gt;SafeQueryBuilderComponent  -->
 <g id="edge7" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;SafeQueryBuilderComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M493.18,-252.11C493.18,-252.11 493.18,-270.99 493.18,-270.99"/>
-<polygon fill="black" stroke="black" points="489.68,-270.99 493.18,-280.99 496.68,-270.99 489.68,-270.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M461.18,-252.11C461.18,-252.11 461.18,-270.99 461.18,-270.99"/>
+<polygon fill="black" stroke="black" points="457.68,-270.99 461.18,-280.99 464.68,-270.99 457.68,-270.99"/>
 </g>
 <!-- SafeTabFieldsComponent  -->
 <g id="node9" class="node">
 <title>SafeTabFieldsComponent </title>
-<polygon fill="#fb8072" stroke="black" points="436.7,-317 271.3,-317 271.3,-281 436.7,-281 436.7,-317"/>
-<text text-anchor="middle" x="354" y="-294.8" font-family="Times,serif" font-size="14.00">SafeTabFieldsComponent </text>
+<polygon fill="#fb8072" stroke="black" points="404.7,-317 239.3,-317 239.3,-281 404.7,-281 404.7,-317"/>
+<text text-anchor="middle" x="322" y="-294.8" font-family="Times,serif" font-size="14.00">SafeTabFieldsComponent </text>
 </g>
 <!-- SafeQueryBuilderModule&#45;&gt;SafeTabFieldsComponent  -->
 <g id="edge8" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;SafeTabFieldsComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M403.57,-252.11C403.57,-252.11 403.57,-270.99 403.57,-270.99"/>
-<polygon fill="black" stroke="black" points="400.07,-270.99 403.57,-280.99 407.07,-270.99 400.07,-270.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M371.57,-252.11C371.57,-252.11 371.57,-270.99 371.57,-270.99"/>
+<polygon fill="black" stroke="black" points="368.07,-270.99 371.57,-280.99 375.07,-270.99 368.07,-270.99"/>
 </g>
 <!-- { provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] } -->
 <g id="node6" class="node">
 <title>{ provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }</title>
-<ellipse fill="#fdb462" stroke="black" cx="985" cy="-104" rx="429.07" ry="18"/>
-<text text-anchor="middle" x="985" y="-99.8" font-family="Times,serif" font-size="14.00">{ provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }</text>
+<ellipse fill="#fdb462" stroke="black" cx="1131" cy="-104" rx="429.07" ry="18"/>
+<text text-anchor="middle" x="1131" y="-99.8" font-family="Times,serif" font-size="14.00">{ provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }</text>
 </g>
 <!-- { provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }&#45;&gt;SafeQueryBuilderComponent -->
 <g id="edge2" class="edge">
 <title>{ provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay] }&#45;&gt;SafeQueryBuilderComponent</title>
-<path fill="none" stroke="black" d="M816,-120.74C816,-120.74 816,-140.72 816,-140.72"/>
-<polygon fill="black" stroke="black" points="812.5,-140.72 816,-150.72 819.5,-140.72 812.5,-140.72"/>
+<path fill="none" stroke="black" d="M962,-120.74C962,-120.74 962,-140.72 962,-140.72"/>
+<polygon fill="black" stroke="black" points="958.5,-140.72 962,-150.72 965.5,-140.72 958.5,-140.72"/>
 </g>
 <!-- SafeButtonModule -->
 <g id="node7" class="node">
 <title>SafeButtonModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="1560.04,-187 1557.04,-191 1536.04,-191 1533.04,-187 1437.96,-187 1437.96,-151 1560.04,-151 1560.04,-187"/>
-<text text-anchor="middle" x="1499" y="-164.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="146.04,-187 143.04,-191 122.04,-191 119.04,-187 23.96,-187 23.96,-151 146.04,-151 146.04,-187"/>
+<text text-anchor="middle" x="85" y="-164.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge6" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M1499,-187.28C1499,-208.32 1499,-240 1499,-240 1499,-240 541.93,-240 541.93,-240"/>
-<polygon fill="black" stroke="black" points="541.93,-236.5 531.93,-240 541.93,-243.5 541.93,-236.5"/>
+<path fill="none" stroke="black" d="M85,-187.28C85,-208.32 85,-240 85,-240 85,-240 328.15,-240 328.15,-240"/>
+<polygon fill="black" stroke="black" points="328.15,-243.5 338.15,-240 328.15,-236.5 328.15,-243.5"/>
 </g>
 </g>
 </svg>
