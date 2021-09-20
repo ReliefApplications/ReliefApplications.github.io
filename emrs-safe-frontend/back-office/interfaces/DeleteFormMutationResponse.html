@@ -562,8 +562,8 @@ export interface DeleteApplicationMutationResponse {
 
 // &#x3D;&#x3D;&#x3D; ADD APPLICATION &#x3D;&#x3D;&#x3D;
 export const ADD_APPLICATION &#x3D; gql&#x60;
-mutation addApplication($name: String!) {
-  addApplication(name: $name){
+mutation addApplication {
+  addApplication {
     id
     name
     pages {

@@ -192,17 +192,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ApplicationsModule.html" data-type="entity-link">ApplicationsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ApplicationsModule-2c83f6bbe8c4138e9d73d2ec9e33e4ce"' : 'data-target="#xs-components-links-module-ApplicationsModule-2c83f6bbe8c4138e9d73d2ec9e33e4ce"' }>
+                                            'data-target="#components-links-module-ApplicationsModule-914d07f1a24d09b765612911f8612148"' : 'data-target="#xs-components-links-module-ApplicationsModule-914d07f1a24d09b765612911f8612148"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApplicationsModule-2c83f6bbe8c4138e9d73d2ec9e33e4ce"' :
-                                            'id="xs-components-links-module-ApplicationsModule-2c83f6bbe8c4138e9d73d2ec9e33e4ce"' }>
-                                            <li class="link">
-                                                <a href="components/AddApplicationComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AddApplicationComponent</a>
-                                            </li>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApplicationsModule-914d07f1a24d09b765612911f8612148"' :
+                                            'id="xs-components-links-module-ApplicationsModule-914d07f1a24d09b765612911f8612148"' }>
                                             <li class="link">
                                                 <a href="components/ApplicationsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ApplicationsComponent</a>
