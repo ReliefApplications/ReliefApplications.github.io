@@ -1515,7 +1515,7 @@ export class FormBuilderComponent implements OnInit {
         this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;Status&#x27;, res.errors[0].message));
         statusModal.close();
       } else {
-        this.snackBar.openSnackBar(NOTIFICATIONS.statusUpdated(e.value), { duration: 1000 });
+        this.snackBar.openSnackBar(NOTIFICATIONS.statusUpdated(e.value));
         this.form &#x3D; { ...this.form, status: res.data?.editForm.status };
         statusModal.close();
       }
@@ -1577,7 +1577,7 @@ export class FormBuilderComponent implements OnInit {
           this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;form&#x27;, res.errors[0].message));
           statusModal.close();
         } else {
-          this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;form&#x27;, formName), { duration: 1000 });
+          this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;form&#x27;, formName));
           this.form &#x3D; { ...this.form, name: res.data?.editForm.name };
           statusModal.close();
         }

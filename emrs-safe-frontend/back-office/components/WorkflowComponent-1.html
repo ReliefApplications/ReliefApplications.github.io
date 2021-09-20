@@ -1723,7 +1723,7 @@ export class WorkflowComponent implements OnInit, OnDestroy {
           }
         }).subscribe(res &#x3D;&gt; {
           if (res.data) {
-            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Step&#x27;), { duration: 1000 });
+            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Step&#x27;));
             this.steps &#x3D; this.steps.filter(x &#x3D;&gt; {
               return x.id !&#x3D;&#x3D; res.data?.deleteStep.id;
             });

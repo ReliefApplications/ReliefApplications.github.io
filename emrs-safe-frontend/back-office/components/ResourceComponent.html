@@ -1617,7 +1617,7 @@ export class ResourceComponent implements OnInit, OnDestroy {
         hardDelete: this.showDeletedRecords
       }
     }).subscribe(res &#x3D;&gt; {
-      this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Record&#x27;), { duration: 1000 });
+      this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Record&#x27;));
       this.dataSourceRecords &#x3D; this.dataSourceRecords.filter(x &#x3D;&gt; {
         return x.id !&#x3D;&#x3D; id;
       });
@@ -1634,7 +1634,7 @@ export class ResourceComponent implements OnInit, OnDestroy {
         id
       }
     }).subscribe(res &#x3D;&gt; {
-      this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Form&#x27;), { duration: 1000 });
+      this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Form&#x27;));
       this.dataSourceForms &#x3D; this.dataSourceForms.filter(x &#x3D;&gt; {
         return x.id !&#x3D;&#x3D; id;
       });

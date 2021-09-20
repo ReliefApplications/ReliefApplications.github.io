@@ -1164,7 +1164,7 @@ export class ApiConfigurationsComponent implements OnInit, OnDestroy, AfterViewI
           }
         }).subscribe(res &#x3D;&gt; {
           if (res &amp;&amp; !res.errors) {
-            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;API Configuration&#x27;), { duration: 1000 });
+            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;API Configuration&#x27;));
             this.dataSource.data &#x3D; this.dataSource.data.filter(x &#x3D;&gt; x.id !&#x3D;&#x3D; element.id);
           }
         });

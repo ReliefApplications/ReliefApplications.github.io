@@ -1100,7 +1100,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
         }).subscribe(res &#x3D;&gt; {
           if (!res.errors) {
             this.dataSource.data &#x3D; this.dataSource.data.filter(x &#x3D;&gt; x.id !&#x3D;&#x3D; resource.id);
-            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;ressource&#x27;), { duration: 1000 });
+            this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;ressource&#x27;));
           } else {
             this.snackBar.openSnackBar(NOTIFICATIONS.objectNotDeleted(&#x27;ressource&#x27;, res.errors[0].message), { error: true });
           }
