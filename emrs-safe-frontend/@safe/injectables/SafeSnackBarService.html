@@ -96,12 +96,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(snackBar: MatSnackBar)</code>
+<code>constructor(snackBar: <a href="../interfaces/SnackBar.html">MatSnackBar</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -122,7 +122,7 @@
                                                         <td>snackBar</td>
                                                   
                                                         <td>
-                                                                    <code>MatSnackBar</code>
+                                                                        <code><a href="../interfaces/SnackBar.html" target="_self" >MatSnackBar</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -159,21 +159,23 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, config: literal type)</code>
+<code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, config?: <a href="../interfaces/SnackBar.html">SnackBar</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:31</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Creates a snackbar message on top of the layout.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -183,7 +185,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Default value</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -197,24 +199,27 @@
                                         No
                                     </td>
 
-                                    <td>
-                                    </td>
 
+                                    <td>
+                                        <p>text message to display.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>config</td>
                                     <td>
-                                            <code>literal type</code>
+                                                <code><a href="../interfaces/SnackBar.html" target="_self" >SnackBar</a></code>
                                     </td>
 
                                     <td>
-                                        No
+                                        Yes
                                     </td>
+
 
                                     <td>
-                                        <code>DEFAULT_SNACKBAR</code>
-                                    </td>
+                                        <p>additional configuration of the message ( duration / color / error ).</p>
 
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -222,11 +227,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>MatSnackBarRef&lt;TextOnlySnackBar&gt;</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/SnackBar.html" target="_self" >MatSnackBarRef&lt;TextOnlySnackBar&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>snackbar message reference.</p>
+
                     </div>
                 </td>
             </tr>
@@ -242,9 +248,16 @@
 import { MatSnackBar, MatSnackBarRef, TextOnlySnackBar } from &#x27;@angular/material/snack-bar&#x27;;
 
 const DEFAULT_SNACKBAR &#x3D; {
-  expires: true,
-  error: false
+  error: false,
+  duration: 5000,
+  action: &#x27;Dismiss&#x27;
 };
+
+interface SnackBar {
+  duration?: number;
+  error?: boolean;
+  action?: string;
+}
 
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -255,19 +268,19 @@ export class SafeSnackBarService {
     private snackBar: MatSnackBar
   ) { }
 
-  /*  Display a message.
-    Text, duration, and color are editable ( color is red if error set as true ).
-  */
+  /**
+   * Creates a snackbar message on top of the layout.
+   * @param message text message to display.
+   * @param config additional configuration of the message ( duration / color / error ).
+   * @returns snackbar message reference.
+   */
   openSnackBar(
     message: string,
-    config: {
-      expires?: boolean,
-      duration?: number,
-      error?: boolean,
-      action?: string
-    } &#x3D; DEFAULT_SNACKBAR): MatSnackBarRef&lt;TextOnlySnackBar&gt; {
-    const snackBar &#x3D; this.snackBar.open(message, config.action ? config.action : &#x27;Dismiss&#x27;, {
-      duration: config.expires ? ((config &amp;&amp; config.duration) ? config.duration : 3000) : undefined,
+    config?: SnackBar): MatSnackBarRef&lt;TextOnlySnackBar&gt; {
+    config &#x3D; { ...DEFAULT_SNACKBAR, ...config };
+    console.log(config);
+    const snackBar &#x3D; this.snackBar.open(message, config.action, {
+      duration: config.duration ? config.duration : undefined,
       horizontalPosition: &#x27;center&#x27;,
       verticalPosition: &#x27;top&#x27;,
       panelClass: (config &amp;&amp; config.error) ? &#x27;snack-error&#x27; : &#x27;&#x27;

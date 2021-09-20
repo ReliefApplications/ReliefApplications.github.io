@@ -2391,7 +2391,7 @@ export class SafeApplicationService {
     }).subscribe(() &#x3D;&gt; {
       const snackBar &#x3D; this.snackBar.openSnackBar(NOTIFICATIONS.appEdited, {
         action: &#x27;Reload&#x27;,
-        expires: false
+        duration: 0
       });
       snackBar.onAction().subscribe(() &#x3D;&gt; window.location.reload());
     });
@@ -2687,7 +2687,7 @@ export class SafeApplicationService {
       }).subscribe(res &#x3D;&gt; {
         if (res.data) {
           const deletedUsers &#x3D; res.data.deleteUsersFromApplication.map(x &#x3D;&gt; x.id);
-          this.snackBar.openSnackBar(NOTIFICATIONS.usersActions(&#x27;deleted&#x27;, deletedUsers.length), { duration: 3000 });
+          this.snackBar.openSnackBar(NOTIFICATIONS.usersActions(&#x27;deleted&#x27;, deletedUsers.length));
           const newApplication &#x3D; { ...application, users: application.users?.filter(u &#x3D;&gt; !deletedUsers.includes(u.id)) };
           this._application.next(newApplication);
         } else {

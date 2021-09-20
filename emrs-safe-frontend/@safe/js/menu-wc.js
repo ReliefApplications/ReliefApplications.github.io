@@ -1255,6 +1255,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/SeeNotificationsMutationResponse.html" data-type="entity-link">SeeNotificationsMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/SnackBar.html" data-type="entity-link">SnackBar</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/StatusDialogData.html" data-type="entity-link">StatusDialogData</a>
                             </li>
                             <li class="link">
