@@ -447,8 +447,8 @@ mutation addChannel($title: String!, $application: ID!) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation addPage($name: String, $type: ContentEnumType!, $content: ID, $application: ID!) {
-  addPage(name: $name, type: $type, content: $content, application: $application){
+mutation addPage($type: ContentEnumType!, $content: ID, $application: ID!) {
+  addPage(type: $type, content: $content, application: $application){
     id
     name
     type
@@ -614,8 +614,8 @@ mutation addRoleToUsers($usernames: [String]!, $role: ID!, $positionAttributes: 
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation addStep($name: String, $type: String!, $content: ID, $workflow: ID!) {
-  addStep(name: $name, type: $type, content: $content, workflow: $workflow){
+mutation addStep($type: String!, $content: ID, $workflow: ID!) {
+  addStep(type: $type, content: $content, workflow: $workflow){
     id
     name
     type

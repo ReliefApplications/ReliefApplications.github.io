@@ -387,8 +387,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="98"
-                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:98</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:97</a></div>
                 </td>
             </tr>
 
@@ -457,8 +457,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:82</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:81</a></div>
                 </td>
             </tr>
 
@@ -609,7 +609,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:104</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:103</a></div>
                                 </td>
                             </tr>
 
@@ -677,14 +677,13 @@ export class SafeWorkflowService {
       this.apollo.mutate&lt;AddStepMutationResponse&gt;({
         mutation: ADD_STEP,
         variables: {
-          name: value.name,
           type: value.type,
           content: value.content,
           workflow: workflow.id
         }
       }).subscribe(res &#x3D;&gt; {
         if (res.data) {
-          this.snackBar.openSnackBar(NOTIFICATIONS.objectCreated(&#x27;step&#x27;, value.name));
+          this.snackBar.openSnackBar(NOTIFICATIONS.objectCreated(&#x27;step&#x27;, res.data.addStep.name));
           this.loadWorkflow(workflow.id);
           if (value.type &#x3D;&#x3D;&#x3D; ContentType.form) {
             this.router.navigate([&#x27;../&#x27; + value.type + &#x27;/&#x27; + res.data.addStep.id], { relativeTo: route.parent });

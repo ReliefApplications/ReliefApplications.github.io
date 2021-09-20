@@ -310,8 +310,8 @@ export interface EditUserProfileMutationResponse {
 
 // &#x3D;&#x3D;&#x3D; ADD PAGE &#x3D;&#x3D;&#x3D;
 export const ADD_PAGE &#x3D; gql&#x60;
-mutation addPage($name: String, $type: ContentEnumType!, $content: ID, $application: ID!) {
-  addPage(name: $name, type: $type, content: $content, application: $application){
+mutation addPage($type: ContentEnumType!, $content: ID, $application: ID!) {
+  addPage(type: $type, content: $content, application: $application){
     id
     name
     type
@@ -766,8 +766,8 @@ export interface DeleteSubscriptionMutationResponse {
 
 // &#x3D;&#x3D;&#x3D; ADD STEP &#x3D;&#x3D;&#x3D;
 export const ADD_STEP &#x3D; gql&#x60;
-mutation addStep($name: String, $type: String!, $content: ID, $workflow: ID!) {
-  addStep(name: $name, type: $type, content: $content, workflow: $workflow){
+mutation addStep($type: String!, $content: ID, $workflow: ID!) {
+  addStep(type: $type, content: $content, workflow: $workflow){
     id
     name
     type
