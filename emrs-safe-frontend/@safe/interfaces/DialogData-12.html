@@ -331,7 +331,8 @@ export class SafeInviteUsersComponent implements OnInit {
         roles: this.data.roles,
         users: this.data.users.filter(x &#x3D;&gt; !invitedUsers.includes(x.username)),
         ...this.data.positionAttributeCategories &amp;&amp; { positionAttributeCategories: this.data.positionAttributeCategories }
-      }
+      },
+      autoFocus: false
     });
     dialogRef.afterClosed().subscribe(value &#x3D;&gt; {
       if (value) {
