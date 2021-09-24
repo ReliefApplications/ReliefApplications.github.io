@@ -218,6 +218,7 @@ import {
   GET_FORM_STRUCTURE
 } from &#x27;../../graphql/queries&#x27;;
 import { Form } from &#x27;../../models/form.model&#x27;;
+import { Record } from &#x27;../../models/record.model&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
 import { EditRecordMutationResponse, EDIT_RECORD, AddRecordMutationResponse, ADD_RECORD, UploadFileMutationResponse,
    UPLOAD_FILE, EDIT_RECORDS, EditRecordsMutationResponse } from &#x27;../../graphql/mutations&#x27;;
@@ -244,6 +245,7 @@ export class SafeFormModalComponent implements OnInit {
   // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
   public loading &#x3D; true;
   public form?: Form;
+  private record?: Record;
 
   public containerId: string;
   public modifiedAt: Date | null &#x3D; null;
@@ -268,7 +270,7 @@ export class SafeFormModalComponent implements OnInit {
     this.containerId &#x3D; uuidv4();
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise&lt;void&gt; {
     const defaultThemeColorsSurvey &#x3D; Survey
       .StylesManager
       .ThemeColors.default;
@@ -280,47 +282,51 @@ export class SafeFormModalComponent implements OnInit {
       .applyTheme();
 
     this.isMultiEdition &#x3D; Array.isArray(this.data.recordId);
+    const promises: Promise&lt;GetFormByIdQueryResponse | GetRecordByIdQueryResponse | void&gt;[] &#x3D; [];
     if (this.data.recordId) {
       const id &#x3D; this.isMultiEdition ? this.data.recordId[0] : this.data.recordId;
-      this.apollo.watchQuery&lt;GetRecordByIdQueryResponse&gt;({
+      promises.push(this.apollo.query&lt;GetRecordByIdQueryResponse&gt;({
         query: GET_RECORD_BY_ID,
         variables: {
           id
         }
-      }).valueChanges.subscribe(res &#x3D;&gt; {
-        const record &#x3D; res.data.record;
-        this.form &#x3D; record.form;
-        this.modifiedAt &#x3D; this.isMultiEdition ? null : record.modifiedAt || null;
-        this.loading &#x3D; false;
-        addCustomFunctions(Survey, this.authService, record);
-        this.survey &#x3D; new Survey.Model(this.form?.structure);
-        this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
-        this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
-        this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
-        this.survey.data &#x3D; this.isMultiEdition ? null : record.data;
-        this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
-        this.survey.showCompletedPage &#x3D; false;
-        this.survey.render(this.containerId);
-        this.survey.onComplete.add(this.completeMySurvey);
-      });
-    } else {
-      this.apollo.watchQuery&lt;GetFormByIdQueryResponse&gt;({
+      }).toPromise().then(res &#x3D;&gt; {
+        this.record &#x3D; res.data.record;
+        this.modifiedAt &#x3D; this.isMultiEdition ? null : this.record.modifiedAt || null;
+        if (!this.data.template) {
+          this.form &#x3D; this.record.form;
+        }
+
+      }));
+    }
+    if (!this.data.recordId || this.data.template) {
+      promises.push(this.apollo.query&lt;GetFormByIdQueryResponse&gt;({
         query: GET_FORM_STRUCTURE,
         variables: {
           id: this.data.template
         }
-      }).valueChanges.subscribe(res &#x3D;&gt; {
-        this.loading &#x3D; res.loading;
+      }).toPromise().then(res &#x3D;&gt; {
         this.form &#x3D; res.data.form;
-        this.survey &#x3D; new Survey.Model(this.form.structure);
-        this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
-        this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
-        this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
-        this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
-        this.survey.render(this.containerId);
-        this.survey.onComplete.add(this.completeMySurvey);
-      });
+      }));
     }
+    await Promise.all(promises);
+    this.initSurvey();
+    this.loading &#x3D; false;
+  }
+
+  private initSurvey(): void {
+    this.survey &#x3D; new Survey.Model(this.form?.structure);
+    this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
+    this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
+    this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
+    this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
+    if (this.data.recordId &amp;&amp; this.record) {
+      addCustomFunctions(Survey, this.authService, this.record);
+      this.survey.data &#x3D; this.isMultiEdition ? null : this.record.data;
+      this.survey.showCompletedPage &#x3D; false;
+    }
+    this.survey.render(this.containerId);
+    this.survey.onComplete.add(this.completeMySurvey);
   }
 
   /*  Create the record, or update it if provided.
@@ -386,7 +392,8 @@ export class SafeFormModalComponent implements OnInit {
       mutation: EDIT_RECORD,
       variables: {
         id,
-        data: survey.data
+        data: survey.data,
+        template: this.data.template
       }
     }).subscribe(res &#x3D;&gt; {
       if (res.data) {
@@ -400,7 +407,8 @@ export class SafeFormModalComponent implements OnInit {
       mutation: EDIT_RECORDS,
       variables: {
         ids,
-        data: survey.data
+        data: survey.data,
+        template: this.data.template
       }
     }).subscribe(res &#x3D;&gt; {
       if (res.data) {

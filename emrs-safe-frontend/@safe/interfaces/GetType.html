@@ -253,6 +253,10 @@ export interface GetFormByIdQueryResponse {
 export const GET_RELATED_FORMS &#x3D; gql&#x60;
 query GetRelatedForms($resource: ID!) {
   resource(id: $resource) {
+    forms {
+      id
+      name
+    }
     relatedForms {
       id
       name

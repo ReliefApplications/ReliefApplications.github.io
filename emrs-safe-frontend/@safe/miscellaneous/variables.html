@@ -1090,8 +1090,8 @@ mutation editPositionAttributeCategory($id: ID!, $application: ID!, $title: Stri
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation editRecord($id: ID!, $data: JSON, $version: ID, $display: Boolean) {
-  editRecord(id: $id, data: $data, version: $version) {
+mutation editRecord($id: ID!, $data: JSON, $version: ID, $template: ID, $display: Boolean) {
+  editRecord(id: $id, data: $data, version: $version, template: $template) {
     id
     data(display: $display)
     createdAt
@@ -1122,8 +1122,8 @@ mutation editRecord($id: ID!, $data: JSON, $version: ID, $display: Boolean) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation editRecords($ids: [ID]!, $data: JSON!, $display: Boolean) {
-  editRecords(ids: $ids, data: $data) {
+mutation editRecords($ids: [ID]!, $data: JSON!, $template: ID, $display: Boolean) {
+  editRecords(ids: $ids, data: $data, template: $template) {
     id
     data(display: $display)
     createdAt
@@ -3671,6 +3671,10 @@ query GetRecordDetails($id: ID!) {
                             <i>Default value : </i><code>gql&#x60;
 query GetRelatedForms($resource: ID!) {
   resource(id: $resource) {
+    forms {
+      id
+      name
+    }
     relatedForms {
       id
       name

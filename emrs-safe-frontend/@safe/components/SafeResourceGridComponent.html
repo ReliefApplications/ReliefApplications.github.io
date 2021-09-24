@@ -1302,8 +1302,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="361"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:361</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:365</a></div>
                 </td>
             </tr>
 
@@ -1374,8 +1374,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="349"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:349</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="353"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:353</a></div>
                 </td>
             </tr>
 
@@ -1456,8 +1456,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="328"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:328</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="332"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:332</a></div>
                 </td>
             </tr>
 
@@ -2641,7 +2641,11 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
     this.dialog.open(SafeRecordModalComponent, {
       data: {
         recordId: this.gridData.data[index].id,
-      }
+        locale: &#x27;en&#x27;,
+      },
+      height: &#x27;98%&#x27;,
+      width: &#x27;100vw&#x27;,
+      panelClass: &#x27;full-screen-modal&#x27;,
     });
   }
 
