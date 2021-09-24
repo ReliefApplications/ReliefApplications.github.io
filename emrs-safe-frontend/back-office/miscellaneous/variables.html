@@ -202,6 +202,9 @@
                             <a href="#GET_FORM_NAMES" title="projects/back-office/src/app/graphql/queries.ts"><b>GET_FORM_NAMES</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
                         </li>
                         <li>
+                            <a href="#GET_FORM_STRUCTURE" title="projects/back-office/src/app/graphql/queries.ts"><b>GET_FORM_STRUCTURE</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
+                        </li>
+                        <li>
                             <a href="#GET_PAGE_BY_ID" title="projects/back-office/src/app/graphql/queries.ts"><b>GET_PAGE_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
                         </li>
                         <li>
@@ -2259,6 +2262,33 @@ query GetFormNames {
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="GET_FORM_STRUCTURE"></a>
+                        <span class="name">
+                            <b>
+                            GET_FORM_STRUCTURE</b>
+                            <a href="#GET_FORM_STRUCTURE"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+query GetFormStructure($id: ID!) {
+  form(id: $id) {
+    id
+    structure
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="GET_PAGE_BY_ID"></a>
                         <span class="name">
                             <b>
@@ -2473,6 +2503,10 @@ query GetResourceById($id: ID!, $filters: JSON, $display: Boolean, $showDeletedR
     records(filters: $filters, archived: $showDeletedRecords) {
       id
       data(display: $display)
+      form {
+        id
+        name
+      }
     }
     fields
     forms {
