@@ -324,7 +324,6 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Application } from &#x27;./application.model&#x27;;
 import { Channel } from &#x27;./channel.model&#x27;;
-import { PositionAttribute } from &#x27;./position-attribute.model&#x27;;
 
 /*  Model for Permission object.
 */
@@ -356,10 +355,8 @@ export interface User {
     permissions?: Permission[];
     oid?: string;
     applications?: Application[];
-    positionAttributes?: PositionAttribute[];
     favoriteApp?: string;
 }
-
 
 /*  Enum of admin permissions.
 */
@@ -452,6 +449,14 @@ export class PermissionsManagement {
         return (value as any)[type];
     }
 }
+
+/*  Interface for Adding new users.
+*/
+export interface AddUser {
+    email: string;
+    roles: string[];
+    attributes: { value: string, category: string };
+  }
 </code></pre>
     </div>
 </div>

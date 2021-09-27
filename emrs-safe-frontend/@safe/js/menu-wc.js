@@ -801,13 +801,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeUsersModule.html" data-type="entity-link">SafeUsersModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeUsersModule-0ba4c4d608f0d7fb1353655c45f6bbf1"' : 'data-target="#xs-components-links-module-SafeUsersModule-0ba4c4d608f0d7fb1353655c45f6bbf1"' }>
+                                            'data-target="#components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' : 'data-target="#xs-components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeUsersModule-0ba4c4d608f0d7fb1353655c45f6bbf1"' :
-                                            'id="xs-components-links-module-SafeUsersModule-0ba4c4d608f0d7fb1353655c45f6bbf1"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' :
+                                            'id="xs-components-links-module-SafeUsersModule-69de3758a9d7a6a624720f853086f2d1"' }>
                                             <li class="link">
                                                 <a href="components/SafeEditUserComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeEditUserComponent</a>
@@ -985,10 +985,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/AddRoleMutationResponse.html" data-type="entity-link">AddRoleMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/AddRoleToUsersMutationResponse.html" data-type="entity-link">AddRoleToUsersMutationResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/AddStepMutationResponse.html" data-type="entity-link">AddStepMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/AddSubscriptionMutationResponse.html" data-type="entity-link">AddSubscriptionMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/AddUser.html" data-type="entity-link">AddUser</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/AddUsersMutationResponse.html" data-type="entity-link">AddUsersMutationResponse</a>

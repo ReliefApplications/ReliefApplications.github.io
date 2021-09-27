@@ -264,32 +264,23 @@ export class SafeEditUserComponent implements OnInit {
   /*  Load the roles and build the form.
   */
   ngOnInit(): void {
-    const controls &#x3D; {};
-    Object.assign(controls,
-      this.data.multiple &amp;&amp; { roles: [this.data.user.roles ? this.data.user.roles.map(x &#x3D;&gt; x.id) : null] },
-      !this.data.multiple &amp;&amp; { role: this.data.user?.roles ? this.data.user.roles[0].id : &#x27;&#x27; },
-      this.data.positionAttributeCategories &amp;&amp;
-      {
-        positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
-          const attributeValue &#x3D; this.data?.user?.positionAttributes?.find(element &#x3D;&gt; {
-            return x.id &#x3D;&#x3D;&#x3D; (Object(element.category).id);
-          });
-          return this.formBuilder.group({
-            value: [attributeValue ? attributeValue.value : &#x27;&#x27;],
-            category: [x.id, Validators.required]
-          });
-        }))
-      }
-    );
-    this.userForm &#x3D; this.formBuilder.group(controls);
-  }
-
-  public categoryTitle(id: number): string {
-    const out: PositionAttributeCategory | undefined &#x3D; this.data?.positionAttributeCategories &amp;&amp; this.data?.positionAttributeCategories[id];
-    if (out) {
-      return out.title ? out.title : &#x27;&#x27;;
+    if (this.data.multiple) {
+      this.userForm &#x3D; this.formBuilder.group({
+        roles: [this.data.user.roles ? this.data.user.roles.map(x &#x3D;&gt; x.id) : null]
+      });
     } else {
-      return &#x27;&#x27;;
+      this.userForm &#x3D; this.formBuilder.group({
+        role: this.data.user?.roles ? this.data.user.roles[0].id : &#x27;&#x27;,
+        ...this.data.positionAttributeCategories &amp;&amp;
+        {
+          positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
+            return this.formBuilder.group({
+              value: [&#x27;&#x27;],
+              category: [x.id, Validators.required]
+            });
+          }))
+        }
+      });
     }
   }
 
