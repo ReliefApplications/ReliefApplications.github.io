@@ -73,9 +73,6 @@
                             <a href="#ADD_ROLE" title="projects/safe/src/lib/graphql/mutations.ts"><b>ADD_ROLE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
-                            <a href="#ADD_ROLE_TO_USERS" title="projects/safe/src/lib/graphql/mutations.ts"><b>ADD_ROLE_TO_USERS</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
-                        </li>
-                        <li>
                             <a href="#ADD_STEP" title="projects/safe/src/lib/graphql/mutations.ts"><b>ADD_STEP</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -570,39 +567,6 @@ mutation addRole($title: String!, $application: ID) {
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ADD_ROLE_TO_USERS"></a>
-                        <span class="name">
-                            <b>
-                            ADD_ROLE_TO_USERS</b>
-                            <a href="#ADD_ROLE_TO_USERS"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>gql&#x60;
-mutation addRoleToUsers($usernames: [String]!, $role: ID!, $positionAttributes: [PositionAttributeInputType]) {
-  addRoleToUsers(usernames: $usernames, role: $role, positionAttributes: $positionAttributes) {
-    id
-    username
-    name
-    roles {
-      id
-      title
-    }
-    oid
-  }
-}&#x60;</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="ADD_STEP"></a>
                         <span class="name">
                             <b>
@@ -687,6 +651,13 @@ mutation addUsers($users: [UserInputType]!, $application: ID) {
     roles {
       id
       title
+    }
+    positionAttributes {
+      value
+      category {
+        id
+        title
+      }
     }
     oid
   }
@@ -1226,8 +1197,8 @@ mutation editSubscription($applicationId: ID!, $routingKey: String!, $title: Str
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-mutation editUser($id: ID!, $roles: [ID]!, $application: ID) {
-  editUser(id: $id, roles: $roles, application: $application) {
+mutation editUser($id: ID!, $roles: [ID]!, $application: ID, $positionAttributes: [PositionAttributeInputType]) {
+  editUser(id: $id, roles: $roles, application: $application, positionAttributes: $positionAttributes) {
     id
     username
     name
@@ -1236,6 +1207,13 @@ mutation editUser($id: ID!, $roles: [ID]!, $application: ID) {
       title
       application {
         id
+      }
+    }
+    positionAttributes {
+      value
+      category {
+        id
+        title
       }
     }
     oid
@@ -1272,6 +1250,13 @@ mutation editUserProfile($profile: UserProfileInputType!) {
       title
       application {
         id
+      }
+    }
+    positionAttributes {
+      value
+      category {
+        id
+        title
       }
     }
     oid
@@ -3150,6 +3135,13 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
         roles {
           id
           title
+        }
+        positionAttributes {
+          value
+          category {
+            id
+            title
+          }
         }
         oid
       }

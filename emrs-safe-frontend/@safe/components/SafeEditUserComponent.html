@@ -153,6 +153,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#categoryTitle">categoryTitle</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
@@ -270,6 +274,78 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="categoryTitle"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            categoryTitle
+                        </b>
+                        <a href="#categoryTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>categoryTitle(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">projects/safe/src/lib/components/users/components/edit-user/edit-user.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
@@ -327,8 +403,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="59"
-                            class="link-to-prism">projects/safe/src/lib/components/users/components/edit-user/edit-user.component.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">projects/safe/src/lib/components/users/components/edit-user/edit-user.component.ts:68</a></div>
                 </td>
             </tr>
 
@@ -516,23 +592,32 @@ export class SafeEditUserComponent implements OnInit {
   /*  Load the roles and build the form.
   */
   ngOnInit(): void {
-    if (this.data.multiple) {
-      this.userForm &#x3D; this.formBuilder.group({
-        roles: [this.data.user.roles ? this.data.user.roles.map(x &#x3D;&gt; x.id) : null]
-      });
+    const controls &#x3D; {};
+    Object.assign(controls,
+      this.data.multiple &amp;&amp; { roles: [this.data.user.roles ? this.data.user.roles.map(x &#x3D;&gt; x.id) : null] },
+      !this.data.multiple &amp;&amp; { role: this.data.user?.roles ? this.data.user.roles[0].id : &#x27;&#x27; },
+      this.data.positionAttributeCategories &amp;&amp;
+      {
+        positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
+          const attributeValue &#x3D; this.data?.user?.positionAttributes?.find(element &#x3D;&gt; {
+            return x.id &#x3D;&#x3D;&#x3D; (Object(element.category).id);
+          });
+          return this.formBuilder.group({
+            value: [attributeValue ? attributeValue.value : &#x27;&#x27;],
+            category: [x.id, Validators.required]
+          });
+        }))
+      }
+    );
+    this.userForm &#x3D; this.formBuilder.group(controls);
+  }
+
+  public categoryTitle(id: number): string {
+    const out: PositionAttributeCategory | undefined &#x3D; this.data?.positionAttributeCategories &amp;&amp; this.data?.positionAttributeCategories[id];
+    if (out) {
+      return out.title ? out.title : &#x27;&#x27;;
     } else {
-      this.userForm &#x3D; this.formBuilder.group({
-        role: this.data.user?.roles ? this.data.user.roles[0].id : &#x27;&#x27;,
-        ...this.data.positionAttributeCategories &amp;&amp;
-        {
-          positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
-            return this.formBuilder.group({
-              value: [&#x27;&#x27;],
-              category: [x.id, Validators.required]
-            });
-          }))
-        }
-      });
+      return &#x27;&#x27;;
     }
   }
 
@@ -546,10 +631,10 @@ export class SafeEditUserComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;h1 mat-dialog-title&gt;Update user roles&lt;/h1&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h1 mat-dialog-title&gt;Update User&lt;/h1&gt;
 &lt;div mat-dialog-content&gt;
     &lt;form [formGroup]&#x3D;&quot;userForm&quot;&gt;
-        &lt;mat-form-field&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
             &lt;mat-label&gt;Roles&lt;/mat-label&gt;
             &lt;mat-select formControlName&#x3D;&quot;roles&quot; *ngIf&#x3D;&quot;data.multiple&quot; multiple&gt;
                 &lt;mat-option *ngFor&#x3D;&quot;let role of data.availableRoles&quot; [value]&#x3D;&quot;role.id&quot;&gt;
@@ -562,6 +647,17 @@ export class SafeEditUserComponent implements OnInit {
                 &lt;/mat-option&gt;
             &lt;/mat-select&gt;
         &lt;/mat-form-field&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;positionAttributes ? positionAttributes.length &gt; 0 : false&quot;&gt;
+            &lt;h2&gt;Attributes&lt;/h2&gt;
+            &lt;ng-container formArrayName&#x3D;&quot;positionAttributes&quot;&gt;
+                &lt;mat-grid-list [cols]&#x3D;&quot;3&quot; rowHeight&#x3D;&quot;1:1&quot;&gt;
+                    &lt;mat-form-field appearance&#x3D;&quot;outline&quot; *ngFor&#x3D;&quot;let category of positionAttributes?.controls; let index &#x3D; index;&quot; [formGroup]&#x3D;&quot;$any(category)&quot;&gt;
+                        &lt;mat-label&gt;{{ categoryTitle(index) }}&lt;/mat-label&gt;
+                        &lt;input matInput formControlName&#x3D;&quot;value&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter a value for the category&quot;/&gt;
+                    &lt;/mat-form-field&gt;
+                &lt;/mat-grid-list&gt;
+            &lt;/ng-container&gt;
+        &lt;/ng-container&gt;
     &lt;/form&gt;
 &lt;/div&gt;
 &lt;div mat-dialog-actions align&#x3D;&quot;end&quot;&gt;
@@ -575,7 +671,19 @@ export class SafeEditUserComponent implements OnInit {
                 <p class="comment">
                     <code>./edit-user.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">
+.mat-form-field {
+    margin-right: 8px;
+}
+
+h3 {
+    font-weight: bolder;
+    padding-top: 8px;
+}
+
+h1{
+    padding-bottom: 0px;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -603,7 +711,7 @@ export class SafeEditUserComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title>Update user roles</h1><div mat-dialog-content>    <form [formGroup]="userForm">        <mat-form-field>            <mat-label>Roles</mat-label>            <mat-select formControlName="roles" *ngIf="data.multiple" multiple>                <mat-option *ngFor="let role of data.availableRoles" [value]="role.id">                    {{role.title}}                </mat-option>            </mat-select>            <mat-select formControlName="role" *ngIf="!data.multiple">                <mat-option *ngFor="let role of data.availableRoles" [value]="role.id">                    {{role.title}}                </mat-option>            </mat-select>        </mat-form-field>    </form></div><div mat-dialog-actions align="end">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button [mat-dialog-close]="userForm.value" cdkFocusInitial color="primary" [disabled]="!userForm.valid">Update</button></div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title>Update User</h1><div mat-dialog-content>    <form [formGroup]="userForm">        <mat-form-field appearance="outline">            <mat-label>Roles</mat-label>            <mat-select formControlName="roles" *ngIf="data.multiple" multiple>                <mat-option *ngFor="let role of data.availableRoles" [value]="role.id">                    {{role.title}}                </mat-option>            </mat-select>            <mat-select formControlName="role" *ngIf="!data.multiple">                <mat-option *ngFor="let role of data.availableRoles" [value]="role.id">                    {{role.title}}                </mat-option>            </mat-select>        </mat-form-field>        <ng-container *ngIf="positionAttributes ? positionAttributes.length > 0 : false">            <h2>Attributes</h2>            <ng-container formArrayName="positionAttributes">                <mat-grid-list [cols]="3" rowHeight="1:1">                    <mat-form-field appearance="outline" *ngFor="let category of positionAttributes?.controls; let index = index;" [formGroup]="$any(category)">                        <mat-label>{{ categoryTitle(index) }}</mat-label>                        <input matInput formControlName="value" type="text" placeholder="Enter a value for the category"/>                    </mat-form-field>                </mat-grid-list>            </ng-container>        </ng-container>    </form></div><div mat-dialog-actions align="end">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button [mat-dialog-close]="userForm.value" cdkFocusInitial color="primary" [disabled]="!userForm.valid">Update</button></div></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDashboardMenuComponent', 'selector': 'safe-dashboard-menu'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeEditUserComponent'};
