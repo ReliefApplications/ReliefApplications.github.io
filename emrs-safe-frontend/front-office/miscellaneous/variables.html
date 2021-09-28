@@ -602,10 +602,6 @@ mutation editUser($id: ID!, $roles: [ID]!, $application: ID) {
           id
           title
         }
-        canCreate {
-          id
-          title
-        }
         canUpdate {
           id
           title
@@ -647,7 +643,6 @@ query GetFormById($id: ID!) {
     name
     structure
     fields
-    canCreate
     canUpdate
     canCreateRecords
     uniqueRecord {
@@ -823,10 +818,6 @@ query GetPermissions($application: Boolean) {
         canUpdate
         permissions {
           canSee {
-            id
-            title
-          }
-          canCreate {
             id
             title
           }
