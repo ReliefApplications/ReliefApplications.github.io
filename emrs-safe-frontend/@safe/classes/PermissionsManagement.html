@@ -179,7 +179,8 @@
             }
         },
         applications: {
-            create: Permissions.canManageApplications
+            create: Permissions.canManageApplications,
+            access: Permissions.canSeeApplications
         },
         &#x27;add-page&#x27;: {
             access: Permissions.canManageApplications
@@ -189,7 +190,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/models/user.model.ts:62</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/models/user.model.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -227,8 +228,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="118"
-                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:118</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:120</a></div>
                 </td>
             </tr>
 
@@ -311,8 +312,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="106"
-                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:106</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">projects/safe/src/lib/models/user.model.ts:108</a></div>
                 </td>
             </tr>
 
@@ -424,6 +425,7 @@ export enum Permissions {
     canSeeForms &#x3D; &#x27;can_see_forms&#x27;,
     canSeeUsers &#x3D; &#x27;can_see_users&#x27;,
     canSeeRoles &#x3D; &#x27;can_see_roles&#x27;,
+    canSeeApplications &#x3D; &#x27;can_see_applications&#x27;,
     canManageForms &#x3D; &#x27;can_manage_forms&#x27;,
     canManageResources &#x3D; &#x27;can_manage_resources&#x27;,
     canManageApplications &#x3D; &#x27;can_manage_applications&#x27;,
@@ -479,7 +481,8 @@ export class PermissionsManagement {
             }
         },
         applications: {
-            create: Permissions.canManageApplications
+            create: Permissions.canManageApplications,
+            access: Permissions.canSeeApplications
         },
         &#x27;add-page&#x27;: {
             access: Permissions.canManageApplications

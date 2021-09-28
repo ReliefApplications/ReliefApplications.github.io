@@ -1738,7 +1738,7 @@ export class SafeLayoutComponent implements OnInit, OnChanges, OnDestroy {
       for (const group of this.navGroups) {
         const navItems &#x3D; group.navItems.filter((item: any) &#x3D;&gt; {
           const permission &#x3D; PermissionsManagement.getRightFromPath(item.path, PermissionType.access);
-          return this.authService.userHasClaim(permission);
+          return this.authService.userHasClaim(permission, this.environment.module &#x3D;&#x3D;&#x3D; &#x27;backoffice&#x27;);
         });
         if (navItems.length &gt; 0) {
           const filteredGroup &#x3D; {

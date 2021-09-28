@@ -251,6 +251,7 @@ export enum Permissions {
     canSeeForms &#x3D; &#x27;can_see_forms&#x27;,
     canSeeUsers &#x3D; &#x27;can_see_users&#x27;,
     canSeeRoles &#x3D; &#x27;can_see_roles&#x27;,
+    canSeeApplications &#x3D; &#x27;can_see_applications&#x27;,
     canManageForms &#x3D; &#x27;can_manage_forms&#x27;,
     canManageResources &#x3D; &#x27;can_manage_resources&#x27;,
     canManageApplications &#x3D; &#x27;can_manage_applications&#x27;,
@@ -306,7 +307,8 @@ export class PermissionsManagement {
             }
         },
         applications: {
-            create: Permissions.canManageApplications
+            create: Permissions.canManageApplications,
+            access: Permissions.canSeeApplications
         },
         &#x27;add-page&#x27;: {
             access: Permissions.canManageApplications
