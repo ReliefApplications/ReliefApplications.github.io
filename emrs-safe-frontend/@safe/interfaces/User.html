@@ -481,6 +481,8 @@ export enum Permissions {
     canSeeRoles &#x3D; &#x27;can_see_roles&#x27;,
     canSeeApplications &#x3D; &#x27;can_see_applications&#x27;,
     canManageForms &#x3D; &#x27;can_manage_forms&#x27;,
+    canCreateForms &#x3D; &#x27;can_create_forms&#x27;,
+    canCreateResources &#x3D; &#x27;can_create_resources&#x27;,
     canManageResources &#x3D; &#x27;can_manage_resources&#x27;,
     canManageApplications &#x3D; &#x27;can_manage_applications&#x27;,
     canManageApiConfigurations &#x3D; &#x27;can_manage_api_configurations&#x27;
@@ -501,11 +503,11 @@ export class PermissionsManagement {
     public static mappedPermissions &#x3D; {
         resources: {
             access: Permissions.canSeeResources,
-            create: Permissions.canManageResources
+            create: Permissions.canCreateResources
         },
         forms: {
             access: Permissions.canSeeForms,
-            create: Permissions.canManageForms
+            create: Permissions.canCreateForms,
         },
         settings: {
             users: {
