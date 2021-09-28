@@ -203,6 +203,9 @@ import { FormArray, FormBuilder, FormGroup, Validators } from &#x27;@angular/for
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 import { map, startWith } from &#x27;rxjs/operators&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
+import {GetUsersQueryResponse} from &#x27;../../../../graphql/queries&#x27;;
+import { GET_USERS } from &#x27;../../../../graphql/queries&#x27;;
+import { Apollo } from &#x27;apollo-angular&#x27;;
 
 interface DialogData {
   roles: Role[];
@@ -219,6 +222,7 @@ export class SafeAddUserComponent implements OnInit {
 
   form: FormGroup &#x3D; new FormGroup({});
   public filteredUsers?: Observable&lt;User[]&gt;;
+  private users: User[] &#x3D; [];
 
   get positionAttributes(): FormArray | null {
     return this.form.get(&#x27;positionAttributes&#x27;) ? this.form.get(&#x27;positionAttributes&#x27;) as FormArray : null;
@@ -227,7 +231,8 @@ export class SafeAddUserComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     public dialogRef: MatDialogRef&lt;SafeAddUserComponent&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private apollo: Apollo
   ) { }
 
   ngOnInit(): void {
@@ -249,11 +254,23 @@ export class SafeAddUserComponent implements OnInit {
       map(value &#x3D;&gt; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? value : &#x27;&#x27;),
       map(x &#x3D;&gt; this.filterUsers(x))
     );
+
+    this.apollo.watchQuery&lt;GetUsersQueryResponse&gt;({
+      query: GET_USERS
+    }).valueChanges.subscribe(res &#x3D;&gt; {
+      const flatInvitedUsers &#x3D; this.data.users.map(x &#x3D;&gt; x.username);
+      this.users &#x3D; res.data.users.filter(x &#x3D;&gt; !flatInvitedUsers.includes(x.username));
+      this.filteredUsers &#x3D; this.form.controls.email.valueChanges.pipe(
+        startWith(&#x27;&#x27;),
+        map(value &#x3D;&gt; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? value : &#x27;&#x27;),
+        map(x &#x3D;&gt; this.filterUsers(x))
+      );
+    });
   }
 
   private filterUsers(value: string): User[] {
     const filterValue &#x3D; value.toLowerCase();
-    return this.data.users.filter(x &#x3D;&gt; x.username?.toLowerCase().indexOf(filterValue) &#x3D;&#x3D;&#x3D; 0);
+    return this.users.filter(x &#x3D;&gt; x.username?.toLowerCase().indexOf(filterValue) &#x3D;&#x3D;&#x3D; 0);
   }
 
   onClose(): void {
