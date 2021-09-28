@@ -4828,6 +4828,7 @@ query GetType($name: String!) {
     objectLoadedFromCache(type: string): string { return &#x60;${type} loaded from cache.&#x60;; },
     objectIsLocked(name: any): string { return &#x60;${name} edition is locked by another user.&#x60;; },
     objectUnlocked(name: any): string { return &#x60;${name} edition has been unlocked by another user.&#x60;; },
+    objectAccessDenied(type: string): string { return &#x60;You don&#x27;t have permission to see the ${type}.&#x60;; },
     goToStep(step: any): string  { return &#x60;Back to ${step} step.&#x60;; },
     statusUpdated(status: any): string  { return &#x60;Status updated to ${status}.&#x60;; },
     noObjectOpened(value: any): string  { return &#x60;No opened ${value}.&#x60;; },
