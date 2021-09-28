@@ -220,8 +220,10 @@ import {
 import { Form } from &#x27;../../models/form.model&#x27;;
 import { Record } from &#x27;../../models/record.model&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
-import { EditRecordMutationResponse, EDIT_RECORD, AddRecordMutationResponse, ADD_RECORD, UploadFileMutationResponse,
-   UPLOAD_FILE, EDIT_RECORDS, EditRecordsMutationResponse } from &#x27;../../graphql/mutations&#x27;;
+import {
+  EditRecordMutationResponse, EDIT_RECORD, AddRecordMutationResponse, ADD_RECORD, UploadFileMutationResponse,
+  UPLOAD_FILE, EDIT_RECORDS, EditRecordsMutationResponse
+} from &#x27;../../graphql/mutations&#x27;;
 import { v4 as uuidv4 } from &#x27;uuid&#x27;;
 import { SafeConfirmModalComponent } from &#x27;../confirm-modal/confirm-modal.component&#x27;;
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
@@ -319,6 +321,7 @@ export class SafeFormModalComponent implements OnInit {
     this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
     this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
     this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
+    this.survey.onUpdateQuestionCssClasses.add((_, options) &#x3D;&gt; this.onSetCustomCss(options));
     this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
     if (this.data.recordId &amp;&amp; this.record) {
       addCustomFunctions(Survey, this.authService, this.record);
@@ -498,6 +501,16 @@ export class SafeFormModalComponent implements OnInit {
       };
       xhr.send();
     }
+  }
+
+  /**
+   * Add custom CSS classes to the survey elements.
+   * @param survey current survey.
+   * @param options survey options.
+   */
+  private onSetCustomCss(options: any): void {
+    const classes &#x3D; options.cssClasses;
+    classes.content +&#x3D; &#x27;safe-qst-content&#x27;;
   }
 }
 </code></pre>
