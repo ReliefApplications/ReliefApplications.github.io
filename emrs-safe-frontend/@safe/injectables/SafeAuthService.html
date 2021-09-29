@@ -236,8 +236,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:78</a></div>
                 </td>
             </tr>
 
@@ -275,8 +275,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="113"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:113</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:119</a></div>
                 </td>
             </tr>
 
@@ -314,8 +314,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="78"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:78</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:84</a></div>
                 </td>
             </tr>
 
@@ -353,8 +353,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:110</a></div>
                 </td>
             </tr>
 
@@ -392,8 +392,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:70</a></div>
                 </td>
             </tr>
 
@@ -424,7 +424,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>userHasClaim(permission: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, global: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+<code>userHasClaim(permission: string | string[], global: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
                 </td>
             </tr>
 
@@ -455,7 +455,7 @@
                                 <tr>
                                     <td>permission</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <code>string | string[]</code>
                                     </td>
 
                                     <td>
@@ -612,7 +612,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:58</a></div>
                                 </td>
                             </tr>
 
@@ -634,7 +634,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:92</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:98</a></div>
                                 </td>
                             </tr>
 
@@ -656,7 +656,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:98</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/safe/src/lib/services/auth.service.ts:104</a></div>
                                 </td>
                             </tr>
 
@@ -702,10 +702,16 @@ export class SafeAuthService {
   /*  Check if user has permission.
     If user profile is empty, try to get it.
   */
-  userHasClaim(permission: string, global: boolean &#x3D; true): boolean {
+  userHasClaim(permission: string | string[], global: boolean &#x3D; true): boolean {
     const user &#x3D; this._user.getValue();
     if (user) {
-      if (user.permissions &amp;&amp; (!permission || user.permissions.find(x &#x3D;&gt; x.type &#x3D;&#x3D;&#x3D; permission &amp;&amp; x.global &#x3D;&#x3D;&#x3D; global))) {
+      if (user.permissions &amp;&amp; (!permission || user.permissions.find(x &#x3D;&gt; {
+        if (Array.isArray(permission)) {
+          return x.type &amp;&amp; permission.includes(x.type) &amp;&amp; x.global &#x3D;&#x3D;&#x3D; global;
+        } else {
+          return x.type &#x3D;&#x3D;&#x3D; permission &amp;&amp; x.global &#x3D;&#x3D;&#x3D; global;
+        }
+      }))) {
         return true;
       }
       return false;
