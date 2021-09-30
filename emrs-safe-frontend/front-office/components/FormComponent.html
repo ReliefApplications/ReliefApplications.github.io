@@ -330,8 +330,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/pages/form/form.component.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/pages/form/form.component.ts:106</a></div>
                 </td>
             </tr>
 
@@ -369,8 +369,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="103"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/pages/form/form.component.ts:103</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/pages/form/form.component.ts:110</a></div>
                 </td>
             </tr>
 
@@ -447,8 +447,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/pages/form/form.component.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/pages/form/form.component.ts:101</a></div>
                 </td>
             </tr>
 
@@ -893,7 +893,14 @@ export class FormComponent implements OnInit, OnDestroy {
               id: this.step.content
             }
           }).valueChanges.subscribe((res2) &#x3D;&gt; {
-            this.form &#x3D; res2.data.form;
+            if (res2.data) {
+              this.form &#x3D; res2.data.form;
+            }
+            if (!this.form || this.form.status !&#x3D;&#x3D; &#x27;active&#x27; || !this.form.canCreateRecords) {
+              this.snackBar.openSnackBar(NOTIFICATIONS.objectAccessDenied(&#x27;form&#x27;), { error: true });
+            } else {
+              this.canCreateRecords &#x3D; true;
+            }
             this.loading &#x3D; res2.data.loading;
           });
         });
