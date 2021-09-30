@@ -216,13 +216,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeChooseRecordModalModule.html" data-type="entity-link">SafeChooseRecordModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeChooseRecordModalModule-e21f5b49525853f9641d24e8d0062617"' : 'data-target="#xs-components-links-module-SafeChooseRecordModalModule-e21f5b49525853f9641d24e8d0062617"' }>
+                                            'data-target="#components-links-module-SafeChooseRecordModalModule-77c1dd16192816752024f613b006d7dd"' : 'data-target="#xs-components-links-module-SafeChooseRecordModalModule-77c1dd16192816752024f613b006d7dd"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChooseRecordModalModule-e21f5b49525853f9641d24e8d0062617"' :
-                                            'id="xs-components-links-module-SafeChooseRecordModalModule-e21f5b49525853f9641d24e8d0062617"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChooseRecordModalModule-77c1dd16192816752024f613b006d7dd"' :
+                                            'id="xs-components-links-module-SafeChooseRecordModalModule-77c1dd16192816752024f613b006d7dd"' }>
                                             <li class="link">
                                                 <a href="components/SafeChooseRecordModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeChooseRecordModalComponent</a>
@@ -664,6 +664,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeResourceDropdownModule.html" data-type="entity-link">SafeResourceDropdownModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeResourceDropdownModule-9c6301b69014acbe390efec069540c23"' : 'data-target="#xs-components-links-module-SafeResourceDropdownModule-9c6301b69014acbe390efec069540c23"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeResourceDropdownModule-9c6301b69014acbe390efec069540c23"' :
+                                            'id="xs-components-links-module-SafeResourceDropdownModule-9c6301b69014acbe390efec069540c23"' }>
+                                            <li class="link">
+                                                <a href="components/SafeResourceDropdownComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeResourceDropdownComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeResourceGridModule.html" data-type="entity-link">SafeResourceGridModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -747,13 +765,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeSearchResourceGridModalModule.html" data-type="entity-link">SafeSearchResourceGridModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeSearchResourceGridModalModule-ff05476180dab22207946767d4be8f02"' : 'data-target="#xs-components-links-module-SafeSearchResourceGridModalModule-ff05476180dab22207946767d4be8f02"' }>
+                                            'data-target="#components-links-module-SafeSearchResourceGridModalModule-320dbdba36ee4630fd3c031257633239"' : 'data-target="#xs-components-links-module-SafeSearchResourceGridModalModule-320dbdba36ee4630fd3c031257633239"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeSearchResourceGridModalModule-ff05476180dab22207946767d4be8f02"' :
-                                            'id="xs-components-links-module-SafeSearchResourceGridModalModule-ff05476180dab22207946767d4be8f02"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeSearchResourceGridModalModule-320dbdba36ee4630fd3c031257633239"' :
+                                            'id="xs-components-links-module-SafeSearchResourceGridModalModule-320dbdba36ee4630fd3c031257633239"' }>
                                             <li class="link">
                                                 <a href="components/SafeResourceGridModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeResourceGridModalComponent</a>

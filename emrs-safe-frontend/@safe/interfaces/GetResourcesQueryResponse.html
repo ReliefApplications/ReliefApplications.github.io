@@ -134,7 +134,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>resources:         <code><a href="../interfaces/Resource.html" target="_self" >Resource[]</a></code>
+                                        <code>resources:     <code>literal type</code>
 </code>
                                     </td>
                                 </tr>
@@ -142,7 +142,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Resource.html" target="_self" >Resource[]</a></code>
+                                            <i>Type : </i>    <code>literal type</code>
 
                                         </td>
                                     </tr>
@@ -158,8 +158,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {gql} from &#x27;apollo-angular&#x27;;
-
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import { Form } from &#x27;../models/form.model&#x27;;
 import { Resource } from &#x27;../models/resource.model&#x27;;
 import { Role, User, Permission } from &#x27;../models/user.model&#x27;;
@@ -269,6 +268,14 @@ export interface GetRelatedFormsQueryResponse {
   resource: Resource;
 }
 
+export const GET_SHORT_RESOURCE_BY_ID &#x3D; gql&#x60;
+query GetShortResourceById($id: ID!) {
+  resource(id: $id) {
+    id
+    name
+  }
+}&#x60;;
+
 // &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
 export const GET_RESOURCE_BY_ID &#x3D; gql&#x60;
 query GetResourceById($id: ID!, $filters: JSON, $display: Boolean) {
@@ -290,6 +297,9 @@ query GetResourceById($id: ID!, $filters: JSON, $display: Boolean) {
       core
       canUpdate
       canDelete
+    }
+    coreForm {
+      uniqueRecord { id }
     }
     permissions {
       canSee {
@@ -339,35 +349,37 @@ export interface GetFormsQueryResponse {
 }
 
 // &#x3D;&#x3D;&#x3D; GET RESOURCES &#x3D;&#x3D;&#x3D;
-
 export const GET_RESOURCES &#x3D; gql&#x60;
-{
-  resources {
-    id
-    name
-    forms {
-      id
-      name
+query GetResources($first: Int, $afterCursor: ID) {
+  resources(first: $first, afterCursor: $afterCursor) {
+    edges {
+      node {
+        id
+        name
+      }
+      cursor
     }
-    coreForm {
-      uniqueRecord { id }
+    totalCount
+    pageInfo {
+      hasNextPage
+      endCursor
     }
-  }
-}&#x60;;
-
-export const GET_RESOURCES_EXTENDED &#x3D; gql&#x60;
-{
-  resources {
-    id
-    name
-    createdAt
-    recordsCount
   }
 }&#x60;;
 
 export interface GetResourcesQueryResponse {
   loading: boolean;
-  resources: Resource[];
+  resources: {
+    edges: {
+      node: Resource;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    },
+    totalCount: number;
+  };
 }
 
 // &#x3D;&#x3D;&#x3D; GET RECORD BY ID &#x3D;&#x3D;&#x3D;
