@@ -1569,7 +1569,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Apollo} from &#x27;apollo-angular&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
 import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
 import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
@@ -1635,7 +1635,8 @@ export class WorkflowComponent implements OnInit, OnDestroy {
       this.id &#x3D; params.id;
       this.workflowService.loadWorkflow(this.id);
     });
-    this.workflowSubscription &#x3D; this.workflowService.workflow.subscribe((workflow: Workflow | null) &#x3D;&gt; {
+
+    this.workflowSubscription &#x3D; this.workflowService.workflow$.subscribe((workflow: Workflow | null) &#x3D;&gt; {
       if (workflow) {
         this.steps &#x3D; workflow.steps || [];
         this.workflowNameForm &#x3D; new FormGroup({
@@ -1644,18 +1645,17 @@ export class WorkflowComponent implements OnInit, OnDestroy {
         this.loading &#x3D; false;
         if (!this.workflow || workflow.id !&#x3D;&#x3D; this.workflow.id) {
           const [firstStep, ..._] &#x3D; workflow.steps || [];
-          if (this.router.url.endsWith(this.id) || !firstStep) {
-            if (firstStep) {
-              if (firstStep.type &#x3D;&#x3D;&#x3D; ContentType.form) {
-                this.router.navigate([&#x27;./&#x27; + firstStep.type + &#x27;/&#x27; + firstStep.id], { relativeTo: this.route });
-              } else {
-                this.router.navigate([&#x27;./&#x27; + firstStep.type + &#x27;/&#x27; + firstStep.content], { relativeTo: this.route });
-              }
-              this.selectedStep &#x3D; firstStep;
-              this.selectedStepIndex &#x3D; 0;
+          if (firstStep) {
+            if (firstStep.type &#x3D;&#x3D;&#x3D; ContentType.form) {
+              this.router.navigate([&#x27;./&#x27; + firstStep.type + &#x27;/&#x27; + firstStep.id], { relativeTo: this.route });
             } else {
-              this.router.navigate([&#x60;./&#x60;], { relativeTo: this.route });
+              this.router.navigate([&#x27;./&#x27; + firstStep.type + &#x27;/&#x27; + firstStep.content], { relativeTo: this.route });
             }
+            this.selectedStep &#x3D; firstStep;
+            this.selectedStepIndex &#x3D; 0;
+          }
+          if (!firstStep) {
+            this.router.navigate([&#x60;./&#x60;], { relativeTo: this.route });
           }
         }
         this.workflow &#x3D; workflow;
