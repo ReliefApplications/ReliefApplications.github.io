@@ -196,6 +196,9 @@
                             <a href="#EDIT_CHANNEL" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_CHANNEL</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
+                            <a href="#EDIT_DASHBOARD" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_DASHBOARD</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
                             <a href="#EDIT_POSITION_ATTRIBUTE_CATEGORY" title="projects/safe/src/lib/graphql/mutations.ts"><b>EDIT_POSITION_ATTRIBUTE_CATEGORY</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -224,6 +227,9 @@
                         </li>
                         <li>
                             <a href="#GET_CHANNELS" title="projects/safe/src/lib/graphql/queries.ts"><b>GET_CHANNELS</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#GET_DASHBOARD_BY_ID" title="projects/safe/src/lib/graphql/queries.ts"><b>GET_DASHBOARD_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
                         </li>
                         <li>
                             <a href="#GET_FORM_BY_ID" title="projects/safe/src/lib/graphql/queries.ts"><b>GET_FORM_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
@@ -1043,6 +1049,58 @@ mutation editChannel($id: ID!, $title: String!) {
   editChannel(id: $id, title: $title){
     id
     title
+  }
+}&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="EDIT_DASHBOARD"></a>
+                        <span class="name">
+                            <b>
+                            EDIT_DASHBOARD</b>
+                            <a href="#EDIT_DASHBOARD"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+mutation editDashboard($id: ID!, $structure: JSON, $name: String) {
+  editDashboard(id: $id, structure: $structure, name: $name) {
+    id
+    name
+    structure
+    modifiedAt
+    permissions {
+      canSee {
+        id
+        title
+      }
+      canUpdate {
+        id
+        title
+      }
+      canDelete {
+        id
+        title
+      }
+    }
+    canSee
+    canUpdate
+    page {
+      id
+      name
+      application {
+        id
+      }
+    }
   }
 }&#x60;</code>
                         </td>
@@ -3260,6 +3318,72 @@ query getChannels($application: ID) {
     }
   }
 }&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GET_DASHBOARD_BY_ID"></a>
+                        <span class="name">
+                            <b>
+                            GET_DASHBOARD_BY_ID</b>
+                            <a href="#GET_DASHBOARD_BY_ID"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>gql&#x60;
+  query GetDashboardById($id: ID!){
+    dashboard(id: $id){
+      id
+      name
+      createdAt
+      structure
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
+      }
+      canSee
+      canUpdate
+      page {
+        id
+        application {
+          id
+        }
+        canUpdate
+      }
+      step {
+        id
+        workflow {
+          id
+          page {
+            id
+            application {
+              id
+            }
+          }
+        }
+        canUpdate
+      }
+    }
+  }
+&#x60;</code>
                         </td>
                     </tr>
 

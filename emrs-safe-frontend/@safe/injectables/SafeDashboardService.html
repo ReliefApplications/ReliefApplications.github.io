@@ -100,6 +100,9 @@
                                 <a href="#openDashboard">openDashboard</a>
                             </li>
                             <li>
+                                <a href="#saveWidgetDefaultLayout">saveWidgetDefaultLayout</a>
+                            </li>
+                            <li>
                                 <a href="#saveWidgetLayout">saveWidgetLayout</a>
                             </li>
                         </ul>
@@ -134,15 +137,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(apollo: Apollo)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:17</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -174,8 +207,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -206,15 +239,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getWidgetLayout(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>getWidgetLayout(widget: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:31</a></div>
                 </td>
             </tr>
 
@@ -234,9 +267,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>id</td>
+                                    <td>widget</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
 
                                     <td>
@@ -283,8 +316,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:23</a></div>
                 </td>
             </tr>
 
@@ -335,6 +368,88 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="saveWidgetDefaultLayout"></a>
+                    <span class="name">
+                        <b>
+                            saveWidgetDefaultLayout
+                        </b>
+                        <a href="#saveWidgetDefaultLayout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveWidgetDefaultLayout(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, layout: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>layout</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="saveWidgetLayout"></a>
                     <span class="name">
                         <b>
@@ -353,8 +468,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:44</a></div>
                 </td>
             </tr>
 
@@ -439,7 +554,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -468,7 +583,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:15</a></div>
                                 </td>
                             </tr>
 
@@ -482,6 +597,9 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { Dashboard } from &#x27;../models/dashboard.model&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import {Apollo} from &#x27;apollo-angular&#x27;;
+import { GetDashboardByIdQueryResponse, GET_DASHBOARD_BY_ID } from &#x27;../graphql/queries&#x27;;
+import {EDIT_DASHBOARD, EditDashboardMutationResponse} from &#x27;../graphql/mutations&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -494,7 +612,9 @@ export class SafeDashboardService {
     return this.dashboard.asObservable();
   }
 
-  constructor() { }
+  constructor(private apollo: Apollo) {
+    const a &#x3D; 0;
+  }
 
   openDashboard(dashboard: Dashboard): void {
     this.dashboard.next(dashboard);
@@ -504,15 +624,44 @@ export class SafeDashboardService {
     this.dashboard.next(null);
   }
 
-  getWidgetLayout(id: number): any {
+  getWidgetLayout(widget: any): any {
+    const defaultLayout &#x3D; JSON.parse(JSON.stringify(widget.settings.defaultLayout || {}));
+    const defaultDate &#x3D; new Date(defaultLayout.timestamp || null);
     const dashboardId &#x3D; this.dashboard.getValue()?.id;
-    const cachedLayout &#x3D; localStorage.getItem(&#x60;widget:${dashboardId}:${id}&#x60;);
-    return cachedLayout ? JSON.parse(cachedLayout) : {};
+    const cachedLayout &#x3D; JSON.parse(localStorage.getItem(&#x60;widget:${dashboardId}:${widget.id}&#x60;) || JSON.stringify({}));
+    const cachedDate &#x3D; new Date(cachedLayout.timestamp || null);
+    if (defaultDate &gt; cachedDate) {
+      return defaultLayout;
+    } else {
+      return cachedLayout;
+    }
   }
 
   saveWidgetLayout(id: number, layout: any): void {
     const dashboardId &#x3D; this.dashboard.getValue()?.id;
-    return localStorage.setItem(&#x60;widget:${dashboardId}:${id}&#x60;, JSON.stringify(layout));
+    return localStorage.setItem(&#x60;widget:${dashboardId}:${id}&#x60;, JSON.stringify({ ...layout, timestamp: + new Date() }));
+  }
+
+  saveWidgetDefaultLayout(id: number, layout: any): void {
+    const dashboardId &#x3D; this.dashboard.getValue()?.id;
+    const dashboardStructure &#x3D; this.dashboard.getValue()?.structure;
+    const widgetTemp &#x3D; {
+      ...dashboardStructure[id],
+      settings: {
+        ...dashboardStructure[id].settings,
+        defaultLayout: { ...layout, timestamp: + new Date() }
+      }
+    };
+    const updatedDashboardStructure &#x3D; JSON.parse(JSON.stringify(dashboardStructure));
+    updatedDashboardStructure[id] &#x3D; widgetTemp;
+    this.apollo.mutate&lt;EditDashboardMutationResponse&gt;({
+      mutation: EDIT_DASHBOARD,
+      variables: {
+        id: dashboardId,
+        structure: updatedDashboardStructure,
+      }
+    }).subscribe(res &#x3D;&gt; {
+    }, error &#x3D;&gt; console.log(error));
   }
 }
 </code></pre>

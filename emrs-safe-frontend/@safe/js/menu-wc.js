@@ -1150,6 +1150,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/EditChannelMutationResponse.html" data-type="entity-link">EditChannelMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/EditDashboardMutationResponse.html" data-type="entity-link">EditDashboardMutationResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EditPositionAttributeCategoryMutationResponse.html" data-type="entity-link">EditPositionAttributeCategoryMutationResponse</a>
                             </li>
                             <li class="link">
@@ -1178,6 +1181,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetChannelsQueryResponse.html" data-type="entity-link">GetChannelsQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetDashboardByIdQueryResponse.html" data-type="entity-link">GetDashboardByIdQueryResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetFormByIdQueryResponse.html" data-type="entity-link">GetFormByIdQueryResponse</a>
