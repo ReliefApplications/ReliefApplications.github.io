@@ -249,6 +249,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeContentChoiceModule.html" data-type="entity-link">SafeContentChoiceModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeContentChoiceModule-3348e1b5d7bf1e1d34ab255bd34dbee3"' : 'data-target="#xs-components-links-module-SafeContentChoiceModule-3348e1b5d7bf1e1d34ab255bd34dbee3"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeContentChoiceModule-3348e1b5d7bf1e1d34ab255bd34dbee3"' :
+                                            'id="xs-components-links-module-SafeContentChoiceModule-3348e1b5d7bf1e1d34ab255bd34dbee3"' }>
+                                            <li class="link">
+                                                <a href="components/SafeContentChoiceComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeContentChoiceComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeConvertModalModule.html" data-type="entity-link">SafeConvertModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -1232,6 +1250,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GridLayout.html" data-type="entity-link">GridLayout</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IContentType.html" data-type="entity-link">IContentType</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Notification.html" data-type="entity-link">Notification</a>

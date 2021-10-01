@@ -559,6 +559,39 @@ export enum ContentType {
     dashboard &#x3D; &#x27;dashboard&#x27;,
     form &#x3D; &#x27;form&#x27;
 }
+
+export interface IContentType {
+    value: string;
+    name: string;
+    img: string;
+    color: string;
+    focusColor: string;
+}
+
+export const CONTENT_TYPES: IContentType[] &#x3D; [
+    {
+        value: &#x27;workflow&#x27;,
+        name: &#x27;workflow&#x27;,
+        img: &#x27;/assets/workflow.svg&#x27;,
+        color: &#x27;#C6E6EA33&#x27;,
+        focusColor: &#x27;#8CCDD5&#x27;
+    },
+    {
+        value: &#x27;dashboard&#x27;,
+        name: &#x27;dashboard&#x27;,
+        img: &#x27;/assets/dashboard.svg&#x27;,
+        color: &#x27;#F6C48133&#x27;,
+        focusColor: &#x27;#F6C481&#x27;
+    },
+    {
+        value: &#x27;form&#x27;,
+        name: &#x27;form&#x27;,
+        img: &#x27;/assets/form.svg&#x27;,
+        color: &#x27;#C5D3FC33&#x27;,
+        focusColor: &#x27;#92ADFF&#x27;
+    }
+];
+
 /*  Model for Page object.
 */
 export interface Page {
