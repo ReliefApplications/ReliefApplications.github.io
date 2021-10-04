@@ -653,6 +653,63 @@ export interface GetApplicationByIdQueryResponse {
   application: Application;
 }
 
+// &#x3D;&#x3D;&#x3D; GET APPLICATIONS &#x3D;&#x3D;&#x3D;
+export const GET_APPLICATIONS &#x3D; gql&#x60;
+query GetApplications($first: Int, $afterCursor: ID, $filters: JSON) {
+  applications(first: $first, afterCursor: $afterCursor, filters: $filters) {
+    edges {
+      node {
+        id
+        name
+      }
+      cursor
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}&#x60;;
+
+// &#x3D;&#x3D;&#x3D; GET APPLICATIONS &#x3D;&#x3D;&#x3D;
+export const GET_APPLICATIONS_ROLES &#x3D; gql&#x60;
+query GetApplications($first: Int, $afterCursor: ID, $filters: JSON) {
+  applications(first: $first, afterCursor: $afterCursor, filters: $filters) {
+    edges {
+      node {
+        id
+        name
+        roles {
+          id
+          title
+        }
+      }
+      cursor
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}&#x60;;
+
+export interface GetApplicationsQueryResponse {
+  loading: boolean;
+  applications: {
+    edges: {
+      node: Application;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    },
+    totalCount: number;
+  };
+}
+
 // &#x3D;&#x3D;&#x3D; GET PERMISSIONS &#x3D;&#x3D;&#x3D;
 export const GET_PERMISSIONS &#x3D; gql&#x60;
 query GetPermissions($application: Boolean) {
