@@ -2648,14 +2648,24 @@ query GetRoles($all: Boolean, $application: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-query GetRoutingKeys {
-  applications {
-    id
-    name
-    channels {
-      id
-      title
-      routingKey
+query GetRoutingKeys($first: Int, $afterCursor: ID) {
+  applications(first: $first, afterCursor: $afterCursor) {
+    edges {
+      node {
+        id
+        name
+        channels {
+          id
+          title
+          routingKey
+        }
+      }
+      cursor
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      endCursor
     }
   }
 }&#x60;</code>

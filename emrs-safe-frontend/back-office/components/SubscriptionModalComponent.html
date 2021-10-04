@@ -135,6 +135,26 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#applications$">applications$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#applicationSelect">applicationSelect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#applicationsLoading">applicationsLoading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#applicationsPageInfo">applicationsPageInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#applicationsQuery">applicationsQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#data">data</a>
                             </li>
                             <li>
@@ -143,7 +163,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#filteredApplications">filteredApplications</a>
+                                <a href="#filteredApplications$">filteredApplications$</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -159,15 +179,15 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
+                                <a href="#formsLoading">formsLoading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#formsPageInfo">formsPageInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
                                 <a href="#formsQuery">formsQuery</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#loading">loading</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#pageInfo">pageInfo</a>
                             </li>
                             <li>
                                 <a href="#subscriptionForm">subscriptionForm</a>
@@ -190,7 +210,11 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#loadOnScroll">loadOnScroll</a>
+                                <a href="#loadOnScrollApplication">loadOnScrollApplication</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadOnScrollForm">loadOnScrollForm</a>
                             </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
@@ -199,7 +223,10 @@
                                 <a href="#onClose">onClose</a>
                             </li>
                             <li>
-                                <a href="#onOpenSelect">onOpenSelect</a>
+                                <a href="#onOpenApplicationSelect">onOpenApplicationSelect</a>
+                            </li>
+                            <li>
+                                <a href="#onOpenFormSelect">onOpenFormSelect</a>
                             </li>
                         </ul>
                     </td>
@@ -238,7 +265,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:49</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:59</a></div>
                             </td>
                         </tr>
 
@@ -345,8 +372,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="95"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:95</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:114</a></div>
                 </td>
             </tr>
 
@@ -397,28 +424,107 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="loadOnScroll"></a>
+                    <a name="loadOnScrollApplication"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Private</span>
-                            loadOnScroll
+                            loadOnScrollApplication
                         </b>
-                        <a href="#loadOnScroll"><span class="icon ion-ios-link"></span></a>
+                        <a href="#loadOnScrollApplication"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>loadOnScroll(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>loadOnScrollApplication(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="121"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:121</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:181</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches more forms on scroll.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>scroll event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadOnScrollForm"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            loadOnScrollForm
+                        </b>
+                        <a href="#loadOnScrollForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadOnScrollForm(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:141</a></div>
                 </td>
             </tr>
 
@@ -494,8 +600,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:71</a></div>
                 </td>
             </tr>
 
@@ -533,8 +639,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="102"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:102</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:122</a></div>
                 </td>
             </tr>
 
@@ -554,26 +660,67 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="onOpenSelect"></a>
+                    <a name="onOpenApplicationSelect"></a>
                     <span class="name">
                         <b>
-                            onOpenSelect
+                            onOpenApplicationSelect
                         </b>
-                        <a href="#onOpenSelect"><span class="icon ion-ios-link"></span></a>
+                        <a href="#onOpenApplicationSelect"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onOpenSelect(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>onOpenApplicationSelect()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="110"
-                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:110</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:168</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds scroll listener to auto complete.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onOpenFormSelect"></a>
+                    <span class="name">
+                        <b>
+                            onOpenFormSelect
+                        </b>
+                        <a href="#onOpenFormSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onOpenFormSelect(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:130</a></div>
                 </td>
             </tr>
 
@@ -648,18 +795,168 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Application[]</code>
+                            <i>Default value : </i><code>new BehaviorSubject&lt;Application[]&gt;([])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applications$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            applications$</b>
+                            <a href="#applications$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;Application[]&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applicationSelect"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            applicationSelect</b>
+                            <a href="#applicationSelect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatAutocomplete</code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;applicationSelect&#x27;)<br />
+                            </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applicationsLoading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            applicationsLoading</b>
+                            <a href="#applicationsLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applicationsPageInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            applicationsPageInfo</b>
+                            <a href="#applicationsPageInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applicationsQuery"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            applicationsQuery</b>
+                            <a href="#applicationsQuery"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/GetRoutingKeysQueryResponse.html" target="_self" >QueryRef&lt;GetRoutingKeysQueryResponse&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:44</a></div>
                             </td>
                         </tr>
 
@@ -696,7 +993,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -724,7 +1021,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:53</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -735,12 +1032,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="filteredApplications"></a>
+                        <a name="filteredApplications$"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            filteredApplications</b>
-                            <a href="#filteredApplications"><span class="icon ion-ios-link"></span></a>
+                            filteredApplications$</b>
+                            <a href="#filteredApplications$"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -752,7 +1049,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:42</a></div>
                             </td>
                         </tr>
 
@@ -779,7 +1076,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -807,7 +1104,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -844,7 +1141,70 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formsLoading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            formsLoading</b>
+                            <a href="#formsLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formsPageInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            formsPageInfo</b>
+                            <a href="#formsPageInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -868,69 +1228,6 @@
                         <td class="col-md-4">
                             <i>Type : </i>        <code><a href="../interfaces/GetFormsQueryResponse.html" target="_self" >QueryRef&lt;GetFormsQueryResponse&gt;</a></code>
 
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:30</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="loading"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            loading</b>
-                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>true</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:35</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="pageInfo"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            pageInfo</b>
-                            <a href="#pageInfo"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{
-    endCursor: &#x27;&#x27;,
-    hasNextPage: true
-  }</code>
                         </td>
                     </tr>
                         <tr>
@@ -967,7 +1264,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -996,7 +1293,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:43</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:53</a></div>
                                 </td>
                             </tr>
 
@@ -1007,7 +1304,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts:57</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -1067,6 +1364,7 @@ import {
 } from &#x27;../../../../../graphql/queries&#x27;;
 import { map, startWith } from &#x27;rxjs/operators&#x27;;
 import { MatSelect } from &#x27;@angular/material/select&#x27;;
+import { MatAutocomplete } from &#x27;@angular/material/autocomplete&#x27;;
 
 const ITEMS_PER_PAGE &#x3D; 10;
 
@@ -1084,17 +1382,26 @@ export class SubscriptionModalComponent implements OnInit {
   private forms &#x3D; new BehaviorSubject&lt;Form[]&gt;([]);
   public forms$!: Observable&lt;Form[]&gt;;
   private formsQuery!: QueryRef&lt;GetFormsQueryResponse&gt;;
-  private pageInfo &#x3D; {
+  private formsPageInfo &#x3D; {
     endCursor: &#x27;&#x27;,
     hasNextPage: true
   };
-  private loading &#x3D; true;
+  private formsLoading &#x3D; true;
 
   @ViewChild(&#x27;formSelect&#x27;) formSelect?: MatSelect;
 
   // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
-  private applications: Application[] &#x3D; [];
-  public filteredApplications!: Observable&lt;Application[]&gt;;
+  private applications &#x3D; new BehaviorSubject&lt;Application[]&gt;([]);
+  public filteredApplications$!: Observable&lt;Application[]&gt;;
+  public applications$!: Observable&lt;Application[]&gt;;
+  private applicationsQuery!: QueryRef&lt;GetRoutingKeysQueryResponse&gt;;
+  private applicationsPageInfo &#x3D; {
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true
+  };
+  private applicationsLoading &#x3D; true;
+
+  @ViewChild(&#x27;applicationSelect&#x27;) applicationSelect?: MatAutocomplete;
 
   get routingKey(): string {
     return this.subscriptionForm.value.routingKey;
@@ -1132,25 +1439,35 @@ export class SubscriptionModalComponent implements OnInit {
     this.forms$ &#x3D; this.forms.asObservable();
     this.formsQuery.valueChanges.subscribe(res &#x3D;&gt; {
       this.forms.next(res.data.forms.edges.map(x &#x3D;&gt; x.node));
-      this.pageInfo &#x3D; res.data.forms.pageInfo;
-      this.loading &#x3D; res.loading;
+      this.formsPageInfo &#x3D; res.data.forms.pageInfo;
+      this.formsLoading &#x3D; res.loading;
     });
 
-    this.apollo.watchQuery&lt;GetRoutingKeysQueryResponse&gt;({
-      query: GET_ROUTING_KEYS
-    }).valueChanges.subscribe(res &#x3D;&gt; {
-      this.applications &#x3D; res.data.applications.filter(x &#x3D;&gt; x.channels ? x.channels.length &gt; 0 : false);
+    // Get applications and set pagination logic
+    this.applicationsQuery &#x3D; this.apollo.watchQuery&lt;GetRoutingKeysQueryResponse&gt;({
+      query: GET_ROUTING_KEYS,
+      variables: {
+        first: ITEMS_PER_PAGE
+      }
     });
-    this.filteredApplications &#x3D; this.subscriptionForm.controls.routingKey.valueChanges.pipe(
-      startWith(&#x27;&#x27;),
-      map(value &#x3D;&gt; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? value : value.name),
-      map(x &#x3D;&gt; this.filter(x))
-    );
+
+    // this.applications$ &#x3D; this.applications.asObservable();
+    this.applicationsQuery.valueChanges.subscribe(res &#x3D;&gt; {
+      this.applications.next(res.data.applications.edges.map(x &#x3D;&gt; x.node).filter(x &#x3D;&gt; x.channels ? x.channels.length &gt; 0 : false));
+      this.applicationsPageInfo &#x3D; res.data.applications.pageInfo;
+      this.applicationsLoading &#x3D; res.loading;
+      this.applications$ &#x3D; this.subscriptionForm.controls.routingKey.valueChanges.pipe(
+        startWith(&#x27;&#x27;),
+        map(value &#x3D;&gt; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? value : value.name),
+        map(x &#x3D;&gt; this.filter(x))
+      );
+    });
   }
 
   private filter(value: string): Application[] {
     const filterValue &#x3D; value.toLowerCase();
-    return this.applications ? this.applications.filter(x &#x3D;&gt; x.name?.toLowerCase().indexOf(filterValue) &#x3D;&#x3D;&#x3D; 0) : this.applications;
+    const applications &#x3D; this.applications.getValue();
+    return applications ? applications.filter(x &#x3D;&gt; x.name?.toLowerCase().indexOf(filterValue) &#x3D;&#x3D;&#x3D; 0) : applications;
   }
 
   /*  Close the modal without sending any data.
@@ -1163,10 +1480,10 @@ export class SubscriptionModalComponent implements OnInit {
    * Adds scroll listener to select.
    * @param e open select event.
    */
-   onOpenSelect(e: any): void {
+   onOpenFormSelect(e: any): void {
     if (e &amp;&amp; this.formSelect) {
       const panel &#x3D; this.formSelect.panel.nativeElement;
-      panel.addEventListener(&#x27;scroll&#x27;, (event: any) &#x3D;&gt; this.loadOnScroll(event));
+      panel.addEventListener(&#x27;scroll&#x27;, (event: any) &#x3D;&gt; this.loadOnScrollForm(event));
     }
   }
 
@@ -1174,14 +1491,14 @@ export class SubscriptionModalComponent implements OnInit {
    * Fetches more forms on scroll.
    * @param e scroll event.
    */
-  private loadOnScroll(e: any): void {
+  private loadOnScrollForm(e: any): void {
     if (e.target.scrollHeight - (e.target.clientHeight + e.target.scrollTop) &lt; 50) {
-      if (!this.loading &amp;&amp; this.pageInfo.hasNextPage) {
-        this.loading &#x3D; true;
+      if (!this.formsLoading &amp;&amp; this.formsPageInfo.hasNextPage) {
+        this.formsLoading &#x3D; true;
         this.formsQuery.fetchMore({
           variables: {
             first: ITEMS_PER_PAGE,
-            afterCursor: this.pageInfo.endCursor
+            afterCursor: this.formsPageInfo.endCursor
           },
           updateQuery: (prev, { fetchMoreResult }) &#x3D;&gt; {
             if (!fetchMoreResult) { return prev; }
@@ -1190,6 +1507,47 @@ export class SubscriptionModalComponent implements OnInit {
                 edges: [...prev.forms.edges, ...fetchMoreResult.forms.edges],
                 pageInfo: fetchMoreResult.forms.pageInfo,
                 totalCount: fetchMoreResult.forms.totalCount
+              }
+            });
+          }
+        });
+      }
+    }
+  }
+
+  /**
+   * Adds scroll listener to auto complete.
+   */
+   onOpenApplicationSelect(): void {
+    if (this.applicationSelect) {
+      const panel &#x3D; this.applicationSelect.panel.nativeElement;
+      if (panel) {
+        panel.onscroll &#x3D; (event: any) &#x3D;&gt; this.loadOnScrollApplication(event);
+      }
+    }
+  }
+
+  /**
+   * Fetches more forms on scroll.
+   * @param e scroll event.
+   */
+  private loadOnScrollApplication(e: any): void {
+    if (e.target.scrollHeight - (e.target.clientHeight + e.target.scrollTop) &lt; 50) {
+      console.log(this.applicationsPageInfo.hasNextPage);
+      if (!this.applicationsLoading &amp;&amp; this.applicationsPageInfo.hasNextPage) {
+        this.applicationsLoading &#x3D; true;
+        this.applicationsQuery.fetchMore({
+          variables: {
+            first: ITEMS_PER_PAGE,
+            afterCursor: this.applicationsPageInfo.endCursor
+          },
+          updateQuery: (prev, { fetchMoreResult }) &#x3D;&gt; {
+            if (!fetchMoreResult) { return prev; }
+            return Object.assign({}, prev, {
+              applications: {
+                edges: [...prev.applications.edges, ...fetchMoreResult.applications.edges],
+                pageInfo: fetchMoreResult.applications.pageInfo,
+                totalCount: fetchMoreResult.applications.totalCount
               }
             });
           }
@@ -1214,8 +1572,8 @@ export class SubscriptionModalComponent implements OnInit {
                 &lt;mat-label&gt;Listen to&lt;/mat-label&gt;
                 &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Select a routing key&quot; matInput formControlName&#x3D;&quot;routingKey&quot;
                     [matAutocomplete]&#x3D;&quot;auto&quot;&gt;
-                &lt;mat-autocomplete autoActiveFirstOption #auto&#x3D;&quot;matAutocomplete&quot;&gt;
-                    &lt;mat-optgroup *ngFor&#x3D;&quot;let application of filteredApplications | async&quot; [label]&#x3D;&quot;application.name || &#x27;&#x27;&quot;&gt;
+                &lt;mat-autocomplete autoActiveFirstOption #auto&#x3D;&quot;matAutocomplete&quot; #applicationSelect (opened)&#x3D;&quot;onOpenApplicationSelect()&quot;&gt;
+                    &lt;mat-optgroup *ngFor&#x3D;&quot;let application of applications$ | async&quot; [label]&#x3D;&quot;application.name || &#x27;&#x27;&quot;&gt;
                         &lt;mat-option *ngFor&#x3D;&quot;let channel of application.channels&quot; [value]&#x3D;&quot;channel.routingKey&quot;&gt;
                             {{channel.title}}
                         &lt;/mat-option&gt;
@@ -1228,7 +1586,7 @@ export class SubscriptionModalComponent implements OnInit {
             &lt;/mat-form-field&gt;
             &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
                 &lt;mat-label&gt;Convert to&lt;/mat-label&gt;
-                &lt;mat-select #formSelect  formControlName&#x3D;&quot;convertTo&quot; (openedChange)&#x3D;&quot;onOpenSelect($event)&quot;&gt;
+                &lt;mat-select #formSelect  formControlName&#x3D;&quot;convertTo&quot; (openedChange)&#x3D;&quot;onOpenFormSelect($event)&quot;&gt;
                     &lt;mat-option *ngFor&#x3D;&quot;let form of forms$ | async&quot; [value]&#x3D;&quot;form.id&quot;&gt;{{ form.name }}&lt;/mat-option&gt;
                 &lt;/mat-select&gt;
             &lt;/mat-form-field&gt;
@@ -1282,7 +1640,7 @@ export class SubscriptionModalComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title>{{data.subscription ? \'Edit Subscription\' : \'New Subscription\'}}</h1><div mat-dialog-content>    <form [formGroup]="subscriptionForm">        <div class="form-group">            <mat-form-field appearance="outline">                <mat-label>Title</mat-label>                <input type="text" placeholder="Name your subscription." matInput formControlName="title">            </mat-form-field>            <mat-form-field appearance="outline">                <mat-label>Listen to</mat-label>                <input type="text" placeholder="Select a routing key" matInput formControlName="routingKey"                    [matAutocomplete]="auto">                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">                    <mat-optgroup *ngFor="let application of filteredApplications | async" [label]="application.name || \'\'">                        <mat-option *ngFor="let channel of application.channels" [value]="channel.routingKey">                            {{channel.title}}                        </mat-option>                    </mat-optgroup>                </mat-autocomplete>                <safe-button *ngIf="routingKey" matSuffix [isIcon]="true" icon="close" aria-label="Clear"                    (click)="routingKey=\'\'">                </safe-button>                <mat-hint>Message broker routing key</mat-hint>            </mat-form-field>            <mat-form-field appearance="outline">                <mat-label>Convert to</mat-label>                <mat-select #formSelect  formControlName="convertTo" (openedChange)="onOpenSelect($event)">                    <mat-option *ngFor="let form of forms$ | async" [value]="form.id">{{ form.name }}</mat-option>                </mat-select>            </mat-form-field>            <mat-form-field appearance="outline">                <mat-label>Notify on</mat-label>                <mat-select formControlName="channel">                    <mat-option *ngFor="let channel of data.channels" [value]="channel.id">{{ channel.title }}                    </mat-option>                </mat-select>            </mat-form-field>        </div>    </form></div><div mat-dialog-actions align="end">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button [mat-dialog-close]="subscriptionForm.value" cdkFocusInitial color="primary"        [disabled]="!subscriptionForm.valid">{{data.subscription ? \'Update\' : \'Create\'}}</button></div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title>{{data.subscription ? \'Edit Subscription\' : \'New Subscription\'}}</h1><div mat-dialog-content>    <form [formGroup]="subscriptionForm">        <div class="form-group">            <mat-form-field appearance="outline">                <mat-label>Title</mat-label>                <input type="text" placeholder="Name your subscription." matInput formControlName="title">            </mat-form-field>            <mat-form-field appearance="outline">                <mat-label>Listen to</mat-label>                <input type="text" placeholder="Select a routing key" matInput formControlName="routingKey"                    [matAutocomplete]="auto">                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" #applicationSelect (opened)="onOpenApplicationSelect()">                    <mat-optgroup *ngFor="let application of applications$ | async" [label]="application.name || \'\'">                        <mat-option *ngFor="let channel of application.channels" [value]="channel.routingKey">                            {{channel.title}}                        </mat-option>                    </mat-optgroup>                </mat-autocomplete>                <safe-button *ngIf="routingKey" matSuffix [isIcon]="true" icon="close" aria-label="Clear"                    (click)="routingKey=\'\'">                </safe-button>                <mat-hint>Message broker routing key</mat-hint>            </mat-form-field>            <mat-form-field appearance="outline">                <mat-label>Convert to</mat-label>                <mat-select #formSelect  formControlName="convertTo" (openedChange)="onOpenFormSelect($event)">                    <mat-option *ngFor="let form of forms$ | async" [value]="form.id">{{ form.name }}</mat-option>                </mat-select>            </mat-form-field>            <mat-form-field appearance="outline">                <mat-label>Notify on</mat-label>                <mat-select formControlName="channel">                    <mat-option *ngFor="let channel of data.channels" [value]="channel.id">{{ channel.title }}                    </mat-option>                </mat-select>            </mat-form-field>        </div>    </form></div><div mat-dialog-actions align="end">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button [mat-dialog-close]="subscriptionForm.value" cdkFocusInitial color="primary"        [disabled]="!subscriptionForm.valid">{{data.subscription ? \'Update\' : \'Create\'}}</button></div></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SubscriptionModalComponent'};
