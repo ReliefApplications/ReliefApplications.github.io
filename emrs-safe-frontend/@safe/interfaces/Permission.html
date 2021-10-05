@@ -257,7 +257,8 @@ export enum Permissions {
     canCreateResources &#x3D; &#x27;can_create_resources&#x27;,
     canManageResources &#x3D; &#x27;can_manage_resources&#x27;,
     canManageApplications &#x3D; &#x27;can_manage_applications&#x27;,
-    canManageApiConfigurations &#x3D; &#x27;can_manage_api_configurations&#x27;
+    canManageApiConfigurations &#x3D; &#x27;can_manage_api_configurations&#x27;,
+    canCreateApplications &#x3D; &#x27;can_create_applications&#x27;
 }
 
 /*  Enum of permissions types.
@@ -266,7 +267,8 @@ export enum PermissionType {
     access &#x3D; &#x27;access&#x27;,
     create &#x3D; &#x27;create&#x27;,
     update &#x3D; &#x27;update&#x27;,
-    delete &#x3D; &#x27;delete&#x27;
+    delete &#x3D; &#x27;delete&#x27;,
+    manage &#x3D; &#x27;manage&#x27;
 }
 
 /*  Class to check for routes and methods what is the needed admin permission.
@@ -291,30 +293,13 @@ export class PermissionsManagement {
             apiconfigurations: {
                 create: Permissions.canManageApiConfigurations,
                 access: Permissions.canManageApiConfigurations
-            },
-            edit: {
-                access: Permissions.canManageApplications
-            },
-            position: {
-                access: Permissions.canSeeRoles
-            },
-            channels: {
-                access: Permissions.canManageApplications
-            },
-            subscriptions: {
-                access: Permissions.canManageApplications
-            },
-            &#x27;pull-jobs&#x27;: {
-                access: Permissions.canManageApplications
             }
         },
         applications: {
-            create: Permissions.canManageApplications,
+            create: Permissions.canCreateApplications,
+            manage: Permissions.canManageApplications,
             access: Permissions.canSeeApplications
         },
-        &#x27;add-page&#x27;: {
-            access: Permissions.canManageApplications
-        }
     };
 
     public static getRightFromPath(path: string, type: PermissionType): string {

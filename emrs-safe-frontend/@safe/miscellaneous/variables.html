@@ -1022,6 +1022,9 @@ mutation editApplication($id: ID!, $name: String, $status: Status, $pages: [ID],
       createdAt
       type
       content
+      canDelete
+      canSee
+      canUpdate
     }
     settings
     permissions {
@@ -4309,6 +4312,7 @@ query GetType($name: String!) {
       name
       createdAt
       modifiedAt
+      canUpdate
       permissions {
         canSee {
           id
@@ -4329,6 +4333,7 @@ query GetType($name: String!) {
         type
         content
         createdAt
+        canDelete
       }
       page {
         id
@@ -5247,11 +5252,12 @@ query GetType($name: String!) {
                             <i>Default value : </i><code>{
     appPublished(name: any): string { return &#x60;Application ${name} published.&#x60;; } ,
     userInvalidActions(action: any): string  { return &#x60;User could not be ${action}.&#x60;; } ,
-    accessNotProvided(type: any, error?: any): string  { return &#x60;No access provided to this ${type}. ${error}&#x60;; } ,
+    accessNotProvided(type: any, error?: any): string  { return &#x60;No access provided to this ${type}. ${error ? error : &#x27;&#x27;}&#x60;; } ,
     userRolesUpdated(username: any): string  { return &#x60;${username} roles updated.&#x60;; },
     usersActions(type: any, length: any): string  { return length &gt; 1 ? &#x60;${length} users were ${type}.&#x60; : &#x60;user was ${type}.&#x60;; }, //
     objectNotUpdated(type: any, error: any): string  { return &#x60;${type} is locked for edition. ${error}&#x60;; },
-    objectEdited(type: any, name: any): string  { return &#x60;${name} ${type} edited.&#x60;; }, //
+    objectEdited(type: any, name: any): string  { return &#x60;${name} ${type} edited.&#x60;; },
+    objectNotEdited(type: any, error: any): string  { return &#x60;${type} not edited. ${error}&#x60;; },
     objectDuplicated(type: any, name: any): string  { return &#x60;The ${type} ${name} was successfully  duplicated.&#x60;; },
     objectNotDuplicated(type: any, error: any): string  { return &#x60;The ${type} was not duplicated. ${error}&#x60;; },
     objectAlreadyExists(type: any, value: any): string  { return &#x60;The ${type} ${value} already exists on this application.&#x60;; },

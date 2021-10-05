@@ -146,7 +146,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -235,8 +235,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:55</a></div>
                 </td>
             </tr>
 
@@ -317,8 +317,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:42</a></div>
                 </td>
             </tr>
 
@@ -387,8 +387,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="101"
-                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:101</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:102</a></div>
                 </td>
             </tr>
 
@@ -457,8 +457,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:86</a></div>
                 </td>
             </tr>
 
@@ -531,7 +531,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -558,7 +558,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -587,7 +587,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:24</a></div>
                                 </td>
                             </tr>
 
@@ -609,7 +609,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/services/workflow.service.ts:30</a></div>
                                 </td>
                             </tr>
 
@@ -622,7 +622,6 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Apollo} from &#x27;apollo-angular&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
-
 import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
 import { BehaviorSubject, Observable, Subscription } from &#x27;rxjs&#x27;;
 import { GetWorkflowByIdQueryResponse, GET_WORKFLOW_BY_ID } from &#x27;../graphql/queries&#x27;;
@@ -694,6 +693,8 @@ export class SafeWorkflowService {
           } else {
             this.router.navigate([&#x27;../&#x27; + value.type + &#x27;/&#x27; + res.data.addStep.content], { relativeTo: route.parent });
           }
+        } else {
+          this.snackBar.openSnackBar(NOTIFICATIONS.objectNotEdited(&#x27;Workflow&#x27;, res.errors ? res.errors[0].message : &#x27;&#x27;), { error: true });
         }
       });
     } else {
