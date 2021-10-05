@@ -1235,7 +1235,7 @@ export class FormComponent implements OnInit, OnDestroy {
   }
 
   toggleFormActive(): void {
-    if (this.form?.canUpdate) { this.formActive &#x3D; !this.formActive; }
+    if (this.step?.canUpdate || this.page?.canUpdate) { this.formActive &#x3D; !this.formActive; }
   }
 
   /*  Update the name of the tab.

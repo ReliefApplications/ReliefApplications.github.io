@@ -1533,7 +1533,6 @@ export class SubscriptionModalComponent implements OnInit {
    */
   private loadOnScrollApplication(e: any): void {
     if (e.target.scrollHeight - (e.target.clientHeight + e.target.scrollTop) &lt; 50) {
-      console.log(this.applicationsPageInfo.hasNextPage);
       if (!this.applicationsLoading &amp;&amp; this.applicationsPageInfo.hasNextPage) {
         this.applicationsLoading &#x3D; true;
         this.applicationsQuery.fetchMore({
