@@ -80,9 +80,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
-                                <a href="modules/DashboardMenuModule.html" data-type="entity-link">DashboardMenuModule</a>
-                            </li>
-                            <li class="link">
                                 <a href="modules/SafeAccessModule.html" data-type="entity-link">SafeAccessModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -874,20 +871,34 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
-                                <a href="modules/SafeWidgetGridModule.html" data-type="entity-link">SafeWidgetGridModule</a>
+                                <a href="modules/SafeWidgetChoiceModule.html" data-type="entity-link">SafeWidgetChoiceModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeWidgetGridModule-f22296c5dd1ce383be29c1e98e750b70"' : 'data-target="#xs-components-links-module-SafeWidgetGridModule-f22296c5dd1ce383be29c1e98e750b70"' }>
+                                            'data-target="#components-links-module-SafeWidgetChoiceModule-d70f093e06aa8e62ac0193ac0cb32336"' : 'data-target="#xs-components-links-module-SafeWidgetChoiceModule-d70f093e06aa8e62ac0193ac0cb32336"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeWidgetGridModule-f22296c5dd1ce383be29c1e98e750b70"' :
-                                            'id="xs-components-links-module-SafeWidgetGridModule-f22296c5dd1ce383be29c1e98e750b70"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeWidgetChoiceModule-d70f093e06aa8e62ac0193ac0cb32336"' :
+                                            'id="xs-components-links-module-SafeWidgetChoiceModule-d70f093e06aa8e62ac0193ac0cb32336"' }>
                                             <li class="link">
-                                                <a href="components/SafeDashboardMenuComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeDashboardMenuComponent</a>
+                                                <a href="components/SafeWidgetChoiceComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeWidgetChoiceComponent</a>
                                             </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeWidgetGridModule.html" data-type="entity-link">SafeWidgetGridModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeWidgetGridModule-47c731d549494c5bad345e84311471c3"' : 'data-target="#xs-components-links-module-SafeWidgetGridModule-47c731d549494c5bad345e84311471c3"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeWidgetGridModule-47c731d549494c5bad345e84311471c3"' :
+                                            'id="xs-components-links-module-SafeWidgetGridModule-47c731d549494c5bad345e84311471c3"' }>
                                             <li class="link">
                                                 <a href="components/SafeExpandedWidgetComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeExpandedWidgetComponent</a>
@@ -1274,6 +1285,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/IContentType.html" data-type="entity-link">IContentType</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IWidgetType.html" data-type="entity-link">IWidgetType</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Notification.html" data-type="entity-link">Notification</a>

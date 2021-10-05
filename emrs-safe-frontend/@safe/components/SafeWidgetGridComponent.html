@@ -144,6 +144,10 @@
                                     <span class="modifier">Optional</span>
                                 <a href="#dropsQuery">dropsQuery</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#widgetTypes">widgetTypes</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -161,6 +165,9 @@
                             </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onAdd">onAdd</a>
                             </li>
                             <li>
                                 <a href="#onDeleteWidget">onDeleteWidget</a>
@@ -209,7 +216,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#addNewWidget">addNewWidget</a>
+                                <a href="#add">add</a>
                             </li>
                             <li>
                                 <a href="#delete">delete</a>
@@ -267,12 +274,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(dialog: MatDialog)</code>
+<code>constructor(dialog: MatDialog, gridService: <a href="../injectables/SafeGridService.html">SafeGridService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:39</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -294,6 +301,18 @@
                                                   
                                                         <td>
                                                                     <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>gridService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeGridService.html" target="_self" >SafeGridService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -327,7 +346,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:18</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -353,7 +372,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:17</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -365,8 +384,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="addNewWidget"></a>
-                        <b>addNewWidget</b>
+                        <a name="add"></a>
+                        <b>add</b>
                     </td>
                 </tr>
                 <tr>
@@ -377,7 +396,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:29</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -398,7 +417,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:27</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -419,7 +438,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:28</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -440,7 +459,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:32</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -461,7 +480,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:26</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -496,8 +515,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:70</a></div>
                 </td>
             </tr>
 
@@ -532,8 +551,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:56</a></div>
                 </td>
             </tr>
 
@@ -571,8 +590,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:50</a></div>
                 </td>
             </tr>
 
@@ -583,6 +602,76 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAdd"></a>
+                    <span class="name">
+                        <b>
+                            onAdd
+                        </b>
+                        <a href="#onAdd"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAdd(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -610,8 +699,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="96"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:96</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:103</a></div>
                 </td>
             </tr>
 
@@ -680,8 +769,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="92"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:92</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:99</a></div>
                 </td>
             </tr>
 
@@ -750,8 +839,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="100"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:100</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:107</a></div>
                 </td>
             </tr>
 
@@ -820,8 +909,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="87"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:87</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:94</a></div>
                 </td>
             </tr>
 
@@ -892,8 +981,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:76</a></div>
                 </td>
             </tr>
 
@@ -971,7 +1060,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -999,7 +1088,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:46</a></div>
                             </td>
                         </tr>
 
@@ -1031,7 +1120,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -1068,7 +1157,40 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="widgetTypes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            widgetTypes</b>
+                            <a href="#widgetTypes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IWidgetType.html" target="_self" >IWidgetType[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>WIDGET_TYPES as IWidgetType[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -1097,7 +1219,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/components/widget-grid/widget-grid.component.ts:34</a></div>
                                 </td>
                             </tr>
 
@@ -1111,6 +1233,8 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CdkDragEnter, CdkDropList, moveItemInArray } from &#x27;@angular/cdk/drag-drop&#x27;;
 import { AfterViewInit, Component, EventEmitter, HostListener, Input, OnInit, Output, QueryList, ViewChildren } from &#x27;@angular/core&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { IWidgetType, WIDGET_TYPES } from &#x27;../../models/dashboard.model&#x27;;
+import { SafeGridService } from &#x27;../../services/grid.service&#x27;;
 import { SafeExpandedWidgetComponent } from &#x27;./expanded-widget/expanded-widget.component&#x27;;
 
 @Component({
@@ -1119,6 +1243,8 @@ import { SafeExpandedWidgetComponent } from &#x27;./expanded-widget/expanded-wid
   styleUrls: [&#x27;./widget-grid.component.scss&#x27;]
 })
 export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
+
+  public widgetTypes: IWidgetType[] &#x3D; WIDGET_TYPES as IWidgetType[];
 
   @Input() widgets: any[] &#x3D; [];
   @Input() canUpdate &#x3D; false;
@@ -1132,7 +1258,7 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
   @Output() move: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
   @Output() delete: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
   @Output() edit: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-  @Output() addNewWidget: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+  @Output() add: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
   // &#x3D;&#x3D;&#x3D; STEP CHANGE FOR WORKFLOW &#x3D;&#x3D;&#x3D;
   @Output() goToNextStep: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
@@ -1148,7 +1274,10 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog,
+    private gridService: SafeGridService
+  ) { }
 
   ngOnInit(): void {
     this.colsNumber &#x3D; this.setColsNumber(window.innerWidth);
@@ -1225,12 +1354,20 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
       dialogRef.close();
     });
   }
+
+  onAdd(e: any): void {
+    this.add.emit(e);
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;grid-container&quot;&gt;
+    &lt;div class&#x3D;&quot;widget-choice-wrapper&quot; *ngIf&#x3D;&quot;canUpdate&quot; [ngClass]&#x3D;&quot;{&#x27;floating-widget-choice-wrapper&#x27;: widgets.length &gt; 0}&quot;&gt;
+        &lt;h2 *ngIf&#x3D;&quot;widgets.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;Add a widget&lt;/h2&gt;
+        &lt;safe-widget-choice [floating]&#x3D;&quot;widgets.length &gt; 0&quot; [widgetTypes]&#x3D;&quot;widgetTypes&quot; (add)&#x3D;&quot;onAdd($event)&quot;&gt;&lt;/safe-widget-choice&gt;
+    &lt;/div&gt;
     &lt;mat-grid-list [cols]&#x3D;&quot;colsNumber&quot; rowHeight&#x3D;&quot;1:1&quot; gutterSize&#x3D;&quot;8px&quot;&gt;
         &lt;mat-grid-tile *ngFor&#x3D;&quot;let widget of widgets; let i &#x3D; index;&quot;
             [colspan]&#x3D;&quot;( widget.defaultCols &gt; colsNumber || (!canUpdate &amp;&amp; widgets.length &#x3D;&#x3D;&#x3D; 1) ) ? colsNumber : widget.defaultCols&quot;
@@ -1247,13 +1384,7 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
                     &lt;/safe-button&gt;
                 &lt;/div&gt;
             &lt;/cdk-drop-list&gt;
-
         &lt;/mat-grid-tile&gt;
-
-        &lt;mat-grid-tile colspan&#x3D;&quot;1&quot; [rowspan]&#x3D;&quot;dashboardMenuRowSpan&quot;&gt;
-          &lt;safe-dashboard-menu (add)&#x3D;&quot;addNewWidget.emit($event)&quot; *ngIf&#x3D;&quot;canUpdate&quot;&gt;&lt;/safe-dashboard-menu&gt;
-        &lt;/mat-grid-tile&gt;
-
     &lt;/mat-grid-list&gt;
 &lt;/div&gt;
 </code></pre>
@@ -1297,11 +1428,6 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
     flex-direction: column;
     box-shadow: 0 2px 5px 0 rgba(219,134,134,.2);
 }
-
-// .grid-widget:active {
-//     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-//         0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
-// }
 
 .widget-handle {
     position: absolute;
@@ -1351,11 +1477,21 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
     display: none;
 }
 
-// safe-dashboard-menu {
-//   position: absolute;
-//   left: 0;
-//   bottom: 0;
-// }
+.mat-grid-tile:last-child {
+    ::ng-deep.mat-figure {
+        align-items: unset;
+        justify-content: unset;
+    }
+}
+
+.floating-widget-choice-wrapper {
+    position: fixed;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3000;
+}
 </code></pre>
     </div>
 
@@ -1384,8 +1520,8 @@ export class SafeWidgetGridComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="grid-container">    <mat-grid-list [cols]="colsNumber" rowHeight="1:1" gutterSize="8px">        <mat-grid-tile *ngFor="let widget of widgets; let i = index;"            [colspan]="( widget.defaultCols > colsNumber || (!canUpdate && widgets.length === 1) ) ? colsNumber : widget.defaultCols"            [rowspan]="(!canUpdate && widgets.length === 1) ? 4 : ( widget.defaultRows > colsNumber) ? colsNumber : widget.defaultRows">            <cdk-drop-list [cdkDropListConnectedTo]="drops" [cdkDropListData]="i">                <div cdkDrag [cdkDragDisabled] = "!this.canUpdate" (cdkDragEntered)="onMove($event)" [cdkDragData]="i" class="grid-widget"                    cdkDragBoundary=".grid-container">                    <safe-floating-options class="widget-options" [widget]="widget" (edit)="onEditWidget($event)"                                           (delete)="onDeleteWidget($event)" (expand)="onExpandWidget($event)" *ngIf="canUpdate"></safe-floating-options>                    <safe-widget [widget]="widget" (goToNextStep)="goToNextStep.emit($event)"></safe-widget>                    <safe-button [isIcon]="true" icon="drag_indicator" class="widget-handle" cdkDragHandle *ngIf="canUpdate">                    </safe-button>                    <safe-button [isIcon]="true" icon="open_in_full" class="widget-expand" *ngIf="!canUpdate" (click)="onExpandWidget(widget)">                    </safe-button>                </div>            </cdk-drop-list>        </mat-grid-tile>        <mat-grid-tile colspan="1" [rowspan]="dashboardMenuRowSpan">          <safe-dashboard-menu (add)="addNewWidget.emit($event)" *ngIf="canUpdate"></safe-dashboard-menu>        </mat-grid-tile>    </mat-grid-list></div></div>'
-    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDashboardMenuComponent', 'selector': 'safe-dashboard-menu'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
+        var COMPONENT_TEMPLATE = '<div><div class="grid-container">    <div class="widget-choice-wrapper" *ngIf="canUpdate" [ngClass]="{\'floating-widget-choice-wrapper\': widgets.length > 0}">        <h2 *ngIf="widgets.length === 0">Add a widget</h2>        <safe-widget-choice [floating]="widgets.length > 0" [widgetTypes]="widgetTypes" (add)="onAdd($event)"></safe-widget-choice>    </div>    <mat-grid-list [cols]="colsNumber" rowHeight="1:1" gutterSize="8px">        <mat-grid-tile *ngFor="let widget of widgets; let i = index;"            [colspan]="( widget.defaultCols > colsNumber || (!canUpdate && widgets.length === 1) ) ? colsNumber : widget.defaultCols"            [rowspan]="(!canUpdate && widgets.length === 1) ? 4 : ( widget.defaultRows > colsNumber) ? colsNumber : widget.defaultRows">            <cdk-drop-list [cdkDropListConnectedTo]="drops" [cdkDropListData]="i">                <div cdkDrag [cdkDragDisabled] = "!this.canUpdate" (cdkDragEntered)="onMove($event)" [cdkDragData]="i" class="grid-widget"                    cdkDragBoundary=".grid-container">                    <safe-floating-options class="widget-options" [widget]="widget" (edit)="onEditWidget($event)"                                           (delete)="onDeleteWidget($event)" (expand)="onExpandWidget($event)" *ngIf="canUpdate"></safe-floating-options>                    <safe-widget [widget]="widget" (goToNextStep)="goToNextStep.emit($event)"></safe-widget>                    <safe-button [isIcon]="true" icon="drag_indicator" class="widget-handle" cdkDragHandle *ngIf="canUpdate">                    </safe-button>                    <safe-button [isIcon]="true" icon="open_in_full" class="widget-expand" *ngIf="!canUpdate" (click)="onExpandWidget(widget)">                    </safe-button>                </div>            </cdk-drop-list>        </mat-grid-tile>    </mat-grid-list></div></div>'
+    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeWidgetGridComponent'};
 </script>
