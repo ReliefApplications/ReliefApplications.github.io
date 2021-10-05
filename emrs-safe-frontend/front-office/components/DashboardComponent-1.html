@@ -616,7 +616,7 @@ import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
 
 import { GetDashboardByIdQueryResponse, GET_DASHBOARD_BY_ID } from &#x27;../../../graphql/queries&#x27;;
-import { Dashboard, SafeSnackBarService, SafeDashboardService } from &#x27;@safe/builder&#x27;;
+import { Dashboard, SafeSnackBarService, SafeDashboardService, NOTIFICATIONS } from &#x27;@safe/builder&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
 
 @Component({
@@ -662,13 +662,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
           this.tiles &#x3D; res.data.dashboard.structure ? res.data.dashboard.structure : [];
           this.loading &#x3D; res.loading;
         } else {
-          this.snackBar.openSnackBar(&#x27;No access provided to this dashboard.&#x27;, { error: true });
-          this.router.navigate([&#x27;/dashboards&#x27;]);
+          this.snackBar.openSnackBar(NOTIFICATIONS.accessNotProvided(&#x27;dashboard&#x27;), { error: true });
+          this.router.navigate([&#x27;/applications&#x27;]);
         }
       },
         (err) &#x3D;&gt; {
           this.snackBar.openSnackBar(err.message, { error: true });
-          this.router.navigate([&#x27;/dashboards&#x27;]);
+          this.router.navigate([&#x27;/applications&#x27;]);
         }
       );
     });
