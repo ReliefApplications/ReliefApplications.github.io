@@ -245,6 +245,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
+                                <a href="#extractChoices">extractChoices</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
                                 <a href="#flatDeep">flatDeep</a>
                             </li>
                             <li>
@@ -304,6 +308,11 @@
                                 <a href="#onShowDetails">onShowDetails</a>
                             </li>
                             <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#populateMetaFields">populateMetaFields</a>
+                            </li>
+                            <li>
                                 <a href="#selectionChange">selectionChange</a>
                             </li>
                         </ul>
@@ -361,12 +370,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(dialog: MatDialog, queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>, downloadService: <a href="../injectables/SafeDownloadService.html">SafeDownloadService</a>)</code>
+<code>constructor(dialog: MatDialog, queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>, downloadService: <a href="../injectables/SafeDownloadService.html">SafeDownloadService</a>, apiProxyService: <a href="../injectables/SafeApiProxyService.html">SafeApiProxyService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:96</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:97</a></div>
                             </td>
                         </tr>
 
@@ -419,6 +428,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>apiProxyService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeApiProxyService.html" target="_self" >SafeApiProxyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -445,7 +466,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:43</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:44</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -466,7 +487,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:53</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -492,7 +513,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:49</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:50</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -518,7 +539,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:46</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:47</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -542,7 +563,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:56</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -579,8 +600,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="217"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:217</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:220</a></div>
                 </td>
             </tr>
 
@@ -631,6 +652,102 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="extractChoices"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            extractChoices
+                        </b>
+                        <a href="#extractChoices"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractChoices(res: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, choicesByUrl: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="425"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:425</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Extracts choices using choicesByUrl properties</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Result of http request.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>choicesByUrl</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Choices By Url property.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>list of choices.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="flatDeep"></a>
                     <span class="name">
                         <b>
@@ -651,8 +768,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="228"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:228</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="231"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:231</a></div>
                 </td>
             </tr>
 
@@ -716,15 +833,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getDisplayText(choices: literal type[], value: string | string[])</code>
+                    <code>getDisplayText(value: string | string[], meta: literal type)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="357"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:357</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="360"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:360</a></div>
                 </td>
             </tr>
 
@@ -747,22 +864,6 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>choices</td>
-                                    <td>
-                                            <code>literal type[]</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>list of choices.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>value</td>
                                     <td>
                                             <code>string | string[]</code>
@@ -775,6 +876,22 @@
 
                                     <td>
                                         <p>question value.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>meta</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>meta data of the question.</p>
 
                                     </td>
                                 </tr>
@@ -819,8 +936,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="232"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:232</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:235</a></div>
                 </td>
             </tr>
 
@@ -891,8 +1008,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="194"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:194</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="197"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:197</a></div>
                 </td>
             </tr>
 
@@ -987,8 +1104,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="274"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:274</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="277"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:277</a></div>
                 </td>
             </tr>
 
@@ -1059,8 +1176,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="261"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:261</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="264"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:264</a></div>
                 </td>
             </tr>
 
@@ -1131,8 +1248,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="133"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:133</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:136</a></div>
                 </td>
             </tr>
 
@@ -1172,8 +1289,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="184"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:184</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:187</a></div>
                 </td>
             </tr>
 
@@ -1213,8 +1330,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="115"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:115</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:117</a></div>
                 </td>
             </tr>
 
@@ -1252,8 +1369,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="109"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:109</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:111</a></div>
                 </td>
             </tr>
 
@@ -1291,8 +1408,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:106</a></div>
                 </td>
             </tr>
 
@@ -1330,8 +1447,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="304"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:304</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="307"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:307</a></div>
                 </td>
             </tr>
 
@@ -1402,14 +1519,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="379"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:379</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="388"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:388</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Downloads the file.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1419,6 +1538,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1433,6 +1553,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>file to download.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1474,8 +1598,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="367"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:367</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="374"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:374</a></div>
                 </td>
             </tr>
 
@@ -1556,8 +1680,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="332"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:332</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="335"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:335</a></div>
                 </td>
             </tr>
 
@@ -1628,8 +1752,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="320"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:320</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="323"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:323</a></div>
                 </td>
             </tr>
 
@@ -1680,6 +1804,50 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="populateMetaFields"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                            populateMetaFields
+                        </b>
+                        <a href="#populateMetaFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>populateMetaFields()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="396"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:396</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch choices from URL if needed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="selectionChange"></a>
                     <span class="name">
                         <b>
@@ -1698,8 +1866,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="300"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:300</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="303"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:303</a></div>
                 </td>
             </tr>
 
@@ -1778,7 +1946,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:68</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:69</a></div>
                             </td>
                         </tr>
 
@@ -1805,7 +1973,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:69</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:70</a></div>
                             </td>
                         </tr>
 
@@ -1833,7 +2001,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:75</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:76</a></div>
                             </td>
                         </tr>
 
@@ -1862,7 +2030,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:77</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:78</a></div>
                             </td>
                         </tr>
 
@@ -1890,7 +2058,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:78</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:79</a></div>
                             </td>
                         </tr>
 
@@ -1918,7 +2086,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:99</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:100</a></div>
                             </td>
                         </tr>
 
@@ -1945,7 +2113,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:96</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:97</a></div>
                             </td>
                         </tr>
 
@@ -1978,7 +2146,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:85</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:86</a></div>
                             </td>
                         </tr>
 
@@ -2011,7 +2179,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:83</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:84</a></div>
                             </td>
                         </tr>
 
@@ -2038,7 +2206,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:96</a></div>
                             </td>
                         </tr>
 
@@ -2071,7 +2239,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:67</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:68</a></div>
                             </td>
                         </tr>
 
@@ -2104,7 +2272,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:63</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:64</a></div>
                             </td>
                         </tr>
 
@@ -2137,7 +2305,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:71</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:72</a></div>
                             </td>
                         </tr>
 
@@ -2164,7 +2332,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:80</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:81</a></div>
                             </td>
                         </tr>
 
@@ -2192,7 +2360,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:74</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:75</a></div>
                             </td>
                         </tr>
 
@@ -2220,7 +2388,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:73</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:74</a></div>
                             </td>
                         </tr>
 
@@ -2253,7 +2421,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:60</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:61</a></div>
                             </td>
                         </tr>
 
@@ -2280,7 +2448,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:81</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:82</a></div>
                             </td>
                         </tr>
 
@@ -2308,7 +2476,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:57</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:58</a></div>
                             </td>
                         </tr>
 
@@ -2335,7 +2503,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:64</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -2372,7 +2540,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:89</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:90</a></div>
                             </td>
                         </tr>
 
@@ -2405,7 +2573,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:88</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:89</a></div>
                             </td>
                         </tr>
 
@@ -2430,6 +2598,7 @@ import { QueryBuilderService } from &#x27;../../services/query-builder.service&#
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
 import { GradientSettings } from &#x27;@progress/kendo-angular-inputs&#x27;;
 import { MAT_TOOLTIP_SCROLL_STRATEGY } from &#x27;@angular/material/tooltip&#x27;;
+import { SafeApiProxyService } from &#x27;../../services/api-proxy.service&#x27;;
 
 const DISABLED_FIELDS &#x3D; [&#x27;id&#x27;, &#x27;createdAt&#x27;, &#x27;modifiedAt&#x27;];
 
@@ -2518,7 +2687,8 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
   constructor(
     public dialog: MatDialog,
     private queryBuilder: QueryBuilderService,
-    private downloadService: SafeDownloadService
+    private downloadService: SafeDownloadService,
+    private apiProxyService: SafeApiProxyService
   ) { }
 
   ngOnInit(): void {
@@ -2536,10 +2706,11 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
     this.dataQuery &#x3D; this.queryBuilder.buildQuery(this.settings);
     this.metaQuery &#x3D; this.queryBuilder.buildMetaQuery(this.settings, this.parent);
     if (this.metaQuery) {
-      this.metaQuery.subscribe((res: any) &#x3D;&gt; {
+      this.metaQuery.subscribe(async (res: any) &#x3D;&gt; {
         for (const field in res.data) {
           if (Object.prototype.hasOwnProperty.call(res.data, field)) {
-            this.metaFields &#x3D; res.data[field];
+            this.metaFields &#x3D; Object.assign({}, res.data[field]);
+            await this.populateMetaFields();
           }
         }
         this.getRecords();
@@ -2770,15 +2941,19 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
 
   /**
    * Displays text instead of values for questions with select.
-   * @param choices list of choices.
+   * @param meta meta data of the question.
    * @param value question value.
    * @returns text value of the question.
    */
-  public getDisplayText(choices: { value: string, text: string }[], value: string | string[]): string | string[] {
-    if (Array.isArray(value)) {
-      return choices.reduce((acc: string[], x) &#x3D;&gt; value.includes(x.value) ? acc.concat([x.text]) : acc, []);
+  public getDisplayText(value: string | string[], meta: { choices?: { value: string, text: string }[] }): string | string[] {
+    if (meta.choices) {
+      if (Array.isArray(value)) {
+        return meta.choices.reduce((acc: string[], x) &#x3D;&gt; value.includes(x.value) ? acc.concat([x.text]) : acc, []);
+      } else {
+        return meta.choices.find(x &#x3D;&gt; x.value &#x3D;&#x3D;&#x3D; value)?.text || &#x27;&#x27;;
+      }
     } else {
-      return choices.find(x &#x3D;&gt; x.value &#x3D;&#x3D;&#x3D; value)?.text || &#x27;&#x27;;
+      return value;
     }
   }
 
@@ -2794,13 +2969,54 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
   //   return (e.offsetWidth &lt; e.scrollWidth);
   // }
 
-  /* Download the file.
-*/
+  /**
+   * Downloads the file.
+   * @param file file to download.
+   */
   public onDownload(file: any): void {
     const path &#x3D; &#x60;download/file/${file.content}&#x60;;
     this.downloadService.getFile(path, file.type, file.name);
   }
 
+  /**
+   * Fetch choices from URL if needed
+   */
+  private async populateMetaFields(): Promise&lt;void&gt; {
+    for (const fieldName of Object.keys(this.metaFields)) {
+      const meta &#x3D; this.metaFields[fieldName];
+      if (meta.choicesByUrl) {
+        const url: string &#x3D; meta.choicesByUrl.url;
+        const localRes &#x3D; localStorage.getItem(url);
+        if (localRes) {
+          this.metaFields[fieldName] &#x3D; {
+            ...meta,
+            choices: this.extractChoices(JSON.parse(localRes), meta.choicesByUrl)
+          };
+        } else {
+          const res: any &#x3D; await this.apiProxyService.promisedRequestWithHeaders(url);
+          localStorage.setItem(url, JSON.stringify(res));
+          this.metaFields[fieldName] &#x3D; {
+            ...meta,
+            choices: this.extractChoices(res, meta.choicesByUrl)
+          };
+        }
+      }
+    }
+  }
+
+  /**
+   * Extracts choices using choicesByUrl properties
+   * @param res Result of http request.
+   * @param choicesByUrl Choices By Url property.
+   * @returns list of choices.
+   */
+  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string }): { value: string, text: string }[] {
+    const choices &#x3D; choicesByUrl.path ? [...res[choicesByUrl.path]] : [...res];
+    return choices ? choices.map((x: any) &#x3D;&gt; ({
+      value: (choicesByUrl.value ? x[choicesByUrl.value] : x).toString(),
+      text: choicesByUrl.text ? x[choicesByUrl.text] : choicesByUrl.value ? x[choicesByUrl.value] : x
+    })) : [];
+  }
 }
 </code></pre>
     </div>
@@ -2853,7 +3069,7 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
         &lt;/ng-template&gt;
         &lt;!-- DISPLAY ( dropdown / radiogroup ) --&gt;
         &lt;ng-template kendoGridCellTemplate let-dataItem&#x3D;&quot;dataItem&quot; *ngIf&#x3D;&quot;field.meta.type &#x3D;&#x3D;&#x3D; &#x27;dropdown&#x27; || field.meta.type &#x3D;&#x3D;&#x3D; &#x27;radiogroup&#x27;&quot;&gt;
-          {{ getDisplayText(field.meta.choices, dataItem[field.name]) }}
+          {{ getDisplayText(dataItem[field.name], field.meta) }}
         &lt;/ng-template&gt;
       &lt;/ng-container&gt;
       &lt;!-- EDITION ( text / color / comment - resource - dropdown ) --&gt;
@@ -2903,7 +3119,7 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
       [editor]&#x3D;&quot;field.editor&quot; [editable]&#x3D;&quot;!field.disabled&quot; [width]&#x3D;&quot;field.title.length * 7 + 50&quot;
       [minResizableWidth]&#x3D;&quot;50&quot;&gt;
       &lt;ng-template kendoGridCellTemplate let-dataItem&#x3D;&quot;dataItem&quot;&gt;
-        {{ dataItem[field.name] }}
+        {{ getDisplayText(dataItem[field.name], field.meta) }}
       &lt;/ng-template&gt;
       &lt;ng-template kendoGridEditTemplate let-dataItem&#x3D;&quot;dataItem&quot; let-formGroup&#x3D;&quot;formGroup&quot;&gt;
         &lt;kendo-multiselect [data]&#x3D;&quot;field.meta.choices&quot;
@@ -3152,7 +3368,7 @@ textarea {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><kendo-grid [loading]="loading" [data]="gridData" [autoSize]="false" [height]="410"  [selectable]="!readOnly && selectableSettings" kendoGridSelectBy [selectedKeys]="selectedRowsIndex"  (selectionChange)="selectionChange($event)">  <ng-template kendoGridToolbarTemplate>    <input placeholder="Search in all columns..." kendoTextBox (input)="onFilter($event.target)" />  </ng-template>  <ng-template kendoGridToolbarTemplate position="top" *ngIf="!readOnly">    <mat-form-field *ngIf="availableRecords.length > 0">      <mat-select (selectionChange)="onAdd($event)" placeholder="Add record...">        <mat-option *ngFor="let data of availableRecords" [value]="data.value">{{data.text}}</mat-option>      </mat-select>    </mat-form-field>  </ng-template>  <kendo-grid-checkbox-column [width]="41" [resizable]="false" [columnMenu]="false" [showSelectAll]="multiSelect"    *ngIf="!readOnly">  </kendo-grid-checkbox-column>  <!-- ************************************************************ !-->  <ng-container *ngFor="let field of fields">    <!-- SIMPLE QUESTIONS TYPES ( text / comment - resource - dropdown - radiogroup - boolean - numeric - date / datetime / datetime-local / time ) -->    <kendo-grid-column *ngIf="field && field.type !== \'JSON\'" [field]="field.name"      [title]="field.title" [format]="field.format" [editor]="field.editor"      [editable]="field.editor && !field.disabled" [filter]="field.filter"      [filterable]="field.filter" [width]="field.title.length * 7 + 50" [minResizableWidth]="50">      <!-- DISPLAY -->      <ng-container *ngIf="field.meta">        <!-- DISPLAY ( text / comment ) -->        <ng-template #refSpan kendoGridCellTemplate let-dataItem="dataItem" *ngIf="field.meta.type === \'text\'">          <div class="textbox-container">            <div #refSpan class="textbox">              {{dataItem[field.name]}}            </div>            <!-- <div class="expand-text-wrapper" *ngIf="isEllipsisActive(refSpan)">              <button class="expand-text-button" (click)="onExpandComment(dataItem, field.name)" mat-icon-button>                <mat-icon class="expand-text-icon" matTooltip="Open in full width">launch                </mat-icon>              </button>            </div> -->          </div>        </ng-template>        <!-- DISPLAY ( color ) -->        <ng-template kendoGridCellTemplate let-dataItem="dataItem" *ngIf="field.meta.type === \'color\'">          <!-- In order to display the div -->          <div [style.background-color]="dataItem[field.name]">&nbsp;</div>        </ng-template>        <!-- DISPLAY ( dropdown / radiogroup ) -->        <ng-template kendoGridCellTemplate let-dataItem="dataItem" *ngIf="field.meta.type === \'dropdown\' || field.meta.type === \'radiogroup\'">          {{ getDisplayText(field.meta.choices, dataItem[field.name]) }}        </ng-template>      </ng-container>      <!-- EDITION ( text / color / comment - resource - dropdown ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'text\'">        <!-- EDITION ( text / comment ) -->        <ng-container *ngIf="field.meta.type === \'text\'">          <textarea rows="2" [formControl]="formGroup.get(field.name)" kendoGridFocusable            [name]="field.name" class="k-textbox"></textarea>        </ng-container>        <!-- EDITION ( color ) -->        <ng-container *ngIf="field.meta.type === \'color\'">          <kendo-colorpicker [formControl]="formGroup.get(field.name)" [format]="\'hex\'"            [gradientSettings]="gradientSettings" (open)="editionActive = true" (close)="editionActive = false">          </kendo-colorpicker>        </ng-container>        <!-- EDITION ( dropdown / radiogroup ) -->        <ng-container *ngIf="field.meta.type === \'dropdown\' || field.meta.type === \'radiogroup\'">          <kendo-dropdownlist [data]="field.meta.choices"            [textField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.text : field.meta.choices.text ? \'text\' : null"            [valueField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.value : field.meta.choices.value ? \'value\' : null"            [valuePrimitive]="true" [formControl]="formGroup.get(field.name)"></kendo-dropdownlist>        </ng-container>      </ng-template>      <!-- EDITION ( date ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'date\'">        <kendo-datepicker [formControl]="formGroup.get(field.name)" [format]="field.format"          (open)="editionActive = true" (close)="editionActive = false"></kendo-datepicker>      </ng-template>      <!-- EDITION ( time ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'time\'">        <kendo-timepicker [formControl]="formGroup.get(field.name)" [format]="field.format"          (open)="editionActive = true" (close)="editionActive = false"></kendo-timepicker>      </ng-template>      <!-- EDITION ( datetime / datetime-local ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'datetime\'">        <kendo-datetimepicker [formControl]="formGroup.get(field.name)" [format]="field.format"          (open)="editionActive = true" (close)="editionActive = false"></kendo-datetimepicker>      </ng-template>    </kendo-grid-column>    <!-- MULTI SELECT QUESTION TYPES ( checkbox ) -->    <kendo-grid-column [title]="field.title"      *ngIf="field.type === \'JSON\' && multiSelectTypes.includes(field.meta.type)" [columnMenu]="false"      [editor]="field.editor" [editable]="!field.disabled" [width]="field.title.length * 7 + 50"      [minResizableWidth]="50">      <ng-template kendoGridCellTemplate let-dataItem="dataItem">        {{ dataItem[field.name] }}      </ng-template>      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup">        <kendo-multiselect [data]="field.meta.choices"          [textField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.text : field.meta.choices.text ? \'text\' : null"          [valueField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.value : field.meta.choices.value ? \'value\' : null"          [valuePrimitive]="true" [formControl]="formGroup.get(field.name)" [autoClose]="false">        </kendo-multiselect>      </ng-template>    </kendo-grid-column>    <!-- FILE -->    <kendo-grid-column [title]="field.title"      *ngIf="field.type === \'JSON\' && field.meta.type === \'file\'" [columnMenu]="false" [editable]="false"      [width]="field.title.length * 7 + 50" [minResizableWidth]="50">      <ng-template kendoGridCellTemplate let-dataItem="dataItem">        <button kendoButton icon="file-data" *ngFor="let file of dataItem[field.name]" [look]="\'flat\'"          [matTooltip]="file.name" (click)="onDownload(file)"></button>      </ng-template>    </kendo-grid-column>    <!-- COMPLEX QUESTION TYPES ( matrix / matrixdropdown / matrixdynamic / multipletext ) -->    <kendo-grid-column-group [title]="field.title"      *ngIf="field.type === \'JSON\' && !multiSelectTypes.includes(field.meta.type) && field.meta.type !== \'file\'">      <ng-container *ngIf="![\'multipletext\', \'matrixdynamic\'].includes(field.meta.type)">        <!-- QUESTION ROWS ( matrix / matrixdropdown ) -->        <kendo-grid-column [columnMenu]="false" [width]="field.title.length * 7 + 50" [minResizableWidth]="50"          [editable]="!field.disabled">          <ng-template kendoGridCellTemplate let-dataItem="dataItem">            <ul class="matrix-cell">              <li *ngFor="let row of field.meta.rows">                {{ row.label }}              </li>            </ul>          </ng-template>        </kendo-grid-column>      </ng-container>      <!-- QUESTION COLUMNS / ITEMS -->      <ng-container        *ngFor="let column of (field.meta.columns ? field.meta.columns : field.meta.items)">        <kendo-grid-column [title]="column.label" [columnMenu]="false" [width]="column.label.length * 7 + 50"          [minResizableWidth]="50" [editable]="!field.disabled">          <ng-template kendoGridCellTemplate let-dataItem="dataItem">            <!-- DISPLAY ( matrix / matrixdropdown / matrixdynamic ) -->            <ng-container *ngIf="field.meta.type !== \'multipletext\'">              <ul class="matrix-cell">                <ng-container *ngIf="field.meta.type === \'matrix\'">                  <li *ngFor="let row of field.meta.rows">                    <input type="radio" kendoRadioButton                      [checked]="dataItem[field.name] && dataItem[field.name][row.name] === column.name"                      disabled />                  </li>                </ng-container>                <ng-container *ngIf="field.meta.type === \'matrixdropdown\'">                  <li *ngFor="let row of field.meta.rows">                    <ng-container                      *ngIf="[\'text\', \'dropdown\', \'radiogroup\'].includes(column.type) && dataItem[field.name] && dataItem[field.name][row.name]">                      {{ dataItem[field.name][row.name][column.name] }}                    </ng-container>                  </li>                </ng-container>                <ng-container *ngIf="field.meta.type === \'matrixdynamic\'">                  <li *ngFor="let row of dataItem[field.name]">                    <ng-container *ngIf="row[column.name] || row[column.name] === false">                      {{ row[column.name] }}                    </ng-container>                  </li>                </ng-container>              </ul>            </ng-container>            <!-- DISPLAY ( multipletext ) -->            <ng-container *ngIf="field.meta.type === \'multipletext\' && dataItem[field.name]">              {{ dataItem[field.name][column.name] }}            </ng-container>          </ng-template>          <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup">            <!-- EDITION ( matrix / matrixdropdown / matrixdynamic ) -->            <ng-container *ngIf="field.meta.type !== \'multipletext\'">              <ul class="matrix-cell">                <!-- EDITION ( matrix ) -->                <ng-container *ngIf="field.meta.type === \'matrix\'">                  <li *ngFor="let row of field.meta.rows">                    <input type="radio" kendoRadioButton [value]="column.name" [name]="field.name + row.name"                      [formControl]="formGroup.get([field.name, row.name])" />                  </li>                </ng-container>                <!-- EDITION ( matrixdropdown ) -->                <ng-container *ngIf="field.meta.type === \'matrixdropdown\'">                  <li *ngFor="let row of field.meta.rows">                    <ng-container *ngIf="column.type === \'text\'">                      <textarea rows="2" [formControl]="formGroup.get([field.name, row.name, column.name])"                        kendoGridFocusable [name]="row.name" class="k-textbox"></textarea>                    </ng-container>                    <ng-container *ngIf="[\'dropdown\', \'radiogroup\'].includes(column.type)">                      <kendo-dropdownlist [data]="field.meta.choices" [textField]="\'text\'" [valueField]="\'value\'"                        [valuePrimitive]="true"                        [formControl]="formGroup.get([field.name, row.name, column.name])">                      </kendo-dropdownlist>                    </ng-container>                  </li>                </ng-container>                <!-- EDITION ( matrixdynamic ) -->                <ng-container *ngIf="field.meta.type === \'matrixdynamic\'">                  <li *ngFor="let group of formGroup.get(field.name).controls; let i = index" [formGroup]="group">                    <ng-container *ngIf="column.cellType === \'text\'">                      <textarea rows="2" [formControlName]="column.name" kendoGridFocusable                        [name]="field.name + i" class="k-textbox"></textarea>                    </ng-container>                    <ng-container *ngIf="[\'dropdown\', \'radiogroup\'].includes(column.cellType)">                      <kendo-dropdownlist [data]="field.meta.choices" [textField]="\'text\'" [valueField]="\'value\'"                        [valuePrimitive]="true" [formControlName]="column.name">                      </kendo-dropdownlist>                    </ng-container>                    <ng-container *ngIf="column.cellType === \'boolean\'">                      <input type="checkbox" kendoCheckBox [formControlName]="column.name" />                    </ng-container>                    <ng-container *ngIf="multiSelectTypes.includes(column.cellType)">                      <kendo-multiselect [data]="field.meta.choices" [textField]="\'text\'" [valueField]="\'value\'"                        [valuePrimitive]="true" [formControlName]="column.name" [autoClose]="false">                      </kendo-multiselect>                    </ng-container>                  </li>                </ng-container>              </ul>            </ng-container>            <!-- EDITION ( multipletext ) -->            <ng-container *ngIf="field.meta.type === \'multipletext\'">              <textarea rows="2" [formControl]="formGroup.get([field.name, column.name])" kendoGridFocusable                [name]="column.name" class="k-textbox"></textarea>            </ng-container>          </ng-template>        </kendo-grid-column>      </ng-container>    </kendo-grid-column-group>  </ng-container>  <!-- ************************************************************ !-->  <kendo-grid-column [columnMenu]="false" [width]="45">    <ng-template kendoGridCellTemplate let-idx="rowIndex">      <button (click)="onShowDetails(idx)" kendoButton [icon]="\'detail-section\'" [look]="\'flat\'">      </button>    </ng-template>  </kendo-grid-column>  <!-- EMPTY TABLE / INVALID QUERY -->  <ng-template kendoGridNoRecordsTemplate>    {{ queryError ? \'Invalid data query.\' : \'No record detected.\' }}  </ng-template>  <!-- ROW SUBGRID -->  <ng-container *ngIf="detailsField">    <div *kendoGridDetailTemplate="let dataItem">      <safe-resource-grid [settings]="detailsField" [parent]="dataItem"></safe-resource-grid>    </div>  </ng-container></kendo-grid></div>'
+        var COMPONENT_TEMPLATE = '<div><kendo-grid [loading]="loading" [data]="gridData" [autoSize]="false" [height]="410"  [selectable]="!readOnly && selectableSettings" kendoGridSelectBy [selectedKeys]="selectedRowsIndex"  (selectionChange)="selectionChange($event)">  <ng-template kendoGridToolbarTemplate>    <input placeholder="Search in all columns..." kendoTextBox (input)="onFilter($event.target)" />  </ng-template>  <ng-template kendoGridToolbarTemplate position="top" *ngIf="!readOnly">    <mat-form-field *ngIf="availableRecords.length > 0">      <mat-select (selectionChange)="onAdd($event)" placeholder="Add record...">        <mat-option *ngFor="let data of availableRecords" [value]="data.value">{{data.text}}</mat-option>      </mat-select>    </mat-form-field>  </ng-template>  <kendo-grid-checkbox-column [width]="41" [resizable]="false" [columnMenu]="false" [showSelectAll]="multiSelect"    *ngIf="!readOnly">  </kendo-grid-checkbox-column>  <!-- ************************************************************ !-->  <ng-container *ngFor="let field of fields">    <!-- SIMPLE QUESTIONS TYPES ( text / comment - resource - dropdown - radiogroup - boolean - numeric - date / datetime / datetime-local / time ) -->    <kendo-grid-column *ngIf="field && field.type !== \'JSON\'" [field]="field.name"      [title]="field.title" [format]="field.format" [editor]="field.editor"      [editable]="field.editor && !field.disabled" [filter]="field.filter"      [filterable]="field.filter" [width]="field.title.length * 7 + 50" [minResizableWidth]="50">      <!-- DISPLAY -->      <ng-container *ngIf="field.meta">        <!-- DISPLAY ( text / comment ) -->        <ng-template #refSpan kendoGridCellTemplate let-dataItem="dataItem" *ngIf="field.meta.type === \'text\'">          <div class="textbox-container">            <div #refSpan class="textbox">              {{dataItem[field.name]}}            </div>            <!-- <div class="expand-text-wrapper" *ngIf="isEllipsisActive(refSpan)">              <button class="expand-text-button" (click)="onExpandComment(dataItem, field.name)" mat-icon-button>                <mat-icon class="expand-text-icon" matTooltip="Open in full width">launch                </mat-icon>              </button>            </div> -->          </div>        </ng-template>        <!-- DISPLAY ( color ) -->        <ng-template kendoGridCellTemplate let-dataItem="dataItem" *ngIf="field.meta.type === \'color\'">          <!-- In order to display the div -->          <div [style.background-color]="dataItem[field.name]">&nbsp;</div>        </ng-template>        <!-- DISPLAY ( dropdown / radiogroup ) -->        <ng-template kendoGridCellTemplate let-dataItem="dataItem" *ngIf="field.meta.type === \'dropdown\' || field.meta.type === \'radiogroup\'">          {{ getDisplayText(dataItem[field.name], field.meta) }}        </ng-template>      </ng-container>      <!-- EDITION ( text / color / comment - resource - dropdown ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'text\'">        <!-- EDITION ( text / comment ) -->        <ng-container *ngIf="field.meta.type === \'text\'">          <textarea rows="2" [formControl]="formGroup.get(field.name)" kendoGridFocusable            [name]="field.name" class="k-textbox"></textarea>        </ng-container>        <!-- EDITION ( color ) -->        <ng-container *ngIf="field.meta.type === \'color\'">          <kendo-colorpicker [formControl]="formGroup.get(field.name)" [format]="\'hex\'"            [gradientSettings]="gradientSettings" (open)="editionActive = true" (close)="editionActive = false">          </kendo-colorpicker>        </ng-container>        <!-- EDITION ( dropdown / radiogroup ) -->        <ng-container *ngIf="field.meta.type === \'dropdown\' || field.meta.type === \'radiogroup\'">          <kendo-dropdownlist [data]="field.meta.choices"            [textField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.text : field.meta.choices.text ? \'text\' : null"            [valueField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.value : field.meta.choices.value ? \'value\' : null"            [valuePrimitive]="true" [formControl]="formGroup.get(field.name)"></kendo-dropdownlist>        </ng-container>      </ng-template>      <!-- EDITION ( date ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'date\'">        <kendo-datepicker [formControl]="formGroup.get(field.name)" [format]="field.format"          (open)="editionActive = true" (close)="editionActive = false"></kendo-datepicker>      </ng-template>      <!-- EDITION ( time ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'time\'">        <kendo-timepicker [formControl]="formGroup.get(field.name)" [format]="field.format"          (open)="editionActive = true" (close)="editionActive = false"></kendo-timepicker>      </ng-template>      <!-- EDITION ( datetime / datetime-local ) -->      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup"        *ngIf="field.editor === \'datetime\'">        <kendo-datetimepicker [formControl]="formGroup.get(field.name)" [format]="field.format"          (open)="editionActive = true" (close)="editionActive = false"></kendo-datetimepicker>      </ng-template>    </kendo-grid-column>    <!-- MULTI SELECT QUESTION TYPES ( checkbox ) -->    <kendo-grid-column [title]="field.title"      *ngIf="field.type === \'JSON\' && multiSelectTypes.includes(field.meta.type)" [columnMenu]="false"      [editor]="field.editor" [editable]="!field.disabled" [width]="field.title.length * 7 + 50"      [minResizableWidth]="50">      <ng-template kendoGridCellTemplate let-dataItem="dataItem">        {{ getDisplayText(dataItem[field.name], field.meta) }}      </ng-template>      <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup">        <kendo-multiselect [data]="field.meta.choices"          [textField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.text : field.meta.choices.text ? \'text\' : null"          [valueField]="field.meta.choicesByUrl ? field.meta.choicesByUrl.value : field.meta.choices.value ? \'value\' : null"          [valuePrimitive]="true" [formControl]="formGroup.get(field.name)" [autoClose]="false">        </kendo-multiselect>      </ng-template>    </kendo-grid-column>    <!-- FILE -->    <kendo-grid-column [title]="field.title"      *ngIf="field.type === \'JSON\' && field.meta.type === \'file\'" [columnMenu]="false" [editable]="false"      [width]="field.title.length * 7 + 50" [minResizableWidth]="50">      <ng-template kendoGridCellTemplate let-dataItem="dataItem">        <button kendoButton icon="file-data" *ngFor="let file of dataItem[field.name]" [look]="\'flat\'"          [matTooltip]="file.name" (click)="onDownload(file)"></button>      </ng-template>    </kendo-grid-column>    <!-- COMPLEX QUESTION TYPES ( matrix / matrixdropdown / matrixdynamic / multipletext ) -->    <kendo-grid-column-group [title]="field.title"      *ngIf="field.type === \'JSON\' && !multiSelectTypes.includes(field.meta.type) && field.meta.type !== \'file\'">      <ng-container *ngIf="![\'multipletext\', \'matrixdynamic\'].includes(field.meta.type)">        <!-- QUESTION ROWS ( matrix / matrixdropdown ) -->        <kendo-grid-column [columnMenu]="false" [width]="field.title.length * 7 + 50" [minResizableWidth]="50"          [editable]="!field.disabled">          <ng-template kendoGridCellTemplate let-dataItem="dataItem">            <ul class="matrix-cell">              <li *ngFor="let row of field.meta.rows">                {{ row.label }}              </li>            </ul>          </ng-template>        </kendo-grid-column>      </ng-container>      <!-- QUESTION COLUMNS / ITEMS -->      <ng-container        *ngFor="let column of (field.meta.columns ? field.meta.columns : field.meta.items)">        <kendo-grid-column [title]="column.label" [columnMenu]="false" [width]="column.label.length * 7 + 50"          [minResizableWidth]="50" [editable]="!field.disabled">          <ng-template kendoGridCellTemplate let-dataItem="dataItem">            <!-- DISPLAY ( matrix / matrixdropdown / matrixdynamic ) -->            <ng-container *ngIf="field.meta.type !== \'multipletext\'">              <ul class="matrix-cell">                <ng-container *ngIf="field.meta.type === \'matrix\'">                  <li *ngFor="let row of field.meta.rows">                    <input type="radio" kendoRadioButton                      [checked]="dataItem[field.name] && dataItem[field.name][row.name] === column.name"                      disabled />                  </li>                </ng-container>                <ng-container *ngIf="field.meta.type === \'matrixdropdown\'">                  <li *ngFor="let row of field.meta.rows">                    <ng-container                      *ngIf="[\'text\', \'dropdown\', \'radiogroup\'].includes(column.type) && dataItem[field.name] && dataItem[field.name][row.name]">                      {{ dataItem[field.name][row.name][column.name] }}                    </ng-container>                  </li>                </ng-container>                <ng-container *ngIf="field.meta.type === \'matrixdynamic\'">                  <li *ngFor="let row of dataItem[field.name]">                    <ng-container *ngIf="row[column.name] || row[column.name] === false">                      {{ row[column.name] }}                    </ng-container>                  </li>                </ng-container>              </ul>            </ng-container>            <!-- DISPLAY ( multipletext ) -->            <ng-container *ngIf="field.meta.type === \'multipletext\' && dataItem[field.name]">              {{ dataItem[field.name][column.name] }}            </ng-container>          </ng-template>          <ng-template kendoGridEditTemplate let-dataItem="dataItem" let-formGroup="formGroup">            <!-- EDITION ( matrix / matrixdropdown / matrixdynamic ) -->            <ng-container *ngIf="field.meta.type !== \'multipletext\'">              <ul class="matrix-cell">                <!-- EDITION ( matrix ) -->                <ng-container *ngIf="field.meta.type === \'matrix\'">                  <li *ngFor="let row of field.meta.rows">                    <input type="radio" kendoRadioButton [value]="column.name" [name]="field.name + row.name"                      [formControl]="formGroup.get([field.name, row.name])" />                  </li>                </ng-container>                <!-- EDITION ( matrixdropdown ) -->                <ng-container *ngIf="field.meta.type === \'matrixdropdown\'">                  <li *ngFor="let row of field.meta.rows">                    <ng-container *ngIf="column.type === \'text\'">                      <textarea rows="2" [formControl]="formGroup.get([field.name, row.name, column.name])"                        kendoGridFocusable [name]="row.name" class="k-textbox"></textarea>                    </ng-container>                    <ng-container *ngIf="[\'dropdown\', \'radiogroup\'].includes(column.type)">                      <kendo-dropdownlist [data]="field.meta.choices" [textField]="\'text\'" [valueField]="\'value\'"                        [valuePrimitive]="true"                        [formControl]="formGroup.get([field.name, row.name, column.name])">                      </kendo-dropdownlist>                    </ng-container>                  </li>                </ng-container>                <!-- EDITION ( matrixdynamic ) -->                <ng-container *ngIf="field.meta.type === \'matrixdynamic\'">                  <li *ngFor="let group of formGroup.get(field.name).controls; let i = index" [formGroup]="group">                    <ng-container *ngIf="column.cellType === \'text\'">                      <textarea rows="2" [formControlName]="column.name" kendoGridFocusable                        [name]="field.name + i" class="k-textbox"></textarea>                    </ng-container>                    <ng-container *ngIf="[\'dropdown\', \'radiogroup\'].includes(column.cellType)">                      <kendo-dropdownlist [data]="field.meta.choices" [textField]="\'text\'" [valueField]="\'value\'"                        [valuePrimitive]="true" [formControlName]="column.name">                      </kendo-dropdownlist>                    </ng-container>                    <ng-container *ngIf="column.cellType === \'boolean\'">                      <input type="checkbox" kendoCheckBox [formControlName]="column.name" />                    </ng-container>                    <ng-container *ngIf="multiSelectTypes.includes(column.cellType)">                      <kendo-multiselect [data]="field.meta.choices" [textField]="\'text\'" [valueField]="\'value\'"                        [valuePrimitive]="true" [formControlName]="column.name" [autoClose]="false">                      </kendo-multiselect>                    </ng-container>                  </li>                </ng-container>              </ul>            </ng-container>            <!-- EDITION ( multipletext ) -->            <ng-container *ngIf="field.meta.type === \'multipletext\'">              <textarea rows="2" [formControl]="formGroup.get([field.name, column.name])" kendoGridFocusable                [name]="column.name" class="k-textbox"></textarea>            </ng-container>          </ng-template>        </kendo-grid-column>      </ng-container>    </kendo-grid-column-group>  </ng-container>  <!-- ************************************************************ !-->  <kendo-grid-column [columnMenu]="false" [width]="45">    <ng-template kendoGridCellTemplate let-idx="rowIndex">      <button (click)="onShowDetails(idx)" kendoButton [icon]="\'detail-section\'" [look]="\'flat\'">      </button>    </ng-template>  </kendo-grid-column>  <!-- EMPTY TABLE / INVALID QUERY -->  <ng-template kendoGridNoRecordsTemplate>    {{ queryError ? \'Invalid data query.\' : \'No record detected.\' }}  </ng-template>  <!-- ROW SUBGRID -->  <ng-container *ngIf="detailsField">    <div *kendoGridDetailTemplate="let dataItem">      <safe-resource-grid [settings]="detailsField" [parent]="dataItem"></safe-resource-grid>    </div>  </ng-container></kendo-grid></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeResourceGridComponent'};
