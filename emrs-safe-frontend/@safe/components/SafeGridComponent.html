@@ -6714,7 +6714,7 @@ export class SafeGridComponent implements OnInit, OnChanges, OnDestroy {
     for (const field of fields) {
       switch (field.kind) {
         case &#x27;LIST&#x27;:
-          body +&#x3D; &#x60;${tabs}${field.name}:\n&#x60;;
+          body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.name}:\n&#x60;;
           const list &#x3D; item ? item[field.name] || [] : [];
           list.forEach((element: any, index: number) &#x3D;&gt; {
             body +&#x3D; this.buildBodyRow(element, field.fields, tabs + &#x27;\t&#x27;);
@@ -6724,11 +6724,11 @@ export class SafeGridComponent implements OnInit, OnChanges, OnDestroy {
           });
           break;
         case &#x27;OBJECT&#x27;:
-          body +&#x3D; &#x60;${tabs}${field.name}:\n&#x60;;
+          body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.name}:\n&#x60;;
           body +&#x3D; this.buildBodyRow(item ? item[field.name] : null, field.fields, tabs + &#x27;\t&#x27;);
           break;
         default:
-          body +&#x3D; &#x60;${tabs}${field.name}:   ${item ? item[field.name] : &#x27;&#x27;}\n&#x60;;
+          body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.name}:   ${item ? item[field.name] : &#x27;&#x27;}\n&#x60;;
       }
     }
     return body;
