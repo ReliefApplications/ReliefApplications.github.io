@@ -994,6 +994,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/SafeDownloadService.html" data-type="entity-link">SafeDownloadService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/SafeEmailService.html" data-type="entity-link">SafeEmailService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/SafeFormService.html" data-type="entity-link">SafeFormService</a>
                                 </li>
                                 <li class="link">
