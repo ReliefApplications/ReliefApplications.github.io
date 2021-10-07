@@ -195,13 +195,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeChartModule.html" data-type="entity-link">SafeChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeChartModule-64798df20725d7318f21cb2c2dc091c6"' : 'data-target="#xs-components-links-module-SafeChartModule-64798df20725d7318f21cb2c2dc091c6"' }>
+                                            'data-target="#components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' : 'data-target="#xs-components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChartModule-64798df20725d7318f21cb2c2dc091c6"' :
-                                            'id="xs-components-links-module-SafeChartModule-64798df20725d7318f21cb2c2dc091c6"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' :
+                                            'id="xs-components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' }>
                                             <li class="link">
                                                 <a href="components/SafeChartComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeChartComponent</a>
@@ -321,13 +321,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeEditorModule.html" data-type="entity-link">SafeEditorModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeEditorModule-925f6b61cb2ae4e70f6def98bae63929"' : 'data-target="#xs-components-links-module-SafeEditorModule-925f6b61cb2ae4e70f6def98bae63929"' }>
+                                            'data-target="#components-links-module-SafeEditorModule-71e79a3f8c056ebbd439e4bd73cca3c8"' : 'data-target="#xs-components-links-module-SafeEditorModule-71e79a3f8c056ebbd439e4bd73cca3c8"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeEditorModule-925f6b61cb2ae4e70f6def98bae63929"' :
-                                            'id="xs-components-links-module-SafeEditorModule-925f6b61cb2ae4e70f6def98bae63929"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeEditorModule-71e79a3f8c056ebbd439e4bd73cca3c8"' :
+                                            'id="xs-components-links-module-SafeEditorModule-71e79a3f8c056ebbd439e4bd73cca3c8"' }>
                                             <li class="link">
                                                 <a href="components/SafeEditorComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeEditorComponent</a>
@@ -541,13 +541,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeMapModule.html" data-type="entity-link">SafeMapModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeMapModule-0d31f6fe3597da60a11e2ae09aa1516f"' : 'data-target="#xs-components-links-module-SafeMapModule-0d31f6fe3597da60a11e2ae09aa1516f"' }>
+                                            'data-target="#components-links-module-SafeMapModule-c1b1a477ff5fff2569f5a631a6a694c3"' : 'data-target="#xs-components-links-module-SafeMapModule-c1b1a477ff5fff2569f5a631a6a694c3"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeMapModule-0d31f6fe3597da60a11e2ae09aa1516f"' :
-                                            'id="xs-components-links-module-SafeMapModule-0d31f6fe3597da60a11e2ae09aa1516f"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeMapModule-c1b1a477ff5fff2569f5a631a6a694c3"' :
+                                            'id="xs-components-links-module-SafeMapModule-c1b1a477ff5fff2569f5a631a6a694c3"' }>
                                             <li class="link">
                                                 <a href="components/SafeMapComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeMapComponent</a>
@@ -762,13 +762,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeSchedulerModule.html" data-type="entity-link">SafeSchedulerModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeSchedulerModule-94dcbdf7a36fde3abffe4a10b81cddf8"' : 'data-target="#xs-components-links-module-SafeSchedulerModule-94dcbdf7a36fde3abffe4a10b81cddf8"' }>
+                                            'data-target="#components-links-module-SafeSchedulerModule-4baa399f67f87244e9a9b10102fc079c"' : 'data-target="#xs-components-links-module-SafeSchedulerModule-4baa399f67f87244e9a9b10102fc079c"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeSchedulerModule-94dcbdf7a36fde3abffe4a10b81cddf8"' :
-                                            'id="xs-components-links-module-SafeSchedulerModule-94dcbdf7a36fde3abffe4a10b81cddf8"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeSchedulerModule-4baa399f67f87244e9a9b10102fc079c"' :
+                                            'id="xs-components-links-module-SafeSchedulerModule-4baa399f67f87244e9a9b10102fc079c"' }>
                                             <li class="link">
                                                 <a href="components/SafeSchedulerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeSchedulerComponent</a>
