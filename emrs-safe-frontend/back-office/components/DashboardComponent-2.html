@@ -803,8 +803,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="237"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:237</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="238"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:238</a></div>
                 </td>
             </tr>
 
@@ -842,8 +842,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="171"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:171</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:172</a></div>
                 </td>
             </tr>
 
@@ -912,8 +912,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="201"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:201</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:202</a></div>
                 </td>
             </tr>
 
@@ -951,8 +951,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="195"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:195</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:196</a></div>
                 </td>
             </tr>
 
@@ -1445,6 +1445,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       }
     }).subscribe(res &#x3D;&gt; {
       this.tiles &#x3D; res.data?.editDashboard.structure;
+      this.dashboardService.openDashboard({ ...this.dashboard, structure: this.tiles });
       this.loading &#x3D; false;
     }, error &#x3D;&gt; this.loading &#x3D; false);
   }
