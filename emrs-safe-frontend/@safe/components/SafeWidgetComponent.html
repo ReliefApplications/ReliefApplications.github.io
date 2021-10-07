@@ -71,6 +71,7 @@
     </p>
     <p class="comment">
                     <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
     </p>
 
 
@@ -145,6 +146,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
@@ -327,6 +331,45 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">projects/safe/src/lib/components/widget/widget.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
@@ -386,8 +429,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">projects/safe/src/lib/components/widget/widget.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">projects/safe/src/lib/components/widget/widget.component.ts:35</a></div>
                 </td>
             </tr>
 
@@ -458,8 +501,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">projects/safe/src/lib/components/widget/widget.component.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">projects/safe/src/lib/components/widget/widget.component.ts:31</a></div>
                 </td>
             </tr>
 
@@ -546,7 +589,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, Output, EventEmitter } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from &#x27;@angular/core&#x27;;
 import { SafeDashboardService } from &#x27;../../services/dashboard.service&#x27;;
 
 @Component({
@@ -554,7 +597,7 @@ import { SafeDashboardService } from &#x27;../../services/dashboard.service&#x27
   templateUrl: &#x27;./widget.component.html&#x27;,
   styleUrls: [&#x27;./widget.component.scss&#x27;]
 })
-export class SafeWidgetComponent implements OnInit {
+export class SafeWidgetComponent implements OnInit, OnChanges {
 
   @Input() widget: any;
   @Input() header &#x3D; true;
@@ -569,6 +612,11 @@ export class SafeWidgetComponent implements OnInit {
 
   ngOnInit(): void {
     this.layout &#x3D; this.dashboardService.getWidgetLayout(this.widget);
+  }
+
+  ngOnChanges(): void {
+    this.layout &#x3D; this.dashboardService.getWidgetLayout(this.widget);
+    
   }
 
   public onLayoutChanged(e: any): void {
