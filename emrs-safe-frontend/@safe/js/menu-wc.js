@@ -1311,6 +1311,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/GetResourcesQueryResponse.html" data-type="entity-link">GetResourcesQueryResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/GetRolesFromApplicationsQueryResponse.html" data-type="entity-link">GetRolesFromApplicationsQueryResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/GetRolesQueryResponse.html" data-type="entity-link">GetRolesQueryResponse</a>
                             </li>
                             <li class="link">

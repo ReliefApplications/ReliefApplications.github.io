@@ -671,30 +671,6 @@ query GetApplications($first: Int, $afterCursor: ID, $filters: JSON) {
     }
   }
 }&#x60;;
-
-// &#x3D;&#x3D;&#x3D; GET APPLICATIONS &#x3D;&#x3D;&#x3D;
-export const GET_APPLICATIONS_ROLES &#x3D; gql&#x60;
-query GetApplications($first: Int, $afterCursor: ID, $filters: JSON) {
-  applications(first: $first, afterCursor: $afterCursor, filters: $filters) {
-    edges {
-      node {
-        id
-        name
-        roles {
-          id
-          title
-        }
-      }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
-  }
-}&#x60;;
-
 export interface GetApplicationsQueryResponse {
   loading: boolean;
   applications: {
@@ -708,6 +684,20 @@ export interface GetApplicationsQueryResponse {
     },
     totalCount: number;
   };
+}
+
+// &#x3D;&#x3D;&#x3D; GET ROLES FROM APPLICATION &#x3D;&#x3D;&#x3D;
+export const GET_ROLES_FROM_APPLICATIONS &#x3D; gql&#x60;
+query GetRolesFromApplications($applications: [ID]!) {
+  rolesFromApplications(applications: $applications) {
+    id
+    title(appendApplicationName: true)
+  }
+}&#x60;;
+
+export interface GetRolesFromApplicationsQueryResponse {
+  loading: boolean;
+  rolesFromApplications: Role[];
 }
 
 // &#x3D;&#x3D;&#x3D; GET PERMISSIONS &#x3D;&#x3D;&#x3D;
