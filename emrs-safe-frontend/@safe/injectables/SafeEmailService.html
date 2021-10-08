@@ -214,8 +214,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:63</a></div>
                 </td>
             </tr>
 
@@ -310,8 +310,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:82</a></div>
                 </td>
             </tr>
 
@@ -430,8 +430,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="191"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:191</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:192</a></div>
                 </td>
             </tr>
 
@@ -525,8 +525,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="141"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:141</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:142</a></div>
                 </td>
             </tr>
 
@@ -621,8 +621,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="149"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:149</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:150</a></div>
                 </td>
             </tr>
 
@@ -693,8 +693,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="208"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:208</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="209"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:209</a></div>
                 </td>
             </tr>
 
@@ -789,8 +789,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="153"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:153</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:154</a></div>
                 </td>
             </tr>
 
@@ -898,8 +898,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="112"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:112</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:113</a></div>
                 </td>
             </tr>
 
@@ -970,7 +970,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>sendMail(recipient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subject: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>sendMail(recipient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subject: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, totalCount: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
@@ -1048,6 +1048,20 @@
 
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>totalCount</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1095,8 +1109,8 @@ export class SafeEmailService {
    * @param subject subject of the email.
    * @param settings query settings.
    */
-  public sendMail(recipient: string, subject: string, settings: any): void {
-    const dataQuery &#x3D; this.queryBuilder.buildQuery(settings);
+  public sendMail(recipient: string, subject: string, settings: any, totalCount: number): void {
+    const dataQuery &#x3D; this.queryBuilder.buildQuery(settings, totalCount);
     const metaQuery &#x3D; this.queryBuilder.buildMetaQuery(settings, false);
     let metaFields: any &#x3D; [];
     let fields: any &#x3D; [];
@@ -1112,7 +1126,8 @@ export class SafeEmailService {
               for (const field in res2.data) {
                 if (Object.prototype.hasOwnProperty.call(res2.data, field)) {
                   fields &#x3D; this.getFields(metaFields, fields);
-                  items &#x3D; cloneData(res2.data[field] ? res2.data[field] : []);
+                  const nodes &#x3D; res2.data[field].edges.map((x: any) &#x3D;&gt; x.node) || [];
+                  items &#x3D; cloneData(nodes);
                   this.convertDateFields(fields, items);
                 }
               }
