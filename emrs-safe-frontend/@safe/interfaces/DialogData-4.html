@@ -344,9 +344,17 @@ export class SafeFormModalComponent implements OnInit {
     for (const field in questions) {
       if (questions[field]) {
         const key &#x3D; questions[field].getValueName();
-        if (!data[key] &amp;&amp; questions[field].getType() !&#x3D;&#x3D; &#x27;boolean&#x27;) { data[key] &#x3D; null; }
+        if (!data[key]) {
+          if (questions[field].getType() !&#x3D;&#x3D; &#x27;boolean&#x27;) {
+            data[key] &#x3D; null;
+          }
+          if (questions[field].readOnly) {
+            delete data[key];
+          }
+        }
       }
     }
+    console.log(data);
     survey.data &#x3D; data;
     const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
       data: {

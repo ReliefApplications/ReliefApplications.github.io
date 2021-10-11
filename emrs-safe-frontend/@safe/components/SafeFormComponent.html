@@ -523,8 +523,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="356"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:356</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="363"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:363</a></div>
                 </td>
             </tr>
 
@@ -632,8 +632,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="401"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:401</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="408"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:408</a></div>
                 </td>
             </tr>
 
@@ -712,8 +712,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="348"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:348</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="355"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:355</a></div>
                 </td>
             </tr>
 
@@ -753,8 +753,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="273"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:273</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="280"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:280</a></div>
                 </td>
             </tr>
 
@@ -837,8 +837,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="307"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:307</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="314"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:314</a></div>
                 </td>
             </tr>
 
@@ -921,8 +921,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="335"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:335</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="342"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:342</a></div>
                 </td>
             </tr>
 
@@ -1000,8 +1000,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="340"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:340</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="347"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:347</a></div>
                 </td>
             </tr>
 
@@ -1072,8 +1072,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="277"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:277</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="284"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:284</a></div>
                 </td>
             </tr>
 
@@ -1195,8 +1195,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="269"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:269</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="276"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:276</a></div>
                 </td>
             </tr>
 
@@ -2031,7 +2031,14 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
     for (const field in questions) {
       if (questions[field]) {
         const key &#x3D; questions[field].getValueName();
-        if (!data[key] &amp;&amp; questions[field].getType() !&#x3D;&#x3D; &#x27;boolean&#x27;) { data[key] &#x3D; null; }
+        if (!data[key]) {
+          if (questions[field].getType() !&#x3D;&#x3D; &#x27;boolean&#x27;) {
+            data[key] &#x3D; null;
+          }
+          if (questions[field].readOnly) {
+            delete data[key];
+          }
+        }
       }
     }
     this.survey.data &#x3D; data;
