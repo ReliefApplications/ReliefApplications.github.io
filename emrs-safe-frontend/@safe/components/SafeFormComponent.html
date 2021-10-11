@@ -2035,7 +2035,7 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
           if (questions[field].getType() !&#x3D;&#x3D; &#x27;boolean&#x27;) {
             data[key] &#x3D; null;
           }
-          if (questions[field].readOnly) {
+          if (questions[field].readOnly || !questions[field].visible) {
             delete data[key];
           }
         }
