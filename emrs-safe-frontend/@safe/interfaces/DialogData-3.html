@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/convert-modal/convert-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts</code>
         </p>
 
 
@@ -79,10 +79,13 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#record">record</a>
+                                        <a href="#targetForm">targetForm</a>
                                 </li>
                                 <li>
-                                        <a href="#title">title</a>
+                                        <a href="#targetFormField">targetFormField</a>
+                                </li>
+                                <li>
+                                        <a href="#targetFormQuery">targetFormQuery</a>
                                 </li>
                             </ul>
                         </td>
@@ -99,13 +102,42 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="record"></a>
-                                        <span class="name"><b>record</b><a href="#record"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="targetForm"></a>
+                                        <span class="name"><b>targetForm</b><a href="#targetForm"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>record:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>targetForm:         <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="targetFormField"></a>
+                                        <span class="name"><b>targetFormField</b><a href="#targetFormField"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>targetFormField:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -128,13 +160,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="title"></a>
-                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="targetFormQuery"></a>
+                                        <span class="name"><b>targetFormQuery</b><a href="#targetFormQuery"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>targetFormQuery:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -142,7 +174,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                                         </td>
                                     </tr>
@@ -158,68 +190,68 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Apollo} from &#x27;apollo-angular&#x27;;
-import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { GetRecordDetailsQueryResponse, GET_RECORD_DETAILS } from &#x27;../../graphql/queries&#x27;;
+import { Apollo } from &#x27;apollo-angular&#x27;;
+import { GetFormByIdQueryResponse, GET_FORM_BY_ID } from &#x27;../../graphql/queries&#x27;;
 import { Form } from &#x27;../../models/form.model&#x27;;
+import { Record } from &#x27;../../models/record.model&#x27;;
 
 interface DialogData {
-  title: string;
-  record: string;
+  targetForm: Form;
+  targetFormField: string;
+  targetFormQuery: any;
 }
 
 @Component({
-  selector: &#x27;safe-convert-modal&#x27;,
-  templateUrl: &#x27;./convert-modal.component.html&#x27;,
-  styleUrls: [&#x27;./convert-modal.component.scss&#x27;]
+  selector: &#x27;safe-choose-record-modal&#x27;,
+  templateUrl: &#x27;./choose-record-modal.component.html&#x27;,
+  styleUrls: [&#x27;./choose-record-modal.component.scss&#x27;]
 })
-export class SafeConvertModalComponent implements OnInit {
+export class SafeChooseRecordModalComponent implements OnInit {
 
   // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  convertForm: FormGroup &#x3D; new FormGroup({});
+  chooseRecordForm: FormGroup &#x3D; new FormGroup({});
 
   // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
-  public form?: Form;
-  public availableForms: Form[] &#x3D; [];
-  public ignoredFields: any[] &#x3D; [];
+  public records: Record[] &#x3D; [];
 
   // &#x3D;&#x3D;&#x3D; LOAD DATA &#x3D;&#x3D;&#x3D;
   public loading &#x3D; true;
+  public isSearchActivated &#x3D; false;
+  public selectedRows: any [] &#x3D; [];
 
   constructor(
     private formBuilder: FormBuilder,
     private apollo: Apollo,
-    public dialogRef: MatDialogRef&lt;SafeConvertModalComponent&gt;,
+    public dialogRef: MatDialogRef&lt;SafeChooseRecordModalComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    this.apollo.watchQuery&lt;GetRecordDetailsQueryResponse&gt;({
-      query: GET_RECORD_DETAILS,
+    this.apollo.watchQuery&lt;GetFormByIdQueryResponse&gt;({
+      query: GET_FORM_BY_ID,
       variables: {
-        id: this.data.record
+        id: this.data.targetForm.id,
+        display: false
       }
     }).valueChanges.subscribe(res &#x3D;&gt; {
-      const record &#x3D; res.data.record;
-      this.form &#x3D; record.form;
+      this.records &#x3D; res.data.form.records || [];
       this.loading &#x3D; false;
-      this.availableForms &#x3D; this.form?.resource?.forms?.filter(x &#x3D;&gt; x.id !&#x3D;&#x3D; this.form?.id) || [];
     });
-    this.convertForm &#x3D; this.formBuilder.group({
-      targetForm: [null, Validators.required],
-      copyRecord: [true, Validators.required]
-    });
-    this.convertForm.get(&#x27;targetForm&#x27;)?.valueChanges.subscribe((targetForm: Form) &#x3D;&gt; {
-      if (targetForm) {
-        this.ignoredFields &#x3D; this.form?.fields?.filter(sourceField &#x3D;&gt; !targetForm?.fields?.some(
-          targetField &#x3D;&gt; sourceField.name &#x3D;&#x3D;&#x3D; targetField.name)) || [];
-      }
+    this.chooseRecordForm &#x3D; this.formBuilder.group({
+      record: [null, Validators.required]
     });
   }
 
+  onSearch(): void {
+    this.isSearchActivated &#x3D; !this.isSearchActivated;
+  }
 
+  onRowSelected(rows: any): void {
+    this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(rows.selectedRows[0].dataItem.id);
+  }
   /*  Close the modal without sending data.
   */
   onClose(): void {
