@@ -386,8 +386,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:55</a></div>
                 </td>
             </tr>
 
@@ -468,8 +468,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:50</a></div>
                 </td>
             </tr>
 
@@ -625,14 +625,20 @@ export class SafeDashboardService {
   }
 
   getWidgetLayout(widget: any): any {
-    const defaultLayout &#x3D; JSON.parse(JSON.stringify(widget.settings.defaultLayout || {}));
-    const defaultDate &#x3D; new Date(defaultLayout.timestamp || null);
-    const dashboardId &#x3D; this.dashboard.getValue()?.id;
-    const cachedLayout &#x3D; JSON.parse(localStorage.getItem(&#x60;widget:${dashboardId}:${widget.id}&#x60;) || JSON.stringify({}));
-    const cachedDate &#x3D; new Date(cachedLayout.timestamp || null);
-    if (defaultDate &gt; cachedDate) {
-      return defaultLayout;
-    } else {
+    try {
+      const defaultLayout &#x3D; JSON.parse(widget.settings.defaultLayout || JSON.stringify({}));
+      const defaultDate &#x3D; new Date(defaultLayout.timestamp || null);
+      const dashboardId &#x3D; this.dashboard.getValue()?.id;
+      const cachedLayout &#x3D; JSON.parse(localStorage.getItem(&#x60;widget:${dashboardId}:${widget.id}&#x60;) || JSON.stringify({}));
+      const cachedDate &#x3D; new Date(cachedLayout.timestamp || null);
+      if (defaultDate &gt; cachedDate) {
+        return defaultLayout;
+      } else {
+        return cachedLayout;
+      }
+    } catch {
+      const dashboardId &#x3D; this.dashboard.getValue()?.id;
+      const cachedLayout &#x3D; JSON.parse(localStorage.getItem(&#x60;widget:${dashboardId}:${widget.id}&#x60;) || JSON.stringify({}));
       return cachedLayout;
     }
   }
@@ -645,11 +651,12 @@ export class SafeDashboardService {
   saveWidgetDefaultLayout(id: number, layout: any): void {
     const dashboardId &#x3D; this.dashboard.getValue()?.id;
     const dashboardStructure &#x3D; this.dashboard.getValue()?.structure;
+    const defaultLayout &#x3D; { ...layout, timestamp: + new Date() };
     const widgetTemp &#x3D; {
       ...dashboardStructure[id],
       settings: {
         ...dashboardStructure[id].settings,
-        defaultLayout: { ...layout, timestamp: + new Date() }
+        defaultLayout: JSON.stringify(defaultLayout)
       }
     };
     const updatedDashboardStructure &#x3D; JSON.parse(JSON.stringify(dashboardStructure));
