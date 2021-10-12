@@ -91,6 +91,9 @@
                             <a href="#APPLICATION_UNLOCKED_SUBSCRIPTION" title="projects/safe/src/lib/graphql/subscriptions.ts"><b>APPLICATION_UNLOCKED_SUBSCRIPTION</b>&nbsp;&nbsp;&nbsp;(projects/.../subscriptions.ts)</a>
                         </li>
                         <li>
+                            <a href="#AVAILABLE_TYPES" title="projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts"><b>AVAILABLE_TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../tab-filter.component.ts)</a>
+                        </li>
+                        <li>
                             <a href="#CHART_TYPES" title="projects/safe/src/lib/components/widgets/chart-settings/constants.ts"><b>CHART_TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../constants.ts)</a>
                         </li>
                         <li>
@@ -346,6 +349,9 @@
                             <a href="#NOTIFICATIONS" title="projects/safe/src/lib/const/notifications.ts"><b>NOTIFICATIONS</b>&nbsp;&nbsp;&nbsp;(projects/.../notifications.ts)</a>
                         </li>
                         <li>
+                            <a href="#OPERATORS" title="projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts"><b>OPERATORS</b>&nbsp;&nbsp;&nbsp;(projects/.../tab-filter.component.ts)</a>
+                        </li>
+                        <li>
                             <a href="#OPTION_QUESTIONS" title="projects/safe/src/lib/services/email.service.ts"><b>OPTION_QUESTIONS</b>&nbsp;&nbsp;&nbsp;(projects/.../email.service.ts)</a>
                         </li>
                         <li>
@@ -422,6 +428,9 @@
                         </li>
                         <li>
                             <a href="#TOGGLE_APPLICATION_LOCK" title="projects/safe/src/lib/graphql/mutations.ts"><b>TOGGLE_APPLICATION_LOCK</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TYPES" title="projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts"><b>TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../tab-filter.component.ts)</a>
                         </li>
                         <li>
                             <a href="#UPLOAD_FILE" title="projects/safe/src/lib/graphql/mutations.ts"><b>UPLOAD_FILE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
@@ -1695,6 +1704,172 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
         data(display: true)
     }
 }&#x60;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="AVAILABLE_TYPES"></a>
+                        <span class="name">
+                            <b>
+                            AVAILABLE_TYPES</b>
+                            <a href="#AVAILABLE_TYPES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;Int&#x27;, &#x27;String&#x27;, &#x27;Boolean&#x27;, &#x27;Date&#x27;, &#x27;DateTime&#x27;, &#x27;Time&#x27;]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="OPERATORS"></a>
+                        <span class="name">
+                            <b>
+                            OPERATORS</b>
+                            <a href="#OPERATORS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  eq: {
+    value: &#x27;eq&#x27;,
+    label: &#x27;Is equal to&#x27;
+  },
+  neq: {
+    value: &#x27;neq&#x27;,
+    label: &#x27;Is not equal to&#x27;
+  },
+  gte: {
+    value: &#x27;gte&#x27;,
+    label: &#x27;Is greater than or equal to&#x27;
+  },
+  gt: {
+    value: &#x27;gt&#x27;,
+    label: &#x27;Is greater than&#x27;
+  },
+  lte: {
+    value: &#x27;lte&#x27;,
+    label: &#x27;Is less than or equal to&#x27;
+  },
+  lt: {
+    value: &#x27;lt&#x27;,
+    label: &#x27;Is less than&#x27;
+  },
+  isnull: {
+    value: &#x27;isnull&#x27;,
+    label: &#x27;Is null&#x27;
+  },
+  isnotnull: {
+    value: &#x27;isnotnull&#x27;,
+    label: &#x27;Is not null&#x27;
+  },
+  isempty: {
+    value: &#x27;isempty&#x27;,
+    label: &#x27;Is empty&#x27;
+  },
+  isnotempty: {
+    value: &#x27;isnotempty&#x27;,
+    label: &#x27;Is not empty&#x27;
+  },
+  contains: {
+    value: &#x27;contains&#x27;,
+    label: &#x27;Contains&#x27;
+  },
+  doesnotcontain: {
+    value: &#x27;doesnotcontain&#x27;,
+    label: &#x27;Does not contain&#x27;
+  },
+  startswith: {
+    value: &#x27;startswith&#x27;,
+    label: &#x27;Starts with&#x27;
+  },
+  endswith: {
+    value: &#x27;endswith&#x27;,
+    label: &#x27;Ends with&#x27;
+  }
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TYPES"></a>
+                        <span class="name">
+                            <b>
+                            TYPES</b>
+                            <a href="#TYPES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  Int: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;]
+  },
+  String: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;contains&#x27;, &#x27;doesnotcontain&#x27;, &#x27;startswith&#x27;, &#x27;endswith&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;, &#x27;isempty&#x27;, &#x27;isnotempty&#x27;]
+  },
+  Boolean: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;]
+  },
+  Date: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;]
+  },
+  DateTime: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;]
+  },
+  Time: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;]
+  }
+}</code>
                         </td>
                     </tr>
 

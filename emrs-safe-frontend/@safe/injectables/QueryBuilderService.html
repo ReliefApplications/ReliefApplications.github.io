@@ -112,10 +112,6 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#buildFilter">buildFilter</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
                                 <a href="#buildMetaFields">buildMetaFields</a>
                             </li>
                             <li>
@@ -135,6 +131,10 @@
                                 <a href="#createQueryForm">createQueryForm</a>
                             </li>
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#filterToString">filterToString</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#getFields">getFields</a>
                             </li>
@@ -144,23 +144,15 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getFilter">getFilter</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#getFilterFromType">getFilterFromType</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#getListFields">getListFields</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getQueryNameFromResourceName">getQueryNameFromResourceName</a>
+                                <a href="#getMetaFields">getMetaFields</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#objToString">objToString</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#getQueryNameFromResourceName">getQueryNameFromResourceName</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -285,8 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="257"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:257</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="240"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:240</a></div>
                 </td>
             </tr>
 
@@ -369,8 +361,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="218"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:218</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:195</a></div>
                 </td>
             </tr>
 
@@ -441,8 +433,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="92"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:92</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:67</a></div>
                 </td>
             </tr>
 
@@ -493,78 +485,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="buildFilter"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            buildFilter
-                        </b>
-                        <a href="#buildFilter"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>buildFilter(filter: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="80"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:80</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>filter</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="buildMetaFields"></a>
                     <span class="name">
                         <b>
@@ -585,8 +505,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="119"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:119</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:102</a></div>
                 </td>
             </tr>
 
@@ -657,8 +577,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="179"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:179</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:156</a></div>
                 </td>
             </tr>
 
@@ -739,15 +659,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>buildQuery(settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, first?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    <code>buildQuery(settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="145"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:145</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:128</a></div>
                 </td>
             </tr>
 
@@ -774,18 +694,6 @@
 
                                     <td>
                                         No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>first</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
                                     </td>
 
 
@@ -823,15 +731,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>createFilterGroup(filter: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, availableFilter: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>createFilterGroup(filter: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, fields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="240"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:240</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:217</a></div>
                 </td>
             </tr>
 
@@ -863,7 +771,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td>availableFilter</td>
+                                    <td>fields</td>
                                     <td>
                                                 <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
@@ -914,8 +822,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="226"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:226</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:203</a></div>
                 </td>
             </tr>
 
@@ -970,6 +878,78 @@
                     </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="../interfaces/Form.html" target="_self" >FormGroup</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterToString"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            filterToString
+                        </b>
+                        <a href="#filterToString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterToString(filter: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </div>
                     <div class="io-description">
@@ -1127,150 +1107,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getFilter"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFilter
-                        </b>
-                        <a href="#getFilter"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getFilter(queryName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="67"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:67</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>queryName</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>any[]</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getFilterFromType"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFilterFromType
-                        </b>
-                        <a href="#getFilterFromType"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getFilterFromType(typeName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:73</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>typeName</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>any[]</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="getListFields"></a>
                     <span class="name">
                         <b>
@@ -1343,6 +1179,90 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getMetaFields"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getMetaFields
+                        </b>
+                        <a href="#getMetaFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMetaFields(queryName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>queryName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getQueryNameFromResourceName"></a>
                     <span class="name">
                         <b>
@@ -1363,8 +1283,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="199"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:199</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:190</a></div>
                 </td>
             </tr>
 
@@ -1415,78 +1335,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="objToString"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            objToString
-                        </b>
-                        <a href="#objToString"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>objToString(obj: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="204"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:204</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>obj</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="sourceQuery"></a>
                     <span class="name">
                         <b>
@@ -1507,8 +1355,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="293"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:293</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="276"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:276</a></div>
                 </td>
             </tr>
 
@@ -1769,31 +1617,6 @@ export class QueryBuilderService {
       .sort((a: any, b: any) &#x3D;&gt; a.name.localeCompare(b.name)) : [];
   }
 
-  public getFilter(queryName: string): any[] {
-    const query &#x3D; this.availableQueries.getValue().find(x &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; queryName);
-    return query ? [...query.args.find((x: any) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; &#x27;filter&#x27;).type.inputFields]
-      .sort((a: any, b: any) &#x3D;&gt; a.name.localeCompare(b.name)) : [];
-  }
-
-  public getFilterFromType(typeName: string): any[] {
-    console.log(typeName);
-    const query &#x3D; this.availableQueries.getValue().find(x &#x3D;&gt; x.type.name &#x3D;&#x3D;&#x3D; typeName + &#x27;Connection&#x27;);
-    return query ? [...query.args.find((x: any) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; &#x27;filter&#x27;).type.inputFields]
-      .sort((a: any, b: any) &#x3D;&gt; a.name.localeCompare(b.name)) : [];
-  }
-
-  private buildFilter(filter: any): any {
-    return filter ? Object.keys(filter).reduce((o, key) &#x3D;&gt; {
-      if (filter[key] || filter[key] &#x3D;&#x3D;&#x3D; false) {
-        if (filter[key] &#x3D;&#x3D;&#x3D; &#x27;today()&#x27;) {
-          return { ...o, [key]: new Date().toISOString().substring(0, 10) };
-        }
-        return { ...o, [key]: filter[key] };
-      }
-      return { ...o };
-    }, {}) : null;
-  }
-
   private buildFields(fields: any[]): any {
     return [&#x27;id\n&#x27;].concat(fields.map(x &#x3D;&gt; {
       switch (x.kind) {
@@ -1801,10 +1624,10 @@ export class QueryBuilderService {
           return x.name + &#x27;\n&#x27;;
         }
         case &#x27;LIST&#x27;: {
-          return &#x60;${x.name}(
+          return &#x60;${x.name} (
             sortField: ${x.sort.field ? &#x60;&quot;${x.sort.field}&quot;&#x60; : null},
             sortOrder: &quot;${x.sort.order}&quot;,
-            filter: ${this.objToString(this.buildFilter(x.filter))}
+            filter: ${this.filterToString(x.filter)}
           ) {
             ${this.buildFields(x.fields)}
           }&#x60; + &#x27;\n&#x27;;
@@ -1819,6 +1642,14 @@ export class QueryBuilderService {
         }
       }
     }));
+  }
+
+  private filterToString(filter: any): string {
+    if (filter.filters) {
+      return &#x60;{ logic: &quot;${filter.logic}&quot;, filters: [${filter.filters.map((x: any) &#x3D;&gt; this.filterToString(x))}]}&#x60;;
+    } else {
+      return &#x60;{ field: &quot;${filter.field}&quot;, operator: &quot;${filter.operator}&quot;, value: &quot;${filter.value}&quot; }&#x60;;
+    }
   }
 
   private buildMetaFields(fields: any[]): any {
@@ -1847,19 +1678,18 @@ export class QueryBuilderService {
     }));
   }
 
-  public buildQuery(settings: any, first?: number): any {
+  public buildQuery(settings: any): any {
     const builtQuery &#x3D; settings.query;
     if (builtQuery &amp;&amp; builtQuery.fields.length &gt; 0) {
       const fields &#x3D; [&#x27;canUpdate\ncanDelete\n&#x27;].concat(this.buildFields(builtQuery.fields));
-      const metaFields &#x3D; this.buildMetaFields(builtQuery.fields);
       const query &#x3D; gql&#x60;
-        query GetCustomQuery($first: Int, $skip: Int) {
+        query GetCustomQuery($first: Int, $skip: Int, $filter: JSON, $sortField: String, $sortOrder: String) {
           ${builtQuery.name}(
           first: $first,
           skip: $skip,
-          sortField: ${builtQuery.sort &amp;&amp; builtQuery.sort.field ? &#x60;&quot;${builtQuery.sort.field}&quot;&#x60; : null},
-          sortOrder: &quot;${builtQuery.sort?.order || &#x27;&#x27; }&quot;,
-          filter: ${this.objToString(this.buildFilter(builtQuery.filter))}
+          sortField: $sortField,
+          sortOrder: $sortOrder,
+          filter: $filter
           ) {
             edges {
               node {
@@ -1870,12 +1700,7 @@ export class QueryBuilderService {
         }
         }
       &#x60;;
-      return this.apollo.watchQuery&lt;any&gt;({
-        query,
-        variables: {
-          first: first || 25
-        }
-      });
+      return query;
     } else {
       return null;
     }
@@ -1901,23 +1726,23 @@ export class QueryBuilderService {
     }
   }
 
+  public getMetaFields(queryName: string, fields: any): any {
+    const metaFields &#x3D; this.buildMetaFields(fields);
+    const query &#x3D; gql&#x60;
+      query GetCustomMetaQuery {
+        _${queryName}Meta {
+          ${metaFields}
+        }
+      }
+    &#x60;;
+    this.apollo.query&lt;any&gt;({
+      query
+    });
+  }
+
   public getQueryNameFromResourceName(resourceName: string): any {
     const nameTrimmed &#x3D; resourceName.replace(/\s/g, &#x27;&#x27;).toLowerCase();
     return this.availableQueries.getValue().find(x &#x3D;&gt; x.type.name.toLowerCase() &#x3D;&#x3D;&#x3D; nameTrimmed + &#x27;connection&#x27;)?.name || &#x27;&#x27;;
-  }
-
-  private objToString(obj: any): string {
-    let str &#x3D; &#x27;{&#x27;;
-    for (const p in obj) {
-      if (obj.hasOwnProperty(p)) {
-        str +&#x3D; p + &#x27;: &#x27; + (
-            typeof obj[p] &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? &#x60;&quot;${obj[p]}&quot;&#x60; :
-            Array.isArray(obj[p]) ? this.arrayToString(obj[p]) :
-            obj[p]
-          ) + &#x27;,\n&#x27;;
-      }
-    }
-    return str + &#x27;}&#x27;;
   }
 
   private arrayToString(array: any): string {
@@ -1942,20 +1767,26 @@ export class QueryBuilderService {
     });
   }
 
-  public createFilterGroup(filter: any, availableFilter: any): FormGroup {
-    if (availableFilter) {
-      const group &#x3D; availableFilter.reduce((o: any, key: any) &#x3D;&gt; {
-        return ({
-          ...o,
-          [key.name]: [(filter &amp;&amp; (filter[key.name] || filter[key.name] &#x3D;&#x3D;&#x3D; false) ? filter[key.name] : null)]
-        });
-      }, {});
-      return this.formBuilder.group(group);
+  public createFilterGroup(filter: any, fields: any): FormGroup {
+    if (filter.filters) {
+      const filters &#x3D; filter.filters.map((x: any) &#x3D;&gt; this.createFilterGroup(x, fields));
+      return this.formBuilder.group({
+        logic: filter.logic || &#x27;and&#x27;,
+        filters: this.formBuilder.array(filters)
+      });
     } else {
-      const group &#x3D; Object.keys(filter).reduce((o, key) &#x3D;&gt; {
-        return ({ ...o, [key]: [(filter &amp;&amp; (filter[key] || filter[key] &#x3D;&#x3D;&#x3D; false) ? filter[key] : null)] });
-      }, {});
-      return this.formBuilder.group(group);
+      if (filter.field) {
+        return this.formBuilder.group({
+          field: filter.field,
+          operator: filter.operator || &#x27;eq&#x27;,
+          value: filter.value
+        });
+      } else {
+        return this.formBuilder.group({
+          logic: &#x27;and&#x27;,
+          filters: this.formBuilder.array([])
+        });
+      }
     }
   }
 

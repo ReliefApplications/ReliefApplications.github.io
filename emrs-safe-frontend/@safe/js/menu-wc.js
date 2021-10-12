@@ -80,9 +80,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
-                                <a href="modules/DropdownFilterModule.html" data-type="entity-link">DropdownFilterModule</a>
-                            </li>
-                            <li class="link">
                                 <a href="modules/SafeAccessModule.html" data-type="entity-link">SafeAccessModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
