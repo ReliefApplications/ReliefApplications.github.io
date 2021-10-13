@@ -5648,9 +5648,9 @@ export class SafeGridComponent implements OnInit, OnChanges, OnDestroy {
       if (this.settings.query.filter) {
         filters.push(this.settings.query.filter);
       }
-      const sortField &#x3D; (this.sort &amp;&amp; this.sort[0].dir) ? this.sort[0].field :
+      const sortField &#x3D; (this.sort.length &gt; 0 &amp;&amp; this.sort[0].dir) ? this.sort[0].field :
       (this.settings.query.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null);
-      const sortOrder &#x3D; (this.sort &amp;&amp; this.sort[0].dir) ? this.sort[0].dir : (this.settings.query.sort?.order || &#x27;&#x27;);
+      const sortOrder &#x3D; (this.sort.length &gt; 0 &amp;&amp; this.sort[0].dir) ? this.sort[0].dir : (this.settings.query.sort?.order || &#x27;&#x27;);
       this.dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
         query: builtQuery,
         variables: {
@@ -6134,9 +6134,9 @@ export class SafeGridComponent implements OnInit, OnChanges, OnDestroy {
       if (this.settings.query.filter) {
         filters.push(this.settings.query.filter);
       }
-      const sortField &#x3D; (this.sort &amp;&amp; this.sort[0].dir) ? this.sort[0].field :
-        (this.settings.query.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null);
-      const sortOrder &#x3D; (this.sort &amp;&amp; this.sort[0].dir) ? this.sort[0].dir : (this.settings.query.sort?.order || &#x27;&#x27;);
+      const sortField &#x3D; (this.sort.length &gt; 0 &amp;&amp; this.sort[0].dir) ? this.sort[0].field :
+      (this.settings.query.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null);
+      const sortOrder &#x3D; (this.sort.length &gt; 0 &amp;&amp; this.sort[0].dir) ? this.sort[0].dir : (this.settings.query.sort?.order || &#x27;&#x27;);
       this.dataQuery.fetchMore({
         variables: {
           first: this.pageSize,
