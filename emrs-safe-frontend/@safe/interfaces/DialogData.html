@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/confirm-modal/confirm-modal.component.ts</code>
         </p>
 
 
@@ -79,13 +79,24 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#targetForm">targetForm</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#cancelText">cancelText</a>
                                 </li>
                                 <li>
-                                        <a href="#targetFormField">targetFormField</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#confirmColor">confirmColor</a>
                                 </li>
                                 <li>
-                                        <a href="#targetFormQuery">targetFormQuery</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#confirmText">confirmText</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#content">content</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#title">title</a>
                                 </li>
                             </ul>
                         </td>
@@ -102,42 +113,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="targetForm"></a>
-                                        <span class="name"><b>targetForm</b><a href="#targetForm"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="cancelText"></a>
+                                        <span class="name"><b>cancelText</b><a href="#cancelText"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>targetForm:         <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="targetFormField"></a>
-                                        <span class="name"><b>targetFormField</b><a href="#targetFormField"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>targetFormField:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>cancelText:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -150,6 +132,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -160,13 +147,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="targetFormQuery"></a>
-                                        <span class="name"><b>targetFormQuery</b><a href="#targetFormQuery"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="confirmColor"></a>
+                                        <span class="name"><b>confirmColor</b><a href="#confirmColor"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>targetFormQuery:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>confirmColor:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -174,11 +161,118 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="confirmText"></a>
+                                        <span class="name"><b>confirmText</b><a href="#confirmText"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>confirmText:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="content"></a>
+                                        <span class="name"><b>content</b><a href="#content"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>content:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="title"></a>
+                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -190,72 +284,39 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
-import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { Apollo } from &#x27;apollo-angular&#x27;;
-import { GetFormByIdQueryResponse, GET_FORM_BY_ID } from &#x27;../../graphql/queries&#x27;;
-import { Form } from &#x27;../../models/form.model&#x27;;
-import { Record } from &#x27;../../models/record.model&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject } from &#x27;@angular/core&#x27;;
+import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 
 interface DialogData {
-  targetForm: Form;
-  targetFormField: string;
-  targetFormQuery: any;
+  title?: string;
+  content?: string;
+  cancelText?: string;
+  confirmText?: string;
+  confirmColor?: string;
 }
 
 @Component({
-  selector: &#x27;safe-choose-record-modal&#x27;,
-  templateUrl: &#x27;./choose-record-modal.component.html&#x27;,
-  styleUrls: [&#x27;./choose-record-modal.component.scss&#x27;]
+  selector: &#x27;safe-confirm-modal&#x27;,
+  templateUrl: &#x27;./confirm-modal.component.html&#x27;,
+  styleUrls: [&#x27;./confirm-modal.component.scss&#x27;]
 })
-export class SafeChooseRecordModalComponent implements OnInit {
+export class SafeConfirmModalComponent implements OnInit {
 
-  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  chooseRecordForm: FormGroup &#x3D; new FormGroup({});
+  public title &#x3D; &#x27;Confirm&#x27;;
+  public content &#x3D; &#x27;&#x27;;
+  public cancelText &#x3D; &#x27;Cancel&#x27;;
+  public confirmText &#x3D; &#x27;Confirm&#x27;;
+  public confirmColor &#x3D; &#x27;primary&#x27;;
 
-  // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
-  public records: Record[] &#x3D; [];
-
-  // &#x3D;&#x3D;&#x3D; LOAD DATA &#x3D;&#x3D;&#x3D;
-  public loading &#x3D; true;
-  public isSearchActivated &#x3D; false;
-  public selectedRows: any [] &#x3D; [];
-
-  constructor(
-    private formBuilder: FormBuilder,
-    private apollo: Apollo,
-    public dialogRef: MatDialogRef&lt;SafeChooseRecordModalComponent&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
+    if ( data.title ) { this.title &#x3D; data.title; }
+    if ( data.content ) { this.content &#x3D; data.content; }
+    if ( data.cancelText ) { this.cancelText &#x3D; data.cancelText; }
+    if ( data.confirmText ) { this.confirmText &#x3D; data.confirmText; }
+    if ( data.confirmColor ) { this.confirmColor &#x3D; data.confirmColor; }
+  }
 
   ngOnInit(): void {
-    this.apollo.watchQuery&lt;GetFormByIdQueryResponse&gt;({
-      query: GET_FORM_BY_ID,
-      variables: {
-        id: this.data.targetForm.id,
-        display: false
-      }
-    }).valueChanges.subscribe(res &#x3D;&gt; {
-      this.records &#x3D; res.data.form.records || [];
-      this.loading &#x3D; false;
-    });
-    this.chooseRecordForm &#x3D; this.formBuilder.group({
-      record: [null, Validators.required]
-    });
-  }
-
-  onSearch(): void {
-    this.isSearchActivated &#x3D; !this.isSearchActivated;
-  }
-
-  onRowSelected(rows: any): void {
-    this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(rows.selectedRows[0].dataItem.id);
-  }
-  /*  Close the modal without sending data.
-  */
-  onClose(): void {
-    this.dialogRef.close();
   }
 }
 </code></pre>

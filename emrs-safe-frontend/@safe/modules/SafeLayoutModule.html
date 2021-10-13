@@ -218,11 +218,11 @@ import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
 import { MatListModule } from &#x27;@angular/material/list&#x27;;
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { DragDropModule } from &#x27;@angular/cdk/drag-drop&#x27;;
-import { MatBadgeModule } from &#x27;@angular/material/badge&#x27;;
 import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 import { SafeConfirmModalModule } from &#x27;../confirm-modal/confirm-modal.module&#x27;;
 import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
 import { SafeButtonModule } from &#x27;../ui/button/button.module&#x27;;
+import { IndicatorsModule } from &#x27;@progress/kendo-angular-indicators&#x27;;
 
 @NgModule({
   declarations: [SafeLayoutComponent],
@@ -236,11 +236,11 @@ import { SafeButtonModule } from &#x27;../ui/button/button.module&#x27;;
     MatSidenavModule,
     MatListModule,
     DragDropModule,
-    MatBadgeModule,
     MatDividerModule,
     SafeConfirmModalModule,
     MatTooltipModule,
-    SafeButtonModule
+    SafeButtonModule,
+    IndicatorsModule
   ],
   exports: [SafeLayoutComponent]
 })
