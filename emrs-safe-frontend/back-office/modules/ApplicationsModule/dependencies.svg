@@ -28,13 +28,13 @@
 <title>cluster_ApplicationsModule_imports</title>
 <polygon fill="none" stroke="black" points="353,-78 353,-130 857,-130 857,-78 353,-78"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_ApplicationsModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 345,-130 345,-78 16,-78"/>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_ApplicationsModule_exports</title>
 <polygon fill="none" stroke="black" points="323,-208 323,-260 495,-260 495,-208 323,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ApplicationsModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 345,-130 345,-78 16,-78"/>
 </g>
 <!-- ApplicationsComponent -->
 <g id="node1" class="node">
