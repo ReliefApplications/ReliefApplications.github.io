@@ -146,13 +146,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ApiConfigurationsModule.html" data-type="entity-link">ApiConfigurationsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ApiConfigurationsModule-d3753f23bc1b58747fac81a9408af4b2"' : 'data-target="#xs-components-links-module-ApiConfigurationsModule-d3753f23bc1b58747fac81a9408af4b2"' }>
+                                            'data-target="#components-links-module-ApiConfigurationsModule-7cbbafdb17910fd01b27f11ff11e2254"' : 'data-target="#xs-components-links-module-ApiConfigurationsModule-7cbbafdb17910fd01b27f11ff11e2254"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApiConfigurationsModule-d3753f23bc1b58747fac81a9408af4b2"' :
-                                            'id="xs-components-links-module-ApiConfigurationsModule-d3753f23bc1b58747fac81a9408af4b2"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApiConfigurationsModule-7cbbafdb17910fd01b27f11ff11e2254"' :
+                                            'id="xs-components-links-module-ApiConfigurationsModule-7cbbafdb17910fd01b27f11ff11e2254"' }>
                                             <li class="link">
                                                 <a href="components/AddApiConfigurationComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AddApiConfigurationComponent</a>
