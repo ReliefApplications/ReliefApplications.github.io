@@ -1329,6 +1329,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/IContentType.html" data-type="entity-link">IContentType</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/IRecord.html" data-type="entity-link">IRecord</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/IWidgetType.html" data-type="entity-link">IWidgetType</a>
                             </li>
                             <li class="link">
