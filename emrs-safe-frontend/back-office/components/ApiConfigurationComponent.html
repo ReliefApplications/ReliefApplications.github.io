@@ -199,6 +199,20 @@
 
 
 
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#name">name</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
         </tbody>
     </table>
 </section>
@@ -214,7 +228,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -345,8 +359,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:89</a></div>
                 </td>
             </tr>
 
@@ -415,8 +429,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:81</a></div>
                 </td>
             </tr>
 
@@ -454,8 +468,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:41</a></div>
                 </td>
             </tr>
 
@@ -493,8 +507,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="163"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:163</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="167"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:167</a></div>
                 </td>
             </tr>
 
@@ -532,8 +546,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:131</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:135</a></div>
                 </td>
             </tr>
 
@@ -571,8 +585,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="110"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:110</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:114</a></div>
                 </td>
             </tr>
 
@@ -832,12 +846,39 @@
         </table>
 </section>
 
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <span class="name"><b>name</b><a href="#name"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>name()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/back-office/src/app/dashboard/pages/api-configuration/api-configuration.component.ts:28</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { AbstractControl, FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
 import { ApiConfiguration, authType, NOTIFICATIONS, SafeSnackBarService, SafeApiProxyService, status } from &#x27;@safe/builder&#x27;;
 import { Apollo } from &#x27;apollo-angular&#x27;;
@@ -863,6 +904,10 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
   public statusChoices &#x3D; Object.values(status);
   public authTypeChoices &#x3D; Object.values(authType);
 
+  get name(): AbstractControl | null {
+    return this.apiForm.get(&#x27;name&#x27;);
+  }
+
   constructor(
     private apollo: Apollo,
     private route: ActivatedRoute,
@@ -885,7 +930,7 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
           this.apiConfiguration &#x3D; res.data.apiConfiguration;
           this.apiForm &#x3D; this.formBuilder.group(
             {
-              name: [this.apiConfiguration?.name, Validators.required],
+              name: [this.apiConfiguration?.name, [ Validators.required, Validators.pattern(&#x27;^[A-Za-z-_]+$&#x27;) ]],
               status: [this.apiConfiguration?.status, Validators.required],
               authType: [this.apiConfiguration?.authType, Validators.required],
               endpoint: [this.apiConfiguration?.endpoint, Validators.required],
@@ -1034,6 +1079,9 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
                 API Configuration Name
               &lt;/mat-label&gt;
               &lt;input matInput formControlName&#x3D;&quot;name&quot; type&#x3D;&#x27;text&#x27; placeholder&#x3D;&quot;Enter a name for the API Configuration&quot; /&gt;
+              &lt;mat-error *ngIf&#x3D;&quot;name?.errors&quot;&gt;
+                Only letters, hypens, or underscores are accepted
+              &lt;/mat-error&gt;
             &lt;/mat-form-field&gt;
 
             &lt;mat-form-field appearance&#x3D;&quot;outline&quot; style&#x3D;&quot;flex: 1;&quot;&gt;
@@ -1171,7 +1219,7 @@ export class ApiConfigurationComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && apiConfiguration">    <div class="page-header">      <safe-previous-button path="/settings/apiconfigurations"></safe-previous-button>      <h1 class="page-title">          {{apiConfiguration?.name}}      </h1>      <safe-access [access]="apiConfiguration?.permissions" (save)="saveAccess($event)" *ngIf="apiConfiguration?.canUpdate"></safe-access>    </div>    <form [formGroup]="apiForm" *ngIf="apiForm">        <h1>General</h1>        <div class="form-group">          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                API Configuration Name              </mat-label>              <input matInput formControlName="name" type=\'text\' placeholder="Enter a name for the API Configuration" />            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Status              </mat-label>              <mat-select formControlName="status">                <mat-option *ngFor="let statusChoice of statusChoices" [value]=statusChoice>{{ statusChoice }}</mat-option>              </mat-select>            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">                <mat-label>                  Authentication type                </mat-label>                <mat-select formControlName="authType">                  <mat-option *ngFor="let authTypeChoice of authTypeChoices" [value]=authTypeChoice>{{ authTypeChoice }}</mat-option>                </mat-select>              </mat-form-field>          </div>          <h1>Endpoint</h1>          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                Main endpoint              </mat-label>              <input matInput formControlName="endpoint" type=\'text\' placeholder="Base URL for the API" />            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Ping extension              </mat-label>              <input matInput formControlName="pingUrl" type=\'text\' placeholder="Ping extension URL" />            </mat-form-field>            <div class="ping-button-container">              <safe-button icon="online_prediction" category="secondary" variant="primary" (click)="onPing()" [disabled]="!apiForm.value.pingUrl || !apiForm.value.endpoint">                Send ping request              </safe-button>            </div>          </div>          <h1>API authentication settings</h1>          <ng-container *ngIf="apiForm.value.authType === \'serviceToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Access token URL                </mat-label>                <input matInput formControlName="authTargetUrl" type=\'text\' placeholder="Enter access token URL" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Client ID                </mat-label>                <input matInput formControlName="apiClientID" type=\'text\' placeholder="Enter client ID" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Client secret                </mat-label>                <input matInput formControlName="safeSecret" type=\'text\' placeholder="Enter client secret" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Consumer ID                </mat-label>                <input matInput formControlName="safeID" type=\'text\' placeholder="Enter consumer ID" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Scope                </mat-label>                <input matInput formControlName="scope" type=\'text\' placeholder="Enter scope" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>          <ng-container *ngIf="apiForm.value.authType === \'userToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Token                </mat-label>                <input matInput formControlName="token" type=\'text\' placeholder="Enter token for authentication" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>        </div>        <safe-button category="secondary" variant="primary" (click)="onSave()" [disabled]="apiForm.invalid || !apiForm.dirty">Save changes</safe-button>      </form></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && apiConfiguration">    <div class="page-header">      <safe-previous-button path="/settings/apiconfigurations"></safe-previous-button>      <h1 class="page-title">          {{apiConfiguration?.name}}      </h1>      <safe-access [access]="apiConfiguration?.permissions" (save)="saveAccess($event)" *ngIf="apiConfiguration?.canUpdate"></safe-access>    </div>    <form [formGroup]="apiForm" *ngIf="apiForm">        <h1>General</h1>        <div class="form-group">          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                API Configuration Name              </mat-label>              <input matInput formControlName="name" type=\'text\' placeholder="Enter a name for the API Configuration" />              <mat-error *ngIf="name?.errors">                Only letters, hypens, or underscores are accepted              </mat-error>            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Status              </mat-label>              <mat-select formControlName="status">                <mat-option *ngFor="let statusChoice of statusChoices" [value]=statusChoice>{{ statusChoice }}</mat-option>              </mat-select>            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">                <mat-label>                  Authentication type                </mat-label>                <mat-select formControlName="authType">                  <mat-option *ngFor="let authTypeChoice of authTypeChoices" [value]=authTypeChoice>{{ authTypeChoice }}</mat-option>                </mat-select>              </mat-form-field>          </div>          <h1>Endpoint</h1>          <div class="form-group-row">            <mat-form-field appearance="outline" style="flex: 2;">              <mat-label>                Main endpoint              </mat-label>              <input matInput formControlName="endpoint" type=\'text\' placeholder="Base URL for the API" />            </mat-form-field>            <mat-form-field appearance="outline" style="flex: 1;">              <mat-label>                Ping extension              </mat-label>              <input matInput formControlName="pingUrl" type=\'text\' placeholder="Ping extension URL" />            </mat-form-field>            <div class="ping-button-container">              <safe-button icon="online_prediction" category="secondary" variant="primary" (click)="onPing()" [disabled]="!apiForm.value.pingUrl || !apiForm.value.endpoint">                Send ping request              </safe-button>            </div>          </div>          <h1>API authentication settings</h1>          <ng-container *ngIf="apiForm.value.authType === \'serviceToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Access token URL                </mat-label>                <input matInput formControlName="authTargetUrl" type=\'text\' placeholder="Enter access token URL" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Client ID                </mat-label>                <input matInput formControlName="apiClientID" type=\'text\' placeholder="Enter client ID" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Client secret                </mat-label>                <input matInput formControlName="safeSecret" type=\'text\' placeholder="Enter client secret" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Consumer ID                </mat-label>                <input matInput formControlName="safeID" type=\'text\' placeholder="Enter consumer ID" onfocus="this.value=\'\'"/>              </mat-form-field>              <mat-form-field appearance="outline">                <mat-label>                  Scope                </mat-label>                <input matInput formControlName="scope" type=\'text\' placeholder="Enter scope" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>          <ng-container *ngIf="apiForm.value.authType === \'userToService\'">            <div formGroupName="settings" class="form-group">              <mat-form-field appearance="outline">                <mat-label>                  Token                </mat-label>                <input matInput formControlName="token" type=\'text\' placeholder="Enter token for authentication" onfocus="this.value=\'\'"/>              </mat-form-field>            </div>          </ng-container>        </div>        <safe-button category="secondary" variant="primary" (click)="onSave()" [disabled]="apiForm.invalid || !apiForm.dirty">Save changes</safe-button>      </form></ng-container></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ApiConfigurationComponent'};
