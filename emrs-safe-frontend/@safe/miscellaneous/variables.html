@@ -3733,26 +3733,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
           name
         }
       }
-      pullJobs {
-        id
-        name
-        status
-        apiConfiguration {
-          id
-          name
-        }
-        schedule
-        convertTo {
-          id
-          name
-        }
-        mapping
-        uniqueIdentifiers
-        channel {
-          id
-          title
-        }
-      }
       canSee
       canUpdate
       canDelete
