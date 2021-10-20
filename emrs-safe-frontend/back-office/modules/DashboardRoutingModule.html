@@ -233,6 +233,12 @@ export const routes &#x3D; [
                         ]
                     },
                     {
+                      path: &#x27;pulljobs&#x27;,
+                      loadChildren: () &#x3D;&gt; import(&#x27;./pages/pull-jobs/pull-jobs.module&#x27;)
+                        .then(m &#x3D;&gt; m.PullJobsModule),
+                      // canActivate: [SafePermissionGuard]
+                    },
+                    {
                         path: &#x27;**&#x27;,
                         pathMatch: &#x27;full&#x27;,
                         redirectTo: &#x27;users&#x27;

@@ -700,13 +700,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PullJobsModule.html" data-type="entity-link">PullJobsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-PullJobsModule-484f6bda053f15dafa864ed4e0d11de0"' : 'data-target="#xs-components-links-module-PullJobsModule-484f6bda053f15dafa864ed4e0d11de0"' }>
+                                            'data-target="#components-links-module-PullJobsModule-ccdee6c8f03ac9abb4b27b827e9b22fd"' : 'data-target="#xs-components-links-module-PullJobsModule-ccdee6c8f03ac9abb4b27b827e9b22fd"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-484f6bda053f15dafa864ed4e0d11de0"' :
-                                            'id="xs-components-links-module-PullJobsModule-484f6bda053f15dafa864ed4e0d11de0"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-ccdee6c8f03ac9abb4b27b827e9b22fd"' :
+                                            'id="xs-components-links-module-PullJobsModule-ccdee6c8f03ac9abb4b27b827e9b22fd"' }>
                                             <li class="link">
                                                 <a href="components/PullJobModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">PullJobModalComponent</a>
@@ -1170,6 +1170,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetPositionAttributesFromCategoryQueryResponse.html" data-type="entity-link">GetPositionAttributesFromCategoryQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetPullJobsQueryResponse.html" data-type="entity-link">GetPullJobsQueryResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetRecordByIdQueryResponse.html" data-type="entity-link">GetRecordByIdQueryResponse</a>

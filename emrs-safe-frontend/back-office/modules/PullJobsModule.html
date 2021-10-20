@@ -157,7 +157,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/pull-jobs/pull-jobs.module.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/pull-jobs/pull-jobs.module.ts</code>
         </p>
 
 
@@ -215,32 +215,33 @@ import { SafeConfirmModalModule, SafeButtonModule } from &#x27;@safe/builder&#x2
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
 import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
 import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
-
+import { MatPaginatorModule } from &#x27;@angular/material/paginator&#x27;;
 
 @NgModule({
   declarations: [
     PullJobsComponent,
     PullJobModalComponent
   ],
-    imports: [
-        CommonModule,
-        PullJobsRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatButtonModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatIconModule,
-        MatInputModule,
-        MatSelectModule,
-        MatMenuModule,
-        MatProgressSpinnerModule,
-        MatTableModule,
-        SafeConfirmModalModule,
-        MatExpansionModule,
-        MatDividerModule,
-        SafeButtonModule
-    ]
+  imports: [
+    CommonModule,
+    PullJobsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    SafeConfirmModalModule,
+    MatExpansionModule,
+    MatDividerModule,
+    SafeButtonModule,
+    MatPaginatorModule
+  ]
 })
 export class PullJobsModule { }
 </code></pre>

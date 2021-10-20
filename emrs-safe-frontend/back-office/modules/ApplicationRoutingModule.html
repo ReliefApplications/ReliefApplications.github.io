@@ -139,12 +139,6 @@ const routes: Routes &#x3D; [
             loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/subscriptions/subscriptions.module&#x27;)\
               .then(m &#x3D;&gt; m.SubscriptionsModule)&quot;,
             // canActivate: [SafePermissionGuard]
-          },
-          {
-            path: &#x27;pull-jobs&#x27;,
-            loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/pull-jobs/pull-jobs.module&#x27;)\
-              .then(m &#x3D;&gt; m.PullJobsModule)&quot;,
-            // canActivate: [SafePermissionGuard]
           }
         ]
       },

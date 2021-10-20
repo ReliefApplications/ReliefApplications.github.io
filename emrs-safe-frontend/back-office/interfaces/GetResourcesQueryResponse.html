@@ -161,7 +161,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import {
   Dashboard, Form, Permission, Resource, Role, User, Record,
-  Application, Page, Workflow, Step, PositionAttribute, ApiConfiguration
+  Application, Page, Workflow, Step, PositionAttribute, ApiConfiguration, PullJob
 } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; GET USERS &#x3D;&#x3D;&#x3D;
@@ -1010,6 +1010,57 @@ query GetApiConfiguration($id: ID!) {
 export interface GetApiConfigurationQueryResponse {
   loading: boolean;
   apiConfiguration: ApiConfiguration;
+}
+
+// &#x3D;&#x3D;&#x3D; GET PULL JOBS &#x3D;&#x3D;&#x3D;
+export const GET_PULL_JOBS &#x3D; gql&#x60;
+query GetPullJobs($first: Int, $afterCursor: ID) {
+  pullJobs(first: $first, afterCursor: $afterCursor) {
+    edges {
+      node {
+        id
+        name
+        status
+        apiConfiguration {
+          id
+          name
+        }
+        schedule
+        convertTo {
+          id
+          name
+        }
+        mapping
+        uniqueIdentifiers
+        channel {
+          id
+          title
+        }
+      }
+      cursor
+    }
+    totalCount
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}&#x60;;
+
+
+export interface GetPullJobsQueryResponse {
+  loading: boolean;
+  pullJobs: {
+    edges: {
+      node: PullJob;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    },
+    totalCount: number;
+  };
 }
 </code></pre>
     </div>
