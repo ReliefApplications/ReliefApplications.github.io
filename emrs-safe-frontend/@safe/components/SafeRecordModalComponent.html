@@ -409,14 +409,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="180"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:180</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:181</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Closes the modal without sending any data.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -1247,7 +1249,8 @@ export class SafeRecordModalComponent implements OnInit {
     this.dialogRef.close(true);
   }
 
-  /* Close the modal without sending any data.
+ /**
+  * Closes the modal without sending any data.
   */
   onClose(): void {
     this.dialogRef.close();
@@ -1257,7 +1260,8 @@ export class SafeRecordModalComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;!loading&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;safe-button mat-dialog-close (click)&#x3D;&quot;onClose()&quot; [isIcon]&#x3D;&quot;true&quot; icon&#x3D;&quot;close&quot; variant&#x3D;&quot;danger&quot; class&#x3D;&quot;modal-close&quot;&gt;&lt;/safe-button&gt;
+&lt;ng-container *ngIf&#x3D;&quot;!loading&quot;&gt;
     &lt;div mat-dialog-title&gt;
         &lt;mat-tab-group animationDuration&#x3D;&quot;0ms&quot; (selectedIndexChange)&#x3D;&quot;onShowPage($event)&quot; *ngIf&#x3D;&quot;formPages.length &gt; 1&quot;&gt;
             &lt;mat-tab *ngFor&#x3D;&quot;let page of formPages&quot; [label]&#x3D;&quot;page.title ? page.title : page.name&quot;&gt;&lt;/mat-tab&gt;
@@ -1293,6 +1297,7 @@ export class SafeRecordModalComponent implements OnInit {
     &lt;button mat-flat-button mat-dialog-close&#x3D;&quot;true&quot; cdkFocusInitial color&#x3D;&quot;primary&quot;&gt;Revert to past record&lt;/button&gt;
 &lt;/mat-dialog-actions&gt;
 &lt;mat-dialog-actions align&#x3D;&quot;end&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; !data.compareTo &amp;&amp; canEdit&quot;&gt;
+    &lt;button mat-button color&#x3D;&quot;warn&quot; (click)&#x3D;&quot;onClose()&quot;&gt;Close&lt;/button&gt;
     &lt;button mat-flat-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onEdit()&quot;&gt;Edit record&lt;/button&gt;
 &lt;/mat-dialog-actions&gt;
 </code></pre>
@@ -1308,6 +1313,7 @@ export class SafeRecordModalComponent implements OnInit {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
 }
 
 mat-dialog-content {
@@ -1358,6 +1364,13 @@ mat-grid-tile:nth-child(2n) {
     text-align: right;
     margin-bottom: 8px;
 }
+
+.modal-close {
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    z-index: 1002;
+}
 </code></pre>
     </div>
 
@@ -1386,7 +1399,7 @@ mat-grid-tile:nth-child(2n) {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="!loading">    <div mat-dialog-title>        <mat-tab-group animationDuration="0ms" (selectedIndexChange)="onShowPage($event)" *ngIf="formPages.length > 1">            <mat-tab *ngFor="let page of formPages" [label]="page.title ? page.title : page.name"></mat-tab>        </mat-tab-group>        <div class="versions-info" *ngIf="data.compareTo">            <div class="version-info">                <div>Past version</div>                <span>{{ data.compareTo.createdAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>            <div class="version-info">                <div>Current version</div>                <span>{{ record.modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>        </div>    </div></ng-container><mat-dialog-content>    <ng-container *ngIf="!data.compareTo">        <span mat-dialog-title *ngIf="modifiedAt" class="record-date">Last edit: {{ modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>        <div [id]="containerId"></div>    </ng-container>    <ng-container *ngIf="data.compareTo">        <mat-grid-list cols="2" rowHeight="2:1">            <mat-grid-tile [id]="containerNextId">            </mat-grid-tile>            <mat-grid-tile [id]="containerId">            </mat-grid-tile>        </mat-grid-list>    </ng-container></mat-dialog-content><mat-dialog-actions align="end" *ngIf="!loading && data.compareTo">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button mat-dialog-close="true" cdkFocusInitial color="primary">Revert to past record</button></mat-dialog-actions><mat-dialog-actions align="end" *ngIf="!loading && !data.compareTo && canEdit">    <button mat-flat-button color="primary" (click)="onEdit()">Edit record</button></mat-dialog-actions></div>'
+        var COMPONENT_TEMPLATE = '<div><safe-button mat-dialog-close (click)="onClose()" [isIcon]="true" icon="close" variant="danger" class="modal-close"></safe-button><ng-container *ngIf="!loading">    <div mat-dialog-title>        <mat-tab-group animationDuration="0ms" (selectedIndexChange)="onShowPage($event)" *ngIf="formPages.length > 1">            <mat-tab *ngFor="let page of formPages" [label]="page.title ? page.title : page.name"></mat-tab>        </mat-tab-group>        <div class="versions-info" *ngIf="data.compareTo">            <div class="version-info">                <div>Past version</div>                <span>{{ data.compareTo.createdAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>            <div class="version-info">                <div>Current version</div>                <span>{{ record.modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>        </div>    </div></ng-container><mat-dialog-content>    <ng-container *ngIf="!data.compareTo">        <span mat-dialog-title *ngIf="modifiedAt" class="record-date">Last edit: {{ modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>        <div [id]="containerId"></div>    </ng-container>    <ng-container *ngIf="data.compareTo">        <mat-grid-list cols="2" rowHeight="2:1">            <mat-grid-tile [id]="containerNextId">            </mat-grid-tile>            <mat-grid-tile [id]="containerId">            </mat-grid-tile>        </mat-grid-list>    </ng-container></mat-dialog-content><mat-dialog-actions align="end" *ngIf="!loading && data.compareTo">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button mat-dialog-close="true" cdkFocusInitial color="primary">Revert to past record</button></mat-dialog-actions><mat-dialog-actions align="end" *ngIf="!loading && !data.compareTo && canEdit">    <button mat-button color="warn" (click)="onClose()">Close</button>    <button mat-flat-button color="primary" (click)="onEdit()">Edit record</button></mat-dialog-actions></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeRecordModalComponent'};

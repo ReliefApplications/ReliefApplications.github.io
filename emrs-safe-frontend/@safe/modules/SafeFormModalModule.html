@@ -63,21 +63,25 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_SafeFormModalModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="144,-70 144,-268 352,-268 352,-70 144,-70"/>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeFormModalModule_declarations</title>
-<polygon fill="none" stroke="black" points="153,-78 153,-130 343,-130 343,-78 153,-78"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="72,-70 72,-268 424,-268 424,-70 72,-70"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeFormModalModule_exports</title>
 <polygon fill="none" stroke="black" points="152,-208 152,-260 344,-260 344,-208 152,-208"/>
 </g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeFormModalModule_declarations</title>
+<polygon fill="none" stroke="black" points="226,-78 226,-130 416,-130 416,-78 226,-78"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeFormModalModule_imports</title>
+<polygon fill="none" stroke="black" points="80,-78 80,-130 218,-130 218,-78 80,-78"/>
+</g>
 <!-- SafeFormModalComponent -->
 <g id="node1" class="node">
 <title>SafeFormModalComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="334.59,-122 161.41,-122 161.41,-86 334.59,-86 334.59,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">SafeFormModalComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="407.59,-122 234.41,-122 234.41,-86 407.59,-86 407.59,-122"/>
+<text text-anchor="middle" x="321" y="-99.8" font-family="Times,serif" font-size="14.00">SafeFormModalComponent</text>
 </g>
 <!-- SafeFormModalModule -->
 <g id="node2" class="node">
@@ -88,20 +92,32 @@
 <!-- SafeFormModalComponent&#45;&gt;SafeFormModalModule -->
 <g id="edge1" class="edge">
 <title>SafeFormModalComponent&#45;&gt;SafeFormModalModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<path fill="none" stroke="black" d="M279.05,-122.11C279.05,-122.11 279.05,-140.99 279.05,-140.99"/>
+<polygon fill="black" stroke="black" points="275.55,-140.99 279.05,-150.99 282.55,-140.99 275.55,-140.99"/>
 </g>
 <!-- SafeFormModalComponent  -->
-<g id="node3" class="node">
+<g id="node4" class="node">
 <title>SafeFormModalComponent </title>
 <polygon fill="#fb8072" stroke="black" points="336.09,-252 159.91,-252 159.91,-216 336.09,-216 336.09,-252"/>
 <text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00">SafeFormModalComponent </text>
 </g>
 <!-- SafeFormModalModule&#45;&gt;SafeFormModalComponent  -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>SafeFormModalModule&#45;&gt;SafeFormModalComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M248,-187.11C248,-187.11 248,-205.99 248,-205.99"/>
 <polygon fill="black" stroke="black" points="244.5,-205.99 248,-215.99 251.5,-205.99 244.5,-205.99"/>
+</g>
+<!-- SafeButtonModule -->
+<g id="node3" class="node">
+<title>SafeButtonModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="210.04,-122 207.04,-126 186.04,-126 183.04,-122 87.96,-122 87.96,-86 210.04,-86 210.04,-122"/>
+<text text-anchor="middle" x="149" y="-99.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
+</g>
+<!-- SafeButtonModule&#45;&gt;SafeFormModalModule -->
+<g id="edge2" class="edge">
+<title>SafeButtonModule&#45;&gt;SafeFormModalModule</title>
+<path fill="none" stroke="black" d="M191.31,-122.11C191.31,-122.11 191.31,-140.99 191.31,-140.99"/>
+<polygon fill="black" stroke="black" points="187.81,-140.99 191.31,-150.99 194.81,-140.99 187.81,-140.99"/>
 </g>
 </g>
 </svg>
@@ -151,6 +167,15 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
+                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../modules/SafeButtonModule.html">SafeButtonModule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
                     <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
@@ -171,12 +196,18 @@
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { SafeFormModalComponent } from &#x27;./form-modal.component&#x27;;
 import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
+import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
+import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+import { SafeButtonModule } from &#x27;../ui/button/button.module&#x27;;
 
 @NgModule({
   declarations: [SafeFormModalComponent],
   imports: [
     CommonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatButtonModule,
+    SafeButtonModule
   ],
   exports: [SafeFormModalComponent]
 })

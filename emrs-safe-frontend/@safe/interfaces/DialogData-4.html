@@ -519,6 +519,13 @@ export class SafeFormModalComponent implements OnInit {
     const classes &#x3D; options.cssClasses;
     classes.content +&#x3D; &#x27;safe-qst-content&#x27;;
   }
+
+  /**
+   * Closes the modal without sending any data.
+   */
+  onClose(): void {
+    this.dialogRef.close();
+  }
 }
 </code></pre>
     </div>

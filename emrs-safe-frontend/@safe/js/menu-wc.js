@@ -429,13 +429,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeFormModalModule.html" data-type="entity-link">SafeFormModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeFormModalModule-35770f64c7345e3c009aba1637c935a3"' : 'data-target="#xs-components-links-module-SafeFormModalModule-35770f64c7345e3c009aba1637c935a3"' }>
+                                            'data-target="#components-links-module-SafeFormModalModule-596ef55644a2f111379d1fcd76e763cb"' : 'data-target="#xs-components-links-module-SafeFormModalModule-596ef55644a2f111379d1fcd76e763cb"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeFormModalModule-35770f64c7345e3c009aba1637c935a3"' :
-                                            'id="xs-components-links-module-SafeFormModalModule-35770f64c7345e3c009aba1637c935a3"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeFormModalModule-596ef55644a2f111379d1fcd76e763cb"' :
+                                            'id="xs-components-links-module-SafeFormModalModule-596ef55644a2f111379d1fcd76e763cb"' }>
                                             <li class="link">
                                                 <a href="components/SafeFormModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeFormModalComponent</a>
@@ -718,13 +718,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeRecordModalModule.html" data-type="entity-link">SafeRecordModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeRecordModalModule-3c05d3e9f747ffcda2382a3dd31fdc8a"' : 'data-target="#xs-components-links-module-SafeRecordModalModule-3c05d3e9f747ffcda2382a3dd31fdc8a"' }>
+                                            'data-target="#components-links-module-SafeRecordModalModule-29cfcbb1b33dbe8d8a24649292fdc5bd"' : 'data-target="#xs-components-links-module-SafeRecordModalModule-29cfcbb1b33dbe8d8a24649292fdc5bd"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeRecordModalModule-3c05d3e9f747ffcda2382a3dd31fdc8a"' :
-                                            'id="xs-components-links-module-SafeRecordModalModule-3c05d3e9f747ffcda2382a3dd31fdc8a"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeRecordModalModule-29cfcbb1b33dbe8d8a24649292fdc5bd"' :
+                                            'id="xs-components-links-module-SafeRecordModalModule-29cfcbb1b33dbe8d8a24649292fdc5bd"' }>
                                             <li class="link">
                                                 <a href="components/SafeRecordModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeRecordModalComponent</a>
