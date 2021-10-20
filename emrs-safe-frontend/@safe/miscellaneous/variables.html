@@ -238,6 +238,9 @@
                             <a href="#equals" title="projects/safe/src/lib/utils/array-filter.ts"><b>equals</b>&nbsp;&nbsp;&nbsp;(projects/.../array-filter.ts)</a>
                         </li>
                         <li>
+                            <a href="#Floating" title="projects/safe/src/lib/components/widget-choice/widget-choice.stories.ts"><b>Floating</b>&nbsp;&nbsp;&nbsp;(projects/.../widget-choice.stories.ts)</a>
+                        </li>
+                        <li>
                             <a href="#GET_APPLICATION_BY_ID" title="projects/safe/src/lib/graphql/queries.ts"><b>GET_APPLICATION_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
                         </li>
                         <li>
@@ -308,6 +311,12 @@
                         </li>
                         <li>
                             <a href="#GRADIENT_SETTINGS" title="projects/safe/src/lib/components/widgets/grid/grid.component.ts"><b>GRADIENT_SETTINGS</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Icon" title="projects/safe/src/lib/components/ui/button/button.stories.ts"><b>Icon</b>&nbsp;&nbsp;&nbsp;(projects/.../button.stories.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#IconAndText" title="projects/safe/src/lib/components/ui/button/button.stories.ts"><b>IconAndText</b>&nbsp;&nbsp;&nbsp;(projects/.../button.stories.ts)</a>
                         </li>
                         <li>
                             <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/services/notification.service.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../notification.service.ts)</a>
@@ -409,9 +418,6 @@
                             <a href="#Template" title="projects/safe/src/lib/components/widget-choice/widget-choice.stories.ts"><b>Template</b>&nbsp;&nbsp;&nbsp;(projects/.../widget-choice.stories.ts)</a>
                         </li>
                         <li>
-                            <a href="#Template" title="projects/safe/src/lib/components/ui/button/button.stories.ts"><b>Template</b>&nbsp;&nbsp;&nbsp;(projects/.../button.stories.ts)</a>
-                        </li>
-                        <li>
                             <a href="#Template" title="projects/safe/src/lib/components/ui/donut-chart/donut-chart.stories.ts"><b>Template</b>&nbsp;&nbsp;&nbsp;(projects/.../donut-chart.stories.ts)</a>
                         </li>
                         <li>
@@ -425,6 +431,12 @@
                         </li>
                         <li>
                             <a href="#Template" title="projects/safe/src/lib/components/ui/spinner/spinner.stories.ts"><b>Template</b>&nbsp;&nbsp;&nbsp;(projects/.../spinner.stories.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TemplateWithoutText" title="projects/safe/src/lib/components/ui/button/button.stories.ts"><b>TemplateWithoutText</b>&nbsp;&nbsp;&nbsp;(projects/.../button.stories.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#TemplateWithText" title="projects/safe/src/lib/components/ui/button/button.stories.ts"><b>TemplateWithText</b>&nbsp;&nbsp;&nbsp;(projects/.../button.stories.ts)</a>
                         </li>
                         <li>
                             <a href="#TITLE_POSITIONS" title="projects/safe/src/lib/components/widgets/chart-settings/constants.ts"><b>TITLE_POSITIONS</b>&nbsp;&nbsp;&nbsp;(projects/.../constants.ts)</a>
@@ -2851,7 +2863,7 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-content-choice [formControl]&#x3D;&quot;type&quot;&gt;&lt;/safe-content-choice&gt;&#x27;,
+    template: &#x27;&lt;safe-content-choice [formControl]&#x3D;&quot;type&quot; [contentTypes]&#x3D;&quot;contentTypes&quot;&gt;&lt;/safe-content-choice&gt;&#x27;,
     props: {
         ...args,
         type: new FormControl(&#x27;&#x27;)
@@ -2946,6 +2958,27 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="Floating"></a>
+                        <span class="name">
+                            <b>
+                            Floating</b>
+                            <a href="#Floating"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Template.bind({})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="Template"></a>
                         <span class="name">
                             <b>
@@ -2963,7 +2996,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-widget-choice&gt;&lt;/safe-widget-choice&gt;&#x27;,
     props: {
         ...args
     }
@@ -2991,7 +3023,7 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>Template.bind({})</code>
+                            <i>Default value : </i><code>TemplateWithText.bind({})</code>
                         </td>
                     </tr>
 
@@ -3002,11 +3034,53 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="Template"></a>
+                        <a name="Icon"></a>
                         <span class="name">
                             <b>
-                            Template</b>
-                            <a href="#Template"><span class="icon ion-ios-link"></span></a>
+                            Icon</b>
+                            <a href="#Icon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>TemplateWithoutText.bind({})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="IconAndText"></a>
+                        <span class="name">
+                            <b>
+                            IconAndText</b>
+                            <a href="#IconAndText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>TemplateWithText.bind({})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TemplateWithoutText"></a>
+                        <span class="name">
+                            <b>
+                            TemplateWithoutText</b>
+                            <a href="#TemplateWithoutText"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -3019,7 +3093,38 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-button&gt;{{content}}&lt;/safe-button&gt;&#x27;,
+    props: {
+        ...args
+    }
+})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TemplateWithText"></a>
+                        <span class="name">
+                            <b>
+                            TemplateWithText</b>
+                            <a href="#TemplateWithText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../components/SafeButtonComponent.html" target="_self" >Story&lt;SafeButtonComponent&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>args &#x3D;&gt; ({
+    template: &#x27;&lt;safe-button [icon]&#x3D;&quot;icon&quot;&gt;{{content}}&lt;/safe-button&gt;&#x27;,
     props: {
         ...args,
         content: text(&#x27;Text&#x27;, &#x27;This is a button&#x27;)
@@ -3076,9 +3181,8 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-donut-chart&gt;&lt;/safe-donut-chart&gt;&#x27;,
     props: {
-        ...args
+        ...args 
     }
 })</code>
                         </td>
@@ -3132,7 +3236,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-icon icon&#x3D;&quot;edit&quot;&gt;&lt;/safe-icon&gt;&#x27;,
     props: {
         ...args
     }
@@ -3188,7 +3291,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-line-chart&gt;&lt;/safe-line-chart&gt;&#x27;,
     props: {
         ...args
     }
@@ -3244,7 +3346,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-pie-chart&gt;&lt;/safe-pie-chart&gt;&#x27;,
     props: {
         ...args
     }
@@ -3300,7 +3401,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>args &#x3D;&gt; ({
-    template: &#x27;&lt;safe-spinner&gt;&lt;/safe-spinner&gt;&#x27;,
     props: {
         ...args
     }
