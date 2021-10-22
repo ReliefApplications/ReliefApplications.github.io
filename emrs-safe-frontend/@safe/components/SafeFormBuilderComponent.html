@@ -619,8 +619,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="341"
-                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:341</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="329"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:329</a></div>
                 </td>
             </tr>
 
@@ -1372,19 +1372,7 @@ export class SafeFormBuilderComponent implements OnInit, OnChanges {
           };
         });
       }
-      if (element.type &#x3D;&#x3D;&#x3D; &#x27;resource&#x27;) {
-        if (element.relatedName) {
-          element.relatedName &#x3D; this.toSnakeCase(element.relatedName);
-          if (!this.isSnakeCase(element.relatedName)) {
-            throw new Error(&#x27;The related name &#x27; + element.relatedName + &#x27; on page &#x27;
-              + page.name + &#x27; is invalid. Please conform to snake_case.&#x27;);
-          }
-        } else {
-          throw new Error(&#x27;Missing related name for question &#x27; + element.title + &#x27; on page &#x27;
-            + page.name + &#x27;. Please provide a valid data value name (snake_case) to save the form.&#x27;);
-        }
-      }
-      if (element.type &#x3D;&#x3D;&#x3D; &#x27;resources&#x27;) {
+      if ([&#x27;resource&#x27;, &#x27;resources&#x27;].includes(element.type)) {
         if (element.relatedName) {
           element.relatedName &#x3D; this.toSnakeCase(element.relatedName);
           if (!this.isSnakeCase(element.relatedName)) {
