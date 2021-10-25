@@ -100,6 +100,9 @@
                                 <a href="#openDashboard">openDashboard</a>
                             </li>
                             <li>
+                                <a href="#resetDefaultWidgetLayout">resetDefaultWidgetLayout</a>
+                            </li>
+                            <li>
                                 <a href="#saveWidgetDefaultLayout">saveWidgetDefaultLayout</a>
                             </li>
                             <li>
@@ -368,6 +371,76 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="resetDefaultWidgetLayout"></a>
+                    <span class="name">
+                        <b>
+                            resetDefaultWidgetLayout
+                        </b>
+                        <a href="#resetDefaultWidgetLayout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetDefaultWidgetLayout(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="saveWidgetDefaultLayout"></a>
                     <span class="name">
                         <b>
@@ -386,8 +459,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:64</a></div>
                 </td>
             </tr>
 
@@ -468,8 +541,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">projects/safe/src/lib/services/dashboard.service.ts:59</a></div>
                 </td>
             </tr>
 
@@ -597,9 +670,9 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { Dashboard } from &#x27;../models/dashboard.model&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
-import {Apollo} from &#x27;apollo-angular&#x27;;
+import { Apollo } from &#x27;apollo-angular&#x27;;
 import { GetDashboardByIdQueryResponse, GET_DASHBOARD_BY_ID } from &#x27;../graphql/queries&#x27;;
-import {EDIT_DASHBOARD, EditDashboardMutationResponse} from &#x27;../graphql/mutations&#x27;;
+import { EDIT_DASHBOARD, EditDashboardMutationResponse } from &#x27;../graphql/mutations&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -643,15 +716,24 @@ export class SafeDashboardService {
     }
   }
 
+  resetDefaultWidgetLayout(id: number): void {
+    try {
+      const dashboardId &#x3D; this.dashboard.getValue()?.id;
+      localStorage.removeItem(&#x60;widget:${dashboardId}:${id}&#x60;);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   saveWidgetLayout(id: number, layout: any): void {
     const dashboardId &#x3D; this.dashboard.getValue()?.id;
-    return localStorage.setItem(&#x60;widget:${dashboardId}:${id}&#x60;, JSON.stringify({ ...layout, timestamp: + new Date() }));
+    return localStorage.setItem(&#x60;widget:${dashboardId}:${id}&#x60;, JSON.stringify({ ...layout, timestamp: + new Date() }));
   }
 
   saveWidgetDefaultLayout(id: number, layout: any): void {
     const dashboardId &#x3D; this.dashboard.getValue()?.id;
     const dashboardStructure &#x3D; this.dashboard.getValue()?.structure;
-    const defaultLayout &#x3D; { ...layout, timestamp: + new Date() };
+    const defaultLayout &#x3D; { ...layout, timestamp: + new Date() };
     const widgetTemp &#x3D; {
       ...dashboardStructure[id],
       settings: {
