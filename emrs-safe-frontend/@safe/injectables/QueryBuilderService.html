@@ -277,8 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="244"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:244</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="245"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:245</a></div>
                 </td>
             </tr>
 
@@ -1355,8 +1355,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="280"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:280</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="281"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:281</a></div>
                 </td>
             </tr>
 
@@ -1772,26 +1772,27 @@ export class QueryBuilderService {
   }
 
   public createFilterGroup(filter: any, fields: any): FormGroup {
-    if (filter.filters) {
-      const filters &#x3D; filter.filters.map((x: any) &#x3D;&gt; this.createFilterGroup(x, fields));
-      return this.formBuilder.group({
-        logic: filter.logic || &#x27;and&#x27;,
-        filters: this.formBuilder.array(filters)
-      });
-    } else {
-      if (filter.field) {
+    if (filter) {
+      if (filter.filters) {
+        const filters &#x3D; filter.filters.map((x: any) &#x3D;&gt; this.createFilterGroup(x, fields));
         return this.formBuilder.group({
-          field: filter.field,
-          operator: filter.operator || &#x27;eq&#x27;,
-          value: filter.value
+          logic: filter.logic || &#x27;and&#x27;,
+          filters: this.formBuilder.array(filters)
         });
       } else {
-        return this.formBuilder.group({
-          logic: &#x27;and&#x27;,
-          filters: this.formBuilder.array([])
-        });
+        if (filter.field) {
+          return this.formBuilder.group({
+            field: filter.field,
+            operator: filter.operator || &#x27;eq&#x27;,
+            value: filter.value
+          });
+        }
       }
     }
+    return this.formBuilder.group({
+      logic: &#x27;and&#x27;,
+      filters: this.formBuilder.array([])
+    });
   }
 
   public addNewField(field: any, newField?: boolean): FormGroup {
