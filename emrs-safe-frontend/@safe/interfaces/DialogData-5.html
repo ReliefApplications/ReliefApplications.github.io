@@ -289,6 +289,7 @@ import { GetRecordByIdQueryResponse, GET_RECORD_BY_ID, GetFormByIdQueryResponse,
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
 import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 
 interface DialogData {
   recordId: string;
@@ -310,9 +311,10 @@ export class SafeRecordModalComponent implements OnInit {
   public form?: Form;
   public record: Record &#x3D; {};
   public modifiedAt: Date | null &#x3D; null;
+  public selectedTabIndex &#x3D; 0;
   public survey!: Survey.Model;
   public surveyNext: Survey.Model | null &#x3D; null;
-  public formPages: any[] &#x3D; [];
+  private pages &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
   public canEdit: boolean | undefined &#x3D; false;
 
   public containerId: string;
@@ -320,6 +322,10 @@ export class SafeRecordModalComponent implements OnInit {
 
   // &#x3D;&#x3D;&#x3D; SURVEY COLORS
   primaryColor &#x3D; &#x27;#008DC9&#x27;;
+
+  public get pages$(): Observable&lt;any[]&gt; {
+    return this.pages.asObservable();
+  }
 
   constructor(
     public dialogRef: MatDialogRef&lt;SafeRecordModalComponent&gt;,
@@ -375,18 +381,17 @@ export class SafeRecordModalComponent implements OnInit {
     // INIT SURVEY
     addCustomFunctions(Survey, this.authService, this.record);
     this.survey &#x3D; new Survey.Model(this.form?.structure);
-    for (const page of this.survey.pages) {
-      if (page.isVisible) {
-        this.formPages.push(page);
-      }
-    }
     this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
+    this.survey.onCurrentPageChanged.add((surveyModel, options) &#x3D;&gt; {
+      this.selectedTabIndex &#x3D; surveyModel.currentPageNo;
+    });
     this.survey.data &#x3D; this.record.data;
     this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
     this.survey.mode &#x3D; &#x27;display&#x27;;
     this.survey.showNavigationButtons &#x3D; &#x27;none&#x27;;
     this.survey.showProgressBar &#x3D; &#x27;off&#x27;;
     this.survey.render(this.containerId);
+    this.setPages();
     if (this.data.compareTo) {
       this.surveyNext &#x3D; new Survey.Model(this.form?.structure);
       this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
@@ -426,6 +431,7 @@ export class SafeRecordModalComponent implements OnInit {
 
   public onShowPage(i: number): void {
     this.survey.currentPageNo &#x3D; i;
+    this.selectedTabIndex &#x3D; i;
     if (this.data.compareTo &amp;&amp; this.surveyNext) {
       this.surveyNext.currentPageNo &#x3D; i;
     }
@@ -453,6 +459,18 @@ export class SafeRecordModalComponent implements OnInit {
 
   public onEdit(): void {
     this.dialogRef.close(true);
+  }
+
+  private setPages(): void {
+    const pages &#x3D; [];
+    if (this.survey) {
+      for (const page of this.survey.pages) {
+        if (page.isVisible) {
+          pages.push(page);
+        }
+      }
+    }
+    this.pages.next(pages);
   }
 
  /**

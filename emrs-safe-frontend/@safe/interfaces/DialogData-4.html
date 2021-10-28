@@ -230,6 +230,7 @@ import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeSnackBarService } from &#x27;../../services/snackbar.service&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
 import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 
 interface DialogData {
   template?: string;
@@ -255,10 +256,16 @@ export class SafeFormModalComponent implements OnInit {
   private isMultiEdition &#x3D; false;
 
   public survey?: Survey.Model;
+  public selectedTabIndex &#x3D; 0;
+  private pages &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
   private temporaryFilesStorage: any &#x3D; {};
 
   // &#x3D;&#x3D;&#x3D; SURVEY COLORS
   primaryColor &#x3D; &#x27;#008DC9&#x27;;
+
+  public get pages$(): Observable&lt;any[]&gt; {
+    return this.pages.asObservable();
+  }
 
   constructor(
     public dialogRef: MatDialogRef&lt;SafeFormModalComponent&gt;,
@@ -322,6 +329,16 @@ export class SafeFormModalComponent implements OnInit {
     this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
     this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
     this.survey.onUpdateQuestionCssClasses.add((_, options) &#x3D;&gt; this.onSetCustomCss(options));
+    this.survey.onCurrentPageChanged.add((survey, _) &#x3D;&gt; {
+      survey.checkErrorsMode &#x3D; survey.isLastPage ? &#x27;onComplete&#x27; : &#x27;onNextPage&#x27;;
+      this.selectedTabIndex &#x3D; survey.currentPageNo;
+    });
+    this.survey.onPageVisibleChanged.add(() &#x3D;&gt; {
+      this.setPages();
+    });
+    this.survey.onSettingQuestionErrors.add((survey, options) &#x3D;&gt; {
+      this.setPages();
+    });
     this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
     if (this.data.recordId &amp;&amp; this.record) {
       addCustomFunctions(Survey, this.authService, this.record);
@@ -330,10 +347,24 @@ export class SafeFormModalComponent implements OnInit {
     }
     this.survey.showNavigationButtons &#x3D; false;
     this.survey.render(this.containerId);
+    this.setPages();
     this.survey.onComplete.add(this.completeMySurvey);
   }
 
-  /*  Create the record, or update it if provided.
+  /**
+   * Calls the complete method of the survey if no error.
+   */
+  public submit(): void {
+    if (!this.survey?.hasErrors()) {
+      this.survey?.completeLastPage();
+    } else {
+      this.snackBar.openSnackBar(&#x27;Saving failed, some fields require your attention.&#x27;, { error: true });
+    }
+  }
+
+ /**
+  * Creates the record, or update it if provided.
+  * @param survey Survey instance.
   */
   public completeMySurvey &#x3D; (survey: any) &#x3D;&gt; {
     const rowsSelected &#x3D; Array.isArray(this.data.recordId) ? this.data.recordId.length : 1;
@@ -486,6 +517,23 @@ export class SafeFormModalComponent implements OnInit {
         };
         fileReader.readAsDataURL(file);
       });
+  }
+
+  private setPages(): void {
+    const pages &#x3D; [];
+    if (this.survey) {
+      for (const page of this.survey.pages) {
+        if (page.isVisible) {
+          pages.push(page);
+        }
+      }
+    }
+    this.pages.next(pages);
+  }
+
+  public onShowPage(i: number): void {
+    if (this.survey) { this.survey.currentPageNo &#x3D; i; }
+    this.selectedTabIndex &#x3D; i;
   }
 
   private onDownloadFile(survey: Survey.SurveyModel, options: any): void {
