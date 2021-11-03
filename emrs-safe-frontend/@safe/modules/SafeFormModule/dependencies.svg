@@ -24,13 +24,13 @@
 <title>cluster_SafeFormModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 619,-268 619,-70 8,-70"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeFormModule_imports</title>
-<polygon fill="none" stroke="black" points="176,-78 176,-130 611,-130 611,-78 176,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeFormModule_exports</title>
 <polygon fill="none" stroke="black" points="235,-208 235,-260 391,-260 391,-208 235,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeFormModule_imports</title>
+<polygon fill="none" stroke="black" points="176,-78 176,-130 611,-130 611,-78 176,-78"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeFormModule_declarations</title>
