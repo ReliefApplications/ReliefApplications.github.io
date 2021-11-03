@@ -1064,10 +1064,10 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
         value &amp;&amp; value.sendMail ? Validators.required : null],
       subject: [value &amp;&amp; value.subject ? value.subject : &#x27;&#x27;,
         value &amp;&amp; value.sendMail ? Validators.required : null],
+      export: [value &amp;&amp; value.export ? value.export : false],
       bodyFields: this.formBuilder.array((value &amp;&amp; value.bodyFields) ?
         value.bodyFields.map((x: any) &#x3D;&gt; this.queryBuilder.addNewField(x)) : [],
         value &amp;&amp; value.sendMail ? Validators.required : null)
-      // attachment: [value &amp;&amp; value.attachment ? value.attachment : false]
     });
     return buttonForm;
   }
