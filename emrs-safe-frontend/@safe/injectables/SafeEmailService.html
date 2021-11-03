@@ -238,8 +238,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:95</a></div>
                 </td>
             </tr>
 
@@ -334,8 +334,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:114</a></div>
                 </td>
             </tr>
 
@@ -454,8 +454,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="214"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:214</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="224"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:224</a></div>
                 </td>
             </tr>
 
@@ -549,8 +549,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="164"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:164</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:174</a></div>
                 </td>
             </tr>
 
@@ -645,8 +645,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="172"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:172</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:182</a></div>
                 </td>
             </tr>
 
@@ -717,8 +717,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="231"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:231</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="241"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:241</a></div>
                 </td>
             </tr>
 
@@ -813,8 +813,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="176"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:176</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:186</a></div>
                 </td>
             </tr>
 
@@ -922,8 +922,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="135"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:135</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:145</a></div>
                 </td>
             </tr>
 
@@ -994,7 +994,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>sendMail(recipient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subject: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, totalCount: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    <code>sendMail(recipient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subject: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, ids: string[])</code>
                 </td>
             </tr>
 
@@ -1073,9 +1073,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>totalCount</td>
+                                    <td>ids</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <code>string[]</code>
                                     </td>
 
                                     <td>
@@ -1138,13 +1138,23 @@ export class SafeEmailService {
    * @param subject subject of the email.
    * @param settings query settings.
    */
-  public sendMail(recipient: string, subject: string, settings: any, totalCount: number): void {
+  public sendMail(recipient: string, subject: string, settings: any, ids: string[]): void {
     const builtQuery &#x3D; this.queryBuilder.buildQuery(settings);
     if (builtQuery) {
       const dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
         query: builtQuery,
         variables: {
-          first: totalCount
+          first: ids.length,
+          filter: {
+            logic: &#x27;and&#x27;,
+            filters: [
+              {
+                operator: &#x27;eq&#x27;,
+                field: &#x27;ids&#x27;,
+                value: ids
+              }
+            ]
+          }
         }
       });
       const metaQuery &#x3D; this.queryBuilder.buildMetaQuery(settings, false);
