@@ -485,8 +485,8 @@ export interface GetRolesQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET USERS &#x3D;&#x3D;&#x3D;
 export const GET_USERS &#x3D; gql&#x60;
-{
-  users {
+query GetUsers($applications: [ID]) {
+  users(applications: $applications) {
     id
     username
     name
