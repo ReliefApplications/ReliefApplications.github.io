@@ -405,8 +405,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="196"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:196</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="199"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:199</a></div>
                 </td>
             </tr>
 
@@ -518,8 +518,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="201"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:201</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="204"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:204</a></div>
                 </td>
             </tr>
 
@@ -1039,6 +1039,9 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
       name: [value &amp;&amp; value.name ? value.name : &#x27;Next&#x27;],
       goToNextStep: [value &amp;&amp; value.goToNextStep ? value.goToNextStep : false],
       passDataToNextStep: [value &amp;&amp; value.passDataToNextStep ? value.passDataToNextStep : false],
+      closeWorkflow: [value &amp;&amp; value.closeWorkflow ? value.closeWorkflow : false],
+      confirmationText: [value &amp;&amp; value.confirmationText ? value.confirmationText : &#x27;&#x27;,
+        value &amp;&amp; value.closeWorkflow ? Validators.required : null],
       autoSave: [value &amp;&amp; value.autoSave ? value.autoSave : false],
       modifySelectedRows: [value ? value.modifySelectedRows : false],
       modifications: this.formBuilder.array(value &amp;&amp; value.modifications &amp;&amp; value.modifications.length
