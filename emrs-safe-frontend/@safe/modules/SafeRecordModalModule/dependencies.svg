@@ -28,13 +28,13 @@
 <title>cluster_SafeRecordModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="221,-78 221,-130 421,-130 421,-78 221,-78"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeRecordModalModule_exports</title>
-<polygon fill="none" stroke="black" points="147,-208 147,-260 349,-260 349,-208 147,-208"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeRecordModalModule_imports</title>
 <polygon fill="none" stroke="black" points="75,-78 75,-130 213,-130 213,-78 75,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeRecordModalModule_exports</title>
+<polygon fill="none" stroke="black" points="147,-208 147,-260 349,-260 349,-208 147,-208"/>
 </g>
 <!-- SafeRecordModalComponent -->
 <g id="node1" class="node">
