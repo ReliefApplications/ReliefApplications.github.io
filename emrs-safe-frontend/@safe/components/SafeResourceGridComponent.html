@@ -712,8 +712,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="472"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:472</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="474"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:474</a></div>
                 </td>
             </tr>
 
@@ -1192,8 +1192,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="405"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:405</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="407"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:407</a></div>
                 </td>
             </tr>
 
@@ -1600,8 +1600,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="435"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:435</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="437"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:437</a></div>
                 </td>
             </tr>
 
@@ -1679,8 +1679,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="421"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:421</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="423"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:423</a></div>
                 </td>
             </tr>
 
@@ -1905,8 +1905,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="484"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:484</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="486"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:486</a></div>
                 </td>
             </tr>
 
@@ -1985,8 +1985,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="443"
-                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:443</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="445"
+                            class="link-to-prism">projects/safe/src/lib/components/resource-grid/resource-grid.component.ts:445</a></div>
                 </td>
             </tr>
 
@@ -3281,11 +3281,13 @@ export class SafeResourceGridComponent implements OnInit, OnDestroy {
       delete auxData.canUpdate;
       delete auxData.__typename;
       if (Object.keys(auxData).some((key: string, index) &#x3D;&gt; {
-        const meta &#x3D; this.metaFields[key];
-        if (meta &amp;&amp; meta.choices) {
-          return this.getPropertyValue(auxData, key).toString().toLowerCase().includes(searchText);
-        } else {
-          return auxData[key].toString().toLowerCase().includes(searchText);
+        if (auxData[key]) {
+          const meta &#x3D; this.metaFields[key];
+          if (meta &amp;&amp; meta.choices) {
+            return this.getPropertyValue(auxData, key).toString().toLowerCase().includes(searchText);
+          } else {
+            return auxData[key].toString().toLowerCase().includes(searchText);
+          }
         }
       })) {
         filteredData.push(data);
