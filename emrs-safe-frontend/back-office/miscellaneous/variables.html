@@ -160,10 +160,10 @@
                             <a href="#EDIT_WORKFLOW" title="projects/back-office/src/app/graphql/mutations.ts"><b>EDIT_WORKFLOW</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/back-office/src/environments/environment.aspas.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.aspas.ts)</a>
+                            <a href="#environment" title="projects/back-office/src/environments/environment.azure.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.azure.prod.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/back-office/src/environments/environment.azure.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.azure.prod.ts)</a>
+                            <a href="#environment" title="projects/back-office/src/environments/environment.aspas.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.aspas.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="projects/back-office/src/environments/environment.azure.uat.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.azure.uat.ts)</a>
@@ -262,9 +262,6 @@
                             <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/components/add-form/add-form.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../add-form.component.ts)</a>
                         </li>
                         <li>
-                            <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/application/pages/add-page/add-page.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../add-page.component.ts)</a>
-                        </li>
-                        <li>
                             <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/dashboard/pages/api-configurations/api-configurations.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../api-configurations.component.ts)</a>
                         </li>
                         <li>
@@ -280,13 +277,16 @@
                             <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/dashboard/pages/resources/resources.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../resources.component.ts)</a>
                         </li>
                         <li>
+                            <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/application/pages/add-page/add-page.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../add-page.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/dashboard/pages/pull-jobs/components/pull-job-modal/pull-job-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../pull-job-modal.component.ts)</a>
+                        </li>
+                        <li>
                             <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../subscription-modal.component.ts)</a>
                         </li>
                         <li>
                             <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/application/pages/workflow/components/add-step/add-step.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../add-step.component.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#ITEMS_PER_PAGE" title="projects/back-office/src/app/dashboard/pages/pull-jobs/components/pull-job-modal/pull-job-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../pull-job-modal.component.ts)</a>
                         </li>
                         <li>
                             <a href="#REFRESH" title="projects/back-office/src/app/app.module.ts"><b>REFRESH</b>&nbsp;&nbsp;&nbsp;(projects/.../app.module.ts)</a>
@@ -298,10 +298,10 @@
                             <a href="#RESTORE_RECORD" title="projects/back-office/src/app/graphql/mutations.ts"><b>RESTORE_RECORD</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
-                            <a href="#routes" title="projects/back-office/src/app/auth/auth-routing.module.ts"><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../auth-routing.module.ts)</a>
+                            <a href="#routes" title="projects/back-office/src/app/dashboard/dashboard-routing.module.ts"><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../dashboard-routing.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#routes" title="projects/back-office/src/app/dashboard/dashboard-routing.module.ts"><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../dashboard-routing.module.ts)</a>
+                            <a href="#routes" title="projects/back-office/src/app/auth/auth-routing.module.ts"><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../auth-routing.module.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -1588,47 +1588,6 @@ mutation restoreRecord($id: ID!) {
             </tbody>
         </table>
 </section>
-    <h3>projects/back-office/src/environments/environment.aspas.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="environment"></a>
-                        <span class="name">
-                            <b>
-                            environment</b>
-                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{
-  production: true,
-  API_URL: &#x27;https://aspas.oortcloud.tech/api&#x27;,
-  SUBSCRIPTION_API_URL: &#x27;wss://aspas.oortcloud.tech&#x27;,
-  clientId: &#x27;79d8fe89-9ada-46c6-96b5-5bbaa0124a5c&#x27;,
-  authority: &#x27;https://login.microsoftonline.com/common&#x27;,
-  redirectUrl: &#x27;https://aspas.oortcloud.tech/admin/&#x27;,
-  postLogoutRedirectUri: &#x27;https://aspas.oortcloud.tech/admin/auth&#x27;,
-  frontOfficeUri: &#x27;https://aspas.oortcloud.tech/&#x27;,
-  backOfficeUri: &#x27;https://aspas.oortcloud.tech/admin/&#x27;,
-  module: &#x27;backoffice&#x27;
-}</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
     <h3>projects/back-office/src/environments/environment.azure.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -1662,6 +1621,47 @@ mutation restoreRecord($id: ID!) {
     frontOfficeUri: &#x27;https://ems-safe.who.int/&#x27;,
     backOfficeUri: &#x27;https://ems-safe.who.int/backoffice/&#x27;,
     module: &#x27;backoffice&#x27;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/back-office/src/environments/environment.aspas.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: true,
+  API_URL: &#x27;https://aspas.oortcloud.tech/api&#x27;,
+  SUBSCRIPTION_API_URL: &#x27;wss://aspas.oortcloud.tech&#x27;,
+  clientId: &#x27;79d8fe89-9ada-46c6-96b5-5bbaa0124a5c&#x27;,
+  authority: &#x27;https://login.microsoftonline.com/common&#x27;,
+  redirectUrl: &#x27;https://aspas.oortcloud.tech/admin/&#x27;,
+  postLogoutRedirectUri: &#x27;https://aspas.oortcloud.tech/admin/auth&#x27;,
+  frontOfficeUri: &#x27;https://aspas.oortcloud.tech/&#x27;,
+  backOfficeUri: &#x27;https://aspas.oortcloud.tech/admin/&#x27;,
+  module: &#x27;backoffice&#x27;
 }</code>
                         </td>
                     </tr>
@@ -3139,36 +3139,6 @@ query GetShortForms($first: Int, $afterCursor: ID) {
             </tbody>
         </table>
 </section>
-    <h3>projects/back-office/src/app/application/pages/add-page/add-page.component.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ITEMS_PER_PAGE"></a>
-                        <span class="name">
-                            <b>
-                            ITEMS_PER_PAGE</b>
-                            <a href="#ITEMS_PER_PAGE"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>10</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
     <h3>projects/back-office/src/app/dashboard/pages/api-configurations/api-configurations.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -3319,37 +3289,7 @@ query GetShortForms($first: Int, $afterCursor: ID) {
             </tbody>
         </table>
 </section>
-    <h3>projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ITEMS_PER_PAGE"></a>
-                        <span class="name">
-                            <b>
-                            ITEMS_PER_PAGE</b>
-                            <a href="#ITEMS_PER_PAGE"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>10</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
-    <h3>projects/back-office/src/app/application/pages/workflow/components/add-step/add-step.component.ts</h3>
+    <h3>projects/back-office/src/app/application/pages/add-page/add-page.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -3409,44 +3349,59 @@ query GetShortForms($first: Int, $afterCursor: ID) {
             </tbody>
         </table>
 </section>
-    <h3>projects/back-office/src/app/auth/auth-routing.module.ts</h3>
+    <h3>projects/back-office/src/app/application/pages/subscriptions/components/subscription-modal/subscription-modal.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="routes"></a>
+                        <a name="ITEMS_PER_PAGE"></a>
                         <span class="name">
                             <b>
-                            routes</b>
-                            <a href="#routes"><span class="icon ion-ios-link"></span></a>
+                            ITEMS_PER_PAGE</b>
+                            <a href="#ITEMS_PER_PAGE"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[
-    {
-        path: &#x27;&#x27;,
-        children: [
-            {
-                path: &#x27;&#x27;,
-                loadChildren: () &#x3D;&gt; import(&#x27;./pages/login/login.module&#x27;)
-                .then(m &#x3D;&gt; m.LoginModule),
-            },
-            {
-                path: &#x27;login&#x27;,
-                redirectTo: &#x27;&#x27;
-            },
-        ]
-    }
-]</code>
+                            <i>Default value : </i><code>10</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/back-office/src/app/application/pages/workflow/components/add-step/add-step.component.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ITEMS_PER_PAGE"></a>
+                        <span class="name">
+                            <b>
+                            ITEMS_PER_PAGE</b>
+                            <a href="#ITEMS_PER_PAGE"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>10</code>
                         </td>
                     </tr>
 
@@ -3641,6 +3596,51 @@ query GetShortForms($first: Int, $afterCursor: ID) {
                     }
                 ]
             }
+        ]
+    }
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/back-office/src/app/auth/auth-routing.module.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="routes"></a>
+                        <span class="name">
+                            <b>
+                            routes</b>
+                            <a href="#routes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+        path: &#x27;&#x27;,
+        children: [
+            {
+                path: &#x27;&#x27;,
+                loadChildren: () &#x3D;&gt; import(&#x27;./pages/login/login.module&#x27;)
+                .then(m &#x3D;&gt; m.LoginModule),
+            },
+            {
+                path: &#x27;login&#x27;,
+                redirectTo: &#x27;&#x27;
+            },
         ]
     }
 ]</code>
