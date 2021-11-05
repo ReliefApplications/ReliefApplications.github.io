@@ -322,10 +322,10 @@
                             <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/services/notification.service.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../notification.service.ts)</a>
                         </li>
                         <li>
-                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/application-dropdown/application-dropdown.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../application-dropdown.component.ts)</a>
+                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../choose-record-modal.component.ts)</a>
                         </li>
                         <li>
-                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../choose-record-modal.component.ts)</a>
+                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/application-dropdown/application-dropdown.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../application-dropdown.component.ts)</a>
                         </li>
                         <li>
                             <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/resource-dropdown/resource-dropdown.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../resource-dropdown.component.ts)</a>
@@ -4722,7 +4722,7 @@ query GetUsers($applications: [ID]) {
             </tbody>
         </table>
 </section>
-    <h3>projects/safe/src/lib/components/application-dropdown/application-dropdown.component.ts</h3>
+    <h3>projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -4752,7 +4752,7 @@ query GetUsers($applications: [ID]) {
             </tbody>
         </table>
 </section>
-    <h3>projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts</h3>
+    <h3>projects/safe/src/lib/components/application-dropdown/application-dropdown.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -5639,7 +5639,7 @@ query GetUsers($applications: [ID]) {
     userInvalidActions(action: any): string  { return &#x60;User could not be ${action}.&#x60;; } ,
     accessNotProvided(type: any, error?: any): string  { return &#x60;No access provided to this ${type}. ${error ? error : &#x27;&#x27;}&#x60;; } ,
     userRolesUpdated(username: any): string  { return &#x60;${username} roles updated.&#x60;; },
-    usersActions(type: any, length: any): string  { return length &gt; 1 ? &#x60;${length} users were ${type}.&#x60; : &#x60;user was ${type}.&#x60;; }, //
+    usersActions(type: any, length: any): string  { return length &gt; 1 ? &#x60;${length} users were ${type}.&#x60; : &#x60;user was ${type}.&#x60;; },
     objectNotUpdated(type: any, error: any): string  { return &#x60;${type} is locked for edition. ${error}&#x60;; },
     objectEdited(type: any, name: any): string  { return &#x60;${name} ${type} edited.&#x60;; },
     objectNotEdited(type: any, error: any): string  { return &#x60;${type} not edited. ${error}&#x60;; },
@@ -5662,7 +5662,7 @@ query GetUsers($applications: [ID]) {
     formatInvalid(format: string): string { return &#x60;Please upload a valid .${format} file.&#x60;; },
     cannotGoToNextStep: &#x27;Cannot go to next step.&#x27;,
     copied: &#x27;Copied!&#x27;,
-    recordDoesNotMatch: &#x27;Selected records do not match with any fields from this form.&#x27;,
+    recordDoesNotMatch: &#x27;Selected record(s) do not match with some fields from this form.&#x27;,
     recordUploadSuccess: &#x27;Records upload successful.&#x27;,
     emailRegistered: &#x27;Some emails are already part of the application and will not be invited.&#x27;,
     emailTooLong(error: any): string { return &#x60;Failed to open your email client with selected records in the body. Either your browser or your email client does not support such long mailto command. ${error}&#x60;; },
