@@ -328,10 +328,10 @@
                             <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/application-dropdown/application-dropdown.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../application-dropdown.component.ts)</a>
                         </li>
                         <li>
-                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../choose-record-modal.component.ts)</a>
+                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/resource-dropdown/resource-dropdown.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../resource-dropdown.component.ts)</a>
                         </li>
                         <li>
-                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/resource-dropdown/resource-dropdown.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../resource-dropdown.component.ts)</a>
+                            <a href="#ITEMS_PER_PAGE" title="projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts"><b>ITEMS_PER_PAGE</b>&nbsp;&nbsp;&nbsp;(projects/.../choose-record-modal.component.ts)</a>
                         </li>
                         <li>
                             <a href="#LANGUAGES" title="projects/safe/src/lib/utils/languages.ts"><b>LANGUAGES</b>&nbsp;&nbsp;&nbsp;(projects/.../languages.ts)</a>
@@ -1754,7 +1754,7 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[&#x27;Int&#x27;, &#x27;String&#x27;, &#x27;Boolean&#x27;, &#x27;Date&#x27;, &#x27;DateTime&#x27;, &#x27;Time&#x27;]</code>
+                            <i>Default value : </i><code>[&#x27;Int&#x27;, &#x27;String&#x27;, &#x27;Boolean&#x27;, &#x27;Date&#x27;, &#x27;DateTime&#x27;, &#x27;Time&#x27;, &#x27;JSON&#x27;]</code>
                         </td>
                     </tr>
 
@@ -1889,6 +1889,10 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
   Time: {
     defaultOperator: &#x27;eq&#x27;,
     operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;]
+  },
+  JSON: {
+    defaultOperator: &#x27;contains&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;contains&#x27;, &#x27;doesnotcontain&#x27;, &#x27;isempty&#x27;, &#x27;isnotempty&#x27;]
   }
 }</code>
                         </td>
@@ -4785,7 +4789,7 @@ query GetUsers($applications: [ID]) {
             </tbody>
         </table>
 </section>
-    <h3>projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts</h3>
+    <h3>projects/safe/src/lib/components/resource-dropdown/resource-dropdown.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
@@ -4815,7 +4819,7 @@ query GetUsers($applications: [ID]) {
             </tbody>
         </table>
 </section>
-    <h3>projects/safe/src/lib/components/resource-dropdown/resource-dropdown.component.ts</h3>
+    <h3>projects/safe/src/lib/components/choose-record-modal/choose-record-modal.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>

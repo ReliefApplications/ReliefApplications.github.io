@@ -1784,7 +1784,7 @@ export class QueryBuilderService {
           return this.formBuilder.group({
             field: filter.field,
             operator: filter.operator || &#x27;eq&#x27;,
-            value: filter.value
+            value: Array.isArray(filter.value) ? [filter.value] : filter.value
           });
         }
       }
