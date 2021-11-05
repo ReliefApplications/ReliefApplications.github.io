@@ -931,7 +931,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-UsersModule-d47e3e430a8b7c9c0178d0d810307a47-1"' :
                                             'id="xs-components-links-module-UsersModule-d47e3e430a8b7c9c0178d0d810307a47-1"' }>
                                             <li class="link">
-                                                <a href="components/UsersComponent-1.html"
+                                                <a href="components/UsersComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">UsersComponent</a>
                                             </li>
                                         </ul>
@@ -1008,6 +1008,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#components-links"' :
+                            'data-target="#xs-components-links"' }>
+                            <span class="icon ion-md-cog"></span>
+                            <span>Components</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
+                            <li class="link">
+                                <a href="components/UsersComponent-1.html" data-type="entity-link">UsersComponent</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#injectables-links"' :
                                 'data-target="#xs-injectables-links"' }>
