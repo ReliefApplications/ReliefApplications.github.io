@@ -435,8 +435,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="155"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:155</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:163</a></div>
                 </td>
             </tr>
 
@@ -622,8 +622,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="142"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:142</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:150</a></div>
                 </td>
             </tr>
 
@@ -692,14 +692,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="109"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:109</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:111</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Edits the settings or display of a widget.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -709,6 +711,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -723,6 +726,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>widget to save.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -762,8 +769,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="149"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:149</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:157</a></div>
                 </td>
             </tr>
 
@@ -803,8 +810,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="238"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:238</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:246</a></div>
                 </td>
             </tr>
 
@@ -842,8 +849,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="172"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:172</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:180</a></div>
                 </td>
             </tr>
 
@@ -912,8 +919,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="202"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:202</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="210"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:210</a></div>
                 </td>
             </tr>
 
@@ -951,8 +958,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="196"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:196</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="204"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/dashboard/dashboard.component.ts:204</a></div>
                 </td>
             </tr>
 
@@ -1387,10 +1394,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.autoSaveChanges();
   }
 
-  /*  Edit the settings or display of a widget.
+ /**
+  * Edits the settings or display of a widget.
+  * @param e widget to save.
   */
   onEditTile(e: any): void {
-    const options &#x3D; e.options;
+    // make sure that we save the default layout.
+    const index &#x3D; this.tiles.findIndex((v: any) &#x3D;&gt; v.id &#x3D;&#x3D;&#x3D; e.id);
+    const options &#x3D; this.tiles[index]?.settings?.defaultLayout ?
+      {
+        ...e.options,
+        defaultLayout: this.tiles[index].settings.defaultLayout
+      } : e.options;
     if (options) {
       switch (e.type) {
         case &#x27;display&#x27;: {
