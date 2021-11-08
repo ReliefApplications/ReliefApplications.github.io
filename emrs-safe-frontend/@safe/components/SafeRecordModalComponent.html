@@ -202,6 +202,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#confirmRevertDialog">confirmRevertDialog</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Async</span>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
@@ -215,6 +219,10 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#onEdit">onEdit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onShowHistory">onShowHistory</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -256,12 +264,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(dialogRef: <a href="../interfaces/Record.html">MatDialogRef<SafeRecordModalComponent></a>, data: <a href="../interfaces/DialogData.html">DialogData</a>, apollo: Apollo, dialog: MatDialog, downloadService: <a href="../injectables/SafeDownloadService.html">SafeDownloadService</a>, authService: <a href="../injectables/SafeAuthService.html">SafeAuthService</a>)</code>
+<code>constructor(dialogRef: <a href="../interfaces/Record.html">MatDialogRef<SafeRecordModalComponent></a>, data: <a href="../interfaces/DialogData.html">DialogData</a>, apollo: Apollo, dialog: MatDialog, downloadService: <a href="../injectables/SafeDownloadService.html">SafeDownloadService</a>, authService: <a href="../injectables/SafeAuthService.html">SafeAuthService</a>, snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:48</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:59</a></div>
                             </td>
                         </tr>
 
@@ -350,6 +358,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeSnackBarService.html" target="_self" >SafeSnackBarService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -368,6 +388,90 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmRevertDialog"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            confirmRevertDialog
+                        </b>
+                        <a href="#confirmRevertDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmRevertDialog(record: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, version: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="215"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:215</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>version</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -392,8 +496,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:76</a></div>
                 </td>
             </tr>
 
@@ -431,8 +535,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="199"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:199</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:211</a></div>
                 </td>
             </tr>
 
@@ -474,8 +578,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="162"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:162</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:174</a></div>
                 </td>
             </tr>
 
@@ -558,14 +662,57 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="180"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:180</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:192</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onShowHistory"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onShowHistory
+                        </b>
+                        <a href="#onShowHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onShowHistory()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="245"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:245</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens the history of the record in a modal.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -599,8 +746,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="152"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:152</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:164</a></div>
                 </td>
             </tr>
 
@@ -671,8 +818,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="184"
-                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:184</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:196</a></div>
                 </td>
             </tr>
 
@@ -720,7 +867,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:49</a></div>
                             </td>
                         </tr>
 
@@ -748,7 +895,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:51</a></div>
                             </td>
                         </tr>
 
@@ -781,7 +928,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:52</a></div>
                             </td>
                         </tr>
 
@@ -818,7 +965,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -846,7 +993,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:54</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -874,7 +1021,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:62</a></div>
                             </td>
                         </tr>
 
@@ -903,7 +1050,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:42</a></div>
                             </td>
                         </tr>
 
@@ -930,7 +1077,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -963,7 +1110,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:33</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:44</a></div>
                             </td>
                         </tr>
 
@@ -990,7 +1137,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:48</a></div>
                             </td>
                         </tr>
 
@@ -1022,7 +1169,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:44</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -1055,7 +1202,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:32</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -1088,7 +1235,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:45</a></div>
                             </td>
                         </tr>
 
@@ -1116,7 +1263,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:46</a></div>
                             </td>
                         </tr>
 
@@ -1149,7 +1296,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:47</a></div>
                             </td>
                         </tr>
 
@@ -1178,7 +1325,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:46</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:57</a></div>
                                 </td>
                             </tr>
 
@@ -1189,17 +1336,28 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Apollo} from &#x27;apollo-angular&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
 import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { Form } from &#x27;../../models/form.model&#x27;;
 import { Record } from &#x27;../../models/record.model&#x27;;
 import { v4 as uuidv4 } from &#x27;uuid&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
-import { GetRecordByIdQueryResponse, GET_RECORD_BY_ID, GetFormByIdQueryResponse, GET_FORM_STRUCTURE } from &#x27;../../graphql/queries&#x27;;
+import {
+  GetRecordByIdQueryResponse,
+  GET_RECORD_BY_ID,
+  GetFormByIdQueryResponse,
+  GET_FORM_STRUCTURE,
+  GetRecordDetailsQueryResponse, GET_RECORD_DETAILS
+} from &#x27;../../graphql/queries&#x27;;
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
 import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
+import { SafeConfirmModalComponent } from &#x27;../confirm-modal/confirm-modal.component&#x27;;
+import { EDIT_RECORD, EditRecordMutationResponse } from &#x27;../../graphql/mutations&#x27;;
+import { NOTIFICATIONS } from &#x27;../../const/notifications&#x27;;
+import { SafeSnackBarService } from &#x27;../../services/snackbar.service&#x27;;
+import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 
 interface DialogData {
@@ -1244,7 +1402,8 @@ export class SafeRecordModalComponent implements OnInit {
     private apollo: Apollo,
     public dialog: MatDialog,
     private downloadService: SafeDownloadService,
-    private authService: SafeAuthService
+    private authService: SafeAuthService,
+    private snackBar: SafeSnackBarService
   ) {
     this.containerId &#x3D; uuidv4();
     if (this.data.compareTo) {
@@ -1384,11 +1543,61 @@ export class SafeRecordModalComponent implements OnInit {
     this.pages.next(pages);
   }
 
- /**
-  * Closes the modal without sending any data.
-  */
+  /**
+   * Closes the modal without sending any data.
+   */
   onClose(): void {
     this.dialogRef.close();
+  }
+
+  private confirmRevertDialog(record: any, version: any): void {
+    const date &#x3D; new Date(parseInt(version.created, 0));
+    const formatDate &#x3D; &#x60;${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}&#x60;;
+    const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
+      data: {
+        title: &#x60;Recovery data&#x60;,
+        content: &#x60;Do you confirm recovery the data from ${formatDate} to the current register?&#x60;,
+        confirmText: &#x27;Confirm&#x27;,
+        confirmColor: &#x27;primary&#x27;
+      }
+    });
+    dialogRef.afterClosed().subscribe(value &#x3D;&gt; {
+      if (value) {
+        this.apollo.mutate&lt;EditRecordMutationResponse&gt;({
+          mutation: EDIT_RECORD,
+          variables: {
+            id: record.id,
+            version: version.id
+          }
+        }).subscribe((res) &#x3D;&gt; {
+          this.snackBar.openSnackBar(NOTIFICATIONS.dataRecovered);
+          this.dialogRef.close();
+        });
+      }
+    });
+  }
+
+  /**
+   * Opens the history of the record in a modal.
+   */
+  public onShowHistory(): void {
+    this.apollo.query&lt;GetRecordDetailsQueryResponse&gt;({
+      query: GET_RECORD_DETAILS,
+      variables: {
+        id: this.record.id
+      }
+    }).subscribe(res &#x3D;&gt; {
+      this.dialog.open(RecordHistoryModalComponent, {
+        data: {
+          record: res.data.record,
+          revert: (item: any, dialog: any) &#x3D;&gt; {
+            this.confirmRevertDialog(res.data.record, item);
+          }
+        },
+        panelClass: &#x27;no-padding-dialog&#x27;,
+        autoFocus: false
+      });
+    });
   }
 }
 </code></pre>
@@ -1397,6 +1606,7 @@ export class SafeRecordModalComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;safe-button mat-dialog-close (click)&#x3D;&quot;onClose()&quot; [isIcon]&#x3D;&quot;true&quot; icon&#x3D;&quot;close&quot; variant&#x3D;&quot;danger&quot; class&#x3D;&quot;modal-close&quot;&gt;&lt;/safe-button&gt;
 &lt;ng-container *ngIf&#x3D;&quot;!loading&quot;&gt;
+    &lt;safe-record-summary *ngIf&#x3D;&quot;!data.compareTo&quot; [record]&#x3D;&quot;record&quot; (showHistory)&#x3D;&quot;onShowHistory()&quot;&gt;&lt;/safe-record-summary&gt;
     &lt;div mat-dialog-title&gt;
         &lt;mat-tab-group animationDuration&#x3D;&quot;0ms&quot; [selectedIndex]&#x3D;&quot;selectedTabIndex&quot; (selectedIndexChange)&#x3D;&quot;onShowPage($event)&quot;&gt;
             &lt;mat-tab *ngFor&#x3D;&quot;let page of pages$ | async&quot; [label]&#x3D;&quot;page.title ? page.title : page.name&quot;&gt;&lt;/mat-tab&gt;
@@ -1415,7 +1625,6 @@ export class SafeRecordModalComponent implements OnInit {
 &lt;/ng-container&gt;
 &lt;mat-dialog-content&gt;
     &lt;ng-container *ngIf&#x3D;&quot;!data.compareTo&quot;&gt;
-        &lt;span mat-dialog-title *ngIf&#x3D;&quot;modifiedAt&quot; class&#x3D;&quot;record-date&quot;&gt;Last edit: {{ modifiedAt | date:&#x27;dd/MM/yy, h:mm a&#x27; }}&lt;/span&gt;
         &lt;div [id]&#x3D;&quot;containerId&quot;&gt;&lt;/div&gt;
     &lt;/ng-container&gt;
     &lt;ng-container *ngIf&#x3D;&quot;data.compareTo&quot;&gt;
@@ -1494,14 +1703,6 @@ mat-grid-tile:nth-child(2n) {
     padding: 0;
 }
 
-.record-date {
-    color: #9e9e9e;
-    font-size: 12px;
-    line-height: 12px;
-    text-align: right;
-    margin-bottom: 8px;
-}
-
 .modal-close {
     position: absolute;
     top: -24px;
@@ -1536,8 +1737,8 @@ mat-grid-tile:nth-child(2n) {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><safe-button mat-dialog-close (click)="onClose()" [isIcon]="true" icon="close" variant="danger" class="modal-close"></safe-button><ng-container *ngIf="!loading">    <div mat-dialog-title>        <mat-tab-group animationDuration="0ms" [selectedIndex]="selectedTabIndex" (selectedIndexChange)="onShowPage($event)">            <mat-tab *ngFor="let page of pages$ | async" [label]="page.title ? page.title : page.name"></mat-tab>        </mat-tab-group>        <div class="versions-info" *ngIf="data.compareTo">            <div class="version-info">                <div>Past version</div>                <span>{{ data.compareTo.createdAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>            <div class="version-info">                <div>Current version</div>                <span>{{ record.modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>        </div>    </div></ng-container><mat-dialog-content>    <ng-container *ngIf="!data.compareTo">        <span mat-dialog-title *ngIf="modifiedAt" class="record-date">Last edit: {{ modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>        <div [id]="containerId"></div>    </ng-container>    <ng-container *ngIf="data.compareTo">        <mat-grid-list cols="2" rowHeight="2:1">            <mat-grid-tile [id]="containerNextId">            </mat-grid-tile>            <mat-grid-tile [id]="containerId">            </mat-grid-tile>        </mat-grid-list>    </ng-container></mat-dialog-content><mat-dialog-actions align="end" *ngIf="!loading && data.compareTo">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button mat-dialog-close="true" cdkFocusInitial color="primary">Revert to past record</button></mat-dialog-actions><mat-dialog-actions align="end" *ngIf="!loading && !data.compareTo && canEdit">    <button mat-button color="warn" (click)="onClose()">Close</button>    <button *ngIf="!survey.isFirstPage" mat-button color="primary" (click)="survey.prevPage()">Previous</button>    <button *ngIf="!survey.isLastPage" mat-button color="primary" (click)="survey.nextPage()">Next</button>    <button mat-flat-button color="primary" (click)="onEdit()">Edit record</button></mat-dialog-actions></div>'
-    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
+        var COMPONENT_TEMPLATE = '<div><safe-button mat-dialog-close (click)="onClose()" [isIcon]="true" icon="close" variant="danger" class="modal-close"></safe-button><ng-container *ngIf="!loading">    <safe-record-summary *ngIf="!data.compareTo" [record]="record" (showHistory)="onShowHistory()"></safe-record-summary>    <div mat-dialog-title>        <mat-tab-group animationDuration="0ms" [selectedIndex]="selectedTabIndex" (selectedIndexChange)="onShowPage($event)">            <mat-tab *ngFor="let page of pages$ | async" [label]="page.title ? page.title : page.name"></mat-tab>        </mat-tab-group>        <div class="versions-info" *ngIf="data.compareTo">            <div class="version-info">                <div>Past version</div>                <span>{{ data.compareTo.createdAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>            <div class="version-info">                <div>Current version</div>                <span>{{ record.modifiedAt | date:\'dd/MM/yy, h:mm a\' }}</span>            </div>        </div>    </div></ng-container><mat-dialog-content>    <ng-container *ngIf="!data.compareTo">        <div [id]="containerId"></div>    </ng-container>    <ng-container *ngIf="data.compareTo">        <mat-grid-list cols="2" rowHeight="2:1">            <mat-grid-tile [id]="containerNextId">            </mat-grid-tile>            <mat-grid-tile [id]="containerId">            </mat-grid-tile>        </mat-grid-list>    </ng-container></mat-dialog-content><mat-dialog-actions align="end" *ngIf="!loading && data.compareTo">    <button mat-button (click)="onClose()">Close</button>    <button mat-flat-button mat-dialog-close="true" cdkFocusInitial color="primary">Revert to past record</button></mat-dialog-actions><mat-dialog-actions align="end" *ngIf="!loading && !data.compareTo && canEdit">    <button mat-button color="warn" (click)="onClose()">Close</button>    <button *ngIf="!survey.isFirstPage" mat-button color="primary" (click)="survey.prevPage()">Previous</button>    <button *ngIf="!survey.isLastPage" mat-button color="primary" (click)="survey.nextPage()">Next</button>    <button mat-flat-button color="primary" (click)="onEdit()">Edit record</button></mat-dialog-actions></div>'
+    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeRecordModalComponent'};
 </script>

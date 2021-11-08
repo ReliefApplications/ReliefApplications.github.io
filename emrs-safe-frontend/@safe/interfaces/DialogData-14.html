@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-data/tile-data.component.ts</code>
+            <code>projects/safe/src/lib/components/widgets/grid/expanded-comment/expanded-comment.component.ts</code>
         </p>
 
 
@@ -79,10 +79,10 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#template">template</a>
+                                        <a href="#comment">comment</a>
                                 </li>
                                 <li>
-                                        <a href="#tile">tile</a>
+                                        <a href="#title">title</a>
                                 </li>
                             </ul>
                         </td>
@@ -99,13 +99,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="template"></a>
-                                        <span class="name"><b>template</b><a href="#template"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="comment"></a>
+                                        <span class="name"><b>comment</b><a href="#comment"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>template:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>comment:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -113,7 +113,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -128,13 +128,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="tile"></a>
-                                        <span class="name"><b>tile</b><a href="#tile"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="title"></a>
+                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>tile:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -142,7 +142,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -158,59 +158,38 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject, ViewChild, ViewContainerRef,
-  ComponentFactoryResolver, AfterViewInit } from &#x27;@angular/core&#x27;;
-import { FormGroup } from &#x27;@angular/forms&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Inject, OnInit, Output } from &#x27;@angular/core&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 
 interface DialogData {
-  tile: any;
-  template: any;
+  title: string;
+  comment: string;
 }
 
 @Component({
-  selector: &#x27;safe-tile-data&#x27;,
-  templateUrl: &#x27;./tile-data.component.html&#x27;,
-  styleUrls: [&#x27;./tile-data.component.scss&#x27;]
+  selector: &#x27;safe-expanded-comment&#x27;,
+  templateUrl: &#x27;./expanded-comment.component.html&#x27;,
+  styleUrls: [&#x27;./expanded-comment.component.scss&#x27;]
 })
-/*  Modal content to edit the settings of a component.
-*/
-export class SafeTileDataComponent implements OnInit, AfterViewInit {
+export class SafeExpandedCommentComponent implements OnInit {
 
-  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  tileForm?: FormGroup;
+  // &#x3D;&#x3D;&#x3D; EMIT STEP CHANGE FOR WORKFLOW &#x3D;&#x3D;&#x3D;
+  @Output() goToNextStep: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
-  // &#x3D;&#x3D;&#x3D; TEMPLATE REFERENCE &#x3D;&#x3D;&#x3D;
-  @ViewChild(&#x27;settingsContainer&#x27;, { read: ViewContainerRef }) settingsContainer: any;
+  public comment &#x3D; &#x27;&#x27;;
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver,
-    public dialogRef: MatDialogRef&lt;SafeTileDataComponent&gt;,
+    public dialogRef: MatDialogRef&lt;SafeExpandedCommentComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) { }
 
-  ngOnInit(): void {}
-
-  /*  Once the template is ready, inject the settings component linked to the widget type passed as a parameter.
-  */
-  ngAfterViewInit(): void {
-    const factory &#x3D; this.componentFactoryResolver.resolveComponentFactory(this.data.template);
-    const componentRef &#x3D; this.settingsContainer.createComponent(factory);
-    componentRef.instance.tile &#x3D; this.data.tile;
-    componentRef.instance.change.subscribe((e: any) &#x3D;&gt; { this.tileForm &#x3D; e; });
+  ngOnInit(): void {
+    this.comment &#x3D; this.data.comment;
   }
 
-  /*  Close the modal without sending any data.
-  */
-  onClose(): void {
-    this.dialogRef.close();
-  }
-
-  /* Close the modal sending tile form value.
-  */
-  onSubmit(): void {
-    this.dialogRef.close(this.tileForm?.getRawValue());
-  }
+  // onClose(): void {
+  //   this.dialogRef.close({data: this.comment});
+  // }
 }
 </code></pre>
     </div>

@@ -149,6 +149,11 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#factory">factory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#isFromCacheData">isFromCacheData</a>
                             </li>
                             <li>
@@ -168,6 +173,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#storageDate">storageDate</a>
                             </li>
                             <li>
@@ -207,6 +213,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#confirmRevertDialog">confirmRevertDialog</a>
+                            </li>
+                            <li>
                                 <a href="#ngAfterViewInit">ngAfterViewInit</a>
                             </li>
                             <li>
@@ -230,6 +240,10 @@
                             <li>
                                     <span class="modifier">Private</span>
                                 <a href="#onSetCustomCss">onSetCustomCss</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onShowHistory">onShowHistory</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -321,12 +335,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(dialog: MatDialog, apollo: Apollo, snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>, downloadService: <a href="../injectables/SafeDownloadService.html">SafeDownloadService</a>, authService: <a href="../injectables/SafeAuthService.html">SafeAuthService</a>)</code>
+<code>constructor(dialog: MatDialog, apollo: Apollo, snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>, downloadService: <a href="../injectables/SafeDownloadService.html">SafeDownloadService</a>, authService: <a href="../injectables/SafeAuthService.html">SafeAuthService</a>, layoutService: <a href="../injectables/SafeLayoutService.html">SafeLayoutService</a>, resolver: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:55</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:72</a></div>
                             </td>
                         </tr>
 
@@ -403,6 +417,30 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>layoutService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeLayoutService.html" target="_self" >SafeLayoutService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>resolver</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -430,7 +468,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:38</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -451,7 +489,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:39</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -475,7 +513,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:40</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -488,6 +526,90 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmRevertDialog"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            confirmRevertDialog
+                        </b>
+                        <a href="#confirmRevertDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmRevertDialog(record: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, version: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="401"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:401</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>version</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -510,8 +632,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="157"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:157</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="177"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:177</a></div>
                 </td>
             </tr>
 
@@ -549,8 +671,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="376"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:376</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="397"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:397</a></div>
                 </td>
             </tr>
 
@@ -588,8 +710,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="67"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:67</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:86</a></div>
                 </td>
             </tr>
 
@@ -629,8 +751,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="368"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:368</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="388"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:388</a></div>
                 </td>
             </tr>
 
@@ -670,8 +792,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="283"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:283</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="303"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:303</a></div>
                 </td>
             </tr>
 
@@ -754,8 +876,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="317"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:317</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="337"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:337</a></div>
                 </td>
             </tr>
 
@@ -838,8 +960,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="345"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:345</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:365</a></div>
                 </td>
             </tr>
 
@@ -897,6 +1019,49 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="onShowHistory"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onShowHistory
+                        </b>
+                        <a href="#onShowHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onShowHistory()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="432"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:432</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens the history of the record on the right side of the screen.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="onShowPage"></a>
                     <span class="name">
                         <b>
@@ -917,8 +1082,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="362"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:362</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="382"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:382</a></div>
                 </td>
             </tr>
 
@@ -989,8 +1154,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="287"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:287</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="307"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:307</a></div>
                 </td>
             </tr>
 
@@ -1073,8 +1238,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="161"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:161</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:181</a></div>
                 </td>
             </tr>
 
@@ -1112,8 +1277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="279"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:279</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="299"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:299</a></div>
                 </td>
             </tr>
 
@@ -1184,8 +1349,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="350"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:350</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="370"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:370</a></div>
                 </td>
             </tr>
 
@@ -1225,8 +1390,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="177"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:177</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="197"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:197</a></div>
                 </td>
             </tr>
 
@@ -1268,8 +1433,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="170"
-                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:170</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:190</a></div>
                 </td>
             </tr>
 
@@ -1311,7 +1476,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:189</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:209</a></div>
                             </td>
                         </tr>
 
@@ -1369,7 +1534,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:54</a></div>
                             </td>
                         </tr>
 
@@ -1397,7 +1562,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:58</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:75</a></div>
                             </td>
                         </tr>
 
@@ -1430,7 +1595,36 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="factory"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Optional</span>
+                            factory</b>
+                            <a href="#factory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ComponentFactory&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:68</a></div>
                             </td>
                         </tr>
 
@@ -1457,7 +1651,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -1490,7 +1684,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:46</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:60</a></div>
                             </td>
                         </tr>
 
@@ -1517,7 +1711,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:52</a></div>
                             </td>
                         </tr>
 
@@ -1549,7 +1743,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:43</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:57</a></div>
                             </td>
                         </tr>
 
@@ -1582,7 +1776,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:51</a></div>
                             </td>
                         </tr>
 
@@ -1597,6 +1791,7 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Optional</span>
                             storageDate</b>
                             <a href="#storageDate"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -1608,14 +1803,9 @@
 
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Date()</code>
-                        </td>
-                    </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:64</a></div>
                             </td>
                         </tr>
 
@@ -1648,7 +1838,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:49</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -1676,7 +1866,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -1703,7 +1893,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:50</a></div>
                             </td>
                         </tr>
 
@@ -1739,7 +1929,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:44</a></div>
                             </td>
                         </tr>
 
@@ -1772,7 +1962,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:53</a></div>
                             </td>
                         </tr>
 
@@ -1805,7 +1995,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:48</a></div>
                             </td>
                         </tr>
 
@@ -1834,7 +2024,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:53</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">projects/safe/src/lib/components/form/form.component.ts:70</a></div>
                                 </td>
                             </tr>
 
@@ -1846,7 +2036,17 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
-import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from &#x27;@angular/core&#x27;;
+import {
+  AfterViewInit,
+  Component,
+  ComponentFactory,
+  ComponentFactoryResolver,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output
+} from &#x27;@angular/core&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
 import { v4 as uuidv4 } from &#x27;uuid&#x27;;
@@ -1860,6 +2060,10 @@ import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
 import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { NOTIFICATIONS } from &#x27;../../const/notifications&#x27;;
 import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
+import { GET_RECORD_DETAILS, GetRecordDetailsQueryResponse } from &#x27;../../graphql/queries&#x27;;
+import { SafeLayoutService } from &#x27;../../services/layout.service&#x27;;
+import { SafeConfirmModalComponent } from &#x27;../confirm-modal/confirm-modal.component&#x27;;
+import { SafeRecordHistoryComponent } from &#x27;../record-history/record-history.component&#x27;;
 
 @Component({
   selector: &#x27;safe-form&#x27;,
@@ -1894,8 +2098,11 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // &#x3D;&#x3D;&#x3D; LOCALE STORAGE &#x3D;&#x3D;&#x3D;
   private storageId &#x3D; &#x27;&#x27;;
-  public storageDate: Date &#x3D; new Date();
+  public storageDate?: Date;
   public isFromCacheData &#x3D; false;
+
+  // &#x3D;&#x3D;&#x3D; HISTORY COMPONENT TO BE INJECTED IN LAYOUT SERVICE &#x3D;&#x3D;&#x3D;
+  public factory?: ComponentFactory&lt;any&gt;;
 
   public get pages$(): Observable&lt;any[]&gt; {
     return this.pages.asObservable();
@@ -1906,12 +2113,15 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
     private apollo: Apollo,
     private snackBar: SafeSnackBarService,
     private downloadService: SafeDownloadService,
-    private authService: SafeAuthService
+    private authService: SafeAuthService,
+    private layoutService: SafeLayoutService,
+    private resolver: ComponentFactoryResolver
   ) {
     this.containerId &#x3D; uuidv4();
   }
 
   ngOnInit(): void {
+    this.factory &#x3D; this.resolver.resolveComponentFactory(SafeRecordHistoryComponent);
     const defaultThemeColorsSurvey &#x3D; Survey
       .StylesManager
       .ThemeColors.default;
@@ -1943,7 +2153,7 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
     this.storageId &#x3D; &#x60;record:${this.record ? &#x27;update&#x27; : &#x27;&#x27;}:${this.form.id}&#x60;;
     const storedData &#x3D; localStorage.getItem(this.storageId);
     const cachedData &#x3D; storedData ? JSON.parse(storedData).data : null;
-    this.storageDate &#x3D; storedData ? new Date(JSON.parse(storedData).date) : new Date();
+    this.storageDate &#x3D; storedData ? new Date(JSON.parse(storedData).date) : undefined;
     this.isFromCacheData &#x3D; !(!cachedData);
     if (this.isFromCacheData) {
       this.snackBar.openSnackBar(NOTIFICATIONS.objectLoadedFromCache(&#x27;Record&#x27;));
@@ -2217,25 +2427,72 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
     this.temporaryFilesStorage &#x3D; {};
     localStorage.removeItem(this.storageId);
     this.isFromCacheData &#x3D; false;
+    this.storageDate &#x3D; undefined;
     this.survey.render();
   }
 
   ngOnDestroy(): void {
     localStorage.removeItem(this.storageId);
   }
+
+  private confirmRevertDialog(record: any, version: any): void {
+    const date &#x3D; new Date(parseInt(version.created, 0));
+    const formatDate &#x3D; &#x60;${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}&#x60;;
+    const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
+      data: {
+        title: &#x60;Recovery data&#x60;,
+        content: &#x60;Do you confirm recovery the data from ${formatDate} to the current register?&#x60;,
+        confirmText: &#x27;Confirm&#x27;,
+        confirmColor: &#x27;primary&#x27;
+      }
+    });
+    dialogRef.afterClosed().subscribe(value &#x3D;&gt; {
+      if (value) {
+        this.apollo.mutate&lt;EditRecordMutationResponse&gt;({
+          mutation: EDIT_RECORD,
+          variables: {
+            id: record.id,
+            version: version.id
+          }
+        }).subscribe((res) &#x3D;&gt; {
+          this.layoutService.setRightSidenav(null);
+          this.snackBar.openSnackBar(NOTIFICATIONS.dataRecovered);
+        });
+
+      }
+    });
+  }
+
+  /**
+   * Opens the history of the record on the right side of the screen.
+   */
+  public onShowHistory(): void {
+    if (this.record) {
+      this.apollo.query&lt;GetRecordDetailsQueryResponse&gt;({
+        query: GET_RECORD_DETAILS,
+        variables: {
+          id: this.record.id
+        }
+      }).subscribe(res &#x3D;&gt; {
+        this.layoutService.setRightSidenav({
+          factory: this.factory,
+          inputs: {
+            record: res.data.record,
+            revert: (item: any, dialog: any) &#x3D;&gt; {
+              this.confirmRevertDialog(res.data.record, item);
+            }
+          },
+        });
+      });
+    }
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;!record &amp;&amp; isFromCacheData&quot; class&#x3D;&#x27;clear-button&#x27;&gt;
-  &lt;safe-button icon&#x3D;&quot;restart_alt&quot; category&#x3D;&quot;secondary&quot; variant&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onClear()&quot;&gt;
-    Clear cache
-  &lt;/safe-button&gt;
-&lt;/div&gt;
-
-&lt;span *ngIf&#x3D;&quot;modifiedAt &amp;&amp; !isFromCacheData&quot; class&#x3D;&quot;record-date&quot;&gt;Last edit: {{ modifiedAt | date:&#x27;dd/MM/yy, h:mm a&#x27;}}&lt;/span&gt;
-&lt;span *ngIf&#x3D;&quot;isFromCacheData&quot; class&#x3D;&quot;record-date&quot;&gt;From cache: {{ storageDate | date:&#x27;dd/MM/yy, h:mm a&#x27;}}&lt;/span&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;safe-record-summary [record]&#x3D;&quot;record&quot; [cacheDate]&#x3D;&quot;storageDate&quot; (clear)&#x3D;&quot;onClear()&quot;
+  (showHistory)&#x3D;&quot;onShowHistory()&quot;&gt;&lt;/safe-record-summary&gt;
 &lt;div class&#x3D;&quot;survey-float&quot; *ngIf&#x3D;&quot;surveyActive&quot;&gt;
   &lt;kendo-dropdownlist *ngIf&#x3D;&quot;!!survey &amp;&amp; survey.getUsedLocales().length &gt; 1&quot; id&#x3D;&quot;langSelect&quot; [data]&#x3D;&quot;dropdownLocales&quot;
     [value]&#x3D;&quot;surveyLanguage.nativeName.split(&#x27;,&#x27;)[0]&quot; (selectionChange)&#x3D;&quot;setLanguage($event)&quot;&gt;
@@ -2246,10 +2503,10 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
 &lt;/div&gt;
 &lt;mat-tab-group animationDuration&#x3D;&quot;0ms&quot; [selectedIndex]&#x3D;&quot;selectedTabIndex&quot; (selectedIndexChange)&#x3D;&quot;onShowPage($event)&quot;&gt;
   &lt;mat-tab *ngFor&#x3D;&quot;let page of pages$ | async&quot; [label]&#x3D;&quot;page.title ? page.title : page.name&quot;&gt;
-      &lt;ng-template mat-tab-label&gt;
-          {{ page.title ? page.title : page.name }}
-          &lt;safe-icon *ngIf&#x3D;&quot;page.containsErrors&quot; icon&#x3D;&quot;error&quot; variant&#x3D;&quot;danger&quot; [inline]&#x3D;&quot;true&quot;&gt;&lt;/safe-icon&gt;
-      &lt;/ng-template&gt;
+    &lt;ng-template mat-tab-label&gt;
+      {{ page.title ? page.title : page.name }}
+      &lt;safe-icon *ngIf&#x3D;&quot;page.containsErrors&quot; icon&#x3D;&quot;error&quot; variant&#x3D;&quot;danger&quot; [inline]&#x3D;&quot;true&quot;&gt;&lt;/safe-icon&gt;
+    &lt;/ng-template&gt;
   &lt;/mat-tab&gt;
 &lt;/mat-tab-group&gt;
 &lt;div [id]&#x3D;&quot;containerId&quot;&gt;&lt;/div&gt;
@@ -2257,8 +2514,7 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
   &lt;safe-button [disabled]&#x3D;&quot;survey.isFirstPage&quot; variant&#x3D;&quot;primary&quot; (click)&#x3D;&quot;survey.prevPage()&quot;&gt;Previous&lt;/safe-button&gt;
   &lt;safe-button [disabled]&#x3D;&quot;survey.isLastPage&quot; variant&#x3D;&quot;primary&quot; (click)&#x3D;&quot;survey.nextPage()&quot;&gt;Next&lt;/safe-button&gt;
   &lt;safe-button variant&#x3D;&quot;primary&quot; category&#x3D;&quot;secondary&quot; (click)&#x3D;&quot;submit()&quot;&gt;Save&lt;/safe-button&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -2288,28 +2544,12 @@ export class SafeFormComponent implements OnInit, OnDestroy, AfterViewInit {
   border-radius: 3px;
 }
 
-// ::ng-deep .k-dropdown .k-dropdown-wrap {
-//   background: rgb(150, 145, 145) !important;
-// }
-
-.record-date {
-  color: #9e9e9e;
-  font-size: 12px;
-  line-height: 12px;
-  text-align: right;
+safe-record-summary {
   margin-bottom: 8px;
 }
 
 mat-tab-group {
-  margin-bottom: 1rem;
-}
-
-.clear-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end !important;
-  text-align: end;
-  margin-left: auto;
+  margin-bottom: 16px;
 }
 
 .survey-navigation {
@@ -2318,7 +2558,8 @@ mat-tab-group {
   safe-button {
     margin-left: 8px
   }
-}</code></pre>
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -2346,8 +2587,8 @@ mat-tab-group {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div *ngIf="!record && isFromCacheData" class=\'clear-button\'>  <safe-button icon="restart_alt" category="secondary" variant="primary" (click)="onClear()">    Clear cache  </safe-button></div><span *ngIf="modifiedAt && !isFromCacheData" class="record-date">Last edit: {{ modifiedAt | date:\'dd/MM/yy, h:mm a\'}}</span><span *ngIf="isFromCacheData" class="record-date">From cache: {{ storageDate | date:\'dd/MM/yy, h:mm a\'}}</span><div class="survey-float" *ngIf="surveyActive">  <kendo-dropdownlist *ngIf="!!survey && survey.getUsedLocales().length > 1" id="langSelect" [data]="dropdownLocales"    [value]="surveyLanguage.nativeName.split(\',\')[0]" (selectionChange)="setLanguage($event)">    <ng-template kendoDropDownListValueTemplate let-dataItem style="text-transform: capitalize">      {{ dataItem }}    </ng-template>  </kendo-dropdownlist></div><mat-tab-group animationDuration="0ms" [selectedIndex]="selectedTabIndex" (selectedIndexChange)="onShowPage($event)">  <mat-tab *ngFor="let page of pages$ | async" [label]="page.title ? page.title : page.name">      <ng-template mat-tab-label>          {{ page.title ? page.title : page.name }}          <safe-icon *ngIf="page.containsErrors" icon="error" variant="danger" [inline]="true"></safe-icon>      </ng-template>  </mat-tab></mat-tab-group><div [id]="containerId"></div><div *ngIf="surveyActive" class="survey-navigation">  <safe-button [disabled]="survey.isFirstPage" variant="primary" (click)="survey.prevPage()">Previous</safe-button>  <safe-button [disabled]="survey.isLastPage" variant="primary" (click)="survey.nextPage()">Next</safe-button>  <safe-button variant="primary" category="secondary" (click)="submit()">Save</safe-button></div></div>'
-    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
+        var COMPONENT_TEMPLATE = '<div><safe-record-summary [record]="record" [cacheDate]="storageDate" (clear)="onClear()"  (showHistory)="onShowHistory()"></safe-record-summary><div class="survey-float" *ngIf="surveyActive">  <kendo-dropdownlist *ngIf="!!survey && survey.getUsedLocales().length > 1" id="langSelect" [data]="dropdownLocales"    [value]="surveyLanguage.nativeName.split(\',\')[0]" (selectionChange)="setLanguage($event)">    <ng-template kendoDropDownListValueTemplate let-dataItem style="text-transform: capitalize">      {{ dataItem }}    </ng-template>  </kendo-dropdownlist></div><mat-tab-group animationDuration="0ms" [selectedIndex]="selectedTabIndex" (selectedIndexChange)="onShowPage($event)">  <mat-tab *ngFor="let page of pages$ | async" [label]="page.title ? page.title : page.name">    <ng-template mat-tab-label>      {{ page.title ? page.title : page.name }}      <safe-icon *ngIf="page.containsErrors" icon="error" variant="danger" [inline]="true"></safe-icon>    </ng-template>  </mat-tab></mat-tab-group><div [id]="containerId"></div><div *ngIf="surveyActive" class="survey-navigation">  <safe-button [disabled]="survey.isFirstPage" variant="primary" (click)="survey.prevPage()">Previous</safe-button>  <safe-button [disabled]="survey.isLastPage" variant="primary" (click)="survey.nextPage()">Next</safe-button>  <safe-button variant="primary" category="secondary" (click)="submit()">Save</safe-button></div></div>'
+    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeFormComponent'};
 </script>

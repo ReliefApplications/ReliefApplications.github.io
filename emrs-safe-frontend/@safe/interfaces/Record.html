@@ -116,6 +116,10 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
+                                        <a href="#modifiedBy">modifiedBy</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#versions">versions</a>
                                 </li>
                             </ul>
@@ -439,6 +443,40 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
+                                        <a name="modifiedBy"></a>
+                                        <span class="name"><b>modifiedBy</b><a href="#modifiedBy"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>modifiedBy:         <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
                                         <a name="versions"></a>
                                         <span class="name"><b>versions</b><a href="#versions"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
@@ -495,6 +533,7 @@ export interface Record {
     form?: Form;
     versions?: Version[];
     createdBy?: User;
+    modifiedBy?: User;
     canUpdate?: boolean;
     canDelete?: boolean;
 }
