@@ -138,6 +138,32 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeApplicationsSummaryModule.html" data-type="entity-link">SafeApplicationsSummaryModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeApplicationsSummaryModule-47dedad76f75ed7f82d6a563ca5eb346"' : 'data-target="#xs-components-links-module-SafeApplicationsSummaryModule-47dedad76f75ed7f82d6a563ca5eb346"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeApplicationsSummaryModule-47dedad76f75ed7f82d6a563ca5eb346"' :
+                                            'id="xs-components-links-module-SafeApplicationsSummaryModule-47dedad76f75ed7f82d6a563ca5eb346"' }>
+                                            <li class="link">
+                                                <a href="components/SafeAddApplicationComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeAddApplicationComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SafeApplicationSummaryComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeApplicationSummaryComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SafeApplicationsSummaryComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeApplicationsSummaryComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeArrayFilterMenuModule.html" data-type="entity-link">SafeArrayFilterMenuModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -1398,6 +1424,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/IRecord.html" data-type="entity-link">IRecord</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IStatus.html" data-type="entity-link">IStatus</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/IWidgetType.html" data-type="entity-link">IWidgetType</a>
