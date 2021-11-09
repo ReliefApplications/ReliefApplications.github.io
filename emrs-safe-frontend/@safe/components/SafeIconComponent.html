@@ -152,6 +152,9 @@
                                 <a href="#inline">inline</a>
                             </li>
                             <li>
+                                <a href="#size">size</a>
+                            </li>
+                            <li>
                                 <a href="#variant">variant</a>
                             </li>
                         </ul>
@@ -169,6 +172,9 @@
                     <tr>
                         <td class="col-md-4">
                             <ul class="index-list">
+                                <li>
+                                    <a href="#fontSize">fontSize</a>
+                                </li>
                                 <li>
                                     <a href="#color">color</a>
                                 </li>
@@ -190,7 +196,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -236,6 +242,26 @@
                         <tr>
                             <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:13</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="size"></a>
+                        <b>size</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>24</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:17</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -297,8 +323,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:39</a></div>
                 </td>
             </tr>
 
@@ -324,6 +350,28 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="fontSize"></a>
+                        <span class="name"><b>fontSize</b><a href="#fontSize"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fontSize()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:19</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="color"></a>
                         <span class="name"><b>color</b><a href="#color"><span class="icon ion-ios-link"></span></a></span>
                     </td>
@@ -336,7 +384,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/ui/icon/icon.component.ts:23</a></div>
                                 </td>
                             </tr>
 
@@ -363,6 +411,12 @@ export class SafeIconComponent implements OnInit {
 
   @Input() variant: IconVariant | string &#x3D; IconVariant.DEFAULT;
 
+  @Input() size &#x3D; 24;
+
+  get fontSize(): string {
+    return this.size + &#x27;px&#x27;;
+  }
+
   get color(): string {
     switch (this.variant) {
       case IconVariant.PRIMARY: {
@@ -386,7 +440,7 @@ export class SafeIconComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-icon [inline]&#x3D;&quot;inline&quot; [color]&#x3D;&quot;color&quot; [class.safe-icon-success]&#x3D;&quot;variant &#x3D;&#x3D;&#x3D; &#x27;success&#x27;&quot;
-    [class.safe-icon-light]&#x3D;&quot;variant &#x3D;&#x3D;&#x3D; &#x27;light&#x27;&quot;&gt;{{icon}}&lt;/mat-icon&gt;</code></pre>
+    [class.safe-icon-light]&#x3D;&quot;variant &#x3D;&#x3D;&#x3D; &#x27;light&#x27;&quot; [style.font-size]&#x3D;&quot;fontSize&quot; [style.width]&#x3D;&quot;fontSize&quot; [style.height]&#x3D;&quot;fontSize&quot;&gt;{{icon}}&lt;/mat-icon&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -427,7 +481,7 @@ export class SafeIconComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-icon [inline]="inline" [color]="color" [class.safe-icon-success]="variant === \'success\'"    [class.safe-icon-light]="variant === \'light\'">{{icon}}</mat-icon></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-icon [inline]="inline" [color]="color" [class.safe-icon-success]="variant === \'success\'"    [class.safe-icon-light]="variant === \'light\'" [style.font-size]="fontSize" [style.width]="fontSize" [style.height]="fontSize">{{icon}}</mat-icon></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridComponent', 'selector': 'safe-resource-grid'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeIconComponent'};
