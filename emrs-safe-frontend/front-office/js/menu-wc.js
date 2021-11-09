@@ -239,13 +239,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/WorkflowModule.html" data-type="entity-link">WorkflowModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-WorkflowModule-b4e7036752d94ed742e2ef6212b488b2"' : 'data-target="#xs-components-links-module-WorkflowModule-b4e7036752d94ed742e2ef6212b488b2"' }>
+                                            'data-target="#components-links-module-WorkflowModule-5d554c339fca8edcedefb22ac3393086"' : 'data-target="#xs-components-links-module-WorkflowModule-5d554c339fca8edcedefb22ac3393086"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-b4e7036752d94ed742e2ef6212b488b2"' :
-                                            'id="xs-components-links-module-WorkflowModule-b4e7036752d94ed742e2ef6212b488b2"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-5d554c339fca8edcedefb22ac3393086"' :
+                                            'id="xs-components-links-module-WorkflowModule-5d554c339fca8edcedefb22ac3393086"' }>
                                             <li class="link">
                                                 <a href="components/WorkflowComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">WorkflowComponent</a>
