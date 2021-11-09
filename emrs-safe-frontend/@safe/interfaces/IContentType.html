@@ -64,6 +64,13 @@
             <code>projects/safe/src/lib/models/page.model.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Content type interface.</p>
+
+            </p>
 
 
         <section>
@@ -256,14 +263,18 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Application } from &#x27;./application.model&#x27;;
 
-/*  Enum of content types.
-*/
+/**
+ * Enum of content types.
+ */
 export enum ContentType {
     workflow &#x3D; &#x27;workflow&#x27;,
     dashboard &#x3D; &#x27;dashboard&#x27;,
     form &#x3D; &#x27;form&#x27;
 }
 
+/**
+ * Content type interface.
+ */
 export interface IContentType {
     value: string;
     name: string;
@@ -272,6 +283,9 @@ export interface IContentType {
     focusColor: string;
 }
 
+/**
+ * Available content types.
+ */
 export const CONTENT_TYPES: IContentType[] &#x3D; [
     {
         value: &#x27;workflow&#x27;,

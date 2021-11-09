@@ -1012,6 +1012,32 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </ul>
                                     </li>
                             </li>
+                            <li class="link">
+                                <a href="modules/SafeWorkflowStepperModule.html" data-type="entity-link">SafeWorkflowStepperModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeWorkflowStepperModule-72ff6849ed8efe3170b37abd394e74f2"' : 'data-target="#xs-components-links-module-SafeWorkflowStepperModule-72ff6849ed8efe3170b37abd394e74f2"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeWorkflowStepperModule-72ff6849ed8efe3170b37abd394e74f2"' :
+                                            'id="xs-components-links-module-SafeWorkflowStepperModule-72ff6849ed8efe3170b37abd394e74f2"' }>
+                                            <li class="link">
+                                                <a href="components/SafeAddStepComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeAddStepComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SafeStepComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeStepComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SafeWorkflowStepperComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeWorkflowStepperComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
                 </ul>
                 </li>
                     <li class="chapter">
