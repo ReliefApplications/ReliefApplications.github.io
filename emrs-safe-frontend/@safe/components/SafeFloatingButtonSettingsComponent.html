@@ -1404,9 +1404,9 @@ export class SafeFloatingButtonSettingsComponent implements OnInit, OnDestroy {
       if (value) {
         this.buttonForm?.get(&#x27;prefillTargetForm&#x27;)?.setValidators(Validators.required);
       } else {
-        this.buttonForm?.get(&#x27;publicationChannel&#x27;)?.clearValidators();
+        this.buttonForm?.get(&#x27;prefillTargetForm&#x27;)?.clearValidators();
       }
-      this.buttonForm?.get(&#x27;publicationChannel&#x27;)?.updateValueAndValidity();
+      this.buttonForm?.get(&#x27;prefillTargetForm&#x27;)?.updateValueAndValidity();
     });
 
     this.buttonForm?.get(&#x27;notify&#x27;)?.valueChanges.subscribe(value &#x3D;&gt; {
