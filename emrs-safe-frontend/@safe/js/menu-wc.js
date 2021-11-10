@@ -455,13 +455,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeFormModalModule.html" data-type="entity-link">SafeFormModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeFormModalModule-8f6558a97c9563d49d11156430c19051"' : 'data-target="#xs-components-links-module-SafeFormModalModule-8f6558a97c9563d49d11156430c19051"' }>
+                                            'data-target="#components-links-module-SafeFormModalModule-c7dc8fe2fd519d955ec4fb6111fb83b7"' : 'data-target="#xs-components-links-module-SafeFormModalModule-c7dc8fe2fd519d955ec4fb6111fb83b7"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeFormModalModule-8f6558a97c9563d49d11156430c19051"' :
-                                            'id="xs-components-links-module-SafeFormModalModule-8f6558a97c9563d49d11156430c19051"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeFormModalModule-c7dc8fe2fd519d955ec4fb6111fb83b7"' :
+                                            'id="xs-components-links-module-SafeFormModalModule-c7dc8fe2fd519d955ec4fb6111fb83b7"' }>
                                             <li class="link">
                                                 <a href="components/SafeFormModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeFormModalComponent</a>
