@@ -508,13 +508,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FormRecordsModule.html" data-type="entity-link">FormRecordsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' : 'data-target="#xs-components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' }>
+                                            'data-target="#components-links-module-FormRecordsModule-34187a6b1671eeb8be3d50bfcde1185b"' : 'data-target="#xs-components-links-module-FormRecordsModule-34187a6b1671eeb8be3d50bfcde1185b"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' :
-                                            'id="xs-components-links-module-FormRecordsModule-2333335fd672ee286933912fa7b47c94"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormRecordsModule-34187a6b1671eeb8be3d50bfcde1185b"' :
+                                            'id="xs-components-links-module-FormRecordsModule-34187a6b1671eeb8be3d50bfcde1185b"' }>
                                             <li class="link">
                                                 <a href="components/FormRecordsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormRecordsComponent</a>
@@ -729,13 +729,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ResourceModule.html" data-type="entity-link">ResourceModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ResourceModule-81f76c09a47e1a532257623f0d54844c"' : 'data-target="#xs-components-links-module-ResourceModule-81f76c09a47e1a532257623f0d54844c"' }>
+                                            'data-target="#components-links-module-ResourceModule-f1895970b95961158140f104b5fb2076"' : 'data-target="#xs-components-links-module-ResourceModule-f1895970b95961158140f104b5fb2076"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ResourceModule-81f76c09a47e1a532257623f0d54844c"' :
-                                            'id="xs-components-links-module-ResourceModule-81f76c09a47e1a532257623f0d54844c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ResourceModule-f1895970b95961158140f104b5fb2076"' :
+                                            'id="xs-components-links-module-ResourceModule-f1895970b95961158140f104b5fb2076"' }>
                                             <li class="link">
                                                 <a href="components/ResourceComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ResourceComponent</a>
@@ -1164,6 +1164,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/GetFormByIdQueryResponse.html" data-type="entity-link">GetFormByIdQueryResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/GetFormRecordsQueryResponse.html" data-type="entity-link">GetFormRecordsQueryResponse</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/GetFormsQueryResponse.html" data-type="entity-link">GetFormsQueryResponse</a>
                             </li>
                             <li class="link">
@@ -1186,6 +1189,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetResourceByIdQueryResponse.html" data-type="entity-link">GetResourceByIdQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetResourceRecordsQueryResponse.html" data-type="entity-link">GetResourceRecordsQueryResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetResourcesQueryResponse.html" data-type="entity-link">GetResourcesQueryResponse</a>
