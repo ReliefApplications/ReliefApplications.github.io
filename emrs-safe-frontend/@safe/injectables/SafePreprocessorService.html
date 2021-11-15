@@ -1222,7 +1222,7 @@ export class SafePreprocessorService {
         default:
           const rawValue &#x3D; item ? item[field.name] : &#x27;&#x27;;
           const value &#x3D; rawValue &amp;&amp; OPTION_QUESTIONS.includes(field.meta.type) ? this.getDisplayText(rawValue, field.meta) : rawValue;
-          body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.name}:\t${value}\n&#x60;;
+          body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.title ? field.title : field.name}:\t${value}\n&#x60;;
       }
     }
     return body;
