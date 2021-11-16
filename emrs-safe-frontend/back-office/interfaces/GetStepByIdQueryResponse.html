@@ -262,8 +262,8 @@ query GetFormNames($first: Int, $afterCursor: ID) {
 }&#x60;;
 
 export const GET_SHORT_FORMS &#x3D; gql&#x60;
-query GetShortForms($first: Int, $afterCursor: ID) {
-  forms(first: $first, afterCursor: $afterCursor) {
+query GetShortForms($first: Int, $afterCursor: ID, $filter: JSON) {
+  forms(first: $first, afterCursor: $afterCursor, filter: $filter) {
     edges {
       node {
         id

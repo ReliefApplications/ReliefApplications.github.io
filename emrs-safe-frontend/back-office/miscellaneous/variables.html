@@ -2964,8 +2964,8 @@ query GetShortFormById($id: ID!) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-query GetShortForms($first: Int, $afterCursor: ID) {
-  forms(first: $first, afterCursor: $afterCursor) {
+query GetShortForms($first: Int, $afterCursor: ID, $filter: JSON) {
+  forms(first: $first, afterCursor: $afterCursor, filter: $filter) {
     edges {
       node {
         id

@@ -535,13 +535,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/FormsModule.html" data-type="entity-link">FormsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-FormsModule-4aeb5281046865f4e805127eba0216f1"' : 'data-target="#xs-components-links-module-FormsModule-4aeb5281046865f4e805127eba0216f1"' }>
+                                            'data-target="#components-links-module-FormsModule-a627f170078231e9c8294245206993bc"' : 'data-target="#xs-components-links-module-FormsModule-a627f170078231e9c8294245206993bc"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormsModule-4aeb5281046865f4e805127eba0216f1"' :
-                                            'id="xs-components-links-module-FormsModule-4aeb5281046865f4e805127eba0216f1"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormsModule-a627f170078231e9c8294245206993bc"' :
+                                            'id="xs-components-links-module-FormsModule-a627f170078231e9c8294245206993bc"' }>
                                             <li class="link">
                                                 <a href="components/FormsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormsComponent</a>
@@ -1012,6 +1012,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#components-links"' :
+                            'data-target="#xs-components-links"' }>
+                            <span class="icon ion-md-cog"></span>
+                            <span>Components</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
+                            <li class="link">
+                                <a href="components/FilterComponent-1.html" data-type="entity-link">FilterComponent</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#injectables-links"' :
                                 'data-target="#xs-injectables-links"' }>
