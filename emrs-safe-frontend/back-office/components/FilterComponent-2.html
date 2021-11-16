@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts</code>
+    <code>projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts</code>
 </p>
 
 
@@ -203,7 +203,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -260,7 +260,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:15</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -295,8 +295,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:76</a></div>
                 </td>
             </tr>
 
@@ -336,8 +336,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:84</a></div>
                 </td>
             </tr>
 
@@ -379,8 +379,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:45</a></div>
                 </td>
             </tr>
 
@@ -452,7 +452,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:19</a></div>
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:19</a></div>
                 </td>
             </tr>
 
@@ -495,7 +495,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -522,7 +522,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -549,7 +549,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/filter/filter.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -585,6 +585,8 @@ export class FilterComponent implements OnInit {
       name: [&#x27;&#x27;],
       startDate: [null],
       endDate: [null],
+      status: [&#x27;&#x27;],
+      core: [null]
     });
     this.form.valueChanges.pipe(
       debounceTime(1000),
@@ -609,11 +611,21 @@ export class FilterComponent implements OnInit {
     if (value.name) {
       filters.push({ field: &#x27;name&#x27;, operator: &#x27;contains&#x27;, value: value.name });
     }
+    if (value.status) {
+      filters.push({ field: &#x27;status&#x27;, operator: &#x27;eq&#x27;, value: value.status });
+    }
     if (value.startDate) {
       filters.push({ field: &#x27;createdAt&#x27;, operator: &#x27;gte&#x27;, value: value.startDate });
     }
     if (value.endDate) {
       filters.push({ field: &#x27;createdAt&#x27;, operator: &#x27;lte&#x27;, value: value.endDate });
+    }
+    if (value.core !&#x3D; null) {
+      if (value.core) {
+        filters.push({ field: &#x27;core&#x27;, operator: &#x27;eq&#x27;, value: true });
+      } else {
+        filters.push({ field: &#x27;core&#x27;, operator: &#x27;neq&#x27;, value: true });
+      }
     }
     const filter &#x3D; {
       logic: &#x27;and&#x27;,
@@ -636,40 +648,63 @@ export class FilterComponent implements OnInit {
   clearDateFilter(): void {
     this.form.setValue({ ...this.form.value, startDate: null, endDate: null });
   }
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div [formGroup]&#x3D;&quot;form&quot; class&#x3D;&quot;resources-filter&quot;&gt;
-  &lt;div class&#x3D;&quot;top&quot;&gt;
-    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
-      &lt;mat-icon matPrefix&gt;search&lt;/mat-icon&gt;
-      &lt;input id&#x3D;&quot;custom-search&quot; matInput [formControl]&#x3D;&quot;search&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Search...&quot;&gt;
-    &lt;/mat-form-field&gt;
-    &lt;safe-button icon&#x3D;&quot;filter_list&quot; category&#x3D;&quot;tertiary&quot; variant&#x3D;&quot;primary&quot; (click)&#x3D;&quot;show &#x3D; !show&quot;&gt;{{ show ? &#x27;Hide Filter&#x27; : &#x27;Show Filter&#x27; }}
-    &lt;/safe-button&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;advanced&quot; *ngIf&#x3D;&quot;show&quot;&gt;
-    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
-      &lt;mat-label&gt;Date Range&lt;/mat-label&gt;
-      &lt;mat-date-range-input [rangePicker]&#x3D;&quot;rangePicker&quot;&gt;
-        &lt;input formControlName&#x3D;&quot;startDate&quot; matStartDate&gt;
-        &lt;input formControlName&#x3D;&quot;endDate&quot; matEndDate&gt;
-      &lt;/mat-date-range-input&gt;
-      &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;rangePicker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
-      &lt;mat-date-range-picker #rangePicker&gt;
-        &lt;mat-date-range-picker-actions&gt;
-          &lt;safe-button matDateRangePickerCancel (click)&#x3D;&quot;clearDateFilter()&quot;&gt;Clear range&lt;/safe-button&gt;
-          &lt;safe-button category&#x3D;&quot;secondary&quot; variant&#x3D;&quot;primary&quot; matDateRangePickerApply&gt;
-            Apply
-          &lt;/safe-button&gt;
-        &lt;/mat-date-range-picker-actions&gt;
-      &lt;/mat-date-range-picker&gt;
-    &lt;/mat-form-field&gt;
-    &lt;safe-button variant&#x3D;&quot;danger&quot; (click)&#x3D;&quot;clear()&quot;&gt;Clear Filters&lt;/safe-button&gt;
-  &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div [formGroup]&#x3D;&quot;form&quot; class&#x3D;&quot;forms-filter&quot;&gt;
+    &lt;div class&#x3D;&quot;top&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+            &lt;mat-icon matPrefix&gt;search&lt;/mat-icon&gt;
+            &lt;input id&#x3D;&quot;custom-search&quot; matInput [formControl]&#x3D;&quot;search&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Search...&quot;&gt;
+        &lt;/mat-form-field&gt;
+        &lt;safe-button icon&#x3D;&quot;filter_list&quot; category&#x3D;&quot;tertiary&quot; variant&#x3D;&quot;primary&quot; (click)&#x3D;&quot;show &#x3D; !show&quot;&gt;{{ show ? &#x27;Hide Filter&#x27; : &#x27;Show Filter&#x27; }}
+        &lt;/safe-button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;advanced&quot; *ngIf&#x3D;&quot;show&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+            &lt;mat-label&gt;Date Range&lt;/mat-label&gt;
+            &lt;mat-date-range-input [rangePicker]&#x3D;&quot;rangePicker&quot;&gt;
+                &lt;input formControlName&#x3D;&quot;startDate&quot; matStartDate&gt;
+                &lt;input formControlName&#x3D;&quot;endDate&quot; matEndDate&gt;
+            &lt;/mat-date-range-input&gt;
+            &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;rangePicker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+            &lt;mat-date-range-picker #rangePicker&gt;
+                &lt;mat-date-range-picker-actions&gt;
+                    &lt;safe-button matDateRangePickerCancel (click)&#x3D;&quot;clearDateFilter()&quot;&gt;Clear range&lt;/safe-button&gt;
+                    &lt;safe-button category&#x3D;&quot;secondary&quot; variant&#x3D;&quot;primary&quot; matDateRangePickerApply&gt;
+                        Apply
+                    &lt;/safe-button&gt;
+                &lt;/mat-date-range-picker-actions&gt;
+            &lt;/mat-date-range-picker&gt;
+        &lt;/mat-form-field&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+            &lt;mat-label&gt;Status&lt;/mat-label&gt;
+            &lt;mat-select formControlName&#x3D;&quot;status&quot;&gt;
+                &lt;mat-option&gt;-&lt;/mat-option&gt;
+                &lt;mat-option value&#x3D;&quot;active&quot;&gt;
+                    Active
+                &lt;/mat-option&gt;
+                &lt;mat-option value&#x3D;&quot;pending&quot;&gt;
+                    Pending
+                &lt;/mat-option&gt;
+            &lt;/mat-select&gt;
+        &lt;/mat-form-field&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+            &lt;mat-label&gt;Is Core&lt;/mat-label&gt;
+            &lt;mat-select formControlName&#x3D;&quot;core&quot;&gt;
+                &lt;mat-option&gt;-&lt;/mat-option&gt;
+                &lt;mat-option [value]&#x3D;&quot;true&quot;&gt;
+                    Yes
+                &lt;/mat-option&gt;
+                &lt;mat-option [value]&#x3D;&quot;false&quot;&gt;
+                    No
+                &lt;/mat-option&gt;
+            &lt;/mat-select&gt;
+        &lt;/mat-form-field&gt;
+        &lt;safe-button variant&#x3D;&quot;danger&quot; (click)&#x3D;&quot;clear()&quot;&gt;Clear Filters&lt;/safe-button&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -678,14 +713,14 @@ export class FilterComponent implements OnInit {
                 <p class="comment">
                     <code>./filter.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.resources-filter {
-  .top, .advanced {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+                <pre class="line-numbers"><code class="language-scss">.forms-filter {
+    .top, .advanced {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
 }
 </code></pre>
     </div>
@@ -715,10 +750,10 @@ export class FilterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div [formGroup]="form" class="resources-filter">  <div class="top">    <mat-form-field appearance="outline">      <mat-icon matPrefix>search</mat-icon>      <input id="custom-search" matInput [formControl]="search" type="search" placeholder="Search...">    </mat-form-field>    <safe-button icon="filter_list" category="tertiary" variant="primary" (click)="show = !show">{{ show ? \'Hide Filter\' : \'Show Filter\' }}    </safe-button>  </div>  <div class="advanced" *ngIf="show">    <mat-form-field appearance="outline">      <mat-label>Date Range</mat-label>      <mat-date-range-input [rangePicker]="rangePicker">        <input formControlName="startDate" matStartDate>        <input formControlName="endDate" matEndDate>      </mat-date-range-input>      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <safe-button matDateRangePickerCancel (click)="clearDateFilter()">Clear range</safe-button>          <safe-button category="secondary" variant="primary" matDateRangePickerApply>            Apply          </safe-button>        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>    <safe-button variant="danger" (click)="clear()">Clear Filters</safe-button>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div [formGroup]="form" class="forms-filter">    <div class="top">        <mat-form-field appearance="outline">            <mat-icon matPrefix>search</mat-icon>            <input id="custom-search" matInput [formControl]="search" type="search" placeholder="Search...">        </mat-form-field>        <safe-button icon="filter_list" category="tertiary" variant="primary" (click)="show = !show">{{ show ? \'Hide Filter\' : \'Show Filter\' }}        </safe-button>    </div>    <div class="advanced" *ngIf="show">        <mat-form-field appearance="outline">            <mat-label>Date Range</mat-label>            <mat-date-range-input [rangePicker]="rangePicker">                <input formControlName="startDate" matStartDate>                <input formControlName="endDate" matEndDate>            </mat-date-range-input>            <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>            <mat-date-range-picker #rangePicker>                <mat-date-range-picker-actions>                    <safe-button matDateRangePickerCancel (click)="clearDateFilter()">Clear range</safe-button>                    <safe-button category="secondary" variant="primary" matDateRangePickerApply>                        Apply                    </safe-button>                </mat-date-range-picker-actions>            </mat-date-range-picker>        </mat-form-field>        <mat-form-field appearance="outline">            <mat-label>Status</mat-label>            <mat-select formControlName="status">                <mat-option>-</mat-option>                <mat-option value="active">                    Active                </mat-option>                <mat-option value="pending">                    Pending                </mat-option>            </mat-select>        </mat-form-field>        <mat-form-field appearance="outline">            <mat-label>Is Core</mat-label>            <mat-select formControlName="core">                <mat-option>-</mat-option>                <mat-option [value]="true">                    Yes                </mat-option>                <mat-option [value]="false">                    No                </mat-option>            </mat-select>        </mat-form-field>        <safe-button variant="danger" (click)="clear()">Clear Filters</safe-button>    </div></div></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'FilterComponent'};
+    var ACTUAL_COMPONENT = {'name': 'FilterComponent-2'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -753,7 +788,7 @@ export class FilterComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'FilterComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'FilterComponent-2.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

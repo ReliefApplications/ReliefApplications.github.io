@@ -529,8 +529,8 @@ query GetResources($first: Int, $afterCursor: ID){
 }&#x60;;
 
 export const GET_RESOURCES_EXTENDED &#x3D; gql&#x60;
-query GetResourcesExtended($first: Int, $afterCursor: ID){
-  resources(first: $first, afterCursor: $afterCursor) {
+query GetResourcesExtended($first: Int, $afterCursor: ID, $filter: JSON){
+  resources(first: $first, afterCursor: $afterCursor, filter: $filter) {
     edges {
       node {
         id

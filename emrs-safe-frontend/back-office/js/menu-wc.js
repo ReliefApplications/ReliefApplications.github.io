@@ -207,10 +207,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                                 <a href="components/ChoseRoleComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ChoseRoleComponent</a>
                                             </li>
-                                            <li class="link">
-                                                <a href="components/FilterComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">FilterComponent</a>
-                                            </li>
                                         </ul>
                                     </li>
                             </li>
@@ -750,13 +746,17 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ResourcesModule.html" data-type="entity-link">ResourcesModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ResourcesModule-3bdee51fc79229fc86db830c923e9774"' : 'data-target="#xs-components-links-module-ResourcesModule-3bdee51fc79229fc86db830c923e9774"' }>
+                                            'data-target="#components-links-module-ResourcesModule-1484e059fdd496381258193bba80952e"' : 'data-target="#xs-components-links-module-ResourcesModule-1484e059fdd496381258193bba80952e"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ResourcesModule-3bdee51fc79229fc86db830c923e9774"' :
-                                            'id="xs-components-links-module-ResourcesModule-3bdee51fc79229fc86db830c923e9774"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ResourcesModule-1484e059fdd496381258193bba80952e"' :
+                                            'id="xs-components-links-module-ResourcesModule-1484e059fdd496381258193bba80952e"' }>
+                                            <li class="link">
+                                                <a href="components/FilterComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">FilterComponent</a>
+                                            </li>
                                             <li class="link">
                                                 <a href="components/ResourcesComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ResourcesComponent</a>
@@ -1022,6 +1022,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
                                 <a href="components/FilterComponent-1.html" data-type="entity-link">FilterComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/FilterComponent-2.html" data-type="entity-link">FilterComponent</a>
                             </li>
                         </ul>
                     </li>
