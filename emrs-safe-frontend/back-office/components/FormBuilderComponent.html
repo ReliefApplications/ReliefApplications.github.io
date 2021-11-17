@@ -1512,7 +1512,7 @@ export class FormBuilderComponent implements OnInit {
       }
     }).subscribe(res &#x3D;&gt; {
       if (res.errors) {
-        this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;Status&#x27;, res.errors[0].message));
+        this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;Status&#x27;, res.errors[0].message), { error: true });
         statusModal.close();
       } else {
         this.snackBar.openSnackBar(NOTIFICATIONS.statusUpdated(e.value));
@@ -1574,7 +1574,7 @@ export class FormBuilderComponent implements OnInit {
     }).subscribe(
       res &#x3D;&gt; {
         if (res.errors) {
-          this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;form&#x27;, res.errors[0].message));
+          this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;form&#x27;, res.errors[0].message), { error: true });
           statusModal.close();
         } else {
           this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;form&#x27;, formName));
@@ -1602,7 +1602,7 @@ export class FormBuilderComponent implements OnInit {
       }
     }).subscribe(res &#x3D;&gt; {
       if (res.errors) {
-        this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;access&#x27;, res.errors[0].message));
+        this.snackBar.openSnackBar(NOTIFICATIONS.objectNotUpdated(&#x27;access&#x27;, res.errors[0].message), { error: true });
         statusModal.close();
       } else {
         this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;access&#x27;, &#x27;&#x27;));
