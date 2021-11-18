@@ -834,13 +834,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeResourceGridModule.html" data-type="entity-link">SafeResourceGridModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeResourceGridModule-6e3ce0787d447e0033575ae30f7c8efe"' : 'data-target="#xs-components-links-module-SafeResourceGridModule-6e3ce0787d447e0033575ae30f7c8efe"' }>
+                                            'data-target="#components-links-module-SafeResourceGridModule-21e2e98c74ea1065850786df4326962a"' : 'data-target="#xs-components-links-module-SafeResourceGridModule-21e2e98c74ea1065850786df4326962a"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeResourceGridModule-6e3ce0787d447e0033575ae30f7c8efe"' :
-                                            'id="xs-components-links-module-SafeResourceGridModule-6e3ce0787d447e0033575ae30f7c8efe"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeResourceGridModule-21e2e98c74ea1065850786df4326962a"' :
+                                            'id="xs-components-links-module-SafeResourceGridModule-21e2e98c74ea1065850786df4326962a"' }>
                                             <li class="link">
                                                 <a href="components/SafeResourceGridComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeResourceGridComponent</a>
