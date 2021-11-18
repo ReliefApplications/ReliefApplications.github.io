@@ -4475,7 +4475,7 @@ query getChannels($application: ID) {
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>gql&#x60;
-query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
+query GetFormById($id: ID!) {
   form(id: $id) {
     id
     name
@@ -4483,10 +4483,6 @@ query GetFormById($id: ID!, $filters: JSON, $display: Boolean) {
     structure
     status
     fields
-    records(filters: $filters) {
-      id
-      data(display: $display)
-    }
     resource{
       id
     }

@@ -1355,8 +1355,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="282"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:282</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="283"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:283</a></div>
                 </td>
             </tr>
 
@@ -1763,7 +1763,7 @@ export class QueryBuilderService {
       name: [value ? value.name : &#x27;&#x27;, validators ? Validators.required : null],
       template: [value ? value.template : &#x27;&#x27;, null],
       fields: this.formBuilder.array((value &amp;&amp; value.fields) ? value.fields.map((x: any) &#x3D;&gt; this.addNewField(x)) : [],
-       validators ? Validators.required : null),
+        validators ? Validators.required : null),
       sort: this.formBuilder.group({
         field: [(value &amp;&amp; value.sort) ? value.sort.field : &#x27;&#x27;],
         order: [(value &amp;&amp; value.sort) ? value.sort.order : &#x27;asc&#x27;]
@@ -1801,6 +1801,7 @@ export class QueryBuilderService {
       case &#x27;LIST&#x27;: {
         return this.formBuilder.group({
           name: [{ value: field.name, disabled: true }],
+          label: [field.label],
           type: [newField ? field.type.ofType.name : field.type],
           kind: [newField ? field.type.kind : field.kind],
           fields: this.formBuilder.array((!newField &amp;&amp; field.fields) ?
