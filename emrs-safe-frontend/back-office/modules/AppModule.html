@@ -229,17 +229,14 @@ import { environment } from &#x27;../environments/environment&#x27;;
 
 // MSAL
 import { MsalModule, MsalInterceptor } from &#x27;@azure/msal-angular&#x27;;
-import { BehaviorSubject } from &#x27;rxjs&#x27;;
 import { MatNativeDateModule } from &#x27;@angular/material/core&#x27;;
 import { MatDatepickerModule } from &#x27;@angular/material/datepicker&#x27;;
-
+import { BehaviorSubject } from &#x27;rxjs&#x27;;
 
 
 const isIE &#x3D; window.navigator.userAgent.indexOf(&#x27;MSIE &#x27;) &gt; -1 || window.navigator.userAgent.indexOf(&#x27;Trident/&#x27;) &gt; -1;
 
-localStorage.setItem(&#x27;loaded&#x27;, &#x27;false&#x27;);
-
-const REFRESH &#x3D; new BehaviorSubject&lt;boolean&gt;(false);
+export const SCHEMA_UPDATE &#x3D; new BehaviorSubject&lt;boolean&gt;(false);
 
 /*  Configuration of the Apollo client.
 */
@@ -271,12 +268,9 @@ export function provideApollo(httpLink: HttpLink): any {
         authToken: localStorage.getItem(&#x27;msal.idtoken&#x27;)
       },
       connectionCallback: (error) &#x3D;&gt; {
-        if (localStorage.getItem(&#x27;loaded&#x27;) &#x3D;&#x3D;&#x3D; &#x27;true&#x27;) {
-          // location.reload();
-          REFRESH.next(true);
-          localStorage.setItem(&#x27;loaded&#x27;, &#x27;false&#x27;);
+        if (!error) {
+          SCHEMA_UPDATE.next(true);
         }
-        localStorage.setItem(&#x27;loaded&#x27;, &#x27;true&#x27;);
       }
     }
   });
@@ -382,16 +376,12 @@ export function provideApollo(httpLink: HttpLink): any {
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(
-    private apollo: Apollo
-  ) {
-    REFRESH.asObservable().subscribe((res) &#x3D;&gt; {
-      console.log(&#x27;Schema generated without cache reloading.&#x27;);
-      // if (res) {
-      //   this.apollo.client.cache.reset().then(() &#x3D;&gt; {
-      //     console.log(&#x27;Schema generated.&#x27;);
-      //   });
-      // }
+  constructor(private apollo: Apollo) {
+    SCHEMA_UPDATE.asObservable().subscribe((refresh) &#x3D;&gt; {
+      if (refresh) {
+        this.apollo.client.cache.reset();
+        SCHEMA_UPDATE.next(false);
+      }
     });
   }
 }
