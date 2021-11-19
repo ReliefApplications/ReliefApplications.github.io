@@ -664,8 +664,8 @@ export interface GetApplicationByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET APPLICATIONS &#x3D;&#x3D;&#x3D;
 export const GET_APPLICATIONS &#x3D; gql&#x60;
-query GetApplications($first: Int, $afterCursor: ID, $filters: JSON) {
-  applications(first: $first, afterCursor: $afterCursor, filters: $filters) {
+query GetApplications($first: Int, $afterCursor: ID, $filter: JSON) {
+  applications(first: $first, afterCursor: $afterCursor, filter: $filter) {
     edges {
       node {
         id
