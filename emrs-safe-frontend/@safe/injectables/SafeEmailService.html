@@ -98,12 +98,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>, preprocessor: <a href="../injectables/SafePreprocessorService.html">SafePreprocessorService</a>)</code>
+<code>constructor(snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>, preprocessor: <a href="../injectables/SafePreprocessorService.html">SafePreprocessorService</a>, clipboard: Clipboard)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -137,6 +137,18 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/SafePreprocessorService.html" target="_self" >SafePreprocessorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>clipboard</td>
+                                                  
+                                                        <td>
+                                                                    <code>Clipboard</code>
                                                         </td>
                                                   
                                                     <td>
@@ -183,8 +195,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:28</a></div>
                 </td>
             </tr>
 
@@ -360,6 +372,7 @@
 import { SafeSnackBarService } from &#x27;./snackbar.service&#x27;;
 import { NOTIFICATIONS } from &#x27;../const/notifications&#x27;;
 import { SafePreprocessorService } from &#x27;./preprocessor.service&#x27;;
+import { Clipboard } from &#x27;@angular/cdk/clipboard&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -368,7 +381,8 @@ export class SafeEmailService {
 
   constructor(
     private snackBar: SafeSnackBarService,
-    private preprocessor: SafePreprocessorService
+    private preprocessor: SafePreprocessorService,
+    private clipboard: Clipboard
   ) { }
 
   /**
@@ -385,12 +399,15 @@ export class SafeEmailService {
     recipient: string, subject: string, body: string &#x3D; &#x27;{dataset}&#x27;, settings: any, ids: string[],
     sortField?: string, sortOrder?: string): Promise&lt;void&gt; {
 
-    body &#x3D; await this.preprocessor.preprocess(body, {settings, ids, sortField, sortOrder });
+    body &#x3D; await this.preprocessor.preprocess(body, { settings, ids, sortField, sortOrder });
+    this.clipboard.copy(body);
+    this.snackBar.openSnackBar(NOTIFICATIONS.emailBodyCopiedToClipboard, { duration: 3000 });
+
     subject &#x3D; await this.preprocessor.preprocess(subject);
 
     // &#x3D;&#x3D;&#x3D; SEND THE EMAIL &#x3D;&#x3D;&#x3D;
     try {
-      window.location.href &#x3D; &#x60;mailto:${recipient}?subject&#x3D;${subject}&amp;body&#x3D;${encodeURIComponent(body)}&#x60;;
+      window.location.href &#x3D; &#x60;mailto:${recipient}?subject&#x3D;${subject}&#x60;;
     } catch (error) {
       this.snackBar.openSnackBar(NOTIFICATIONS.emailTooLong(error), { error: true });
       try {

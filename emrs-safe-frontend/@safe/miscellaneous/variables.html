@@ -6329,6 +6329,7 @@ query GetUsers($applications: [ID]) {
     emailRegistered: &#x27;Some emails are already part of the application and will not be invited.&#x27;,
     emailTooLong(error: any): string { return &#x60;Failed to open your email client with selected records in the body. Either your browser or your email client does not support such long mailto command. ${error}&#x60;; },
     emailClientNotResponding(error: any): string { return &#x60;Failed to open your email client even without body. ${error}&#x60;; },
+    emailBodyCopiedToClipboard: &#x27;Email body copied to clipboard, you can now past it to the opened email.&#x27;,
     dataRecovered: &#x27;The data has been recovered&#x27;,
     profileSaved: &#x27;Preferences saved.&#x27;,
     appEdited: &#x27;This application has been updated by someone else.&#x27;,
