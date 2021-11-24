@@ -200,6 +200,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeBarChartModule.html" data-type="entity-link">SafeBarChartModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeBarChartModule-c58eb1ab0e9135c472db9772b0b2ab29"' : 'data-target="#xs-components-links-module-SafeBarChartModule-c58eb1ab0e9135c472db9772b0b2ab29"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeBarChartModule-c58eb1ab0e9135c472db9772b0b2ab29"' :
+                                            'id="xs-components-links-module-SafeBarChartModule-c58eb1ab0e9135c472db9772b0b2ab29"' }>
+                                            <li class="link">
+                                                <a href="components/SafeBarChartComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeBarChartComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeButtonModule.html" data-type="entity-link">SafeButtonModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -221,13 +239,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeChartModule.html" data-type="entity-link">SafeChartModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' : 'data-target="#xs-components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' }>
+                                            'data-target="#components-links-module-SafeChartModule-471127f0a35084bbe3f0ca17a7175734"' : 'data-target="#xs-components-links-module-SafeChartModule-471127f0a35084bbe3f0ca17a7175734"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' :
-                                            'id="xs-components-links-module-SafeChartModule-b1954d3de5661d89d9ea3a0a044fb65a"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeChartModule-471127f0a35084bbe3f0ca17a7175734"' :
+                                            'id="xs-components-links-module-SafeChartModule-471127f0a35084bbe3f0ca17a7175734"' }>
                                             <li class="link">
                                                 <a href="components/SafeChartComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeChartComponent</a>
@@ -267,6 +285,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/SafeChooseRecordModalComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeChooseRecordModalComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeColumnChartModule.html" data-type="entity-link">SafeColumnChartModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeColumnChartModule-a4c7d37f59e4938efbe8825d0698eb88"' : 'data-target="#xs-components-links-module-SafeColumnChartModule-a4c7d37f59e4938efbe8825d0698eb88"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeColumnChartModule-a4c7d37f59e4938efbe8825d0698eb88"' :
+                                            'id="xs-components-links-module-SafeColumnChartModule-a4c7d37f59e4938efbe8825d0698eb88"' }>
+                                            <li class="link">
+                                                <a href="components/SafeColumnChartComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeColumnChartComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1240,6 +1276,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ChartLegend-2.html" data-type="entity-link">ChartLegend</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ChartLegend-3.html" data-type="entity-link">ChartLegend</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartLegend-4.html" data-type="entity-link">ChartLegend</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/ChartSeries.html" data-type="entity-link">ChartSeries</a>
                             </li>
                             <li class="link">
@@ -1249,6 +1291,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ChartSeries-2.html" data-type="entity-link">ChartSeries</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/ChartSeries-3.html" data-type="entity-link">ChartSeries</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartSeries-4.html" data-type="entity-link">ChartSeries</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/ChartTitle.html" data-type="entity-link">ChartTitle</a>
                             </li>
                             <li class="link">
@@ -1256,6 +1304,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ChartTitle-2.html" data-type="entity-link">ChartTitle</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartTitle-3.html" data-type="entity-link">ChartTitle</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ChartTitle-4.html" data-type="entity-link">ChartTitle</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/ConvertRecordMutationResponse.html" data-type="entity-link">ConvertRecordMutationResponse</a>
