@@ -570,7 +570,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>buildMetaQuery(settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, subQuery)</code>
+                    <code>buildMetaQuery(settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
@@ -594,7 +594,6 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Default value</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -608,22 +607,6 @@
                                         No
                                     </td>
 
-                                    <td>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>subQuery</td>
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>false</code>
-                                    </td>
 
                                 </tr>
                             </tbody>
@@ -1711,13 +1694,13 @@ export class QueryBuilderService {
     }
   }
 
-  public buildMetaQuery(settings: any, subQuery &#x3D; false): Observable&lt;ApolloQueryResult&lt;any&gt;&gt; | null {
-    const builtQuery &#x3D; subQuery ? settings : settings.query;
+  public buildMetaQuery(settings: any): Observable&lt;ApolloQueryResult&lt;any&gt;&gt; | null {
+    const builtQuery &#x3D; settings.query;
     if (builtQuery &amp;&amp; builtQuery.fields.length &gt; 0) {
       const metaFields &#x3D; this.buildMetaFields(builtQuery.fields);
       const query &#x3D; gql&#x60;
         query GetCustomMetaQuery {
-          _${subQuery ? builtQuery.type : builtQuery.name}Meta {
+          _${builtQuery.name}Meta {
             ${metaFields}
           }
         }
