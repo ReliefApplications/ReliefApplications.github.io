@@ -24,13 +24,13 @@
 <title>cluster_SafeSearchResourceGridModalModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 1092,-268 1092,-70 8,-70"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeSearchResourceGridModalModule_exports</title>
-<polygon fill="none" stroke="black" points="391,-208 391,-260 631,-260 631,-208 391,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeSearchResourceGridModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="848,-78 848,-130 1084,-130 1084,-78 848,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeSearchResourceGridModalModule_exports</title>
+<polygon fill="none" stroke="black" points="391,-208 391,-260 631,-260 631,-208 391,-208"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeSearchResourceGridModalModule_imports</title>
