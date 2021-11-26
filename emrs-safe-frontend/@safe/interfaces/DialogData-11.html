@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/users/components/add-user/add-user.component.ts</code>
+            <code>projects/safe/src/lib/components/users/components/edit-user/edit-user.component.ts</code>
         </p>
 
 
@@ -79,14 +79,17 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
+                                        <a href="#availableRoles">availableRoles</a>
+                                </li>
+                                <li>
+                                        <a href="#multiple">multiple</a>
+                                </li>
+                                <li>
                                             <span class="modifier">Optional</span>
                                         <a href="#positionAttributeCategories">positionAttributeCategories</a>
                                 </li>
                                 <li>
-                                        <a href="#roles">roles</a>
-                                </li>
-                                <li>
-                                        <a href="#users">users</a>
+                                        <a href="#user">user</a>
                                 </li>
                             </ul>
                         </td>
@@ -99,6 +102,64 @@
 
             <section>
                 <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="availableRoles"></a>
+                                        <span class="name"><b>availableRoles</b><a href="#availableRoles"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>availableRoles:         <code><a href="../interfaces/Role.html" target="_self" >Role[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/Role.html" target="_self" >Role[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="multiple"></a>
+                                        <span class="name"><b>multiple</b><a href="#multiple"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>multiple:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
@@ -137,13 +198,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="roles"></a>
-                                        <span class="name"><b>roles</b><a href="#roles"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="user"></a>
+                                        <span class="name"><b>user</b><a href="#user"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>roles:         <code><a href="../interfaces/Role.html" target="_self" >Role[]</a></code>
+                                        <code>user:         <code><a href="../interfaces/User.html" target="_self" >User</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -151,36 +212,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Role.html" target="_self" >Role[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="users"></a>
-                                        <span class="name"><b>users</b><a href="#users"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>users:         <code><a href="../interfaces/User.html" target="_self" >User[]</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/User.html" target="_self" >User[]</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
 
                                         </td>
                                     </tr>
@@ -197,82 +229,63 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { Role, User } from &#x27;../../../../models/user.model&#x27;;
-import { PositionAttributeCategory } from &#x27;../../../../models/position-attribute-category.model&#x27;;
 import { FormArray, FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { map, startWith } from &#x27;rxjs/operators&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
-import {GetUsersQueryResponse} from &#x27;../../../../graphql/queries&#x27;;
-import { GET_USERS } from &#x27;../../../../graphql/queries&#x27;;
-import { Apollo } from &#x27;apollo-angular&#x27;;
+import { PositionAttributeCategory } from &#x27;../../../../models/position-attribute-category.model&#x27;;
+import { Role, User } from &#x27;../../../../models/user.model&#x27;;
 
 interface DialogData {
-  roles: Role[];
-  users: User[];
+  user: User;
+  availableRoles: Role[];
+  multiple: boolean;
   positionAttributeCategories?: PositionAttributeCategory[];
 }
 
 @Component({
-  selector: &#x27;safe-add-user&#x27;,
-  templateUrl: &#x27;./add-user.component.html&#x27;,
-  styleUrls: [&#x27;./add-user.component.scss&#x27;]
+  selector: &#x27;safe-edit-user&#x27;,
+  templateUrl: &#x27;./edit-user.component.html&#x27;,
+  styleUrls: [&#x27;./edit-user.component.scss&#x27;]
 })
-export class SafeAddUserComponent implements OnInit {
+export class SafeEditUserComponent implements OnInit {
 
-  form: FormGroup &#x3D; new FormGroup({});
-  public filteredUsers?: Observable&lt;User[]&gt;;
-  private users: User[] &#x3D; [];
+  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
+  userForm: FormGroup &#x3D; new FormGroup({});
 
   get positionAttributes(): FormArray | null {
-    return this.form.get(&#x27;positionAttributes&#x27;) ? this.form.get(&#x27;positionAttributes&#x27;) as FormArray : null;
+    return this.userForm.get(&#x27;positionAttributes&#x27;) ? this.userForm.get(&#x27;positionAttributes&#x27;) as FormArray : null;
   }
 
   constructor(
     private formBuilder: FormBuilder,
-    public dialogRef: MatDialogRef&lt;SafeAddUserComponent&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    private apollo: Apollo
+    public dialogRef: MatDialogRef&lt;SafeEditUserComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) { }
 
+  /*  Load the roles and build the form.
+  */
   ngOnInit(): void {
-    this.form &#x3D; this.formBuilder.group({
-      email: [&#x27;&#x27;, Validators.minLength(1)],
-      role: [&#x27;&#x27;, Validators.required],
-      ...this.data.positionAttributeCategories &amp;&amp;
-      {
-        positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
-          return this.formBuilder.group({
-            value: [&#x27;&#x27;],
-            category: [x.id, Validators.required]
-          });
-        }))
-      }
-    });
-    this.filteredUsers &#x3D; this.form.controls.email.valueChanges.pipe(
-      startWith(&#x27;&#x27;),
-      map(value &#x3D;&gt; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? value : &#x27;&#x27;),
-      map(x &#x3D;&gt; this.filterUsers(x))
-    );
-
-    this.apollo.watchQuery&lt;GetUsersQueryResponse&gt;({
-      query: GET_USERS
-    }).valueChanges.subscribe(res &#x3D;&gt; {
-      const flatInvitedUsers &#x3D; this.data.users.map(x &#x3D;&gt; x.username);
-      this.users &#x3D; res.data.users.filter(x &#x3D;&gt; !flatInvitedUsers.includes(x.username));
-      this.filteredUsers &#x3D; this.form.controls.email.valueChanges.pipe(
-        startWith(&#x27;&#x27;),
-        map(value &#x3D;&gt; typeof value &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? value : &#x27;&#x27;),
-        map(x &#x3D;&gt; this.filterUsers(x))
-      );
-    });
+    if (this.data.multiple) {
+      this.userForm &#x3D; this.formBuilder.group({
+        roles: [this.data.user.roles ? this.data.user.roles.map(x &#x3D;&gt; x.id) : null]
+      });
+    } else {
+      this.userForm &#x3D; this.formBuilder.group({
+        role: this.data.user?.roles ? this.data.user.roles[0].id : &#x27;&#x27;,
+        ...this.data.positionAttributeCategories &amp;&amp;
+        {
+          positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
+            return this.formBuilder.group({
+              value: [&#x27;&#x27;],
+              category: [x.id, Validators.required]
+            });
+          }))
+        }
+      });
+    }
   }
 
-  private filterUsers(value: string): User[] {
-    const filterValue &#x3D; value.toLowerCase();
-    return this.users.filter(x &#x3D;&gt; x.username?.toLowerCase().indexOf(filterValue) &#x3D;&#x3D;&#x3D; 0);
-  }
-
+  /*  Close the modal without sending any data.
+  */
   onClose(): void {
     this.dialogRef.close();
   }
