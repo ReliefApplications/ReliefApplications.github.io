@@ -619,8 +619,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="329"
-                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:329</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="331"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:331</a></div>
                 </td>
             </tr>
 
@@ -1310,8 +1310,10 @@ export class SafeFormBuilderComponent implements OnInit, OnChanges {
   */
   private setQuestionNames(element: any, page: any): void {
     if (element.type &#x3D;&#x3D;&#x3D; &#x27;panel&#x27;) {
-      for (const el of element.elements) {
-        this.setQuestionNames(el, page);
+      if (element.elements) {
+        for (const el of element.elements) {
+          this.setQuestionNames(el, page);
+        }
       }
     } else {
       if (!element.valueName) {
