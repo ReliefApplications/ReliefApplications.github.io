@@ -165,6 +165,7 @@ import { MatSelect } from &#x27;@angular/material/select&#x27;;
 import { Apollo } from &#x27;apollo-angular&#x27;;
 import { BehaviorSubject, Observable, Subscription } from &#x27;rxjs&#x27;;
 import { QueryBuilderService } from &#x27;../../services/query-builder.service&#x27;;
+import { GridSettings } from &#x27;../ui/core-grid/models/grid-settings.model&#x27;;
 
 const ITEMS_PER_PAGE &#x3D; 10;
 
@@ -188,7 +189,9 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
 
   // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
   chooseRecordForm: FormGroup &#x3D; new FormGroup({});
-  settings: any &#x3D; {};
+
+  // &#x3D;&#x3D;&#x3D; GRID SETTINGS &#x3D;&#x3D;&#x3D;
+  public settings: GridSettings &#x3D; {};
 
   // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
   private records &#x3D; new BehaviorSubject&lt;IRecord[]&gt;([]);
@@ -218,7 +221,7 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.settings &#x3D; { query: this.data.targetFormQuery };
-    this.filter &#x3D; this.settings.query.filter || {};
+    this.filter &#x3D; this.settings.query?.filter || {};
     const builtQuery &#x3D; this.queryBuilder.buildQuery({ ...this.settings, query: {
       ...this.settings.query,
       fields: [{ kind: &#x27;SCALAR&#x27;, name: this.data.targetFormField }]
@@ -229,8 +232,8 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
         ...builtQuery.variables, ...{
           first: ITEMS_PER_PAGE,
           filter: this.filter,
-          sortField: this.settings.query.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null,
-          sortOrder: this.settings.query.sort?.order || &#x27;&#x27;
+          sortField: this.settings.query?.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null,
+          sortOrder: this.settings.query?.sort?.order || &#x27;&#x27;
         }
       }
     });
@@ -254,14 +257,28 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
     this.chooseRecordForm &#x3D; this.formBuilder.group({
       record: [null, Validators.required]
     });
+    this.settings &#x3D; {
+      query: this.data.targetFormQuery,
+      actions: {
+        delete: false,
+        history: false,
+        convert: false,
+        update: false,
+        inlineEdition: false
+      }
+    };
   }
 
   onSearch(): void {
     this.isSearchActivated &#x3D; !this.isSearchActivated;
   }
 
-  onRowSelected(rows: any): void {
-    this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(rows.selectedRows[0].dataItem.id);
+  onSelectionChange(rows: any): void {
+    if (rows.selectedRows &amp;&amp; rows.selectedRows.length &gt; 0) {
+      this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(rows.selectedRows[0].dataItem.id);
+    } else {
+      this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(null);
+    }
   }
   /*  Close the modal without sending data.
   */
@@ -300,8 +317,8 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
             skip: this.records.getValue().length,
             afterCursor: this.pageInfo.endCursor,
             filter: this.filter,
-            sortField: this.settings.query.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null,
-            sortOrder: this.settings.query.sort?.order || &#x27;&#x27;
+            sortField: this.settings.query?.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null,
+            sortOrder: this.settings.query?.sort?.order || &#x27;&#x27;
           },
           updateQuery: (prev: any, { fetchMoreResult }: any) &#x3D;&gt; {
             if (!fetchMoreResult) { return prev; }
