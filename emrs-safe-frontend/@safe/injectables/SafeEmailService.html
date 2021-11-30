@@ -188,7 +188,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>sendMail(recipient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, subject: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, ids: string[], sortField?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sortOrder?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>sendMail(recipient: string[], subject: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, body: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, ids: string[], sortField?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sortOrder?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -222,7 +222,7 @@
                                 <tr>
                                     <td>recipient</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <code>string[]</code>
                                     </td>
 
                                     <td>
@@ -396,7 +396,7 @@ export class SafeEmailService {
    * @param sortOrder sort order
    */
   public async sendMail(
-    recipient: string, subject: string, body: string &#x3D; &#x27;{dataset}&#x27;, settings: any, ids: string[],
+    recipient: string[], subject: string, body: string &#x3D; &#x27;{dataset}&#x27;, settings: any, ids: string[],
     sortField?: string, sortOrder?: string): Promise&lt;void&gt; {
 
     body &#x3D; await this.preprocessor.preprocess(body, { settings, ids, sortField, sortOrder });
@@ -407,7 +407,7 @@ export class SafeEmailService {
 
     // &#x3D;&#x3D;&#x3D; SEND THE EMAIL &#x3D;&#x3D;&#x3D;
     try {
-      window.location.href &#x3D; &#x60;mailto:${recipient}?subject&#x3D;${subject}&#x60;;
+      window.location.href &#x3D; &#x60;mailto:${recipient.join(&#x27;;&#x27;)}?subject&#x3D;${subject}&#x60;;
     } catch (error) {
       this.snackBar.openSnackBar(NOTIFICATIONS.emailTooLong(error), { error: true });
       try {
