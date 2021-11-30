@@ -21,44 +21,44 @@
 <polygon fill="#fb8072" stroke="transparent" points="406,-10 406,-30 426,-30 426,-10 406,-10"/>
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
-<title>cluster_SafeMapModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="164,-70 164,-268 332,-268 332,-70 164,-70"/>
+<title>cluster_SafeExportModule</title>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="158,-70 158,-268 338,-268 338,-70 158,-70"/>
 </g>
 <g id="clust5" class="cluster">
-<title>cluster_SafeMapModule_exports</title>
-<polygon fill="none" stroke="black" points="172,-208 172,-260 324,-260 324,-208 172,-208"/>
+<title>cluster_SafeExportModule_exports</title>
+<polygon fill="none" stroke="black" points="166,-208 166,-260 330,-260 330,-208 166,-208"/>
 </g>
 <g id="clust2" class="cluster">
-<title>cluster_SafeMapModule_declarations</title>
-<polygon fill="none" stroke="black" points="174,-78 174,-130 322,-130 322,-78 174,-78"/>
+<title>cluster_SafeExportModule_declarations</title>
+<polygon fill="none" stroke="black" points="168,-78 168,-130 328,-130 328,-78 168,-78"/>
 </g>
-<!-- SafeMapComponent -->
+<!-- SafeExportComponent -->
 <g id="node1" class="node">
-<title>SafeMapComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="313.86,-122 182.14,-122 182.14,-86 313.86,-86 313.86,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">SafeMapComponent</text>
+<title>SafeExportComponent</title>
+<polygon fill="#ffffb3" stroke="black" points="320.31,-122 175.69,-122 175.69,-86 320.31,-86 320.31,-122"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">SafeExportComponent</text>
 </g>
-<!-- SafeMapModule -->
+<!-- SafeExportModule -->
 <g id="node2" class="node">
-<title>SafeMapModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="303.08,-187 300.08,-191 279.08,-191 276.08,-187 192.92,-187 192.92,-151 303.08,-151 303.08,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">SafeMapModule</text>
+<title>SafeExportModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="309.03,-187 306.03,-191 285.03,-191 282.03,-187 186.97,-187 186.97,-151 309.03,-151 309.03,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">SafeExportModule</text>
 </g>
-<!-- SafeMapComponent&#45;&gt;SafeMapModule -->
+<!-- SafeExportComponent&#45;&gt;SafeExportModule -->
 <g id="edge1" class="edge">
-<title>SafeMapComponent&#45;&gt;SafeMapModule</title>
+<title>SafeExportComponent&#45;&gt;SafeExportModule</title>
 <path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
 <polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
 </g>
-<!-- SafeMapComponent  -->
+<!-- SafeExportComponent  -->
 <g id="node3" class="node">
-<title>SafeMapComponent </title>
-<polygon fill="#fb8072" stroke="black" points="315.86,-252 180.14,-252 180.14,-216 315.86,-216 315.86,-252"/>
-<text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00">SafeMapComponent </text>
+<title>SafeExportComponent </title>
+<polygon fill="#fb8072" stroke="black" points="321.81,-252 174.19,-252 174.19,-216 321.81,-216 321.81,-252"/>
+<text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00">SafeExportComponent </text>
 </g>
-<!-- SafeMapModule&#45;&gt;SafeMapComponent  -->
+<!-- SafeExportModule&#45;&gt;SafeExportComponent  -->
 <g id="edge2" class="edge">
-<title>SafeMapModule&#45;&gt;SafeMapComponent </title>
+<title>SafeExportModule&#45;&gt;SafeExportComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M248,-187.11C248,-187.11 248,-205.99 248,-205.99"/>
 <polygon fill="black" stroke="black" points="244.5,-205.99 248,-215.99 251.5,-205.99 244.5,-205.99"/>
 </g>
