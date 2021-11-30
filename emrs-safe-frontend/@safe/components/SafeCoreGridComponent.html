@@ -1573,8 +1573,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="855"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:855</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="858"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:858</a></div>
                 </td>
             </tr>
 
@@ -2106,14 +2106,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="829"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:829</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="833"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:833</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Handles search event.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -2123,6 +2125,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -2137,6 +2140,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Search event.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2422,8 +2429,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="842"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:842</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="845"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:845</a></div>
                 </td>
             </tr>
 
@@ -2744,8 +2751,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="881"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:881</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="884"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:884</a></div>
                 </td>
             </tr>
 
@@ -2785,8 +2792,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="863"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:863</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="866"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:866</a></div>
                 </td>
             </tr>
 
@@ -2826,8 +2833,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="871"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:871</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="874"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:874</a></div>
                 </td>
             </tr>
 
@@ -5015,8 +5022,11 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
     this.onPageChange({ skip: this.skip, take: this.pageSize });
   }
 
+  /**
+   * Handles search event.
+   * @param search Search event.
+   */
   public onSearchChange(search: string): void {
-    console.log(search);
     this.search &#x3D; search;
     this.skip &#x3D; 0;
     this.onPageChange({ skip: this.skip, take: this.pageSize });

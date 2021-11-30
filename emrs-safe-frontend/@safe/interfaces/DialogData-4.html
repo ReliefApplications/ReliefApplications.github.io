@@ -353,6 +353,7 @@ import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
 import { SafeSnackBarService } from &#x27;../../services/snackbar.service&#x27;;
 import { SafeDownloadService } from &#x27;../../services/download.service&#x27;;
 import { SafeAuthService } from &#x27;../../services/auth.service&#x27;;
+import { SafeFormBuilderService } from &#x27;../../services/form-builder.service&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 import { NOTIFICATIONS } from &#x27;../../const/notifications&#x27;;
 import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
@@ -408,7 +409,8 @@ export class SafeFormModalComponent implements OnInit {
     private apollo: Apollo,
     private snackBar: SafeSnackBarService,
     private downloadService: SafeDownloadService,
-    private authService: SafeAuthService
+    private authService: SafeAuthService,
+    private formBuilderService: SafeFormBuilderService
   ) {
     this.containerId &#x3D; uuidv4();
   }
@@ -472,7 +474,7 @@ export class SafeFormModalComponent implements OnInit {
   }
 
   private initSurvey(): void {
-    this.survey &#x3D; new Survey.Model(this.form?.structure);
+    this.survey &#x3D; this.formBuilderService.createSurvey(this.form?.structure || &#x27;&#x27;);
     this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
     this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
     this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
@@ -489,7 +491,7 @@ export class SafeFormModalComponent implements OnInit {
     });
     this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
     if (this.data.recordId &amp;&amp; this.record) {
-      addCustomFunctions(Survey, this.authService, this.record);
+      addCustomFunctions(Survey, this.authService, this.apollo, this.record);
       this.survey.data &#x3D; this.isMultiEdition ? null : this.record.data;
       this.survey.showCompletedPage &#x3D; false;
     }

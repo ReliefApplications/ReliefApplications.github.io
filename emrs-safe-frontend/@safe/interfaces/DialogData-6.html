@@ -299,6 +299,7 @@ import { SafeConfirmModalComponent } from &#x27;../confirm-modal/confirm-modal.c
 import { EDIT_RECORD, EditRecordMutationResponse } from &#x27;../../graphql/mutations&#x27;;
 import { NOTIFICATIONS } from &#x27;../../const/notifications&#x27;;
 import { SafeSnackBarService } from &#x27;../../services/snackbar.service&#x27;;
+import { SafeFormBuilderService } from &#x27;../../services/form-builder.service&#x27;;
 import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 
@@ -345,7 +346,8 @@ export class SafeRecordModalComponent implements OnInit {
     public dialog: MatDialog,
     private downloadService: SafeDownloadService,
     private authService: SafeAuthService,
-    private snackBar: SafeSnackBarService
+    private snackBar: SafeSnackBarService,
+    private formBuilderService: SafeFormBuilderService
   ) {
     this.containerId &#x3D; uuidv4();
     if (this.data.compareTo) {
@@ -391,8 +393,8 @@ export class SafeRecordModalComponent implements OnInit {
     }));
     await Promise.all(promises);
     // INIT SURVEY
-    addCustomFunctions(Survey, this.authService, this.record);
-    this.survey &#x3D; new Survey.Model(this.form?.structure);
+    addCustomFunctions(Survey, this.authService, this.apollo, this.record);
+    this.survey &#x3D; this.formBuilderService.createSurvey(this.form?.structure || &#x27;&#x27;);
     this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
     this.survey.onCurrentPageChanged.add((surveyModel, options) &#x3D;&gt; {
       this.selectedTabIndex &#x3D; surveyModel.currentPageNo;
@@ -405,7 +407,7 @@ export class SafeRecordModalComponent implements OnInit {
     this.survey.render(this.containerId);
     this.setPages();
     if (this.data.compareTo) {
-      this.surveyNext &#x3D; new Survey.Model(this.form?.structure);
+      this.surveyNext &#x3D; this.formBuilderService.createSurvey(this.form?.structure || &#x27;&#x27;);
       this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
       this.surveyNext.data &#x3D; this.data.compareTo.data;
       this.surveyNext.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
