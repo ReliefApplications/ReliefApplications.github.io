@@ -1471,6 +1471,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/DialogData-16.html" data-type="entity-link">DialogData</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/DialogData-17.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EditApplicationMutationResponse.html" data-type="entity-link">EditApplicationMutationResponse</a>
                             </li>
                             <li class="link">
