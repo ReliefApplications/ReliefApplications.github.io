@@ -639,13 +639,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeGridWidgetModule.html" data-type="entity-link">SafeGridWidgetModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeGridWidgetModule-1ccae7c0481a376a16b96670576ff7d2"' : 'data-target="#xs-components-links-module-SafeGridWidgetModule-1ccae7c0481a376a16b96670576ff7d2"' }>
+                                            'data-target="#components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' : 'data-target="#xs-components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridWidgetModule-1ccae7c0481a376a16b96670576ff7d2"' :
-                                            'id="xs-components-links-module-SafeGridWidgetModule-1ccae7c0481a376a16b96670576ff7d2"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' :
+                                            'id="xs-components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' }>
                                             <li class="link">
                                                 <a href="components/SafeGridWidgetComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeGridWidgetComponent</a>
