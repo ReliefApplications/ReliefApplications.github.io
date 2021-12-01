@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/users/components/edit-user/edit-user.component.ts</code>
+            <code>projects/safe/src/lib/components/ui/core-grid/expanded-comment/expanded-comment.component.ts</code>
         </p>
 
 
@@ -79,17 +79,14 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#availableRoles">availableRoles</a>
-                                </li>
-                                <li>
-                                        <a href="#multiple">multiple</a>
+                                        <a href="#comment">comment</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#positionAttributeCategories">positionAttributeCategories</a>
+                                        <a href="#readonly">readonly</a>
                                 </li>
                                 <li>
-                                        <a href="#user">user</a>
+                                        <a href="#title">title</a>
                                 </li>
                             </ul>
                         </td>
@@ -106,13 +103,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="availableRoles"></a>
-                                        <span class="name"><b>availableRoles</b><a href="#availableRoles"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="comment"></a>
+                                        <span class="name"><b>comment</b><a href="#comment"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>availableRoles:         <code><a href="../interfaces/Role.html" target="_self" >Role[]</a></code>
+                                        <code>comment:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -120,7 +117,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Role.html" target="_self" >Role[]</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -135,13 +132,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="multiple"></a>
-                                        <span class="name"><b>multiple</b><a href="#multiple"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="readonly"></a>
+                                        <span class="name"><b>readonly</b><a href="#readonly"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>multiple:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>readonly:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -150,35 +147,6 @@
                                     <tr>
                                         <td class="col-md-4">
                                             <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="positionAttributeCategories"></a>
-                                        <span class="name"><b>positionAttributeCategories</b><a href="#positionAttributeCategories"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>positionAttributeCategories:     <code>PositionAttributeCategory[]</code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>PositionAttributeCategory[]</code>
 
                                         </td>
                                     </tr>
@@ -198,13 +166,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="user"></a>
-                                        <span class="name"><b>user</b><a href="#user"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="title"></a>
+                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>user:         <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -212,7 +180,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -229,65 +197,30 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { FormArray, FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { PositionAttributeCategory } from &#x27;../../../../models/position-attribute-category.model&#x27;;
-import { Role, User } from &#x27;../../../../models/user.model&#x27;;
 
 interface DialogData {
-  user: User;
-  availableRoles: Role[];
-  multiple: boolean;
-  positionAttributeCategories?: PositionAttributeCategory[];
+  title: string;
+  comment: string;
+  readonly?: boolean;
 }
 
 @Component({
-  selector: &#x27;safe-edit-user&#x27;,
-  templateUrl: &#x27;./edit-user.component.html&#x27;,
-  styleUrls: [&#x27;./edit-user.component.scss&#x27;]
+  selector: &#x27;safe-expanded-comment&#x27;,
+  templateUrl: &#x27;./expanded-comment.component.html&#x27;,
+  styleUrls: [&#x27;./expanded-comment.component.scss&#x27;]
 })
-export class SafeEditUserComponent implements OnInit {
+export class SafeExpandedCommentComponent implements OnInit {
 
-  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  userForm: FormGroup &#x3D; new FormGroup({});
-
-  get positionAttributes(): FormArray | null {
-    return this.userForm.get(&#x27;positionAttributes&#x27;) ? this.userForm.get(&#x27;positionAttributes&#x27;) as FormArray : null;
-  }
+  public comment &#x3D; &#x27;&#x27;;
 
   constructor(
-    private formBuilder: FormBuilder,
-    public dialogRef: MatDialogRef&lt;SafeEditUserComponent&gt;,
+    public dialogRef: MatDialogRef&lt;SafeExpandedCommentComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) { }
 
-  /*  Load the roles and build the form.
-  */
   ngOnInit(): void {
-    if (this.data.multiple) {
-      this.userForm &#x3D; this.formBuilder.group({
-        roles: [this.data.user.roles ? this.data.user.roles.map(x &#x3D;&gt; x.id) : null]
-      });
-    } else {
-      this.userForm &#x3D; this.formBuilder.group({
-        role: this.data.user?.roles ? this.data.user.roles[0].id : &#x27;&#x27;,
-        ...this.data.positionAttributeCategories &amp;&amp;
-        {
-          positionAttributes: this.formBuilder.array(this.data.positionAttributeCategories.map(x &#x3D;&gt; {
-            return this.formBuilder.group({
-              value: [&#x27;&#x27;],
-              category: [x.id, Validators.required]
-            });
-          }))
-        }
-      });
-    }
-  }
-
-  /*  Close the modal without sending any data.
-  */
-  onClose(): void {
-    this.dialogRef.close();
+    this.comment &#x3D; this.data.comment;
   }
 }
 </code></pre>
