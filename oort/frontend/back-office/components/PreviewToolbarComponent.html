@@ -279,14 +279,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/components/preview-toolbar/preview-toolbar.component.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/components/preview-toolbar/preview-toolbar.component.ts:23</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Closes the preview toolbar and navigates to main page.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -321,6 +323,9 @@ export class PreviewToolbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Closes the preview toolbar and navigates to main page.
+   */
   onClose(): void {
     this.previewService.setRole(&#x27;&#x27;);
     this.router.navigate([&#x27;/&#x27;]);

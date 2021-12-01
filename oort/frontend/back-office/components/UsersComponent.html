@@ -261,14 +261,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/users/users.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/users/users.component.ts:42</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Destroys all the subscriptions of the page.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -300,14 +302,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/users/users.component.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/users/users.component.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Gets the list of users from loaded application.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -495,6 +499,9 @@ export class UsersComponent implements OnInit, OnDestroy {
     public applicationService: SafeApplicationService
   ) { }
 
+  /**
+   * Gets the list of users from loaded application.
+   */
   ngOnInit(): void {
     this.loading &#x3D; false;
     this.applicationSubscription &#x3D; this.applicationService.application.subscribe((application: Application | null) &#x3D;&gt; {
@@ -508,6 +515,9 @@ export class UsersComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * Destroys all the subscriptions of the page.
+   */
   ngOnDestroy(): void {
     if (this.applicationSubscription) {
       this.applicationSubscription.unsubscribe();

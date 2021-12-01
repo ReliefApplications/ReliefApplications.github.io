@@ -311,14 +311,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="93"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/form/form.component.ts:93</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/form/form.component.ts:103</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Resets the form component.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -350,14 +352,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/form/form.component.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/form/form.component.ts:44</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Gets the form from the page parameters.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -389,14 +393,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="88"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/form/form.component.ts:88</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/form/form.component.ts:95</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Handles complete event.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -406,6 +412,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -420,6 +427,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>complete event.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -784,6 +795,9 @@ export class FormComponent implements OnInit {
     private router: Router
   ) { }
 
+  /**
+   * Gets the form from the page parameters.
+   */
   ngOnInit(): void {
     this.routeSubscription &#x3D; this.route.params.subscribe((params) &#x3D;&gt; {
       this.loading &#x3D; true;
@@ -831,11 +845,18 @@ export class FormComponent implements OnInit {
     });
   }
 
+  /**
+   * Handles complete event.
+   * @param e complete event.
+   */
   onComplete(e: {completed: boolean, hideNewRecord?: boolean}): void {
     this.completed &#x3D; e.completed;
     this.hideNewRecord &#x3D; e.hideNewRecord || false;
   }
 
+  /**
+   * Resets the form component.
+   */
   clearForm(): void {
     this.formComponent?.reset();
   }

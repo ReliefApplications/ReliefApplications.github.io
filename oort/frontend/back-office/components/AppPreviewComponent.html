@@ -303,14 +303,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="96"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:96</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:104</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Returns nav icon from the page&#39;s content type.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -320,6 +322,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -334,6 +337,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>content type of the page.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -345,7 +352,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>name of the icon.</p>
+
                     </div>
                 </td>
             </tr>
@@ -373,8 +381,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:115</a></div>
                 </td>
             </tr>
 
@@ -412,14 +420,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:37</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Generates the routes from the application that is loaded.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -635,6 +645,9 @@ export class AppPreviewComponent implements OnInit, OnDestroy {
     private router: Router
   ) { }
 
+  /**
+   * Generates the routes from the application that is loaded.
+   */
   ngOnInit(): void {
     this.route.params.subscribe((params) &#x3D;&gt; {
       this.previewService.roleId.subscribe((role: string) &#x3D;&gt; {
@@ -697,6 +710,11 @@ export class AppPreviewComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * Returns nav icon from the page&#x27;s content type.
+   * @param type content type of the page.
+   * @returns name of the icon.
+   */
   private getNavIcon(type: string): string {
     switch (type) {
       case &#x27;workflow&#x27;:
