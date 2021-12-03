@@ -389,8 +389,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="98"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:98</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:96</a></div>
                 </td>
             </tr>
 
@@ -430,8 +430,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="150"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:150</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:149</a></div>
                 </td>
             </tr>
 
@@ -590,8 +590,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="128"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:128</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:127</a></div>
                 </td>
             </tr>
 
@@ -670,8 +670,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="176"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:176</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="175"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:175</a></div>
                 </td>
             </tr>
 
@@ -1152,14 +1152,12 @@ export class SafeMapComponent implements AfterViewInit, OnDestroy {
   */
   ngAfterViewInit(): void {
     this.drawMap();
-    if (this.settings.query){
-      const builtQuery &#x3D;  this.queryBuilder.buildQuery(this.settings);
-      this.dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
-        query: builtQuery,
-        variables: {
-          first: 100
-        }
-      });
+    const builtQuery &#x3D;  this.queryBuilder.buildQuery(this.settings);
+    this.dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
+      query: builtQuery
+    });
+
+    if (this.dataQuery) {
       this.getData();
     }
 
@@ -1188,6 +1186,7 @@ export class SafeMapComponent implements AfterViewInit, OnDestroy {
       noWrap: true,
       minZoom: 1,
     }).addTo(this.map);
+
     this.markersLayerGroup &#x3D; L.featureGroup().addTo(this.map);
     this.markersLayerGroup.on(&#x27;click&#x27;, (event: any) &#x3D;&gt; {
       this.selectedItem &#x3D; this.data.find(x &#x3D;&gt; x.id &#x3D;&#x3D;&#x3D; event.layer.options.id);
@@ -1217,7 +1216,7 @@ export class SafeMapComponent implements AfterViewInit, OnDestroy {
       this.markersLayer.clearLayers();
       for (const field in res.data) {
         if (Object.prototype.hasOwnProperty.call(res.data, field)) {
-          res.data[field].edges.map((x: any) &#x3D;&gt; this.drawMarkers(myIcon, x.node));
+          res.data[field].map((x: any) &#x3D;&gt; this.drawMarkers(myIcon, x));
         }
       }
     });

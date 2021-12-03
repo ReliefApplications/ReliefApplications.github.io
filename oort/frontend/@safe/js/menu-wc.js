@@ -581,13 +581,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeGridRowActionsModule.html" data-type="entity-link">SafeGridRowActionsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' : 'data-target="#xs-components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' }>
+                                            'data-target="#components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' : 'data-target="#xs-components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' :
-                                            'id="xs-components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' :
+                                            'id="xs-components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' }>
                                             <li class="link">
                                                 <a href="components/SafeGridRowActionsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeGridRowActionsComponent</a>
@@ -1340,12 +1340,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ChannelDisplay.html" data-type="entity-link">ChannelDisplay</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/ChartLabels.html" data-type="entity-link">ChartLabels</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/ChartLabels-1.html" data-type="entity-link">ChartLabels</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/ChartLegend.html" data-type="entity-link">ChartLegend</a>
