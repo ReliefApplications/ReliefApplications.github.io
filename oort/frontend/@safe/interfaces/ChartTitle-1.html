@@ -200,6 +200,11 @@ interface ChartTitle {
 }
 
 interface ChartLegend {
+  title?: {
+    text: string,
+    font?: string,
+    align?: &#x27;center&#x27; | &#x27;left&#x27; | &#x27;right&#x27;
+  };
   visible: boolean;
   orientation: &#x27;horizontal&#x27; | &#x27;vertical&#x27;;
   position: &#x27;top&#x27; | &#x27;bottom&#x27; | &#x27;left&#x27; | &#x27;right&#x27;;

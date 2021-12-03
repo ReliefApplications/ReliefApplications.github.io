@@ -672,9 +672,13 @@ export class SafeButtonComponent implements OnInit  {
     margin-right: 4px;
 }
 
-safe-icon:not(.safe-btn-icon) {
-    display: flex;
-    justify-content: center;
+safe-icon {
+    display: inline-block;
+
+    &amp;:not(.safe-btn-icon) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .safe-btn-success {

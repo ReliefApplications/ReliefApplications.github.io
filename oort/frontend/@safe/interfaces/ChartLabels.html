@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>DialogData</li>
+  <li>ChartLabels</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/ui/core-grid/export/export.component.ts</code>
+            <code>projects/safe/src/lib/components/ui/donut-chart/donut-chart.component.ts</code>
         </p>
 
 
@@ -79,7 +79,7 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#export">export</a>
+                                        <a href="#visible">visible</a>
                                 </li>
                             </ul>
                         </td>
@@ -96,13 +96,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="export"></a>
-                                        <span class="name"><b>export</b><a href="#export"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="visible"></a>
+                                        <span class="name"><b>visible</b><a href="#visible"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>export:     <code>literal type</code>
+                                        <code>visible:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -110,7 +110,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>literal type</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -126,32 +126,68 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { EXPORT_SETTINGS } from &#x27;../grid/grid.constants&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ChartComponent, LegendLabelsContentArgs } from &#x27;@progress/kendo-angular-charts&#x27;;
 
-interface DialogData {
-  export: {
-    records: string,
-    fields: string,
-    format: string
+interface ChartTitle {
+  visible: boolean;
+  text: string;
+  position: &#x27;top&#x27; | &#x27;bottom&#x27;;
+}
+
+interface ChartLegend {
+  title?: {
+    text: string,
+    font?: string,
+    align?: &#x27;center&#x27; | &#x27;left&#x27; | &#x27;right&#x27;
   };
+  visible: boolean;
+  orientation: &#x27;horizontal&#x27; | &#x27;vertical&#x27;;
+  position: &#x27;top&#x27; | &#x27;bottom&#x27; | &#x27;left&#x27; | &#x27;right&#x27;;
+}
+
+interface ChartSeries {
+  data: {
+    category: any;
+    field: any;
+    color?: string;
+  }[];
+}
+
+interface ChartLabels {
+  visible: boolean;
 }
 
 @Component({
-  selector: &#x27;safe-export&#x27;,
-  templateUrl: &#x27;./export.component.html&#x27;,
-  styleUrls: [&#x27;./export.component.scss&#x27;]
+  selector: &#x27;safe-donut-chart&#x27;,
+  templateUrl: &#x27;./donut-chart.component.html&#x27;,
+  styleUrls: [&#x27;./donut-chart.component.scss&#x27;]
 })
-export class SafeExportComponent implements OnInit {
+export class SafeDonutChartComponent implements OnInit {
 
-  // &#x3D;&#x3D;&#x3D; EXPORT MENU SELECTION &#x3D;&#x3D;&#x3D;
-  public export &#x3D; EXPORT_SETTINGS;
+  @Input() title: ChartTitle | undefined;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+  @Input() legend: ChartLegend | undefined;
+
+  @Input() series: ChartSeries[] &#x3D; [];
+
+  @Input() labels: ChartLabels | undefined;
+  public chartLabels!: any;
+
+  @ViewChild(&#x27;chart&#x27;)
+  public chart?: ChartComponent;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.export &#x3D; this.data.export;
+    this.chartLabels &#x3D; {
+      visible: this.labels?.visible || false,
+      content: this.labelContent.bind(this)
+    };
+  }
+
+  public labelContent(args: LegendLabelsContentArgs): string {
+    return &#x60;${args.dataItem.category}\n${args.dataItem.field}&#x60;;
   }
 }
 </code></pre>
@@ -181,7 +217,7 @@ export class SafeExportComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'DialogData-12.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChartLabels.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

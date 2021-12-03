@@ -357,6 +357,8 @@ import { SafeFormBuilderService } from &#x27;../../services/form-builder.service
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 import { NOTIFICATIONS } from &#x27;../../const/notifications&#x27;;
 import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
+import isNil from &#x27;lodash/isNil&#x27;;
+import omitBy from &#x27;lodash/omitBy&#x27;;
 
 /**
  * Interface of Dialog data.
@@ -458,8 +460,9 @@ export class SafeFormModalComponent implements OnInit {
         }
         if (this.data.prefillRecords &amp;&amp; this.data.prefillRecords.length &gt; 0) {
           this.storedMergedData &#x3D; this.mergedData(this.data.prefillRecords);
-          const resourcesField &#x3D; this.form.fields?.find(x &#x3D;&gt; x.type &#x3D;&#x3D;&#x3D; &#x27;resources&#x27;);
-          if (resourcesField &amp;&amp; resourcesField.resource &#x3D;&#x3D;&#x3D; this.data.prefillRecords[0].form?.resource?.id) {
+          const resId &#x3D; this.data.prefillRecords[0].form?.resource?.id;
+          const resourcesField &#x3D; this.form.fields?.find(x &#x3D;&gt; (x.type &#x3D;&#x3D;&#x3D; &#x27;resources&#x27;) &amp;&amp; (x.resource &#x3D;&#x3D;&#x3D; resId));
+          if (resourcesField) {
             this.storedMergedData[resourcesField.name] &#x3D; this.data.prefillRecords.map(x &#x3D;&gt; x.id);
           }
           else {
@@ -496,7 +499,7 @@ export class SafeFormModalComponent implements OnInit {
       this.survey.showCompletedPage &#x3D; false;
     }
     if (this.storedMergedData) {
-      this.survey.data &#x3D; this.storedMergedData;
+      this.survey.data &#x3D; { ...this.survey.data, ...omitBy(this.storedMergedData, isNil) };
     }
     this.survey.showNavigationButtons &#x3D; false;
     this.survey.render(this.containerId);

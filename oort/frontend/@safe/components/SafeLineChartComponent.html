@@ -196,7 +196,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:44</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:50</a></div>
                             </td>
                         </tr>
 
@@ -222,7 +222,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:40</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -248,7 +248,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:42</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -269,7 +269,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:32</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:38</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -305,8 +305,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:54</a></div>
                 </td>
             </tr>
 
@@ -357,7 +357,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:47</a></div>
                             </td>
                         </tr>
 
@@ -395,7 +395,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/safe/src/lib/components/ui/line-chart/line-chart.component.ts:45</a></div>
                             </td>
                         </tr>
 
@@ -418,6 +418,11 @@ interface ChartTitle {
 }
 
 interface ChartLegend {
+  title?: {
+    text: string,
+    font?: string,
+    align?: &#x27;center&#x27; | &#x27;left&#x27; | &#x27;right&#x27;
+  };
   visible: boolean;
   orientation: &#x27;horizontal&#x27; | &#x27;vertical&#x27;;
   position: &#x27;top&#x27; | &#x27;bottom&#x27; | &#x27;left&#x27; | &#x27;right&#x27;;
@@ -425,6 +430,7 @@ interface ChartLegend {
 
 interface ChartSeries {
   color?: string;
+  name?: string;
   data: {
     category: any;
     field: any;
@@ -466,16 +472,15 @@ export class SafeLineChartComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;kendo-chart #chart [categoryAxis]&#x3D;&quot;categoryAxis&quot;&gt;
     &lt;kendo-chart-title *ngIf&#x3D;&quot;title&quot; [visible]&#x3D;&quot;title.visible&quot; [text]&#x3D;&quot;title.text&quot; [position]&#x3D;&quot;title.position&quot;&gt;
     &lt;/kendo-chart-title&gt;
-    &lt;kendo-chart-legend *ngIf&#x3D;&quot;legend&quot; [visible]&#x3D;&#x27;legend.visible&#x27; [position]&#x3D;&#x27;legend.position&#x27;
+    &lt;kendo-chart-legend *ngIf&#x3D;&quot;legend&quot; [visible]&#x3D;&#x27;legend.visible&#x27; [title]&#x3D;&quot;legend.title&quot; [position]&#x3D;&#x27;legend.position&#x27;
         [orientation]&#x3D;&#x27;legend.orientation&#x27;&gt;
     &lt;/kendo-chart-legend&gt;
     &lt;kendo-chart-tooltip format&#x3D;&#x27;{0}&#x27;&gt;&lt;/kendo-chart-tooltip&gt;
     &lt;kendo-chart-series&gt;
         &lt;kendo-chart-series-item *ngFor&#x3D;&#x27;let item of series&#x27; type&#x3D;&quot;line&quot; [data]&#x3D;&quot;item.data&quot; field&#x3D;&quot;field&quot;
-            categoryField&#x3D;&quot;category&quot; [color]&#x3D;&quot;item.color&quot;&gt;&lt;/kendo-chart-series-item&gt;
+            categoryField&#x3D;&quot;category&quot; [color]&#x3D;&quot;item.color&quot; [name]&#x3D;&quot;item.name&quot;&gt;&lt;/kendo-chart-series-item&gt;
     &lt;/kendo-chart-series&gt;
-&lt;/kendo-chart&gt;
-</code></pre>
+&lt;/kendo-chart&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -513,7 +518,7 @@ export class SafeLineChartComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><kendo-chart #chart [categoryAxis]="categoryAxis">    <kendo-chart-title *ngIf="title" [visible]="title.visible" [text]="title.text" [position]="title.position">    </kendo-chart-title>    <kendo-chart-legend *ngIf="legend" [visible]=\'legend.visible\' [position]=\'legend.position\'        [orientation]=\'legend.orientation\'>    </kendo-chart-legend>    <kendo-chart-tooltip format=\'{0}\'></kendo-chart-tooltip>    <kendo-chart-series>        <kendo-chart-series-item *ngFor=\'let item of series\' type="line" [data]="item.data" field="field"            categoryField="category" [color]="item.color"></kendo-chart-series-item>    </kendo-chart-series></kendo-chart></div>'
+        var COMPONENT_TEMPLATE = '<div><kendo-chart #chart [categoryAxis]="categoryAxis">    <kendo-chart-title *ngIf="title" [visible]="title.visible" [text]="title.text" [position]="title.position">    </kendo-chart-title>    <kendo-chart-legend *ngIf="legend" [visible]=\'legend.visible\' [title]="legend.title" [position]=\'legend.position\'        [orientation]=\'legend.orientation\'>    </kendo-chart-legend>    <kendo-chart-tooltip format=\'{0}\'></kendo-chart-tooltip>    <kendo-chart-series>        <kendo-chart-series-item *ngFor=\'let item of series\' type="line" [data]="item.data" field="field"            categoryField="category" [color]="item.color" [name]="item.name"></kendo-chart-series-item>    </kendo-chart-series></kendo-chart></div>'
     var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeLineChartComponent'};
