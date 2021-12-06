@@ -304,8 +304,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="122"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:122</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:132</a></div>
                 </td>
             </tr>
 
@@ -382,8 +382,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="130"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:130</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:140</a></div>
                 </td>
             </tr>
 
@@ -459,8 +459,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="100"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:100</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:110</a></div>
                 </td>
             </tr>
 
@@ -740,7 +740,7 @@
                         <td class="col-md-4">
                             <i>Default value : </i><code>{
     pageIndex: 0,
-    pageSize: ITEMS_PER_PAGE,
+    pageSize: DEFAULT_PAGE_SIZE,
     length: 0,
     endCursor: &#x27;&#x27;
   }</code>
@@ -862,7 +862,7 @@ import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
 import { MatSort } from &#x27;@angular/material/sort&#x27;;
 
-const ITEMS_PER_PAGE &#x3D; 10;
+const DEFAULT_PAGE_SIZE &#x3D; 10;
 
 @Component({
   selector: &#x27;app-resources&#x27;,
@@ -887,7 +887,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
   // &#x3D;&#x3D;&#x3D; PAGINATION &#x3D;&#x3D;&#x3D;
   public pageInfo &#x3D; {
     pageIndex: 0,
-    pageSize: ITEMS_PER_PAGE,
+    pageSize: DEFAULT_PAGE_SIZE,
     length: 0,
     endCursor: &#x27;&#x27;
   };
@@ -904,14 +904,14 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
     this.resourcesQuery &#x3D; this.apollo.watchQuery&lt;GetResourcesQueryResponse&gt;({
       query: GET_RESOURCES_EXTENDED,
       variables: {
-        first: ITEMS_PER_PAGE
+        first: DEFAULT_PAGE_SIZE
       }
     });
 
     this.resourcesQuery.valueChanges.subscribe(res &#x3D;&gt; {
       this.cachedResources &#x3D; res.data.resources.edges.map(x &#x3D;&gt; x.node);
       this.resources.data &#x3D; this.cachedResources.slice(
-        ITEMS_PER_PAGE * this.pageInfo.pageIndex, ITEMS_PER_PAGE * (this.pageInfo.pageIndex + 1));
+        this.pageInfo.pageSize * this.pageInfo.pageIndex, this.pageInfo.pageSize * (this.pageInfo.pageIndex + 1));
       this.pageInfo.length &#x3D; res.data.resources.totalCount;
       this.pageInfo.endCursor &#x3D; res.data.resources.pageInfo.endCursor;
       this.loading &#x3D; res.loading;
@@ -924,10 +924,19 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
    */
    onPage(e: any): void {
     this.pageInfo.pageIndex &#x3D; e.pageIndex;
-    if (e.pageIndex &gt; e.previousPageIndex &amp;&amp; e.length &gt; this.cachedResources.length) {
+    // Checks if with new page/size more data needs to be fetched
+    if ((e.pageIndex &gt; e.previousPageIndex || e.pageSize &gt; this.pageInfo.pageSize )
+      &amp;&amp; e.length &gt; this.cachedResources.length){
+      // Sets the new fetch quantity of data needed as the page size
+      // If the fetch is for a new page the page size is used
+      let first &#x3D; e.pageSize;
+      // If the fetch is for a new page size, the old page size is substracted from the new one
+      if (e.pageSize &gt; this.pageInfo.pageSize) {
+        first -&#x3D; this.pageInfo.pageSize;
+      }
       this.resourcesQuery.fetchMore({
         variables: {
-          first: ITEMS_PER_PAGE,
+          first,
           afterCursor: this.pageInfo.endCursor,
           filter: this.filter
         },
@@ -944,8 +953,9 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
       });
     } else {
       this.resources.data &#x3D; this.cachedResources.slice(
-        ITEMS_PER_PAGE * this.pageInfo.pageIndex, ITEMS_PER_PAGE * (this.pageInfo.pageIndex + 1));
+        e.pageSize * this.pageInfo.pageIndex, e.pageSize * (this.pageInfo.pageIndex + 1));
     }
+    this.pageInfo.pageSize &#x3D; e.pageSize;
   }
 
   /**
@@ -958,7 +968,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
     this.pageInfo.pageIndex &#x3D; 0;
     this.resourcesQuery.fetchMore({
       variables: {
-        first: ITEMS_PER_PAGE,
+        first: this.pageInfo.pageSize,
         filter: this.filter
       },
       updateQuery: (prev, { fetchMoreResult }) &#x3D;&gt; {
@@ -1016,7 +1026,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-spinner diameter&#x3D;&quot;45&quot; class&#x3D;&quot;page-loader&quot; *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/mat-spinner&gt;
-&lt;ng-container&gt;
+&lt;ng-container *ngIf&#x3D;&quot;!loading&quot;&gt;
   &lt;!-- FILTERING --&gt;
   &lt;app-filter (filter)&#x3D;&quot;onFilter($event)&quot;&gt;&lt;/app-filter&gt;
   &lt;table mat-table [dataSource]&#x3D;&quot;resources&quot; matSort&gt;
@@ -1067,7 +1077,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
       [routerLink]&#x3D;&quot;[&#x27;/resources&#x27;, row.id]&quot;&gt;
     &lt;/tr&gt;
   &lt;/table&gt;
-  &lt;mat-paginator [pageSize]&#x3D;&quot;pageInfo.pageSize&quot; [length]&#x3D;&quot;pageInfo.length&quot; aria-label&#x3D;&quot;Select page of applications&quot;
+  &lt;mat-paginator [pageSize]&#x3D;&quot;pageInfo.pageSize&quot; [pageSizeOptions]&#x3D;&quot;[10, 25, 50]&quot; [length]&#x3D;&quot;pageInfo.length&quot; aria-label&#x3D;&quot;Select page of applications&quot;
     (page)&#x3D;&quot;onPage($event)&quot;&gt;
   &lt;/mat-paginator&gt;
 &lt;/ng-container&gt;</code></pre>
@@ -1110,7 +1120,7 @@ export class ResourcesComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container>  <!-- FILTERING -->  <app-filter (filter)="onFilter($event)"></app-filter>  <table mat-table [dataSource]="resources" matSort>    <ng-container matColumnDef="name">      <th mat-header-cell *matHeaderCellDef>        <span class="headerTitle" mat-sort-header>          Name        </span>      </th>      <td mat-cell *matCellDef="let element">{{ element.name }}</td>    </ng-container>    <ng-container matColumnDef="createdAt">      <th mat-header-cell *matHeaderCellDef>        <span class="headerTitle" mat-sort-header>          Created on        </span>      </th>      <td mat-cell *matCellDef="let element">{{ element.createdAt | date }}</td>    </ng-container>    <ng-container matColumnDef="recordsCount">      <th mat-header-cell *matHeaderCellDef>        <span class="headerTitle" mat-sort-header>          Records        </span>      </th>      <td mat-cell *matCellDef="let element">{{ element.recordsCount }}</td>    </ng-container>    <ng-container matColumnDef="actions">      <th mat-header-cell *matHeaderCellDef></th>      <td mat-cell *matCellDef="let element">        <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()"          [disabled]="!element.canDelete">        </safe-button>        <mat-menu #menu="matMenu">          <button mat-menu-item (click)="onDelete(element)">            <mat-icon>delete</mat-icon>            Delete          </button>        </mat-menu>      </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>    <tr class="clickable" mat-row *matRowDef="let row; columns: displayedColumns;"      [routerLink]="[\'/resources\', row.id]">    </tr>  </table>  <mat-paginator [pageSize]="pageInfo.pageSize" [length]="pageInfo.length" aria-label="Select page of applications"    (page)="onPage($event)">  </mat-paginator></ng-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading">  <!-- FILTERING -->  <app-filter (filter)="onFilter($event)"></app-filter>  <table mat-table [dataSource]="resources" matSort>    <ng-container matColumnDef="name">      <th mat-header-cell *matHeaderCellDef>        <span class="headerTitle" mat-sort-header>          Name        </span>      </th>      <td mat-cell *matCellDef="let element">{{ element.name }}</td>    </ng-container>    <ng-container matColumnDef="createdAt">      <th mat-header-cell *matHeaderCellDef>        <span class="headerTitle" mat-sort-header>          Created on        </span>      </th>      <td mat-cell *matCellDef="let element">{{ element.createdAt | date }}</td>    </ng-container>    <ng-container matColumnDef="recordsCount">      <th mat-header-cell *matHeaderCellDef>        <span class="headerTitle" mat-sort-header>          Records        </span>      </th>      <td mat-cell *matCellDef="let element">{{ element.recordsCount }}</td>    </ng-container>    <ng-container matColumnDef="actions">      <th mat-header-cell *matHeaderCellDef></th>      <td mat-cell *matCellDef="let element">        <safe-button [isIcon]="true" icon="more_vert" [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()"          [disabled]="!element.canDelete">        </safe-button>        <mat-menu #menu="matMenu">          <button mat-menu-item (click)="onDelete(element)">            <mat-icon>delete</mat-icon>            Delete          </button>        </mat-menu>      </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>    <tr class="clickable" mat-row *matRowDef="let row; columns: displayedColumns;"      [routerLink]="[\'/resources\', row.id]">    </tr>  </table>  <mat-paginator [pageSize]="pageInfo.pageSize" [pageSizeOptions]="[10, 25, 50]" [length]="pageInfo.length" aria-label="Select page of applications"    (page)="onPage($event)">  </mat-paginator></ng-container></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ResourcesComponent'};

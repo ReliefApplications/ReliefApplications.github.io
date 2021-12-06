@@ -296,7 +296,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[&#x27;username&#x27;, &#x27;name&#x27;, &#x27;oid&#x27;, &#x27;roles&#x27;, &#x27;actions&#x27;]</code>
+                            <i>Default value : </i><code>[&#x27;name&#x27;, &#x27;username&#x27;, &#x27;oid&#x27;, &#x27;roles&#x27;, &#x27;actions&#x27;]</code>
                         </td>
                     </tr>
                         <tr>
@@ -422,7 +422,7 @@ export class UsersComponent implements OnInit {
   public loading &#x3D; true;
   public users &#x3D; new MatTableDataSource&lt;User&gt;([]);
   public roles: Role[] &#x3D; [];
-  public displayedColumns &#x3D; [&#x27;username&#x27;, &#x27;name&#x27;, &#x27;oid&#x27;, &#x27;roles&#x27;, &#x27;actions&#x27;];
+  public displayedColumns &#x3D; [&#x27;name&#x27;, &#x27;username&#x27;, &#x27;oid&#x27;, &#x27;roles&#x27;, &#x27;actions&#x27;];
 
   constructor(
     private apollo: Apollo
