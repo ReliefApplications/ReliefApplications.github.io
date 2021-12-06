@@ -581,13 +581,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeGridRowActionsModule.html" data-type="entity-link">SafeGridRowActionsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' : 'data-target="#xs-components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' }>
+                                            'data-target="#components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' : 'data-target="#xs-components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' :
-                                            'id="xs-components-links-module-SafeGridRowActionsModule-87316a24ebf63149dc4df62e967f4bc5"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' :
+                                            'id="xs-components-links-module-SafeGridRowActionsModule-65c7cb0961c301b97365a49d4ef1a344"' }>
                                             <li class="link">
                                                 <a href="components/SafeGridRowActionsComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeGridRowActionsComponent</a>

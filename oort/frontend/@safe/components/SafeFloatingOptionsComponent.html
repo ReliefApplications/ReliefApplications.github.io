@@ -624,7 +624,9 @@ export class SafeFloatingOptionsComponent implements OnInit {
         panelClass: &#x27;tile-settings-dialog&#x27;
       });
       dialogRef.afterClosed().subscribe(res &#x3D;&gt; {
-        this.edit.emit({ type: &#x27;data&#x27;, id: this.widget.id, options: res });
+        if (res) {
+          this.edit.emit({ type: &#x27;data&#x27;, id: this.widget.id, options: res });
+        }
       });
     }
     if (item.name &#x3D;&#x3D;&#x3D; &#x27;Expand&#x27;) {

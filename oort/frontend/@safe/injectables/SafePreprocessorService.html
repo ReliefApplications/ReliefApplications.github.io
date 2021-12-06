@@ -1220,7 +1220,7 @@ export class SafePreprocessorService {
           body +&#x3D; this.datasetRowToString(item ? item[field.name] : null, field.fields, tabs + &#x27;\t&#x27;);
           break;
         default:
-          const rawValue &#x3D; item ? item[field.name] : &#x27;&#x27;;
+          const rawValue &#x3D; get(item, field.name, &#x27;&#x27;) || &#x27;&#x27;;
           const value &#x3D; rawValue &amp;&amp; OPTION_QUESTIONS.includes(field.meta.type) ? this.getDisplayText(rawValue, field.meta) : rawValue;
           body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.title ? field.title : field.name}:\t${value}\n&#x60;;
       }
