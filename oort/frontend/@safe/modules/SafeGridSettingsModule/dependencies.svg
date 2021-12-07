@@ -28,13 +28,13 @@
 <title>cluster_SafeGridSettingsModule_imports</title>
 <polygon fill="none" stroke="black" points="471,-78 471,-130 789,-130 789,-78 471,-78"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeGridSettingsModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 463,-130 463,-78 16,-78"/>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_SafeGridSettingsModule_exports</title>
 <polygon fill="none" stroke="black" points="350,-208 350,-260 546,-260 546,-208 350,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeGridSettingsModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 463,-130 463,-78 16,-78"/>
 </g>
 <!-- SafeFloatingButtonSettingsComponent -->
 <g id="node1" class="node">
