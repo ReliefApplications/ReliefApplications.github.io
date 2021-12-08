@@ -415,8 +415,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="292"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:292</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:300</a></div>
                 </td>
             </tr>
 
@@ -526,8 +526,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="217"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:217</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="225"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:225</a></div>
                 </td>
             </tr>
 
@@ -670,8 +670,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="226"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:226</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="234"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:234</a></div>
                 </td>
             </tr>
 
@@ -709,8 +709,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="266"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:266</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:274</a></div>
                 </td>
             </tr>
 
@@ -781,8 +781,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="235"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:235</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="243"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:243</a></div>
                 </td>
             </tr>
 
@@ -820,8 +820,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="204"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:204</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="212"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:212</a></div>
                 </td>
             </tr>
 
@@ -931,8 +931,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="176"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:176</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:184</a></div>
                 </td>
             </tr>
 
@@ -1336,7 +1336,7 @@ import { GetFormByIdQueryResponse, GET_SHORT_FORM_BY_ID } from &#x27;../../../gr
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { SafeAuthService, SafeSnackBarService, Form, SafeConfirmModalComponent } from &#x27;@safe/builder&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
-import { map } from &#x27;rxjs/operators&#x27;;
+import {  map } from &#x27;rxjs/operators&#x27;;
 import { SafeStatusModalComponent, NOTIFICATIONS } from &#x27;@safe/builder&#x27;;
 import { SCHEMA_UPDATE } from &#x27;../../../app.module&#x27;;
 
@@ -1481,17 +1481,25 @@ export class FormBuilderComponent implements OnInit {
           this.snackBar.openSnackBar(res.errors[0].message, { error: true });
           statusModal.close();
         } else {
-          SCHEMA_UPDATE.asObservable().subscribe(refresh &#x3D;&gt; {
-            if (refresh) {
-              this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;form&#x27;, this.form?.name));
-              this.form &#x3D; { ...res.data?.editForm, structure };
-              this.structure &#x3D; structure;
-              localStorage.removeItem(&#x60;form:${this.id}&#x60;);
-              this.hasChanges &#x3D; false;
-              this.authService.canLogout.next(true);
-              statusModal.close();
-            }
-          });
+          // SCHEMA_UPDATE.asObservable().subscribe(refresh &#x3D;&gt; {
+          //   if (refresh) {
+          //     this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;form&#x27;, this.form?.name));
+          //     this.form &#x3D; { ...res.data?.editForm, structure };
+          //     this.structure &#x3D; structure;
+          //     localStorage.removeItem(&#x60;form:${this.id}&#x60;);
+          //     this.hasChanges &#x3D; false;
+          //     this.authService.canLogout.next(true);
+          //     statusModal.close();
+          //   }
+          // });
+          // TODO: should be waiting for the BACK to be ready
+          this.snackBar.openSnackBar(NOTIFICATIONS.objectEdited(&#x27;form&#x27;, this.form?.name));
+          this.form &#x3D; { ...res.data?.editForm, structure };
+          this.structure &#x3D; structure;
+          localStorage.removeItem(&#x60;form:${this.id}&#x60;);
+          this.hasChanges &#x3D; false;
+          this.authService.canLogout.next(true);
+          statusModal.close();
         }
       }, (err) &#x3D;&gt; {
         this.snackBar.openSnackBar(err.message, { error: true });
