@@ -1572,8 +1572,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="856"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:856</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="857"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:857</a></div>
                 </td>
             </tr>
 
@@ -1847,8 +1847,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="821"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:821</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="822"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:822</a></div>
                 </td>
             </tr>
 
@@ -1926,8 +1926,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="776"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:776</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="777"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:777</a></div>
                 </td>
             </tr>
 
@@ -2048,8 +2048,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="832"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:832</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="833"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:833</a></div>
                 </td>
             </tr>
 
@@ -2292,8 +2292,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="812"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:812</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="813"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:813</a></div>
                 </td>
             </tr>
 
@@ -2371,8 +2371,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="844"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:844</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="845"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:845</a></div>
                 </td>
             </tr>
 
@@ -2693,8 +2693,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="881"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:881</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="882"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:882</a></div>
                 </td>
             </tr>
 
@@ -2734,8 +2734,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="863"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:863</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="864"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:864</a></div>
                 </td>
             </tr>
 
@@ -2775,8 +2775,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="871"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:871</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="872"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:872</a></div>
                 </td>
             </tr>
 
@@ -4438,7 +4438,7 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
   private update(item: any, value: any): void {
     let updatedItem &#x3D; this.updatedItems.find(x &#x3D;&gt; x.id &#x3D;&#x3D;&#x3D; item.id);
     if (updatedItem) {
-      updatedItem &#x3D; { ...updatedItem, ...value};
+      updatedItem &#x3D; { ...updatedItem, ...value };
       const index &#x3D; this.updatedItems.findIndex(x &#x3D;&gt; x.id);
       this.updatedItems.splice(index, 1, updatedItem);
     } else {
@@ -4878,20 +4878,21 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
       if (this.gridData.data.length &gt; 0) {
         ids &#x3D; [this.gridData.data[0].id];
       } else {
-        this.snackBar.openSnackBar(&#x27;Export failed: grid is empty.&#x27;, { error: true });
+        this.snackBar.openSnackBar(&#x27;Export failed: grid is empty.&#x27;, { error: true });
         return;
       }
     }
+
     // Builds the request body with all the useful data
     const currentLayout &#x3D; this.layout;
     const body &#x3D; {
       exportOptions: e,
       ids,
       filter: e.records &#x3D;&#x3D;&#x3D; &#x27;selected&#x27; ?
-        { logic: &#x27;and&#x27;, filters: [{ operator: &#x27;eq&#x27;, field: &#x27;ids&#x27;, value: ids }]} : this.queryFilter,
+        { logic: &#x27;and&#x27;, filters: [{ operator: &#x27;eq&#x27;, field: &#x27;ids&#x27;, value: ids }] } : this.queryFilter,
       format: e.format,
-      ...e.fields &#x3D;&#x3D;&#x3D; &#x27;visible&#x27; &amp;&amp; { fields: Object.values(currentLayout.fields).filter((x: any) &#x3D;&gt; !x.hidden)
-        .sort((a: any, b: any) &#x3D;&gt; a.order - b.order).map((x: any) &#x3D;&gt; x.field) }
+      ...e.fields &#x3D;&#x3D;&#x3D; &#x27;visible&#x27; &amp;&amp; { fields: Object.values(currentLayout.fields).filter((x: any) &#x3D;&gt; !x.hidden)
+        .sort((a: any, b: any) &#x3D;&gt; a.order - b.order).map((x: any) &#x3D;&gt; ( { name: x.field, title: x.title } )) }
     };
 
     // Builds and make the request
@@ -5014,7 +5015,7 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
   /**
    * Reset the currently cached layout to the default one
    */
-   resetDefaultLayout(): void {
+  resetDefaultLayout(): void {
     this.defaultLayoutReset.emit();
   }
 }

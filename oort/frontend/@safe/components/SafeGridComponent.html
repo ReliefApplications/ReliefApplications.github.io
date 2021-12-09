@@ -3400,7 +3400,7 @@ export class SafeGridComponent implements OnInit, AfterViewInit {
    * @param e click event.
    */
   private onDocumentClick(e: any): void {
-    if (this.formGroup &amp;&amp; this.formGroup.valid &amp;&amp;
+    if (!this.editing &amp;&amp; this.formGroup &amp;&amp; this.formGroup.valid &amp;&amp;
       !matches(e.target, &#x27;#recordsGrid tbody *, #recordsGrid .k-grid-toolbar .k-button .k-animation-container&#x27;)) {
       if (this.formGroup.dirty) {
         this.action.emit({ action: &#x27;edit&#x27;, item: this.currentEditedItem, value: this.formGroup.value });
