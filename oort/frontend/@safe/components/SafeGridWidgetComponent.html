@@ -597,8 +597,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="268"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:268</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="266"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:266</a></div>
                 </td>
             </tr>
 
@@ -714,8 +714,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="351"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:351</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="349"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:349</a></div>
                 </td>
             </tr>
 
@@ -835,8 +835,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="358"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:358</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="356"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:356</a></div>
                 </td>
             </tr>
 
@@ -879,8 +879,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="292"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:292</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="290"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:290</a></div>
                 </td>
             </tr>
 
@@ -1059,8 +1059,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="238"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:238</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:236</a></div>
                 </td>
             </tr>
 
@@ -1423,78 +1423,76 @@ export class SafeGridWidgetComponent implements OnInit {
       await Promise.all(this.promisedRowsModifications(options.modifications, this.grid.selectedItems));
     }
 
-    if (this.grid.selectedRows.length &gt; 0) {
-      // Attaches the records to another one.
-      if (options.attachToRecord) {
-        await this.promisedAttachToRecord(this.grid.selectedItems, options.targetForm, options.targetFormField, options.targetFormQuery);
+    // Attaches the records to another one.
+    if (options.attachToRecord &amp;&amp; this.grid.selectedRows.length &gt; 0) {
+      await this.promisedAttachToRecord(this.grid.selectedItems, options.targetForm, options.targetFormField, options.targetFormQuery);
+    }
+    const promises: Promise&lt;any&gt;[] &#x3D; [];
+    // Notifies on a channel.
+    if (options.notify &amp;&amp; this.grid.selectedRows.length &gt; 0) {
+      promises.push(this.apollo.mutate&lt;PublishNotificationMutationResponse&gt;({
+        mutation: PUBLISH_NOTIFICATION,
+        variables: {
+          action: options.notificationMessage ? options.notificationMessage : &#x27;Records update&#x27;,
+          content: this.grid.selectedItems,
+          channel: options.notificationChannel
+        }
+      }).toPromise());
+    }
+    // Publishes on a channel.
+    if (options.publish &amp;&amp; this.grid.selectedRows.length &gt; 0) {
+      promises.push(this.apollo.mutate&lt;PublishMutationResponse&gt;({
+        mutation: PUBLISH,
+        variables: {
+          ids: this.grid.selectedRows,
+          channel: options.publicationChannel
+        }
+      }).toPromise());
+    }
+    if (promises.length &gt; 0) {
+      await Promise.all(promises);
+    }
+    // Opens email client of user.
+    if (options.sendMail) {
+      const emailSettings &#x3D; {
+        query: {
+          name: this.settings.query.name,
+          fields: options.bodyFields
+        }
+      };
+      const sortField &#x3D; this.grid.sortField || &#x27;&#x27;;
+      const sortOrder &#x3D; this.grid.sortOrder || &#x27;&#x27;;
+      this.emailService.sendMail(options.distributionList, options.subject, options.bodyText, emailSettings,
+        this.grid.selectedRows, sortField, sortOrder);
+      if (options.export &amp;&amp; this.grid.selectedRows.length &gt; 0) {
+        this.grid.onExport({ records: &#x27;all&#x27;, format: &#x27;xlsx&#x27;, fields: &#x27;visible&#x27; });
       }
-      const promises: Promise&lt;any&gt;[] &#x3D; [];
-      // Notifies on a channel.
-      if (options.notify) {
-        promises.push(this.apollo.mutate&lt;PublishNotificationMutationResponse&gt;({
-          mutation: PUBLISH_NOTIFICATION,
+    }
+
+    // Opens a form with selected records.
+    if (options.prefillForm &amp;&amp; this.grid.selectedRows.length &gt; 0) {
+      const promisedRecords: Promise&lt;any&gt;[] &#x3D; [];
+      // Fetches the record object for each selected record.
+      for (const record of this.grid.selectedItems) {
+        promisedRecords.push(this.apollo.query&lt;GetRecordDetailsQueryResponse&gt;({
+          query: GET_RECORD_DETAILS,
           variables: {
-            action: options.notificationMessage ? options.notificationMessage : &#x27;Records update&#x27;,
-            content: this.grid.selectedItems,
-            channel: options.notificationChannel
+            id: record.id
           }
         }).toPromise());
       }
-      // Publishes on a channel.
-      if (options.publish) {
-        promises.push(this.apollo.mutate&lt;PublishMutationResponse&gt;({
-          mutation: PUBLISH,
-          variables: {
-            ids: this.grid.selectedRows,
-            channel: options.publicationChannel
-          }
-        }).toPromise());
-      }
-      if (promises.length &gt; 0) {
-        await Promise.all(promises);
-      }
-      // Opens email client of user.
-      if (options.sendMail) {
-        const emailSettings &#x3D; {
-          query: {
-            name: this.settings.query.name,
-            fields: options.bodyFields
-          }
-        };
-        const sortField &#x3D; this.grid.sortField || &#x27;&#x27;;
-        const sortOrder &#x3D; this.grid.sortOrder || &#x27;&#x27;;
-        this.emailService.sendMail(options.distributionList, options.subject, options.bodyText, emailSettings,
-          this.grid.selectedRows, sortField, sortOrder);
-        if (options.export) {
-          this.grid.onExport({ records: &#x27;all&#x27;, format: &#x27;xlsx&#x27;, fields: &#x27;visible&#x27; });
-        }
-      }
+      const records &#x3D; (await Promise.all(promisedRecords)).map(x &#x3D;&gt; x.data.record);
 
-      // Opens a form with selected records.
-      if (options.prefillForm) {
-        const promisedRecords: Promise&lt;any&gt;[] &#x3D; [];
-        // Fetches the record object for each selected record.
-        for (const record of this.grid.selectedItems) {
-          promisedRecords.push(this.apollo.query&lt;GetRecordDetailsQueryResponse&gt;({
-            query: GET_RECORD_DETAILS,
-            variables: {
-              id: record.id
-            }
-          }).toPromise());
-        }
-        const records &#x3D; (await Promise.all(promisedRecords)).map(x &#x3D;&gt; x.data.record);
-
-        // Opens a modal containing the prefilled form.
-        this.dialog.open(SafeFormModalComponent, {
-          data: {
-            template: options.prefillTargetForm,
-            locale: &#x27;en&#x27;,
-            prefillRecords: records,
-            askForConfirm: false
-          },
-          autoFocus: false
-        });
-      }
+      // Opens a modal containing the prefilled form.
+      this.dialog.open(SafeFormModalComponent, {
+        data: {
+          template: options.prefillTargetForm,
+          locale: &#x27;en&#x27;,
+          prefillRecords: records,
+          askForConfirm: false
+        },
+        autoFocus: false
+      });
     }
 
     // Workflow only: goes to next step, or closes the workflow.
