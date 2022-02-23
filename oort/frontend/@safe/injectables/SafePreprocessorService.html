@@ -88,27 +88,6 @@
                                 <a href="#datasetToString">datasetToString</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#extractChoices">extractChoices</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#flatDeep">flatDeep</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#getDisplayText">getDisplayText</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#getFields">getFields</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                    <span class="modifier">Async</span>
-                                <a href="#populateMetaFields">populateMetaFields</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
                                 <a href="#preprocess">preprocess</a>
@@ -131,12 +110,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>, apollo: Apollo, apiProxyService: <a href="../injectables/SafeApiProxyService.html">SafeApiProxyService</a>)</code>
+<code>constructor(queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>, apollo: Apollo)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -170,18 +149,6 @@
                                                   
                                                         <td>
                                                                     <code>Apollo</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>apiProxyService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/SafeApiProxyService.html" target="_self" >SafeApiProxyService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -227,8 +194,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="241"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:241</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:146</a></div>
                 </td>
             </tr>
 
@@ -322,8 +289,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:131</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:113</a></div>
                 </td>
             </tr>
 
@@ -442,8 +409,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="114"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:114</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:96</a></div>
                 </td>
             </tr>
 
@@ -518,458 +485,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="extractChoices"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            extractChoices
-                        </b>
-                        <a href="#extractChoices"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>extractChoices(res: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, choicesByUrl: literal type)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="191"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:191</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Extracts choices using choicesByUrl properties</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>res</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Result of http request.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>choicesByUrl</td>
-                                    <td>
-                                            <code>literal type</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Choices By Url property.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>literal type[]</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>list of choices.</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="flatDeep"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            flatDeep
-                        </b>
-                        <a href="#flatDeep"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>flatDeep(arr: any[])</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="199"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:199</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>arr</td>
-                                    <td>
-                                            <code>any[]</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>any[]</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getDisplayText"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getDisplayText
-                        </b>
-                        <a href="#getDisplayText"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getDisplayText(value: string | string[], meta: literal type)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="258"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:258</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Displays text instead of values for questions with select.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>value</td>
-                                    <td>
-                                            <code>string | string[]</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>question value.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>meta</td>
-                                    <td>
-                                            <code>literal type</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>meta data of the question.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>string | []</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>text value of the question.</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getFields"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getFields
-                        </b>
-                        <a href="#getFields"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getFields(metaFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, fields: any[], prefix?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, disabled?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="203"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:203</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>metaFields</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>fields</td>
-                                    <td>
-                                            <code>any[]</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>prefix</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>disabled</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>any[]</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="populateMetaFields"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            <span class="modifier">Async</span>
-                            populateMetaFields
-                        </b>
-                        <a href="#populateMetaFields"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>populateMetaFields(metaFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="162"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:162</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Populates questions with choices, with meta data.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>metaFields</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>list of meta fields.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="preprocess"></a>
                     <span class="name">
                         <b>
@@ -991,8 +506,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">projects/safe/src/lib/services/preprocessor.service.ts:25</a></div>
                 </td>
             </tr>
 
@@ -1077,15 +592,11 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { QueryBuilderService } from &#x27;./query-builder.service&#x27;;
-import { SafeApiProxyService } from &#x27;./api-proxy.service&#x27;;
 import { Apollo } from &#x27;apollo-angular&#x27;;
-import { mergeMap, map, take } from &#x27;rxjs/operators&#x27;;
-import { from } from &#x27;rxjs&#x27;;
+import { map, take } from &#x27;rxjs/operators&#x27;;
 import get from &#x27;lodash/get&#x27;;
 
 const cloneData &#x3D; (data: any[]) &#x3D;&gt; data.map(item &#x3D;&gt; Object.assign({}, item));
-
-const OPTION_QUESTIONS &#x3D; [&#x27;dropdown&#x27;, &#x27;radiogroup&#x27;, &#x27;tagbox&#x27;, &#x27;checkbox&#x27;, &#x27;owner&#x27;];
 
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -1095,7 +606,6 @@ export class SafePreprocessorService {
   constructor(
     private queryBuilder: QueryBuilderService,
     private apollo: Apollo,
-    private apiProxyService: SafeApiProxyService,
   ) { }
 
   /**
@@ -1112,12 +622,18 @@ export class SafePreprocessorService {
   } | null &#x3D; null): Promise&lt;string&gt; {
     const promises: Promise&lt;any&gt;[] &#x3D; [];
 
+    // &#x3D;&#x3D;&#x3D; TODAY &#x3D;&#x3D;&#x3D;
+    if (text.includes(&#x27;{today}&#x27;)) {
+      const todayToString &#x3D; (new Date()).toDateString();
+      text &#x3D; text.split(&#x27;{today}&#x27;).join(todayToString);
+    }
+
     // &#x3D;&#x3D;&#x3D; DATASET &#x3D;&#x3D;&#x3D;
     if (text.includes(&#x27;{dataset}&#x27;) &amp;&amp; dataset) {
       if (dataset.ids.length &gt; 0) {
         const builtQuery &#x3D; this.queryBuilder.buildQuery(dataset.settings);
         if (builtQuery) {
-          const dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
+          const dataQuery &#x3D; this.apollo.query&lt;any&gt;({
             query: builtQuery,
             variables: {
               first: dataset.ids.length,
@@ -1132,50 +648,31 @@ export class SafePreprocessorService {
                     value: dataset.ids
                   }
                 ]
-              }
+              },
+              display: true
             }
           });
-          const metaQuery &#x3D; this.queryBuilder.buildMetaQuery(dataset.settings);
-          let metaFields: any &#x3D; [];
-          if (metaQuery) {
-            promises.push(metaQuery.pipe(
-              mergeMap((res: any) &#x3D;&gt; {
-                for (const metaField in res.data) {
-                  if (Object.prototype.hasOwnProperty.call(res.data, metaField)) {
-                    metaFields &#x3D; Object.assign({}, res.data[metaField]);
-                  }
+          promises.push(dataQuery.pipe(
+            map((res: any) &#x3D;&gt; {
+              const fields &#x3D; dataset.settings.query.fields;
+              let items: any &#x3D; [];
+              for (const field in res.data) {
+                if (Object.prototype.hasOwnProperty.call(res.data, field)) {
+                  const nodes &#x3D; res.data[field].edges.map((x: any) &#x3D;&gt; x.node) || [];
+                  items &#x3D; cloneData(nodes);
+                  this.convertDateFields(fields, items);
                 }
-                return from(this.populateMetaFields(metaFields));
-              }),
-              mergeMap(() &#x3D;&gt; dataQuery.valueChanges),
-              map((res2: any) &#x3D;&gt; {
-                let fields &#x3D; dataset.settings.query.fields;
-                let items: any &#x3D; [];
-                for (const field in res2.data) {
-                  if (Object.prototype.hasOwnProperty.call(res2.data, field)) {
-                    fields &#x3D; this.getFields(metaFields, fields);
-                    const nodes &#x3D; res2.data[field].edges.map((x: any) &#x3D;&gt; x.node) || [];
-                    items &#x3D; cloneData(nodes);
-                    this.convertDateFields(fields, items);
-                  }
-                }
-                const datasetToString &#x3D; this.datasetToString(items, fields);
-                text &#x3D; text.split(&#x27;{dataset}&#x27;).join(datasetToString);
-                return;
-              }),
-              take(1)
-            ).toPromise());
-          }
+              }
+              const datasetToString &#x3D; this.datasetToString(items, fields);
+              text &#x3D; text.split(&#x27;{dataset}&#x27;).join(datasetToString);
+              return;
+            }),
+            take(1)
+          ).toPromise());
         }
       } else {
         text &#x3D; text.split(&#x27;{dataset}&#x27;).join(&#x27;&#x27;);
       }
-    }
-
-    // &#x3D;&#x3D;&#x3D; TODAY &#x3D;&#x3D;&#x3D;
-    if (text.includes(&#x27;{today}&#x27;)) {
-      const todayToString &#x3D; (new Date()).toDateString();
-      text &#x3D; text.split(&#x27;{today}&#x27;).join(todayToString);
     }
 
     await Promise.all(promises);
@@ -1224,90 +721,13 @@ export class SafePreprocessorService {
           body +&#x3D; this.datasetRowToString(item ? item[field.name] : null, field.fields, tabs + &#x27;\t&#x27;);
           break;
         default:
-          const rawValue &#x3D; get(item, field.name, &#x27;&#x27;) || &#x27;&#x27;;
-          const value &#x3D; rawValue &amp;&amp; OPTION_QUESTIONS.includes(field.meta.type) ? this.getDisplayText(rawValue, field.meta) : rawValue;
-          body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.title ? field.title : field.name}:\t${value}\n&#x60;;
+          const value &#x3D; get(item, field.name, &#x27;&#x27;) || &#x27;&#x27;;
+          if (value) {
+            body +&#x3D; &#x60;${tabs}${field.label ? field.label : field.title ? field.title : field.name}:\t${value}\n&#x60;;
+          }
       }
     }
     return body;
-  }
-
-  /**
-   * Populates questions with choices, with meta data.
-   * @param metaFields list of meta fields.
-   */
-  private async populateMetaFields(metaFields: any): Promise&lt;void&gt; {
-    for (const fieldName of Object.keys(metaFields)) {
-      const meta &#x3D; metaFields[fieldName];
-      if (meta.choicesByUrl) {
-        const url: string &#x3D; meta.choicesByUrl.url;
-        const localRes &#x3D; localStorage.getItem(url);
-        if (localRes) {
-          metaFields[fieldName] &#x3D; {
-            ...meta,
-            choices: this.extractChoices(JSON.parse(localRes), meta.choicesByUrl)
-          };
-        } else {
-          const res: any &#x3D; await this.apiProxyService.promisedRequestWithHeaders(url);
-          localStorage.setItem(url, JSON.stringify(res));
-          metaFields[fieldName] &#x3D; {
-            ...meta,
-            choices: this.extractChoices(res, meta.choicesByUrl)
-          };
-        }
-      }
-    }
-  }
-
-  /**
-   * Extracts choices using choicesByUrl properties
-   * @param res Result of http request.
-   * @param choicesByUrl Choices By Url property.
-   * @returns list of choices.
-   */
-  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string }): { value: string, text: string }[] {
-    const choices &#x3D; choicesByUrl.path ? [...get(res, choicesByUrl.path)] : [...res];
-    return choices ? choices.map((x: any) &#x3D;&gt; ({
-      value: (choicesByUrl.value ? get(x, choicesByUrl.value) : x).toString(),
-      text: choicesByUrl.text ? get(x, choicesByUrl.text) : choicesByUrl.value ? get(x, choicesByUrl.value) : x
-    })) : [];
-  }
-
-  private flatDeep(arr: any[]): any[] {
-    return arr.reduce((acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? this.flatDeep(val) : val), []);
-  }
-
-  private getFields(metaFields: any, fields: any[], prefix?: string, disabled?: boolean): any[] {
-    return this.flatDeep(fields.map(f &#x3D;&gt; {
-      const fullName: string &#x3D; prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name;
-      switch (f.kind) {
-        case &#x27;OBJECT&#x27;: {
-          return {
-            name: f.name,
-            title: f.label ? f.label : f.name,
-            kind: &#x27;OBJECT&#x27;,
-            fields: this.getFields(metaFields, f.fields, fullName, true)
-          };
-        }
-        case &#x27;LIST&#x27;: {
-          return {
-            name: f.name,
-            title: f.label ? f.label : f.name,
-            kind: &#x27;LIST&#x27;,
-            fields: this.getFields(metaFields, f.fields, fullName, true)
-          };
-        }
-        default: {
-          const metaData &#x3D; get(metaFields, fullName);
-          return {
-            name: f.name,
-            title: f.label ? f.label : f.name,
-            type: f.type,
-            meta: metaData
-          };
-        }
-      }
-    })).sort((a, b) &#x3D;&gt; a.order - b.order);
   }
 
   /**
@@ -1324,24 +744,6 @@ export class SafePreprocessorService {
         }
       }
     });
-  }
-
-  /**
-   * Displays text instead of values for questions with select.
-   * @param meta meta data of the question.
-   * @param value question value.
-   * @returns text value of the question.
-   */
-  private getDisplayText(value: string | string[], meta: { choices?: { value: string, text: string }[] }): string | string[] {
-    if (meta.choices) {
-      if (Array.isArray(value)) {
-        return meta.choices.reduce((acc: string[], x) &#x3D;&gt; value.includes(x.value) ? acc.concat([x.text]) : acc, []);
-      } else {
-        return meta.choices.find(x &#x3D;&gt; x.value &#x3D;&#x3D;&#x3D; value)?.text || &#x27;&#x27;;
-      }
-    } else {
-      return value;
-    }
   }
 }
 

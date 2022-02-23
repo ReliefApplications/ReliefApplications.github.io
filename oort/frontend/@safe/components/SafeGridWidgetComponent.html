@@ -597,8 +597,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="266"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:266</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:268</a></div>
                 </td>
             </tr>
 
@@ -714,8 +714,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="349"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:349</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="352"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:352</a></div>
                 </td>
             </tr>
 
@@ -835,8 +835,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="356"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:356</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="359"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:359</a></div>
                 </td>
             </tr>
 
@@ -879,8 +879,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="290"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:290</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="292"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:292</a></div>
                 </td>
             </tr>
 
@@ -1059,8 +1059,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="236"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:236</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="238"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:238</a></div>
                 </td>
             </tr>
 
@@ -1462,7 +1462,8 @@ export class SafeGridWidgetComponent implements OnInit {
       };
       const sortField &#x3D; this.grid.sortField || &#x27;&#x27;;
       const sortOrder &#x3D; this.grid.sortOrder || &#x27;&#x27;;
-      this.emailService.sendMail(options.distributionList, options.subject, options.bodyText, emailSettings,
+      const body &#x3D; this.grid.selectedRows.length &gt; 0 ? options.bodyText : options.bodyTextAlternate;
+      this.emailService.sendMail(options.distributionList, options.subject, body, emailSettings,
         this.grid.selectedRows, sortField, sortOrder);
       if (options.export &amp;&amp; this.grid.selectedRows.length &gt; 0) {
         this.grid.onExport({ records: &#x27;all&#x27;, format: &#x27;xlsx&#x27;, fields: &#x27;visible&#x27; });
@@ -1485,6 +1486,7 @@ export class SafeGridWidgetComponent implements OnInit {
 
       // Opens a modal containing the prefilled form.
       this.dialog.open(SafeFormModalComponent, {
+        disableClose: true,
         data: {
           template: options.prefillTargetForm,
           locale: &#x27;en&#x27;,
@@ -1623,6 +1625,7 @@ export class SafeGridWidgetComponent implements OnInit {
             if (record) {
               this.snackBar.openSnackBar(NOTIFICATIONS.addRowsToRecord(selectedRecords.length, key, record.data[targetFormField]));
               this.dialog.open(SafeFormModalComponent, {
+                disableClose: true,
                 data: {
                   recordId: record.id,
                   locale: &#x27;en&#x27;

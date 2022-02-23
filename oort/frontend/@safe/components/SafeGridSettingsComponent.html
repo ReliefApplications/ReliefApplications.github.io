@@ -405,8 +405,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="202"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:202</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:203</a></div>
                 </td>
             </tr>
 
@@ -518,8 +518,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="207"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:207</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:208</a></div>
                 </td>
             </tr>
 
@@ -1073,7 +1073,8 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
       bodyFields: this.formBuilder.array((value &amp;&amp; value.bodyFields) ?
         value.bodyFields.map((x: any) &#x3D;&gt; this.queryBuilder.addNewField(x)) : [],
         value &amp;&amp; value.sendMail ? Validators.required : null),
-      bodyText: [value &amp;&amp; value.bodyText ? value.bodyText : &#x27;&#x27;]
+      bodyText: [value &amp;&amp; value.bodyText ? value.bodyText : &#x27;&#x27;],
+      bodyTextAlternate: [value &amp;&amp; value.bodyTextAlternate ? value.bodyTextAlternate : &#x27;&#x27;]
     });
     return buttonForm;
   }

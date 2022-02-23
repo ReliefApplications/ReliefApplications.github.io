@@ -206,8 +206,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="223"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:223</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="226"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:226</a></div>
                 </td>
             </tr>
 
@@ -1039,8 +1039,11 @@ export class SafeGridService {
    * @param choicesByUrl Choices By Url property.
    * @returns list of choices.
    */
-  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string }): { value: string, text: string }[] {
+  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string, hasOther?: boolean }): { value: string, text: string }[] {
     const choices &#x3D; choicesByUrl.path ? [...res[choicesByUrl.path]] : [...res];
+    if (choicesByUrl.hasOther) {
+      choices.push({ [choicesByUrl.value || &#x27;value&#x27;]: &#x27;other&#x27;, [choicesByUrl.text || &#x27;text&#x27;]: &#x27;Other&#x27; });
+    }
     return choices ? choices.map((x: any) &#x3D;&gt; ({
       value: (choicesByUrl.value ? x[choicesByUrl.value] : x).toString(),
       text: choicesByUrl.text ? x[choicesByUrl.text] : choicesByUrl.value ? x[choicesByUrl.value] : x
