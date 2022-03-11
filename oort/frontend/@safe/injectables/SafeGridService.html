@@ -206,8 +206,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="226"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:226</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:227</a></div>
                 </td>
             </tr>
 
@@ -631,7 +631,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getFields(fields: any[], metaFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, layoutFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, prefix?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, options?: literal type)</code>
+                    <code>getFields(fields: any[], metaFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, layoutFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, prefix?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, options: literal type)</code>
                 </td>
             </tr>
 
@@ -657,6 +657,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Default value</td>
                                     <td>Description</td>
                                 </tr>
                             </thead>
@@ -671,6 +672,8 @@
                                         No
                                     </td>
 
+                                    <td>
+                                    </td>
 
                                     <td>
                                         <p>list of fields saved in settings.</p>
@@ -687,6 +690,8 @@
                                         No
                                     </td>
 
+                                    <td>
+                                    </td>
 
                                     <td>
                                     </td>
@@ -701,6 +706,8 @@
                                         No
                                     </td>
 
+                                    <td>
+                                    </td>
 
                                     <td>
                                     </td>
@@ -715,6 +722,8 @@
                                         Yes
                                     </td>
 
+                                    <td>
+                                    </td>
 
                                     <td>
                                         <p>prefix of the field.</p>
@@ -728,9 +737,12 @@
                                     </td>
 
                                     <td>
-                                        Yes
+                                        No
                                     </td>
 
+                                    <td>
+                                        <code>{ disabled: false, filter: true }</code>
+                                    </td>
 
                                     <td>
                                     </td>
@@ -870,12 +882,12 @@ export class SafeGridService {
    */
   public getFields(
     fields: any[], metaFields: any, layoutFields: any, prefix?: string,
-    options?: { disabled?: boolean, filter?: boolean }): any[] {
+    options: { disabled?: boolean, filter: boolean } &#x3D; { disabled: false, filter: true }): any[] {
     return flatDeep(fields.map(f &#x3D;&gt; {
       const fullName: string &#x3D; prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name;
       switch (f.kind) {
         case &#x27;OBJECT&#x27;: {
-          return this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true });
+          return this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true, filter: (f.type &#x3D;&#x3D;&#x3D; &#x27;User&#x27;) });
         }
         case &#x27;LIST&#x27;: {
           let metaData &#x3D; get(metaFields, fullName);
@@ -912,9 +924,9 @@ export class SafeGridService {
             type: f.type,
             format: this.getFieldFormat(f.type),
             editor: this.getFieldEditor(f.type),
-            filter: (!options?.filter || prefix) ? &#x27;&#x27; : this.getFieldFilter(f.type),
+            filter: !options.filter ? &#x27;&#x27; : this.getFieldFilter(f.type),
             meta: metaData,
-            disabled: options?.disabled || DISABLED_FIELDS.includes(f.name) || metaData?.readOnly,
+            disabled: options.disabled || DISABLED_FIELDS.includes(f.name) || metaData?.readOnly,
             hidden: cachedField?.hidden || false,
             width: cachedField?.width || title.length * 7 + 50,
             order: cachedField?.order,
@@ -1039,7 +1051,8 @@ export class SafeGridService {
    * @param choicesByUrl Choices By Url property.
    * @returns list of choices.
    */
-  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string, hasOther?: boolean }): { value: string, text: string }[] {
+  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string, hasOther?: boolean })
+    : { value: string, text: string }[] {
     const choices &#x3D; choicesByUrl.path ? [...res[choicesByUrl.path]] : [...res];
     if (choicesByUrl.hasOther) {
       choices.push({ [choicesByUrl.value || &#x27;value&#x27;]: &#x27;other&#x27;, [choicesByUrl.text || &#x27;text&#x27;]: &#x27;Other&#x27; });

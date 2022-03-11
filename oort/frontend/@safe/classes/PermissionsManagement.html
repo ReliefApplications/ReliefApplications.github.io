@@ -144,11 +144,11 @@
                         <td class="col-md-4">
                             <i>Default value : </i><code>{
         resources: {
-            access: Permissions.canSeeResources,
+            access: [Permissions.canSeeResources, Permissions.canCreateResources],
             create: [Permissions.canCreateResources, Permissions.canManageResources]
         },
         forms: {
-            access: Permissions.canSeeForms,
+            access: [Permissions.canSeeForms, Permissions.canCreateForms],
             create: [Permissions.canCreateForms, Permissions.canManageForms]
         },
         settings: {
@@ -437,11 +437,11 @@ export enum PermissionType {
 export class PermissionsManagement {
     public static mappedPermissions &#x3D; {
         resources: {
-            access: Permissions.canSeeResources,
+            access: [Permissions.canSeeResources, Permissions.canCreateResources],
             create: [Permissions.canCreateResources, Permissions.canManageResources]
         },
         forms: {
-            access: Permissions.canSeeForms,
+            access: [Permissions.canSeeForms, Permissions.canCreateForms],
             create: [Permissions.canCreateForms, Permissions.canManageForms]
         },
         settings: {
