@@ -1262,7 +1262,7 @@ export class AddPageComponent implements OnInit, OnDestroy {
       this.onNext();
     });
     this.authSubscription &#x3D; this.authService.user.subscribe(() &#x3D;&gt; {
-      this.canCreateForm &#x3D; this.authService.userHasClaim(Permissions.canManageForms);
+      this.canCreateForm &#x3D; this.authService.userHasClaim(Permissions.canCreateForms);
     });
   }
 
