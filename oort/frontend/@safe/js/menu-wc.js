@@ -470,6 +470,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeEmailPreviewModule.html" data-type="entity-link">SafeEmailPreviewModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' : 'data-target="#xs-components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' :
+                                            'id="xs-components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' }>
+                                            <li class="link">
+                                                <a href="components/SafeEmailPreviewComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeEmailPreviewComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeExpandedCommentModule.html" data-type="entity-link">SafeExpandedCommentModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -639,13 +657,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeGridWidgetModule.html" data-type="entity-link">SafeGridWidgetModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' : 'data-target="#xs-components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' }>
+                                            'data-target="#components-links-module-SafeGridWidgetModule-cd96633f5a79c36d0d46c9d1fda56e47"' : 'data-target="#xs-components-links-module-SafeGridWidgetModule-cd96633f5a79c36d0d46c9d1fda56e47"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' :
-                                            'id="xs-components-links-module-SafeGridWidgetModule-7f0fd0841c75edbd439f360141b0b7ca"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeGridWidgetModule-cd96633f5a79c36d0d46c9d1fda56e47"' :
+                                            'id="xs-components-links-module-SafeGridWidgetModule-cd96633f5a79c36d0d46c9d1fda56e47"' }>
                                             <li class="link">
                                                 <a href="components/SafeGridWidgetComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeGridWidgetComponent</a>
@@ -1037,6 +1055,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeSnackbarSpinnerModule.html" data-type="entity-link">SafeSnackbarSpinnerModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeSnackbarSpinnerModule-3a7c317bc7bd39bfebfd437cf9307f95"' : 'data-target="#xs-components-links-module-SafeSnackbarSpinnerModule-3a7c317bc7bd39bfebfd437cf9307f95"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeSnackbarSpinnerModule-3a7c317bc7bd39bfebfd437cf9307f95"' :
+                                            'id="xs-components-links-module-SafeSnackbarSpinnerModule-3a7c317bc7bd39bfebfd437cf9307f95"' }>
+                                            <li class="link">
+                                                <a href="components/SafeSnackbarSpinnerComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeSnackbarSpinnerComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeSpinnerModule.html" data-type="entity-link">SafeSpinnerModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -1262,9 +1298,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/SafeNotificationService.html" data-type="entity-link">SafeNotificationService</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/SafePreprocessorService.html" data-type="entity-link">SafePreprocessorService</a>
-                                </li>
-                                <li class="link">
                                     <a href="injectables/SafeSnackBarService.html" data-type="entity-link">SafeSnackBarService</a>
                                 </li>
                                 <li class="link">
@@ -1474,6 +1507,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/DialogData-17.html" data-type="entity-link">DialogData</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/DialogData-18.html" data-type="entity-link">DialogData</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/EditApplicationMutationResponse.html" data-type="entity-link">EditApplicationMutationResponse</a>
                             </li>
                             <li class="link">
@@ -1637,6 +1673,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/SnackBar.html" data-type="entity-link">SnackBar</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/SnackBarData.html" data-type="entity-link">SnackBarData</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/StatusDialogData.html" data-type="entity-link">StatusDialogData</a>

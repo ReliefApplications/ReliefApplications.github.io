@@ -206,8 +206,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="227"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:227</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:229</a></div>
                 </td>
             </tr>
 
@@ -302,8 +302,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="207"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:207</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="209"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:209</a></div>
                 </td>
             </tr>
 
@@ -398,8 +398,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:99</a></div>
                 </td>
             </tr>
 
@@ -478,8 +478,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="149"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:149</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:151</a></div>
                 </td>
             </tr>
 
@@ -558,8 +558,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:131</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:133</a></div>
                 </td>
             </tr>
 
@@ -741,7 +741,7 @@
                                     </td>
 
                                     <td>
-                                        <code>{ disabled: false, filter: true }</code>
+                                        <code>{ disabled: false, hidden: false, filter: true }</code>
                                     </td>
 
                                     <td>
@@ -789,8 +789,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="178"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:178</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:180</a></div>
                 </td>
             </tr>
 
@@ -882,12 +882,12 @@ export class SafeGridService {
    */
   public getFields(
     fields: any[], metaFields: any, layoutFields: any, prefix?: string,
-    options: { disabled?: boolean, filter: boolean } &#x3D; { disabled: false, filter: true }): any[] {
+    options: { disabled?: boolean, hidden?: boolean, filter: boolean } &#x3D; { disabled: false, hidden: false, filter: true }): any[] {
     return flatDeep(fields.map(f &#x3D;&gt; {
       const fullName: string &#x3D; prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name;
       switch (f.kind) {
         case &#x27;OBJECT&#x27;: {
-          return this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true, filter: (f.type &#x3D;&#x3D;&#x3D; &#x27;User&#x27;) });
+          return this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true, hidden: options.hidden, filter: (f.type &#x3D;&#x3D;&#x3D; &#x27;User&#x27;) });
         }
         case &#x27;LIST&#x27;: {
           let metaData &#x3D; get(metaFields, fullName);
@@ -895,6 +895,7 @@ export class SafeGridService {
           metaData.type &#x3D; &#x27;records&#x27;;
           const cachedField &#x3D; get(layoutFields, fullName);
           const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
+          const subFields &#x3D; this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true, hidden: true, filter: false });
           return {
             name: fullName,
             title,
@@ -904,14 +905,15 @@ export class SafeGridService {
             filter: prefix ? &#x27;&#x27; : this.getFieldFilter(f.type),
             meta: metaData,
             disabled: true,
-            hidden: cachedField?.hidden || false,
+            hidden: options.hidden || cachedField?.hidden || false,
             width: cachedField?.width || title.length * 7 + 50,
             order: cachedField?.order,
             query: {
               sort: f.sort,
               fields: f.fields,
               filter: f.filter
-            }
+            },
+            subFields,
           };
         }
         default: {
@@ -927,7 +929,7 @@ export class SafeGridService {
             filter: !options.filter ? &#x27;&#x27; : this.getFieldFilter(f.type),
             meta: metaData,
             disabled: options.disabled || DISABLED_FIELDS.includes(f.name) || metaData?.readOnly,
-            hidden: cachedField?.hidden || false,
+            hidden: options.hidden || cachedField?.hidden || false,
             width: cachedField?.width || title.length * 7 + 50,
             order: cachedField?.order,
           };

@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-display/tile-display.component.ts</code>
+            <code>projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-data/tile-data.component.ts</code>
         </p>
 
 
@@ -79,6 +79,9 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
+                                        <a href="#template">template</a>
+                                </li>
+                                <li>
                                         <a href="#tile">tile</a>
                                 </li>
                             </ul>
@@ -92,6 +95,35 @@
 
             <section>
                 <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="template"></a>
+                                        <span class="name"><b>template</b><a href="#template"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>template:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
@@ -126,40 +158,46 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject } from &#x27;@angular/core&#x27;;
-import { MAT_DIALOG_DATA, MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
-import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject, ViewChild, ViewContainerRef,
+  ComponentFactoryResolver, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 
 interface DialogData {
   tile: any;
+  template: any;
 }
 
 @Component({
-  selector: &#x27;safe-tile-display&#x27;,
-  templateUrl: &#x27;./tile-display.component.html&#x27;,
-  styleUrls: [&#x27;./tile-display.component.scss&#x27;]
+  selector: &#x27;safe-tile-data&#x27;,
+  templateUrl: &#x27;./tile-data.component.html&#x27;,
+  styleUrls: [&#x27;./tile-data.component.scss&#x27;]
 })
-/*  Modal content to change the display of a widget.
+/*  Modal content to edit the settings of a component.
 */
-export class SafeTileDisplayComponent implements OnInit {
+export class SafeTileDataComponent implements OnInit, AfterViewInit {
 
   // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  tileForm: FormGroup &#x3D; new FormGroup({});
+  tileForm?: FormGroup;
+
+  // &#x3D;&#x3D;&#x3D; TEMPLATE REFERENCE &#x3D;&#x3D;&#x3D;
+  @ViewChild(&#x27;settingsContainer&#x27;, { read: ViewContainerRef }) settingsContainer: any;
 
   constructor(
-    private formBuilder: FormBuilder,
-    public dialogRef: MatDialogRef&lt;SafeTileDisplayComponent&gt;,
+    private componentFactoryResolver: ComponentFactoryResolver,
+    public dialogRef: MatDialogRef&lt;SafeTileDataComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) { }
 
-  /*  Build the form.
+  ngOnInit(): void {}
+
+  /*  Once the template is ready, inject the settings component linked to the widget type passed as a parameter.
   */
-  ngOnInit(): void {
-    this.tileForm &#x3D; this.formBuilder.group({
-      id: this.data.tile.id,
-      cols: [this.data.tile.defaultCols, Validators.required],
-      rows: [this.data.tile.defaultRows, Validators.required]
-    });
+  ngAfterViewInit(): void {
+    const factory &#x3D; this.componentFactoryResolver.resolveComponentFactory(this.data.template);
+    const componentRef &#x3D; this.settingsContainer.createComponent(factory);
+    componentRef.instance.tile &#x3D; this.data.tile;
+    componentRef.instance.change.subscribe((e: any) &#x3D;&gt; { this.tileForm &#x3D; e; });
   }
 
   /*  Close the modal without sending any data.
@@ -168,6 +206,11 @@ export class SafeTileDisplayComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  /* Close the modal sending tile form value.
+  */
+  onSubmit(): void {
+    this.dialogRef.close(this.tileForm?.getRawValue());
+  }
 }
 </code></pre>
     </div>

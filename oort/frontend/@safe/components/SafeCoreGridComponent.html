@@ -1571,8 +1571,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="874"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:874</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="882"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:882</a></div>
                 </td>
             </tr>
 
@@ -1846,8 +1846,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="839"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:839</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="847"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:847</a></div>
                 </td>
             </tr>
 
@@ -1925,8 +1925,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="794"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:794</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="802"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:802</a></div>
                 </td>
             </tr>
 
@@ -2047,8 +2047,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="850"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:850</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="858"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:858</a></div>
                 </td>
             </tr>
 
@@ -2291,8 +2291,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="830"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:830</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="838"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:838</a></div>
                 </td>
             </tr>
 
@@ -2370,8 +2370,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="862"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:862</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="870"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:870</a></div>
                 </td>
             </tr>
 
@@ -2692,8 +2692,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="899"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:899</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="907"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:907</a></div>
                 </td>
             </tr>
 
@@ -2733,8 +2733,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="881"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:881</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="889"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:889</a></div>
                 </td>
             </tr>
 
@@ -2774,8 +2774,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="889"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:889</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="897"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts:897</a></div>
                 </td>
             </tr>
 
@@ -4903,12 +4903,20 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
       // we only export visible fields ( not hidden )
       ...e.fields &#x3D;&#x3D;&#x3D; &#x27;visible&#x27; &amp;&amp; {
         fields: Object.values(currentLayout.fields).filter((x: any) &#x3D;&gt; !x.hidden)
-          .sort((a: any, b: any) &#x3D;&gt; a.order - b.order).map((x: any) &#x3D;&gt; ({ name: x.field, title: x.title }))
+          .sort((a: any, b: any) &#x3D;&gt; a.order - b.order).map((x: any) &#x3D;&gt;
+            ({ name: x.field, title: x.title, subFields: x.subFields.map((y: any) &#x3D;&gt;
+                ({ name: y.name, title: y.title })
+              )
+            }))
       },
       // we export ALL fields of the grid ( including hidden columns )
       ...e.fields &#x3D;&#x3D;&#x3D; &#x27;all&#x27; &amp;&amp; {
         fields: Object.values(currentLayout.fields)
-          .sort((a: any, b: any) &#x3D;&gt; a.order - b.order).map((x: any) &#x3D;&gt; ({ name: x.field, title: x.title }))
+          .sort((a: any, b: any) &#x3D;&gt; a.order - b.order).map((x: any) &#x3D;&gt;
+            ({ name: x.field, title: x.title, subFields: x.subFields.map((y: any) &#x3D;&gt;
+                ({ name: y.name, title: y.title })
+              )
+            }))
       }
     };
 
@@ -5095,7 +5103,7 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><safe-grid [fields]="fields" [data]="gridData" [loading]="loading" [error]="error" [pageSize]="pageSize" [skip]="skip"    (pageChange)="onPageChange($event)" [sort]="sort" (sortChange)="onSortChange($event)" [filter]="filter"    [showFilter]="showFilter" (filterChange)="onFilterChange($event)" (showFilterChange)="onShowFilterChange($event)"    (action)="onAction($event)" [actions]="actions" [editable]="editable" [hasChanges]="hasChanges"    [selectable]="selectable" (selectionChange)="onSelectionChange($event)" [selectedRows]="selectedRows" [admin]="admin"    (columnChange)="onColumnChange()" (searchChange)="onSearchChange($event)" (export)="onExport($event)"></safe-grid></div>'
-    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
+    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeCoreGridComponent'};
 </script>

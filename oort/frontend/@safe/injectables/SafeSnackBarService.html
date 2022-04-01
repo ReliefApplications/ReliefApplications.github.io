@@ -59,6 +59,14 @@
             <code>projects/safe/src/lib/services/snackbar.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared snackbar service.
+Snackbar is a brief notification that appears for a short time as a popup.</p>
+
+            </p>
 
 
 
@@ -76,7 +84,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openComponentSnackBar">openComponentSnackBar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#openSnackBar">openSnackBar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openTemplateSnackBar">openTemplateSnackBar</a>
                             </li>
                         </ul>
                     </td>
@@ -101,12 +118,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:33</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Shared snackbar service.
+Snackbar is a brief notification that appears for a short time as a popup.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -115,6 +135,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -129,6 +150,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Material snackbar service</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -148,9 +173,106 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="openComponentSnackBar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openComponentSnackBar
+                        </b>
+                        <a href="#openComponentSnackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openComponentSnackBar(component: ComponentType<any>, config?: <a href="../interfaces/SnackBar.html">SnackBar</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a snackbar including a component on top of the layout.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>component</td>
+                                    <td>
+                                            <code>ComponentType&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>component to show inside the snackbar.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>config</td>
+                                    <td>
+                                                <code><a href="../interfaces/SnackBar.html" target="_self" >SnackBar</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>additional configuration of the message ( duration / color / error ).</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SnackBar.html" target="_self" >MatSnackBarRef&lt;any&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>snackbar message reference.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="openSnackBar"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             openSnackBar
                         </b>
                         <a href="#openSnackBar"><span class="icon ion-ios-link"></span></a>
@@ -159,15 +281,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, config?: <a href="../interfaces/SnackBar.html">SnackBar</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, config?: <a href="../interfaces/SnackBar.html">SnackBar</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:49</a></div>
                 </td>
             </tr>
 
@@ -238,53 +361,209 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openTemplateSnackBar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openTemplateSnackBar
+                        </b>
+                        <a href="#openTemplateSnackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openTemplateSnackBar(template: TemplateRef<any>, config?: <a href="../interfaces/SnackBar.html">SnackBar</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">projects/safe/src/lib/services/snackbar.service.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a snackbar including a component on top of the layout.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>template</td>
+                                    <td>
+                                            <code>TemplateRef&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>config</td>
+                                    <td>
+                                                <code><a href="../interfaces/SnackBar.html" target="_self" >SnackBar</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>additional configuration of the message ( duration / color / error ).</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SnackBar.html" target="_self" >MatSnackBarRef&lt;EmbeddedViewRef&lt;any&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>snackbar message reference.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { MatSnackBar, MatSnackBarRef, TextOnlySnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ComponentType } from &#x27;@angular/cdk/portal&#x27;;
+import { EmbeddedViewRef, Injectable, TemplateRef } from &#x27;@angular/core&#x27;;
+import {
+  MatSnackBar,
+  MatSnackBarConfig,
+  MatSnackBarRef,
+  TextOnlySnackBar,
+} from &#x27;@angular/material/snack-bar&#x27;;
 
+/** Default snackbar definition */
 const DEFAULT_SNACKBAR &#x3D; {
   error: false,
   duration: 5000,
-  action: &#x27;Dismiss&#x27;
+  action: &#x27;Dismiss&#x27;,
+  data: null,
 };
 
+/** Snackbar interface */
 interface SnackBar {
   duration?: number;
   error?: boolean;
   action?: string;
+  data?: any;
 }
 
+/**
+ * Shared snackbar service.
+ * Snackbar is a brief notification that appears for a short time as a popup.
+ */
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class SafeSnackBarService {
-
-  constructor(
-    private snackBar: MatSnackBar
-  ) { }
+  /**
+   * Shared snackbar service.
+   * Snackbar is a brief notification that appears for a short time as a popup.
+   *
+   * @param snackBar Material snackbar service
+   */
+  constructor(private snackBar: MatSnackBar) {}
 
   /**
    * Creates a snackbar message on top of the layout.
+   *
    * @param message text message to display.
    * @param config additional configuration of the message ( duration / color / error ).
    * @returns snackbar message reference.
    */
-  openSnackBar(
+  public openSnackBar(
     message: string,
-    config?: SnackBar): MatSnackBarRef&lt;TextOnlySnackBar&gt; {
+    config?: SnackBar
+  ): MatSnackBarRef&lt;TextOnlySnackBar&gt; {
     config &#x3D; { ...DEFAULT_SNACKBAR, ...config };
-    const snackBar &#x3D; this.snackBar.open(message, config.action, {
+    const snackBarRef &#x3D; this.snackBar.open(message, config.action, {
       duration: config.duration ? config.duration : undefined,
       horizontalPosition: &#x27;center&#x27;,
       verticalPosition: &#x27;top&#x27;,
-      panelClass: (config &amp;&amp; config.error) ? &#x27;snack-error&#x27; : &#x27;&#x27;
+      panelClass: config &amp;&amp; config.error ? &#x27;snack-error&#x27; : &#x27;&#x27;,
     });
-    return snackBar;
+    return snackBarRef;
+  }
+
+  /**
+   * Creates a snackbar including a component on top of the layout.
+   *
+   * @param component component to show inside the snackbar.
+   * @param config additional configuration of the message ( duration / color / error ).
+   * @returns snackbar message reference.
+   */
+  public openComponentSnackBar(
+    component: ComponentType&lt;any&gt;,
+    config?: SnackBar
+  ): MatSnackBarRef&lt;any&gt; {
+    config &#x3D; { ...DEFAULT_SNACKBAR, ...config };
+    const snackBarRef &#x3D; this.snackBar.openFromComponent(component, {
+      duration: config.duration ? config.duration : undefined,
+      horizontalPosition: &#x27;center&#x27;,
+      verticalPosition: &#x27;top&#x27;,
+      panelClass: config &amp;&amp; config.error ? &#x27;snack-error&#x27; : &#x27;&#x27;,
+      data: config?.data,
+    });
+    return snackBarRef;
+  }
+
+  /**
+   * Creates a snackbar including a component on top of the layout.
+   *
+   * @param component component to show inside the snackbar.
+   * @param config additional configuration of the message ( duration / color / error ).
+   * @returns snackbar message reference.
+   */
+  public openTemplateSnackBar(
+    template: TemplateRef&lt;any&gt;,
+    config?: SnackBar
+  ): MatSnackBarRef&lt;EmbeddedViewRef&lt;any&gt;&gt; {
+    config &#x3D; { ...DEFAULT_SNACKBAR, ...config };
+    const snackBarRef &#x3D; this.snackBar.openFromTemplate(template, {
+      duration: config.duration ? config.duration : undefined,
+      horizontalPosition: &#x27;center&#x27;,
+      verticalPosition: &#x27;top&#x27;,
+      panelClass: config &amp;&amp; config.error ? &#x27;snack-error&#x27; : &#x27;&#x27;,
+    });
+    return snackBarRef;
   }
 }
 </code></pre>

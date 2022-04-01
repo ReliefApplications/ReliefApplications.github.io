@@ -100,9 +100,6 @@
                             <a href="#CHART_TYPES" title="projects/safe/src/lib/components/widgets/chart-settings/constants.ts"><b>CHART_TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../constants.ts)</a>
                         </li>
                         <li>
-                            <a href="#cloneData" title="projects/safe/src/lib/services/preprocessor.service.ts"><b>cloneData</b>&nbsp;&nbsp;&nbsp;(projects/.../preprocessor.service.ts)</a>
-                        </li>
-                        <li>
                             <a href="#cloneData" title="projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts"><b>cloneData</b>&nbsp;&nbsp;&nbsp;(projects/.../core-grid.component.ts)</a>
                         </li>
                         <li>
@@ -287,6 +284,9 @@
                         </li>
                         <li>
                             <a href="#Fixed" title="projects/safe/src/lib/components/ui/core-grid/grid/grid.stories.ts"><b>Fixed</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.stories.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#flatDeep" title="projects/safe/src/lib/services/email.service.ts"><b>flatDeep</b>&nbsp;&nbsp;&nbsp;(projects/.../email.service.ts)</a>
                         </li>
                         <li>
                             <a href="#flatDeep" title="projects/safe/src/lib/services/grid.service.ts"><b>flatDeep</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.service.ts)</a>
@@ -2263,30 +2263,6 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
         icon: &#x27;vertical_align_bottom&#x27;
     }
 ]</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
-    <h3>projects/safe/src/lib/services/preprocessor.service.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="cloneData"></a>
-                        <span class="name">
-                            <b>
-                            cloneData</b>
-                            <a href="#cloneData"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(data: any[]) &#x3D;&gt; data.map(item &#x3D;&gt; Object.assign({}, item))</code>
                         </td>
                     </tr>
 
@@ -4305,11 +4281,18 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
                             <i>Default value : </i><code>{
   error: false,
   duration: 5000,
-  action: &#x27;Dismiss&#x27;
+  action: &#x27;Dismiss&#x27;,
+  data: null,
 }</code>
                         </td>
                     </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Default snackbar definition </p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -4655,6 +4638,32 @@ subscription RecordAddedSubscription($resource: ID, $form: ID) {
     checkboxOnly: true,
     mode: &#x27;multiple&#x27;,
     drag: false
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>projects/safe/src/lib/services/email.service.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flatDeep"></a>
+                        <span class="name">
+                            <b>
+                            flatDeep</b>
+                            <a href="#flatDeep"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(arr: any[]): any[] &#x3D;&gt; {
+  return arr.reduce((acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? flatDeep(val) : val), []);
 }</code>
                         </td>
                     </tr>
