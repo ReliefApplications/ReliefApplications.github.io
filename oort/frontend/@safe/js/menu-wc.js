@@ -473,13 +473,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafeEmailPreviewModule.html" data-type="entity-link">SafeEmailPreviewModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' : 'data-target="#xs-components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' }>
+                                            'data-target="#components-links-module-SafeEmailPreviewModule-ae4749d895725ad72577c52e08b567d6"' : 'data-target="#xs-components-links-module-SafeEmailPreviewModule-ae4749d895725ad72577c52e08b567d6"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' :
-                                            'id="xs-components-links-module-SafeEmailPreviewModule-7b2270d96331d626cf86ae05dd4a1a4b"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeEmailPreviewModule-ae4749d895725ad72577c52e08b567d6"' :
+                                            'id="xs-components-links-module-SafeEmailPreviewModule-ae4749d895725ad72577c52e08b567d6"' }>
                                             <li class="link">
                                                 <a href="components/SafeEmailPreviewComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SafeEmailPreviewComponent</a>
