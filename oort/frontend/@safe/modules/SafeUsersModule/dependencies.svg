@@ -24,83 +24,83 @@
 <title>cluster_SafeUsersModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 665,-268 665,-70 8,-70"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeUsersModule_imports</title>
+<polygon fill="none" stroke="black" points="352,-78 352,-130 657,-130 657,-78 352,-78"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeUsersModule_declarations</title>
-<polygon fill="none" stroke="black" points="329,-78 329,-130 657,-130 657,-78 329,-78"/>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 344,-130 344,-78 16,-78"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_SafeUsersModule_exports</title>
-<polygon fill="none" stroke="black" points="250,-208 250,-260 408,-260 408,-208 250,-208"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeUsersModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 321,-130 321,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="267,-208 267,-260 425,-260 425,-208 267,-208"/>
 </g>
 <!-- SafeEditUserComponent -->
 <g id="node1" class="node">
 <title>SafeEditUserComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="648.97,-122 493.03,-122 493.03,-86 648.97,-86 648.97,-122"/>
-<text text-anchor="middle" x="571" y="-99.8" font-family="Times,serif" font-size="14.00">SafeEditUserComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="335.97,-122 180.03,-122 180.03,-86 335.97,-86 335.97,-122"/>
+<text text-anchor="middle" x="258" y="-99.8" font-family="Times,serif" font-size="14.00">SafeEditUserComponent</text>
 </g>
 <!-- SafeUsersModule -->
 <g id="node3" class="node">
 <title>SafeUsersModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="387.29,-187 384.29,-191 363.29,-191 360.29,-187 270.71,-187 270.71,-151 387.29,-151 387.29,-187"/>
-<text text-anchor="middle" x="329" y="-164.8" font-family="Times,serif" font-size="14.00">SafeUsersModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="404.29,-187 401.29,-191 380.29,-191 377.29,-187 287.71,-187 287.71,-151 404.29,-151 404.29,-187"/>
+<text text-anchor="middle" x="346" y="-164.8" font-family="Times,serif" font-size="14.00">SafeUsersModule</text>
 </g>
 <!-- SafeEditUserComponent&#45;&gt;SafeUsersModule -->
 <g id="edge1" class="edge">
 <title>SafeEditUserComponent&#45;&gt;SafeUsersModule</title>
-<path fill="none" stroke="black" d="M571,-122.11C571,-141.34 571,-169 571,-169 571,-169 397.27,-169 397.27,-169"/>
-<polygon fill="black" stroke="black" points="397.27,-165.5 387.27,-169 397.27,-172.5 397.27,-165.5"/>
+<path fill="none" stroke="black" d="M311.92,-122.11C311.92,-122.11 311.92,-140.99 311.92,-140.99"/>
+<polygon fill="black" stroke="black" points="308.42,-140.99 311.92,-150.99 315.42,-140.99 308.42,-140.99"/>
 </g>
 <!-- SafeUsersComponent -->
 <g id="node2" class="node">
 <title>SafeUsersComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="475.08,-122 336.92,-122 336.92,-86 475.08,-86 475.08,-122"/>
-<text text-anchor="middle" x="406" y="-99.8" font-family="Times,serif" font-size="14.00">SafeUsersComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="162.08,-122 23.92,-122 23.92,-86 162.08,-86 162.08,-122"/>
+<text text-anchor="middle" x="93" y="-99.8" font-family="Times,serif" font-size="14.00">SafeUsersComponent</text>
 </g>
 <!-- SafeUsersComponent&#45;&gt;SafeUsersModule -->
 <g id="edge2" class="edge">
 <title>SafeUsersComponent&#45;&gt;SafeUsersModule</title>
-<path fill="none" stroke="black" d="M362.05,-122.11C362.05,-122.11 362.05,-140.99 362.05,-140.99"/>
-<polygon fill="black" stroke="black" points="358.55,-140.99 362.05,-150.99 365.55,-140.99 358.55,-140.99"/>
+<path fill="none" stroke="black" d="M93,-122.11C93,-141.34 93,-169 93,-169 93,-169 277.64,-169 277.64,-169"/>
+<polygon fill="black" stroke="black" points="277.64,-172.5 287.64,-169 277.64,-165.5 277.64,-172.5"/>
 </g>
 <!-- SafeUsersComponent  -->
 <g id="node6" class="node">
 <title>SafeUsersComponent </title>
-<polygon fill="#fb8072" stroke="black" points="399.58,-252 258.42,-252 258.42,-216 399.58,-216 399.58,-252"/>
-<text text-anchor="middle" x="329" y="-229.8" font-family="Times,serif" font-size="14.00">SafeUsersComponent </text>
+<polygon fill="#fb8072" stroke="black" points="416.58,-252 275.42,-252 275.42,-216 416.58,-216 416.58,-252"/>
+<text text-anchor="middle" x="346" y="-229.8" font-family="Times,serif" font-size="14.00">SafeUsersComponent </text>
 </g>
 <!-- SafeUsersModule&#45;&gt;SafeUsersComponent  -->
 <g id="edge5" class="edge">
 <title>SafeUsersModule&#45;&gt;SafeUsersComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M329,-187.11C329,-187.11 329,-205.99 329,-205.99"/>
-<polygon fill="black" stroke="black" points="325.5,-205.99 329,-215.99 332.5,-205.99 325.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M346,-187.11C346,-187.11 346,-205.99 346,-205.99"/>
+<polygon fill="black" stroke="black" points="342.5,-205.99 346,-215.99 349.5,-205.99 342.5,-205.99"/>
 </g>
 <!-- SafeButtonModule -->
 <g id="node4" class="node">
 <title>SafeButtonModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="313.04,-122 310.04,-126 289.04,-126 286.04,-122 190.96,-122 190.96,-86 313.04,-86 313.04,-122"/>
-<text text-anchor="middle" x="252" y="-99.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="649.04,-122 646.04,-126 625.04,-126 622.04,-122 526.96,-122 526.96,-86 649.04,-86 649.04,-122"/>
+<text text-anchor="middle" x="588" y="-99.8" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeUsersModule -->
 <g id="edge3" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeUsersModule</title>
-<path fill="none" stroke="black" d="M292.06,-122.11C292.06,-122.11 292.06,-140.99 292.06,-140.99"/>
-<polygon fill="black" stroke="black" points="288.56,-140.99 292.06,-150.99 295.56,-140.99 288.56,-140.99"/>
+<path fill="none" stroke="black" d="M588,-122.11C588,-141.34 588,-169 588,-169 588,-169 414.27,-169 414.27,-169"/>
+<polygon fill="black" stroke="black" points="414.27,-165.5 404.27,-169 414.27,-172.5 414.27,-165.5"/>
 </g>
 <!-- SafeInviteUsersModule -->
 <g id="node5" class="node">
 <title>SafeInviteUsersModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="172.45,-122 169.45,-126 148.45,-126 145.45,-122 23.55,-122 23.55,-86 172.45,-86 172.45,-122"/>
-<text text-anchor="middle" x="98" y="-99.8" font-family="Times,serif" font-size="14.00">SafeInviteUsersModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="508.45,-122 505.45,-126 484.45,-126 481.45,-122 359.55,-122 359.55,-86 508.45,-86 508.45,-122"/>
+<text text-anchor="middle" x="434" y="-99.8" font-family="Times,serif" font-size="14.00">SafeInviteUsersModule</text>
 </g>
 <!-- SafeInviteUsersModule&#45;&gt;SafeUsersModule -->
 <g id="edge4" class="edge">
 <title>SafeInviteUsersModule&#45;&gt;SafeUsersModule</title>
-<path fill="none" stroke="black" d="M98,-122.11C98,-141.34 98,-169 98,-169 98,-169 260.71,-169 260.71,-169"/>
-<polygon fill="black" stroke="black" points="260.71,-172.5 270.71,-169 260.71,-165.5 260.71,-172.5"/>
+<path fill="none" stroke="black" d="M381.84,-122.11C381.84,-122.11 381.84,-140.99 381.84,-140.99"/>
+<polygon fill="black" stroke="black" points="378.34,-140.99 381.84,-150.99 385.34,-140.99 378.34,-140.99"/>
 </g>
 </g>
 </svg>
