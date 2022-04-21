@@ -998,7 +998,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-c6bf24fc7262efd6760eeca1270f719f-1"' :
                                             'id="xs-components-links-module-WorkflowModule-c6bf24fc7262efd6760eeca1270f719f-1"' }>
                                             <li class="link">
-                                                <a href="components/WorkflowComponent-1.html"
+                                                <a href="components/WorkflowComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">WorkflowComponent</a>
                                             </li>
                                         </ul>
@@ -1025,6 +1025,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/FilterComponent-2.html" data-type="entity-link">FilterComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/WorkflowComponent-1.html" data-type="entity-link">WorkflowComponent</a>
                             </li>
                         </ul>
                     </li>
