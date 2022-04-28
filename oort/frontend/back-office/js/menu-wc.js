@@ -494,7 +494,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FormModule-93212db93242576902d095e30c105860-1"' :
                                             'id="xs-components-links-module-FormModule-93212db93242576902d095e30c105860-1"' }>
                                             <li class="link">
-                                                <a href="components/FormComponent-1.html"
+                                                <a href="components/FormComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormComponent</a>
                                             </li>
                                         </ul>
@@ -1025,6 +1025,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/FilterComponent-2.html" data-type="entity-link">FilterComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/FormComponent-1.html" data-type="entity-link">FormComponent</a>
                             </li>
                         </ul>
                     </li>
