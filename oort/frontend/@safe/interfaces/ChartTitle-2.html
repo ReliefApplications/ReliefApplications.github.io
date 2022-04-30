@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/ui/bar-chart/bar-chart.component.ts</code>
+            <code>projects/safe/src/lib/components/ui/donut-chart/donut-chart.component.ts</code>
         </p>
 
 
@@ -206,30 +206,25 @@ interface ChartLegend {
 }
 
 interface ChartSeries {
-  name?: string;
-  color?: string;
   data: {
-    field: number | null;
     category: any;
+    field: any;
+    color?: string;
   }[];
 }
 
 @Component({
-  selector: &#x27;safe-bar-chart&#x27;,
-  templateUrl: &#x27;./bar-chart.component.html&#x27;,
-  styleUrls: [&#x27;./bar-chart.component.scss&#x27;]
+  selector: &#x27;safe-donut-chart&#x27;,
+  templateUrl: &#x27;./donut-chart.component.html&#x27;,
+  styleUrls: [&#x27;./donut-chart.component.scss&#x27;]
 })
-export class SafeBarChartComponent implements OnInit {
+export class SafeDonutChartComponent implements OnInit {
 
   @Input() title: ChartTitle | undefined;
 
   @Input() legend: ChartLegend | undefined;
 
   @Input() series: ChartSeries[] &#x3D; [];
-
-  @Input() gap &#x3D; 2;
-
-  @Input() spacing &#x3D; 0.25;
 
   @ViewChild(&#x27;chart&#x27;)
   public chart?: ChartComponent;
