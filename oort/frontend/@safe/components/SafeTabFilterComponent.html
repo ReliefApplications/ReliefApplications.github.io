@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,7 +36,9 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>SafeTabFilterComponent</li>
+  <li
+  >
+  SafeTabFilterComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -66,6 +69,7 @@
 
 
 
+
     <p class="comment">
         <h3>Implements</h3>
     </p>
@@ -76,7 +80,7 @@
 
 <section>
     <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
+    <table class="table table-sm table-hover metadata">
         <tbody>
 
 
@@ -131,23 +135,23 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#inputs">inputs</a>
+                                <a href="#inputs" >inputs</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#metaQuery">metaQuery</a>
+                                <a href="#metaQuery" >metaQuery</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#operators">operators</a>
+                                <a href="#operators" >operators</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#selectedFields">selectedFields</a>
+                                <a href="#selectedFields" >selectedFields</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#types">types</a>
+                                <a href="#types" >types</a>
                             </li>
                         </ul>
                     </td>
@@ -163,36 +167,36 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#extractChoices">extractChoices</a>
+                                <a href="#extractChoices" >extractChoices</a>
                             </li>
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
-                                <a href="#onAddFilter">onAddFilter</a>
+                                <a href="#onAddFilter" >onAddFilter</a>
                             </li>
                             <li>
-                                <a href="#onAddFilterGroup">onAddFilterGroup</a>
+                                <a href="#onAddFilterGroup" >onAddFilterGroup</a>
                             </li>
                             <li>
-                                <a href="#onDeleteFilter">onDeleteFilter</a>
+                                <a href="#onDeleteFilter" >onDeleteFilter</a>
                             </li>
                             <li>
-                                <a href="#onDeleteFilterGroup">onDeleteFilterGroup</a>
+                                <a href="#onDeleteFilterGroup" >onDeleteFilterGroup</a>
                             </li>
                             <li>
-                                <a href="#onKey">onKey</a>
+                                <a href="#onKey" >onKey</a>
                             </li>
                             <li>
-                                <a href="#onSetField">onSetField</a>
+                                <a href="#onSetField" >onSetField</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
                                     <span class="modifier">Async</span>
-                                <a href="#populateMetaFields">populateMetaFields</a>
+                                <a href="#populateMetaFields" >populateMetaFields</a>
                             </li>
                             <li>
-                                <a href="#setCurrentDate">setCurrentDate</a>
+                                <a href="#setCurrentDate" >setCurrentDate</a>
                             </li>
                         </ul>
                     </td>
@@ -207,19 +211,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#canDelete">canDelete</a>
+                                <a href="#canDelete" >canDelete</a>
                             </li>
                             <li>
-                                <a href="#fields">fields</a>
+                                <a href="#fields" >fields</a>
                             </li>
                             <li>
-                                <a href="#form">form</a>
+                                <a href="#form" >form</a>
                             </li>
                             <li>
-                                <a href="#metaFields">metaFields</a>
+                                <a href="#metaFields" >metaFields</a>
                             </li>
                             <li>
-                                <a href="#settings">settings</a>
+                                <a href="#settings" >settings</a>
                             </li>
                         </ul>
                     </td>
@@ -234,7 +238,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#delete">delete</a>
+                                <a href="#delete" >delete</a>
                             </li>
                         </ul>
                     </td>
@@ -251,7 +255,7 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                    <a href="#filters">filters</a>
+                                    <a href="#filters" >filters</a>
                                 </li>
                             </ul>
                         </td>
@@ -266,7 +270,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(formBuilder: <a href="../interfaces/Form.html">FormBuilder</a>, queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>, apiProxyService: <a href="../injectables/SafeApiProxyService.html">SafeApiProxyService</a>)</code>
+<code>constructor(formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, queryBuilder: <a href="../injectables/QueryBuilderService.html" target="_self">QueryBuilderService</a>, apiProxyService: <a href="../injectables/SafeApiProxyService.html" target="_self">SafeApiProxyService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -341,6 +345,12 @@
                     <td class="col-md-4">
                         <a name="canDelete"></a>
                         <b>canDelete</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
                     </td>
                 </tr>
                 <tr>
@@ -492,10 +502,8 @@
                 <td class="col-md-4">
                     <a name="extractChoices"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            extractChoices
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>extractChoices</b></span>
                         <a href="#extractChoices"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -523,6 +531,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -588,9 +597,7 @@
                 <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
+                        <span ><b>ngOnInit</b></span>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -627,9 +634,7 @@
                 <td class="col-md-4">
                     <a name="onAddFilter"></a>
                     <span class="name">
-                        <b>
-                            onAddFilter
-                        </b>
+                        <span ><b>onAddFilter</b></span>
                         <a href="#onAddFilter"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -666,9 +671,7 @@
                 <td class="col-md-4">
                     <a name="onAddFilterGroup"></a>
                     <span class="name">
-                        <b>
-                            onAddFilterGroup
-                        </b>
+                        <span ><b>onAddFilterGroup</b></span>
                         <a href="#onAddFilterGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -705,9 +708,7 @@
                 <td class="col-md-4">
                     <a name="onDeleteFilter"></a>
                     <span class="name">
-                        <b>
-                            onDeleteFilter
-                        </b>
+                        <span ><b>onDeleteFilter</b></span>
                         <a href="#onDeleteFilter"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -732,6 +733,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -775,9 +777,7 @@
                 <td class="col-md-4">
                     <a name="onDeleteFilterGroup"></a>
                     <span class="name">
-                        <b>
-                            onDeleteFilterGroup
-                        </b>
+                        <span ><b>onDeleteFilterGroup</b></span>
                         <a href="#onDeleteFilterGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -802,6 +802,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -845,9 +846,7 @@
                 <td class="col-md-4">
                     <a name="onKey"></a>
                     <span class="name">
-                        <b>
-                            onKey
-                        </b>
+                        <span ><b>onKey</b></span>
                         <a href="#onKey"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -872,6 +871,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -927,9 +927,7 @@
                 <td class="col-md-4">
                     <a name="onSetField"></a>
                     <span class="name">
-                        <b>
-                            onSetField
-                        </b>
+                        <span ><b>onSetField</b></span>
                         <a href="#onSetField"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -954,6 +952,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -1009,11 +1008,9 @@
                 <td class="col-md-4">
                     <a name="populateMetaFields"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            <span class="modifier">Async</span>
-                            populateMetaFields
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>populateMetaFields</b></span>
                         <a href="#populateMetaFields"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1053,9 +1050,7 @@
                 <td class="col-md-4">
                     <a name="setCurrentDate"></a>
                     <span class="name">
-                        <b>
-                            setCurrentDate
-                        </b>
+                        <span ><b>setCurrentDate</b></span>
                         <a href="#setCurrentDate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1080,6 +1075,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -1120,169 +1116,164 @@
 </section>
     <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inputs"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>inputs</b></span>
+                        <a href="#inputs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="inputs"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            inputs</b>
-                            <a href="#inputs"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:123</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:123</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="metaQuery"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>metaQuery</b></span>
+                        <a href="#metaQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="metaQuery"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            metaQuery</b>
-                            <a href="#metaQuery"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:115</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:115</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operators"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>operators</b></span>
+                        <a href="#operators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="operators"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            operators</b>
-                            <a href="#operators"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>OPERATORS</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:117</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>OPERATORS</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:117</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedFields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>selectedFields</b></span>
+                        <a href="#selectedFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="selectedFields"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            selectedFields</b>
-                            <a href="#selectedFields"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>any[]</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:112</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:112</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="types"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>types</b></span>
+                        <a href="#types"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="types"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            types</b>
-                            <a href="#types"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>TYPES</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:114</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>TYPES</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:114</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
     <section>
@@ -1753,14 +1744,16 @@ export class SafeTabFilterComponent implements OnInit {
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1772,6 +1765,15 @@ export class SafeTabFilterComponent implements OnInit {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
@@ -1781,9 +1783,9 @@ export class SafeTabFilterComponent implements OnInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

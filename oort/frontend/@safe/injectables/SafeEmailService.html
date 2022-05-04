@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SafeEmailService</li>
+  <li >SafeEmailService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,6 +60,7 @@
         <p class="comment">
             <code>projects/safe/src/lib/services/email.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -84,15 +87,15 @@ Used by widgets to send request to the back to send emails.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#filesUrl">filesUrl</a>
+                                <a href="#filesUrl" >filesUrl</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#previewUrl">previewUrl</a>
+                                <a href="#previewUrl" >previewUrl</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#sendUrl">sendUrl</a>
+                                <a href="#sendUrl" >sendUrl</a>
                             </li>
                         </ul>
                     </td>
@@ -108,21 +111,21 @@ Used by widgets to send request to the back to send emails.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#getFields">getFields</a>
+                                <a href="#getFields" >getFields</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#previewMail">previewMail</a>
+                                <a href="#previewMail" >previewMail</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#sendFiles">sendFiles</a>
+                                <a href="#sendFiles" >sendFiles</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#sendMail">sendMail</a>
+                                <a href="#sendMail" >sendMail</a>
                             </li>
                         </ul>
                     </td>
@@ -142,7 +145,7 @@ Used by widgets to send request to the back to send emails.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>, dialog: MatDialog)</code>
+<code>constructor(environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, snackBar: <a href="../injectables/SafeSnackBarService.html" target="_self">SafeSnackBarService</a>, dialog: MatDialog)</code>
                     </td>
                 </tr>
                         <tr>
@@ -180,8 +183,8 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Injection of the environment file.</p>
-</code>
+                                                                <p>Injection of the environment file.</p>
+
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -196,8 +199,8 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Angular http client.</p>
-</code>
+                                                                <p>Angular http client.</p>
+
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -212,8 +215,8 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Shared snackbar service.</p>
-</code>
+                                                                <p>Shared snackbar service.</p>
+
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -250,10 +253,8 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="getFields"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getFields
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>getFields</b></span>
                         <a href="#getFields"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -281,6 +282,7 @@ Used by widgets to send request to the back to send emails.</p>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -346,11 +348,9 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="previewMail"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            previewMail
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>previewMail</b></span>
                         <a href="#previewMail"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -378,6 +378,7 @@ Used by widgets to send request to the back to send emails.</p>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -548,10 +549,8 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="sendFiles"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            sendFiles
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>sendFiles</b></span>
                         <a href="#sendFiles"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -577,6 +576,7 @@ Used by widgets to send request to the back to send emails.</p>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -620,11 +620,9 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="sendMail"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            sendMail
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>sendMail</b></span>
                         <a href="#sendMail"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -652,6 +650,7 @@ Used by widgets to send request to the back to send emails.</p>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -835,108 +834,105 @@ Used by widgets to send request to the back to send emails.</p>
 </section>
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filesUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>filesUrl</b></span>
+                        <a href="#filesUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="filesUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            filesUrl</b>
-                            <a href="#filesUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:29</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:29</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previewUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>previewUrl</b></span>
+                        <a href="#previewUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="previewUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            previewUrl</b>
-                            <a href="#previewUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:28</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:28</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>sendUrl</b></span>
+                        <a href="#sendUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="sendUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            sendUrl</b>
-                            <a href="#sendUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:27</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:27</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -1247,14 +1243,15 @@ export class SafeEmailService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1266,6 +1263,15 @@ export class SafeEmailService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -1275,9 +1281,9 @@ export class SafeEmailService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
