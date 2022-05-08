@@ -24,13 +24,13 @@
 <title>cluster_SafeGridWidgetModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 949,-268 949,-70 8,-70"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeGridWidgetModule_exports</title>
-<polygon fill="none" stroke="black" points="349,-208 349,-260 541,-260 541,-208 349,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeGridWidgetModule_declarations</title>
 <polygon fill="none" stroke="black" points="751,-78 751,-130 941,-130 941,-78 751,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeGridWidgetModule_exports</title>
+<polygon fill="none" stroke="black" points="349,-208 349,-260 541,-260 541,-208 349,-208"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeGridWidgetModule_imports</title>
