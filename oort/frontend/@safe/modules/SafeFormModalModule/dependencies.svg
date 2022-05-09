@@ -24,6 +24,10 @@
 <title>cluster_SafeFormModalModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 906,-268 906,-70 8,-70"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeFormModalModule_exports</title>
+<polygon fill="none" stroke="black" points="425,-208 425,-260 617,-260 617,-208 425,-208"/>
+</g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeFormModalModule_imports</title>
 <polygon fill="none" stroke="black" points="214,-78 214,-130 898,-130 898,-78 214,-78"/>
@@ -31,10 +35,6 @@
 <g id="clust2" class="cluster">
 <title>cluster_SafeFormModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 206,-130 206,-78 16,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeFormModalModule_exports</title>
-<polygon fill="none" stroke="black" points="425,-208 425,-260 617,-260 617,-208 425,-208"/>
 </g>
 <!-- SafeFormModalComponent -->
 <g id="node1" class="node">
