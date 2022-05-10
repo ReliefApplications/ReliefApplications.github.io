@@ -28,13 +28,13 @@
 <title>cluster_SafeSnackbarSpinnerModule_declarations</title>
 <polygon fill="none" stroke="black" points="296,-78 296,-130 514,-130 514,-78 296,-78"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeSnackbarSpinnerModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 288,-130 288,-78 16,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeSnackbarSpinnerModule_exports</title>
 <polygon fill="none" stroke="black" points="114,-208 114,-260 336,-260 336,-208 114,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeSnackbarSpinnerModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 288,-130 288,-78 16,-78"/>
 </g>
 <!-- SafeSnackbarSpinnerComponent -->
 <g id="node1" class="node">
