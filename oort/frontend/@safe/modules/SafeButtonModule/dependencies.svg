@@ -24,13 +24,13 @@
 <title>cluster_SafeButtonModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="20,-70 20,-268 476,-268 476,-70 20,-70"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeButtonModule_exports</title>
-<polygon fill="none" stroke="black" points="155,-208 155,-260 319,-260 319,-208 155,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeButtonModule_declarations</title>
 <polygon fill="none" stroke="black" points="308,-78 308,-130 468,-130 468,-78 308,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeButtonModule_exports</title>
+<polygon fill="none" stroke="black" points="155,-208 155,-260 319,-260 319,-208 155,-208"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeButtonModule_imports</title>
