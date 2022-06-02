@@ -28,13 +28,13 @@
 <title>cluster_SafeMapSettingsModule_declarations</title>
 <polygon fill="none" stroke="black" points="245,-78 245,-130 437,-130 437,-78 245,-78"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeMapSettingsModule_exports</title>
-<polygon fill="none" stroke="black" points="150,-208 150,-260 346,-260 346,-208 150,-208"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeMapSettingsModule_imports</title>
 <polygon fill="none" stroke="black" points="59,-78 59,-130 237,-130 237,-78 59,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeMapSettingsModule_exports</title>
+<polygon fill="none" stroke="black" points="150,-208 150,-260 346,-260 346,-208 150,-208"/>
 </g>
 <!-- SafeMapSettingsComponent -->
 <g id="node1" class="node">
