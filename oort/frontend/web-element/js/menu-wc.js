@@ -1,5 +1,6 @@
 'use strict';
 
+
 customElements.define('compodoc-menu', class extends HTMLElement {
     constructor() {
         super();
@@ -48,11 +49,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <span class="icon ion-ios-list"></span>Dependencies
                                     </a>
                                 </li>
-                                <li class="link">
-                                    <a href="properties.html" data-type="chapter-link">
-                                        <span class="icon ion-ios-apps"></span>Properties
-                                    </a>
-                                </li>
                     </ul>
                 </li>
                     <li class="chapter modules">
@@ -66,42 +62,51 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
+                                <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-749bc8b593ceaa724108f2f13b444c274352aea80114ad0adf0f717ccdc4314084beceb54f46570630fb369d0975702a719d3f2af4231de8083682d149c779b4"' : 'data-target="#xs-components-links-module-AppModule-749bc8b593ceaa724108f2f13b444c274352aea80114ad0adf0f717ccdc4314084beceb54f46570630fb369d0975702a719d3f2af4231de8083682d149c779b4"' }>
+                                            'data-target="#components-links-module-AppModule-febce8014bfd490c2443624179750a30"' : 'data-target="#xs-components-links-module-AppModule-febce8014bfd490c2443624179750a30"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-749bc8b593ceaa724108f2f13b444c274352aea80114ad0adf0f717ccdc4314084beceb54f46570630fb369d0975702a719d3f2af4231de8083682d149c779b4"' :
-                                            'id="xs-components-links-module-AppModule-749bc8b593ceaa724108f2f13b444c274352aea80114ad0adf0f717ccdc4314084beceb54f46570630fb369d0975702a719d3f2af4231de8083682d149c779b4"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-febce8014bfd490c2443624179750a30"' :
+                                            'id="xs-components-links-module-AppModule-febce8014bfd490c2443624179750a30"' }>
                                             <li class="link">
-                                                <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AppComponent</a>
+                                                <a href="components/AppComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/ApplicationComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ApplicationComponent</a>
+                                                <a href="components/ApplicationComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ApplicationComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/DashboardComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >DashboardComponent</a>
+                                                <a href="components/DashboardComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DashboardComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/FormComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FormComponent</a>
+                                                <a href="components/FormComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">FormComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/WebApplicationComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WebApplicationComponent</a>
+                                                <a href="components/WebApplicationComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">WebApplicationComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/WebDashboardComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WebDashboardComponent</a>
+                                                <a href="components/WebDashboardComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">WebDashboardComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/WebFormComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WebFormComponent</a>
+                                                <a href="components/WebFormComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">WebFormComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/WebWorkflowComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WebWorkflowComponent</a>
+                                                <a href="components/WebWorkflowComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">WebWorkflowComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/WorkflowComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WorkflowComponent</a>
+                                                <a href="components/WorkflowComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">WorkflowComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -117,16 +122,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/GetApplicationByIdQueryResponse.html" data-type="entity-link" >GetApplicationByIdQueryResponse</a>
+                                <a href="interfaces/GetApplicationByIdQueryResponse.html" data-type="entity-link">GetApplicationByIdQueryResponse</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/GetDashboardByIdQueryResponse.html" data-type="entity-link" >GetDashboardByIdQueryResponse</a>
+                                <a href="interfaces/GetDashboardByIdQueryResponse.html" data-type="entity-link">GetDashboardByIdQueryResponse</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/GetFormByIdQueryResponse.html" data-type="entity-link" >GetFormByIdQueryResponse</a>
+                                <a href="interfaces/GetFormByIdQueryResponse.html" data-type="entity-link">GetFormByIdQueryResponse</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/GetWorkflowByIdQueryResponse.html" data-type="entity-link" >GetWorkflowByIdQueryResponse</a>
+                                <a href="interfaces/GetWorkflowByIdQueryResponse.html" data-type="entity-link">GetWorkflowByIdQueryResponse</a>
                             </li>
                         </ul>
                     </li>
