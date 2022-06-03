@@ -8,8 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css">
+	      <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
@@ -35,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li >SafeGridSettingsModule</li>
+    <li>SafeGridSettingsModule</li>
 </ol>
 
 <div class="text-center module-graph-container">
@@ -70,13 +69,13 @@
 <title>cluster_SafeGridSettingsModule_imports</title>
 <polygon fill="none" stroke="black" points="471,-78 471,-130 789,-130 789,-78 471,-78"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeGridSettingsModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 463,-130 463,-78 16,-78"/>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_SafeGridSettingsModule_exports</title>
 <polygon fill="none" stroke="black" points="350,-208 350,-260 546,-260 546,-208 350,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeGridSettingsModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 463,-130 463,-78 16,-78"/>
 </g>
 <!-- SafeFloatingButtonSettingsComponent -->
 <g id="node1" class="node">
@@ -149,7 +148,7 @@
 
     </div>
     <i id="fullscreen" class="icon ion-ios-resize module-graph-fullscreen-btn" aria-hidden="true"></i>
-    <div class="btn-group size-buttons">
+    <div class="btn-group">
         <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
         <button id="reset" class="btn btn-default btn-sm">Reset</button>
         <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
@@ -176,7 +175,6 @@
         <p class="comment">
             <code>projects/safe/src/lib/components/widgets/grid-settings/grid-settings.module.ts</code>
         </p>
-
 
 
 
@@ -243,6 +241,7 @@ import { SafeFloatingButtonSettingsComponent } from &#x27;./floating-button-sett
 import { MatTabsModule } from &#x27;@angular/material/tabs&#x27;;
 import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
 import { SafeButtonModule } from &#x27;../../ui/button/button.module&#x27;;
+import { EditorModule, TINYMCE_SCRIPT_SRC } from &#x27;@tinymce/tinymce-angular&#x27;;
 
 @NgModule({
   declarations: [SafeGridSettingsComponent, SafeFloatingButtonSettingsComponent],
@@ -263,9 +262,13 @@ import { SafeButtonModule } from &#x27;../../ui/button/button.module&#x27;;
     MatTooltipModule,
     MatTabsModule,
     MatChipsModule,
-    SafeButtonModule
+    SafeButtonModule,
+    EditorModule
   ],
-  exports: [SafeGridSettingsComponent]
+  exports: [SafeGridSettingsComponent],
+  providers: [
+    { provide: TINYMCE_SCRIPT_SRC, useValue: &#x27;tinymce/tinymce.min.js&#x27; }
+  ]
 })
 export class SafeGridSettingsModule { }
 </code></pre>
@@ -281,16 +284,14 @@ export class SafeGridSettingsModule { }
 
 
 
-
-
-
+                   
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -302,15 +303,6 @@ export class SafeGridSettingsModule { }
            </div>
        </div>
 
-          <label class="dark-mode-switch">
-               <input type="checkbox">
-               <span class="slider">
-                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                    </svg>
-               </span>
-          </label>
-
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
@@ -320,9 +312,9 @@ export class SafeGridSettingsModule { }
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
        <script src="../js/menu-wc.js" defer></script>
-       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
