@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,7 +36,9 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>LoginComponent</li>
+  <li
+  >
+  LoginComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -65,6 +68,14 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Login Page component.</p>
+
+    </p>
+
 
     <p class="comment">
         <h3>Implements</h3>
@@ -76,7 +87,7 @@
 
 <section>
     <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
+    <table class="table table-sm table-hover metadata">
         <tbody>
 
 
@@ -131,10 +142,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
-                                <a href="#onLogin">onLogin</a>
+                                <a href="#onLogin" >onLogin</a>
                             </li>
                         </ul>
                     </td>
@@ -154,17 +165,19 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor(authService: SafeAuthService, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">projects/back-office/src/app/auth/pages/login/login.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/back-office/src/app/auth/pages/login/login.component.ts:13</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Login Page component.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -173,9 +186,26 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeAuthService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared authentication service</p>
+
+                                                        </td>
+                                                </tr>
                                                 <tr>
                                                         <td>router</td>
                                                   
@@ -187,6 +217,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Angular router</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -212,9 +246,7 @@
                 <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
+                        <span ><b>ngOnInit</b></span>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -228,14 +260,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">projects/back-office/src/app/auth/pages/login/login.component.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">projects/back-office/src/app/auth/pages/login/login.component.ts:25</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Check that user is authenticated, and redirect to main page if true.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -251,9 +285,7 @@
                 <td class="col-md-4">
                     <a name="onLogin"></a>
                     <span class="name">
-                        <b>
-                            onLogin
-                        </b>
+                        <span ><b>onLogin</b></span>
                         <a href="#onLogin"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -267,14 +299,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">projects/back-office/src/app/auth/pages/login/login.component.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">projects/back-office/src/app/auth/pages/login/login.component.ts:36</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Redirect to authentication page.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -292,51 +326,65 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
+import { SafeAuthService } from &#x27;@safe/builder&#x27;;
 
+/**
+ * Login Page component.
+ */
 @Component({
   selector: &#x27;app-login&#x27;,
   templateUrl: &#x27;./login.component.html&#x27;,
-  styleUrls: [&#x27;./login.component.scss&#x27;]
+  styleUrls: [&#x27;./login.component.scss&#x27;],
 })
 export class LoginComponent implements OnInit {
+  /**
+   * Login Page component.
+   *
+   * @param authService Shared authentication service
+   * @param router Angular router
+   */
+  constructor(private authService: SafeAuthService, private router: Router) {}
 
-  constructor(
-    private router: Router,
-  ) { }
-
+  /**
+   * Check that user is authenticated, and redirect to main page if true.
+   */
   ngOnInit(): void {
+    this.authService.isAuthenticated$.subscribe((res: boolean) &#x3D;&gt; {
+      if (res &#x3D;&#x3D;&#x3D; true) {
+        this.router.navigate([&#x27;/applications&#x27;]);
+      }
+    });
   }
 
-  /* Redirect to Azure authentication page.
-  */
-  onLogin(): void {
-    this.router.navigate([&#x27;/&#x27;]);
-  }
+  /**
+   * Redirect to authentication page.
+   */
+  onLogin(): void {}
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">
-    &lt;div class&#x3D;&quot;login-panel left&quot;&gt;
-        &lt;div class&#x3D;&quot;login-logo&quot;&gt;
-            &lt;img src&#x3D;&quot;/assets/logo.png&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;login-wrapper&quot;&gt;
-            &lt;div class&#x3D;&quot;form-group&quot;&gt;
-                &lt;div class&#x3D;&quot;form-group-title&quot;&gt;
-                    &lt;h1&gt;SAFE&lt;/h1&gt;
-                    &lt;h2&gt;Simple Application Framework &lt;br&gt; for Emergency Management&lt;/h2&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;buttons-row&quot;&gt;
-                &lt;safe-button category&#x3D;&quot;tertiary&quot; (click)&#x3D;&quot;onLogin()&quot;&gt;
-                    Login with Microsoft
-                &lt;/safe-button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;login-panel left&quot;&gt;
+  &lt;div class&#x3D;&quot;login-logo&quot;&gt;
+    &lt;img src&#x3D;&quot;/assets/logo.png&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;login-wrapper&quot;&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;
+        &lt;h1&gt;SAFE&lt;/h1&gt;
+        &lt;h2&gt;
+          Simple Application Framework &lt;br /&gt;
+          for Emergency Management
+        &lt;/h2&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;login-panel right&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;buttons-row&quot;&gt;
+      &lt;safe-button category&#x3D;&quot;tertiary&quot; (click)&#x3D;&quot;onLogin()&quot;&gt; Login &lt;/safe-button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;login-panel right&quot;&gt;&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -345,81 +393,82 @@ export class LoginComponent implements OnInit {
                     <code>./login.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">:host {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .buttons-row {
-    display: flex;
-    justify-content: center;
-    margin: 32px 0;
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
 }
 
 .login-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-    h1 {
-        font-size: xxx-large;
-        color:rgb(95, 95, 95)
-    }
+  h1 {
+    font-size: xxx-large;
+    color: rgb(95, 95, 95);
+  }
 
-    .form-group-title {
-        color:rgb(153, 153, 153)
-    }
+  .form-group-title {
+    color: rgb(153, 153, 153);
+  }
 }
 
 .login-logo {
-    position: absolute;
-    left: 5px;
-    top: 5px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
 
-    img {
-        width: 100px;
-        margin-right: 16px;
-    }
+  img {
+    width: 100px;
+    margin-right: 16px;
+  }
 }
 
 .side-bar-picture {
-    height: inherit;
-    width: auto;
-    background-size: cover;
+  height: inherit;
+  width: auto;
+  background-size: cover;
 }
 
 .login-panel {
-    flex: 1;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  flex: 1;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 
-    &amp;.left {
-        min-width: 400px;
-    }
-    
-    &amp;.right {
-        background-image: url(&#x27;/assets/login-background.jpg&#x27;);
-        background-size: cover;
-    }
+  &amp;.left {
+    min-width: 400px;
+  }
+
+  &amp;.right {
+    background-image: url(&#x27;/assets/login-background.jpg&#x27;);
+    background-size: cover;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .right {
-        display: none;
-    }
-    .login-panel {
-        width: 100%;
-    }
-    // .login-logo {
-    //     display: none;
-    // }
-}</code></pre>
+  .right {
+    display: none;
+  }
+  .login-panel {
+    width: 100%;
+  }
+  // .login-logo {
+  //     display: none;
+  // }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -447,8 +496,8 @@ export class LoginComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>    <div class="login-panel left">        <div class="login-logo">            <img src="/assets/logo.png">        </div>        <div class="login-wrapper">            <div class="form-group">                <div class="form-group-title">                    <h1>SAFE</h1>                    <h2>Simple Application Framework <br> for Emergency Management</h2>                </div>            </div>            <div class="buttons-row">                <safe-button category="tertiary" (click)="onLogin()">                    Login with Microsoft                </safe-button>            </div>        </div>    </div>    <div class="login-panel right"></div></div>'
-    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
+        var COMPONENT_TEMPLATE = '<div><div class="login-panel left">  <div class="login-logo">    <img src="/assets/logo.png" />  </div>  <div class="login-wrapper">    <div class="form-group">      <div class="form-group-title">        <h1>SAFE</h1>        <h2>          Simple Application Framework <br />          for Emergency Management        </h2>      </div>    </div>    <div class="buttons-row">      <safe-button category="tertiary" (click)="onLogin()"> Login </safe-button>    </div>  </div></div><div class="login-panel right"></div></div>'
+    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddResourceComponent', 'selector': 'app-add-resource'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>
@@ -463,14 +512,16 @@ export class LoginComponent implements OnInit {
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -482,6 +533,15 @@ export class LoginComponent implements OnInit {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
@@ -491,9 +551,9 @@ export class LoginComponent implements OnInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -41,9 +42,12 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>GetRolesQueryResponse</li>
+  <li
+  >
+  GetRolesQueryResponse</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -66,6 +70,7 @@
 
 
 
+
         <section>
             <h3 id="index">Index</h3>
             <table class="table table-sm table-bordered index-table">
@@ -79,10 +84,16 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#loading">loading</a>
+                                        <a href="#loading" 
+>
+                                            loading
+                                        </a>
                                 </li>
                                 <li>
-                                        <a href="#roles">roles</a>
+                                        <a href="#roles" 
+>
+                                            roles
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -100,7 +111,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="loading"></a>
-                                        <span class="name"><b>loading</b><a href="#loading"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>loading</b>
+                                            <a href="#loading">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -129,7 +144,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="roles"></a>
-                                        <span class="name"><b>roles</b><a href="#roles"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>roles</b>
+                                            <a href="#roles">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -160,27 +179,40 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import {
-  Dashboard, Form, Permission, Resource, Role, User, Record,
-  Application, Page, Workflow, Step, PositionAttribute, ApiConfiguration, PullJob
+  Dashboard,
+  Form,
+  Permission,
+  Resource,
+  Role,
+  User,
+  Record,
+  Application,
+  Page,
+  Workflow,
+  Step,
+  PositionAttribute,
+  ApiConfiguration,
+  PullJob,
 } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; GET USERS &#x3D;&#x3D;&#x3D;
 export const GET_USERS &#x3D; gql&#x60;
-{
-  users {
-    id
-    username
-    name
-    roles {
+  {
+    users {
       id
-      title
-      application {
+      username
+      name
+      roles {
         id
+        title
+        application {
+          id
+        }
       }
+      oid
     }
-    oid
   }
-}&#x60;;
+&#x60;;
 
 export interface GetUsersQueryResponse {
   loading: boolean;
@@ -189,21 +221,21 @@ export interface GetUsersQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET ROLES &#x3D;&#x3D;&#x3D;
 export const GET_ROLES &#x3D; gql&#x60;
-query GetRoles($all: Boolean, $application: ID) {
-  roles(all: $all, application: $application) {
-    id
-    title
-    permissions {
+  query GetRoles($all: Boolean, $application: ID) {
+    roles(all: $all, application: $application) {
       id
-      type
-    }
-    usersCount
-    application {
-      name
+      title
+      permissions {
+        id
+        type
+      }
+      usersCount
+      application {
+        name
+      }
     }
   }
-}&#x60;;
-
+&#x60;;
 
 export interface GetRolesQueryResponse {
   loading: boolean;
@@ -212,13 +244,14 @@ export interface GetRolesQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET PERMISSIONS &#x3D;&#x3D;&#x3D;
 export const GET_PERMISSIONS &#x3D; gql&#x60;
-query GetPermissions($application: Boolean) {
-  permissions(application: $application) {
-    id
-    type
-    global
+  query GetPermissions($application: Boolean) {
+    permissions(application: $application) {
+      id
+      type
+      global
+    }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetPermissionsQueryResponse {
   loading: boolean;
@@ -227,15 +260,16 @@ export interface GetPermissionsQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET DASHBOARDS &#x3D;&#x3D;&#x3D;
 export const GET_DASHBOARDS &#x3D; gql&#x60;
-{
-  dashboards {
-    id
-    name
-    createdAt
-    structure
-    canDelete
+  {
+    dashboards {
+      id
+      name
+      createdAt
+      structure
+      canDelete
+    }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetDashboardsQueryResponse {
   loading: boolean;
@@ -244,56 +278,58 @@ export interface GetDashboardsQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET FORMS &#x3D;&#x3D;&#x3D;
 export const GET_FORM_NAMES &#x3D; gql&#x60;
-query GetFormNames($first: Int, $afterCursor: ID) {
-  forms(first: $first, afterCursor: $afterCursor) {
-    edges {
-      node {
-        id
-        name
+  query GetFormNames($first: Int, $afterCursor: ID) {
+    forms(first: $first, afterCursor: $afterCursor) {
+      edges {
+        node {
+          id
+          name
+        }
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export const GET_SHORT_FORMS &#x3D; gql&#x60;
-query GetShortForms($first: Int, $afterCursor: ID, $filter: JSON) {
-  forms(first: $first, afterCursor: $afterCursor, filter: $filter) {
-    edges {
-      node {
-        id
-        name
-        createdAt
-        status
-        versionsCount
-        recordsCount
-        core
-        canSee
-        canCreateRecords
-        canUpdate
-        canDelete
-        resource {
+  query GetShortForms($first: Int, $afterCursor: ID, $filter: JSON) {
+    forms(first: $first, afterCursor: $afterCursor, filter: $filter) {
+      edges {
+        node {
           id
-          coreForm {
+          name
+          createdAt
+          status
+          versionsCount
+          recordsCount
+          core
+          canSee
+          canCreateRecords
+          canUpdate
+          canDelete
+          resource {
             id
-            name
+            coreForm {
+              id
+              name
+            }
           }
         }
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetFormsQueryResponse {
   loading: boolean;
@@ -312,63 +348,66 @@ export interface GetFormsQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET FORM BY ID &#x3D;&#x3D;&#x3D;
 export const GET_SHORT_FORM_BY_ID &#x3D; gql&#x60;
-query GetShortFormById($id: ID!) {
-  form(id: $id) {
-    id
-    name
-    core
-    structure
-    fields
-    status
-    canCreateRecords
-    uniqueRecord {
+  query GetShortFormById($id: ID!) {
+    form(id: $id) {
       id
-      modifiedAt
-      data
+      name
+      core
+      structure
+      fields
+      status
+      canCreateRecords
+      uniqueRecord {
+        id
+        modifiedAt
+        data
+      }
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
+      }
+      canUpdate
     }
-    permissions {
-      canSee {
-        id
-        title
-      }
-      canUpdate {
-        id
-        title
-      }
-      canDelete {
-        id
-        title
-      }
-    }
-    canUpdate
   }
-}&#x60;;
+&#x60;;
 
 export const GET_FORM_BY_ID &#x3D; gql&#x60;
-query GetFormById($id: ID!) {
-  form(id: $id) {
-    id
-    name
-    createdAt
-    structure
-    fields
-    status
-    versions {
+  query GetFormById($id: ID!) {
+    form(id: $id) {
       id
+      name
       createdAt
-      data
+      structure
+      fields
+      status
+      versions {
+        id
+        createdAt
+        data
+      }
+      canUpdate
     }
-    canUpdate
   }
-}&#x60;;
+&#x60;;
 
 export const GET_FORM_STRUCTURE &#x3D; gql&#x60;
-query GetFormStructure($id: ID!) {
-  form(id: $id) {
-    id
-    structure
+  query GetFormStructure($id: ID!) {
+    form(id: $id) {
+      id
+      structure
+    }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetFormByIdQueryResponse {
   loading: boolean;
@@ -376,30 +415,43 @@ export interface GetFormByIdQueryResponse {
 }
 
 export const GET_FORM_RECORDS &#x3D; gql&#x60;
-query GetFormRecords($id: ID!, $afterCursor: ID, $first: Int, $filter: JSON, $display: Boolean, $showDeletedRecords: Boolean) {
-  form(id: $id) {
-    records(first: $first, afterCursor: $afterCursor, filter: $filter, archived: $showDeletedRecords) {
-      edges {
-        node {
-          id
-          incrementalId
-          data(display: $display)
-          versions {
+  query GetFormRecords(
+    $id: ID!
+    $afterCursor: ID
+    $first: Int
+    $filter: JSON
+    $display: Boolean
+    $showDeletedRecords: Boolean
+  ) {
+    form(id: $id) {
+      records(
+        first: $first
+        afterCursor: $afterCursor
+        filter: $filter
+        archived: $showDeletedRecords
+      ) {
+        edges {
+          node {
             id
-            createdAt
-            data
+            incrementalId
+            data(display: $display)
+            versions {
+              id
+              createdAt
+              data
+            }
           }
+          cursor
         }
-        cursor
-      }
-      totalCount
-      pageInfo {
-        hasNextPage
-        endCursor
+        totalCount
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
       }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetFormRecordsQueryResponse {
   loading: boolean;
@@ -414,46 +466,55 @@ export interface GetFormRecordsQueryResponse {
         hasNextPage: boolean;
       };
       totalCount: number;
-    }
+    };
   };
 }
 
 // &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
 export const GET_RESOURCE_BY_ID &#x3D; gql&#x60;
-query GetResourceById($id: ID!) {
-  resource(id: $id) {
-    id
-    name
-    createdAt
-    fields
-    forms {
+  query GetResourceById($id: ID!) {
+    resource(id: $id) {
       id
       name
-      status
+      queryName
       createdAt
-      recordsCount
-      core
+      fields
+      layouts {
+        id
+        name
+        createdAt
+        query
+        display
+      }
+      forms {
+        id
+        name
+        status
+        createdAt
+        recordsCount
+        core
+        canUpdate
+        canDelete
+        canCreateRecords
+      }
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
+      }
       canUpdate
-      canDelete
-      canCreateRecords
     }
-    permissions {
-      canSee {
-        id
-        title
-      }
-      canUpdate {
-        id
-        title
-      }
-      canDelete {
-        id
-        title
-      }
-    }
-    canUpdate
   }
-}&#x60;;
+&#x60;;
 
 export interface GetResourceByIdQueryResponse {
   loading: boolean;
@@ -461,34 +522,47 @@ export interface GetResourceByIdQueryResponse {
 }
 
 export const GET_RESOURCE_RECORDS &#x3D; gql&#x60;
-query GetResourceRecords($id: ID!, $afterCursor: ID, $first: Int, $filter: JSON, $display: Boolean, $showDeletedRecords: Boolean) {
-  resource(id: $id) {
-    records(first: $first, afterCursor: $afterCursor, filter: $filter, archived: $showDeletedRecords) {
-      edges {
-        node {
-          id
-          incrementalId
-          data(display: $display)
-          versions {
+  query GetResourceRecords(
+    $id: ID!
+    $afterCursor: ID
+    $first: Int
+    $filter: JSON
+    $display: Boolean
+    $showDeletedRecords: Boolean
+  ) {
+    resource(id: $id) {
+      records(
+        first: $first
+        afterCursor: $afterCursor
+        filter: $filter
+        archived: $showDeletedRecords
+      ) {
+        edges {
+          node {
             id
-            createdAt
-            data
+            incrementalId
+            data(display: $display)
+            versions {
+              id
+              createdAt
+              data
+            }
+            form {
+              id
+              name
+            }
           }
-          form {
-            id
-            name
-          }
+          cursor
         }
-        cursor
-      }
-      totalCount
-      pageInfo {
-        hasNextPage
-        endCursor
+        totalCount
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
       }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetResourceRecordsQueryResponse {
   loading: boolean;
@@ -503,53 +577,55 @@ export interface GetResourceRecordsQueryResponse {
         hasNextPage: boolean;
       };
       totalCount: number;
-    }
+    };
   };
 }
 
 // &#x3D;&#x3D;&#x3D; GET RESOURCES &#x3D;&#x3D;&#x3D;
 export const GET_RESOURCES &#x3D; gql&#x60;
-query GetResources($first: Int, $afterCursor: ID){
-  resources(first: $first, afterCursor: $afterCursor) {
-    edges {
-      node {
-        id
-        name
-        forms {
+  query GetResources($first: Int, $afterCursor: ID) {
+    resources(first: $first, afterCursor: $afterCursor) {
+      edges {
+        node {
           id
           name
+          forms {
+            id
+            name
+          }
         }
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export const GET_RESOURCES_EXTENDED &#x3D; gql&#x60;
-query GetResourcesExtended($first: Int, $afterCursor: ID, $filter: JSON){
-  resources(first: $first, afterCursor: $afterCursor, filter: $filter) {
-    edges {
-      node {
-        id
-        name
-        createdAt
-        recordsCount
-        canDelete
+  query GetResourcesExtended($first: Int, $afterCursor: ID, $filter: JSON) {
+    resources(first: $first, afterCursor: $afterCursor, filter: $filter) {
+      edges {
+        node {
+          id
+          name
+          createdAt
+          recordsCount
+          canDelete
+        }
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetResourcesQueryResponse {
   loading: boolean;
@@ -561,31 +637,32 @@ export interface GetResourcesQueryResponse {
     pageInfo: {
       endCursor: string;
       hasNextPage: boolean;
-    },
+    };
     totalCount: number;
   };
 }
 
 // &#x3D;&#x3D;&#x3D; GET RECORD BY ID &#x3D;&#x3D;&#x3D;
 export const GET_RECORD_BY_ID &#x3D; gql&#x60;
-query GetRecordById($id: ID!) {
-  record(id: $id) {
-    id
-    createdAt
-    modifiedAt
-    createdBy {
-      name
-    }
-    modifiedBy {
-      name
-    }
-    data
-    form {
+  query GetRecordById($id: ID!) {
+    record(id: $id) {
       id
-      structure
+      createdAt
+      modifiedAt
+      createdBy {
+        name
+      }
+      modifiedBy {
+        name
+      }
+      data
+      form {
+        id
+        structure
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetRecordByIdQueryResponse {
   loading: boolean;
@@ -594,8 +671,8 @@ export interface GetRecordByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET DASHBOARD BY ID &#x3D;&#x3D;&#x3D;
 export const GET_DASHBOARD_BY_ID &#x3D; gql&#x60;
-  query GetDashboardById($id: ID!){
-    dashboard(id: $id){
+  query GetDashboardById($id: ID!) {
+    dashboard(id: $id) {
       id
       name
       createdAt
@@ -647,43 +724,44 @@ export interface GetDashboardByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET APPLICATIONS &#x3D;&#x3D;&#x3D;
 export const GET_APPLICATIONS &#x3D; gql&#x60;
-query GetApplications($first: Int, $afterCursor: ID, $filter: JSON) {
-  applications(first: $first, afterCursor: $afterCursor, filter: $filter) {
-    edges {
-      node {
-        id
-        name
-        createdAt
-        modifiedAt
-        status
-        permissions {
-          canSee {
-            id
-            title
+  query GetApplications($first: Int, $afterCursor: ID, $filter: JSON) {
+    applications(first: $first, afterCursor: $afterCursor, filter: $filter) {
+      edges {
+        node {
+          id
+          name
+          createdAt
+          modifiedAt
+          status
+          permissions {
+            canSee {
+              id
+              title
+            }
+            canUpdate {
+              id
+              title
+            }
+            canDelete {
+              id
+              title
+            }
           }
-          canUpdate {
-            id
-            title
-          }
-          canDelete {
-            id
-            title
-          }
+          canSee
+          canUpdate
+          canDelete
+          usersCount
         }
-        canSee
-        canUpdate
-        canDelete
-        usersCount
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetApplicationsQueryResponse {
   loading: boolean;
@@ -695,15 +773,15 @@ export interface GetApplicationsQueryResponse {
     pageInfo: {
       endCursor: string;
       hasNextPage: boolean;
-    },
+    };
     totalCount: number;
   };
 }
 
 // &#x3D;&#x3D;&#x3D; GET APPLICATION BY ID &#x3D;&#x3D;&#x3D;
 export const GET_APPLICATION_BY_ID &#x3D; gql&#x60;
-  query GetApplicationById($id: ID!, $asRole: ID){
-    application(id: $id, asRole: $asRole){
+  query GetApplicationById($id: ID!, $asRole: ID) {
+    application(id: $id, asRole: $asRole) {
       id
       name
       description
@@ -766,8 +844,8 @@ export interface GetApplicationByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET PAGE BY ID &#x3D;&#x3D;&#x3D;
 export const GET_PAGE_BY_ID &#x3D; gql&#x60;
-  query GetPageById($id: ID!){
-    page(id: $id){
+  query GetPageById($id: ID!) {
+    page(id: $id) {
       id
       name
       createdAt
@@ -805,8 +883,8 @@ export interface GetPageByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET WORKFLOW BY ID &#x3D;&#x3D;&#x3D;
 export const GET_WORKFLOW_BY_ID &#x3D; gql&#x60;
-  query GetWorkflowById($id: ID!, $asRole: ID){
-    workflow(id: $id, asRole: $asRole){
+  query GetWorkflowById($id: ID!, $asRole: ID) {
+    workflow(id: $id, asRole: $asRole) {
       id
       name
       createdAt
@@ -865,8 +943,8 @@ export interface GetWorkflowByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET STEP BY ID &#x3D;&#x3D;&#x3D;
 export const GET_STEP_BY_ID &#x3D; gql&#x60;
-  query GetStepById($id: ID!){
-    step(id: $id){
+  query GetStepById($id: ID!) {
+    step(id: $id) {
       id
       name
       createdAt
@@ -910,27 +988,28 @@ export interface GetStepByIdQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET ROUTING KEYS &#x3D;&#x3D;&#x3D;
 export const GET_ROUTING_KEYS &#x3D; gql&#x60;
-query GetRoutingKeys($first: Int, $afterCursor: ID) {
-  applications(first: $first, afterCursor: $afterCursor) {
-    edges {
-      node {
-        id
-        name
-        channels {
+  query GetRoutingKeys($first: Int, $afterCursor: ID) {
+    applications(first: $first, afterCursor: $afterCursor) {
+      edges {
+        node {
           id
-          title
-          routingKey
+          name
+          channels {
+            id
+            title
+            routingKey
+          }
         }
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetRoutingKeysQueryResponse {
   loading: boolean;
@@ -938,26 +1017,27 @@ export interface GetRoutingKeysQueryResponse {
     edges: {
       node: Application;
       cursor: string;
-    }[],
+    }[];
     pageInfo: {
       endCursor: string;
       hasNextPage: boolean;
-    },
+    };
     totalCount: number;
   };
 }
 
 // &#x3D;&#x3D;&#x3D; GET POSITION ATTRIBUTES FORM CATEGORY &#x3D;&#x3D;&#x3D;
 export const GET_POSITION_ATTRIBUTES_FROM_CATEGORY &#x3D; gql&#x60;
-query GetPositionAttributesFromCategory($id: ID!) {
-  positionAttributes(category: $id) {
-    value
-    category {
-      title
+  query GetPositionAttributesFromCategory($id: ID!) {
+    positionAttributes(category: $id) {
+      value
+      category {
+        title
+      }
+      usersCount
     }
-    usersCount
   }
-}&#x60;;
+&#x60;;
 
 export interface GetPositionAttributesFromCategoryQueryResponse {
   loading: boolean;
@@ -966,30 +1046,31 @@ export interface GetPositionAttributesFromCategoryQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET RECORD DETAILS &#x3D;&#x3D;&#x3D;
 export const GET_RECORD_DETAILS &#x3D; gql&#x60;
-query GetRecordDetails($id: ID!) {
-  record(id: $id) {
-    id
-    data
-    createdAt
-    modifiedAt
-    form {
+  query GetRecordDetails($id: ID!) {
+    record(id: $id) {
       id
-      name
-      createdAt
-      structure
-      fields
-      core
-    }
-    versions {
-      id
-      createdAt
       data
-      createdBy {
+      createdAt
+      modifiedAt
+      form {
+        id
         name
+        createdAt
+        structure
+        fields
+        core
+      }
+      versions {
+        id
+        createdAt
+        data
+        createdBy {
+          name
+        }
       }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetRecordDetailsQueryResponse {
   loading: boolean;
@@ -998,44 +1079,45 @@ export interface GetRecordDetailsQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET API CONFIGURATIONS &#x3D;&#x3D;&#x3D;
 export const GET_API_CONFIGURATIONS &#x3D; gql&#x60;
-query GetApiConfigurations($first: Int, $afterCursor: ID) {
-  apiConfigurations(first: $first, afterCursor: $afterCursor) {
-    edges {
-      node {
-        id
-        name
-        status
-        authType
-        endpoint
-        pingUrl
-        settings
-        permissions {
-          canSee {
-            id
-            title
+  query GetApiConfigurations($first: Int, $afterCursor: ID) {
+    apiConfigurations(first: $first, afterCursor: $afterCursor) {
+      edges {
+        node {
+          id
+          name
+          status
+          authType
+          endpoint
+          pingUrl
+          settings
+          permissions {
+            canSee {
+              id
+              title
+            }
+            canUpdate {
+              id
+              title
+            }
+            canDelete {
+              id
+              title
+            }
           }
-          canUpdate {
-            id
-            title
-          }
-          canDelete {
-            id
-            title
-          }
+          canSee
+          canUpdate
+          canDelete
         }
-        canSee
-        canUpdate
-        canDelete
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
+&#x60;;
 
 export interface GetApiConfigurationsQueryResponse {
   loading: boolean;
@@ -1047,41 +1129,42 @@ export interface GetApiConfigurationsQueryResponse {
     pageInfo: {
       endCursor: string;
       hasNextPage: boolean;
-    },
+    };
     totalCount: number;
   };
 }
 
 // &#x3D;&#x3D;&#x3D; GET API CONFIGURATION &#x3D;&#x3D;&#x3D;
 export const GET_API_CONFIGURATION &#x3D; gql&#x60;
-query GetApiConfiguration($id: ID!) {
-  apiConfiguration(id: $id) {
-    id
-    name
-    status
-    authType
-    endpoint
-    pingUrl
-    settings
-    permissions {
-      canSee {
-        id
-        title
+  query GetApiConfiguration($id: ID!) {
+    apiConfiguration(id: $id) {
+      id
+      name
+      status
+      authType
+      endpoint
+      pingUrl
+      settings
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
       }
-      canUpdate {
-        id
-        title
-      }
-      canDelete {
-        id
-        title
-      }
+      canSee
+      canUpdate
+      canDelete
     }
-    canSee
-    canUpdate
-    canDelete
   }
-}&#x60;;
+&#x60;;
 
 export interface GetApiConfigurationQueryResponse {
   loading: boolean;
@@ -1090,39 +1173,42 @@ export interface GetApiConfigurationQueryResponse {
 
 // &#x3D;&#x3D;&#x3D; GET PULL JOBS &#x3D;&#x3D;&#x3D;
 export const GET_PULL_JOBS &#x3D; gql&#x60;
-query GetPullJobs($first: Int, $afterCursor: ID) {
-  pullJobs(first: $first, afterCursor: $afterCursor) {
-    edges {
-      node {
-        id
-        name
-        status
-        apiConfiguration {
+  query GetPullJobs($first: Int, $afterCursor: ID) {
+    pullJobs(first: $first, afterCursor: $afterCursor) {
+      edges {
+        node {
           id
           name
+          status
+          apiConfiguration {
+            id
+            name
+            authType
+          }
+          url
+          path
+          schedule
+          convertTo {
+            id
+            name
+          }
+          mapping
+          uniqueIdentifiers
+          channel {
+            id
+            title
+          }
         }
-        schedule
-        convertTo {
-          id
-          name
-        }
-        mapping
-        uniqueIdentifiers
-        channel {
-          id
-          title
-        }
+        cursor
       }
-      cursor
-    }
-    totalCount
-    pageInfo {
-      hasNextPage
-      endCursor
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
-}&#x60;;
-
+&#x60;;
 
 export interface GetPullJobsQueryResponse {
   loading: boolean;
@@ -1134,7 +1220,7 @@ export interface GetPullJobsQueryResponse {
     pageInfo: {
       endCursor: string;
       hasNextPage: boolean;
-    },
+    };
     totalCount: number;
   };
 }
@@ -1143,14 +1229,15 @@ export interface GetPullJobsQueryResponse {
 </div>
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1162,6 +1249,15 @@ export interface GetPullJobsQueryResponse {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
@@ -1171,9 +1267,9 @@ export interface GetPullJobsQueryResponse {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

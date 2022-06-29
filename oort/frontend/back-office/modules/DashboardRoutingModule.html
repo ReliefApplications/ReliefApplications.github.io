@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -34,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>DashboardRoutingModule</li>
+    <li >DashboardRoutingModule</li>
 </ol>
 
 
@@ -60,6 +61,7 @@
 
 
 
+
         <div class="container-fluid module">
             <div class="row">
             </div>
@@ -74,185 +76,213 @@
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { DashboardComponent } from &#x27;./dashboard.component&#x27;;
 
-/*  Divide the dashboard module into three modules:
+/** Divide the dashboard module into three modules:
     * forms and resources
     * dashboards
     * users
     Use lazy loading for performance.
 */
 export const routes &#x3D; [
-    {
+  {
+    path: &#x27;&#x27;,
+    component: DashboardComponent,
+    children: [
+      {
         path: &#x27;&#x27;,
-        component: DashboardComponent,
+        redirectTo: &#x27;applications&#x27;,
+      },
+      {
+        path: &#x27;profile&#x27;,
+        loadChildren: () &#x3D;&gt;
+          import(&#x27;./pages/profile/profile.module&#x27;).then((m) &#x3D;&gt; m.ProfileModule),
+      },
+      {
+        path: &#x27;forms&#x27;,
         children: [
-            {
+          {
+            path: &#x27;&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/forms/forms.module&#x27;).then((m) &#x3D;&gt; m.FormsModule),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;records/:id&#x27;,
+            children: [
+              {
                 path: &#x27;&#x27;,
-                redirectTo: &#x27;applications&#x27;
-            },
-            {
-                path: &#x27;profile&#x27;,
-                loadChildren: () &#x3D;&gt; import(&#x27;./pages/profile/profile.module&#x27;)
-                    .then(m &#x3D;&gt; m.ProfileModule),
-            },
-            {
-                path: &#x27;forms&#x27;,
-                children: [
-                    {
-                        path: &#x27;&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/forms/forms.module&#x27;)
-                            .then(m &#x3D;&gt; m.FormsModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;records/:id&#x27;,
-                        children: [
-                            {
-                                path: &#x27;&#x27;,
-                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/form-records/form-records.module&#x27;)
-                                    .then(m &#x3D;&gt; m.FormRecordsModule),
-                            },
-                            {
-                                path: &#x27;update/:id&#x27;,
-                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/update-record/update-record.module&#x27;)
-                                    .then(m &#x3D;&gt; m.UpdateRecordModule),
-                                // canActivate: [SafePermissionGuard]
-                            }
-                        ]
-                    },
-                    {
-                        path: &#x27;answer/:id&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/form-answer/form-answer.module&#x27;)
-                            .then(m &#x3D;&gt; m.FormAnswerModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;builder&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/form-builder/form-builder.module&#x27;)
-                            .then(m &#x3D;&gt; m.FormBuilderModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;builder/:id&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/form-builder/form-builder.module&#x27;)
-                            .then(m &#x3D;&gt; m.FormBuilderModule),
-                        // canActivate: [SafePermissionGuard]
-                    }
-                ]
-            },
-            {
-                path: &#x27;resources&#x27;,
-                children: [
-                    {
-                        path: &#x27;&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/resources/resources.module&#x27;)
-                            .then(m &#x3D;&gt; m.ResourcesModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;:id&#x27;,
-                        children: [
-                            {
-                                path: &#x27;&#x27;,
-                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/resource/resource.module&#x27;)
-                                .then(m &#x3D;&gt; m.ResourceModule)
-                            },
-                            {
-                                path: &#x27;update/:id&#x27;,
-                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/update-record/update-record.module&#x27;)
-                                    .then(m &#x3D;&gt; m.UpdateRecordModule),
-                                // canActivate: [SafePermissionGuard]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                path: &#x27;dashboards&#x27;,
-                children: [
-                    {
-                        path: &#x27;&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/dashboards/dashboards.module&#x27;)
-                            .then(m &#x3D;&gt; m.DashboardsModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;:id&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/dashboard/dashboard.module&#x27;)
-                            .then(m &#x3D;&gt; m.DashboardModule),
-                        // canActivate: [SafePermissionGuard]
-                    }
-                ]
-            },
-            {
-                path: &#x27;applications&#x27;,
-                children: [
-                    {
-                        path: &#x27;&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/applications/applications.module&#x27;)
-                            .then(m &#x3D;&gt; m.ApplicationsModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    // {
-                    //     path: &#x27;:id&#x27;,
-                    //     loadChildren: () &#x3D;&gt; import(&#x27;../application/application.module&#x27;)
-                    //         .then(m &#x3D;&gt; m.ApplicationModule),
-                    //     // canActivate: [SafePermissionGuard]
-                    // }
-                ]
-            },
-            {
-                path: &#x27;settings&#x27;,
-                children: [
-                    {
-                        path: &#x27;users&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/users/users.module&#x27;)
-                            .then(m &#x3D;&gt; m.UsersModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;roles&#x27;,
-                        loadChildren: () &#x3D;&gt; import(&#x27;./pages/roles/roles.module&#x27;)
-                            .then(m &#x3D;&gt; m.RolesModule),
-                        // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;apiconfigurations&#x27;,
-                        children: [
-                            {
-                                path: &#x27;&#x27;,
-                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/api-configurations/api-configurations.module&#x27;)
-                                .then(m &#x3D;&gt; m.ApiConfigurationsModule),
-                                // canActivate: [SafePermissionGuard]
-                            },
-                            {
-                                path: &#x27;:id&#x27;,
-                                loadChildren: () &#x3D;&gt; import(&#x27;./pages/api-configuration/api-configuration.module&#x27;)
-                                    .then(m &#x3D;&gt; m.ApiConfigurationModule),
-                                // canActivate: [SafePermissionGuard]
-                            }
-                        ]
-                    },
-                    {
-                      path: &#x27;pulljobs&#x27;,
-                      loadChildren: () &#x3D;&gt; import(&#x27;./pages/pull-jobs/pull-jobs.module&#x27;)
-                        .then(m &#x3D;&gt; m.PullJobsModule),
-                      // canActivate: [SafePermissionGuard]
-                    },
-                    {
-                        path: &#x27;**&#x27;,
-                        pathMatch: &#x27;full&#x27;,
-                        redirectTo: &#x27;users&#x27;
-                    }
-                ]
-            }
-        ]
-    }
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;./pages/form-records/form-records.module&#x27;).then(
+                    (m) &#x3D;&gt; m.FormRecordsModule
+                  ),
+              },
+              {
+                path: &#x27;update/:id&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;./pages/update-record/update-record.module&#x27;).then(
+                    (m) &#x3D;&gt; m.UpdateRecordModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
+            ],
+          },
+          {
+            path: &#x27;answer/:id&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/form-answer/form-answer.module&#x27;).then(
+                (m) &#x3D;&gt; m.FormAnswerModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;builder&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/form-builder/form-builder.module&#x27;).then(
+                (m) &#x3D;&gt; m.FormBuilderModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;builder/:id&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/form-builder/form-builder.module&#x27;).then(
+                (m) &#x3D;&gt; m.FormBuilderModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+        ],
+      },
+      {
+        path: &#x27;resources&#x27;,
+        children: [
+          {
+            path: &#x27;&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/resources/resources.module&#x27;).then(
+                (m) &#x3D;&gt; m.ResourcesModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;:id&#x27;,
+            children: [
+              {
+                path: &#x27;&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;./pages/resource/resource.module&#x27;).then(
+                    (m) &#x3D;&gt; m.ResourceModule
+                  ),
+              },
+              {
+                path: &#x27;update/:id&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;./pages/update-record/update-record.module&#x27;).then(
+                    (m) &#x3D;&gt; m.UpdateRecordModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
+            ],
+          },
+        ],
+      },
+      {
+        path: &#x27;dashboards&#x27;,
+        children: [
+          {
+            path: &#x27;&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/dashboards/dashboards.module&#x27;).then(
+                (m) &#x3D;&gt; m.DashboardsModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;:id&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/dashboard/dashboard.module&#x27;).then(
+                (m) &#x3D;&gt; m.DashboardModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+        ],
+      },
+      {
+        path: &#x27;applications&#x27;,
+        children: [
+          {
+            path: &#x27;&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/applications/applications.module&#x27;).then(
+                (m) &#x3D;&gt; m.ApplicationsModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+          // {
+          //     path: &#x27;:id&#x27;,
+          //     loadChildren: () &#x3D;&gt; import(&#x27;../application/application.module&#x27;)
+          //         .then(m &#x3D;&gt; m.ApplicationModule),
+          //     // canActivate: [SafePermissionGuard]
+          // }
+        ],
+      },
+      {
+        path: &#x27;settings&#x27;,
+        children: [
+          {
+            path: &#x27;users&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/users/users.module&#x27;).then((m) &#x3D;&gt; m.UsersModule),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;roles&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/roles/roles.module&#x27;).then((m) &#x3D;&gt; m.RolesModule),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;apiconfigurations&#x27;,
+            children: [
+              {
+                path: &#x27;&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(
+                    &#x27;./pages/api-configurations/api-configurations.module&#x27;
+                  ).then((m) &#x3D;&gt; m.ApiConfigurationsModule),
+                // canActivate: [SafePermissionGuard]
+              },
+              {
+                path: &#x27;:id&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(
+                    &#x27;./pages/api-configuration/api-configuration.module&#x27;
+                  ).then((m) &#x3D;&gt; m.ApiConfigurationModule),
+                // canActivate: [SafePermissionGuard]
+              },
+            ],
+          },
+          {
+            path: &#x27;pulljobs&#x27;,
+            loadChildren: () &#x3D;&gt;
+              import(&#x27;./pages/pull-jobs/pull-jobs.module&#x27;).then(
+                (m) &#x3D;&gt; m.PullJobsModule
+              ),
+            // canActivate: [SafePermissionGuard]
+          },
+          {
+            path: &#x27;**&#x27;,
+            pathMatch: &#x27;full&#x27;,
+            redirectTo: &#x27;users&#x27;,
+          },
+        ],
+      },
+    ],
+  },
 ];
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {}
 </code></pre>
     </div>
 </div>
@@ -266,14 +296,16 @@ export class DashboardRoutingModule { }
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -285,6 +317,15 @@ export class DashboardRoutingModule { }
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
@@ -294,9 +335,9 @@ export class DashboardRoutingModule { }
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

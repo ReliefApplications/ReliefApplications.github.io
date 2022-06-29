@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -34,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppPreviewRoutingModule</li>
+    <li >AppPreviewRoutingModule</li>
 </ol>
 
 
@@ -60,6 +61,7 @@
 
 
 
+
         <div class="container-fluid module">
             <div class="row">
             </div>
@@ -74,50 +76,58 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { AppPreviewComponent } from &#x27;./app-preview.component&#x27;;
 
+/** List of Application Preview routes */
 const routes: Routes &#x3D; [
   {
-      path: &#x27;&#x27;,
-      component: AppPreviewComponent,
-      children: [
+    path: &#x27;&#x27;,
+    component: AppPreviewComponent,
+    children: [
+      {
+        path: &#x27;dashboard/:id&#x27;,
+        loadChildren: () &#x3D;&gt;
+          &quot;import(&#x27;./pages/dashboard/dashboard.module&#x27;).then(\
+            (m) &#x3D;&gt; m.DashboardModule\
+          )&quot;,
+      },
+      {
+        path: &#x27;form/:id&#x27;,
+        loadChildren: () &#x3D;&gt;
+          &quot;import(&#x27;./pages/form/form.module&#x27;).then((m) &#x3D;&gt; m.FormModule)&quot;,
+      },
+      {
+        path: &#x27;workflow/:id&#x27;,
+        loadChildren: () &#x3D;&gt;
+          &quot;import(&#x27;./pages/workflow/workflow.module&#x27;).then(\
+            (m) &#x3D;&gt; m.WorkflowModule\
+          )&quot;,
+      },
+      {
+        path: &#x27;settings&#x27;,
+        children: [
           {
-              path: &#x27;dashboard/:id&#x27;,
-              loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/dashboard/dashboard.module&#x27;)\
-                  .then(m &#x3D;&gt; m.DashboardModule)&quot;,
+            path: &#x27;roles&#x27;,
+            loadChildren: () &#x3D;&gt;
+              &quot;import(&#x27;./pages/roles/roles.module&#x27;).then((m) &#x3D;&gt; m.RolesModule)&quot;,
           },
           {
-              path: &#x27;form/:id&#x27;,
-              loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/form/form.module&#x27;)\
-                  .then(m &#x3D;&gt; m.FormModule)&quot;,
+            path: &#x27;users&#x27;,
+            loadChildren: () &#x3D;&gt;
+              &quot;import(&#x27;./pages/users/users.module&#x27;).then((m) &#x3D;&gt; m.UsersModule)&quot;,
           },
-          {
-              path: &#x27;workflow/:id&#x27;,
-              loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/workflow/workflow.module&#x27;)\
-                  .then(m &#x3D;&gt; m.WorkflowModule)&quot;,
-          },
-          {
-              path: &#x27;settings&#x27;,
-              children: [
-                {
-                  path: &#x27;roles&#x27;,
-                  loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/roles/roles.module&#x27;)\
-                    .then(m &#x3D;&gt; m.RolesModule)&quot;,
-                },
-                {
-                  path: &#x27;users&#x27;,
-                  loadChildren: () &#x3D;&gt; &quot;import(&#x27;./pages/users/users.module&#x27;)\
-                    .then(m &#x3D;&gt; m.UsersModule)&quot;,
-                },
-              ]
-            }
-      ]
-  }
+        ],
+      },
+    ],
+  },
 ];
 
+/**
+ * Routing Module of Application Preview toolbar.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppPreviewRoutingModule { }
+export class AppPreviewRoutingModule {}
 </code></pre>
     </div>
 </div>
@@ -131,14 +141,16 @@ export class AppPreviewRoutingModule { }
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -150,6 +162,15 @@ export class AppPreviewRoutingModule { }
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
@@ -159,9 +180,9 @@ export class AppPreviewRoutingModule { }
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
