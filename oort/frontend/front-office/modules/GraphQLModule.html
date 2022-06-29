@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li >AppRoutingModule</li>
+    <li >GraphQLModule</li>
 </ol>
 
 
@@ -55,11 +55,18 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/front-office/src/app/app-routing.module.ts</code>
+            <code>projects/front-office/src/app/graphql.module.ts</code>
         </p>
 
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>GraphQL Module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -73,53 +80,120 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import { AuthGuard } from &#x27;./guards/auth.guard&#x27;;
+import { ApolloModule, APOLLO_OPTIONS } from &#x27;apollo-angular&#x27;;
+import {
+  ApolloClientOptions,
+  ApolloLink,
+  InMemoryCache,
+  split,
+} from &#x27;@apollo/client/core&#x27;;
+import { HttpLink } from &#x27;apollo-angular/http&#x27;;
+import { setContext } from &#x27;@apollo/client/link/context&#x27;;
+import { WebSocketLink } from &#x27;@apollo/client/link/ws&#x27;;
+import { getMainDefinition } from &#x27;@apollo/client/utilities&#x27;;
+import { environment } from &#x27;../environments/environment&#x27;;
 
 /**
- * List of top level routes of the Front-Office.
+ * Configuration of the Apollo client.
+ *
+ * @param httpLink Apollo http link
+ * @returns void
  */
-const routes: Routes &#x3D; [
-  {
-    path: &#x27;auth&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./auth/auth.module&#x27;).then((m) &#x3D;&gt; m.AuthModule)&quot;,
-  },
-  {
-    path: &#x27;&#x27;,
-    children: [
-      {
-        path: &#x27;&#x27;,
-        loadChildren: () &#x3D;&gt;
-          &quot;import(&#x27;./dashboard/dashboard.module&#x27;).then((m) &#x3D;&gt; m.DashboardModule)&quot;,
+export const createApollo &#x3D; (httpLink: HttpLink): ApolloClientOptions&lt;any&gt; &#x3D;&gt; {
+  const basic &#x3D; setContext((operation, context) &#x3D;&gt; ({
+    headers: {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      Accept: &#x27;charset&#x3D;utf-8&#x27;,
+    },
+  }));
+
+  const auth &#x3D; setContext((operation, context) &#x3D;&gt; {
+    // Get the authentication token from local storage if it exists
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
+    return {
+      headers: {
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        Authorization: &#x60;Bearer ${token}&#x60;,
       },
-      {
-        path: &#x27;:id&#x27;,
-        loadChildren: () &#x3D;&gt;
-          &quot;import(&#x27;./dashboard/dashboard.module&#x27;).then((m) &#x3D;&gt; m.DashboardModule)&quot;,
+    };
+  });
+
+  const http &#x3D; httpLink.create({ uri: &#x60;${environment.apiUrl}/graphql&#x60; });
+
+  const ws &#x3D; new WebSocketLink({
+    uri: &#x60;${environment.subscriptionApiUrl}/graphql&#x60;,
+    options: {
+      reconnect: true,
+      connectionParams: {
+        authToken: localStorage.getItem(&#x27;idtoken&#x27;),
       },
-    ],
-    canActivate: [AuthGuard],
-  },
-  {
-    path: &#x27;**&#x27;,
-    redirectTo: &#x27;&#x27;,
-    pathMatch: &#x27;full&#x27;,
-  },
-];
+      connectionCallback: (error) &#x3D;&gt; {
+        // if (localStorage.getItem(&#x27;loaded&#x27;) &#x3D;&#x3D;&#x3D; &#x27;true&#x27;) {
+        //   // location.reload();
+        //   localStorage.setItem(&#x27;loaded&#x27;, &#x27;false&#x27;);
+        // }
+        // localStorage.setItem(&#x27;loaded&#x27;, &#x27;true&#x27;);
+      },
+    },
+  });
+
+  /** Definition for apollo link query definitino */
+  interface Definition {
+    kind: string;
+    operation?: string;
+  }
+
+  const link &#x3D; ApolloLink.from([
+    basic,
+    auth,
+    split(
+      ({ query }) &#x3D;&gt; {
+        const { kind, operation }: Definition &#x3D; getMainDefinition(query);
+        return kind &#x3D;&#x3D;&#x3D; &#x27;OperationDefinition&#x27; &amp;&amp; operation &#x3D;&#x3D;&#x3D; &#x27;subscription&#x27;;
+      },
+      ws,
+      http
+    ),
+  ]);
+
+  // Cache is not currently used, due to fetchPolicy values
+  const cache &#x3D; new InMemoryCache();
+
+  return {
+    link,
+    cache,
+    defaultOptions: {
+      watchQuery: {
+        fetchPolicy: &#x27;network-only&#x27;,
+        // fetchPolicy: &#x27;cache-and-network&#x27;,
+        errorPolicy: &#x27;ignore&#x27;,
+      },
+      query: {
+        fetchPolicy: &#x27;network-only&#x27;,
+        // fetchPolicy: &#x27;cache-and-network&#x27;,
+        errorPolicy: &#x27;all&#x27;,
+      },
+      mutate: {
+        errorPolicy: &#x27;all&#x27;,
+      },
+    },
+  };
+};
 
 /**
- * Root module of Routing. Separate the front into two modules: &#x27;auth&#x27; and &#x27;dashboard&#x27;.
- * Use lazy loading for performance.
+ * GraphQL Module.
  */
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      relativeLinkResolution: &#x27;legacy&#x27;,
-    }),
+  exports: [ApolloModule],
+  providers: [
+    {
+      provide: APOLLO_OPTIONS,
+      useFactory: createApollo,
+      deps: [HttpLink],
+    },
   ],
-  exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class GraphQLModule {}
 </code></pre>
     </div>
 </div>
@@ -166,7 +240,7 @@ export class AppRoutingModule {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'GraphQLModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
