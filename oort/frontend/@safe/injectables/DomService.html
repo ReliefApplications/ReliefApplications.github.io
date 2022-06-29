@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>DomService</li>
+  <li >DomService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,6 +62,15 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared DOM service. Dom service is used to inject component on the go ( meaning without putting them in template directly ).
+TODO: prefix</p>
+
+            </p>
+
 
 
             <section>
@@ -76,10 +87,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#appendComponentToBody">appendComponentToBody</a>
+                                <a href="#appendComponentToBody" >appendComponentToBody</a>
                             </li>
                             <li>
-                                <a href="#removeComponentFromBody">removeComponentFromBody</a>
+                                <a href="#removeComponentFromBody" >removeComponentFromBody</a>
                             </li>
                         </ul>
                     </td>
@@ -99,17 +110,20 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(componentFactoryResolver: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>, applicationRef: <a href="../interfaces/Application.html">ApplicationRef</a>, injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>)</code>
+<code>constructor(componentFactoryResolver: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>, applicationRef: <a href="../interfaces/Application.html" target="_self">ApplicationRef</a>, injector: <a href="https://angular.io/api/core/Injector" target="_blank">Injector</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">projects/safe/src/lib/services/dom.service.ts:6</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/safe/src/lib/services/dom.service.ts:17</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Shared DOM service. Dom service is used to inject component on the go ( meaning without putting them in template directly ).
+TODO: prefix</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -118,6 +132,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -132,6 +147,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Angular component factory resolver</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>applicationRef</td>
@@ -144,6 +163,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Angular application ref</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>injector</td>
@@ -156,6 +179,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Angular injector</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -177,39 +204,41 @@
                 <td class="col-md-4">
                     <a name="appendComponentToBody"></a>
                     <span class="name">
-                        <b>
-                            appendComponentToBody
-                        </b>
+                        <span ><b>appendComponentToBody</b></span>
                         <a href="#appendComponentToBody"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>appendComponentToBody(component: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, element: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>appendComponentToBody(component: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, parent: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">projects/safe/src/lib/services/dom.service.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">projects/safe/src/lib/services/dom.service.ts:39</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Appends a component to html body.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -224,9 +253,13 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Component to inject</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>element</td>
+                                    <td>parent</td>
                                     <td>
                                                 <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
@@ -236,6 +269,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>parent element</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -247,7 +284,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Ref of the new component</p>
+
                     </div>
                 </td>
             </tr>
@@ -259,9 +297,7 @@
                 <td class="col-md-4">
                     <a name="removeComponentFromBody"></a>
                     <span class="name">
-                        <b>
-                            removeComponentFromBody
-                        </b>
+                        <span ><b>removeComponentFromBody</b></span>
                         <a href="#removeComponentFromBody"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -275,23 +311,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">projects/safe/src/lib/services/dom.service.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">projects/safe/src/lib/services/dom.service.ts:61</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Removes a component from the html body.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -306,6 +346,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Ref of the component to remove</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -329,36 +373,66 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Injectable, Injector } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  ApplicationRef,
+  ComponentFactoryResolver,
+  ComponentRef,
+  EmbeddedViewRef,
+  Injectable,
+  Injector,
+} from &#x27;@angular/core&#x27;;
 
+/**
+ * Shared DOM service. Dom service is used to inject component on the go ( meaning without putting them in template directly ).
+ * TODO: prefix
+ */
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class DomService {
-
+  /**
+   * Shared DOM service. Dom service is used to inject component on the go ( meaning without putting them in template directly ).
+   * TODO: prefix
+   *
+   * @param componentFactoryResolver Angular component factory resolver
+   * @param applicationRef Angular application ref
+   * @param injector Angular injector
+   */
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
     private applicationRef: ApplicationRef,
     private injector: Injector
-  ) { }
+  ) {}
 
-  appendComponentToBody(component: any, element: any): ComponentRef&lt;any&gt; {
+  /**
+   * Appends a component to html body.
+   *
+   * @param component Component to inject
+   * @param parent parent element
+   * @returns Ref of the new component
+   */
+  appendComponentToBody(component: any, parent: any): ComponentRef&lt;any&gt; {
     // create a component reference
-    const componentRef &#x3D; this.componentFactoryResolver.resolveComponentFactory(component)
+    const componentRef &#x3D; this.componentFactoryResolver
+      .resolveComponentFactory(component)
       .create(this.injector);
 
     // attach component to the appRef so that so that it will be dirty checked.
     this.applicationRef.attachView(componentRef.hostView);
 
     // get DOM element from component
-    const domElem &#x3D; (componentRef.hostView as EmbeddedViewRef &lt; any &gt; )
+    const domElem &#x3D; (componentRef.hostView as EmbeddedViewRef&lt;any&gt;)
       .rootNodes[0] as HTMLElement;
 
-    element.appendChild(domElem);
-
+    parent.appendChild(domElem);
     return componentRef;
   }
 
+  /**
+   * Removes a component from the html body.
+   *
+   * @param componentRef Ref of the component to remove
+   */
   removeComponentFromBody(componentRef: ComponentRef&lt;any&gt;): void {
     this.applicationRef.detachView(componentRef.hostView);
     componentRef.destroy();
@@ -375,14 +449,15 @@ export class DomService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -394,6 +469,15 @@ export class DomService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -403,9 +487,9 @@ export class DomService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

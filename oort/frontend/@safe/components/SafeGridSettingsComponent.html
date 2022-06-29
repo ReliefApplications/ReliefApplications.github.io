@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,7 +36,9 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>SafeGridSettingsComponent</li>
+  <li
+  >
+  SafeGridSettingsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -65,6 +68,14 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Modal content for the settings of the grid widgets.</p>
+
+    </p>
+
 
     <p class="comment">
         <h3>Implements</h3>
@@ -77,7 +88,7 @@
 
 <section>
     <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
+    <table class="table table-sm table-hover metadata">
         <tbody>
 
 
@@ -88,6 +99,14 @@
 
 
 
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code>{
+    provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
+}</code>
+                </td>
+            </tr>
 
 
             <tr>
@@ -132,30 +151,51 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#channels">channels</a>
+                                <a href="#allQueries" >allQueries</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#fields">fields</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#availableQueries" >availableQueries</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#queryName">queryName</a>
+                                <a href="#channels" >channels</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#relatedForms">relatedForms</a>
+                                <a href="#fields" >fields</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#tabIndex">tabIndex</a>
+                                <a href="#filteredQueries" >filteredQueries</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#templates">templates</a>
+                                <a href="#form" >form</a>
                             </li>
                             <li>
-                                <a href="#tileForm">tileForm</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#queryName" >queryName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#relatedForms" >relatedForms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resource" >resource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#tabIndex" >tabIndex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#templates" >templates</a>
+                            </li>
+                            <li>
+                                <a href="#tileForm" >tileForm</a>
                             </li>
                         </ul>
                     </td>
@@ -171,21 +211,29 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#addFloatingButton">addFloatingButton</a>
+                                <a href="#addFloatingButton" >addFloatingButton</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#createFloatingButtonForm">createFloatingButtonForm</a>
+                                <a href="#createFloatingButtonForm" >createFloatingButtonForm</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#deleteFloatingButton">deleteFloatingButton</a>
+                                <a href="#deleteFloatingButton" >deleteFloatingButton</a>
                             </li>
                             <li>
-                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#filterQueries" >filterQueries</a>
                             </li>
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#getQueryMetaData" >getQueryMetaData</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                         </ul>
                     </td>
@@ -200,7 +248,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#tile">tile</a>
+                                <a href="#tile" >tile</a>
                             </li>
                         </ul>
                     </td>
@@ -215,7 +263,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#change">change</a>
+                                <a href="#change" >change</a>
                             </li>
                         </ul>
                     </td>
@@ -232,7 +280,7 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                    <a href="#floatingButtons">floatingButtons</a>
+                                    <a href="#floatingButtons" >floatingButtons</a>
                                 </li>
                             </ul>
                         </td>
@@ -247,17 +295,19 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(formBuilder: <a href="../interfaces/Form.html">FormBuilder</a>, apollo: Apollo, applicationService: <a href="../injectables/SafeApplicationService.html">SafeApplicationService</a>, queryBuilder: <a href="../injectables/QueryBuilderService.html">QueryBuilderService</a>)</code>
+<code>constructor(formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, apollo: Apollo, applicationService: <a href="../injectables/SafeApplicationService.html" target="_self">SafeApplicationService</a>, queryBuilder: <a href="../injectables/QueryBuilderService.html" target="_self">QueryBuilderService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:49</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:81</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the grid settings component</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -266,6 +316,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -280,6 +331,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The form builder of Angular</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>apollo</td>
@@ -292,6 +347,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The apollo client</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>applicationService</td>
@@ -304,6 +363,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The application service</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>queryBuilder</td>
@@ -316,6 +379,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The query builder service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -344,7 +411,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:55</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -368,7 +435,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:33</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:59</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -387,10 +454,8 @@
                 <td class="col-md-4">
                     <a name="addFloatingButton"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            addFloatingButton
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>addFloatingButton</b></span>
                         <a href="#addFloatingButton"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -405,14 +470,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="203"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:203</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="309"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:309</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Adds a floating button configuration.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -428,10 +495,8 @@
                 <td class="col-md-4">
                     <a name="createFloatingButtonForm"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            createFloatingButtonForm
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>createFloatingButtonForm</b></span>
                         <a href="#createFloatingButtonForm"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -446,23 +511,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="156"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:156</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="225"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:225</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Floating button form factory.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -477,6 +546,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>default value ( if any )</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -488,7 +561,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>new form group for the floating button.</p>
+
                     </div>
                 </td>
             </tr>
@@ -500,10 +574,8 @@
                 <td class="col-md-4">
                     <a name="deleteFloatingButton"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            deleteFloatingButton
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>deleteFloatingButton</b></span>
                         <a href="#deleteFloatingButton"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -518,14 +590,136 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="208"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:208</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="317"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:317</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a floating button configuration.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterQueries"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>filterQueries</b></span>
+                        <a href="#filterQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterQueries(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="390"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:390</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters the queries using text value.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>search value</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>filtered list of queries.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQueryMetaData"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getQueryMetaData</b></span>
+                        <a href="#getQueryMetaData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getQueryMetaData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="326"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:326</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets query metadata for grid settings, from the query name</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -541,9 +735,7 @@
                 <td class="col-md-4">
                     <a name="ngAfterViewInit"></a>
                     <span class="name">
-                        <b>
-                            ngAfterViewInit
-                        </b>
+                        <span ><b>ngAfterViewInit</b></span>
                         <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -557,8 +749,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="129"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:129</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:186</a></div>
                 </td>
             </tr>
 
@@ -580,9 +772,7 @@
                 <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
+                        <span ><b>ngOnInit</b></span>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -596,14 +786,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:99</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Build the settings form, using the widget saved parameters.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -616,234 +808,383 @@
 </section>
     <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allQueries"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>allQueries</b></span>
+                        <a href="#allQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="channels"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            channels</b>
-                            <a href="#channels"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Channel.html" target="_self" >Channel[]</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:73</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:36</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="availableQueries"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>availableQueries</b></span>
+                        <a href="#availableQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="fields"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            fields</b>
-                            <a href="#fields"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>any[]</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:72</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:39</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="channels"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>channels</b></span>
+                        <a href="#channels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="queryName"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            queryName</b>
-                            <a href="#queryName"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="../interfaces/Channel.html" target="_self" >Channel[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:62</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:40</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>fields</b></span>
+                        <a href="#fields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="relatedForms"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            relatedForms</b>
-                            <a href="#relatedForms"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form[]</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:65</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:41</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredQueries"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filteredQueries</b></span>
+                        <a href="#filteredQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="tabIndex"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            tabIndex</b>
-                            <a href="#tabIndex"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:74</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>0</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:42</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="templates"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            templates</b>
-                            <a href="#templates"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form[]</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:75</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:45</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryName"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>queryName</b></span>
+                        <a href="#queryName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="tileForm"></a>
-                        <span class="name">
-                            <b>
-                            tileForm</b>
-                            <a href="#tileForm"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormGroup | undefined</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:66</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:26</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="relatedForms"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>relatedForms</b></span>
+                        <a href="#relatedForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resource"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>resource</b></span>
+                        <a href="#resource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Resource.html" target="_self" >Resource | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tabIndex"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>tabIndex</b></span>
+                        <a href="#tabIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="templates"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>templates</b></span>
+                        <a href="#templates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tileForm"></a>
+                    <span class="name">
+                        <span ><b>tileForm</b></span>
+                        <a href="#tileForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormGroup | undefined</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
 </section>
 
     <section>
@@ -866,9 +1207,20 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">projects/safe/src/lib/components/widgets/grid-settings/grid-settings.component.ts:79</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="../interfaces/Form.html" target="_self" >FormArray</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -878,29 +1230,55 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
-import { Component, OnInit, Input, Output, EventEmitter, AfterViewInit } from &#x27;@angular/core&#x27;;
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+} from &#x27;@angular/core&#x27;;
 import { FormGroup, FormBuilder, Validators, FormArray } from &#x27;@angular/forms&#x27;;
 import { QueryBuilderService } from &#x27;../../../services/query-builder.service&#x27;;
 import {
   GetChannelsQueryResponse,
-  GetRelatedFormsQueryResponse,
   GET_CHANNELS,
-  GET_RELATED_FORMS
+  GET_GRID_FORM_META,
+  GetFormByIdQueryResponse,
+  GET_GRID_RESOURCE_META,
+  GetResourceByIdQueryResponse,
 } from &#x27;../../../graphql/queries&#x27;;
 import { Application } from &#x27;../../../models/application.model&#x27;;
 import { Channel } from &#x27;../../../models/channel.model&#x27;;
 import { SafeApplicationService } from &#x27;../../../services/application.service&#x27;;
 import { Form } from &#x27;../../../models/form.model&#x27;;
+import {
+  addNewField,
+  createQueryForm,
+} from &#x27;../../query-builder/query-builder-forms&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { Overlay } from &#x27;@angular/cdk/overlay&#x27;;
+import { MAT_AUTOCOMPLETE_SCROLL_STRATEGY } from &#x27;@angular/material/autocomplete&#x27;;
+import { scrollFactory } from &#x27;../../../utils/scroll-factory&#x27;;
+import { Layout } from &#x27;../../../models/layout.model&#x27;;
+import { Resource } from &#x27;../../../models/resource.model&#x27;;
 
+/**
+ * Modal content for the settings of the grid widgets.
+ */
 @Component({
   selector: &#x27;safe-grid-settings&#x27;,
   templateUrl: &#x27;./grid-settings.component.html&#x27;,
-  styleUrls: [&#x27;./grid-settings.component.scss&#x27;]
+  styleUrls: [&#x27;./grid-settings.component.scss&#x27;],
+  providers: [
+    {
+      provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY,
+      useFactory: scrollFactory,
+      deps: [Overlay],
+    },
+  ],
 })
-/*  Modal content for the settings of the grid widgets.
-*/
 export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
-
   // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
   tileForm: FormGroup | undefined;
 
@@ -908,7 +1286,7 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
   @Input() tile: any;
 
   // &#x3D;&#x3D;&#x3D; EMIT THE CHANGES APPLIED &#x3D;&#x3D;&#x3D;
-  // tslint:disable-next-line: no-output-native
+  // eslint-disable-next-line @angular-eslint/no-output-native
   @Output() change: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
   // &#x3D;&#x3D;&#x3D; NOTIFICATIONS &#x3D;&#x3D;&#x3D;
@@ -920,31 +1298,55 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
   public relatedForms: Form[] &#x3D; [];
   public tabIndex &#x3D; 0;
 
-  // &#x3D;&#x3D;&#x3D; TEMPLATE USED FOR EDITION AND DETAILS VIEW &#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D; DATASET AND TEMPLATES &#x3D;&#x3D;&#x3D;
   public templates: Form[] &#x3D; [];
+  public availableQueries?: Observable&lt;any[]&gt;;
+  public allQueries: any[] &#x3D; [];
+  public filteredQueries: any[] &#x3D; [];
+  public form: Form | null &#x3D; null;
+  public resource: Resource | null &#x3D; null;
 
+  /** @returns List of the floating buttons */
   get floatingButtons(): FormArray {
-    return this.tileForm?.controls.floatingButtons as FormArray || null;
+    return (this.tileForm?.controls.floatingButtons as FormArray) || null;
   }
 
+  /**
+   * Constructor of the grid settings component
+   *
+   * @param formBuilder The form builder of Angular
+   * @param apollo The apollo client
+   * @param applicationService The application service
+   * @param queryBuilder The query builder service
+   */
   constructor(
     private formBuilder: FormBuilder,
     private apollo: Apollo,
     private applicationService: SafeApplicationService,
     private queryBuilder: QueryBuilderService
-  ) {
-  }
+  ) {}
 
-  /*  Build the settings form, using the widget saved parameters.
-  */
+  /** Build the settings form, using the widget saved parameters. */
   ngOnInit(): void {
     const tileSettings &#x3D; this.tile.settings;
     const hasActions &#x3D; !!tileSettings &amp;&amp; !!tileSettings.actions;
     this.tileForm &#x3D; this.formBuilder.group({
       id: this.tile.id,
-      title: [(tileSettings &amp;&amp; tileSettings.title) ? tileSettings.title : &#x27;&#x27;, Validators.required],
-      query: this.queryBuilder.createQueryForm(tileSettings.query),
-      resource: [tileSettings &amp;&amp; tileSettings.resource ? tileSettings.resource : null],
+      title: [
+        tileSettings &amp;&amp; tileSettings.title ? tileSettings.title : &#x27;&#x27;,
+        Validators.required,
+      ],
+      query: this.formBuilder.group({
+        name: [
+          tileSettings.query ? tileSettings.query.name : &#x27;&#x27;,
+          Validators.required,
+        ],
+        template: [tileSettings.query ? tileSettings.query.template : &#x27;&#x27;, null],
+      }),
+      layouts: [tileSettings?.layouts || [], Validators.required],
+      resource: [
+        tileSettings &amp;&amp; tileSettings.resource ? tileSettings.resource : null,
+      ],
       actions: this.formBuilder.group({
         delete: [hasActions ? tileSettings.actions.delete : true],
         history: [hasActions ? tileSettings.actions.history : true],
@@ -952,53 +1354,60 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
         update: [hasActions ? tileSettings.actions.update : true],
         inlineEdition: [hasActions ? tileSettings.actions.inlineEdition : true],
         addRecord: [hasActions ? tileSettings.actions.addRecord : false],
+        showDetails: [
+          hasActions &amp;&amp; typeof tileSettings.actions.showDetails !&#x3D;&#x3D; &#x27;undefined&#x27;
+            ? tileSettings.actions.showDetails
+            : true,
+        ],
       }),
-      floatingButtons: this.formBuilder.array(tileSettings.floatingButtons &amp;&amp; tileSettings.floatingButtons.length ?
-        tileSettings.floatingButtons.map((x: any) &#x3D;&gt; this.createFloatingButtonForm(x)) : [this.createFloatingButtonForm(null)])
+      floatingButtons: this.formBuilder.array(
+        tileSettings.floatingButtons &amp;&amp; tileSettings.floatingButtons.length
+          ? tileSettings.floatingButtons.map((x: any) &#x3D;&gt;
+              this.createFloatingButtonForm(x)
+            )
+          : [this.createFloatingButtonForm(null)]
+      ),
     });
-    this.queryName &#x3D; this.tileForm.get(&#x27;query&#x27;)?.value.name;
+    this.availableQueries &#x3D; this.queryBuilder.availableQueries$;
+    this.availableQueries.subscribe((res) &#x3D;&gt; {
+      if (res &amp;&amp; res.length &gt; 0) {
+        this.allQueries &#x3D; res.map((x) &#x3D;&gt; x.name);
+        this.filteredQueries &#x3D; this.filterQueries(
+          this.tileForm?.value.query.name
+        );
+      }
+    });
+    this.tileForm?.get(&#x27;query.name&#x27;)?.valueChanges.subscribe((res) &#x3D;&gt; {
+      this.filteredQueries &#x3D; this.filterQueries(res);
+    });
 
-    this.tileForm.get(&#x27;query&#x27;)?.valueChanges.subscribe(res &#x3D;&gt; {
-      if (res.name) {
+    this.queryName &#x3D; this.tileForm.get(&#x27;query&#x27;)?.value.name;
+    this.getQueryMetaData();
+
+    this.tileForm.get(&#x27;query.name&#x27;)?.valueChanges.subscribe((name) &#x3D;&gt; {
+      if (name) {
         // Check if the query changed to clean modifications and fields for email in floating button
-        if (res.name !&#x3D;&#x3D; this.queryName) {
-          this.queryName &#x3D; res.name;
-          const floatingButtons &#x3D; this.tileForm?.get(&#x27;floatingButtons&#x27;) as FormArray;
+        if (name !&#x3D;&#x3D; this.queryName) {
+          this.queryName &#x3D; name;
+          this.tileForm?.get(&#x27;layouts&#x27;)?.setValue([]);
+          this.tileForm?.get(&#x27;query.template&#x27;)?.setValue(null);
+          this.tileForm?.get(&#x27;query.template&#x27;)?.enable();
+          const floatingButtons &#x3D; this.tileForm?.get(
+            &#x27;floatingButtons&#x27;
+          ) as FormArray;
           for (const floatingButton of floatingButtons.controls) {
-            const modifications &#x3D; floatingButton.get(&#x27;modifications&#x27;) as FormArray;
+            const modifications &#x3D; floatingButton.get(
+              &#x27;modifications&#x27;
+            ) as FormArray;
             modifications.clear();
-            this.tileForm?.get(&#x27;floatingButton.modifySelectedRows&#x27;)?.setValue(false);
+            this.tileForm
+              ?.get(&#x27;floatingButton.modifySelectedRows&#x27;)
+              ?.setValue(false);
             const bodyFields &#x3D; floatingButton.get(&#x27;bodyFields&#x27;) as FormArray;
             bodyFields.clear();
           }
         }
-        this.fields &#x3D; this.queryBuilder.getFields(res.name);
-        const query &#x3D; this.queryBuilder.sourceQuery(this.queryName);
-        if (query) {
-          query.subscribe((res1: { data: any }) &#x3D;&gt; {
-            const source &#x3D; res1.data[&#x60;_${this.queryName}Meta&#x60;]._source;
-            this.tileForm?.get(&#x27;resource&#x27;)?.setValue(source);
-            if (source) {
-              this.apollo.query&lt;GetRelatedFormsQueryResponse&gt;({
-                query: GET_RELATED_FORMS,
-                variables: {
-                  resource: source
-                }
-              }).subscribe(res2 &#x3D;&gt; {
-                if (res2.errors) {
-                  this.relatedForms &#x3D; [];
-                  this.templates &#x3D; [];
-                } else {
-                  this.relatedForms &#x3D; res2.data.resource.relatedForms || [];
-                  this.templates &#x3D; res2.data.resource.forms || [];
-                }
-              });
-            }
-          });
-        } else {
-          this.relatedForms &#x3D; [];
-          this.templates &#x3D; [];
-        }
+        this.getQueryMetaData();
       } else {
         this.fields &#x3D; [];
       }
@@ -1011,83 +1420,207 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
         this.change.emit(this.tileForm);
       });
 
-      this.applicationService.application.subscribe((application: Application | null) &#x3D;&gt; {
-        if (application) {
-          this.apollo.watchQuery&lt;GetChannelsQueryResponse&gt;({
-            query: GET_CHANNELS,
-            variables: {
-              application: application.id
-            }
-          }).valueChanges.subscribe(res &#x3D;&gt; {
-            this.channels &#x3D; res.data.channels;
-          });
-        } else {
-          this.apollo.watchQuery&lt;GetChannelsQueryResponse&gt;({
-            query: GET_CHANNELS,
-          }).valueChanges.subscribe(res &#x3D;&gt; {
-            this.channels &#x3D; res.data.channels;
-          });
+      this.applicationService.application$.subscribe(
+        (application: Application | null) &#x3D;&gt; {
+          if (application) {
+            this.apollo
+              .watchQuery&lt;GetChannelsQueryResponse&gt;({
+                query: GET_CHANNELS,
+                variables: {
+                  application: application.id,
+                },
+              })
+              .valueChanges.subscribe((res) &#x3D;&gt; {
+                this.channels &#x3D; res.data.channels;
+              });
+          } else {
+            this.apollo
+              .watchQuery&lt;GetChannelsQueryResponse&gt;({
+                query: GET_CHANNELS,
+              })
+              .valueChanges.subscribe((res) &#x3D;&gt; {
+                this.channels &#x3D; res.data.channels;
+              });
+          }
         }
-      });
+      );
     }
   }
 
+  /**
+   * Floating button form factory.
+   *
+   * @param value default value ( if any )
+   * @returns new form group for the floating button.
+   */
   private createFloatingButtonForm(value: any): FormGroup {
     const buttonForm &#x3D; this.formBuilder.group({
       show: [value &amp;&amp; value.show ? value.show : false, Validators.required],
       name: [value &amp;&amp; value.name ? value.name : &#x27;Next&#x27;],
       selectAll: [value &amp;&amp; value.selectAll ? value.selectAll : false],
+      selectPage: [value &amp;&amp; value.selectPage ? value.selectPage : false],
       goToNextStep: [value &amp;&amp; value.goToNextStep ? value.goToNextStep : false],
       prefillForm: [value &amp;&amp; value.prefillForm ? value.prefillForm : false],
-      prefillTargetForm: [value &amp;&amp; value.prefillTargetForm ? value.prefillTargetForm : null,
-        value &amp;&amp; value.prefillForm ? Validators.required : null],
-      closeWorkflow: [value &amp;&amp; value.closeWorkflow ? value.closeWorkflow : false],
-      confirmationText: [value &amp;&amp; value.confirmationText ? value.confirmationText : &#x27;&#x27;,
-        value &amp;&amp; value.closeWorkflow ? Validators.required : null],
+      prefillTargetForm: [
+        value &amp;&amp; value.prefillTargetForm ? value.prefillTargetForm : null,
+        value &amp;&amp; value.prefillForm ? Validators.required : null,
+      ],
+      closeWorkflow: [
+        value &amp;&amp; value.closeWorkflow ? value.closeWorkflow : false,
+      ],
+      confirmationText: [
+        value &amp;&amp; value.confirmationText ? value.confirmationText : &#x27;&#x27;,
+        value &amp;&amp; value.closeWorkflow ? Validators.required : null,
+      ],
       autoSave: [value &amp;&amp; value.autoSave ? value.autoSave : false],
       modifySelectedRows: [value ? value.modifySelectedRows : false],
-      modifications: this.formBuilder.array(value &amp;&amp; value.modifications &amp;&amp; value.modifications.length
-        ? value.modifications.map((x: any) &#x3D;&gt; this.formBuilder.group({
-          field: [x.field, Validators.required],
-          value: [x.value, Validators.required],
-        }))
-        : []),
-      attachToRecord: [value &amp;&amp; value.attachToRecord ? value.attachToRecord : false],
+      modifications: this.formBuilder.array(
+        value &amp;&amp; value.modifications &amp;&amp; value.modifications.length
+          ? value.modifications.map((x: any) &#x3D;&gt;
+              this.formBuilder.group({
+                field: [x.field, Validators.required],
+                value: [x.value, Validators.required],
+              })
+            )
+          : []
+      ),
+      attachToRecord: [
+        value &amp;&amp; value.attachToRecord ? value.attachToRecord : false,
+      ],
       targetForm: [value &amp;&amp; value.targetForm ? value.targetForm : null],
-      targetFormField: [value &amp;&amp; value.targetFormField ? value.targetFormField : null],
-      targetFormQuery: this.queryBuilder.createQueryForm(value &amp;&amp; value.targetFormQuery ? value.targetFormQuery : null,
-        Boolean(value &amp;&amp; value.targetForm)),
+      targetFormField: [
+        value &amp;&amp; value.targetFormField ? value.targetFormField : null,
+      ],
+      targetFormQuery: createQueryForm(
+        value &amp;&amp; value.targetFormQuery ? value.targetFormQuery : null,
+        Boolean(value &amp;&amp; value.targetForm)
+      ),
       notify: [value &amp;&amp; value.notify ? value.notify : false],
-      notificationChannel: [value &amp;&amp; value.notificationChannel ? value.notificationChannel : null,
-        value &amp;&amp; value.notify ? Validators.required : null],
-      notificationMessage: [value &amp;&amp; value.notificationMessage ? value.notificationMessage : &#x27;Records update&#x27;],
+      notificationChannel: [
+        value &amp;&amp; value.notificationChannel ? value.notificationChannel : null,
+        value &amp;&amp; value.notify ? Validators.required : null,
+      ],
+      notificationMessage: [
+        value &amp;&amp; value.notificationMessage
+          ? value.notificationMessage
+          : &#x27;Records update&#x27;,
+      ],
       publish: [value &amp;&amp; value.publish ? value.publish : false],
-      publicationChannel: [value &amp;&amp; value.publicationChannel ? value.publicationChannel : null,
-        value &amp;&amp; value.publish ? Validators.required : null],
+      publicationChannel: [
+        value &amp;&amp; value.publicationChannel ? value.publicationChannel : null,
+        value &amp;&amp; value.publish ? Validators.required : null,
+      ],
       sendMail: [value &amp;&amp; value.sendMail ? value.sendMail : false],
-      distributionList: [value &amp;&amp; value.distributionList ? value.distributionList : [],
-        value &amp;&amp; value.sendMail ? Validators.required : null],
-      subject: [value &amp;&amp; value.subject ? value.subject : &#x27;&#x27;,
-        value &amp;&amp; value.sendMail ? Validators.required : null],
+      distributionList: [
+        value &amp;&amp; value.distributionList ? value.distributionList : [],
+        value &amp;&amp; value.sendMail ? Validators.required : null,
+      ],
+      subject: [
+        value &amp;&amp; value.subject ? value.subject : &#x27;&#x27;,
+        value &amp;&amp; value.sendMail ? Validators.required : null,
+      ],
       export: [value &amp;&amp; value.export ? value.export : false],
-      bodyFields: this.formBuilder.array((value &amp;&amp; value.bodyFields) ?
-        value.bodyFields.map((x: any) &#x3D;&gt; this.queryBuilder.addNewField(x)) : [],
-        value &amp;&amp; value.sendMail ? Validators.required : null),
+      bodyFields: this.formBuilder.array(
+        value &amp;&amp; value.bodyFields
+          ? value.bodyFields.map((x: any) &#x3D;&gt; addNewField(x))
+          : [],
+        value &amp;&amp; value.sendMail ? Validators.required : null
+      ),
       bodyText: [value &amp;&amp; value.bodyText ? value.bodyText : &#x27;&#x27;],
-      bodyTextAlternate: [value &amp;&amp; value.bodyTextAlternate ? value.bodyTextAlternate : &#x27;&#x27;]
+      bodyTextAlternate: [
+        value &amp;&amp; value.bodyTextAlternate ? value.bodyTextAlternate : &#x27;&#x27;,
+      ],
     });
     return buttonForm;
   }
 
+  /**
+   * Adds a floating button configuration.
+   */
   public addFloatingButton(): void {
     const floatingButtons &#x3D; this.tileForm?.get(&#x27;floatingButtons&#x27;) as FormArray;
-    floatingButtons.push(this.createFloatingButtonForm({show: true}));
+    floatingButtons.push(this.createFloatingButtonForm({ show: true }));
   }
 
+  /**
+   * Deletes a floating button configuration.
+   */
   public deleteFloatingButton(): void {
     const floatingButtons &#x3D; this.tileForm?.get(&#x27;floatingButtons&#x27;) as FormArray;
     floatingButtons.removeAt(this.tabIndex);
     this.tabIndex &#x3D; 0;
+  }
+
+  /**
+   * Gets query metadata for grid settings, from the query name
+   */
+  private getQueryMetaData(): void {
+    this.fields &#x3D; this.queryBuilder.getFields(this.queryName);
+    const query &#x3D; this.queryBuilder.sourceQuery(this.queryName);
+    if (query) {
+      query.subscribe((res1: { data: any }) &#x3D;&gt; {
+        // eslint-disable-next-line no-underscore-dangle
+        const source &#x3D; res1.data[&#x60;_${this.queryName}Meta&#x60;]._source;
+        this.tileForm?.get(&#x27;resource&#x27;)?.setValue(source);
+        if (source) {
+          this.apollo
+            .query&lt;GetResourceByIdQueryResponse&gt;({
+              query: GET_GRID_RESOURCE_META,
+              variables: {
+                resource: source,
+              },
+            })
+            .subscribe((res2) &#x3D;&gt; {
+              if (res2.errors) {
+                this.apollo
+                  .query&lt;GetFormByIdQueryResponse&gt;({
+                    query: GET_GRID_FORM_META,
+                    variables: {
+                      id: source,
+                    },
+                  })
+                  .subscribe((res3) &#x3D;&gt; {
+                    if (res3.errors) {
+                      this.relatedForms &#x3D; [];
+                      this.templates &#x3D; [];
+                      this.form &#x3D; null;
+                      this.resource &#x3D; null;
+                    } else {
+                      this.form &#x3D; res3.data.form;
+                      this.resource &#x3D; null;
+                      this.templates &#x3D; [res3.data.form] || [];
+                      this.tileForm
+                        ?.get(&#x27;query.template&#x27;)
+                        ?.setValue(res3.data.form.id);
+                      this.tileForm?.get(&#x27;query.template&#x27;)?.disable();
+                    }
+                  });
+              } else {
+                this.resource &#x3D; res2.data.resource;
+                this.form &#x3D; null;
+                this.relatedForms &#x3D; res2.data.resource.relatedForms || [];
+                this.templates &#x3D; res2.data.resource.forms || [];
+              }
+            });
+        }
+      });
+    } else {
+      this.relatedForms &#x3D; [];
+      this.templates &#x3D; [];
+      this.form &#x3D; null;
+      this.resource &#x3D; null;
+    }
+  }
+
+  /**
+   * Filters the queries using text value.
+   *
+   * @param value search value
+   * @returns filtered list of queries.
+   */
+  private filterQueries(value: string): string[] {
+    const filterValue &#x3D; value.toLowerCase();
+    return this.allQueries.filter((x) &#x3D;&gt; x.toLowerCase().includes(filterValue));
   }
 }
 </code></pre>
@@ -1096,55 +1629,122 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;tileForm&quot;&gt;
   &lt;form [formGroup]&#x3D;&quot;tileForm&quot;&gt;
+    &lt;!-- MAIN PARAMETERS --&gt;
     &lt;div class&#x3D;&quot;form-group&quot;&gt;
-      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;General&lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;{{ &#x27;common.general&#x27; | translate }}&lt;/div&gt;
       &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
-        &lt;mat-label&gt;Title&lt;/mat-label&gt;
+        &lt;mat-label&gt;{{ &#x27;common.title&#x27; | translate }}&lt;/mat-label&gt;
         &lt;input matInput formControlName&#x3D;&quot;title&quot; type&#x3D;&quot;string&quot; /&gt;
       &lt;/mat-form-field&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;form-group&quot;&gt;
-      &lt;safe-query-builder [form]&#x3D;&quot;$any(tileForm.controls.query)&quot; [templates]&#x3D;&quot;templates&quot; [settings]&#x3D;&quot;tile.settings&quot;&gt;&lt;/safe-query-builder&gt;
+    &lt;ng-container formGroupName&#x3D;&quot;query&quot;&gt;
+      &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+        &lt;mat-label&gt;{{
+          &#x27;components.queryBuilder.dataset.select&#x27; | translate
+        }}&lt;/mat-label&gt;
+        &lt;input
+          type&#x3D;&quot;text&quot;
+          [placeholder]&#x3D;&quot;&#x27;components.queryBuilder.dataset.select&#x27; | translate&quot;
+          matInput
+          formControlName&#x3D;&quot;name&quot;
+          [matAutocomplete]&#x3D;&quot;auto&quot;
+        /&gt;
+        &lt;mat-autocomplete autoActiveFirstOption #auto&#x3D;&quot;matAutocomplete&quot;&gt;
+          &lt;mat-option *ngFor&#x3D;&quot;let option of filteredQueries&quot; [value]&#x3D;&quot;option&quot;&gt;
+            {{ option }}
+          &lt;/mat-option&gt;
+        &lt;/mat-autocomplete&gt;
+      &lt;/mat-form-field&gt;
+      &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+        &lt;mat-label&gt;{{ &#x27;models.form.template&#x27; | translate }}&lt;/mat-label&gt;
+        &lt;mat-select formControlName&#x3D;&quot;template&quot;&gt;
+          &lt;mat-option&gt;-&lt;/mat-option&gt;
+          &lt;mat-option
+            *ngFor&#x3D;&quot;let template of templates&quot;
+            [value]&#x3D;&quot;template.id&quot;
+            &gt;{{ template.name }}&lt;/mat-option
+          &gt;
+        &lt;/mat-select&gt;
+      &lt;/mat-form-field&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- SELECTION OF LAYOUTS --&gt;
+    &lt;div class&#x3D;&quot;form-group&quot; *ngIf&#x3D;&quot;queryName&quot;&gt;
+      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;
+        {{ &#x27;components.widget.settings.grid.layouts.title&#x27; | translate }}
+      &lt;/div&gt;
+      &lt;safe-layouts-parameters
+        [form]&#x3D;&quot;form&quot;
+        [resource]&#x3D;&quot;resource&quot;
+        [selectedLayouts]&#x3D;&quot;$any(tileForm).get(&#x27;layouts&#x27;)&quot;
+      &gt;&lt;/safe-layouts-parameters&gt;
     &lt;/div&gt;
+    &lt;!-- AVAILABLE ACTIONS --&gt;
     &lt;div formGroupName&#x3D;&quot;actions&quot; class&#x3D;&quot;form-group&quot;&gt;
-      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;Enabled actions&lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;
+        {{ &#x27;components.widget.settings.grid.actions.title&#x27; | translate }}
+      &lt;/div&gt;
       &lt;mat-slide-toggle formControlName&#x3D;&quot;delete&quot;&gt;
-        Delete records
+        {{ &#x27;components.widget.settings.grid.actions.delete&#x27; | translate }}
       &lt;/mat-slide-toggle&gt;
       &lt;mat-slide-toggle formControlName&#x3D;&quot;history&quot;&gt;
-        Show history
+        {{ &#x27;components.widget.settings.grid.actions.show&#x27; | translate }}
       &lt;/mat-slide-toggle&gt;
       &lt;mat-slide-toggle formControlName&#x3D;&quot;convert&quot;&gt;
-        Convert records
+        {{ &#x27;components.widget.settings.grid.actions.convert&#x27; | translate }}
       &lt;/mat-slide-toggle&gt;
       &lt;mat-slide-toggle formControlName&#x3D;&quot;update&quot;&gt;
-        Update records
+        {{ &#x27;components.widget.settings.grid.actions.update&#x27; | translate }}
       &lt;/mat-slide-toggle&gt;
       &lt;mat-slide-toggle formControlName&#x3D;&quot;inlineEdition&quot;&gt;
-        Inline edition
+        {{ &#x27;components.widget.settings.grid.actions.inline&#x27; | translate }}
       &lt;/mat-slide-toggle&gt;
       &lt;mat-slide-toggle formControlName&#x3D;&quot;addRecord&quot;&gt;
-        Add new records
+        {{ &#x27;components.widget.settings.grid.actions.add&#x27; | translate }}
+      &lt;/mat-slide-toggle&gt;
+      &lt;mat-slide-toggle formControlName&#x3D;&quot;showDetails&quot;&gt;
+        {{ &#x27;components.widget.settings.grid.actions.showDetails&#x27; | translate }}
       &lt;/mat-slide-toggle&gt;
     &lt;/div&gt;
+    &lt;!-- BUTTONS --&gt;
     &lt;div class&#x3D;&quot;form-group&quot;&gt;
-      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;Quick action buttons&lt;/div&gt;
-      &lt;div class&#x3D;&quot;info-text&quot;&gt;Quick action buttons will appear on the widget and allow you to complete any of the actions
-        below.&lt;/div&gt;
-      &lt;safe-button icon&#x3D;&quot;add&quot; variant&#x3D;&quot;primary&quot; class&#x3D;&quot;add-button&quot; (click)&#x3D;&quot;addFloatingButton()&quot;&gt;
-        Add a button
+      &lt;div class&#x3D;&quot;form-group-title&quot;&gt;
+        {{ &#x27;components.widget.settings.grid.buttons.title&#x27; | translate }}
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;info-text&quot;&gt;
+        {{ &#x27;components.widget.settings.grid.hint.buttons&#x27; | translate }}
+      &lt;/div&gt;
+      &lt;safe-button
+        icon&#x3D;&quot;add&quot;
+        variant&#x3D;&quot;primary&quot;
+        class&#x3D;&quot;add-button&quot;
+        (click)&#x3D;&quot;addFloatingButton()&quot;
+      &gt;
+        {{ &#x27;components.widget.settings.grid.buttons.create&#x27; | translate }}
       &lt;/safe-button&gt;
-      &lt;mat-tab-group mat-align-tabs&#x3D;&quot;start&quot; animationDuration&#x3D;&quot;0ms&quot; dynamicHeight style&#x3D;&quot;min-height: 500px&quot;
-        [(selectedIndex)]&#x3D;&quot;tabIndex&quot; *ngIf&#x3D;&quot;floatingButtons.length &gt; 0&quot;&gt;
+      &lt;mat-tab-group
+        mat-align-tabs&#x3D;&quot;start&quot;
+        animationDuration&#x3D;&quot;0ms&quot;
+        dynamicHeight
+        style&#x3D;&quot;min-height: 500px&quot;
+        [(selectedIndex)]&#x3D;&quot;tabIndex&quot;
+        *ngIf&#x3D;&quot;floatingButtons.length &gt; 0&quot;
+      &gt;
         &lt;ng-container *ngFor&#x3D;&quot;let floatingButton of floatingButtons.controls&quot;&gt;
           &lt;mat-tab&gt;
             &lt;ng-template mat-tab-label&gt;
-              &lt;mat-icon class&#x3D;&quot;form-error&quot; *ngIf&#x3D;&quot;floatingButton.invalid&quot;&gt;error&lt;/mat-icon&gt;
-              {{ floatingButton.value.name }}
+              &lt;mat-icon class&#x3D;&quot;form-error&quot; *ngIf&#x3D;&quot;floatingButton.invalid&quot;
+                &gt;error&lt;/mat-icon
+              &gt;
+              {{ floatingButton.value.name }}
             &lt;/ng-template&gt;
             &lt;ng-template matTabContent&gt;
-              &lt;safe-floating-button-settings [buttonForm]&#x3D;&quot;$any(floatingButton)&quot; [fields]&#x3D;&quot;fields&quot; [channels]&#x3D;&quot;channels&quot;
-                [relatedForms]&#x3D;&quot;relatedForms&quot; (deleteButton)&#x3D;&quot;deleteFloatingButton()&quot;&gt;&lt;/safe-floating-button-settings&gt;
+              &lt;safe-floating-button-settings
+                [buttonForm]&#x3D;&quot;$any(floatingButton)&quot;
+                [fields]&#x3D;&quot;fields&quot;
+                [channels]&#x3D;&quot;channels&quot;
+                [relatedForms]&#x3D;&quot;relatedForms&quot;
+                (deleteButton)&#x3D;&quot;deleteFloatingButton()&quot;
+              &gt;&lt;/safe-floating-button-settings&gt;
             &lt;/ng-template&gt;
           &lt;/mat-tab&gt;
         &lt;/ng-container&gt;
@@ -1160,19 +1760,19 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
                     <code>./grid-settings.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.advanced-filtering {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .add-button {
-    width: min-content;
-    align-self: flex-end;
+  width: min-content;
+  align-self: flex-end;
 }
 
 .form-error {
-    color: red;
+  color: red;
 }
 </code></pre>
     </div>
@@ -1202,8 +1802,8 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="tileForm">  <form [formGroup]="tileForm">    <div class="form-group">      <div class="form-group-title">General</div>      <mat-form-field appearance="outline">        <mat-label>Title</mat-label>        <input matInput formControlName="title" type="string" />      </mat-form-field>    </div>    <div class="form-group">      <safe-query-builder [form]="$any(tileForm.controls.query)" [templates]="templates" [settings]="tile.settings"></safe-query-builder>    </div>    <div formGroupName="actions" class="form-group">      <div class="form-group-title">Enabled actions</div>      <mat-slide-toggle formControlName="delete">        Delete records      </mat-slide-toggle>      <mat-slide-toggle formControlName="history">        Show history      </mat-slide-toggle>      <mat-slide-toggle formControlName="convert">        Convert records      </mat-slide-toggle>      <mat-slide-toggle formControlName="update">        Update records      </mat-slide-toggle>      <mat-slide-toggle formControlName="inlineEdition">        Inline edition      </mat-slide-toggle>      <mat-slide-toggle formControlName="addRecord">        Add new records      </mat-slide-toggle>    </div>    <div class="form-group">      <div class="form-group-title">Quick action buttons</div>      <div class="info-text">Quick action buttons will appear on the widget and allow you to complete any of the actions        below.</div>      <safe-button icon="add" variant="primary" class="add-button" (click)="addFloatingButton()">        Add a button      </safe-button>      <mat-tab-group mat-align-tabs="start" animationDuration="0ms" dynamicHeight style="min-height: 500px"        [(selectedIndex)]="tabIndex" *ngIf="floatingButtons.length > 0">        <ng-container *ngFor="let floatingButton of floatingButtons.controls">          <mat-tab>            <ng-template mat-tab-label>              <mat-icon class="form-error" *ngIf="floatingButton.invalid">error</mat-icon>              {{ floatingButton.value.name }}            </ng-template>            <ng-template matTabContent>              <safe-floating-button-settings [buttonForm]="$any(floatingButton)" [fields]="fields" [channels]="channels"                [relatedForms]="relatedForms" (deleteButton)="deleteFloatingButton()"></safe-floating-button-settings>            </ng-template>          </mat-tab>        </ng-container>      </mat-tab-group>    </div>  </form></ng-container></div>'
-    var COMPONENTS = [{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeTileDisplayComponent', 'selector': 'safe-tile-display'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="tileForm">  <form [formGroup]="tileForm">    <!-- MAIN PARAMETERS -->    <div class="form-group">      <div class="form-group-title">{{ \'common.general\' | translate }}</div>      <mat-form-field appearance="outline">        <mat-label>{{ \'common.title\' | translate }}</mat-label>        <input matInput formControlName="title" type="string" />      </mat-form-field>    </div>    <ng-container formGroupName="query">      <mat-form-field appearance="outline">        <mat-label>{{          \'components.queryBuilder.dataset.select\' | translate        }}</mat-label>        <input          type="text"          [placeholder]="\'components.queryBuilder.dataset.select\' | translate"          matInput          formControlName="name"          [matAutocomplete]="auto"        />        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">          <mat-option *ngFor="let option of filteredQueries" [value]="option">            {{ option }}          </mat-option>        </mat-autocomplete>      </mat-form-field>      <mat-form-field appearance="outline">        <mat-label>{{ \'models.form.template\' | translate }}</mat-label>        <mat-select formControlName="template">          <mat-option>-</mat-option>          <mat-option            *ngFor="let template of templates"            [value]="template.id"            >{{ template.name }}</mat-option          >        </mat-select>      </mat-form-field>    </ng-container>    <!-- SELECTION OF LAYOUTS -->    <div class="form-group" *ngIf="queryName">      <div class="form-group-title">        {{ \'components.widget.settings.grid.layouts.title\' | translate }}      </div>      <safe-layouts-parameters        [form]="form"        [resource]="resource"        [selectedLayouts]="$any(tileForm).get(\'layouts\')"      ></safe-layouts-parameters>    </div>    <!-- AVAILABLE ACTIONS -->    <div formGroupName="actions" class="form-group">      <div class="form-group-title">        {{ \'components.widget.settings.grid.actions.title\' | translate }}      </div>      <mat-slide-toggle formControlName="delete">        {{ \'components.widget.settings.grid.actions.delete\' | translate }}      </mat-slide-toggle>      <mat-slide-toggle formControlName="history">        {{ \'components.widget.settings.grid.actions.show\' | translate }}      </mat-slide-toggle>      <mat-slide-toggle formControlName="convert">        {{ \'components.widget.settings.grid.actions.convert\' | translate }}      </mat-slide-toggle>      <mat-slide-toggle formControlName="update">        {{ \'components.widget.settings.grid.actions.update\' | translate }}      </mat-slide-toggle>      <mat-slide-toggle formControlName="inlineEdition">        {{ \'components.widget.settings.grid.actions.inline\' | translate }}      </mat-slide-toggle>      <mat-slide-toggle formControlName="addRecord">        {{ \'components.widget.settings.grid.actions.add\' | translate }}      </mat-slide-toggle>      <mat-slide-toggle formControlName="showDetails">        {{ \'components.widget.settings.grid.actions.showDetails\' | translate }}      </mat-slide-toggle>    </div>    <!-- BUTTONS -->    <div class="form-group">      <div class="form-group-title">        {{ \'components.widget.settings.grid.buttons.title\' | translate }}      </div>      <div class="info-text">        {{ \'components.widget.settings.grid.hint.buttons\' | translate }}      </div>      <safe-button        icon="add"        variant="primary"        class="add-button"        (click)="addFloatingButton()"      >        {{ \'components.widget.settings.grid.buttons.create\' | translate }}      </safe-button>      <mat-tab-group        mat-align-tabs="start"        animationDuration="0ms"        dynamicHeight        style="min-height: 500px"        [(selectedIndex)]="tabIndex"        *ngIf="floatingButtons.length > 0"      >        <ng-container *ngFor="let floatingButton of floatingButtons.controls">          <mat-tab>            <ng-template mat-tab-label>              <mat-icon class="form-error" *ngIf="floatingButton.invalid"                >error</mat-icon              >              {{ floatingButton.value.name }}            </ng-template>            <ng-template matTabContent>              <safe-floating-button-settings                [buttonForm]="$any(floatingButton)"                [fields]="fields"                [channels]="channels"                [relatedForms]="relatedForms"                (deleteButton)="deleteFloatingButton()"              ></safe-floating-button-settings>            </ng-template>          </mat-tab>        </ng-container>      </mat-tab-group>    </div>  </form></ng-container></div>'
+    var COMPONENTS = [{'name': 'AddLayoutComponent', 'selector': 'safe-add-layout'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'LayoutsParametersComponent', 'selector': 'safe-layouts-parameters'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLayoutModalComponent', 'selector': 'safe-layout-modal'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SafeGridSettingsComponent'};
 </script>
@@ -1218,14 +1818,16 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1237,6 +1839,15 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
@@ -1246,9 +1857,9 @@ export class SafeGridSettingsComponent implements OnInit, AfterViewInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

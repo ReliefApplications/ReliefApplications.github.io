@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SafeLayoutService</li>
+  <li >SafeLayoutService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,6 +62,15 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared layout service.
+The layout service handles the display of the right sidenav.</p>
+
+            </p>
+
 
 
             <section>
@@ -76,7 +87,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_rightSidenav">_rightSidenav</a>
+                                <a href="#rightSidenav" >rightSidenav</a>
                             </li>
                         </ul>
                     </td>
@@ -91,7 +102,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#setRightSidenav">setRightSidenav</a>
+                                <a href="#setRightSidenav" >setRightSidenav</a>
                             </li>
                         </ul>
                     </td>
@@ -110,7 +121,7 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                    <a href="#rightSidenav">rightSidenav</a>
+                                    <a href="#rightSidenav$" >rightSidenav$</a>
                                 </li>
                             </ul>
                         </td>
@@ -130,12 +141,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:18</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Shared layout service.
+The layout service handles the display of the right sidenav.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -144,6 +158,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -158,6 +173,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Angular router</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -179,9 +198,7 @@
                 <td class="col-md-4">
                     <a name="setRightSidenav"></a>
                     <span class="name">
-                        <b>
-                            setRightSidenav
-                        </b>
+                        <span ><b>setRightSidenav</b></span>
                         <a href="#setRightSidenav"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -195,23 +212,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:38</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Stores the container used as sidenav.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -226,6 +247,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Sidenav container.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -246,36 +271,41 @@
 </section>
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rightSidenav"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>rightSidenav</b></span>
+                        <a href="#rightSidenav"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_rightSidenav"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _rightSidenav</b>
-                            <a href="#_rightSidenav"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Default value : </i><code>new BehaviorSubject&lt;any&gt;(null)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new BehaviorSubject&lt;any&gt;(null)</code>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:14</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:12</a></div>
-                            </td>
-                        </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Current right sidenav</p>
+</div>
+                </td>
+            </tr>
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
             <section>
@@ -286,21 +316,32 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="rightSidenav"></a>
-                        <span class="name"><b>rightSidenav</b><a href="#rightSidenav"><span class="icon ion-ios-link"></span></a></span>
+                        <a name="rightSidenav$"></a>
+                        <span class="name"><b>rightSidenav$</b><a href="#rightSidenav$"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <span class="accessor"><b>get</b><code>rightSidenav()</code></span>
+                        <span class="accessor"><b>get</b><code>rightSidenav$()</code></span>
                     </td>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/safe/src/lib/services/layout.service.ts:16</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -313,27 +354,41 @@
 import { Router } from &#x27;@angular/router&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
 
-
+/**
+ * Shared layout service.
+ * The layout service handles the display of the right sidenav.
+ */
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class SafeLayoutService {
+  /** Current right sidenav */
+  private rightSidenav &#x3D; new BehaviorSubject&lt;any&gt;(null);
+  /** @returns Current right sidenav as observable */
+  get rightSidenav$(): Observable&lt;any&gt; {
+    return this.rightSidenav.asObservable();
+  }
 
-  // tslint:disable-next-line: variable-name
-  private _rightSidenav &#x3D; new BehaviorSubject&lt;any&gt;(null);
-
+  /**
+   * Shared layout service.
+   * The layout service handles the display of the right sidenav.
+   *
+   * @param router Angular router
+   */
   constructor(private router: Router) {
+    // If the router detects a change, we close the sidenav
     this.router.events.subscribe(() &#x3D;&gt; {
-      this._rightSidenav.next(null);
+      this.rightSidenav.next(null);
     });
   }
 
+  /**
+   * Stores the container used as sidenav.
+   *
+   * @param container Sidenav container.
+   */
   setRightSidenav(container: any): void {
-    this._rightSidenav.next(container);
-  }
-
-  get rightSidenav(): Observable&lt;any&gt; {
-    return this._rightSidenav.asObservable();
+    this.rightSidenav.next(container);
   }
 }
 </code></pre>
@@ -347,14 +402,15 @@ export class SafeLayoutService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -366,6 +422,15 @@ export class SafeLayoutService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -375,9 +440,9 @@ export class SafeLayoutService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

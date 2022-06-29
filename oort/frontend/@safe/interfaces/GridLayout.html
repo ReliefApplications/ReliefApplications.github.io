@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -41,9 +42,12 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>GridLayout</li>
+  <li
+  >
+  GridLayout</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -63,6 +67,7 @@
         <p class="comment">
             <code>projects/safe/src/lib/components/ui/core-grid/models/grid-layout.model.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -87,19 +92,31 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#fields">fields</a>
+                                        <a href="#fields" 
+>
+                                            fields
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#filter">filter</a>
+                                        <a href="#filter" 
+>
+                                            filter
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#showFilter">showFilter</a>
+                                        <a href="#showFilter" 
+>
+                                            showFilter
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#sort">sort</a>
+                                        <a href="#sort" 
+>
+                                            sort
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -117,7 +134,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="fields"></a>
-                                        <span class="name"><b>fields</b><a href="#fields"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>fields</b>
+                                            <a href="#fields">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -151,7 +172,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="filter"></a>
-                                        <span class="name"><b>filter</b><a href="#filter"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>filter</b>
+                                            <a href="#filter">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -185,7 +210,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="showFilter"></a>
-                                        <span class="name"><b>showFilter</b><a href="#showFilter"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>showFilter</b>
+                                            <a href="#showFilter">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -219,7 +248,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="sort"></a>
-                                        <span class="name"><b>sort</b><a href="#sort"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>sort</b>
+                                            <a href="#sort">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -253,30 +286,34 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CompositeFilterDescriptor, SortDescriptor } from &#x27;@progress/kendo-data-query&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  CompositeFilterDescriptor,
+  SortDescriptor,
+} from &#x27;@progress/kendo-data-query&#x27;;
 
 /**
  * Grid Layout Interface.
  */
 export interface GridLayout {
-    fields?: any;
-    filter?: CompositeFilterDescriptor;
-    sort?: SortDescriptor[];
-    showFilter?: boolean;
+  fields?: any;
+  filter?: CompositeFilterDescriptor;
+  sort?: SortDescriptor[];
+  showFilter?: boolean;
 }
 </code></pre>
     </div>
 </div>
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -288,6 +325,15 @@ export interface GridLayout {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
@@ -297,9 +343,9 @@ export interface GridLayout {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SafeGridService</li>
+  <li >SafeGridService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,6 +62,15 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared grid service for the dashboards.
+Exposes the available tiles, and find the settings from a widget.</p>
+
+            </p>
+
 
 
             <section>
@@ -77,32 +88,32 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#createFormGroup">createFormGroup</a>
+                                <a href="#createFormGroup" >createFormGroup</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#extractChoices">extractChoices</a>
+                                <a href="#extractChoices" >extractChoices</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#getFieldEditor">getFieldEditor</a>
+                                <a href="#getFieldEditor" >getFieldEditor</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#getFieldFilter">getFieldFilter</a>
+                                <a href="#getFieldFilter" >getFieldFilter</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#getFieldFormat">getFieldFormat</a>
+                                <a href="#getFieldFormat" >getFieldFormat</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getFields">getFields</a>
+                                <a href="#getFields" >getFields</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#populateMetaFields">populateMetaFields</a>
+                                <a href="#populateMetaFields" >populateMetaFields</a>
                             </li>
                         </ul>
                     </td>
@@ -122,17 +133,20 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(formBuilder: <a href="../interfaces/Form.html">FormBuilder</a>, apiProxyService: <a href="../injectables/SafeApiProxyService.html">SafeApiProxyService</a>)</code>
+<code>constructor(formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, apiProxyService: <a href="../injectables/SafeApiProxyService.html" target="_self">SafeApiProxyService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:35</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Shared grid service for the dashboards.
+Exposes the available tiles, and find the settings from a widget.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -141,6 +155,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -155,6 +170,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Angular form builder</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>apiProxyService</td>
@@ -167,6 +186,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Shared API proxy service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -188,10 +211,8 @@
                 <td class="col-md-4">
                     <a name="createFormGroup"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            createFormGroup
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>createFormGroup</b></span>
                         <a href="#createFormGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -206,8 +227,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="229"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:229</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="315"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:315</a></div>
                 </td>
             </tr>
 
@@ -219,6 +240,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -284,10 +306,8 @@
                 <td class="col-md-4">
                     <a name="extractChoices"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            extractChoices
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>extractChoices</b></span>
                         <a href="#extractChoices"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -302,8 +322,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="209"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:209</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="278"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:278</a></div>
                 </td>
             </tr>
 
@@ -315,6 +335,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -380,10 +401,8 @@
                 <td class="col-md-4">
                     <a name="getFieldEditor"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getFieldEditor
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>getFieldEditor</b></span>
                         <a href="#getFieldEditor"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -398,8 +417,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:154</a></div>
                 </td>
             </tr>
 
@@ -411,6 +430,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -460,10 +480,8 @@
                 <td class="col-md-4">
                     <a name="getFieldFilter"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getFieldFilter
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>getFieldFilter</b></span>
                         <a href="#getFieldFilter"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -478,8 +496,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="151"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:151</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:208</a></div>
                 </td>
             </tr>
 
@@ -491,6 +509,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -540,10 +559,8 @@
                 <td class="col-md-4">
                     <a name="getFieldFormat"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getFieldFormat
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>getFieldFormat</b></span>
                         <a href="#getFieldFormat"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -558,8 +575,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="133"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:133</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="189"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:189</a></div>
                 </td>
             </tr>
 
@@ -571,6 +588,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -620,10 +638,8 @@
                 <td class="col-md-4">
                     <a name="getFields"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFields
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getFields</b></span>
                         <a href="#getFields"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -638,8 +654,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:61</a></div>
                 </td>
             </tr>
 
@@ -651,6 +667,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -694,6 +711,8 @@
                                     </td>
 
                                     <td>
+                                        <p>list of metaFields (createdBy, updateBy...)</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -710,6 +729,8 @@
                                     </td>
 
                                     <td>
+                                        <p>list of layout fields</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -741,10 +762,16 @@
                                     </td>
 
                                     <td>
-                                        <code>{ disabled: false, hidden: false, filter: true }</code>
+                                        <code>{
+      disabled: false,
+      hidden: false,
+      filter: true,
+    }</code>
                                     </td>
 
                                     <td>
+                                        <p>additional options ( disable / hidden / filter )</p>
+
                                     </td>
                                 </tr>
                             </tbody>
@@ -757,7 +784,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>List of fields for the grid.</p>
+                        <p>The list of fields formatted for a grid component</p>
 
                     </div>
                 </td>
@@ -770,11 +797,9 @@
                 <td class="col-md-4">
                     <a name="populateMetaFields"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            populateMetaFields
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>populateMetaFields</b></span>
                         <a href="#populateMetaFields"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -789,8 +814,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="180"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:180</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="239"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:239</a></div>
                 </td>
             </tr>
 
@@ -802,12 +827,14 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -822,6 +849,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>List of meta fields</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -850,96 +881,151 @@ import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
 import { prettifyLabel } from &#x27;../utils/prettify&#x27;;
 import get from &#x27;lodash/get&#x27;;
 import { SafeApiProxyService } from &#x27;./api-proxy.service&#x27;;
+import { MULTISELECT_TYPES } from &#x27;../components/ui/core-grid/grid/grid.constants&#x27;;
 
-const MULTISELECT_TYPES: string[] &#x3D; [&#x27;checkbox&#x27;, &#x27;tagbox&#x27;, &#x27;owner&#x27;];
-const DISABLED_FIELDS &#x3D; [&#x27;id&#x27;, &#x27;incrementalId&#x27;, &#x27;createdAt&#x27;, &#x27;modifiedAt&#x27;];
+/** List of disabled fields */
+const DISABLED_FIELDS &#x3D; [
+  &#x27;id&#x27;,
+  &#x27;incrementalId&#x27;,
+  &#x27;createdAt&#x27;,
+  &#x27;modifiedAt&#x27;,
+  &#x27;form&#x27;,
+];
+/**
+ * Transforms a list with nested lists into a flat list
+ *
+ * @param arr The list to flat
+ * @returns The flated list
+ */
+const flatDeep &#x3D; (arr: any[]): any[] &#x3D;&gt;
+  arr.reduce(
+    (acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? flatDeep(val) : val),
+    []
+  );
 
-const flatDeep &#x3D; (arr: any[]): any[] &#x3D;&gt; {
-  return arr.reduce((acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? flatDeep(val) : val), []);
-};
-
+/**
+ * Shared grid service for the dashboards.
+ * Exposes the available tiles, and find the settings from a widget.
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;,
 })
-/*  Grid service for the dashboards.
-  Expose the available tiles, and find the settings from a widget.
-*/
 export class SafeGridService {
-
+  /**
+   * Shared grid service for the dashboards.
+   * Exposes the available tiles, and find the settings from a widget.
+   *
+   * @param formBuilder Angular form builder
+   * @param apiProxyService Shared API proxy service
+   */
   constructor(
     private formBuilder: FormBuilder,
-    private apiProxyService: SafeApiProxyService,
-  ) { }
-
-  // &#x3D;&#x3D;&#x3D; FIELDS &#x3D;&#x3D;&#x3D;
+    private apiProxyService: SafeApiProxyService
+  ) {}
 
   /**
    * Generates list of fields for the grid, based on grid parameters.
+   *
    * @param fields list of fields saved in settings.
+   * @param metaFields list of metaFields (createdBy, updateBy...)
+   * @param layoutFields list of layout fields
    * @param prefix prefix of the field.
-   * @param disabled disabled status of the field, can overwrite the meta one.
-   * @returns List of fields for the grid.
+   * @param options additional options ( disable / hidden / filter )
+   * @param options.disabled disable the grid
+   * @param options.hidden hide the grid
+   * @param options.filter filter options for the grid
+   * @returns The list of fields formatted for a grid component
    */
   public getFields(
-    fields: any[], metaFields: any, layoutFields: any, prefix?: string,
-    options: { disabled?: boolean, hidden?: boolean, filter: boolean } &#x3D; { disabled: false, hidden: false, filter: true }): any[] {
-    return flatDeep(fields.map(f &#x3D;&gt; {
-      const fullName: string &#x3D; prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name;
-      switch (f.kind) {
-        case &#x27;OBJECT&#x27;: {
-          return this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true, hidden: options.hidden, filter: (f.type &#x3D;&#x3D;&#x3D; &#x27;User&#x27;) });
+    fields: any[],
+    metaFields: any,
+    layoutFields: any,
+    prefix?: string,
+    options: { disabled?: boolean; hidden?: boolean; filter: boolean } &#x3D; {
+      disabled: false,
+      hidden: false,
+      filter: true,
+    }
+  ): any[] {
+    return flatDeep(
+      fields.map((f) &#x3D;&gt; {
+        const fullName: string &#x3D; prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name;
+        switch (f.kind) {
+          case &#x27;OBJECT&#x27;: {
+            return this.getFields(
+              f.fields,
+              metaFields,
+              layoutFields,
+              fullName,
+              {
+                disabled: true,
+                hidden: options.hidden,
+                filter: f.type &#x3D;&#x3D;&#x3D; &#x27;User&#x27;,
+              }
+            );
+          }
+          case &#x27;LIST&#x27;: {
+            let metaData &#x3D; get(metaFields, fullName);
+            metaData &#x3D; Object.assign([], metaData);
+            metaData.type &#x3D; &#x27;records&#x27;;
+            const cachedField &#x3D; get(layoutFields, fullName);
+            const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
+            const subFields &#x3D; this.getFields(
+              f.fields,
+              metaFields,
+              layoutFields,
+              fullName,
+              { disabled: true, hidden: true, filter: false }
+            );
+            return {
+              name: fullName,
+              title,
+              type: f.type,
+              format: this.getFieldFormat(f.type),
+              editor: this.getFieldEditor(f.type),
+              filter: prefix ? &#x27;&#x27; : this.getFieldFilter(f.type),
+              meta: metaData,
+              disabled: true,
+              hidden: options.hidden || cachedField?.hidden || false,
+              width: cachedField?.width || title.length * 7 + 50,
+              order: cachedField?.order,
+              query: {
+                sort: f.sort,
+                fields: f.fields,
+                filter: f.filter,
+              },
+              subFields,
+            };
+          }
+          default: {
+            const metaData &#x3D; get(metaFields, fullName);
+            const cachedField &#x3D; get(layoutFields, fullName);
+            const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
+            return {
+              name: fullName,
+              title,
+              type: f.type,
+              format: this.getFieldFormat(f.type),
+              editor: this.getFieldEditor(f.type),
+              filter: !options.filter ? &#x27;&#x27; : this.getFieldFilter(f.type),
+              meta: metaData,
+              disabled:
+                options.disabled ||
+                DISABLED_FIELDS.includes(f.name) ||
+                metaData?.readOnly,
+              hidden: options.hidden || cachedField?.hidden || false,
+              width: cachedField?.width || title.length * 7 + 50,
+              order: cachedField?.order,
+            };
+          }
         }
-        case &#x27;LIST&#x27;: {
-          let metaData &#x3D; get(metaFields, fullName);
-          metaData &#x3D; Object.assign([], metaData);
-          metaData.type &#x3D; &#x27;records&#x27;;
-          const cachedField &#x3D; get(layoutFields, fullName);
-          const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
-          const subFields &#x3D; this.getFields(f.fields, metaFields, layoutFields, fullName, { disabled: true, hidden: true, filter: false });
-          return {
-            name: fullName,
-            title,
-            type: f.type,
-            format: this.getFieldFormat(f.type),
-            editor: this.getFieldEditor(f.type),
-            filter: prefix ? &#x27;&#x27; : this.getFieldFilter(f.type),
-            meta: metaData,
-            disabled: true,
-            hidden: options.hidden || cachedField?.hidden || false,
-            width: cachedField?.width || title.length * 7 + 50,
-            order: cachedField?.order,
-            query: {
-              sort: f.sort,
-              fields: f.fields,
-              filter: f.filter
-            },
-            subFields,
-          };
-        }
-        default: {
-          const metaData &#x3D; get(metaFields, fullName);
-          const cachedField &#x3D; get(layoutFields, fullName);
-          const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
-          return {
-            name: fullName,
-            title,
-            type: f.type,
-            format: this.getFieldFormat(f.type),
-            editor: this.getFieldEditor(f.type),
-            filter: !options.filter ? &#x27;&#x27; : this.getFieldFilter(f.type),
-            meta: metaData,
-            disabled: options.disabled || DISABLED_FIELDS.includes(f.name) || metaData?.readOnly,
-            hidden: options.hidden || cachedField?.hidden || false,
-            width: cachedField?.width || title.length * 7 + 50,
-            order: cachedField?.order,
-          };
-        }
-      }
-    })).sort((a, b) &#x3D;&gt; a.order - b.order);
+      })
+    ).sort((a, b) &#x3D;&gt; a.order - b.order);
   }
 
   /**
    * Gets editor of a field from its type.
+   *
    * @param type Field type.
    * @returns name of the editor.
    */
@@ -974,6 +1060,7 @@ export class SafeGridService {
 
   /**
    * Gets format of a field from its type ( only for date fields ).
+   *
    * @param type Type of the field.
    * @returns Format of the field.
    */
@@ -992,6 +1079,7 @@ export class SafeGridService {
 
   /**
    * Gets filter type of a field from its type.
+   *
    * @param type Type of the field.
    * @returns Name of the field filter.
    */
@@ -1023,6 +1111,8 @@ export class SafeGridService {
 
   /**
    * Fetches choices from URL for fields with url parameter.
+   *
+   * @param metaFields List of meta fields
    */
   public async populateMetaFields(metaFields: any): Promise&lt;void&gt; {
     for (const fieldName of Object.keys(metaFields)) {
@@ -1033,14 +1123,18 @@ export class SafeGridService {
         if (localRes) {
           metaFields[fieldName] &#x3D; {
             ...meta,
-            choices: this.extractChoices(JSON.parse(localRes), meta.choicesByUrl)
+            choices: this.extractChoices(
+              JSON.parse(localRes),
+              meta.choicesByUrl
+            ),
           };
         } else {
-          const res: any &#x3D; await this.apiProxyService.promisedRequestWithHeaders(url);
+          const res: any &#x3D;
+            await this.apiProxyService.promisedRequestWithHeaders(url);
           localStorage.setItem(url, JSON.stringify(res));
           metaFields[fieldName] &#x3D; {
             ...meta,
-            choices: this.extractChoices(res, meta.choicesByUrl)
+            choices: this.extractChoices(res, meta.choicesByUrl),
           };
         }
       }
@@ -1049,83 +1143,115 @@ export class SafeGridService {
 
   /**
    * Extracts choices using choicesByUrl properties
+   *
    * @param res Result of http request.
    * @param choicesByUrl Choices By Url property.
+   * @param choicesByUrl.path The path of the url to fetch
+   * @param choicesByUrl.value The key for values in the response
+   * @param choicesByUrl.text The key for labels in the response
+   * @param choicesByUrl.hasOther If the &quot;other&quot; option is enabled
+   * @param choicesByUrl.otherText Label fot the &quot;other&quot; option if enabled
    * @returns list of choices.
    */
-  private extractChoices(res: any, choicesByUrl: { path?: string, value?: string, text?: string, hasOther?: boolean })
-    : { value: string, text: string }[] {
-    const choices &#x3D; choicesByUrl.path ? [...res[choicesByUrl.path]] : [...res];
-    if (choicesByUrl.hasOther) {
-      choices.push({ [choicesByUrl.value || &#x27;value&#x27;]: &#x27;other&#x27;, [choicesByUrl.text || &#x27;text&#x27;]: &#x27;Other&#x27; });
+  private extractChoices(
+    res: any,
+    choicesByUrl: {
+      path?: string;
+      value?: string;
+      text?: string;
+      hasOther?: boolean;
+      otherText?: string;
     }
-    return choices ? choices.map((x: any) &#x3D;&gt; ({
-      value: (choicesByUrl.value ? x[choicesByUrl.value] : x).toString(),
-      text: choicesByUrl.text ? x[choicesByUrl.text] : choicesByUrl.value ? x[choicesByUrl.value] : x
-    })) : [];
+  ): { value: string; text: string }[] {
+    let choices &#x3D; choicesByUrl.path ? [...res[choicesByUrl.path]] : [...res];
+    choices &#x3D; choices
+      ? choices.map((x: any) &#x3D;&gt; ({
+          value: (choicesByUrl.value ? x[choicesByUrl.value] : x).toString(),
+          text: choicesByUrl.text
+            ? x[choicesByUrl.text]
+            : choicesByUrl.value
+            ? x[choicesByUrl.value]
+            : x,
+        }))
+      : [];
+    if (choicesByUrl.hasOther) {
+      choices.push({
+        value: &#x27;other&#x27;,
+        text: choicesByUrl.otherText ? choicesByUrl.otherText : &#x27;Other&#x27;,
+      });
+    }
+    return choices;
   }
-
-  // &#x3D;&#x3D;&#x3D; EDITION &#x3D;&#x3D;&#x3D;
 
   /**
    * Creates form group for inline edition.
+   *
    * @param dataItem Data item to open in inline edition.
    * @param fields List of grid fields.
    * @returns Form group of the item.
    */
   public createFormGroup(dataItem: any, fields: any[]): FormGroup {
     const formGroup: any &#x3D; {};
-    fields.filter(x &#x3D;&gt; !x.disabled).forEach((field, index) &#x3D;&gt; {
-      if (field.type !&#x3D;&#x3D; &#x27;JSON&#x27; || MULTISELECT_TYPES.includes(field.meta.type)) {
-        formGroup[field.name] &#x3D; [dataItem[field.name]];
-      } else {
-        if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;multipletext&#x27;) {
-          const fieldGroup: any &#x3D; {};
-          for (const item of field.meta.items) {
-            fieldGroup[item.name] &#x3D; [dataItem[field.name] ? dataItem[field.name][item.name] : null];
-          }
-          formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
-        }
-        if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrix&#x27;) {
-          const fieldGroup: any &#x3D; {};
-          for (const row of field.meta.rows) {
-            fieldGroup[row.name] &#x3D; [dataItem[field.name] ? dataItem[field.name][row.name] : null];
-          }
-          formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
-        }
-        if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrixdropdown&#x27;) {
-          const fieldGroup: any &#x3D; {};
-          const fieldValue &#x3D; dataItem[field.name];
-          for (const row of field.meta.rows) {
-            const rowValue &#x3D; fieldValue ? fieldValue[row.name] : null;
-            const rowGroup: any &#x3D; {};
-            for (const column of field.meta.columns) {
-              const columnValue &#x3D; rowValue ? rowValue[column.name] : null;
-              rowGroup[column.name] &#x3D; [columnValue];
+    fields
+      .filter((x) &#x3D;&gt; !x.disabled)
+      .forEach((field, index) &#x3D;&gt; {
+        if (
+          field.type !&#x3D;&#x3D; &#x27;JSON&#x27; ||
+          MULTISELECT_TYPES.includes(field.meta.type)
+        ) {
+          formGroup[field.name] &#x3D; [dataItem[field.name]];
+        } else {
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;multipletext&#x27;) {
+            const fieldGroup: any &#x3D; {};
+            for (const item of field.meta.items) {
+              fieldGroup[item.name] &#x3D; [
+                dataItem[field.name] ? dataItem[field.name][item.name] : null,
+              ];
             }
-            fieldGroup[row.name] &#x3D; this.formBuilder.group(rowGroup);
+            formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
           }
-          formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
-        }
-        if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrixdynamic&#x27;) {
-          const fieldArray: any &#x3D; [];
-          const fieldValue &#x3D; dataItem[field.name] ? dataItem[field.name] : [];
-          for (const rowValue of fieldValue) {
-            const rowGroup: any &#x3D; {};
-            for (const column of field.meta.columns) {
-              const columnValue &#x3D; rowValue ? rowValue[column.name] : null;
-              if (MULTISELECT_TYPES.includes(column.cellType)) {
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrix&#x27;) {
+            const fieldGroup: any &#x3D; {};
+            for (const row of field.meta.rows) {
+              fieldGroup[row.name] &#x3D; [
+                dataItem[field.name] ? dataItem[field.name][row.name] : null,
+              ];
+            }
+            formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
+          }
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrixdropdown&#x27;) {
+            const fieldGroup: any &#x3D; {};
+            const fieldValue &#x3D; dataItem[field.name];
+            for (const row of field.meta.rows) {
+              const rowValue &#x3D; fieldValue ? fieldValue[row.name] : null;
+              const rowGroup: any &#x3D; {};
+              for (const column of field.meta.columns) {
+                const columnValue &#x3D; rowValue ? rowValue[column.name] : null;
                 rowGroup[column.name] &#x3D; [columnValue];
-              } else {
-                rowGroup[column.name] &#x3D; columnValue;
               }
+              fieldGroup[row.name] &#x3D; this.formBuilder.group(rowGroup);
             }
-            fieldArray.push(this.formBuilder.group(rowGroup));
+            formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
           }
-          formGroup[field.name] &#x3D; this.formBuilder.array(fieldArray);
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrixdynamic&#x27;) {
+            const fieldArray: any &#x3D; [];
+            const fieldValue &#x3D; dataItem[field.name] ? dataItem[field.name] : [];
+            for (const rowValue of fieldValue) {
+              const rowGroup: any &#x3D; {};
+              for (const column of field.meta.columns) {
+                const columnValue &#x3D; rowValue ? rowValue[column.name] : null;
+                if (MULTISELECT_TYPES.includes(column.cellType)) {
+                  rowGroup[column.name] &#x3D; [columnValue];
+                } else {
+                  rowGroup[column.name] &#x3D; columnValue;
+                }
+              }
+              fieldArray.push(this.formBuilder.group(rowGroup));
+            }
+            formGroup[field.name] &#x3D; this.formBuilder.array(fieldArray);
+          }
         }
-      }
-    });
+      });
     return this.formBuilder.group(formGroup);
   }
 }
@@ -1140,14 +1266,15 @@ export class SafeGridService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1159,6 +1286,15 @@ export class SafeGridService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -1168,9 +1304,9 @@ export class SafeGridService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

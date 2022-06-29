@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -41,9 +42,12 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>DialogData</li>
+  <li
+  >
+  DialogData</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -65,6 +69,14 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>An interface to define the structure of the data displayed in the modal</p>
+
+            </p>
+
 
         <section>
             <h3 id="index">Index</h3>
@@ -79,10 +91,16 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#record">record</a>
+                                        <a href="#record" 
+>
+                                            record
+                                        </a>
                                 </li>
                                 <li>
-                                        <a href="#title">title</a>
+                                        <a href="#title" 
+>
+                                            title
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -100,7 +118,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="record"></a>
-                                        <span class="name"><b>record</b><a href="#record"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>record</b>
+                                            <a href="#record">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -129,7 +151,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="title"></a>
-                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>title</b>
+                                            <a href="#title">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -158,25 +184,34 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Apollo} from &#x27;apollo-angular&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
 import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { GetRecordDetailsQueryResponse, GET_RECORD_DETAILS } from &#x27;../../graphql/queries&#x27;;
+import {
+  GetRecordDetailsQueryResponse,
+  GET_RECORD_DETAILS,
+} from &#x27;../../graphql/queries&#x27;;
 import { Form } from &#x27;../../models/form.model&#x27;;
 
+/**
+ * An interface to define the structure of the data displayed in the modal
+ */
 interface DialogData {
   title: string;
   record: string;
 }
 
+/**
+ * This component is used in the grids to display a modal after clicking on the &quot;convert&quot; button.
+ * This modal allows the user to configurate the convertion.
+ */
 @Component({
   selector: &#x27;safe-convert-modal&#x27;,
   templateUrl: &#x27;./convert-modal.component.html&#x27;,
-  styleUrls: [&#x27;./convert-modal.component.scss&#x27;]
+  styleUrls: [&#x27;./convert-modal.component.scss&#x27;],
 })
 export class SafeConvertModalComponent implements OnInit {
-
   // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
   convertForm: FormGroup &#x3D; new FormGroup({});
 
@@ -187,41 +222,60 @@ export class SafeConvertModalComponent implements OnInit {
 
   // &#x3D;&#x3D;&#x3D; LOAD DATA &#x3D;&#x3D;&#x3D;
   public loading &#x3D; true;
-
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
+   *
+   * @param formBuilder This is used to create a form.
+   * @param apollo This is the Apollo service that we&#x27;ll use to make the GraphQL mutation.
+   * @param dialogRef This is the reference of the dialog that will be opened
+   * @param data This is the data that is passed into the modal when it is opened.
+   */
   constructor(
     private formBuilder: FormBuilder,
     private apollo: Apollo,
     public dialogRef: MatDialogRef&lt;SafeConvertModalComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    this.apollo.watchQuery&lt;GetRecordDetailsQueryResponse&gt;({
-      query: GET_RECORD_DETAILS,
-      variables: {
-        id: this.data.record
-      }
-    }).valueChanges.subscribe(res &#x3D;&gt; {
-      const record &#x3D; res.data.record;
-      this.form &#x3D; record.form;
-      this.loading &#x3D; false;
-      this.availableForms &#x3D; this.form?.resource?.forms?.filter(x &#x3D;&gt; x.id !&#x3D;&#x3D; this.form?.id) || [];
-    });
+    this.apollo
+      .watchQuery&lt;GetRecordDetailsQueryResponse&gt;({
+        query: GET_RECORD_DETAILS,
+        variables: {
+          id: this.data.record,
+        },
+      })
+      .valueChanges.subscribe((res) &#x3D;&gt; {
+        const record &#x3D; res.data.record;
+        this.form &#x3D; record.form;
+        this.loading &#x3D; false;
+        this.availableForms &#x3D;
+          this.form?.resource?.forms?.filter((x) &#x3D;&gt; x.id !&#x3D;&#x3D; this.form?.id) ||
+          [];
+      });
     this.convertForm &#x3D; this.formBuilder.group({
       targetForm: [null, Validators.required],
-      copyRecord: [true, Validators.required]
+      copyRecord: [true, Validators.required],
     });
-    this.convertForm.get(&#x27;targetForm&#x27;)?.valueChanges.subscribe((targetForm: Form) &#x3D;&gt; {
-      if (targetForm) {
-        this.ignoredFields &#x3D; this.form?.fields?.filter(sourceField &#x3D;&gt; !targetForm?.fields?.some(
-          targetField &#x3D;&gt; sourceField.name &#x3D;&#x3D;&#x3D; targetField.name)) || [];
-      }
-    });
+    this.convertForm
+      .get(&#x27;targetForm&#x27;)
+      ?.valueChanges.subscribe((targetForm: Form) &#x3D;&gt; {
+        if (targetForm) {
+          this.ignoredFields &#x3D;
+            this.form?.fields?.filter(
+              (sourceField) &#x3D;&gt;
+                !targetForm?.fields?.some(
+                  (targetField) &#x3D;&gt; sourceField.name &#x3D;&#x3D;&#x3D; targetField.name
+                )
+            ) || [];
+        }
+      });
   }
 
-
-  /*  Close the modal without sending data.
-  */
+  /**
+   * Closes the modal without sending data.
+   */
   onClose(): void {
     this.dialogRef.close();
   }
@@ -231,14 +285,15 @@ export class SafeConvertModalComponent implements OnInit {
 </div>
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -250,6 +305,15 @@ export class SafeConvertModalComponent implements OnInit {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
@@ -259,9 +323,9 @@ export class SafeConvertModalComponent implements OnInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

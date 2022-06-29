@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -38,9 +39,10 @@
 
 
 
+
 <ol class="breadcrumb">
     <li>Guards</li>
-    <li>SafePermissionGuard</li>
+    <li >SafePermissionGuard</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,6 +64,15 @@
             </p>
 
 
+                <p class="comment">
+                <h3>Description</h3>
+                </p>
+                <p class="comment">
+                    <p>Check if the logged user has an access to the route.
+Only the &#39;applications&#39; route is accessible to all logged users.</p>
+
+                </p>
+
 
 
 
@@ -79,7 +90,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#canActivate">canActivate</a>
+                                <a href="#canActivate" >canActivate</a>
                             </li>
                         </ul>
                     </td>
@@ -99,17 +110,19 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(authService: <a href="../injectables/SafeAuthService.html">SafeAuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor(authService: <a href="../injectables/SafeAuthService.html" target="_self">SafeAuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/safe/src/lib/guards/permission.guard.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/guards/permission.guard.ts:20</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the SAfePermissionGuard class</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -118,6 +131,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -132,6 +146,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The authentification service</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>router</td>
@@ -144,6 +162,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The router service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -165,9 +187,7 @@
                 <td class="col-md-4">
                     <a name="canActivate"></a>
                     <span class="name">
-                        <b>
-                            canActivate
-                        </b>
+                        <span ><b>canActivate</b></span>
                         <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -181,23 +201,30 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">projects/safe/src/lib/guards/permission.guard.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">projects/safe/src/lib/guards/permission.guard.ts:39</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Executed everytime a route is called, in order to check user permissions.
+Redirects to default route if not authorized.
+When reloading the page, the router will redirect to &#39;applications&#39;.
+GraphQL should prevent that issue.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -212,6 +239,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>activated route snapshot</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>state</td>
@@ -224,6 +255,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>router state snapshot</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -235,7 +270,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>A boolean indicating if the user has permission</p>
+
                     </div>
                 </td>
             </tr>
@@ -247,31 +283,55 @@
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
             <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, Router } from &#x27;@angular/router&#x27;;
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  RouterStateSnapshot,
+  UrlTree,
+  Router,
+} from &#x27;@angular/router&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { PermissionsManagement, PermissionType } from &#x27;../models/user.model&#x27;;
 import { SafeAuthService } from &#x27;../services/auth.service&#x27;;
 
+/**
+ * Check if the logged user has an access to the route.
+ * Only the &#x27;applications&#x27; route is accessible to all logged users.
+ */
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
-/*  Check if the logged user has an access to the route.
-    Only the &#x27;applications&#x27; route is accessible to all logged users.
-*/
 export class SafePermissionGuard implements CanActivate {
-  constructor(
-    private authService: SafeAuthService,
-    private router: Router
-  ) { }
+  /**
+   * Constructor of the SAfePermissionGuard class
+   *
+   * @param authService The authentification service
+   * @param router The router service
+   */
+  constructor(private authService: SafeAuthService, private router: Router) {}
 
-  /*  Executed everytime a route is called, in order to check user permissions.
-      Redirects to default route if not authorized.
-      When reloading the page, the router will redirect to &#x27;applications&#x27;. GraphQL should prevent that issue.
-  */
+  /**
+   * Executed everytime a route is called, in order to check user permissions.
+   * Redirects to default route if not authorized.
+   * When reloading the page, the router will redirect to &#x27;applications&#x27;.
+   * GraphQL should prevent that issue.
+   *
+   * @param next activated route snapshot
+   * @param state router state snapshot
+   * @returns A boolean indicating if the user has permission
+   */
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable&lt;boolean | UrlTree&gt; | Promise&lt;boolean | UrlTree&gt; | boolean | UrlTree {
-    const permission &#x3D; PermissionsManagement.getRightFromPath(state.url, PermissionType.access);
+    state: RouterStateSnapshot
+  ):
+    | Observable&lt;boolean | UrlTree&gt;
+    | Promise&lt;boolean | UrlTree&gt;
+    | boolean
+    | UrlTree {
+    const permission &#x3D; PermissionsManagement.getRightFromPath(
+      state.url,
+      PermissionType.access
+    );
     const isAuthorized &#x3D; this.authService.userHasClaim(permission);
     if (!isAuthorized) {
       this.router.navigate([&#x27;/applications&#x27;]);
@@ -287,14 +347,15 @@ export class SafePermissionGuard implements CanActivate {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -306,6 +367,15 @@ export class SafePermissionGuard implements CanActivate {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
@@ -315,9 +385,9 @@ export class SafePermissionGuard implements CanActivate {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -41,9 +42,12 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>DialogData</li>
+  <li
+  >
+  DialogData</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -63,6 +67,7 @@
         <p class="comment">
             <code>projects/safe/src/lib/components/form-modal/form-modal.component.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -87,27 +92,45 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#askForConfirm">askForConfirm</a>
+                                        <a href="#askForConfirm" 
+>
+                                            askForConfirm
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#locale">locale</a>
+                                        <a href="#locale" 
+>
+                                            locale
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#prefillData">prefillData</a>
+                                        <a href="#prefillData" 
+>
+                                            prefillData
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#prefillRecords">prefillRecords</a>
+                                        <a href="#prefillRecords" 
+>
+                                            prefillRecords
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#recordId">recordId</a>
+                                        <a href="#recordId" 
+>
+                                            recordId
+                                        </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#template">template</a>
+                                        <a href="#template" 
+>
+                                            template
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -125,7 +148,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="askForConfirm"></a>
-                                        <span class="name"><b>askForConfirm</b><a href="#askForConfirm"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>askForConfirm</b>
+                                            <a href="#askForConfirm">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -159,7 +186,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="locale"></a>
-                                        <span class="name"><b>locale</b><a href="#locale"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>locale</b>
+                                            <a href="#locale">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -193,7 +224,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="prefillData"></a>
-                                        <span class="name"><b>prefillData</b><a href="#prefillData"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>prefillData</b>
+                                            <a href="#prefillData">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -227,7 +262,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="prefillRecords"></a>
-                                        <span class="name"><b>prefillRecords</b><a href="#prefillRecords"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>prefillRecords</b>
+                                            <a href="#prefillRecords">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -261,7 +300,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="recordId"></a>
-                                        <span class="name"><b>recordId</b><a href="#recordId"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>recordId</b>
+                                            <a href="#recordId">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -295,7 +338,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="template"></a>
-                                        <span class="name"><b>template</b><a href="#template"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>template</b>
+                                            <a href="#template">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -331,21 +378,31 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
 import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import {
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+  MatDialog,
+} from &#x27;@angular/material/dialog&#x27;;
 import {
   GetFormByIdQueryResponse,
   GetRecordByIdQueryResponse,
   GET_RECORD_BY_ID,
   GET_FORM_BY_ID,
   GetRecordDetailsQueryResponse,
-  GET_RECORD_DETAILS
+  GET_RECORD_DETAILS,
 } from &#x27;../../graphql/queries&#x27;;
 import { Form } from &#x27;../../models/form.model&#x27;;
 import { Record } from &#x27;../../models/record.model&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
 import {
-  EditRecordMutationResponse, EDIT_RECORD, AddRecordMutationResponse, ADD_RECORD, UploadFileMutationResponse,
-  UPLOAD_FILE, EDIT_RECORDS, EditRecordsMutationResponse,
+  EditRecordMutationResponse,
+  EDIT_RECORD,
+  AddRecordMutationResponse,
+  ADD_RECORD,
+  UploadFileMutationResponse,
+  UPLOAD_FILE,
+  EDIT_RECORDS,
+  EditRecordsMutationResponse,
 } from &#x27;../../graphql/mutations&#x27;;
 import { v4 as uuidv4 } from &#x27;uuid&#x27;;
 import { SafeConfirmModalComponent } from &#x27;../confirm-modal/confirm-modal.component&#x27;;
@@ -359,6 +416,7 @@ import { NOTIFICATIONS } from &#x27;../../const/notifications&#x27;;
 import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
 import isNil from &#x27;lodash/isNil&#x27;;
 import omitBy from &#x27;lodash/omitBy&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 
 /**
  * Interface of Dialog data.
@@ -371,16 +429,20 @@ interface DialogData {
   prefillData?: any;
   askForConfirm?: boolean;
 }
+/**
+ * Defines the default Dialog data
+ */
+const DEFAULT_DIALOG_DATA &#x3D; { askForConfirm: true };
 
-const DEFAULT_DIALOG_DATA &#x3D; { askForConfirm: true };
-
+/**
+ * Component that displays a form in a modal
+ */
 @Component({
   selector: &#x27;safe-form-modal&#x27;,
   templateUrl: &#x27;./form-modal.component.html&#x27;,
-  styleUrls: [&#x27;./form-modal.component.scss&#x27;]
+  styleUrls: [&#x27;./form-modal.component.scss&#x27;],
 })
 export class SafeFormModalComponent implements OnInit {
-
   // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
   public loading &#x3D; true;
   public form?: Form;
@@ -397,101 +459,162 @@ export class SafeFormModalComponent implements OnInit {
   private pages &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
   private temporaryFilesStorage: any &#x3D; {};
 
-  // &#x3D;&#x3D;&#x3D; SURVEY COLORS
-  primaryColor &#x3D; &#x27;#008DC9&#x27;;
+  environment: any;
 
+  /**
+   * Getter for the pages property
+   *
+   * @returns pages as an Observable
+   */
   public get pages$(): Observable&lt;any[]&gt; {
     return this.pages.asObservable();
   }
 
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
+   *
+   * @param data This is the data that is passed to the modal when it is opened.
+   * @param environment This is the environment in which we run the application
+   * @param dialog This is the Angular Material Dialog service.
+   * @param dialogRef This is the reference to the dialog.
+   * @param apollo This is the Apollo client that we&#x27;ll use to make GraphQL requests.
+   * @param snackBar This is the service that allows you to display a snackbar.
+   * @param downloadService This is the service that is used to download files.
+   * @param authService This is the service that handles authentication.
+   * @param formBuilderService This is the service that will be used to build forms.
+   * @param translate This is the service that allows us to translate the text in our application.
+   */
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(&#x27;environment&#x27;) environment: any,
     public dialog: MatDialog,
     public dialogRef: MatDialogRef&lt;SafeFormModalComponent&gt;,
     private apollo: Apollo,
     private snackBar: SafeSnackBarService,
     private downloadService: SafeDownloadService,
     private authService: SafeAuthService,
-    private formBuilderService: SafeFormBuilderService
+    private formBuilderService: SafeFormBuilderService,
+    private translate: TranslateService
   ) {
     this.containerId &#x3D; uuidv4();
+    this.environment &#x3D; environment;
   }
 
   async ngOnInit(): Promise&lt;void&gt; {
-    this.data &#x3D; {  ...DEFAULT_DIALOG_DATA, ...this.data };
-    const defaultThemeColorsSurvey &#x3D; Survey
-      .StylesManager
-      .ThemeColors.default;
-    defaultThemeColorsSurvey[&#x27;$main-color&#x27;] &#x3D; this.primaryColor;
-    defaultThemeColorsSurvey[&#x27;$main-hover-color&#x27;] &#x3D; this.primaryColor;
+    this.data &#x3D; { ...DEFAULT_DIALOG_DATA, ...this.data };
+    const defaultThemeColorsSurvey &#x3D; Survey.StylesManager.ThemeColors.default;
+    defaultThemeColorsSurvey[&#x27;$main-color&#x27;] &#x3D; this.environment.theme.primary;
+    defaultThemeColorsSurvey[&#x27;$main-hover-color&#x27;] &#x3D;
+      this.environment.theme.primary;
 
-    Survey
-      .StylesManager
-      .applyTheme();
+    Survey.StylesManager.applyTheme();
 
     this.isMultiEdition &#x3D; Array.isArray(this.data.recordId);
-    const promises: Promise&lt;GetFormByIdQueryResponse | GetRecordByIdQueryResponse | void&gt;[] &#x3D; [];
+    const promises: Promise&lt;
+      GetFormByIdQueryResponse | GetRecordByIdQueryResponse | void
+    &gt;[] &#x3D; [];
     if (this.data.recordId) {
-      const id &#x3D; this.isMultiEdition ? this.data.recordId[0] : this.data.recordId;
-      promises.push(this.apollo.query&lt;GetRecordByIdQueryResponse&gt;({
-        query: GET_RECORD_BY_ID,
-        variables: {
-          id
-        }
-      }).toPromise().then(res &#x3D;&gt; {
-        this.record &#x3D; res.data.record;
-        this.modifiedAt &#x3D; this.isMultiEdition ? null : this.record.modifiedAt || null;
-        if (!this.data.template) {
-          this.form &#x3D; this.record.form;
-        }
-      }));
+      const id &#x3D; this.isMultiEdition
+        ? this.data.recordId[0]
+        : this.data.recordId;
+      promises.push(
+        this.apollo
+          .query&lt;GetRecordByIdQueryResponse&gt;({
+            query: GET_RECORD_BY_ID,
+            variables: {
+              id,
+            },
+          })
+          .toPromise()
+          .then((res) &#x3D;&gt; {
+            this.record &#x3D; res.data.record;
+            this.modifiedAt &#x3D; this.isMultiEdition
+              ? null
+              : this.record.modifiedAt || null;
+            if (!this.data.template) {
+              this.form &#x3D; this.record.form;
+            }
+          })
+      );
     }
 
     if (!this.data.recordId || this.data.template) {
-      promises.push(this.apollo.query&lt;GetFormByIdQueryResponse&gt;({
-        query: GET_FORM_BY_ID,
-        variables: {
-          id: this.data.template
-        }
-      }).toPromise().then(res &#x3D;&gt; {
-        this.form &#x3D; res.data.form;
-        if (this.data.prefillData) {
-          this.storedMergedData &#x3D; this.data.prefillData;
-        }
-        if (this.data.prefillRecords &amp;&amp; this.data.prefillRecords.length &gt; 0) {
-          this.storedMergedData &#x3D; this.mergedData(this.data.prefillRecords);
-          const resId &#x3D; this.data.prefillRecords[0].form?.resource?.id;
-          const resourcesField &#x3D; this.form.fields?.find(x &#x3D;&gt; (x.type &#x3D;&#x3D;&#x3D; &#x27;resources&#x27;) &amp;&amp; (x.resource &#x3D;&#x3D;&#x3D; resId));
-          if (resourcesField) {
-            this.storedMergedData[resourcesField.name] &#x3D; this.data.prefillRecords.map(x &#x3D;&gt; x.id);
-          }
-          else {
-            this.snackBar.openSnackBar(NOTIFICATIONS.recordDoesNotMatch, { error: true });
-          }
-        }
-      }));
+      promises.push(
+        this.apollo
+          .query&lt;GetFormByIdQueryResponse&gt;({
+            query: GET_FORM_BY_ID,
+            variables: {
+              id: this.data.template,
+            },
+          })
+          .toPromise()
+          .then((res) &#x3D;&gt; {
+            this.form &#x3D; res.data.form;
+            if (this.data.prefillData) {
+              this.storedMergedData &#x3D; this.data.prefillData;
+            }
+            if (
+              this.data.prefillRecords &amp;&amp;
+              this.data.prefillRecords.length &gt; 0
+            ) {
+              this.storedMergedData &#x3D; this.mergedData(this.data.prefillRecords);
+              const resId &#x3D; this.data.prefillRecords[0].form?.resource?.id;
+              const resourcesField &#x3D; this.form.fields?.find(
+                (x) &#x3D;&gt; x.type &#x3D;&#x3D;&#x3D; &#x27;resources&#x27; &amp;&amp; x.resource &#x3D;&#x3D;&#x3D; resId
+              );
+              if (resourcesField) {
+                this.storedMergedData[resourcesField.name] &#x3D;
+                  this.data.prefillRecords.map((x) &#x3D;&gt; x.id);
+              } else {
+                this.snackBar.openSnackBar(NOTIFICATIONS.recordDoesNotMatch, {
+                  error: true,
+                });
+              }
+            }
+          })
+      );
     }
     await Promise.all(promises);
     this.initSurvey();
     this.loading &#x3D; false;
   }
 
+  /**
+   * Initializes the form
+   */
   private initSurvey(): void {
-    this.survey &#x3D; this.formBuilderService.createSurvey(this.form?.structure || &#x27;&#x27;);
-    this.survey.onClearFiles.add((survey, options) &#x3D;&gt; this.onClearFiles(survey, options));
-    this.survey.onUploadFiles.add((survey, options) &#x3D;&gt; this.onUploadFiles(survey, options));
-    this.survey.onDownloadFile.add((survey, options) &#x3D;&gt; this.onDownloadFile(survey, options));
-    this.survey.onUpdateQuestionCssClasses.add((_, options) &#x3D;&gt; this.onSetCustomCss(options));
-    this.survey.onCurrentPageChanged.add((survey, _) &#x3D;&gt; {
-      survey.checkErrorsMode &#x3D; survey.isLastPage ? &#x27;onComplete&#x27; : &#x27;onNextPage&#x27;;
-      this.selectedTabIndex &#x3D; survey.currentPageNo;
-    });
+    this.survey &#x3D; this.formBuilderService.createSurvey(
+      this.form?.structure || &#x27;&#x27;
+    );
+    this.survey.onClearFiles.add((survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+      this.onClearFiles(survey, options)
+    );
+    this.survey.onUploadFiles.add((survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+      this.onUploadFiles(survey, options)
+    );
+    this.survey.onDownloadFile.add((survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+      this.onDownloadFile(survey, options)
+    );
+    this.survey.onUpdateQuestionCssClasses.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; this.onSetCustomCss(options)
+    );
+    this.survey.onCurrentPageChanged.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
+        survey.checkErrorsMode &#x3D; survey.isLastPage
+          ? &#x27;onComplete&#x27;
+          : &#x27;onNextPage&#x27;;
+        this.selectedTabIndex &#x3D; survey.currentPageNo;
+      }
+    );
     this.survey.onPageVisibleChanged.add(() &#x3D;&gt; {
       this.setPages();
     });
-    this.survey.onSettingQuestionErrors.add((survey, options) &#x3D;&gt; {
-      this.setPages();
-    });
+    this.survey.onSettingQuestionErrors.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
+        this.setPages();
+      }
+    );
     this.survey.locale &#x3D; this.data.locale ? this.data.locale : &#x27;en&#x27;;
     if (this.data.recordId &amp;&amp; this.record) {
       addCustomFunctions(Survey, this.authService, this.apollo, this.record);
@@ -499,12 +622,16 @@ export class SafeFormModalComponent implements OnInit {
       this.survey.showCompletedPage &#x3D; false;
     }
     if (this.storedMergedData) {
-      this.survey.data &#x3D; { ...this.survey.data, ...omitBy(this.storedMergedData, isNil) };
+      this.survey.data &#x3D; {
+        ...this.survey.data,
+        ...omitBy(this.storedMergedData, isNil),
+      };
     }
     this.survey.showNavigationButtons &#x3D; false;
     this.survey.render(this.containerId);
     this.setPages();
-    this.survey.onComplete.add(this.completeMySurvey);
+    this.survey.onComplete.add(this.onComplete);
+    setTimeout(() &#x3D;&gt; {}, 100);
   }
 
   /**
@@ -514,19 +641,25 @@ export class SafeFormModalComponent implements OnInit {
     if (!this.survey?.hasErrors()) {
       this.survey?.completeLastPage();
     } else {
-      this.snackBar.openSnackBar(&#x27;Saving failed, some fields require your attention.&#x27;, { error: true });
+      this.snackBar.openSnackBar(
+        &#x27;Saving failed, some fields require your attention.&#x27;,
+        { error: true }
+      );
     }
   }
 
   /**
    * Creates the record, or update it if provided.
+   *
    * @param survey Survey instance.
    */
-  public completeMySurvey &#x3D; (survey: any) &#x3D;&gt; {
-    const rowsSelected &#x3D; Array.isArray(this.data.recordId) ? this.data.recordId.length : 1;
+  public onComplete &#x3D; (survey: any) &#x3D;&gt; {
+    this.survey?.clear(false);
+    const rowsSelected &#x3D; Array.isArray(this.data.recordId)
+      ? this.data.recordId.length
+      : 1;
 
-    /* we can send to backend empty data if they are not required
-    */
+    /** we can send to backend empty data if they are not required */
     const questions &#x3D; survey.getAllQuestions();
     const data &#x3D; survey.data;
     for (const field in questions) {
@@ -547,27 +680,42 @@ export class SafeFormModalComponent implements OnInit {
     if (this.data.askForConfirm) {
       const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
         data: {
-          title: &#x60;Update row${rowsSelected &gt; 1 ? &#x27;s&#x27; : &#x27;&#x27;}&#x60;,
-          content: &#x60;Do you confirm the update of ${rowsSelected} row${rowsSelected &gt; 1 ? &#x27;s&#x27; : &#x27;&#x27;} ?&#x60;,
-          confirmText: &#x27;Confirm&#x27;,
-          confirmColor: &#x27;primary&#x27;
-        }
+          title: this.translate.instant(&#x27;common.updateObject&#x27;, {
+            name:
+              rowsSelected &gt; 1
+                ? this.translate.instant(&#x27;common.row.few&#x27;)
+                : this.translate.instant(&#x27;common.row.one&#x27;),
+          }),
+          content: this.translate.instant(
+            &#x27;components.form.updateRow.confirmationMessage&#x27;,
+            {
+              quantity: rowsSelected,
+              rowText:
+                rowsSelected &gt; 1
+                  ? this.translate.instant(&#x27;common.row.few&#x27;)
+                  : this.translate.instant(&#x27;common.row.one&#x27;),
+            }
+          ),
+          confirmText: this.translate.instant(
+            &#x27;components.confirmModal.confirm&#x27;
+          ),
+          confirmColor: &#x27;primary&#x27;,
+        },
       });
-      dialogRef.afterClosed().subscribe(async value &#x3D;&gt; {
+      dialogRef.afterClosed().subscribe(async (value) &#x3D;&gt; {
         if (value) {
           await this.onUpdate(survey);
-        } else {
-          this.dialogRef.close();
         }
       });
-    // Updates the data directly.
+      // Updates the data directly.
     } else {
       this.onUpdate(survey);
     }
-  }
+  };
 
   /**
    * Handles update data event.
+   *
    * @param survey current survey
    */
   public async onUpdate(survey: any): Promise&lt;void&gt; {
@@ -580,80 +728,106 @@ export class SafeFormModalComponent implements OnInit {
       }
     } else {
       await this.uploadFiles(survey);
-      this.apollo.mutate&lt;AddRecordMutationResponse&gt;({
-        mutation: ADD_RECORD,
-        variables: {
-          form: this.data.template,
-          data: survey.data
-        }
-      }).subscribe(res &#x3D;&gt; {
-        if (res.errors) {
-          this.snackBar.openSnackBar(&#x60;Error. ${res.errors[0].message}&#x60;, {error: true});
-          this.dialogRef.close();
-        } else {
-          this.dialogRef.close({template: this.data.template, data: res.data?.addRecord});
-        }
-      });
+      this.apollo
+        .mutate&lt;AddRecordMutationResponse&gt;({
+          mutation: ADD_RECORD,
+          variables: {
+            form: this.data.template,
+            data: survey.data,
+          },
+        })
+        .subscribe((res) &#x3D;&gt; {
+          if (res.errors) {
+            this.snackBar.openSnackBar(&#x60;Error. ${res.errors[0].message}&#x60;, {
+              error: true,
+            });
+            this.dialogRef.close();
+          } else {
+            this.dialogRef.close({
+              template: this.data.template,
+              data: res.data?.addRecord,
+            });
+          }
+        });
     }
     survey.showCompletedPage &#x3D; true;
   }
 
   /**
    * Updates a specific record.
+   *
    * @param id record id.
    * @param survey current survey.
    */
   public updateData(id: any, survey: any): void {
-    this.apollo.mutate&lt;EditRecordMutationResponse&gt;({
-      mutation: EDIT_RECORD,
-      variables: {
-        id,
-        data: survey.data,
-        template: this.data.template
-      }
-    }).subscribe(res &#x3D;&gt; {
-      if (res.data) {
-        this.dialogRef.close({ template: this.form?.id, data: res.data.editRecord });
-      }
-    });
+    this.apollo
+      .mutate&lt;EditRecordMutationResponse&gt;({
+        mutation: EDIT_RECORD,
+        variables: {
+          id,
+          data: survey.data,
+          template: this.data.template,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.data) {
+          this.dialogRef.close({
+            template: this.form?.id,
+            data: res.data.editRecord,
+          });
+        }
+      });
   }
 
   /**
    * Updates multiple records.
+   *
    * @param ids list of record ids.
    * @param survey current survey.
    */
   public updateMultipleData(ids: any, survey: any): void {
-    this.apollo.mutate&lt;EditRecordsMutationResponse&gt;({
-      mutation: EDIT_RECORDS,
-      variables: {
-        ids,
-        data: survey.data,
-        template: this.data.template
-      }
-    }).subscribe(res &#x3D;&gt; {
-      if (res.data) {
-        this.dialogRef.close({ template: this.form?.id, data: res.data.editRecords });
-      }
-    });
+    this.apollo
+      .mutate&lt;EditRecordsMutationResponse&gt;({
+        mutation: EDIT_RECORDS,
+        variables: {
+          ids,
+          data: survey.data,
+          template: this.data.template,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.data) {
+          this.dialogRef.close({
+            template: this.form?.id,
+            data: res.data.editRecords,
+          });
+        }
+      });
   }
 
+  /**
+   * Upload asynchronously files to create questions in the form
+   *
+   * @param survey The form in which the files will be updated
+   */
   private async uploadFiles(survey: any): Promise&lt;void&gt; {
     const data &#x3D; survey.data;
     const questionsToUpload &#x3D; Object.keys(this.temporaryFilesStorage);
     for (const name of questionsToUpload) {
       const files &#x3D; this.temporaryFilesStorage[name];
       for (const [index, file] of files.entries()) {
-        const res &#x3D; await this.apollo.mutate&lt;UploadFileMutationResponse&gt;({
-          mutation: UPLOAD_FILE,
-          variables: {
-            file,
-            form: this.form?.id
-          },
-          context: {
-            useMultipart: true
-          }
-        }).toPromise();
+        const res &#x3D; await this.apollo
+          .mutate&lt;UploadFileMutationResponse&gt;({
+            mutation: UPLOAD_FILE,
+            variables: {
+              file,
+              form: this.form?.id,
+            },
+            context: {
+              useMultipart: true,
+            },
+          })
+          .toPromise();
         if (res.errors) {
           this.snackBar.openSnackBar(res.errors[0].message, { error: true });
           return;
@@ -664,10 +838,22 @@ export class SafeFormModalComponent implements OnInit {
     }
   }
 
+  /**
+   * Handles the clearing of files
+   *
+   * @param survey The form in which there used to be files
+   * @param options Options regarding the files
+   */
   private onClearFiles(survey: Survey.SurveyModel, options: any): void {
     options.callback(&#x27;success&#x27;);
   }
 
+  /**
+   * Handles the uploading of files event
+   *
+   * @param survey The survey to which the files were uploaded
+   * @param options Options regarding the upload
+   */
   private onUploadFiles(survey: Survey.SurveyModel, options: any): void {
     if (this.temporaryFilesStorage[options.name] !&#x3D;&#x3D; undefined) {
       this.temporaryFilesStorage[options.name].concat(options.files);
@@ -675,29 +861,34 @@ export class SafeFormModalComponent implements OnInit {
       this.temporaryFilesStorage[options.name] &#x3D; options.files;
     }
     let content: any[] &#x3D; [];
-    options
-      .files
-      .forEach((file: any) &#x3D;&gt; {
-        const fileReader &#x3D; new FileReader();
-        fileReader.onload &#x3D; (e) &#x3D;&gt; {
-          content &#x3D; content.concat([
-            {
-              name: file.name,
-              type: file.type,
-              content: fileReader.result,
-              file
-            }
-          ]);
-          if (content.length &#x3D;&#x3D;&#x3D; options.files.length) {
-            options.callback(&#x27;success&#x27;, content.map((fileContent) &#x3D;&gt; {
-              return { file: fileContent.file, content: fileContent.content };
-            }));
-          }
-        };
-        fileReader.readAsDataURL(file);
-      });
+    options.files.forEach((file: any) &#x3D;&gt; {
+      const fileReader &#x3D; new FileReader();
+      fileReader.onload &#x3D; (e) &#x3D;&gt; {
+        content &#x3D; content.concat([
+          {
+            name: file.name,
+            type: file.type,
+            content: fileReader.result,
+            file,
+          },
+        ]);
+        if (content.length &#x3D;&#x3D;&#x3D; options.files.length) {
+          options.callback(
+            &#x27;success&#x27;,
+            content.map((fileContent) &#x3D;&gt; ({
+              file: fileContent.file,
+              content: fileContent.content,
+            }))
+          );
+        }
+      };
+      fileReader.readAsDataURL(file);
+    });
   }
 
+  /**
+   * Set the pages of the form
+   */
   private setPages(): void {
     const pages &#x3D; [];
     if (this.survey) {
@@ -710,24 +901,48 @@ export class SafeFormModalComponent implements OnInit {
     this.pages.next(pages);
   }
 
+  /**
+   * Handles the show page event
+   *
+   * @param i The index of the page
+   */
   public onShowPage(i: number): void {
-    if (this.survey) { this.survey.currentPageNo &#x3D; i; }
+    if (this.survey) {
+      this.survey.currentPageNo &#x3D; i;
+    }
     this.selectedTabIndex &#x3D; i;
   }
 
+  /**
+   * Handles the downloading of a file event
+   *
+   * @param survey The survey from which the files were downloaded
+   * @param options Options regarding the download
+   */
   private onDownloadFile(survey: Survey.SurveyModel, options: any): void {
-    if (options.content.indexOf(&#x27;base64&#x27;) !&#x3D;&#x3D; -1 || options.content.indexOf(&#x27;http&#x27;) !&#x3D;&#x3D; -1) {
+    if (
+      options.content.indexOf(&#x27;base64&#x27;) !&#x3D;&#x3D; -1 ||
+      options.content.indexOf(&#x27;http&#x27;) !&#x3D;&#x3D; -1
+    ) {
       options.callback(&#x27;success&#x27;, options.content);
       return;
     } else {
       const xhr &#x3D; new XMLHttpRequest();
-      xhr.open(&#x27;GET&#x27;, &#x60;${this.downloadService.baseUrl}/download/file/${options.content}&#x60;);
-      xhr.setRequestHeader(&#x27;Authorization&#x27;, &#x60;Bearer ${localStorage.getItem(&#x27;msal.idtoken&#x27;)}&#x60;);
+      xhr.open(
+        &#x27;GET&#x27;,
+        &#x60;${this.downloadService.baseUrl}/download/file/${options.content}&#x60;
+      );
+      xhr.setRequestHeader(
+        &#x27;Authorization&#x27;,
+        &#x60;Bearer ${localStorage.getItem(&#x27;idtoken&#x27;)}&#x60;
+      );
       xhr.onloadstart &#x3D; () &#x3D;&gt; {
         xhr.responseType &#x3D; &#x27;blob&#x27;;
       };
       xhr.onload &#x3D; () &#x3D;&gt; {
-        const file &#x3D; new File([xhr.response], options.fileValue.name, { type: options.fileValue.type });
+        const file &#x3D; new File([xhr.response], options.fileValue.name, {
+          type: options.fileValue.type,
+        });
         const reader &#x3D; new FileReader();
         reader.onload &#x3D; (e) &#x3D;&gt; {
           options.callback(&#x27;success&#x27;, e.target?.result);
@@ -738,29 +953,53 @@ export class SafeFormModalComponent implements OnInit {
     }
   }
 
+  /**
+   * Merge records
+   *
+   * @param records Records to merge
+   * @returns The merged records
+   */
   private mergedData(records: Record[]): any {
     const data: any &#x3D; {};
     // Loop on source fields
     for (const inputField of records[0].form?.fields || []) {
       // If source field match with target field
-      if (this.form?.fields?.some(x &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; inputField.name)) {
-        const targetField &#x3D; this.form?.fields?.find(x &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; inputField.name);
+      if (this.form?.fields?.some((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; inputField.name)) {
+        const targetField &#x3D; this.form?.fields?.find(
+          (x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; inputField.name
+        );
         // If source field got choices
         if (inputField.choices || inputField.choicesByUrl) {
           // If the target has multiple choices we concatenate all the source values
-          if (targetField.type &#x3D;&#x3D;&#x3D; &#x27;tagbox&#x27; || targetField.type &#x3D;&#x3D;&#x3D; &#x27;checkbox&#x27;) {
-            if (inputField.type &#x3D;&#x3D;&#x3D; &#x27;tagbox&#x27; || targetField.type &#x3D;&#x3D;&#x3D; &#x27;checkbox&#x27;) {
-              data[inputField.name] &#x3D; records.reduce((o: string[], record: Record) &#x3D;&gt; {
-                o &#x3D; o.concat(record.data[inputField.name]);
-                return o;
-              }, []);
+          if (
+            targetField.type &#x3D;&#x3D;&#x3D; &#x27;tagbox&#x27; ||
+            targetField.type &#x3D;&#x3D;&#x3D; &#x27;checkbox&#x27;
+          ) {
+            if (
+              inputField.type &#x3D;&#x3D;&#x3D; &#x27;tagbox&#x27; ||
+              targetField.type &#x3D;&#x3D;&#x3D; &#x27;checkbox&#x27;
+            ) {
+              data[inputField.name] &#x3D; records.reduce(
+                (o: string[], record: Record) &#x3D;&gt; {
+                  o &#x3D; o.concat(record.data[inputField.name]);
+                  return o;
+                },
+                []
+              );
             } else {
-              data[inputField.name] &#x3D; records.map(x &#x3D;&gt; x.data[inputField.name]);
+              data[inputField.name] &#x3D; records.map(
+                (x) &#x3D;&gt; x.data[inputField.name]
+              );
             }
           }
           // If the target has single choice we we put the common choice if any or leave it empty
           else {
-            if (!records.some(x &#x3D;&gt; x.data[inputField.name] !&#x3D;&#x3D; records[0].data[inputField.name])) {
+            if (
+              !records.some(
+                (x) &#x3D;&gt;
+                  x.data[inputField.name] !&#x3D;&#x3D; records[0].data[inputField.name]
+              )
+            ) {
               data[inputField.name] &#x3D; records[0].data[inputField.name];
             }
           }
@@ -773,7 +1012,12 @@ export class SafeFormModalComponent implements OnInit {
           }
           // If type is different from text and there is a common value, put it. Otherwise leave empty
           else {
-            if (!records.some(x &#x3D;&gt; x.data[inputField.name] !&#x3D;&#x3D; records[0].data[inputField.name])) {
+            if (
+              !records.some(
+                (x) &#x3D;&gt;
+                  x.data[inputField.name] !&#x3D;&#x3D; records[0].data[inputField.name]
+              )
+            ) {
               data[inputField.name] &#x3D; records[0].data[inputField.name];
             }
           }
@@ -785,7 +1029,7 @@ export class SafeFormModalComponent implements OnInit {
 
   /**
    * Add custom CSS classes to the survey elements.
-   * @param survey current survey.
+   *
    * @param options survey options.
    */
   private onSetCustomCss(options: any): void {
@@ -821,49 +1065,67 @@ export class SafeFormModalComponent implements OnInit {
   /**
    * Opens the history of the record in a modal.
    */
-   public onShowHistory(): void {
-    this.apollo.query&lt;GetRecordDetailsQueryResponse&gt;({
-      query: GET_RECORD_DETAILS,
-      variables: {
-        id: this.record?.id
-      }
-    }).subscribe(res &#x3D;&gt; {
-      this.dialog.open(RecordHistoryModalComponent, {
-        data: {
-          record: res.data.record,
-          revert: (item: any, dialog: any) &#x3D;&gt; {
-            this.confirmRevertDialog(res.data.record, item);
-          }
+  public onShowHistory(): void {
+    this.apollo
+      .query&lt;GetRecordDetailsQueryResponse&gt;({
+        query: GET_RECORD_DETAILS,
+        variables: {
+          id: this.record?.id,
         },
-        panelClass: &#x27;no-padding-dialog&#x27;,
-        autoFocus: false
+      })
+      .subscribe((res) &#x3D;&gt; {
+        this.dialog.open(RecordHistoryModalComponent, {
+          data: {
+            record: res.data.record,
+            revert: (item: any, dialog: any) &#x3D;&gt; {
+              this.confirmRevertDialog(res.data.record, item);
+            },
+          },
+          panelClass: &#x27;no-padding-dialog&#x27;,
+          autoFocus: false,
+        });
       });
-    });
   }
 
+  /**
+   * Open a dialog modal to confirm the recovery of data
+   *
+   * @param record The record whose data we need to recover
+   * @param version The version to recover
+   */
   private confirmRevertDialog(record: any, version: any): void {
+    // eslint-disable-next-line radix
     const date &#x3D; new Date(parseInt(version.created, 0));
-    const formatDate &#x3D; &#x60;${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}&#x60;;
+    const formatDate &#x3D; &#x60;${date.getDate()}/${
+      date.getMonth() + 1
+    }/${date.getFullYear()}&#x60;;
     const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
       data: {
-        title: &#x60;Recovery data&#x60;,
-        content: &#x60;Do you confirm recovery the data from ${formatDate} to the current register?&#x60;,
-        confirmText: &#x27;Confirm&#x27;,
-        confirmColor: &#x27;primary&#x27;
-      }
+        title: this.translate.instant(
+          &#x27;components.record.recovery.titleMessage&#x27;
+        ),
+        content: this.translate.instant(
+          &#x27;components.record.recovery.confirmationMessage&#x27;,
+          { date: formatDate }
+        ),
+        confirmText: this.translate.instant(&#x27;components.confirmModal.confirm&#x27;),
+        confirmColor: &#x27;primary&#x27;,
+      },
     });
-    dialogRef.afterClosed().subscribe(value &#x3D;&gt; {
+    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
       if (value) {
-        this.apollo.mutate&lt;EditRecordMutationResponse&gt;({
-          mutation: EDIT_RECORD,
-          variables: {
-            id: record.id,
-            version: version.id
-          }
-        }).subscribe((res) &#x3D;&gt; {
-          this.snackBar.openSnackBar(NOTIFICATIONS.dataRecovered);
-          this.dialog.closeAll();
-        });
+        this.apollo
+          .mutate&lt;EditRecordMutationResponse&gt;({
+            mutation: EDIT_RECORD,
+            variables: {
+              id: record.id,
+              version: version.id,
+            },
+          })
+          .subscribe((res) &#x3D;&gt; {
+            this.snackBar.openSnackBar(NOTIFICATIONS.dataRecovered);
+            this.dialog.closeAll();
+          });
       }
     });
   }
@@ -873,14 +1135,15 @@ export class SafeFormModalComponent implements OnInit {
 </div>
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -892,6 +1155,15 @@ export class SafeFormModalComponent implements OnInit {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
@@ -901,9 +1173,9 @@ export class SafeFormModalComponent implements OnInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

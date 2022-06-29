@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>AggregationBuilderService</li>
+  <li >AggregationBuilderService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,12 +62,37 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared aggregation service.
+Aggregation are used by chart widgets, to get the data.
+The aggregation is flexible.</p>
+
+            </p>
+
 
 
             <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#gridSubject" >gridSubject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -76,8 +103,32 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addFields" >addFields</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
-                                <a href="#buildAggregation">buildAggregation</a>
+                                <a href="#buildAggregation" >buildAggregation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fieldsAfter" >fieldsAfter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#findField" >findField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formatFields" >formatFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getPreviewGrid" >getPreviewGrid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#initGrid" >initGrid</a>
                             </li>
                         </ul>
                     </td>
@@ -97,17 +148,21 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(apollo: Apollo)</code>
+<code>constructor(apollo: Apollo, gridService: <a href="../injectables/SafeGridService.html" target="_self">SafeGridService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:19</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Shared aggregation service.
+Aggregation are used by chart widgets, to get the data.
+The aggregation is flexible.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -116,6 +171,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -130,6 +186,26 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Apollo client</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>gridService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeGridService.html" target="_self" >SafeGridService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The grid service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -149,12 +225,120 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="addFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>addFields</b></span>
+                        <a href="#addFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addFields(fields: any[], form: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, initialFields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="251"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:251</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds fields in list of fields.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of fields.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>form value</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>initialFields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>initial list of fields</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="buildAggregation"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            buildAggregation
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>buildAggregation</b></span>
                         <a href="#buildAggregation"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -162,35 +346,234 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>buildAggregation(pipeline: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>buildAggregation(aggregation: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, withMapping)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:126</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Builds the aggregation query from aggregation definition</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>aggregation</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>Aggregation definition</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>withMapping</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Wether if we should inculde the mapping in the aggregation.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Aggregation query</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fieldsAfter"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>fieldsAfter</b></span>
+                        <a href="#fieldsAfter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fieldsAfter(initialFields: any[], pipeline: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the list of fields after passed pipeline.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>initialFields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Initial value of fields before pipeline.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>pipeline</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Pipeline stages to go through.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Fields remaining at the end of the pipeline.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findField"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>findField</b></span>
+                        <a href="#findField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findField(fieldName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="277"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:277</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets a field in list of fields.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fieldName</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -200,6 +583,26 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>name of field to search</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of fields</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -211,10 +614,295 @@
 
                     </div>
                     <div class="io-description">
+                        <p>field</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatFields"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>formatFields</b></span>
+                        <a href="#formatFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>formatFields(fields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Formats fields so they are aligned with the queryBuilder format.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Raw fields to format.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>formatted fields.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPreviewGrid"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getPreviewGrid</b></span>
+                        <a href="#getPreviewGrid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPreviewGrid()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the data for grid preview as an observable.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable with all the data needed for the preview grid.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initGrid"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>initGrid</b></span>
+                        <a href="#initGrid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initGrid(aggregationForm: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, pipeline: any[], selectedFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, metaFields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initializes preview grid using pipeline parameters.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>aggregationForm</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The form for the aggregation</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>pipeline</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Array of stages.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>selectedFields</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Fields before aggregation.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>metaFields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of meta fields</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
                         
                     </div>
                 </td>
             </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="gridSubject"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>gridSubject</b></span>
+                        <a href="#gridSubject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;any&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/services/aggregation-builder.service.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
         </tbody>
     </table>
 </section>
@@ -223,32 +911,303 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Apollo, gql} from &#x27;apollo-angular&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo, gql, QueryRef } from &#x27;apollo-angular&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
+import { PipelineStage } from &#x27;../components/ui/aggregation-builder/pipeline/pipeline-stage.enum&#x27;;
+import { Accumulators } from &#x27;../components/ui/aggregation-builder/pipeline/expressions/operators&#x27;;
+import { Observable, Subject } from &#x27;rxjs&#x27;;
+import { addNewField } from &#x27;../components/query-builder/query-builder-forms&#x27;;
+import { ApolloQueryResult } from &#x27;@apollo/client&#x27;;
+import { SafeGridService } from &#x27;./grid.service&#x27;;
 
+/**
+ * Shared aggregation service.
+ * Aggregation are used by chart widgets, to get the data.
+ * The aggregation is flexible.
+ */
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class AggregationBuilderService {
+  private gridSubject &#x3D; new Subject&lt;any&gt;();
 
-  constructor(private apollo: Apollo) { }
+  /**
+   * Shared aggregation service.
+   * Aggregation are used by chart widgets, to get the data.
+   * The aggregation is flexible.
+   *
+   * @param apollo Apollo client
+   * @param gridService The grid service
+   */
+  constructor(private apollo: Apollo, private gridService: SafeGridService) {}
 
-  public buildAggregation(pipeline: string): any {
-    if (pipeline) {
+  /**
+   * Get the data for grid preview as an observable.
+   *
+   * @returns An observable with all the data needed for the preview grid.
+   */
+  public getPreviewGrid(): Observable&lt;any&gt; {
+    return this.gridSubject.asObservable();
+  }
+
+  /**
+   * Initializes preview grid using pipeline parameters.
+   *
+   * @param aggregationForm The form for the aggregation
+   * @param pipeline Array of stages.
+   * @param selectedFields Fields before aggregation.
+   * @param metaFields List of meta fields
+   */
+  public initGrid(
+    aggregationForm: any,
+    pipeline: any[],
+    selectedFields: any,
+    metaFields: any[]
+  ): void {
+    let loadingGrid &#x3D; true;
+    let gridData: any &#x3D; {
+      data: [],
+      total: 0,
+    };
+    let gridFields: any[] &#x3D; [];
+
+    if (aggregationForm.get(&#x27;pipeline&#x27;)?.valid) {
+      if (pipeline.length) {
+        loadingGrid &#x3D; true;
+        gridFields &#x3D; this.gridService.getFields(
+          this.formatFields(this.fieldsAfter(selectedFields, pipeline)),
+          metaFields,
+          {}
+        );
+        const query &#x3D; this.buildAggregation(aggregationForm.value, false);
+        if (query) {
+          query.subscribe((res: any) &#x3D;&gt; {
+            if (res.data.recordsAggregation) {
+              gridData &#x3D; {
+                data: res.data.recordsAggregation,
+                total: res.data.recordsAggregation.length,
+              };
+            }
+            loadingGrid &#x3D; res.loading;
+            this.gridSubject.next({
+              fields: gridFields,
+              data: gridData,
+              loading: loadingGrid,
+            });
+          });
+        }
+      } else {
+        gridFields &#x3D; [];
+        gridData &#x3D; {
+          data: [],
+          total: 0,
+        };
+      }
+    }
+    this.gridSubject.next({
+      fields: gridFields,
+      data: gridData,
+      loading: loadingGrid,
+    });
+  }
+
+  /**
+   * Formats fields so they are aligned with the queryBuilder format.
+   *
+   * @param fields Raw fields to format.
+   * @returns formatted fields.
+   */
+  public formatFields(fields: any[]): any[] {
+    return fields.map((field: any) &#x3D;&gt; {
+      const formattedForm &#x3D; addNewField(field, true);
+      formattedForm.enable();
+      const formattedField &#x3D; formattedForm.value;
+      if (formattedField.kind !&#x3D;&#x3D; &#x27;SCALAR&#x27; &amp;&amp; field.fields.length) {
+        formattedField.fields &#x3D; this.formatFields(field.fields);
+      }
+      return formattedField;
+    });
+  }
+
+  /**
+   * Builds the aggregation query from aggregation definition
+   *
+   * @param aggregation Aggregation definition
+   * @param withMapping Wether if we should inculde the mapping in the aggregation.
+   * @returns Aggregation query
+   */
+  public buildAggregation(
+    aggregation: any,
+    withMapping &#x3D; true
+  ): Observable&lt;ApolloQueryResult&lt;any&gt;&gt; | null {
+    if (aggregation) {
       const query &#x3D; gql&#x60;
-        query GetCustomAggregation($pipeline: JSON!) {
-          recordsAggregation(pipeline: $pipeline)
+        query GetCustomAggregation($aggregation: JSON!, $withMapping: Boolean) {
+          recordsAggregation(
+            aggregation: $aggregation
+            withMapping: $withMapping
+          )
         }
       &#x60;;
-      return this.apollo.watchQuery&lt;any&gt;({
+      return this.apollo.query&lt;any&gt;({
         query,
         variables: {
-          pipeline: JSON.parse(pipeline)
-        }
+          aggregation,
+          withMapping,
+        },
       });
     } else {
       return null;
     }
+  }
+
+  /**
+   * Get the list of fields after passed pipeline.
+   *
+   * @param initialFields Initial value of fields before pipeline.
+   * @param pipeline Pipeline stages to go through.
+   * @returns Fields remaining at the end of the pipeline.
+   */
+  public fieldsAfter(initialFields: any[], pipeline: any[]): any[] {
+    let fields &#x3D; [...initialFields];
+    for (const stage of pipeline) {
+      switch (stage.type) {
+        case PipelineStage.GROUP: {
+          if (stage.form.groupBy) {
+            let groupByField &#x3D; this.findField(stage.form.groupBy, fields);
+            fields &#x3D; [];
+            if (groupByField) {
+              // Change field type because of automatic unwind
+              const newField &#x3D; Object.assign({}, groupByField);
+              newField.type &#x3D; { ...groupByField.type };
+              if (stage.form.groupBy.includes(&#x27;.&#x27;)) {
+                const fieldArray &#x3D; stage.form.groupBy.split(&#x27;.&#x27;);
+                const sub &#x3D; fieldArray.pop();
+                newField.type.kind &#x3D; &#x27;OBJECT&#x27;;
+                newField.fields &#x3D; newField.fields.map((x: any) &#x3D;&gt;
+                  x.name &#x3D;&#x3D;&#x3D; sub
+                    ? {
+                        ...x,
+                        type: { ...x.type, kind: &#x27;SCALAR&#x27;, name: &#x27;String&#x27; },
+                      }
+                    : x
+                );
+              } else {
+                newField.type.kind &#x3D; &#x27;SCALAR&#x27;;
+                newField.type.name &#x3D; &#x27;String&#x27;;
+              }
+              groupByField &#x3D; newField;
+            }
+            fields.push(groupByField);
+          }
+          if (stage.form.addFields) {
+            this.addFields(fields, stage.form.addFields, initialFields);
+          }
+          break;
+        }
+        case PipelineStage.ADD_FIELDS: {
+          this.addFields(fields, stage.form, initialFields);
+          break;
+        }
+        case PipelineStage.UNWIND: {
+          if (stage.form.field.includes(&#x27;.&#x27;)) {
+            const fieldArray &#x3D; stage.form.field.split(&#x27;.&#x27;);
+            const parent &#x3D; fieldArray.shift();
+            const sub &#x3D; fieldArray.pop();
+            fields &#x3D; fields.map((field) &#x3D;&gt; {
+              if (field.name &#x3D;&#x3D;&#x3D; parent) {
+                const newField &#x3D; Object.assign({}, field);
+                newField.type &#x3D; { ...field.type, kind: &#x27;OBJECT&#x27; };
+                newField.fields &#x3D; field.fields.map((x: any) &#x3D;&gt;
+                  x.name &#x3D;&#x3D;&#x3D; sub
+                    ? {
+                        ...x,
+                        type: { ...x.type, kind: &#x27;SCALAR&#x27;, name: &#x27;String&#x27; },
+                      }
+                    : x
+                );
+                return newField;
+              }
+              return field;
+            });
+          } else {
+            fields &#x3D; fields.map((field) &#x3D;&gt; {
+              if (field.name &#x3D;&#x3D;&#x3D; stage.form.field) {
+                const newField &#x3D; Object.assign({}, field);
+                newField.type &#x3D; {
+                  ...field.type,
+                  kind: &#x27;SCALAR&#x27;,
+                  name: &#x27;String&#x27;,
+                };
+                return newField;
+              }
+              return field;
+            });
+          }
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    }
+    return fields.sort((a: any, b: any) &#x3D;&gt; (a.name &gt; b.name ? 1 : -1));
+  }
+
+  /**
+   * Adds fields in list of fields.
+   *
+   * @param fields list of fields.
+   * @param form form value
+   * @param initialFields initial list of fields
+   */
+  private addFields(fields: any[], form: any, initialFields: any[]): void {
+    for (const addField of form) {
+      fields.push({
+        name: addField.name ? addField.name : addField.expression.operator,
+        type: {
+          name:
+            addField.expression.operator &#x3D;&#x3D;&#x3D; Accumulators.AVG
+              ? &#x27;Float&#x27;
+              : addField.expression.operator &#x3D;&#x3D;&#x3D; Accumulators.COUNT
+              ? &#x27;Int&#x27;
+              : initialFields.find(
+                  (x: any) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; addField.expression.field
+                )?.type.name || &#x27;String&#x27;,
+          kind: &#x27;SCALAR&#x27;,
+        },
+      });
+    }
+  }
+
+  /**
+   * Gets a field in list of fields.
+   *
+   * @param fieldName name of field to search
+   * @param fields list of fields
+   * @returns field
+   */
+  public findField(fieldName: string, fields: any[]): any {
+    let outField &#x3D; fields.find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; fieldName);
+    if (!outField &amp;&amp; fieldName.includes(&#x27;.&#x27;)) {
+      const fieldArray &#x3D; fieldName.split(&#x27;.&#x27;);
+      const parent &#x3D; fieldArray.shift();
+      const sub &#x3D; fieldArray.pop();
+      outField &#x3D; fields.reduce((o, field) &#x3D;&gt; {
+        if (
+          field.name &#x3D;&#x3D;&#x3D; parent &amp;&amp;
+          field.fields.some((x: any) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; sub)
+        ) {
+          const newField &#x3D; { ...field };
+          newField.fields &#x3D; field.fields.filter((x: any) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; sub);
+          return newField;
+        }
+        return o;
+      }, null);
+    } else {
+      outField &#x3D; { ...outField };
+    }
+    return outField;
   }
 }
 </code></pre>
@@ -262,14 +1221,15 @@ export class AggregationBuilderService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -281,6 +1241,15 @@ export class AggregationBuilderService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -290,9 +1259,9 @@ export class AggregationBuilderService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

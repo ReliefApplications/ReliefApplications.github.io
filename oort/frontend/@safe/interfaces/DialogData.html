@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -41,9 +42,12 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>DialogData</li>
+  <li
+  >
+  DialogData</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -65,6 +69,14 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Interface that describes the structure of the data used in the dialog</p>
+
+            </p>
+
 
         <section>
             <h3 id="index">Index</h3>
@@ -79,13 +91,22 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#targetForm">targetForm</a>
+                                        <a href="#targetForm" 
+>
+                                            targetForm
+                                        </a>
                                 </li>
                                 <li>
-                                        <a href="#targetFormField">targetFormField</a>
+                                        <a href="#targetFormField" 
+>
+                                            targetFormField
+                                        </a>
                                 </li>
                                 <li>
-                                        <a href="#targetFormQuery">targetFormQuery</a>
+                                        <a href="#targetFormQuery" 
+>
+                                            targetFormQuery
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -103,7 +124,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="targetForm"></a>
-                                        <span class="name"><b>targetForm</b><a href="#targetForm"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>targetForm</b>
+                                            <a href="#targetForm">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -132,7 +157,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="targetFormField"></a>
-                                        <span class="name"><b>targetFormField</b><a href="#targetFormField"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>targetFormField</b>
+                                            <a href="#targetFormField">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -161,7 +190,11 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="targetFormQuery"></a>
-                                        <span class="name"><b>targetFormQuery</b><a href="#targetFormQuery"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name "><b>targetFormQuery</b>
+                                            <a href="#targetFormQuery">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -199,26 +232,37 @@ import { BehaviorSubject, Observable, Subscription } from &#x27;rxjs&#x27;;
 import { QueryBuilderService } from &#x27;../../services/query-builder.service&#x27;;
 import { GridSettings } from &#x27;../ui/core-grid/models/grid-settings.model&#x27;;
 
+/**
+ * A constant that is used to set the number of items to be displayed on the page.
+ */
 const ITEMS_PER_PAGE &#x3D; 10;
 
+/**
+ * Interface that describes the structure of the data used in the dialog
+ */
 interface DialogData {
   targetForm: any;
   targetFormField: string;
   targetFormQuery: any;
 }
 
+/**
+ * Interface that describes the structure of the data for the records
+ */
 interface IRecord {
   value: string;
   label: any;
 }
 
+/**
+ * Component used for the modals that allow the users to chose records
+ */
 @Component({
   selector: &#x27;safe-choose-record-modal&#x27;,
   templateUrl: &#x27;./choose-record-modal.component.html&#x27;,
-  styleUrls: [&#x27;./choose-record-modal.component.scss&#x27;]
+  styleUrls: [&#x27;./choose-record-modal.component.scss&#x27;],
 })
 export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
-
   // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
   chooseRecordForm: FormGroup &#x3D; new FormGroup({});
 
@@ -233,7 +277,7 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
   private dataSubscription?: Subscription;
   private pageInfo &#x3D; {
     endCursor: &#x27;&#x27;,
-    hasNextPage: true
+    hasNextPage: true,
   };
 
   @ViewChild(&#x27;recordSelect&#x27;) recordSelect?: MatSelect;
@@ -243,51 +287,77 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
   public isSearchActivated &#x3D; false;
   public selectedRows: any[] &#x3D; [];
 
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
+   *
+   * @param queryBuilder This is the service that will be used to build the
+   * query.
+   * @param formBuilder This is used to create the form that will be used
+   * to search for records.
+   * @param apollo This is the Apollo service that we will use to make our GraphQL
+   * queries.
+   * @param dialogRef This is the dialog that will be opened
+   * @param data This is the data that is passed into the modal when it is
+   * opened.
+   */
   constructor(
     private queryBuilder: QueryBuilderService,
     private formBuilder: FormBuilder,
     private apollo: Apollo,
     public dialogRef: MatDialogRef&lt;SafeChooseRecordModalComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.settings &#x3D; { query: this.data.targetFormQuery };
     this.filter &#x3D; this.settings.query?.filter || {};
-    const builtQuery &#x3D; this.queryBuilder.buildQuery({ ...this.settings, query: {
-      ...this.settings.query,
-      fields: [{ kind: &#x27;SCALAR&#x27;, name: this.data.targetFormField }]
-    }});
+    const builtQuery &#x3D; this.queryBuilder.buildQuery({
+      ...this.settings,
+      query: {
+        ...this.settings.query,
+        fields: [{ kind: &#x27;SCALAR&#x27;, name: this.data.targetFormField }],
+      },
+    });
     this.dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
       query: builtQuery,
       variables: {
-        ...builtQuery.variables, ...{
+        ...builtQuery.variables,
+        ...{
           first: ITEMS_PER_PAGE,
           filter: this.filter,
-          sortField: this.settings.query?.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null,
-          sortOrder: this.settings.query?.sort?.order || &#x27;&#x27;
-        }
-      }
+          sortField:
+            this.settings.query?.sort &amp;&amp; this.settings.query.sort.field
+              ? this.settings.query.sort.field
+              : null,
+          sortOrder: this.settings.query?.sort?.order || &#x27;&#x27;,
+        },
+      },
     });
     if (this.dataQuery) {
       this.records$ &#x3D; this.records.asObservable();
-      this.dataSubscription &#x3D; this.dataQuery.valueChanges.subscribe((res: any) &#x3D;&gt; {
-        for (const field in res.data) {
-          if (Object.prototype.hasOwnProperty.call(res.data, field)) {
-            const nodes &#x3D; res.data[field].edges.map((x: any) &#x3D;&gt; {
-              return { value: x.node.id, label: x.node[this.data.targetFormField] };
-            }) || [];
-            this.pageInfo &#x3D; res.data[field].pageInfo;
-            this.records.next(nodes);
+      this.dataSubscription &#x3D; this.dataQuery.valueChanges.subscribe(
+        (res: any) &#x3D;&gt; {
+          for (const field in res.data) {
+            if (Object.prototype.hasOwnProperty.call(res.data, field)) {
+              const nodes &#x3D;
+                res.data[field].edges.map((x: any) &#x3D;&gt; ({
+                  value: x.node.id,
+                  label: x.node[this.data.targetFormField],
+                })) || [];
+              this.pageInfo &#x3D; res.data[field].pageInfo;
+              this.records.next(nodes);
+            }
           }
-        }
-        this.loading &#x3D; false;
-      }, () &#x3D;&gt; this.loading &#x3D; false);
+          this.loading &#x3D; false;
+        },
+        () &#x3D;&gt; (this.loading &#x3D; false)
+      );
     } else {
       this.loading &#x3D; false;
     }
     this.chooseRecordForm &#x3D; this.formBuilder.group({
-      record: [null, Validators.required]
+      record: [null, Validators.required],
     });
     this.settings &#x3D; {
       query: this.data.targetFormQuery,
@@ -296,24 +366,36 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
         history: false,
         convert: false,
         update: false,
-        inlineEdition: false
-      }
+        inlineEdition: false,
+      },
     };
   }
 
+  /**
+   * Set the boolean isSearchActivated to true on search
+   */
   onSearch(): void {
     this.isSearchActivated &#x3D; !this.isSearchActivated;
   }
 
+  /**
+   * Update the modal when rows selected changes
+   *
+   * @param rows Rows of the grid
+   */
   onSelectionChange(rows: any): void {
     if (rows.selectedRows &amp;&amp; rows.selectedRows.length &gt; 0) {
-      this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(rows.selectedRows[0].dataItem.id);
+      this.chooseRecordForm
+        .get(&#x27;record&#x27;)
+        ?.setValue(rows.selectedRows[0].dataItem.id);
     } else {
       this.chooseRecordForm.get(&#x27;record&#x27;)?.setValue(null);
     }
   }
-  /*  Close the modal without sending data.
-  */
+
+  /**
+   * Closes the modal without sending data.
+   */
   onClose(): void {
     this.dialogRef.close();
   }
@@ -326,21 +408,28 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
 
   /**
    * Adds scroll listener to select.
+   *
    * @param e open select event.
    */
   onOpenSelect(e: any): void {
     if (e &amp;&amp; this.recordSelect) {
       const panel &#x3D; this.recordSelect.panel.nativeElement;
-      panel.addEventListener(&#x27;scroll&#x27;, (event: any) &#x3D;&gt; this.loadOnScroll(event));
+      panel.addEventListener(&#x27;scroll&#x27;, (event: any) &#x3D;&gt;
+        this.loadOnScroll(event)
+      );
     }
   }
 
   /**
    * Fetches more resources on scroll.
+   *
    * @param e scroll event.
    */
   private loadOnScroll(e: any): void {
-    if (e.target.scrollHeight - (e.target.clientHeight + e.target.scrollTop) &lt; 50) {
+    if (
+      e.target.scrollHeight - (e.target.clientHeight + e.target.scrollTop) &lt;
+      50
+    ) {
       if (!this.loading &amp;&amp; this.pageInfo.hasNextPage) {
         this.loading &#x3D; true;
         this.dataQuery.fetchMore({
@@ -349,26 +438,36 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
             skip: this.records.getValue().length,
             afterCursor: this.pageInfo.endCursor,
             filter: this.filter,
-            sortField: this.settings.query?.sort &amp;&amp; this.settings.query.sort.field ? this.settings.query.sort.field : null,
-            sortOrder: this.settings.query?.sort?.order || &#x27;&#x27;
+            sortField:
+              this.settings.query?.sort &amp;&amp; this.settings.query.sort.field
+                ? this.settings.query.sort.field
+                : null,
+            sortOrder: this.settings.query?.sort?.order || &#x27;&#x27;,
           },
           updateQuery: (prev: any, { fetchMoreResult }: any) &#x3D;&gt; {
-            if (!fetchMoreResult) { return prev; }
+            if (!fetchMoreResult) {
+              return prev;
+            }
             for (const field in fetchMoreResult) {
-              if (Object.prototype.hasOwnProperty.call(fetchMoreResult, field)) {
+              if (
+                Object.prototype.hasOwnProperty.call(fetchMoreResult, field)
+              ) {
                 return Object.assign({}, prev, {
                   [field]: {
-                    edges: [...prev[field].edges, ...fetchMoreResult[field].edges],
+                    edges: [
+                      ...prev[field].edges,
+                      ...fetchMoreResult[field].edges,
+                    ],
                     pageInfo: fetchMoreResult[field].pageInfo,
-                    totalCount: fetchMoreResult[field].totalCount
-                  }
+                    totalCount: fetchMoreResult[field].totalCount,
+                  },
                 });
               } else {
                 return prev;
               }
             }
             return prev;
-          }
+          },
         });
       }
     }
@@ -379,14 +478,15 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
 </div>
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -398,6 +498,15 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
@@ -407,9 +516,9 @@ export class SafeChooseRecordModalComponent implements OnInit, OnDestroy {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SafeEmailService</li>
+  <li >SafeEmailService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,6 +60,7 @@
         <p class="comment">
             <code>projects/safe/src/lib/services/email.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -84,15 +87,15 @@ Used by widgets to send request to the back to send emails.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#filesUrl">filesUrl</a>
+                                <a href="#filesUrl" >filesUrl</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#previewUrl">previewUrl</a>
+                                <a href="#previewUrl" >previewUrl</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#sendUrl">sendUrl</a>
+                                <a href="#sendUrl" >sendUrl</a>
                             </li>
                         </ul>
                     </td>
@@ -108,21 +111,21 @@ Used by widgets to send request to the back to send emails.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#getFields">getFields</a>
+                                <a href="#getFields" >getFields</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#previewMail">previewMail</a>
+                                <a href="#previewMail" >previewMail</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#sendFiles">sendFiles</a>
+                                <a href="#sendFiles" >sendFiles</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#sendMail">sendMail</a>
+                                <a href="#sendMail" >sendMail</a>
                             </li>
                         </ul>
                     </td>
@@ -142,12 +145,12 @@ Used by widgets to send request to the back to send emails.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, snackBar: <a href="../injectables/SafeSnackBarService.html">SafeSnackBarService</a>, dialog: MatDialog)</code>
+<code>constructor(environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, snackBar: <a href="../injectables/SafeSnackBarService.html" target="_self">SafeSnackBarService</a>, dialog: MatDialog, translate: TranslateService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -180,8 +183,8 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Injection of the environment file.</p>
-</code>
+                                                                <p>Injection of the environment file.</p>
+
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -196,8 +199,8 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Angular http client.</p>
-</code>
+                                                                <p>Angular http client.</p>
+
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -212,8 +215,8 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Shared snackbar service.</p>
-</code>
+                                                                <p>Shared snackbar service.</p>
+
                                                         </td>
                                                 </tr>
                                                 <tr>
@@ -228,6 +231,24 @@ Used by widgets to send request to the back to send emails.</p>
                                                     </td>
                                                     
                                                         <td>
+                                                                <p>The Material Dialog service.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular translate service.</p>
+
                                                         </td>
                                                 </tr>
                                         </tbody>
@@ -250,10 +271,8 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="getFields"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getFields
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>getFields</b></span>
                         <a href="#getFields"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -268,8 +287,8 @@ Used by widgets to send request to the back to send emails.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="265"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:265</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="278"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:278</a></div>
                 </td>
             </tr>
 
@@ -281,6 +300,7 @@ Used by widgets to send request to the back to send emails.</p>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -346,11 +366,9 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="previewMail"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            previewMail
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>previewMail</b></span>
                         <a href="#previewMail"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -365,8 +383,8 @@ Used by widgets to send request to the back to send emails.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="170"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:170</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:185</a></div>
                 </td>
             </tr>
 
@@ -374,10 +392,12 @@ Used by widgets to send request to the back to send emails.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Open a preview of email to send.</p>
+<p>or not (optional).</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -458,6 +478,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Filters for sending the mail</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -474,6 +496,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Query settings</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -490,6 +514,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Sort field (optional).</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -506,6 +532,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Sort order (optional).</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -522,7 +550,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
-                                        <p>Whether an excel with the dataset is attached to the mail or not.</p>
+                                        <p>Whether an excel with the dataset is attached to the mail
+or not (optional).</p>
 
                                     </td>
                                 </tr>
@@ -548,10 +577,8 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="sendFiles"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            sendFiles
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>sendFiles</b></span>
                         <a href="#sendFiles"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -566,23 +593,28 @@ Used by widgets to send request to the back to send emails.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:66</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Send a POST request to the server with the files attached to the
+request body</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -597,6 +629,12 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
 
+                                    <td>
+                                        <ul>
+<li>array of files to send to the server.</li>
+</ul>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -608,7 +646,8 @@ Used by widgets to send request to the back to send emails.</p>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Observable of the POST request</p>
+
                     </div>
                 </td>
             </tr>
@@ -620,11 +659,9 @@ Used by widgets to send request to the back to send emails.</p>
                 <td class="col-md-4">
                     <a name="sendMail"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            sendMail
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>sendMail</b></span>
                         <a href="#sendMail"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -639,8 +676,8 @@ Used by widgets to send request to the back to send emails.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="80"
-                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:80</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">projects/safe/src/lib/services/email.service.ts:95</a></div>
                 </td>
             </tr>
 
@@ -648,10 +685,12 @@ Used by widgets to send request to the back to send emails.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Ask the back to send the email.</p>
+<p>or not (optional).</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -732,6 +771,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Filters for sending the mail</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -748,6 +789,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Query settings</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -764,6 +807,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Sort field (optional).</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -780,6 +825,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>Sort order (optional).</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -796,7 +843,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
-                                        <p>Whether an excel with the dataset is attached to the mail or not.</p>
+                                        <p>Whether an excel with the dataset is attached to the mail
+or not (optional).</p>
 
                                     </td>
                                 </tr>
@@ -814,6 +862,8 @@ Used by widgets to send request to the back to send emails.</p>
                                     </td>
 
                                     <td>
+                                        <p>List of files to send with the mail (optional).</p>
+
                                     </td>
                                 </tr>
                             </tbody>
@@ -835,108 +885,105 @@ Used by widgets to send request to the back to send emails.</p>
 </section>
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filesUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>filesUrl</b></span>
+                        <a href="#filesUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="filesUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            filesUrl</b>
-                            <a href="#filesUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:35</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:29</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previewUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>previewUrl</b></span>
+                        <a href="#previewUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="previewUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            previewUrl</b>
-                            <a href="#previewUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:34</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:28</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>sendUrl</b></span>
+                        <a href="#sendUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="sendUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            sendUrl</b>
-                            <a href="#sendUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:33</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/services/email.service.ts:27</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -953,13 +1000,19 @@ import { SafeEmailPreviewComponent } from &#x27;../components/email-preview/emai
 import { CompositeFilterDescriptor } from &#x27;@progress/kendo-data-query&#x27;;
 import { prettifyLabel } from &#x27;../utils/prettify&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 
-const flatDeep &#x3D; (arr: any[]): any[] &#x3D;&gt; {
-  return arr.reduce(
+/**
+ * Takes an array, and returns a new array with all the nested arrays flattened
+ *
+ * @param {any[]} arr - The array to flatten.
+ * @returns The flatten array
+ */
+const flatDeep &#x3D; (arr: any[]): any[] &#x3D;&gt;
+  arr.reduce(
     (acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? flatDeep(val) : val),
     []
   );
-};
 
 /**
  * Shared email service.
@@ -980,24 +1033,30 @@ export class SafeEmailService {
    * @param environment Injection of the environment file.
    * @param http Angular http client.
    * @param snackBar Shared snackbar service.
+   * @param dialog The Material Dialog service.
    * @param translate Angular translate service.
    */
   constructor(
     @Inject(&#x27;environment&#x27;) environment: any,
     private http: HttpClient,
     private snackBar: SafeSnackBarService,
-    private dialog: MatDialog
-  ) // private translate: TranslateService
-  {
-    // this.url &#x3D; environment.apiUrl + &#x27;/email/&#x27;;
-    this.sendUrl &#x3D; environment.API_URL + &#x27;/email/&#x27;;
-    this.previewUrl &#x3D; environment.API_URL + &#x27;/email/preview/&#x27;;
-    this.filesUrl &#x3D; environment.API_URL + &#x27;/email/files&#x27;;
+    private dialog: MatDialog,
+    private translate: TranslateService
+  ) {
+    this.sendUrl &#x3D; environment.apiUrl + &#x27;/email/&#x27;;
+    this.previewUrl &#x3D; environment.apiUrl + &#x27;/email/preview/&#x27;;
+    this.filesUrl &#x3D; environment.apiUrl + &#x27;/email/files&#x27;;
   }
 
+  /**
+   * Send a POST request to the server with the files attached to the
+   * request body
+   *
+   * @param {any[]} files - array of files to send to the server.
+   * @returns Observable of the POST request
+   */
   public sendFiles(files: any[]): Observable&lt;any&gt; {
-    // const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
-    const token &#x3D; localStorage.getItem(&#x27;msal.idtoken&#x27;);
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     const headers &#x3D; new HttpHeaders({
       Accept: &#x27;application/json&#x27;,
       Authorization: &#x60;Bearer ${token}&#x60;,
@@ -1015,12 +1074,15 @@ export class SafeEmailService {
    * @param recipient Recipient of the email.
    * @param subject Subject of the email.
    * @param body Body of the email, if not given we put the formatted records.
-   * @param gridSettings Grid specific settings.
-   * @param gridSettings.query Query settings.
-   * @param gridSettings.ids List of records to include in the email.
-   * @param gridSettings.sortField Sort field.
-   * @param gridSettings.sortOrder Sort order.
-   * @param attachment Whether an excel with the dataset is attached to the mail or not.
+   * @param filter Filters for sending the mail
+   * @param query Query settings
+   * @param query.name Name of the query
+   * @param query.fields Fields requested in the query
+   * @param sortField Sort field (optional).
+   * @param sortOrder Sort order (optional).
+   * @param attachment Whether an excel with the dataset is attached to the mail
+   * or not (optional).
+   * @param files List of files to send with the mail (optional).
    */
   public async sendMail(
     recipient: string[],
@@ -1041,8 +1103,9 @@ export class SafeEmailService {
       {
         duration: 0,
         data: {
-          message: &#x27;Sending email...&#x27;,
-          // message: this.translate.instant(&#x27;email.processing&#x27;),
+          message: this.translate.instant(
+            &#x27;common.notifications.email.processing&#x27;
+          ),
           loading: true,
         },
       }
@@ -1054,8 +1117,7 @@ export class SafeEmailService {
         fileFolderId &#x3D; response.id;
       }
     }
-    // const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
-    const token &#x3D; localStorage.getItem(&#x27;msal.idtoken&#x27;);
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     const headers &#x3D; new HttpHeaders({
       &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
       Authorization: &#x60;Bearer ${token}&#x60;,
@@ -1081,16 +1143,14 @@ export class SafeEmailService {
       .subscribe(
         (res) &#x3D;&gt; {
           snackBarRef.instance.data &#x3D; {
-            message: &#x27;Email sent&#x27;,
-            // message: this.translate.instant(&#x27;email.sent&#x27;),
+            message: this.translate.instant(&#x27;common.notifications.email.sent&#x27;),
             loading: false,
           };
           setTimeout(() &#x3D;&gt; snackBarRef.dismiss(), 1000);
         },
         () &#x3D;&gt; {
           snackBarRef.instance.data &#x3D; {
-            message: &#x27;Something went wrong during the email sending&#x27;,
-            // message: this.translate.instant(&#x27;email.error&#x27;),
+            message: this.translate.instant(&#x27;common.notifications.email.error&#x27;),
             loading: false,
             error: true,
           };
@@ -1105,12 +1165,14 @@ export class SafeEmailService {
    * @param recipient Recipient of the email.
    * @param subject Subject of the email.
    * @param body Body of the email, if not given we put the formatted records.
-   * @param gridSettings Grid specific settings.
-   * @param gridSettings.query Query settings.
-   * @param gridSettings.ids List of records to include in the email.
-   * @param gridSettings.sortField Sort field.
-   * @param gridSettings.sortOrder Sort order.
-   * @param attachment Whether an excel with the dataset is attached to the mail or not.
+   * @param filter Filters for sending the mail
+   * @param query Query settings
+   * @param query.name Name of the query
+   * @param query.fields Fields requested in the query
+   * @param sortField Sort field (optional).
+   * @param sortOrder Sort order (optional).
+   * @param attachment Whether an excel with the dataset is attached to the mail
+   * or not (optional).
    */
   public async previewMail(
     recipient: string[],
@@ -1130,14 +1192,14 @@ export class SafeEmailService {
       {
         duration: 0,
         data: {
-          message: &#x27;Generating email...&#x27;,
-          // message: this.translate.instant(&#x27;email.processing&#x27;),
+          message: this.translate.instant(
+            &#x27;common.notifications.email.processing&#x27;
+          ),
           loading: true,
         },
       }
     );
-    // const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
-    const token &#x3D; localStorage.getItem(&#x27;msal.idtoken&#x27;);
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     const headers &#x3D; new HttpHeaders({
       &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
       Authorization: &#x60;Bearer ${token}&#x60;,
@@ -1161,8 +1223,7 @@ export class SafeEmailService {
       .subscribe(
         (res) &#x3D;&gt; {
           snackBarRef.instance.data &#x3D; {
-            message: &#x27;Email ready&#x27;,
-            // message: this.translate.instant(&#x27;email.sent&#x27;),
+            message: this.translate.instant(&#x27;common.notifications.email.ready&#x27;),
             loading: false,
           };
           setTimeout(() &#x3D;&gt; snackBarRef.dismiss(), 1000);
@@ -1190,8 +1251,7 @@ export class SafeEmailService {
         },
         () &#x3D;&gt; {
           snackBarRef.instance.data &#x3D; {
-            message: &#x27;Something went wrong during the email creation&#x27;,
-            // message: this.translate.instant(&#x27;email.error&#x27;),
+            message: this.translate.instant(&#x27;common.notifications.email.error&#x27;),
             loading: false,
             error: true,
           };
@@ -1247,14 +1307,15 @@ export class SafeEmailService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1266,6 +1327,15 @@ export class SafeEmailService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -1275,9 +1345,9 @@ export class SafeEmailService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

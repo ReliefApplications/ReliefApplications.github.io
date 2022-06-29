@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SafeDownloadService</li>
+  <li >SafeDownloadService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,6 +62,15 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared download service. Handles export and upload events.
+TODO: rename in file service</p>
+
+            </p>
+
 
 
             <section>
@@ -76,7 +87,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#baseUrl">baseUrl</a>
+                                <a href="#baseUrl" >baseUrl</a>
                             </li>
                         </ul>
                     </td>
@@ -92,20 +103,20 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#buildURL">buildURL</a>
+                                <a href="#buildURL" >buildURL</a>
                             </li>
                             <li>
-                                <a href="#getFile">getFile</a>
+                                <a href="#getFile" >getFile</a>
                             </li>
                             <li>
-                                <a href="#getRecordsExport">getRecordsExport</a>
+                                <a href="#getRecordsExport" >getRecordsExport</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#saveFile">saveFile</a>
+                                <a href="#saveFile" >saveFile</a>
                             </li>
                             <li>
-                                <a href="#uploadFile">uploadFile</a>
+                                <a href="#uploadFile" >uploadFile</a>
                             </li>
                         </ul>
                     </td>
@@ -130,12 +141,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/safe/src/lib/services/download.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/safe/src/lib/services/download.service.ts:14</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Shared download service. Handles export and upload events.
+TODO: rename in file service</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -144,6 +158,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -158,6 +173,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Current environment</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>http</td>
@@ -170,6 +189,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Http client</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -191,10 +214,8 @@
                 <td class="col-md-4">
                     <a name="buildURL"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            buildURL
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>buildURL</b></span>
                         <a href="#buildURL"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -209,23 +230,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:82</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:127</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Builds url from path.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -240,6 +265,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Request path</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -251,7 +280,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>full url</p>
+
                     </div>
                 </td>
             </tr>
@@ -263,9 +293,7 @@
                 <td class="col-md-4">
                     <a name="getFile"></a>
                     <span class="name">
-                        <b>
-                            getFile
-                        </b>
+                        <span ><b>getFile</b></span>
                         <a href="#getFile"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -279,19 +307,20 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:38</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Download file from the server</p>
+                    <div class="io-description"><p>Downloads file from the server</p>
 </div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -388,9 +417,7 @@
                 <td class="col-md-4">
                     <a name="getRecordsExport"></a>
                     <span class="name">
-                        <b>
-                            getRecordsExport
-                        </b>
+                        <span ><b>getRecordsExport</b></span>
                         <a href="#getRecordsExport"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -404,8 +431,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:63</a></div>
                 </td>
             </tr>
 
@@ -417,6 +444,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -513,10 +541,8 @@
                 <td class="col-md-4">
                     <a name="saveFile"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            saveFile
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>saveFile</b></span>
                         <a href="#saveFile"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -531,23 +557,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="59"
-                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:91</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Saves file from blob</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -562,6 +592,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>name of the file</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>blob</td>
@@ -574,6 +608,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>File blob</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -597,9 +635,7 @@
                 <td class="col-md-4">
                     <a name="uploadFile"></a>
                     <span class="name">
-                        <b>
-                            uploadFile
-                        </b>
+                        <span ><b>uploadFile</b></span>
                         <a href="#uploadFile"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -613,23 +649,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">projects/safe/src/lib/services/download.service.ts:107</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Uploads a file</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -644,6 +684,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>request path</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>file</td>
@@ -656,6 +700,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>file to upload</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -667,7 +715,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>http upload request</p>
+
                     </div>
                 </td>
             </tr>
@@ -676,37 +725,42 @@
 </section>
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="baseUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>baseUrl</b></span>
+                        <a href="#baseUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="baseUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            baseUrl</b>
-                            <a href="#baseUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/safe/src/lib/services/download.service.ts:14</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/safe/src/lib/services/download.service.ts:10</a></div>
-                            </td>
-                        </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>API base url</p>
+</div>
+                </td>
+            </tr>
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -717,60 +771,92 @@
 import { Inject, Injectable } from &#x27;@angular/core&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
+/**
+ * Shared download service. Handles export and upload events.
+ * TODO: rename in file service
+ */
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class SafeDownloadService {
-
+  /** API base url */
   public baseUrl: string;
 
+  /**
+   * Shared download service. Handles export and upload events.
+   * TODO: rename in file service
+   *
+   * @param environment Current environment
+   * @param http Http client
+   */
   constructor(
     @Inject(&#x27;environment&#x27;) environment: any,
     private http: HttpClient
   ) {
-    this.baseUrl &#x3D; environment.API_URL;
+    this.baseUrl &#x3D; environment.apiUrl;
   }
 
   /**
-   * Download file from the server
+   * Downloads file from the server
+   *
    * @param path download path to append to base url
    * @param type type of the file
    * @param fileName name of the file
    * @param options (optional) request options
    */
-   getFile(path: string, type: string, fileName: string, options?: any): void {
+  getFile(path: string, type: string, fileName: string, options?: any): void {
     const url &#x3D; path.startsWith(&#x27;http&#x27;) ? path : &#x60;${this.baseUrl}/${path}&#x60;;
-    const token &#x3D; localStorage.getItem(&#x27;msal.idtoken&#x27;);
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     const headers &#x3D; new HttpHeaders({
+      // eslint-disable-next-line @typescript-eslint/naming-convention
       &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
-      Authorization: &#x60;Bearer ${token}&#x60;
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      Authorization: &#x60;Bearer ${token}&#x60;,
     });
-    this.http.get(url, {...options, responseType: &#x27;blob&#x27;, headers}).subscribe((res) &#x3D;&gt; {
-      const blob &#x3D; new Blob([res], {type});
-      this.saveFile(fileName, blob);
-    });
+    this.http
+      .get(url, { ...options, responseType: &#x27;blob&#x27;, headers })
+      .subscribe((res) &#x3D;&gt; {
+        const blob &#x3D; new Blob([res], { type });
+        this.saveFile(fileName, blob);
+      });
   }
 
   /**
    * Downloads records file from the server with a POST request
+   *
    * @param path download path to append to base url
    * @param type type of the file
    * @param fileName name of the file
    * @param body (optional) request body
    */
-  getRecordsExport(path: string, type: string, fileName: string, body?: any): void {
+  getRecordsExport(
+    path: string,
+    type: string,
+    fileName: string,
+    body?: any
+  ): void {
     const url &#x3D; path.startsWith(&#x27;http&#x27;) ? path : &#x60;${this.baseUrl}/${path}&#x60;;
-    const token &#x3D; localStorage.getItem(&#x27;msal.idtoken&#x27;);
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     const headers &#x3D; new HttpHeaders({
+      // eslint-disable-next-line @typescript-eslint/naming-convention
       &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
-      Authorization: &#x60;Bearer ${token}&#x60;
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      Authorization: &#x60;Bearer ${token}&#x60;,
     });
-    this.http.post(url, body, {responseType: &#x27;blob&#x27;, headers}).subscribe((res) &#x3D;&gt; {
-      const blob &#x3D; new Blob([res], {type});
-      this.saveFile(fileName, blob);
-    });
+    this.http
+      .post(url, body, { responseType: &#x27;blob&#x27;, headers })
+      .subscribe((res) &#x3D;&gt; {
+        const blob &#x3D; new Blob([res], { type });
+        this.saveFile(fileName, blob);
+      });
   }
 
+  /**
+   * Saves file from blob
+   *
+   * @param fileName name of the file
+   * @param blob File blob
+   */
   private saveFile(fileName: string, blob: Blob): void {
     const link &#x3D; document.createElement(&#x27;a&#x27;);
     link.href &#x3D; URL.createObjectURL(blob);
@@ -780,20 +866,33 @@ export class SafeDownloadService {
     setTimeout(() &#x3D;&gt; link.remove(), 0);
   }
 
+  /**
+   * Uploads a file
+   *
+   * @param path request path
+   * @param file file to upload
+   * @returns http upload request
+   */
   uploadFile(path: string, file: any): Observable&lt;any&gt; {
     const url &#x3D; this.buildURL(path);
-    const token &#x3D; localStorage.getItem(&#x27;msal.idtoken&#x27;);
+    const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     const headers &#x3D; new HttpHeaders({
+      // eslint-disable-next-line @typescript-eslint/naming-convention
       Accept: &#x27;application/json&#x27;,
-      Authorization: &#x60;Bearer ${token}&#x60;
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      Authorization: &#x60;Bearer ${token}&#x60;,
     });
     const formData &#x3D; new FormData();
-
     formData.append(&#x27;excelFile&#x27;, file, file.name);
-
-    return this.http.post(url, formData, {headers});
+    return this.http.post(url, formData, { headers });
   }
 
+  /**
+   * Builds url from path.
+   *
+   * @param path Request path
+   * @returns full url
+   */
   private buildURL(path: string): string {
     return path.startsWith(&#x27;http&#x27;) ? path : &#x60;${this.baseUrl}/${path}&#x60;;
   }
@@ -809,14 +908,15 @@ export class SafeDownloadService {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -828,6 +928,15 @@ export class SafeDownloadService {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -837,9 +946,9 @@ export class SafeDownloadService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
