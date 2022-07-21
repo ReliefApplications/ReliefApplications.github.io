@@ -18,13 +18,13 @@
 <title>cluster_SafeMapSettingsModule_imports</title>
 <polygon fill="none" stroke="black" points="216,-40.8 216,-92.8 394,-92.8 394,-40.8 216,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeMapSettingsModule_exports</title>
-<polygon fill="none" stroke="black" points="107,-170.8 107,-222.8 303,-222.8 303,-170.8 107,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeMapSettingsModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 208,-92.8 208,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeMapSettingsModule_exports</title>
+<polygon fill="none" stroke="black" points="107,-170.8 107,-222.8 303,-222.8 303,-170.8 107,-170.8"/>
 </g>
 <!-- SafeMapSettingsComponent -->
 <g id="node1" class="node">
