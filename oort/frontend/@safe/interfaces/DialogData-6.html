@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/layout-modal/layout-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/convert-modal/convert-modal.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Interface describing the structure of the data displayed in the dialog</p>
+                <p>An interface to define the structure of the data displayed in the modal</p>
 
             </p>
 
@@ -91,17 +91,15 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#layout" 
+                                        <a href="#record" 
 >
-                                            layout
+                                            record
                                         </a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#queryName" 
+                                        <a href="#title" 
 >
-                                            queryName
+                                            title
                                         </a>
                                 </li>
                             </ul>
@@ -119,9 +117,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="layout"></a>
-                                        <span class="name "><b>layout</b>
-                                            <a href="#layout">
+                                        <a name="record"></a>
+                                        <span class="name "><b>record</b>
+                                            <a href="#record">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -129,45 +127,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>layout:         <code><a href="../interfaces/Layout.html" target="_self" >Layout</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Layout.html" target="_self" >Layout</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="queryName"></a>
-                                        <span class="name "><b>queryName</b>
-                                            <a href="#queryName">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>queryName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>record:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -180,11 +140,39 @@
                                         </td>
                                     </tr>
 
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="title"></a>
+                                        <span class="name "><b>title</b>
+                                            <a href="#title">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Optional</i>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                                         </td>
                                     </tr>
+
 
 
 
@@ -196,77 +184,100 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, Input, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
+import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { Layout } from &#x27;../../models/layout.model&#x27;;
 import {
-  createDisplayForm,
-  createQueryForm,
-} from &#x27;../query-builder/query-builder-forms&#x27;;
+  GetRecordDetailsQueryResponse,
+  GET_RECORD_DETAILS,
+} from &#x27;../../graphql/queries&#x27;;
+import { Form } from &#x27;../../models/form.model&#x27;;
 
 /**
- * Interface describing the structure of the data displayed in the dialog
+ * An interface to define the structure of the data displayed in the modal
  */
 interface DialogData {
-  layout?: Layout;
-  queryName?: string;
+  title: string;
+  record: string;
 }
 
 /**
- * Component used to display modals regarding layouts
+ * This component is used in the grids to display a modal after clicking on the &quot;convert&quot; button.
+ * This modal allows the user to configurate the convertion.
  */
 @Component({
-  selector: &#x27;safe-layout-modal&#x27;,
-  templateUrl: &#x27;./layout-modal.component.html&#x27;,
-  styleUrls: [&#x27;./layout-modal.component.scss&#x27;],
+  selector: &#x27;safe-convert-modal&#x27;,
+  templateUrl: &#x27;./convert-modal.component.html&#x27;,
+  styleUrls: [&#x27;./convert-modal.component.scss&#x27;],
 })
-export class SafeLayoutModalComponent implements OnInit {
-  @Input() layout: any;
-  public form?: FormGroup;
-  public templates: any[] &#x3D; [];
-  public layoutPreviewData!: { form: FormGroup; defaultLayout: any };
+export class SafeConvertModalComponent implements OnInit {
+  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
+  convertForm: FormGroup &#x3D; new FormGroup({});
 
+  // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
+  public form?: Form;
+  public availableForms: Form[] &#x3D; [];
+  public ignoredFields: any[] &#x3D; [];
+
+  // &#x3D;&#x3D;&#x3D; LOAD DATA &#x3D;&#x3D;&#x3D;
+  public loading &#x3D; true;
   /**
-   * The constructor function is a special function that is called when a new instance of the class is created
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
    *
-   * @param formBuilder This is the service used to build forms.
-   * @param dialogRef This is the reference of the dialog that will be opened.
-   * @param data This is the data that is passed to the modal when it is opened.
+   * @param formBuilder This is used to create a form.
+   * @param apollo This is the Apollo service that we&#x27;ll use to make the GraphQL mutation.
+   * @param dialogRef This is the reference of the dialog that will be opened
+   * @param data This is the data that is passed into the modal when it is opened.
    */
   constructor(
     private formBuilder: FormBuilder,
-    public dialogRef: MatDialogRef&lt;SafeLayoutModalComponent&gt;,
+    private apollo: Apollo,
+    public dialogRef: MatDialogRef&lt;SafeConvertModalComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) {}
 
   ngOnInit(): void {
-    this.form &#x3D; this.formBuilder.group({
-      name: [this.data.layout?.name, Validators.required],
-      query: createQueryForm(this.data.layout?.query),
-      display: createDisplayForm(this.data.layout?.display),
+    this.apollo
+      .watchQuery&lt;GetRecordDetailsQueryResponse&gt;({
+        query: GET_RECORD_DETAILS,
+        variables: {
+          id: this.data.record,
+        },
+      })
+      .valueChanges.subscribe((res) &#x3D;&gt; {
+        const record &#x3D; res.data.record;
+        this.form &#x3D; record.form;
+        this.loading &#x3D; false;
+        this.availableForms &#x3D;
+          this.form?.resource?.forms?.filter((x) &#x3D;&gt; x.id !&#x3D;&#x3D; this.form?.id) ||
+          [];
+      });
+    this.convertForm &#x3D; this.formBuilder.group({
+      targetForm: [null, Validators.required],
+      copyRecord: [true, Validators.required],
     });
-    this.layoutPreviewData &#x3D; {
-      form: this.form,
-      defaultLayout: this.data.layout?.display,
-    };
-    this.form.get(&#x27;display&#x27;)?.valueChanges.subscribe((value: any) &#x3D;&gt; {
-      this.layoutPreviewData.defaultLayout &#x3D; value;
-    });
+    this.convertForm
+      .get(&#x27;targetForm&#x27;)
+      ?.valueChanges.subscribe((targetForm: Form) &#x3D;&gt; {
+        if (targetForm) {
+          this.ignoredFields &#x3D;
+            this.form?.fields?.filter(
+              (sourceField) &#x3D;&gt;
+                !targetForm?.fields?.some(
+                  (targetField) &#x3D;&gt; sourceField.name &#x3D;&#x3D;&#x3D; targetField.name
+                )
+            ) || [];
+        }
+      });
   }
 
   /**
-   * Closes the modal without sending any data.
+   * Closes the modal without sending data.
    */
   onClose(): void {
     this.dialogRef.close();
-  }
-
-  /**
-   * Closes the modal sending tile form value.
-   */
-  onSubmit(): void {
-    this.dialogRef.close(this.form?.getRawValue());
   }
 }
 </code></pre>
