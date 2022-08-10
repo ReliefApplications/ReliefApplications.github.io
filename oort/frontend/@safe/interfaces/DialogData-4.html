@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/email-preview/email-preview.component.ts</code>
+            <code>projects/safe/src/lib/components/confirm-modal/confirm-modal.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Interface of Email Preview Modal Data</p>
+                <p>This interface describes the structure of the data to be displayed in the modal</p>
 
             </p>
 
@@ -91,27 +91,38 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#from" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#cancelText" 
 >
-                                            from
+                                            cancelText
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#html" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#confirmColor" 
 >
-                                            html
+                                            confirmColor
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#subject" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#confirmText" 
 >
-                                            subject
+                                            confirmText
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#to" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#content" 
 >
-                                            to
+                                            content
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#title" 
+>
+                                            title
                                         </a>
                                 </li>
                             </ul>
@@ -129,9 +140,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="from"></a>
-                                        <span class="name "><b>from</b>
-                                            <a href="#from">
+                                        <a name="cancelText"></a>
+                                        <span class="name "><b>cancelText</b>
+                                            <a href="#cancelText">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -139,7 +150,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>from:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>cancelText:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -152,6 +163,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -162,9 +178,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="html"></a>
-                                        <span class="name "><b>html</b>
-                                            <a href="#html">
+                                        <a name="confirmColor"></a>
+                                        <span class="name "><b>confirmColor</b>
+                                            <a href="#confirmColor">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -172,7 +188,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>html:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>confirmColor:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -185,6 +201,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -195,9 +216,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="subject"></a>
-                                        <span class="name "><b>subject</b>
-                                            <a href="#subject">
+                                        <a name="confirmText"></a>
+                                        <span class="name "><b>confirmText</b>
+                                            <a href="#confirmText">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -205,7 +226,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>subject:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>confirmText:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -218,6 +239,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -228,9 +254,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="to"></a>
-                                        <span class="name "><b>to</b>
-                                            <a href="#to">
+                                        <a name="content"></a>
+                                        <span class="name "><b>content</b>
+                                            <a href="#content">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -238,7 +264,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>to:     <code>string[]</code>
+                                        <code>content:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -246,11 +272,54 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>string[]</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="title"></a>
+                                        <span class="name "><b>title</b>
+                                            <a href="#title">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -262,59 +331,60 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
-import { MAT_DIALOG_DATA, MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
-import { EMAIL_EDITOR_CONFIG } from &#x27;../../const/tinymce.const&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject } from &#x27;@angular/core&#x27;;
+import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 
-/** Interface of Email Preview Modal Data */
+/**
+ * This interface describes the structure of the data to be displayed in the modal
+ */
 interface DialogData {
-  from: string;
-  html: string;
-  subject: string;
-  to: string[];
+  title?: string;
+  content?: string;
+  cancelText?: string;
+  confirmText?: string;
+  confirmColor?: string;
 }
 
 /**
- * Preview Email component.
- * Modal in read-only mode.
+ * This component is used to make a general confirmation modal, adapting to different cases
  */
 @Component({
-  selector: &#x27;safe-email-preview&#x27;,
-  templateUrl: &#x27;./email-preview.component.html&#x27;,
-  styleUrls: [&#x27;./email-preview.component.scss&#x27;],
+  selector: &#x27;safe-confirm-modal&#x27;,
+  templateUrl: &#x27;./confirm-modal.component.html&#x27;,
+  styleUrls: [&#x27;./confirm-modal.component.scss&#x27;],
 })
-export class SafeEmailPreviewComponent implements OnInit {
-  /** mail is put in a form to use read-only inputs */
-  public form!: FormGroup;
-
-  /** tinymce editor */
-  public editor: any &#x3D; EMAIL_EDITOR_CONFIG;
+export class SafeConfirmModalComponent implements OnInit {
+  public title: string;
+  public content: string;
+  public cancelText: string;
+  public confirmText: string;
+  public confirmColor: string;
 
   /**
-   * Preview Email component.
-   * Modal in read-only mode.
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
    *
-   * @param data injected dialog data
-   * @param dialogRef Dialog reference
-   * @param formBuilder Angular Form Builder
+   * @param data The data to be displayed in the modal
+   * @param translate The translating service used to translate the different texts except the content of the modal
    */
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    public dialogRef: MatDialogRef&lt;SafeEmailPreviewComponent&gt;,
-    private formBuilder: FormBuilder
-  ) {}
-
-  /** Create the form from the dialog data, putting all fields as read-only */
-  ngOnInit(): void {
-    this.form &#x3D; this.formBuilder.group({
-      from: [{ value: this.data.from, disabled: true }],
-      to: [{ value: this.data.to, disabled: true }],
-      subject: [{ value: this.data.subject, disabled: true }],
-      html: this.data.html,
-      files: [[]],
-    });
+    private translate: TranslateService
+  ) {
+    this.title &#x3D;
+      data.title || this.translate.instant(&#x27;components.confirmModal.title&#x27;);
+    this.cancelText &#x3D;
+      data.cancelText ||
+      this.translate.instant(&#x27;components.confirmModal.cancel&#x27;);
+    this.confirmText &#x3D;
+      data.confirmText ||
+      this.translate.instant(&#x27;components.confirmModal.confirm&#x27;);
+    this.content &#x3D; data.content || &#x27;&#x27;;
+    this.confirmColor &#x3D; data.confirmColor || &#x27;primary&#x27;;
   }
+
+  ngOnInit(): void {}
 }
 </code></pre>
     </div>
