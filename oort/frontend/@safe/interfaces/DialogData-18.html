@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/ui/core-grid/export/export.component.ts</code>
+            <code>projects/safe/src/lib/components/widgets/grid-settings/add-layout/add-layout.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>The data for the dialogs input</p>
+                <p>Data needed for the dialog, should contain a layouts array, a form and a resource</p>
 
             </p>
 
@@ -91,9 +91,23 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#export" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#form" 
 >
-                                            export
+                                            form
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#layouts" 
+>
+                                            layouts
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#resource" 
+>
+                                            resource
                                         </a>
                                 </li>
                             </ul>
@@ -111,9 +125,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="export"></a>
-                                        <span class="name "><b>export</b>
-                                            <a href="#export">
+                                        <a name="form"></a>
+                                        <span class="name "><b>form</b>
+                                            <a href="#form">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -121,7 +135,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>export:     <code>literal type</code>
+                                        <code>form:         <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -129,11 +143,87 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>literal type</code>
+                                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="layouts"></a>
+                                        <span class="name "><b>layouts</b>
+                                            <a href="#layouts">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>layouts:         <code><a href="../interfaces/Layout.html" target="_self" >Layout[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/Layout.html" target="_self" >Layout[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="resource"></a>
+                                        <span class="name "><b>resource</b>
+                                            <a href="#resource">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>resource:         <code><a href="../interfaces/Resource.html" target="_self" >Resource</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/Resource.html" target="_self" >Resource</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -145,38 +235,99 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { EXPORT_SETTINGS } from &#x27;../grid/grid.constants&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject } from &#x27;@angular/core&#x27;;
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from &#x27;@angular/material/dialog&#x27;;
+import { MatSelectChange } from &#x27;@angular/material/select&#x27;;
+import { SafeGridLayoutService } from &#x27;../../../../services/grid-layout.service&#x27;;
+import { Form } from &#x27;../../../../models/form.model&#x27;;
+import { Layout } from &#x27;../../../../models/layout.model&#x27;;
+import { Resource } from &#x27;../../../../models/resource.model&#x27;;
+import { SafeLayoutModalComponent } from &#x27;../../../layout-modal/layout-modal.component&#x27;;
 
-/** The data for the dialogs input */
+/**
+ * Data needed for the dialog, should contain a layouts array, a form and a resource
+ */
 interface DialogData {
-  export: {
-    records: string;
-    fields: string;
-    format: string;
-  };
+  layouts: Layout[];
+  form?: Form;
+  resource?: Resource;
 }
 
-/** Component for exporting data */
+/**
+ * Add a layout modal.
+ * Modal is then added to the grid, and to the related form / resource if new.
+ */
 @Component({
-  selector: &#x27;safe-export&#x27;,
-  templateUrl: &#x27;./export.component.html&#x27;,
-  styleUrls: [&#x27;./export.component.scss&#x27;],
+  selector: &#x27;safe-add-layout&#x27;,
+  templateUrl: &#x27;./add-layout.component.html&#x27;,
+  styleUrls: [&#x27;./add-layout.component.scss&#x27;],
 })
-export class SafeExportComponent implements OnInit {
-  // &#x3D;&#x3D;&#x3D; EXPORT MENU SELECTION &#x3D;&#x3D;&#x3D;
-  public export &#x3D; EXPORT_SETTINGS;
+export class AddLayoutComponent {
+  private form?: Form;
+  private resource?: Resource;
+  public layouts: Layout[] &#x3D; [];
+  public nextStep &#x3D; false;
 
   /**
-   * Constructor for the component
+   * Contructor for safe-add-layout component
    *
-   * @param data The dialog data
+   * @param dialogRef Material dialog reference
+   * @param dialog Material dialog instance
+   * @param data Data used by the modal
+   * @param gridLayoutService Grid layout service
    */
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(
+    private dialogRef: MatDialogRef&lt;AddLayoutComponent&gt;,
+    private dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private gridLayoutService: SafeGridLayoutService
+  ) {
+    this.layouts &#x3D; data.layouts;
+    this.form &#x3D; data.form;
+    this.resource &#x3D; data.resource;
+  }
 
-  ngOnInit(): void {
-    this.export &#x3D; this.data.export;
+  /**
+   * Opens the panel to create a new layout.
+   */
+  public onCreate(): void {
+    const dialogRef &#x3D; this.dialog.open(SafeLayoutModalComponent, {
+      disableClose: true,
+      data: {
+        queryName: this.resource?.queryName || this.form?.queryName,
+      },
+      position: {
+        bottom: &#x27;0&#x27;,
+        right: &#x27;0&#x27;,
+      },
+      panelClass: &#x27;tile-settings-dialog&#x27;,
+    });
+    dialogRef.afterClosed().subscribe((layout) &#x3D;&gt; {
+      if (layout) {
+        this.gridLayoutService
+          .addLayout(layout, this.resource?.id, this.form?.id)
+          .subscribe((res) &#x3D;&gt; {
+            if (res.data?.addLayout) {
+              this.dialogRef.close(res.data.addLayout);
+            } else {
+              this.dialogRef.close();
+            }
+          });
+      }
+    });
+  }
+
+  /**
+   * Selects an existing layout.
+   *
+   * @param choice layout choice.
+   */
+  public onSelect(choice: MatSelectChange): void {
+    this.dialogRef.close(choice.value);
   }
 }
 </code></pre>
