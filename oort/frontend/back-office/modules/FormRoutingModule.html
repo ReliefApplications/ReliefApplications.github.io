@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/form/form-routing.module.ts</code>
+            <code>projects/back-office/src/app/app-preview/pages/form/form-routing.module.ts</code>
         </p>
 
 
@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { FormComponent } from &#x27;./form.component&#x27;;
 
+/** List of form routes */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * Application preview form routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
