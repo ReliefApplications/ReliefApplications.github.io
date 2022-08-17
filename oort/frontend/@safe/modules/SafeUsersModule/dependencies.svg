@@ -14,6 +14,10 @@
 <title>cluster_SafeUsersModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 665,-230.8 665,-32.8 8,-32.8"/>
 </g>
+<g id="clust6" class="cluster">
+<title>cluster_SafeUsersModule_exports</title>
+<polygon fill="none" stroke="black" points="250,-170.8 250,-222.8 408,-222.8 408,-170.8 250,-170.8"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeUsersModule_declarations</title>
 <polygon fill="none" stroke="black" points="329,-40.8 329,-92.8 657,-92.8 657,-40.8 329,-40.8"/>
@@ -21,10 +25,6 @@
 <g id="clust5" class="cluster">
 <title>cluster_SafeUsersModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 321,-92.8 321,-40.8 16,-40.8"/>
-</g>
-<g id="clust6" class="cluster">
-<title>cluster_SafeUsersModule_exports</title>
-<polygon fill="none" stroke="black" points="250,-170.8 250,-222.8 408,-222.8 408,-170.8 250,-170.8"/>
 </g>
 <!-- SafeEditUserComponent -->
 <g id="node1" class="node">
