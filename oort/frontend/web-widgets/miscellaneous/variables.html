@@ -64,10 +64,10 @@
                             <a href="#authConfig" title="projects/web-widgets/src/environments/environment.local.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.local.ts)</a>
                         </li>
                         <li>
-                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
+                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
                         </li>
                         <li>
-                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
+                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
                         </li>
                         <li>
                             <a href="#context" title="projects/web-widgets/src/test.ts" ><b>context</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
@@ -79,10 +79,10 @@
                             <a href="#environment" title="projects/web-widgets/src/environments/environment.local.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.local.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
+                            <a href="#environment" title="projects/web-widgets/src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/web-widgets/src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
+                            <a href="#environment" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
                         </li>
                         <li>
                             <a href="#GET_APPLICATION_BY_ID" title="projects/web-widgets/src/app/components/application/graphql/queries.ts" ><b>GET_APPLICATION_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
@@ -199,85 +199,6 @@
         </tbody>
     </table>
 </section>
-    <h3>projects/web-widgets/src/environments/environment.oort.dev.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="authConfig"></a>
-                    <span class="name">
-                        <span ><b>authConfig</b></span>
-                        <a href="#authConfig"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>AuthConfig</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  issuer: &#x27;https://id-dev.oortcloud.tech/auth/realms/oort&#x27;,
-  redirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/&#x27;,
-  postLogoutRedirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/auth/&#x27;,
-  clientId: &#x27;oort-client&#x27;,
-  scope: &#x27;openid profile email offline_access&#x27;,
-  responseType: &#x27;code&#x27;,
-  showDebugInformation: true,
-}</code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="environment"></a>
-                    <span class="name">
-                        <span ><b>environment</b></span>
-                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  production: true,
-  apiUrl: &#x27;https://oort-dev.oortcloud.tech/api&#x27;,
-  subscriptionApiUrl: &#x27;wss://oort-dev.oortcloud.tech/api&#x27;,
-  frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
-  backOfficeUri: &#x27;http://localhost:4200/&#x27;,
-  module: &#x27;widgets&#x27;,
-  availableLanguages: [&#x27;en&#x27;, &#x27;test&#x27;],
-  authConfig,
-  theme,
-}</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Environment file for local development.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
     <h3>projects/web-widgets/src/environments/environment.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -342,6 +263,85 @@
   frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
   backOfficeUri: &#x27;http://localhost:4200/&#x27;,
   module: &#x27;webwidgets&#x27;,
+  availableLanguages: [&#x27;en&#x27;, &#x27;test&#x27;],
+  authConfig,
+  theme,
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Environment file for local development.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/web-widgets/src/environments/environment.oort.dev.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authConfig"></a>
+                    <span class="name">
+                        <span ><b>authConfig</b></span>
+                        <a href="#authConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AuthConfig</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  issuer: &#x27;https://id-dev.oortcloud.tech/auth/realms/oort&#x27;,
+  redirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/&#x27;,
+  postLogoutRedirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/auth/&#x27;,
+  clientId: &#x27;oort-client&#x27;,
+  scope: &#x27;openid profile email offline_access&#x27;,
+  responseType: &#x27;code&#x27;,
+  showDebugInformation: true,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  production: true,
+  apiUrl: &#x27;https://oort-dev.oortcloud.tech/api&#x27;,
+  subscriptionApiUrl: &#x27;wss://oort-dev.oortcloud.tech/api&#x27;,
+  frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
+  backOfficeUri: &#x27;http://localhost:4200/&#x27;,
+  module: &#x27;widgets&#x27;,
   availableLanguages: [&#x27;en&#x27;, &#x27;test&#x27;],
   authConfig,
   theme,
