@@ -61,13 +61,13 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.local.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.local.ts)</a>
+                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
                         </li>
                         <li>
                             <a href="#authConfig" title="projects/web-widgets/src/environments/environment.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
                         </li>
                         <li>
-                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
+                            <a href="#authConfig" title="projects/web-widgets/src/environments/environment.local.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.local.ts)</a>
                         </li>
                         <li>
                             <a href="#context" title="projects/web-widgets/src/test.ts" ><b>context</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
@@ -76,13 +76,13 @@
                             <a href="#createApollo" title="projects/web-widgets/src/app/graphql.module.ts" ><b>createApollo</b>&nbsp;&nbsp;&nbsp;(projects/.../graphql.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/web-widgets/src/environments/environment.local.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.local.ts)</a>
+                            <a href="#environment" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="projects/web-widgets/src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/web-widgets/src/environments/environment.oort.dev.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
+                            <a href="#environment" title="projects/web-widgets/src/environments/environment.local.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.local.ts)</a>
                         </li>
                         <li>
                             <a href="#GET_APPLICATION_BY_ID" title="projects/web-widgets/src/app/components/application/graphql/queries.ts" ><b>GET_APPLICATION_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
@@ -118,7 +118,7 @@
     </table>
 </section>
 
-    <h3>projects/web-widgets/src/environments/environment.local.ts</h3>
+    <h3>projects/web-widgets/src/environments/environment.oort.dev.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -141,8 +141,8 @@
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
   issuer: &#x27;https://id-dev.oortcloud.tech/auth/realms/oort&#x27;,
-  redirectUri: &#x27;http://localhost:4200/&#x27;,
-  postLogoutRedirectUri: &#x27;http://localhost:4200/auth/&#x27;,
+  redirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/&#x27;,
+  postLogoutRedirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/auth/&#x27;,
   clientId: &#x27;oort-client&#x27;,
   scope: &#x27;openid profile email offline_access&#x27;,
   responseType: &#x27;code&#x27;,
@@ -177,8 +177,6 @@
   production: true,
   apiUrl: &#x27;https://oort-dev.oortcloud.tech/api&#x27;,
   subscriptionApiUrl: &#x27;wss://oort-dev.oortcloud.tech/api&#x27;,
-  // apiUrl: &#x27;http://localhost:3000&#x27;,
-  // subscriptionApiUrl: &#x27;ws://localhost:3000&#x27;,
   frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
   backOfficeUri: &#x27;http://localhost:4200/&#x27;,
   module: &#x27;widgets&#x27;,
@@ -280,7 +278,7 @@
         </tbody>
     </table>
 </section>
-    <h3>projects/web-widgets/src/environments/environment.oort.dev.ts</h3>
+    <h3>projects/web-widgets/src/environments/environment.local.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -303,8 +301,8 @@
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
   issuer: &#x27;https://id-dev.oortcloud.tech/auth/realms/oort&#x27;,
-  redirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/&#x27;,
-  postLogoutRedirectUri: &#x27;https://oort-dev.oortcloud.tech/widgets/auth/&#x27;,
+  redirectUri: &#x27;http://localhost:4200/&#x27;,
+  postLogoutRedirectUri: &#x27;http://localhost:4200/auth/&#x27;,
   clientId: &#x27;oort-client&#x27;,
   scope: &#x27;openid profile email offline_access&#x27;,
   responseType: &#x27;code&#x27;,
@@ -339,6 +337,8 @@
   production: true,
   apiUrl: &#x27;https://oort-dev.oortcloud.tech/api&#x27;,
   subscriptionApiUrl: &#x27;wss://oort-dev.oortcloud.tech/api&#x27;,
+  // apiUrl: &#x27;http://localhost:3000&#x27;,
+  // subscriptionApiUrl: &#x27;ws://localhost:3000&#x27;,
   frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
   backOfficeUri: &#x27;http://localhost:4200/&#x27;,
   module: &#x27;widgets&#x27;,
