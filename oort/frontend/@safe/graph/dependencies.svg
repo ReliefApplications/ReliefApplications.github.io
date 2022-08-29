@@ -48,19 +48,19 @@
 </g>
 <g id="clust15" class="cluster">
 <title>cluster_LayoutsParametersModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="1857,-443.39 1857,-663.39 2261,-663.39 2261,-443.39 1857,-443.39"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="1856,-443.39 1856,-663.39 2260,-663.39 2260,-443.39 1856,-443.39"/>
 </g>
 <g id="clust16" class="cluster">
 <title>cluster_LayoutsParametersModule_declarations</title>
-<polygon fill="none" stroke="black" points="2049,-451.39 2049,-503.39 2253,-503.39 2253,-451.39 2049,-451.39"/>
+<polygon fill="none" stroke="black" points="2048,-451.39 2048,-503.39 2252,-503.39 2252,-451.39 2048,-451.39"/>
 </g>
 <g id="clust18" class="cluster">
 <title>cluster_LayoutsParametersModule_imports</title>
-<polygon fill="none" stroke="black" points="1865,-451.39 1865,-503.39 2041,-503.39 2041,-451.39 1865,-451.39"/>
+<polygon fill="none" stroke="black" points="1864,-451.39 1864,-503.39 2040,-503.39 2040,-451.39 1864,-451.39"/>
 </g>
 <g id="clust19" class="cluster">
 <title>cluster_LayoutsParametersModule_exports</title>
-<polygon fill="none" stroke="black" points="2045,-603.39 2045,-655.39 2253,-655.39 2253,-603.39 2045,-603.39"/>
+<polygon fill="none" stroke="black" points="2044,-603.39 2044,-655.39 2252,-655.39 2252,-603.39 2044,-603.39"/>
 </g>
 <g id="clust22" class="cluster">
 <title>cluster_SafeAccessModule</title>
@@ -128,7 +128,7 @@
 </g>
 <g id="clust57" class="cluster">
 <title>cluster_SafeApplicationsSummaryModule_exports</title>
-<polygon fill="none" stroke="black" points="8949,-375.39 8949,-427.39 9667,-427.39 9667,-375.39 8949,-375.39"/>
+<polygon fill="none" stroke="black" points="8964,-375.39 8964,-427.39 9682,-427.39 9682,-375.39 8964,-375.39"/>
 </g>
 <g id="clust60" class="cluster">
 <title>cluster_SafeArrayFilterMenuModule</title>
@@ -260,19 +260,19 @@
 </g>
 <g id="clust130" class="cluster">
 <title>cluster_SafeChooseRecordModalModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="2273,-367.39 2273,-587.39 3109,-587.39 3109,-367.39 2273,-367.39"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="2272,-367.39 2272,-587.39 3109,-587.39 3109,-367.39 2272,-367.39"/>
 </g>
 <g id="clust131" class="cluster">
 <title>cluster_SafeChooseRecordModalModule_declarations</title>
-<polygon fill="none" stroke="black" points="2281,-375.39 2281,-427.39 2523,-427.39 2523,-375.39 2281,-375.39"/>
+<polygon fill="none" stroke="black" points="2280,-375.39 2280,-427.39 2522,-427.39 2522,-375.39 2280,-375.39"/>
 </g>
 <g id="clust133" class="cluster">
 <title>cluster_SafeChooseRecordModalModule_imports</title>
-<polygon fill="none" stroke="black" points="2531,-375.39 2531,-427.39 3101,-427.39 3101,-375.39 2531,-375.39"/>
+<polygon fill="none" stroke="black" points="2530,-375.39 2530,-427.39 3101,-427.39 3101,-375.39 2530,-375.39"/>
 </g>
 <g id="clust134" class="cluster">
 <title>cluster_SafeChooseRecordModalModule_exports</title>
-<polygon fill="none" stroke="black" points="2772,-527.39 2772,-579.39 3016,-579.39 3016,-527.39 2772,-527.39"/>
+<polygon fill="none" stroke="black" points="2787,-527.39 2787,-579.39 3031,-579.39 3031,-527.39 2787,-527.39"/>
 </g>
 <g id="clust137" class="cluster">
 <title>cluster_SafeColumnChartModule</title>
@@ -580,15 +580,15 @@
 </g>
 <g id="clust306" class="cluster">
 <title>cluster_SafeLayoutModalModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="1841,-367.39 1841,-435.39 2265,-435.39 2265,-367.39 1841,-367.39"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="1840,-367.39 1840,-435.39 2264,-435.39 2264,-367.39 1840,-367.39"/>
 </g>
 <g id="clust307" class="cluster">
 <title>cluster_SafeLayoutModalModule_declarations</title>
-<polygon fill="none" stroke="black" points="2059,-375.39 2059,-427.39 2257,-427.39 2257,-375.39 2059,-375.39"/>
+<polygon fill="none" stroke="black" points="2058,-375.39 2058,-427.39 2256,-427.39 2256,-375.39 2058,-375.39"/>
 </g>
 <g id="clust310" class="cluster">
 <title>cluster_SafeLayoutModalModule_exports</title>
-<polygon fill="none" stroke="black" points="1849,-375.39 1849,-427.39 2051,-427.39 2051,-375.39 1849,-375.39"/>
+<polygon fill="none" stroke="black" points="1848,-375.39 1848,-427.39 2050,-427.39 2050,-375.39 1848,-375.39"/>
 </g>
 <g id="clust313" class="cluster">
 <title>cluster_SafeLayoutModule</title>
@@ -724,15 +724,15 @@
 </g>
 <g id="clust401" class="cluster">
 <title>cluster_SafeRecordDropdownModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="2510,-291.39 2510,-359.39 2982,-359.39 2982,-291.39 2510,-291.39"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="2133,-291.39 2133,-359.39 2605,-359.39 2605,-291.39 2133,-291.39"/>
 </g>
 <g id="clust402" class="cluster">
 <title>cluster_SafeRecordDropdownModule_declarations</title>
-<polygon fill="none" stroke="black" points="2752,-299.39 2752,-351.39 2974,-351.39 2974,-299.39 2752,-299.39"/>
+<polygon fill="none" stroke="black" points="2375,-299.39 2375,-351.39 2597,-351.39 2597,-299.39 2375,-299.39"/>
 </g>
 <g id="clust405" class="cluster">
 <title>cluster_SafeRecordDropdownModule_exports</title>
-<polygon fill="none" stroke="black" points="2518,-299.39 2518,-351.39 2744,-351.39 2744,-299.39 2518,-299.39"/>
+<polygon fill="none" stroke="black" points="2141,-299.39 2141,-351.39 2367,-351.39 2367,-299.39 2141,-299.39"/>
 </g>
 <g id="clust408" class="cluster">
 <title>cluster_SafeRecordHistoryModalModule</title>
@@ -776,27 +776,27 @@
 </g>
 <g id="clust429" class="cluster">
 <title>cluster_SafeRecordSummaryModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="17545,-443.39 17545,-511.39 18007,-511.39 18007,-443.39 17545,-443.39"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="17041,-443.39 17041,-511.39 17503,-511.39 17503,-443.39 17041,-443.39"/>
 </g>
 <g id="clust430" class="cluster">
 <title>cluster_SafeRecordSummaryModule_declarations</title>
-<polygon fill="none" stroke="black" points="17781,-451.39 17781,-503.39 17999,-503.39 17999,-451.39 17781,-451.39"/>
+<polygon fill="none" stroke="black" points="17277,-451.39 17277,-503.39 17495,-503.39 17495,-451.39 17277,-451.39"/>
 </g>
 <g id="clust433" class="cluster">
 <title>cluster_SafeRecordSummaryModule_exports</title>
-<polygon fill="none" stroke="black" points="17553,-451.39 17553,-503.39 17773,-503.39 17773,-451.39 17553,-451.39"/>
+<polygon fill="none" stroke="black" points="17049,-451.39 17049,-503.39 17269,-503.39 17269,-451.39 17049,-451.39"/>
 </g>
 <g id="clust436" class="cluster">
 <title>cluster_SafeResourceDropdownModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="17013,-443.39 17013,-511.39 17509,-511.39 17509,-443.39 17013,-443.39"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="2613,-291.39 2613,-359.39 3109,-359.39 3109,-291.39 2613,-291.39"/>
 </g>
 <g id="clust437" class="cluster">
 <title>cluster_SafeResourceDropdownModule_declarations</title>
-<polygon fill="none" stroke="black" points="17267,-451.39 17267,-503.39 17501,-503.39 17501,-451.39 17267,-451.39"/>
+<polygon fill="none" stroke="black" points="2867,-299.39 2867,-351.39 3101,-351.39 3101,-299.39 2867,-299.39"/>
 </g>
 <g id="clust440" class="cluster">
 <title>cluster_SafeResourceDropdownModule_exports</title>
-<polygon fill="none" stroke="black" points="17021,-451.39 17021,-503.39 17259,-503.39 17259,-451.39 17021,-451.39"/>
+<polygon fill="none" stroke="black" points="2621,-299.39 2621,-351.39 2859,-351.39 2859,-299.39 2621,-299.39"/>
 </g>
 <g id="clust443" class="cluster">
 <title>cluster_SafeRolesModule</title>
@@ -1011,14 +1011,14 @@
 <!-- LayoutsParametersModule -->
 <g id="node14" class="node">
 <title>LayoutsParametersModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="2233.35,-571.39 2230.35,-575.39 2209.35,-575.39 2206.35,-571.39 2066.65,-571.39 2066.65,-535.39 2233.35,-535.39 2233.35,-571.39"/>
-<text text-anchor="middle" x="2150" y="-549.19" font-family="Times,serif" font-size="14.00">LayoutsParametersModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="2232.35,-571.39 2229.35,-575.39 2208.35,-575.39 2205.35,-571.39 2065.65,-571.39 2065.65,-535.39 2232.35,-535.39 2232.35,-571.39"/>
+<text text-anchor="middle" x="2149" y="-549.19" font-family="Times,serif" font-size="14.00">LayoutsParametersModule</text>
 </g>
 <!-- AddLayoutModule&#45;&gt;LayoutsParametersModule -->
 <g id="edge12" class="edge">
 <title>AddLayoutModule&#45;&gt;LayoutsParametersModule</title>
-<path fill="none" stroke="black" d="M239.06,-401.39C352.06,-401.39 579.85,-401.39 579.85,-401.39 579.85,-401.39 579.85,-553.39 579.85,-553.39 579.85,-553.39 2056.41,-553.39 2056.41,-553.39"/>
-<polygon fill="black" stroke="black" points="2056.41,-556.89 2066.41,-553.39 2056.41,-549.89 2056.41,-556.89"/>
+<path fill="none" stroke="black" d="M239.06,-401.39C352.06,-401.39 579.85,-401.39 579.85,-401.39 579.85,-401.39 579.85,-553.39 579.85,-553.39 579.85,-553.39 2055.47,-553.39 2055.47,-553.39"/>
+<polygon fill="black" stroke="black" points="2055.47,-556.89 2065.47,-553.39 2055.47,-549.89 2055.47,-556.89"/>
 </g>
 <!-- SafeButtonModule -->
 <g id="node3" class="node">
@@ -1059,20 +1059,20 @@
 <!-- SafeButtonModule&#45;&gt;LayoutsParametersModule -->
 <g id="edge13" class="edge">
 <title>SafeButtonModule&#45;&gt;LayoutsParametersModule</title>
-<path fill="none" stroke="black" d="M160.35,-245.39C231.64,-245.39 339.64,-245.39 339.64,-245.39 339.64,-245.39 339.64,-562.39 339.64,-562.39 339.64,-562.39 2056.61,-562.39 2056.61,-562.39"/>
-<polygon fill="black" stroke="black" points="2056.61,-565.89 2066.61,-562.39 2056.61,-558.89 2056.61,-565.89"/>
+<path fill="none" stroke="black" d="M160.35,-245.39C231.64,-245.39 339.64,-245.39 339.64,-245.39 339.64,-245.39 339.64,-562.39 339.64,-562.39 339.64,-562.39 2055.36,-562.39 2055.36,-562.39"/>
+<polygon fill="black" stroke="black" points="2055.36,-565.89 2065.36,-562.39 2055.36,-558.89 2055.36,-565.89"/>
 </g>
 <!-- SafeLayoutModalModule -->
 <g id="node15" class="node">
 <title>SafeLayoutModalModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="2033.14,-495.39 2030.14,-499.39 2009.14,-499.39 2006.14,-495.39 1872.86,-495.39 1872.86,-459.39 2033.14,-459.39 2033.14,-495.39"/>
-<text text-anchor="middle" x="1953" y="-473.19" font-family="Times,serif" font-size="14.00">SafeLayoutModalModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="2032.14,-495.39 2029.14,-499.39 2008.14,-499.39 2005.14,-495.39 1871.86,-495.39 1871.86,-459.39 2032.14,-459.39 2032.14,-495.39"/>
+<text text-anchor="middle" x="1952" y="-473.19" font-family="Times,serif" font-size="14.00">SafeLayoutModalModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeLayoutModalModule -->
 <g id="edge171" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeLayoutModalModule</title>
-<path fill="none" stroke="black" d="M160.15,-238.39C237.24,-238.39 359.81,-238.39 359.81,-238.39 359.81,-238.39 359.81,-477.39 359.81,-477.39 359.81,-477.39 1862.63,-477.39 1862.63,-477.39"/>
-<polygon fill="black" stroke="black" points="1862.63,-480.89 1872.63,-477.39 1862.63,-473.89 1862.63,-480.89"/>
+<path fill="none" stroke="black" d="M160.15,-238.39C237.24,-238.39 359.81,-238.39 359.81,-238.39 359.81,-238.39 359.81,-477.39 359.81,-477.39 359.81,-477.39 1861.68,-477.39 1861.68,-477.39"/>
+<polygon fill="black" stroke="black" points="1861.68,-480.89 1871.68,-477.39 1861.68,-473.89 1861.68,-480.89"/>
 </g>
 <!-- SafeAccessModule -->
 <g id="node19" class="node">
@@ -1089,14 +1089,14 @@
 <!-- SafeApplicationsSummaryModule -->
 <g id="node38" class="node">
 <title>SafeApplicationsSummaryModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="9428.41,-343.39 9425.41,-347.39 9404.41,-347.39 9401.41,-343.39 9217.59,-343.39 9217.59,-307.39 9428.41,-307.39 9428.41,-343.39"/>
-<text text-anchor="middle" x="9323" y="-321.19" font-family="Times,serif" font-size="14.00">SafeApplicationsSummaryModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="9425.41,-343.39 9422.41,-347.39 9401.41,-347.39 9398.41,-343.39 9214.59,-343.39 9214.59,-307.39 9425.41,-307.39 9425.41,-343.39"/>
+<text text-anchor="middle" x="9320" y="-321.19" font-family="Times,serif" font-size="14.00">SafeApplicationsSummaryModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeApplicationsSummaryModule -->
 <g id="edge35" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeApplicationsSummaryModule</title>
-<path fill="none" stroke="black" d="M75.95,-252.28C75.95,-271.6 75.95,-299.39 75.95,-299.39 75.95,-299.39 9287.93,-299.39 9287.93,-299.39 9287.93,-299.39 9287.93,-300.18 9287.93,-300.18"/>
-<polygon fill="black" stroke="black" points="9284.43,-297.33 9287.93,-307.33 9291.43,-297.33 9284.43,-297.33"/>
+<path fill="none" stroke="black" d="M75.95,-252.28C75.95,-271.6 75.95,-299.39 75.95,-299.39 75.95,-299.39 9284.93,-299.39 9284.93,-299.39 9284.93,-299.39 9284.93,-300.18 9284.93,-300.18"/>
+<polygon fill="black" stroke="black" points="9281.43,-297.33 9284.93,-307.33 9288.43,-297.33 9281.43,-297.33"/>
 </g>
 <!-- SafeButtonComponent  -->
 <g id="node62" class="node">
@@ -1155,8 +1155,8 @@
 <!-- SafeButtonModule&#45;&gt;SafeRecordSummaryModule -->
 <g id="edge279" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeRecordSummaryModule</title>
-<path fill="none" stroke="black" d="M160.3,-234.39C171.86,-234.39 180.42,-234.39 180.42,-234.39 180.42,-234.39 180.42,-373.39 180.42,-373.39 180.42,-373.39 15140.75,-373.39 15140.75,-373.39 15140.75,-373.39 15140.75,-374.37 15140.75,-374.37"/>
-<polygon fill="black" stroke="black" points="15137.25,-373.18 15140.75,-383.18 15144.25,-373.18 15137.25,-373.18"/>
+<path fill="none" stroke="black" d="M160.3,-234.39C171.86,-234.39 180.42,-234.39 180.42,-234.39 180.42,-234.39 180.42,-374.39 180.42,-374.39 180.42,-374.39 15140.75,-374.39 15140.75,-374.39 15140.75,-374.39 15140.75,-375.27 15140.75,-375.27"/>
+<polygon fill="black" stroke="black" points="15137.25,-373.23 15140.75,-383.23 15144.25,-373.23 15137.25,-373.23"/>
 </g>
 <!-- SafeFormModule -->
 <g id="node129" class="node">
@@ -1201,7 +1201,7 @@
 <text text-anchor="middle" x="19997" y="-321.19" font-family="Times,serif" font-size="14.00">SafeSearchMenuModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeSearchMenuModule -->
-<g id="edge294" class="edge">
+<g id="edge295" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeSearchMenuModule</title>
 <path fill="none" stroke="black" d="M129.46,-252.11C129.46,-264.37 129.46,-278.39 129.46,-278.39 129.46,-278.39 19925.65,-278.39 19925.65,-278.39 19925.65,-278.39 19925.65,-297.35 19925.65,-297.35"/>
 <polygon fill="black" stroke="black" points="19922.15,-297.35 19925.65,-307.35 19929.15,-297.35 19922.15,-297.35"/>
@@ -1209,14 +1209,14 @@
 <!-- SafePipelineModule -->
 <g id="node215" class="node">
 <title>SafePipelineModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="20849.31,-419.39 20846.31,-423.39 20825.31,-423.39 20822.31,-419.39 20718.69,-419.39 20718.69,-383.39 20849.31,-383.39 20849.31,-419.39"/>
-<text text-anchor="middle" x="20784" y="-397.19" font-family="Times,serif" font-size="14.00">SafePipelineModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="20859.31,-419.39 20856.31,-423.39 20835.31,-423.39 20832.31,-419.39 20728.69,-419.39 20728.69,-383.39 20859.31,-383.39 20859.31,-419.39"/>
+<text text-anchor="middle" x="20794" y="-397.19" font-family="Times,serif" font-size="14.00">SafePipelineModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafePipelineModule -->
 <g id="edge230" class="edge">
 <title>SafeButtonModule&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M137.11,-252.21C137.11,-264.07 137.11,-277.39 137.11,-277.39 137.11,-277.39 20840.75,-277.39 20840.75,-277.39 20840.75,-277.39 20840.75,-373.36 20840.75,-373.36"/>
-<polygon fill="black" stroke="black" points="20837.25,-373.36 20840.75,-383.36 20844.25,-373.36 20837.25,-373.36"/>
+<path fill="none" stroke="black" d="M137.11,-252.21C137.11,-264.07 137.11,-277.39 137.11,-277.39 137.11,-277.39 20843.18,-277.39 20843.18,-277.39 20843.18,-277.39 20843.18,-373.36 20843.18,-373.36"/>
+<polygon fill="black" stroke="black" points="20839.68,-373.36 20843.18,-383.36 20846.68,-373.36 20839.68,-373.36"/>
 </g>
 <!-- SafeProfileModule -->
 <g id="node227" class="node">
@@ -1227,8 +1227,8 @@
 <!-- SafeButtonModule&#45;&gt;SafeProfileModule -->
 <g id="edge245" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeProfileModule</title>
-<path fill="none" stroke="black" d="M160.25,-227.39C167.49,-227.39 172.36,-227.39 172.36,-227.39 172.36,-227.39 172.36,-358.39 172.36,-358.39 172.36,-358.39 22922.58,-358.39 22922.58,-358.39 22922.58,-358.39 22922.58,-353.43 22922.58,-353.43"/>
-<polygon fill="black" stroke="black" points="22926.08,-353.43 22922.58,-343.43 22919.08,-353.43 22926.08,-353.43"/>
+<path fill="none" stroke="black" d="M160.25,-227.39C167.49,-227.39 172.36,-227.39 172.36,-227.39 172.36,-227.39 172.36,-359.39 172.36,-359.39 172.36,-359.39 22922.58,-359.39 22922.58,-359.39 22922.58,-359.39 22922.58,-353.58 22922.58,-353.58"/>
+<polygon fill="black" stroke="black" points="22926.08,-353.58 22922.58,-343.58 22919.08,-353.58 22926.08,-353.58"/>
 </g>
 <!-- SafeRecordHistoryModule -->
 <g id="node245" class="node">
@@ -1261,10 +1261,10 @@
 <text text-anchor="middle" x="23128" y="-321.19" font-family="Times,serif" font-size="14.00">SafeRolesModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeRolesModule -->
-<g id="edge286" class="edge">
+<g id="edge287" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeRolesModule</title>
-<path fill="none" stroke="black" d="M160.36,-231.39C169.75,-231.39 176.39,-231.39 176.39,-231.39 176.39,-231.39 176.39,-361.39 176.39,-361.39 176.39,-361.39 23128,-361.39 23128,-361.39 23128,-361.39 23128,-353.81 23128,-353.81"/>
-<polygon fill="black" stroke="black" points="23131.5,-353.81 23128,-343.81 23124.5,-353.81 23131.5,-353.81"/>
+<path fill="none" stroke="black" d="M160.36,-231.39C169.75,-231.39 176.39,-231.39 176.39,-231.39 176.39,-231.39 176.39,-362.39 176.39,-362.39 176.39,-362.39 23128,-362.39 23128,-362.39 23128,-362.39 23128,-353.46 23128,-353.46"/>
+<polygon fill="black" stroke="black" points="23131.5,-353.46 23128,-343.46 23124.5,-353.46 23131.5,-353.46"/>
 </g>
 <!-- SafeUsersModule -->
 <g id="node285" class="node">
@@ -1273,7 +1273,7 @@
 <text text-anchor="middle" x="23736" y="-321.19" font-family="Times,serif" font-size="14.00">SafeUsersModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeUsersModule -->
-<g id="edge316" class="edge">
+<g id="edge317" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeUsersModule</title>
 <path fill="none" stroke="black" d="M55.23,-216.01C55.23,-193.9 55.23,-159.39 55.23,-159.39 55.23,-159.39 23731.03,-159.39 23731.03,-159.39 23731.03,-159.39 23731.03,-297.31 23731.03,-297.31"/>
 <polygon fill="black" stroke="black" points="23727.53,-297.31 23731.03,-307.31 23734.53,-297.31 23727.53,-297.31"/>
@@ -1285,7 +1285,7 @@
 <text text-anchor="middle" x="15254" y="-693.19" font-family="Times,serif" font-size="14.00">SafeWidgetGridModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeWidgetGridModule -->
-<g id="edge325" class="edge">
+<g id="edge326" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M125.26,-215.96C125.26,-200.71 125.26,-181.39 125.26,-181.39 125.26,-181.39 15247.35,-181.39 15247.35,-181.39 15247.35,-181.39 15247.35,-669.33 15247.35,-669.33"/>
 <polygon fill="black" stroke="black" points="15243.85,-669.33 15247.35,-679.33 15250.85,-669.33 15243.85,-669.33"/>
@@ -1293,11 +1293,11 @@
 <!-- SafeWorkflowStepperModule -->
 <g id="node302" class="node">
 <title>SafeWorkflowStepperModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="21630.23,-343.39 21627.23,-347.39 21606.23,-347.39 21603.23,-343.39 21445.77,-343.39 21445.77,-307.39 21630.23,-307.39 21630.23,-343.39"/>
-<text text-anchor="middle" x="21538" y="-321.19" font-family="Times,serif" font-size="14.00">SafeWorkflowStepperModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="21600.23,-343.39 21597.23,-347.39 21576.23,-347.39 21573.23,-343.39 21415.77,-343.39 21415.77,-307.39 21600.23,-307.39 21600.23,-343.39"/>
+<text text-anchor="middle" x="21508" y="-321.19" font-family="Times,serif" font-size="14.00">SafeWorkflowStepperModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;SafeWorkflowStepperModule -->
-<g id="edge340" class="edge">
+<g id="edge341" class="edge">
 <title>SafeButtonModule&#45;&gt;SafeWorkflowStepperModule</title>
 <path fill="none" stroke="black" d="M107.75,-215.84C107.75,-198.93 107.75,-176.39 107.75,-176.39 107.75,-176.39 21556.35,-176.39 21556.35,-176.39 21556.35,-176.39 21556.35,-297.12 21556.35,-297.12"/>
 <polygon fill="black" stroke="black" points="21552.85,-297.12 21556.35,-307.12 21559.85,-297.12 21552.85,-297.12"/>
@@ -1317,8 +1317,8 @@
 <!-- SafeLayoutModule&#45;&gt;SafeLayoutComponent  -->
 <g id="edge180" class="edge">
 <title>SafeLayoutModule&#45;&gt;SafeLayoutComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M148.87,-343.55C148.87,-348.43 148.87,-352.39 148.87,-352.39 148.87,-352.39 19566.19,-352.39 19566.19,-352.39 19566.19,-352.39 19566.19,-351.51 19566.19,-351.51"/>
-<polygon fill="black" stroke="black" points="19569.69,-353.55 19566.19,-343.55 19562.69,-353.55 19569.69,-353.55"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M148.87,-343.6C148.87,-348.95 148.87,-353.39 148.87,-353.39 148.87,-353.39 19566.19,-353.39 19566.19,-353.39 19566.19,-353.39 19566.19,-352.41 19566.19,-352.41"/>
+<polygon fill="black" stroke="black" points="19569.69,-353.6 19566.19,-343.6 19562.69,-353.6 19569.69,-353.6"/>
 </g>
 <!-- ConfigDisplayGridFieldsModalComponent -->
 <g id="node6" class="node">
@@ -1425,8 +1425,8 @@
 <!-- SafeRecordDropdownComponent -->
 <g id="node242" class="node">
 <title>SafeRecordDropdownComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2966.02,-343.39 2759.98,-343.39 2759.98,-307.39 2966.02,-307.39 2966.02,-343.39"/>
-<text text-anchor="middle" x="2863" y="-321.19" font-family="Times,serif" font-size="14.00">SafeRecordDropdownComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2589.02,-343.39 2382.98,-343.39 2382.98,-307.39 2589.02,-307.39 2589.02,-343.39"/>
+<text text-anchor="middle" x="2486" y="-321.19" font-family="Times,serif" font-size="14.00">SafeRecordDropdownComponent</text>
 </g>
 <!-- {
  &#160;&#160;&#160;provide: MAT_SELECT_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
@@ -1435,8 +1435,24 @@
 <title>{
  &#160;&#160;&#160;provide: MAT_SELECT_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
 }&#45;&gt;SafeRecordDropdownComponent</title>
-<path fill="none" stroke="black" d="M3259.45,-264.39C3097.68,-264.39 2922.75,-264.39 2922.75,-264.39 2922.75,-264.39 2922.75,-297.09 2922.75,-297.09"/>
-<polygon fill="black" stroke="black" points="2919.25,-297.09 2922.75,-307.09 2926.25,-297.09 2919.25,-297.09"/>
+<path fill="none" stroke="black" d="M3223.49,-260.39C2940.5,-260.39 2562.44,-260.39 2562.44,-260.39 2562.44,-260.39 2562.44,-297.28 2562.44,-297.28"/>
+<polygon fill="black" stroke="black" points="2558.94,-297.28 2562.44,-307.28 2565.94,-297.28 2558.94,-297.28"/>
+</g>
+<!-- SafeResourceDropdownComponent -->
+<g id="node254" class="node">
+<title>SafeResourceDropdownComponent</title>
+<polygon fill="#ffffb3" stroke="black" points="3093.18,-343.39 2874.82,-343.39 2874.82,-307.39 3093.18,-307.39 3093.18,-343.39"/>
+<text text-anchor="middle" x="2984" y="-321.19" font-family="Times,serif" font-size="14.00">SafeResourceDropdownComponent</text>
+</g>
+<!-- {
+ &#160;&#160;&#160;provide: MAT_SELECT_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
+}&#45;&gt;SafeResourceDropdownComponent -->
+<g id="edge282" class="edge">
+<title>{
+ &#160;&#160;&#160;provide: MAT_SELECT_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
+}&#45;&gt;SafeResourceDropdownComponent</title>
+<path fill="none" stroke="black" d="M3307.94,-268.39C3157.79,-268.39 2986,-268.39 2986,-268.39 2986,-268.39 2986,-297.35 2986,-297.35"/>
+<polygon fill="black" stroke="black" points="2982.5,-297.35 2986,-307.35 2989.5,-297.35 2982.5,-297.35"/>
 </g>
 <!-- {
  &#160;&#160;&#160;provide: MAT_TOOLTIP_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
@@ -1479,20 +1495,20 @@
 <!-- SafeQueryBuilderModule&#45;&gt;SafeLayoutModalModule -->
 <g id="edge173" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;SafeLayoutModalModule</title>
-<path fill="none" stroke="black" d="M3166.01,-343.47C3166.01,-379.19 3166.01,-455.39 3166.01,-455.39 3166.01,-455.39 1993.16,-455.39 1993.16,-455.39 1993.16,-455.39 1993.16,-455.77 1993.16,-455.77"/>
-<polygon fill="black" stroke="black" points="1989.66,-449.22 1993.16,-459.22 1996.66,-449.22 1989.66,-449.22"/>
+<path fill="none" stroke="black" d="M3198.72,-343.54C3198.72,-377.75 3198.72,-448.39 3198.72,-448.39 3198.72,-448.39 1992.16,-448.39 1992.16,-448.39 1992.16,-448.39 1992.16,-449.47 1992.16,-449.47"/>
+<polygon fill="black" stroke="black" points="1988.66,-449.19 1992.16,-459.19 1995.66,-449.19 1988.66,-449.19"/>
 </g>
 <!-- SafeQueryBuilderModule&#45;&gt;SafeChartSettingsModule -->
 <g id="edge75" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;SafeChartSettingsModule</title>
-<path fill="none" stroke="black" d="M3283.95,-343.51C3283.95,-358.17 3283.95,-376.39 3283.95,-376.39 3283.95,-376.39 11363.4,-376.39 11363.4,-376.39 11363.4,-376.39 11363.4,-377.07 11363.4,-377.07"/>
-<polygon fill="black" stroke="black" points="11359.9,-373.22 11363.4,-383.22 11366.9,-373.22 11359.9,-373.22"/>
+<path fill="none" stroke="black" d="M3283.95,-343.58C3283.95,-358.57 3283.95,-377.39 3283.95,-377.39 3283.95,-377.39 11363.4,-377.39 11363.4,-377.39 11363.4,-377.39 11363.4,-377.97 11363.4,-377.97"/>
+<polygon fill="black" stroke="black" points="11359.9,-373.2 11363.4,-383.2 11366.9,-373.2 11359.9,-373.2"/>
 </g>
 <!-- SafeQueryBuilderModule&#45;&gt;SafeGridSettingsModule -->
 <g id="edge155" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;SafeGridSettingsModule</title>
-<path fill="none" stroke="black" d="M3198.72,-343.73C3198.72,-410.04 3198.72,-633.39 3198.72,-633.39 3198.72,-633.39 9582.24,-633.39 9582.24,-633.39"/>
-<polygon fill="black" stroke="black" points="9582.24,-636.89 9592.24,-633.39 9582.24,-629.89 9582.24,-636.89"/>
+<path fill="none" stroke="black" d="M3231.43,-343.73C3231.43,-410.04 3231.43,-633.39 3231.43,-633.39 3231.43,-633.39 9582.35,-633.39 9582.35,-633.39"/>
+<polygon fill="black" stroke="black" points="9582.35,-636.89 9592.35,-633.39 9582.35,-629.89 9582.35,-636.89"/>
 </g>
 <!-- SafeMapSettingsModule -->
 <g id="node170" class="node">
@@ -1509,8 +1525,8 @@
 <!-- SafeQueryBuilderModule&#45;&gt;SafePipelineModule -->
 <g id="edge232" class="edge">
 <title>SafeQueryBuilderModule&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M3287.54,-343.49C3287.54,-354.48 3287.54,-366.39 3287.54,-366.39 3287.54,-366.39 20748.27,-366.39 20748.27,-366.39 20748.27,-366.39 20748.27,-373.07 20748.27,-373.07"/>
-<polygon fill="black" stroke="black" points="20744.77,-373.07 20748.27,-383.07 20751.77,-373.07 20744.77,-373.07"/>
+<path fill="none" stroke="black" d="M3287.54,-343.45C3287.54,-354.83 3287.54,-367.39 3287.54,-367.39 3287.54,-367.39 20755.89,-367.39 20755.89,-367.39 20755.89,-367.39 20755.89,-373.2 20755.89,-373.2"/>
+<polygon fill="black" stroke="black" points="20752.39,-373.2 20755.89,-383.2 20759.39,-373.2 20752.39,-373.2"/>
 </g>
 <!-- SafeQueryBuilderComponent  -->
 <g id="node238" class="node">
@@ -1563,50 +1579,50 @@
 <!-- LayoutsParametersComponent -->
 <g id="node13" class="node">
 <title>LayoutsParametersComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2245.13,-495.39 2056.87,-495.39 2056.87,-459.39 2245.13,-459.39 2245.13,-495.39"/>
-<text text-anchor="middle" x="2151" y="-473.19" font-family="Times,serif" font-size="14.00">LayoutsParametersComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2244.13,-495.39 2055.87,-495.39 2055.87,-459.39 2244.13,-459.39 2244.13,-495.39"/>
+<text text-anchor="middle" x="2150" y="-473.19" font-family="Times,serif" font-size="14.00">LayoutsParametersComponent</text>
 </g>
 <!-- LayoutsParametersComponent&#45;&gt;LayoutsParametersModule -->
 <g id="edge11" class="edge">
 <title>LayoutsParametersComponent&#45;&gt;LayoutsParametersModule</title>
-<path fill="none" stroke="black" d="M2150,-495.4C2150,-495.4 2150,-525.25 2150,-525.25"/>
-<polygon fill="black" stroke="black" points="2146.5,-525.25 2150,-535.25 2153.5,-525.25 2146.5,-525.25"/>
+<path fill="none" stroke="black" d="M2149,-495.4C2149,-495.4 2149,-525.25 2149,-525.25"/>
+<polygon fill="black" stroke="black" points="2145.5,-525.25 2149,-535.25 2152.5,-525.25 2145.5,-525.25"/>
 </g>
 <!-- LayoutsParametersComponent  -->
 <g id="node16" class="node">
 <title>LayoutsParametersComponent </title>
-<polygon fill="#fb8072" stroke="black" points="2245.13,-647.39 2052.87,-647.39 2052.87,-611.39 2245.13,-611.39 2245.13,-647.39"/>
-<text text-anchor="middle" x="2149" y="-625.19" font-family="Times,serif" font-size="14.00">LayoutsParametersComponent </text>
+<polygon fill="#fb8072" stroke="black" points="2244.13,-647.39 2051.87,-647.39 2051.87,-611.39 2244.13,-611.39 2244.13,-647.39"/>
+<text text-anchor="middle" x="2148" y="-625.19" font-family="Times,serif" font-size="14.00">LayoutsParametersComponent </text>
 </g>
 <!-- LayoutsParametersModule&#45;&gt;LayoutsParametersComponent  -->
 <g id="edge15" class="edge">
 <title>LayoutsParametersModule&#45;&gt;LayoutsParametersComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2150,-571.4C2150,-571.4 2150,-601.25 2150,-601.25"/>
-<polygon fill="black" stroke="black" points="2146.5,-601.25 2150,-611.25 2153.5,-601.25 2146.5,-601.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2149,-571.4C2149,-571.4 2149,-601.25 2149,-601.25"/>
+<polygon fill="black" stroke="black" points="2145.5,-601.25 2149,-611.25 2152.5,-601.25 2145.5,-601.25"/>
 </g>
 <!-- LayoutsParametersModule&#45;&gt;SafeGridSettingsModule -->
 <g id="edge153" class="edge">
 <title>LayoutsParametersModule&#45;&gt;SafeGridSettingsModule</title>
-<path fill="none" stroke="black" d="M2233.53,-553.39C2293.75,-553.39 2364.47,-553.39 2364.47,-553.39 2364.47,-553.39 2364.47,-640.39 2364.47,-640.39 2364.47,-640.39 9582.29,-640.39 9582.29,-640.39"/>
-<polygon fill="black" stroke="black" points="9582.29,-643.89 9592.29,-640.39 9582.29,-636.89 9582.29,-643.89"/>
+<path fill="none" stroke="black" d="M2232.53,-553.39C2292.75,-553.39 2363.47,-553.39 2363.47,-553.39 2363.47,-553.39 2363.47,-640.39 2363.47,-640.39 2363.47,-640.39 9582.28,-640.39 9582.28,-640.39"/>
+<polygon fill="black" stroke="black" points="9582.28,-643.89 9592.28,-640.39 9582.28,-636.89 9582.28,-643.89"/>
 </g>
 <!-- SafeLayoutModalModule&#45;&gt;LayoutsParametersModule -->
 <g id="edge14" class="edge">
 <title>SafeLayoutModalModule&#45;&gt;LayoutsParametersModule</title>
-<path fill="none" stroke="black" d="M1953,-495.7C1953,-515.54 1953,-544.39 1953,-544.39 1953,-544.39 2056.45,-544.39 2056.45,-544.39"/>
-<polygon fill="black" stroke="black" points="2056.45,-547.89 2066.45,-544.39 2056.45,-540.89 2056.45,-547.89"/>
+<path fill="none" stroke="black" d="M1952,-495.7C1952,-515.54 1952,-544.39 1952,-544.39 1952,-544.39 2055.45,-544.39 2055.45,-544.39"/>
+<polygon fill="black" stroke="black" points="2055.45,-547.89 2065.45,-544.39 2055.45,-540.89 2055.45,-547.89"/>
 </g>
 <!-- SafeLayoutModalComponent  -->
 <g id="node159" class="node">
 <title>SafeLayoutModalComponent </title>
-<polygon fill="#fb8072" stroke="black" points="2042.91,-419.39 1857.09,-419.39 1857.09,-383.39 2042.91,-383.39 2042.91,-419.39"/>
-<text text-anchor="middle" x="1950" y="-397.19" font-family="Times,serif" font-size="14.00">SafeLayoutModalComponent </text>
+<polygon fill="#fb8072" stroke="black" points="2041.91,-419.39 1856.09,-419.39 1856.09,-383.39 2041.91,-383.39 2041.91,-419.39"/>
+<text text-anchor="middle" x="1949" y="-397.19" font-family="Times,serif" font-size="14.00">SafeLayoutModalComponent </text>
 </g>
 <!-- SafeLayoutModalModule&#45;&gt;SafeLayoutModalComponent  -->
 <g id="edge174" class="edge">
 <title>SafeLayoutModalModule&#45;&gt;SafeLayoutModalComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1912.84,-459.38C1912.84,-459.38 1912.84,-429.54 1912.84,-429.54"/>
-<polygon fill="black" stroke="black" points="1916.34,-429.54 1912.84,-419.54 1909.34,-429.54 1916.34,-429.54"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1911.84,-459.38C1911.84,-459.38 1911.84,-429.54 1911.84,-429.54"/>
+<polygon fill="black" stroke="black" points="1915.34,-429.54 1911.84,-419.54 1908.34,-429.54 1915.34,-429.54"/>
 </g>
 <!-- SafeAccessComponent -->
 <g id="node17" class="node">
@@ -1719,8 +1735,8 @@
 <!-- SafeAggregationBuilderModule&#45;&gt;SafeChartSettingsModule -->
 <g id="edge70" class="edge">
 <title>SafeAggregationBuilderModule&#45;&gt;SafeChartSettingsModule</title>
-<path fill="none" stroke="black" d="M6017.93,-383.21C6017.93,-382.69 6017.93,-382.39 6017.93,-382.39 6017.93,-382.39 11340.92,-382.39 11340.92,-382.39 11340.92,-382.39 11340.92,-382.47 11340.92,-382.47"/>
-<polygon fill="black" stroke="black" points="11337.43,-373.21 11340.92,-383.21 11344.43,-373.21 11337.43,-373.21"/>
+<path fill="none" stroke="black" d="M6017.93,-383.31C6017.93,-381.54 6017.93,-380.39 6017.93,-380.39 6017.93,-380.39 11340.92,-380.39 11340.92,-380.39 11340.92,-380.39 11340.92,-380.68 11340.92,-380.68"/>
+<polygon fill="black" stroke="black" points="11337.42,-373.31 11340.92,-383.31 11344.42,-373.31 11337.42,-373.31"/>
 </g>
 <!-- SafeFormsDropdownModule -->
 <g id="node26" class="node">
@@ -1761,20 +1777,20 @@
 <!-- SafeGridModule&#45;&gt;SafeChartSettingsModule -->
 <g id="edge73" class="edge">
 <title>SafeGridModule&#45;&gt;SafeChartSettingsModule</title>
-<path fill="none" stroke="black" d="M6208,-343.44C6208,-357.76 6208,-375.39 6208,-375.39 6208,-375.39 11385.88,-375.39 11385.88,-375.39 11385.88,-375.39 11385.88,-376.18 11385.88,-376.18"/>
-<polygon fill="black" stroke="black" points="11382.38,-373.33 11385.88,-383.33 11389.38,-373.33 11382.38,-373.33"/>
+<path fill="none" stroke="black" d="M6208,-343.51C6208,-358.17 6208,-376.39 6208,-376.39 6208,-376.39 11385.88,-376.39 11385.88,-376.39 11385.88,-376.39 11385.88,-377.07 11385.88,-377.07"/>
+<polygon fill="black" stroke="black" points="11382.38,-373.22 11385.88,-383.22 11389.38,-373.22 11382.38,-373.22"/>
 </g>
 <!-- SafeCoreGridModule -->
 <g id="node80" class="node">
 <title>SafeCoreGridModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="2878.8,-419.39 2875.8,-423.39 2854.8,-423.39 2851.8,-419.39 2741.2,-419.39 2741.2,-383.39 2878.8,-383.39 2878.8,-419.39"/>
-<text text-anchor="middle" x="2810" y="-397.19" font-family="Times,serif" font-size="14.00">SafeCoreGridModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="3092.8,-419.39 3089.8,-423.39 3068.8,-423.39 3065.8,-419.39 2955.2,-419.39 2955.2,-383.39 3092.8,-383.39 3092.8,-419.39"/>
+<text text-anchor="middle" x="3024" y="-397.19" font-family="Times,serif" font-size="14.00">SafeCoreGridModule</text>
 </g>
 <!-- SafeGridModule&#45;&gt;SafeCoreGridModule -->
 <g id="edge94" class="edge">
 <title>SafeGridModule&#45;&gt;SafeCoreGridModule</title>
-<path fill="none" stroke="black" d="M6180.48,-343.42C6180.48,-359.79 6180.48,-381.39 6180.48,-381.39 6180.48,-381.39 2819.2,-381.39 2819.2,-381.39 2819.2,-381.39 2819.2,-381.57 2819.2,-381.57"/>
-<polygon fill="black" stroke="black" points="2815.7,-373.24 2819.2,-383.24 2822.7,-373.24 2815.7,-373.24"/>
+<path fill="none" stroke="black" d="M6180.48,-343.67C6180.48,-359.34 6180.48,-379.39 6180.48,-379.39 6180.48,-379.39 3024,-379.39 3024,-379.39 3024,-379.39 3024,-379.77 3024,-379.77"/>
+<polygon fill="black" stroke="black" points="3020.5,-373.22 3024,-383.22 3027.5,-373.22 3020.5,-373.22"/>
 </g>
 <!-- SafeGridComponent  -->
 <g id="node141" class="node">
@@ -1807,7 +1823,7 @@
 <text text-anchor="middle" x="5496" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSeriesMappingComponent </text>
 </g>
 <!-- SafeSeriesMappingModule&#45;&gt;SafeSeriesMappingComponent  -->
-<g id="edge303" class="edge">
+<g id="edge304" class="edge">
 <title>SafeSeriesMappingModule&#45;&gt;SafeSeriesMappingComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M5718.1,-307.36C5718.1,-290.99 5718.1,-269.39 5718.1,-269.39 5718.1,-269.39 5563.67,-269.39 5563.67,-269.39 5563.67,-269.39 5563.67,-262.16 5563.67,-262.16"/>
 <polygon fill="black" stroke="black" points="5567.17,-262.16 5563.67,-252.16 5560.17,-262.16 5567.17,-262.16"/>
@@ -1837,10 +1853,10 @@
 <text text-anchor="middle" x="16056" y="-397.19" font-family="Times,serif" font-size="14.00">SafeSnackbarSpinnerModule</text>
 </g>
 <!-- SafeSpinnerModule&#45;&gt;SafeSnackbarSpinnerModule -->
-<g id="edge306" class="edge">
+<g id="edge307" class="edge">
 <title>SafeSpinnerModule&#45;&gt;SafeSnackbarSpinnerModule</title>
-<path fill="none" stroke="black" d="M5946.33,-343.43C5946.33,-356.68 5946.33,-372.39 5946.33,-372.39 5946.33,-372.39 16010.98,-372.39 16010.98,-372.39 16010.98,-372.39 16010.98,-373.47 16010.98,-373.47"/>
-<polygon fill="black" stroke="black" points="16007.48,-373.19 16010.98,-383.19 16014.48,-373.19 16007.48,-373.19"/>
+<path fill="none" stroke="black" d="M5946.33,-343.54C5946.33,-357.13 5946.33,-373.39 5946.33,-373.39 5946.33,-373.39 16010.98,-373.39 16010.98,-373.39 16010.98,-373.39 16010.98,-374.37 16010.98,-374.37"/>
+<polygon fill="black" stroke="black" points="16007.48,-373.18 16010.98,-383.18 16014.48,-373.18 16007.48,-373.18"/>
 </g>
 <!-- SafeSpinnerComponent  -->
 <g id="node278" class="node">
@@ -1849,7 +1865,7 @@
 <text text-anchor="middle" x="5924" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSpinnerComponent </text>
 </g>
 <!-- SafeSpinnerModule&#45;&gt;SafeSpinnerComponent  -->
-<g id="edge309" class="edge">
+<g id="edge310" class="edge">
 <title>SafeSpinnerModule&#45;&gt;SafeSpinnerComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M5893.01,-307.35C5893.01,-307.35 5893.01,-262.41 5893.01,-262.41"/>
 <polygon fill="black" stroke="black" points="5896.51,-262.41 5893.01,-252.41 5889.51,-262.41 5896.51,-262.41"/>
@@ -1873,7 +1889,7 @@
 <text text-anchor="middle" x="6291" y="-229.9" font-family="Times,serif" font-size="14.00">SafeTagboxComponent </text>
 </g>
 <!-- SafeTagboxModule&#45;&gt;SafeTagboxComponent  -->
-<g id="edge313" class="edge">
+<g id="edge314" class="edge">
 <title>SafeTagboxModule&#45;&gt;SafeTagboxComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M6090.81,-307.2C6090.81,-303.85 6090.81,-301.39 6090.81,-301.39 6090.81,-301.39 6225.49,-301.39 6225.49,-301.39 6225.49,-301.39 6225.49,-262.13 6225.49,-262.13"/>
 <polygon fill="black" stroke="black" points="6228.99,-262.13 6225.49,-252.13 6221.99,-262.13 6228.99,-262.13"/>
@@ -1905,14 +1921,14 @@
 <!-- SafeChooseRecordModalModule -->
 <g id="node79" class="node">
 <title>SafeChooseRecordModalModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="2995.91,-495.39 2992.91,-499.39 2971.91,-499.39 2968.91,-495.39 2792.09,-495.39 2792.09,-459.39 2995.91,-459.39 2995.91,-495.39"/>
-<text text-anchor="middle" x="2894" y="-473.19" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="3010.91,-495.39 3007.91,-499.39 2986.91,-499.39 2983.91,-495.39 2807.09,-495.39 2807.09,-459.39 3010.91,-459.39 3010.91,-495.39"/>
+<text text-anchor="middle" x="2909" y="-473.19" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalModule</text>
 </g>
 <!-- SafeApplicationDropdownModule&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge80" class="edge">
 <title>SafeApplicationDropdownModule&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M6367.4,-419.42C6367.4,-435.79 6367.4,-457.39 6367.4,-457.39 6367.4,-457.39 2962.74,-457.39 2962.74,-457.39 2962.74,-457.39 2962.74,-457.57 2962.74,-457.57"/>
-<polygon fill="black" stroke="black" points="2959.24,-449.24 2962.74,-459.24 2966.24,-449.24 2959.24,-449.24"/>
+<path fill="none" stroke="black" d="M6367.4,-419.64C6367.4,-433.57 6367.4,-450.39 6367.4,-450.39 6367.4,-450.39 2996.86,-450.39 2996.86,-450.39 2996.86,-450.39 2996.86,-451.27 2996.86,-451.27"/>
+<polygon fill="black" stroke="black" points="2993.36,-449.23 2996.86,-459.23 3000.36,-449.23 2993.36,-449.23"/>
 </g>
 <!-- SafeSearchResourceGridModalModule -->
 <g id="node270" class="node">
@@ -1921,10 +1937,10 @@
 <text text-anchor="middle" x="16309" y="-473.19" font-family="Times,serif" font-size="14.00">SafeSearchResourceGridModalModule</text>
 </g>
 <!-- SafeApplicationDropdownModule&#45;&gt;SafeSearchResourceGridModalModule -->
-<g id="edge297" class="edge">
+<g id="edge298" class="edge">
 <title>SafeApplicationDropdownModule&#45;&gt;SafeSearchResourceGridModalModule</title>
-<path fill="none" stroke="black" d="M6472.6,-419.46C6472.6,-428.85 6472.6,-438.39 6472.6,-438.39 6472.6,-438.39 16345.75,-438.39 16345.75,-438.39 16345.75,-438.39 16345.75,-449.26 16345.75,-449.26"/>
-<polygon fill="black" stroke="black" points="16342.25,-449.26 16345.75,-459.26 16349.25,-449.26 16342.25,-449.26"/>
+<path fill="none" stroke="black" d="M6472.6,-419.71C6472.6,-428.18 6472.6,-436.39 6472.6,-436.39 6472.6,-436.39 16345.75,-436.39 16345.75,-436.39 16345.75,-436.39 16345.75,-449.29 16345.75,-449.29"/>
+<polygon fill="black" stroke="black" points="16342.25,-449.29 16345.75,-459.29 16349.25,-449.29 16342.25,-449.29"/>
 </g>
 <!-- SafeAddApplicationComponent -->
 <g id="node35" class="node">
@@ -1935,8 +1951,8 @@
 <!-- SafeAddApplicationComponent&#45;&gt;SafeApplicationsSummaryModule -->
 <g id="edge32" class="edge">
 <title>SafeAddApplicationComponent&#45;&gt;SafeApplicationsSummaryModule</title>
-<path fill="none" stroke="black" d="M9454.21,-252.36C9454.21,-276.6 9454.21,-316.39 9454.21,-316.39 9454.21,-316.39 9438.29,-316.39 9438.29,-316.39"/>
-<polygon fill="black" stroke="black" points="9438.29,-312.89 9428.29,-316.39 9438.29,-319.89 9438.29,-312.89"/>
+<path fill="none" stroke="black" d="M9550,-252.36C9550,-276.6 9550,-316.39 9550,-316.39 9550,-316.39 9435.24,-316.39 9435.24,-316.39"/>
+<polygon fill="black" stroke="black" points="9435.24,-312.89 9425.24,-316.39 9435.24,-319.89 9435.24,-312.89"/>
 </g>
 <!-- SafeApplicationSummaryComponent -->
 <g id="node36" class="node">
@@ -1947,8 +1963,8 @@
 <!-- SafeApplicationSummaryComponent&#45;&gt;SafeApplicationsSummaryModule -->
 <g id="edge33" class="edge">
 <title>SafeApplicationSummaryComponent&#45;&gt;SafeApplicationsSummaryModule</title>
-<path fill="none" stroke="black" d="M9358.07,-252.13C9358.07,-252.13 9358.07,-297.08 9358.07,-297.08"/>
-<polygon fill="black" stroke="black" points="9354.57,-297.08 9358.07,-307.08 9361.57,-297.08 9354.57,-297.08"/>
+<path fill="none" stroke="black" d="M9355.07,-252.13C9355.07,-252.13 9355.07,-297.08 9355.07,-297.08"/>
+<polygon fill="black" stroke="black" points="9351.57,-297.08 9355.07,-307.08 9358.57,-297.08 9351.57,-297.08"/>
 </g>
 <!-- SafeApplicationsSummaryComponent -->
 <g id="node37" class="node">
@@ -1959,44 +1975,44 @@
 <!-- SafeApplicationsSummaryComponent&#45;&gt;SafeApplicationsSummaryModule -->
 <g id="edge34" class="edge">
 <title>SafeApplicationsSummaryComponent&#45;&gt;SafeApplicationsSummaryModule</title>
-<path fill="none" stroke="black" d="M9034.47,-252.49C9034.47,-275.91 9034.47,-313.39 9034.47,-313.39 9034.47,-313.39 9207.61,-313.39 9207.61,-313.39"/>
-<polygon fill="black" stroke="black" points="9207.61,-316.89 9217.61,-313.39 9207.61,-309.89 9207.61,-316.89"/>
+<path fill="none" stroke="black" d="M9080.49,-252.49C9080.49,-275.91 9080.49,-313.39 9080.49,-313.39 9080.49,-313.39 9204.6,-313.39 9204.6,-313.39"/>
+<polygon fill="black" stroke="black" points="9204.6,-316.89 9214.6,-313.39 9204.6,-309.89 9204.6,-316.89"/>
 </g>
 <!-- SafeAddApplicationComponent  -->
 <g id="node40" class="node">
 <title>SafeAddApplicationComponent </title>
-<polygon fill="#fb8072" stroke="black" points="9658.91,-419.39 9459.09,-419.39 9459.09,-383.39 9658.91,-383.39 9658.91,-419.39"/>
-<text text-anchor="middle" x="9559" y="-397.19" font-family="Times,serif" font-size="14.00">SafeAddApplicationComponent </text>
+<polygon fill="#fb8072" stroke="black" points="9419.91,-419.39 9220.09,-419.39 9220.09,-383.39 9419.91,-383.39 9419.91,-419.39"/>
+<text text-anchor="middle" x="9320" y="-397.19" font-family="Times,serif" font-size="14.00">SafeAddApplicationComponent </text>
 </g>
 <!-- SafeApplicationsSummaryModule&#45;&gt;SafeAddApplicationComponent  -->
 <g id="edge37" class="edge">
 <title>SafeApplicationsSummaryModule&#45;&gt;SafeAddApplicationComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9428.53,-334.39C9489.25,-334.39 9553.62,-334.39 9553.62,-334.39 9553.62,-334.39 9553.62,-373.08 9553.62,-373.08"/>
-<polygon fill="black" stroke="black" points="9550.13,-373.08 9553.62,-383.08 9557.13,-373.08 9550.13,-373.08"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9320,-343.4C9320,-343.4 9320,-373.25 9320,-373.25"/>
+<polygon fill="black" stroke="black" points="9316.5,-373.25 9320,-383.25 9323.5,-373.25 9316.5,-373.25"/>
 </g>
 <!-- SafeApplicationSummaryComponent  -->
 <g id="node41" class="node">
 <title>SafeApplicationSummaryComponent </title>
-<polygon fill="#fb8072" stroke="black" points="9441.25,-419.39 9210.75,-419.39 9210.75,-383.39 9441.25,-383.39 9441.25,-419.39"/>
-<text text-anchor="middle" x="9326" y="-397.19" font-family="Times,serif" font-size="14.00">SafeApplicationSummaryComponent </text>
+<polygon fill="#fb8072" stroke="black" points="9202.25,-419.39 8971.75,-419.39 8971.75,-383.39 9202.25,-383.39 9202.25,-419.39"/>
+<text text-anchor="middle" x="9087" y="-397.19" font-family="Times,serif" font-size="14.00">SafeApplicationSummaryComponent </text>
 </g>
 <!-- SafeApplicationsSummaryModule&#45;&gt;SafeApplicationSummaryComponent  -->
 <g id="edge38" class="edge">
 <title>SafeApplicationsSummaryModule&#45;&gt;SafeApplicationSummaryComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9323,-343.4C9323,-343.4 9323,-373.25 9323,-373.25"/>
-<polygon fill="black" stroke="black" points="9319.5,-373.25 9323,-383.25 9326.5,-373.25 9319.5,-373.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9214.77,-319.39C9203.26,-319.39 9195.61,-319.39 9195.61,-319.39 9195.61,-319.39 9195.61,-373.19 9195.61,-373.19"/>
+<polygon fill="black" stroke="black" points="9192.11,-373.19 9195.61,-383.19 9199.11,-373.19 9192.11,-373.19"/>
 </g>
 <!-- SafeApplicationsSummaryComponent  -->
 <g id="node42" class="node">
 <title>SafeApplicationsSummaryComponent </title>
-<polygon fill="#fb8072" stroke="black" points="9192.69,-419.39 8957.31,-419.39 8957.31,-383.39 9192.69,-383.39 9192.69,-419.39"/>
-<text text-anchor="middle" x="9075" y="-397.19" font-family="Times,serif" font-size="14.00">SafeApplicationsSummaryComponent </text>
+<polygon fill="#fb8072" stroke="black" points="9673.69,-419.39 9438.31,-419.39 9438.31,-383.39 9673.69,-383.39 9673.69,-419.39"/>
+<text text-anchor="middle" x="9556" y="-397.19" font-family="Times,serif" font-size="14.00">SafeApplicationsSummaryComponent </text>
 </g>
 <!-- SafeApplicationsSummaryModule&#45;&gt;SafeApplicationsSummaryComponent  -->
 <g id="edge39" class="edge">
 <title>SafeApplicationsSummaryModule&#45;&gt;SafeApplicationsSummaryComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9217.7,-319.39C9164.79,-319.39 9111.78,-319.39 9111.78,-319.39 9111.78,-319.39 9111.78,-373.19 9111.78,-373.19"/>
-<polygon fill="black" stroke="black" points="9108.28,-373.19 9111.78,-383.19 9115.28,-373.19 9108.28,-373.19"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9425.45,-334.39C9437.16,-334.39 9444.97,-334.39 9444.97,-334.39 9444.97,-334.39 9444.97,-373.08 9444.97,-373.08"/>
+<polygon fill="black" stroke="black" points="9441.47,-373.08 9444.97,-383.08 9448.47,-373.08 9441.47,-373.08"/>
 </g>
 <!-- SafeIconModule -->
 <g id="node39" class="node">
@@ -2013,20 +2029,20 @@
 <!-- SafeIconModule&#45;&gt;SafeFormsDropdownModule -->
 <g id="edge128" class="edge">
 <title>SafeIconModule&#45;&gt;SafeFormsDropdownModule</title>
-<path fill="none" stroke="black" d="M9679.18,-252.32C9679.18,-267.07 9679.18,-285.39 9679.18,-285.39 9679.18,-285.39 5635.78,-285.39 5635.78,-285.39 5635.78,-285.39 5635.78,-297.26 5635.78,-297.26"/>
+<path fill="none" stroke="black" d="M9680.58,-252.32C9680.58,-267.07 9680.58,-285.39 9680.58,-285.39 9680.58,-285.39 5635.78,-285.39 5635.78,-285.39 5635.78,-285.39 5635.78,-297.26 5635.78,-297.26"/>
 <polygon fill="black" stroke="black" points="5632.28,-297.26 5635.78,-307.26 5639.28,-297.26 5632.28,-297.26"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeTagboxModule -->
-<g id="edge312" class="edge">
+<g id="edge313" class="edge">
 <title>SafeIconModule&#45;&gt;SafeTagboxModule</title>
-<path fill="none" stroke="black" d="M9686.01,-252.3C9686.01,-272.83 9686.01,-303.39 9686.01,-303.39 9686.01,-303.39 6068.91,-303.39 6068.91,-303.39 6068.91,-303.39 6068.91,-303.77 6068.91,-303.77"/>
+<path fill="none" stroke="black" d="M9687.32,-252.3C9687.32,-272.83 9687.32,-303.39 9687.32,-303.39 9687.32,-303.39 6068.91,-303.39 6068.91,-303.39 6068.91,-303.39 6068.91,-303.77 6068.91,-303.77"/>
 <polygon fill="black" stroke="black" points="6065.41,-297.22 6068.91,-307.22 6072.41,-297.22 6065.41,-297.22"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeApplicationsSummaryModule -->
 <g id="edge36" class="edge">
 <title>SafeIconModule&#45;&gt;SafeApplicationsSummaryModule</title>
-<path fill="none" stroke="black" d="M9692.84,-252.13C9692.84,-278.74 9692.84,-325.39 9692.84,-325.39 9692.84,-325.39 9438.49,-325.39 9438.49,-325.39"/>
-<polygon fill="black" stroke="black" points="9438.49,-321.89 9428.49,-325.39 9438.49,-328.89 9438.49,-321.89"/>
+<path fill="none" stroke="black" d="M9694.06,-252.13C9694.06,-278.74 9694.06,-325.39 9694.06,-325.39 9694.06,-325.39 9435.69,-325.39 9435.69,-325.39"/>
+<polygon fill="black" stroke="black" points="9435.69,-321.89 9425.69,-325.39 9435.69,-328.89 9435.69,-321.89"/>
 </g>
 <!-- SafeAvatarModule -->
 <g id="node50" class="node">
@@ -2037,7 +2053,7 @@
 <!-- SafeIconModule&#45;&gt;SafeAvatarModule -->
 <g id="edge45" class="edge">
 <title>SafeIconModule&#45;&gt;SafeAvatarModule</title>
-<path fill="none" stroke="black" d="M9774.82,-252.26C9774.82,-264.86 9774.82,-279.39 9774.82,-279.39 9774.82,-279.39 18823.58,-279.39 18823.58,-279.39 18823.58,-279.39 18823.58,-297.21 18823.58,-297.21"/>
+<path fill="none" stroke="black" d="M9774.91,-252.26C9774.91,-264.86 9774.91,-279.39 9774.91,-279.39 9774.91,-279.39 18823.58,-279.39 18823.58,-279.39 18823.58,-279.39 18823.58,-297.21 18823.58,-297.21"/>
 <polygon fill="black" stroke="black" points="18820.08,-297.21 18823.58,-307.21 18827.08,-297.21 18820.08,-297.21"/>
 </g>
 <!-- SafeBadgeModule -->
@@ -2049,31 +2065,31 @@
 <!-- SafeIconModule&#45;&gt;SafeBadgeModule -->
 <g id="edge48" class="edge">
 <title>SafeIconModule&#45;&gt;SafeBadgeModule</title>
-<path fill="none" stroke="black" d="M9754.33,-252.21C9754.33,-284.43 9754.33,-348.39 9754.33,-348.39 9754.33,-348.39 19010.97,-348.39 19010.97,-348.39 19010.97,-348.39 19010.97,-347.9 19010.97,-347.9"/>
+<path fill="none" stroke="black" d="M9754.7,-252.21C9754.7,-284.43 9754.7,-348.39 9754.7,-348.39 9754.7,-348.39 19010.97,-348.39 19010.97,-348.39 19010.97,-348.39 19010.97,-347.9 19010.97,-347.9"/>
 <polygon fill="black" stroke="black" points="19014.47,-353.51 19010.97,-343.51 19007.47,-353.51 19014.47,-353.51"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeChartModule -->
 <g id="edge63" class="edge">
 <title>SafeIconModule&#45;&gt;SafeChartModule</title>
-<path fill="none" stroke="black" d="M9761.16,-252.25C9761.16,-266.66 9761.16,-284.39 9761.16,-284.39 9761.16,-284.39 13170.26,-284.39 13170.26,-284.39 13170.26,-284.39 13170.26,-297.29 13170.26,-297.29"/>
+<path fill="none" stroke="black" d="M9761.44,-252.25C9761.44,-266.66 9761.44,-284.39 9761.44,-284.39 9761.44,-284.39 13170.26,-284.39 13170.26,-284.39 13170.26,-284.39 13170.26,-297.29 13170.26,-297.29"/>
 <polygon fill="black" stroke="black" points="13166.76,-297.29 13170.26,-307.29 13173.76,-297.29 13166.76,-297.29"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeChartSettingsModule -->
 <g id="edge74" class="edge">
 <title>SafeIconModule&#45;&gt;SafeChartSettingsModule</title>
-<path fill="none" stroke="black" d="M9706.51,-252.32C9706.51,-295.68 9706.51,-401.39 9706.51,-401.39 9706.51,-401.39 11282.62,-401.39 11282.62,-401.39"/>
-<polygon fill="black" stroke="black" points="11282.62,-404.89 11292.62,-401.39 11282.62,-397.89 11282.62,-404.89"/>
+<path fill="none" stroke="black" d="M9707.54,-252.32C9707.54,-295.68 9707.54,-401.39 9707.54,-401.39 9707.54,-401.39 11282.67,-401.39 11282.67,-401.39"/>
+<polygon fill="black" stroke="black" points="11282.67,-404.89 11292.67,-401.39 11282.67,-397.89 11282.67,-404.89"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeFormModalModule -->
 <g id="edge117" class="edge">
 <title>SafeIconModule&#45;&gt;SafeFormModalModule</title>
-<path fill="none" stroke="black" d="M9767.99,-252.25C9767.99,-266.66 9767.99,-284.39 9767.99,-284.39 9767.99,-284.39 13997.57,-284.39 13997.57,-284.39 13997.57,-284.39 13997.57,-449.23 13997.57,-449.23"/>
+<path fill="none" stroke="black" d="M9768.18,-252.25C9768.18,-266.66 9768.18,-284.39 9768.18,-284.39 9768.18,-284.39 13997.57,-284.39 13997.57,-284.39 13997.57,-284.39 13997.57,-449.23 13997.57,-449.23"/>
 <polygon fill="black" stroke="black" points="13994.07,-449.23 13997.57,-459.23 14001.07,-449.23 13994.07,-449.23"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeFormModule -->
 <g id="edge124" class="edge">
 <title>SafeIconModule&#45;&gt;SafeFormModule</title>
-<path fill="none" stroke="black" d="M9699.67,-252.22C9699.67,-313.69 9699.67,-510.39 9699.67,-510.39 9699.67,-510.39 16524.87,-510.39 16524.87,-510.39 16524.87,-510.39 16524.87,-524.9 16524.87,-524.9"/>
+<path fill="none" stroke="black" d="M9700.8,-252.22C9700.8,-313.69 9700.8,-510.39 9700.8,-510.39 9700.8,-510.39 16524.87,-510.39 16524.87,-510.39 16524.87,-510.39 16524.87,-524.9 16524.87,-524.9"/>
 <polygon fill="black" stroke="black" points="16521.37,-524.9 16524.87,-534.9 16528.37,-524.9 16521.37,-524.9"/>
 </g>
 <!-- SafeIconComponent  -->
@@ -2085,38 +2101,38 @@
 <!-- SafeIconModule&#45;&gt;SafeIconComponent  -->
 <g id="edge166" class="edge">
 <title>SafeIconModule&#45;&gt;SafeIconComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9747.49,-252.11C9747.49,-284.54 9747.49,-349.39 9747.49,-349.39 9747.49,-349.39 19278,-349.39 19278,-349.39 19278,-349.39 19278,-348.81 19278,-348.81"/>
-<polygon fill="black" stroke="black" points="19281.5,-353.58 19278,-343.58 19274.5,-353.58 19281.5,-353.58"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M9747.96,-252.27C9747.96,-284.97 9747.96,-350.39 9747.96,-350.39 9747.96,-350.39 19278,-350.39 19278,-350.39 19278,-350.39 19278,-349.71 19278,-349.71"/>
+<polygon fill="black" stroke="black" points="19281.5,-353.56 19278,-343.56 19274.5,-353.56 19281.5,-353.56"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafePreferencesModalModule -->
 <g id="edge240" class="edge">
 <title>SafeIconModule&#45;&gt;SafePreferencesModalModule</title>
-<path fill="none" stroke="black" d="M9733.83,-252.1C9733.83,-285.66 9733.83,-354.39 9733.83,-354.39 9733.83,-354.39 19773.83,-354.39 19773.83,-354.39 19773.83,-354.39 19773.83,-353.31 19773.83,-353.31"/>
+<path fill="none" stroke="black" d="M9734.49,-252.1C9734.49,-285.66 9734.49,-354.39 9734.49,-354.39 9734.49,-354.39 19773.83,-354.39 19773.83,-354.39 19773.83,-354.39 19773.83,-353.31 19773.83,-353.31"/>
 <polygon fill="black" stroke="black" points="19777.33,-353.59 19773.83,-343.59 19770.33,-353.59 19777.33,-353.59"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafePipelineModule -->
 <g id="edge231" class="edge">
 <title>SafeIconModule&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M9720.17,-252.21C9720.17,-288.01 9720.17,-364.39 9720.17,-364.39 9720.17,-364.39 20777.69,-364.39 20777.69,-364.39 20777.69,-364.39 20777.69,-373.32 20777.69,-373.32"/>
-<polygon fill="black" stroke="black" points="20774.19,-373.32 20777.69,-383.32 20781.19,-373.32 20774.19,-373.32"/>
+<path fill="none" stroke="black" d="M9721.01,-252.35C9721.01,-288.43 9721.01,-365.39 9721.01,-365.39 9721.01,-365.39 20782.94,-365.39 20782.94,-365.39 20782.94,-365.39 20782.94,-372.97 20782.94,-372.97"/>
+<polygon fill="black" stroke="black" points="20779.44,-372.97 20782.94,-382.97 20786.44,-372.97 20779.44,-372.97"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeSnackbarSpinnerModule -->
-<g id="edge305" class="edge">
+<g id="edge306" class="edge">
 <title>SafeIconModule&#45;&gt;SafeSnackbarSpinnerModule</title>
-<path fill="none" stroke="black" d="M9713.34,-252.19C9713.34,-289.27 9713.34,-370.39 9713.34,-370.39 9713.34,-370.39 16056,-370.39 16056,-370.39 16056,-370.39 16056,-373.36 16056,-373.36"/>
-<polygon fill="black" stroke="black" points="16052.5,-373.36 16056,-383.36 16059.5,-373.36 16052.5,-373.36"/>
+<path fill="none" stroke="black" d="M9714.27,-252.33C9714.27,-289.67 9714.27,-371.39 9714.27,-371.39 9714.27,-371.39 16056,-371.39 16056,-371.39 16056,-371.39 16056,-373.25 16056,-373.25"/>
+<polygon fill="black" stroke="black" points="16052.5,-373.25 16056,-383.25 16059.5,-373.25 16052.5,-373.25"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeWidgetGridModule -->
-<g id="edge326" class="edge">
+<g id="edge327" class="edge">
 <title>SafeIconModule&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M9781.69,-234.39C9801.54,-234.39 9819.19,-234.39 9819.19,-234.39 9819.19,-234.39 9819.19,-708.39 9819.19,-708.39 9819.19,-708.39 15168.21,-708.39 15168.21,-708.39"/>
 <polygon fill="black" stroke="black" points="15168.21,-711.89 15178.21,-708.39 15168.21,-704.89 15168.21,-711.89"/>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeWorkflowStepperModule -->
-<g id="edge341" class="edge">
+<g id="edge342" class="edge">
 <title>SafeIconModule&#45;&gt;SafeWorkflowStepperModule</title>
-<path fill="none" stroke="black" d="M9727,-252.29C9727,-286.58 9727,-357.39 9727,-357.39 9727,-357.39 21480.76,-357.39 21480.76,-357.39 21480.76,-357.39 21480.76,-353.63 21480.76,-353.63"/>
-<polygon fill="black" stroke="black" points="21484.26,-353.63 21480.76,-343.63 21477.26,-353.63 21484.26,-353.63"/>
+<path fill="none" stroke="black" d="M9727.75,-252.29C9727.75,-286.58 9727.75,-357.39 9727.75,-357.39 9727.75,-357.39 21435.52,-357.39 21435.52,-357.39 21435.52,-357.39 21435.52,-353.63 21435.52,-353.63"/>
+<polygon fill="black" stroke="black" points="21439.02,-353.63 21435.52,-343.63 21432.02,-353.63 21439.02,-353.63"/>
 </g>
 <!-- SafeArrayFilterMenuComponent -->
 <g id="node43" class="node">
@@ -2353,7 +2369,7 @@
 <text text-anchor="middle" x="14595" y="-625.19" font-family="Times,serif" font-size="14.00">SafeWidgetModule</text>
 </g>
 <!-- SafeChartModule&#45;&gt;SafeWidgetModule -->
-<g id="edge331" class="edge">
+<g id="edge332" class="edge">
 <title>SafeChartModule&#45;&gt;SafeWidgetModule</title>
 <path fill="none" stroke="black" d="M13268.65,-336.39C13525.46,-336.39 14552.7,-336.39 14552.7,-336.39 14552.7,-336.39 14552.7,-601.06 14552.7,-601.06"/>
 <polygon fill="black" stroke="black" points="14549.2,-601.06 14552.7,-611.06 14556.2,-601.06 14549.2,-601.06"/>
@@ -2513,8 +2529,8 @@
 <title>{
  &#160;&#160;&#160;provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
 }&#45;&gt;SafeGridSettingsComponent</title>
-<path fill="none" stroke="black" d="M11436.27,-264.39C10818.96,-264.39 9456.63,-264.39 9456.63,-264.39 9456.63,-264.39 9456.63,-525.31 9456.63,-525.31"/>
-<polygon fill="black" stroke="black" points="9453.13,-525.31 9456.63,-535.31 9460.13,-525.31 9453.13,-525.31"/>
+<path fill="none" stroke="black" d="M11436.24,-264.39C10813.21,-264.39 9429.29,-264.39 9429.29,-264.39 9429.29,-264.39 9429.29,-525.31 9429.29,-525.31"/>
+<polygon fill="black" stroke="black" points="9425.79,-525.31 9429.29,-535.31 9432.79,-525.31 9425.79,-525.31"/>
 </g>
 <!-- SafeQueryBuilderComponent -->
 <g id="node229" class="node">
@@ -2529,8 +2545,8 @@
 <title>{
  &#160;&#160;&#160;provide: MAT_AUTOCOMPLETE_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
 }&#45;&gt;SafeQueryBuilderComponent</title>
-<path fill="none" stroke="black" d="M11318.44,-247.48C11318.44,-259.87 11318.44,-276.39 11318.44,-276.39 11318.44,-276.39 2454.53,-276.39 2454.53,-276.39 2454.53,-276.39 2454.53,-262.28 2454.53,-262.28"/>
-<polygon fill="black" stroke="black" points="2458.03,-262.28 2454.53,-252.28 2451.03,-262.28 2458.03,-262.28"/>
+<path fill="none" stroke="black" d="M11318.44,-247.48C11318.44,-259.87 11318.44,-276.39 11318.44,-276.39 11318.44,-276.39 2472.64,-276.39 2472.64,-276.39 2472.64,-276.39 2472.64,-262.28 2472.64,-262.28"/>
+<polygon fill="black" stroke="black" points="2476.14,-262.28 2472.64,-252.28 2469.14,-262.28 2476.14,-262.28"/>
 </g>
 <!-- { provide: MAT_CHIPS_DEFAULT_OPTIONS, useFactory: codesFactory } -->
 <g id="node73" class="node">
@@ -2583,26 +2599,26 @@
 <!-- SafeChooseRecordModalComponent -->
 <g id="node78" class="node">
 <title>SafeChooseRecordModalComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2514.69,-419.39 2289.31,-419.39 2289.31,-383.39 2514.69,-383.39 2514.69,-419.39"/>
-<text text-anchor="middle" x="2402" y="-397.19" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2513.69,-419.39 2288.31,-419.39 2288.31,-383.39 2513.69,-383.39 2513.69,-419.39"/>
+<text text-anchor="middle" x="2401" y="-397.19" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalComponent</text>
 </g>
 <!-- SafeChooseRecordModalComponent&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge79" class="edge">
 <title>SafeChooseRecordModalComponent&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M2439.53,-419.59C2439.53,-443.75 2439.53,-483.39 2439.53,-483.39 2439.53,-483.39 2782.29,-483.39 2782.29,-483.39"/>
-<polygon fill="black" stroke="black" points="2782.29,-486.89 2792.29,-483.39 2782.29,-479.89 2782.29,-486.89"/>
+<path fill="none" stroke="black" d="M2438.53,-419.59C2438.53,-443.75 2438.53,-483.39 2438.53,-483.39 2438.53,-483.39 2797.2,-483.39 2797.2,-483.39"/>
+<polygon fill="black" stroke="black" points="2797.21,-486.89 2807.2,-483.39 2797.2,-479.89 2797.21,-486.89"/>
 </g>
 <!-- SafeChooseRecordModalComponent  -->
 <g id="node83" class="node">
 <title>SafeChooseRecordModalComponent </title>
-<polygon fill="#fb8072" stroke="black" points="3008.19,-571.39 2779.81,-571.39 2779.81,-535.39 3008.19,-535.39 3008.19,-571.39"/>
-<text text-anchor="middle" x="2894" y="-549.19" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalComponent </text>
+<polygon fill="#fb8072" stroke="black" points="3023.19,-571.39 2794.81,-571.39 2794.81,-535.39 3023.19,-535.39 3023.19,-571.39"/>
+<text text-anchor="middle" x="2909" y="-549.19" font-family="Times,serif" font-size="14.00">SafeChooseRecordModalComponent </text>
 </g>
 <!-- SafeChooseRecordModalModule&#45;&gt;SafeChooseRecordModalComponent  -->
 <g id="edge84" class="edge">
 <title>SafeChooseRecordModalModule&#45;&gt;SafeChooseRecordModalComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2860.1,-495.4C2860.1,-495.4 2860.1,-525.25 2860.1,-525.25"/>
-<polygon fill="black" stroke="black" points="2856.6,-525.25 2860.1,-535.25 2863.6,-525.25 2856.6,-525.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2875.1,-495.4C2875.1,-495.4 2875.1,-525.25 2875.1,-525.25"/>
+<polygon fill="black" stroke="black" points="2871.6,-525.25 2875.1,-535.25 2878.6,-525.25 2871.6,-525.25"/>
 </g>
 <!-- SafeGridWidgetModule -->
 <g id="node151" class="node">
@@ -2613,26 +2629,26 @@
 <!-- SafeChooseRecordModalModule&#45;&gt;SafeGridWidgetModule -->
 <g id="edge160" class="edge">
 <title>SafeChooseRecordModalModule&#45;&gt;SafeGridWidgetModule</title>
-<path fill="none" stroke="black" d="M2927.9,-495.88C2927.9,-507.53 2927.9,-520.39 2927.9,-520.39 2927.9,-520.39 13590.94,-520.39 13590.94,-520.39 13590.94,-520.39 13590.94,-525.35 13590.94,-525.35"/>
-<polygon fill="black" stroke="black" points="13587.44,-525.35 13590.94,-535.35 13594.44,-525.35 13587.44,-525.35"/>
+<path fill="none" stroke="black" d="M2942.9,-495.54C2942.9,-509.13 2942.9,-525.39 2942.9,-525.39 2942.9,-525.39 13555.65,-525.39 13555.65,-525.39 13555.65,-525.39 13555.65,-526.37 13555.65,-526.37"/>
+<polygon fill="black" stroke="black" points="13552.15,-525.18 13555.65,-535.18 13559.15,-525.18 13552.15,-525.18"/>
 </g>
 <!-- SafeCoreGridModule&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge259" class="edge">
 <title>SafeCoreGridModule&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M2848.92,-383.22C2848.92,-380.94 2848.92,-379.39 2848.92,-379.39 2848.92,-379.39 3231.43,-379.39 3231.43,-379.39 3231.43,-379.39 3231.43,-353.67 3231.43,-353.67"/>
-<polygon fill="black" stroke="black" points="3234.93,-353.67 3231.43,-343.67 3227.93,-353.67 3234.93,-353.67"/>
+<path fill="none" stroke="black" d="M3092.92,-401.39C3129.11,-401.39 3166.01,-401.39 3166.01,-401.39 3166.01,-401.39 3166.01,-353.4 3166.01,-353.4"/>
+<polygon fill="black" stroke="black" points="3169.51,-353.4 3166.01,-343.4 3162.51,-353.4 3169.51,-353.4"/>
 </g>
 <!-- SafeCoreGridModule&#45;&gt;SafeLayoutModalModule -->
 <g id="edge172" class="edge">
 <title>SafeCoreGridModule&#45;&gt;SafeLayoutModalModule</title>
-<path fill="none" stroke="black" d="M2760.5,-419.58C2760.5,-434.57 2760.5,-453.39 2760.5,-453.39 2760.5,-453.39 1953,-453.39 1953,-453.39 1953,-453.39 1953,-453.97 1953,-453.97"/>
-<polygon fill="black" stroke="black" points="1949.5,-449.2 1953,-459.2 1956.5,-449.2 1949.5,-449.2"/>
+<path fill="none" stroke="black" d="M2969.19,-419.54C2969.19,-431.66 2969.19,-445.39 2969.19,-445.39 2969.19,-445.39 1952,-445.39 1952,-445.39 1952,-445.39 1952,-449.15 1952,-449.15"/>
+<polygon fill="black" stroke="black" points="1948.5,-449.15 1952,-459.15 1955.5,-449.15 1948.5,-449.15"/>
 </g>
 <!-- SafeCoreGridModule&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge81" class="edge">
 <title>SafeCoreGridModule&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M2809.57,-419.4C2809.57,-419.4 2809.57,-449.25 2809.57,-449.25"/>
-<polygon fill="black" stroke="black" points="2806.07,-449.25 2809.57,-459.25 2813.07,-449.25 2806.07,-449.25"/>
+<path fill="none" stroke="black" d="M2983.03,-419.4C2983.03,-419.4 2983.03,-449.25 2983.03,-449.25"/>
+<polygon fill="black" stroke="black" points="2979.53,-449.25 2983.03,-459.25 2986.53,-449.25 2979.53,-449.25"/>
 </g>
 <!-- SafeCoreGridComponent  -->
 <g id="node96" class="node">
@@ -2643,80 +2659,80 @@
 <!-- SafeCoreGridModule&#45;&gt;SafeCoreGridComponent  -->
 <g id="edge95" class="edge">
 <title>SafeCoreGridModule&#45;&gt;SafeCoreGridComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2861.38,-419.71C2861.38,-428.18 2861.38,-436.39 2861.38,-436.39 2861.38,-436.39 16656.93,-436.39 16656.93,-436.39 16656.93,-436.39 16656.93,-449.29 16656.93,-449.29"/>
-<polygon fill="black" stroke="black" points="16653.43,-449.29 16656.93,-459.29 16660.43,-449.29 16653.43,-449.29"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M3064.93,-419.43C3064.93,-427.14 3064.93,-434.39 3064.93,-434.39 3064.93,-434.39 16656.93,-434.39 16656.93,-434.39 16656.93,-434.39 16656.93,-448.9 16656.93,-448.9"/>
+<polygon fill="black" stroke="black" points="16653.43,-448.9 16656.93,-458.9 16660.43,-448.9 16653.43,-448.9"/>
 </g>
 <!-- SafeCoreGridModule&#45;&gt;SafeGridWidgetModule -->
 <g id="edge161" class="edge">
 <title>SafeCoreGridModule&#45;&gt;SafeGridWidgetModule</title>
-<path fill="none" stroke="black" d="M2785.98,-419.42C2785.98,-453.81 2785.98,-525.39 2785.98,-525.39 2785.98,-525.39 13555.65,-525.39 13555.65,-525.39 13555.65,-525.39 13555.65,-526.37 13555.65,-526.37"/>
-<polygon fill="black" stroke="black" points="13552.15,-525.18 13555.65,-535.18 13559.15,-525.18 13552.15,-525.18"/>
+<path fill="none" stroke="black" d="M3078.79,-419.46C3078.79,-452.75 3078.79,-520.39 3078.79,-520.39 3078.79,-520.39 13590.94,-520.39 13590.94,-520.39 13590.94,-520.39 13590.94,-525.35 13590.94,-525.35"/>
+<polygon fill="black" stroke="black" points="13587.44,-525.35 13590.94,-535.35 13594.44,-525.35 13587.44,-525.35"/>
 </g>
 <!-- SafeCoreGridModule&#45;&gt;SafeSearchResourceGridModalModule -->
-<g id="edge298" class="edge">
+<g id="edge299" class="edge">
 <title>SafeCoreGridModule&#45;&gt;SafeSearchResourceGridModalModule</title>
-<path fill="none" stroke="black" d="M2844.11,-419.45C2844.11,-430.83 2844.11,-443.39 2844.11,-443.39 2844.11,-443.39 16272.25,-443.39 16272.25,-443.39 16272.25,-443.39 16272.25,-449.2 16272.25,-449.2"/>
-<polygon fill="black" stroke="black" points="16268.75,-449.2 16272.25,-459.2 16275.75,-449.2 16268.75,-449.2"/>
+<path fill="none" stroke="black" d="M3051.07,-419.46C3051.07,-428.85 3051.07,-438.39 3051.07,-438.39 3051.07,-438.39 16309,-438.39 16309,-438.39 16309,-438.39 16309,-449.26 16309,-449.26"/>
+<polygon fill="black" stroke="black" points="16305.5,-449.26 16309,-459.26 16312.5,-449.26 16305.5,-449.26"/>
 </g>
 <!-- SafeRecordDropdownModule -->
 <g id="node81" class="node">
 <title>SafeRecordDropdownModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="2723.24,-419.39 2720.24,-423.39 2699.24,-423.39 2696.24,-419.39 2538.76,-419.39 2538.76,-383.39 2723.24,-383.39 2723.24,-419.39"/>
-<text text-anchor="middle" x="2631" y="-397.19" font-family="Times,serif" font-size="14.00">SafeRecordDropdownModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="2722.24,-419.39 2719.24,-423.39 2698.24,-423.39 2695.24,-419.39 2537.76,-419.39 2537.76,-383.39 2722.24,-383.39 2722.24,-419.39"/>
+<text text-anchor="middle" x="2630" y="-397.19" font-family="Times,serif" font-size="14.00">SafeRecordDropdownModule</text>
 </g>
 <!-- SafeRecordDropdownModule&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge82" class="edge">
 <title>SafeRecordDropdownModule&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M2661.79,-419.42C2661.79,-440.16 2661.79,-471.39 2661.79,-471.39 2661.79,-471.39 2782.15,-471.39 2782.15,-471.39"/>
-<polygon fill="black" stroke="black" points="2782.15,-474.89 2792.15,-471.39 2782.15,-467.89 2782.15,-474.89"/>
+<path fill="none" stroke="black" d="M2660.79,-419.42C2660.79,-440.16 2660.79,-471.39 2660.79,-471.39 2660.79,-471.39 2796.97,-471.39 2796.97,-471.39"/>
+<polygon fill="black" stroke="black" points="2796.97,-474.89 2806.97,-471.39 2796.97,-467.89 2796.97,-474.89"/>
 </g>
 <!-- SafeRecordDropdownComponent  -->
 <g id="node243" class="node">
 <title>SafeRecordDropdownComponent </title>
-<polygon fill="#fb8072" stroke="black" points="2736.02,-343.39 2525.98,-343.39 2525.98,-307.39 2736.02,-307.39 2736.02,-343.39"/>
-<text text-anchor="middle" x="2631" y="-321.19" font-family="Times,serif" font-size="14.00">SafeRecordDropdownComponent </text>
+<polygon fill="#fb8072" stroke="black" points="2359.02,-343.39 2148.98,-343.39 2148.98,-307.39 2359.02,-307.39 2359.02,-343.39"/>
+<text text-anchor="middle" x="2254" y="-321.19" font-family="Times,serif" font-size="14.00">SafeRecordDropdownComponent </text>
 </g>
 <!-- SafeRecordDropdownModule&#45;&gt;SafeRecordDropdownComponent  -->
 <g id="edge266" class="edge">
 <title>SafeRecordDropdownModule&#45;&gt;SafeRecordDropdownComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2600.21,-383.38C2600.21,-383.38 2600.21,-353.54 2600.21,-353.54"/>
-<polygon fill="black" stroke="black" points="2603.71,-353.54 2600.21,-343.54 2596.71,-353.54 2603.71,-353.54"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2554.84,-383.21C2554.84,-382.69 2554.84,-382.39 2554.84,-382.39 2554.84,-382.39 2323.71,-382.39 2323.71,-382.39 2323.71,-382.39 2323.71,-353.43 2323.71,-353.43"/>
+<polygon fill="black" stroke="black" points="2327.21,-353.43 2323.71,-343.43 2320.21,-353.43 2327.21,-353.43"/>
 </g>
 <!-- SafeRecordDropdownModule&#45;&gt;SafeSearchResourceGridModalModule -->
-<g id="edge299" class="edge">
+<g id="edge300" class="edge">
 <title>SafeRecordDropdownModule&#45;&gt;SafeSearchResourceGridModalModule</title>
-<path fill="none" stroke="black" d="M2600.21,-419.54C2600.21,-431.66 2600.21,-445.39 2600.21,-445.39 2600.21,-445.39 16235.5,-445.39 16235.5,-445.39 16235.5,-445.39 16235.5,-449.15 16235.5,-449.15"/>
-<polygon fill="black" stroke="black" points="16232,-449.15 16235.5,-459.15 16239,-449.15 16232,-449.15"/>
+<path fill="none" stroke="black" d="M2599.21,-419.45C2599.21,-430.83 2599.21,-443.39 2599.21,-443.39 2599.21,-443.39 16235.5,-443.39 16235.5,-443.39 16235.5,-443.39 16235.5,-449.2 16235.5,-449.2"/>
+<polygon fill="black" stroke="black" points="16232,-449.2 16235.5,-459.2 16239,-449.2 16232,-449.2"/>
 </g>
 <!-- SafeResourceDropdownModule -->
 <g id="node82" class="node">
 <title>SafeResourceDropdownModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="3093.4,-419.39 3090.4,-423.39 3069.4,-423.39 3066.4,-419.39 2896.6,-419.39 2896.6,-383.39 3093.4,-383.39 3093.4,-419.39"/>
-<text text-anchor="middle" x="2995" y="-397.19" font-family="Times,serif" font-size="14.00">SafeResourceDropdownModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="2937.4,-419.39 2934.4,-423.39 2913.4,-423.39 2910.4,-419.39 2740.6,-419.39 2740.6,-383.39 2937.4,-383.39 2937.4,-419.39"/>
+<text text-anchor="middle" x="2839" y="-397.19" font-family="Times,serif" font-size="14.00">SafeResourceDropdownModule</text>
 </g>
 <!-- SafeResourceDropdownModule&#45;&gt;SafeChooseRecordModalModule -->
 <g id="edge83" class="edge">
 <title>SafeResourceDropdownModule&#45;&gt;SafeChooseRecordModalModule</title>
-<path fill="none" stroke="black" d="M2929.77,-419.4C2929.77,-419.4 2929.77,-449.25 2929.77,-449.25"/>
-<polygon fill="black" stroke="black" points="2926.27,-449.25 2929.77,-459.25 2933.27,-449.25 2926.27,-449.25"/>
+<path fill="none" stroke="black" d="M2850.6,-419.4C2850.6,-419.4 2850.6,-449.25 2850.6,-449.25"/>
+<polygon fill="black" stroke="black" points="2847.1,-449.25 2850.6,-459.25 2854.1,-449.25 2847.1,-449.25"/>
 </g>
 <!-- SafeResourceDropdownComponent  -->
 <g id="node255" class="node">
 <title>SafeResourceDropdownComponent </title>
-<polygon fill="#fb8072" stroke="black" points="17250.68,-495.39 17029.32,-495.39 17029.32,-459.39 17250.68,-459.39 17250.68,-495.39"/>
-<text text-anchor="middle" x="17140" y="-473.19" font-family="Times,serif" font-size="14.00">SafeResourceDropdownComponent </text>
+<polygon fill="#fb8072" stroke="black" points="2850.68,-343.39 2629.32,-343.39 2629.32,-307.39 2850.68,-307.39 2850.68,-343.39"/>
+<text text-anchor="middle" x="2740" y="-321.19" font-family="Times,serif" font-size="14.00">SafeResourceDropdownComponent </text>
 </g>
 <!-- SafeResourceDropdownModule&#45;&gt;SafeResourceDropdownComponent  -->
-<g id="edge282" class="edge">
+<g id="edge283" class="edge">
 <title>SafeResourceDropdownModule&#45;&gt;SafeResourceDropdownComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M3071.99,-419.42C3071.99,-426.24 3071.99,-432.39 3071.99,-432.39 3071.99,-432.39 17040.13,-432.39 17040.13,-432.39 17040.13,-432.39 17040.13,-449.35 17040.13,-449.35"/>
-<polygon fill="black" stroke="black" points="17036.63,-449.35 17040.13,-459.35 17043.63,-449.35 17036.63,-449.35"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M2795.82,-383.38C2795.82,-383.38 2795.82,-353.54 2795.82,-353.54"/>
+<polygon fill="black" stroke="black" points="2799.32,-353.54 2795.82,-343.54 2792.32,-353.54 2799.32,-353.54"/>
 </g>
 <!-- SafeResourceDropdownModule&#45;&gt;SafeSearchResourceGridModalModule -->
-<g id="edge300" class="edge">
+<g id="edge301" class="edge">
 <title>SafeResourceDropdownModule&#45;&gt;SafeSearchResourceGridModalModule</title>
-<path fill="none" stroke="black" d="M3050.77,-419.52C3050.77,-430.1 3050.77,-441.39 3050.77,-441.39 3050.77,-441.39 16309,-441.39 16309,-441.39 16309,-441.39 16309,-448.97 16309,-448.97"/>
-<polygon fill="black" stroke="black" points="16305.5,-448.97 16309,-458.97 16312.5,-448.97 16305.5,-448.97"/>
+<path fill="none" stroke="black" d="M2893.9,-419.52C2893.9,-430.1 2893.9,-441.39 2893.9,-441.39 2893.9,-441.39 16272.25,-441.39 16272.25,-441.39 16272.25,-441.39 16272.25,-448.97 16272.25,-448.97"/>
+<polygon fill="black" stroke="black" points="16268.75,-448.97 16272.25,-458.97 16275.75,-448.97 16268.75,-448.97"/>
 </g>
 <!-- SafeColumnChartComponent -->
 <g id="node84" class="node">
@@ -2755,7 +2771,7 @@
 <polygon fill="black" stroke="black" points="170.35,-321.89 160.35,-325.39 170.35,-328.89 170.35,-321.89"/>
 </g>
 <!-- SafeConfirmModalModule&#45;&gt;SafeRolesModule -->
-<g id="edge287" class="edge">
+<g id="edge288" class="edge">
 <title>SafeConfirmModalModule&#45;&gt;SafeRolesModule</title>
 <path fill="none" stroke="black" d="M465,-252.19C465,-287.11 465,-360.39 465,-360.39 465,-360.39 23098.92,-360.39 23098.92,-360.39 23098.92,-360.39 23098.92,-353.71 23098.92,-353.71"/>
 <polygon fill="black" stroke="black" points="23102.42,-353.71 23098.92,-343.71 23095.42,-353.71 23102.42,-353.71"/>
@@ -2841,8 +2857,8 @@
 <!-- SafeCoreGridComponent&#45;&gt;SafeCoreGridModule -->
 <g id="edge93" class="edge">
 <title>SafeCoreGridComponent&#45;&gt;SafeCoreGridModule</title>
-<path fill="none" stroke="black" d="M16840.15,-458.9C16840.15,-447.25 16840.15,-434.39 16840.15,-434.39 16840.15,-434.39 2826.84,-434.39 2826.84,-434.39 2826.84,-434.39 2826.84,-429.43 2826.84,-429.43"/>
-<polygon fill="black" stroke="black" points="2830.34,-429.43 2826.84,-419.43 2823.34,-429.43 2830.34,-429.43"/>
+<path fill="none" stroke="black" d="M16840.15,-459.21C16840.15,-446.35 16840.15,-431.39 16840.15,-431.39 16840.15,-431.39 3037.2,-431.39 3037.2,-431.39 3037.2,-431.39 3037.2,-429.53 3037.2,-429.53"/>
+<polygon fill="black" stroke="black" points="3040.71,-429.53 3037.2,-419.53 3033.71,-429.53 3040.71,-429.53"/>
 </g>
 <!-- SafeDonutChartComponent -->
 <g id="node97" class="node">
@@ -2959,7 +2975,7 @@
 <polygon fill="black" stroke="black" points="14416.5,-601.25 14420,-611.25 14423.5,-601.25 14416.5,-601.25"/>
 </g>
 <!-- SafeEditorModule&#45;&gt;SafeWidgetModule -->
-<g id="edge332" class="edge">
+<g id="edge333" class="edge">
 <title>SafeEditorModule&#45;&gt;SafeWidgetModule</title>
 <path fill="none" stroke="black" d="M14479.98,-553.39C14512.4,-553.39 14545.86,-553.39 14545.86,-553.39 14545.86,-553.39 14545.86,-601.38 14545.86,-601.38"/>
 <polygon fill="black" stroke="black" points="14542.36,-601.38 14545.86,-611.38 14549.36,-601.38 14542.36,-601.38"/>
@@ -3147,8 +3163,8 @@
 <!-- SafeFormModalModule&#45;&gt;SafeFormModalComponent  -->
 <g id="edge120" class="edge">
 <title>SafeFormModalModule&#45;&gt;SafeFormModalComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M14019.19,-459.25C14019.19,-452.93 14019.19,-447.39 14019.19,-447.39 14019.19,-447.39 14867.7,-447.39 14867.7,-447.39 14867.7,-447.39 14867.7,-429.57 14867.7,-429.57"/>
-<polygon fill="black" stroke="black" points="14871.2,-429.57 14867.7,-419.57 14864.2,-429.57 14871.2,-429.57"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M14019.19,-459.22C14019.19,-455.34 14019.19,-452.39 14019.19,-452.39 14019.19,-452.39 14867.7,-452.39 14867.7,-452.39 14867.7,-452.39 14867.7,-429.51 14867.7,-429.51"/>
+<polygon fill="black" stroke="black" points="14871.2,-429.51 14867.7,-419.51 14864.2,-429.51 14871.2,-429.51"/>
 </g>
 <!-- SafeFormModalModule&#45;&gt;SafeFormModule -->
 <g id="edge123" class="edge">
@@ -3183,8 +3199,8 @@
 <!-- SafeRecordHistoryModalModule&#45;&gt;SafeFormModalModule -->
 <g id="edge118" class="edge">
 <title>SafeRecordHistoryModalModule&#45;&gt;SafeFormModalModule</title>
-<path fill="none" stroke="black" d="M15256.3,-419.44C15256.3,-433.76 15256.3,-451.39 15256.3,-451.39 15256.3,-451.39 14084.04,-451.39 14084.04,-451.39 14084.04,-451.39 14084.04,-452.18 14084.04,-452.18"/>
-<polygon fill="black" stroke="black" points="14080.54,-449.33 14084.04,-459.33 14087.54,-449.33 14080.54,-449.33"/>
+<path fill="none" stroke="black" d="M15256.3,-419.42C15256.3,-435.79 15256.3,-457.39 15256.3,-457.39 15256.3,-457.39 14084.04,-457.39 14084.04,-457.39 14084.04,-457.39 14084.04,-457.57 14084.04,-457.57"/>
+<polygon fill="black" stroke="black" points="14080.54,-449.24 14084.04,-459.24 14087.54,-449.24 14080.54,-449.24"/>
 </g>
 <!-- RecordHistoryModalComponent  -->
 <g id="node246" class="node">
@@ -3207,8 +3223,8 @@
 <!-- SafeRecordSummaryModule&#45;&gt;SafeFormModalModule -->
 <g id="edge119" class="edge">
 <title>SafeRecordSummaryModule&#45;&gt;SafeFormModalModule</title>
-<path fill="none" stroke="black" d="M15084.23,-419.54C15084.23,-433.13 15084.23,-449.39 15084.23,-449.39 15084.23,-449.39 14062.43,-449.39 14062.43,-449.39 14062.43,-449.39 14062.43,-450.37 14062.43,-450.37"/>
-<polygon fill="black" stroke="black" points="14058.93,-449.18 14062.43,-459.18 14065.93,-449.18 14058.93,-449.18"/>
+<path fill="none" stroke="black" d="M15084.23,-419.67C15084.23,-435.34 15084.23,-455.39 15084.23,-455.39 15084.23,-455.39 14062.43,-455.39 14062.43,-455.39 14062.43,-455.39 14062.43,-455.77 14062.43,-455.77"/>
+<polygon fill="black" stroke="black" points="14058.93,-449.22 14062.43,-459.22 14065.93,-449.22 14058.93,-449.22"/>
 </g>
 <!-- SafeRecordSummaryModule&#45;&gt;SafeFormModule -->
 <g id="edge125" class="edge">
@@ -3225,14 +3241,14 @@
 <!-- SafeRecordSummaryComponent  -->
 <g id="node253" class="node">
 <title>SafeRecordSummaryComponent </title>
-<polygon fill="#fb8072" stroke="black" points="17765.08,-495.39 17560.92,-495.39 17560.92,-459.39 17765.08,-459.39 17765.08,-495.39"/>
-<text text-anchor="middle" x="17663" y="-473.19" font-family="Times,serif" font-size="14.00">SafeRecordSummaryComponent </text>
+<polygon fill="#fb8072" stroke="black" points="17261.08,-495.39 17056.92,-495.39 17056.92,-459.39 17261.08,-459.39 17261.08,-495.39"/>
+<text text-anchor="middle" x="17159" y="-473.19" font-family="Times,serif" font-size="14.00">SafeRecordSummaryComponent </text>
 </g>
 <!-- SafeRecordSummaryModule&#45;&gt;SafeRecordSummaryComponent  -->
 <g id="edge280" class="edge">
 <title>SafeRecordSummaryModule&#45;&gt;SafeRecordSummaryComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M15144,-419.55C15144,-424.43 15144,-428.39 15144,-428.39 15144,-428.39 17574.9,-428.39 17574.9,-428.39 17574.9,-428.39 17574.9,-449.14 17574.9,-449.14"/>
-<polygon fill="black" stroke="black" points="17571.4,-449.14 17574.9,-459.14 17578.4,-449.14 17571.4,-449.14"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M15144,-419.6C15144,-424.95 15144,-429.39 15144,-429.39 15144,-429.39 17106.87,-429.39 17106.87,-429.39 17106.87,-429.39 17106.87,-449.24 17106.87,-449.24"/>
+<polygon fill="black" stroke="black" points="17103.37,-449.24 17106.87,-459.24 17110.37,-449.24 17103.37,-449.24"/>
 </g>
 <!-- SafeFormComponent -->
 <g id="node128" class="node">
@@ -3445,8 +3461,8 @@
 <!-- SafeGridToolbarComponent&#45;&gt;SafeGridToolbarModule -->
 <g id="edge157" class="edge">
 <title>SafeGridToolbarComponent&#45;&gt;SafeGridToolbarModule</title>
-<path fill="none" stroke="black" d="M16931.72,-343.47C16931.72,-345.24 16931.72,-346.39 16931.72,-346.39 16931.72,-346.39 7246,-346.39 7246,-346.39 7246,-346.39 7246,-262.14 7246,-262.14"/>
-<polygon fill="black" stroke="black" points="7249.5,-262.14 7246,-252.14 7242.5,-262.14 7249.5,-262.14"/>
+<path fill="none" stroke="black" d="M16931.72,-343.56C16931.72,-345.84 16931.72,-347.39 16931.72,-347.39 16931.72,-347.39 7246,-347.39 7246,-347.39 7246,-347.39 7246,-262.3 7246,-262.3"/>
+<polygon fill="black" stroke="black" points="7249.5,-262.3 7246,-252.3 7242.5,-262.3 7249.5,-262.3"/>
 </g>
 <!-- SafeGridWidgetComponent -->
 <g id="node150" class="node">
@@ -3473,7 +3489,7 @@
 <polygon fill="black" stroke="black" points="13588.82,-601.25 13592.32,-611.25 13595.82,-601.25 13588.82,-601.25"/>
 </g>
 <!-- SafeGridWidgetModule&#45;&gt;SafeWidgetModule -->
-<g id="edge333" class="edge">
+<g id="edge334" class="edge">
 <title>SafeGridWidgetModule&#45;&gt;SafeWidgetModule</title>
 <path fill="none" stroke="black" d="M13667.97,-571.45C13667.97,-575.88 13667.97,-579.39 13667.97,-579.39 13667.97,-579.39 14539.02,-579.39 14539.02,-579.39 14539.02,-579.39 14539.02,-601.34 14539.02,-601.34"/>
 <polygon fill="black" stroke="black" points="14535.52,-601.34 14539.02,-611.34 14542.52,-601.34 14535.52,-601.34"/>
@@ -3487,8 +3503,8 @@
 <!-- SafeIconComponent&#45;&gt;SafeIconModule -->
 <g id="edge165" class="edge">
 <title>SafeIconComponent&#45;&gt;SafeIconModule</title>
-<path fill="none" stroke="black" d="M19384.2,-343.45C19384.2,-347.88 19384.2,-351.39 19384.2,-351.39 19384.2,-351.39 9740.66,-351.39 9740.66,-351.39 9740.66,-351.39 9740.66,-262.17 9740.66,-262.17"/>
-<polygon fill="black" stroke="black" points="9744.16,-262.17 9740.66,-252.17 9737.16,-262.17 9744.16,-262.17"/>
+<path fill="none" stroke="black" d="M19384.2,-343.45C19384.2,-347.88 19384.2,-351.39 19384.2,-351.39 19384.2,-351.39 9741.22,-351.39 9741.22,-351.39 9741.22,-351.39 9741.22,-262.17 9741.22,-262.17"/>
+<polygon fill="black" stroke="black" points="9744.73,-262.17 9741.22,-252.17 9737.73,-262.17 9744.73,-262.17"/>
 </g>
 <!-- SafeInviteUsersComponent -->
 <g id="node155" class="node">
@@ -3515,7 +3531,7 @@
 <polygon fill="black" stroke="black" points="24019.5,-297.08 24023,-307.08 24026.5,-297.08 24019.5,-297.08"/>
 </g>
 <!-- SafeInviteUsersModule&#45;&gt;SafeUsersModule -->
-<g id="edge317" class="edge">
+<g id="edge318" class="edge">
 <title>SafeInviteUsersModule&#45;&gt;SafeUsersModule</title>
 <path fill="none" stroke="black" d="M23948.35,-234.39C23930.21,-234.39 23915.93,-234.39 23915.93,-234.39 23915.93,-234.39 23915.93,-325.39 23915.93,-325.39 23915.93,-325.39 23804.42,-325.39 23804.42,-325.39"/>
 <polygon fill="black" stroke="black" points="23804.42,-321.89 23794.42,-325.39 23804.42,-328.89 23804.42,-321.89"/>
@@ -3523,14 +3539,14 @@
 <!-- SafeLayoutModalComponent -->
 <g id="node158" class="node">
 <title>SafeLayoutModalComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2249.41,-419.39 2066.59,-419.39 2066.59,-383.39 2249.41,-383.39 2249.41,-419.39"/>
-<text text-anchor="middle" x="2158" y="-397.19" font-family="Times,serif" font-size="14.00">SafeLayoutModalComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2248.41,-419.39 2065.59,-419.39 2065.59,-383.39 2248.41,-383.39 2248.41,-419.39"/>
+<text text-anchor="middle" x="2157" y="-397.19" font-family="Times,serif" font-size="14.00">SafeLayoutModalComponent</text>
 </g>
 <!-- SafeLayoutModalComponent&#45;&gt;SafeLayoutModalModule -->
 <g id="edge170" class="edge">
 <title>SafeLayoutModalComponent&#45;&gt;SafeLayoutModalModule</title>
-<path fill="none" stroke="black" d="M2066.62,-401.39C2055.48,-401.39 2047.95,-401.39 2047.95,-401.39 2047.95,-401.39 2047.95,-477.39 2047.95,-477.39 2047.95,-477.39 2043.53,-477.39 2043.53,-477.39"/>
-<polygon fill="black" stroke="black" points="2043.53,-473.89 2033.53,-477.39 2043.53,-480.89 2043.53,-473.89"/>
+<path fill="none" stroke="black" d="M2065.62,-401.39C2054.48,-401.39 2046.95,-401.39 2046.95,-401.39 2046.95,-401.39 2046.95,-477.39 2046.95,-477.39 2046.95,-477.39 2042.53,-477.39 2042.53,-477.39"/>
+<polygon fill="black" stroke="black" points="2042.53,-473.89 2032.53,-477.39 2042.53,-480.89 2042.53,-473.89"/>
 </g>
 <!-- SafeLayoutComponent -->
 <g id="node160" class="node">
@@ -3547,8 +3563,8 @@
 <!-- SafePreferencesModalModule&#45;&gt;SafeLayoutModule -->
 <g id="edge178" class="edge">
 <title>SafePreferencesModalModule&#45;&gt;SafeLayoutModule</title>
-<path fill="none" stroke="black" d="M19744.35,-343.53C19744.35,-349.85 19744.35,-355.39 19744.35,-355.39 19744.35,-355.39 137.69,-355.39 137.69,-355.39 137.69,-355.39 137.69,-353.53 137.69,-353.53"/>
-<polygon fill="black" stroke="black" points="141.19,-353.53 137.69,-343.53 134.19,-353.53 141.19,-353.53"/>
+<path fill="none" stroke="black" d="M19744.35,-343.42C19744.35,-350.24 19744.35,-356.39 19744.35,-356.39 19744.35,-356.39 137.69,-356.39 137.69,-356.39 137.69,-356.39 137.69,-353.42 137.69,-353.42"/>
+<polygon fill="black" stroke="black" points="141.19,-353.42 137.69,-343.42 134.19,-353.42 141.19,-353.42"/>
 </g>
 <!-- SafePreferencesModalComponent  -->
 <g id="node222" class="node">
@@ -3575,7 +3591,7 @@
 <text text-anchor="middle" x="20019" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSearchMenuComponent </text>
 </g>
 <!-- SafeSearchMenuModule&#45;&gt;SafeSearchMenuComponent  -->
-<g id="edge295" class="edge">
+<g id="edge296" class="edge">
 <title>SafeSearchMenuModule&#45;&gt;SafeSearchMenuComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M19977.38,-307.35C19977.38,-307.35 19977.38,-262.41 19977.38,-262.41"/>
 <polygon fill="black" stroke="black" points="19980.88,-262.41 19977.38,-252.41 19973.88,-262.41 19980.88,-262.41"/>
@@ -3623,7 +3639,7 @@
 <polygon fill="black" stroke="black" points="15586.85,-601.25 15590.35,-611.25 15593.85,-601.25 15586.85,-601.25"/>
 </g>
 <!-- SafeMapModule&#45;&gt;SafeWidgetModule -->
-<g id="edge334" class="edge">
+<g id="edge335" class="edge">
 <title>SafeMapModule&#45;&gt;SafeWidgetModule</title>
 <path fill="none" stroke="black" d="M15553.65,-571.45C15553.65,-582.83 15553.65,-595.39 15553.65,-595.39 15553.65,-595.39 14618.51,-595.39 14618.51,-595.39 14618.51,-595.39 14618.51,-601.2 14618.51,-601.2"/>
 <polygon fill="black" stroke="black" points="14615.01,-601.2 14618.51,-611.2 14622.01,-601.2 14615.01,-601.2"/>
@@ -4093,122 +4109,122 @@
 <!-- SafeAddFieldStageComponent -->
 <g id="node210" class="node">
 <title>SafeAddFieldStageComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="20475.2,-343.39 20284.8,-343.39 20284.8,-307.39 20475.2,-307.39 20475.2,-343.39"/>
-<text text-anchor="middle" x="20380" y="-321.19" font-family="Times,serif" font-size="14.00">SafeAddFieldStageComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="20667.2,-343.39 20476.8,-343.39 20476.8,-307.39 20667.2,-307.39 20667.2,-343.39"/>
+<text text-anchor="middle" x="20572" y="-321.19" font-family="Times,serif" font-size="14.00">SafeAddFieldStageComponent</text>
 </g>
 <!-- SafeAddFieldStageComponent&#45;&gt;SafePipelineModule -->
 <g id="edge225" class="edge">
 <title>SafeAddFieldStageComponent&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M20468.2,-343.44C20468.2,-365.05 20468.2,-398.39 20468.2,-398.39 20468.2,-398.39 20708.57,-398.39 20708.57,-398.39"/>
-<polygon fill="black" stroke="black" points="20708.57,-401.89 20718.57,-398.39 20708.57,-394.89 20708.57,-401.89"/>
+<path fill="none" stroke="black" d="M20584.21,-343.42C20584.21,-362.97 20584.21,-391.39 20584.21,-391.39 20584.21,-391.39 20718.77,-391.39 20718.77,-391.39"/>
+<polygon fill="black" stroke="black" points="20718.77,-394.89 20728.77,-391.39 20718.77,-387.89 20718.77,-394.89"/>
 </g>
 <!-- SafeExpressionsComponent -->
 <g id="node211" class="node">
 <title>SafeExpressionsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="21240.87,-343.39 21067.13,-343.39 21067.13,-307.39 21240.87,-307.39 21240.87,-343.39"/>
-<text text-anchor="middle" x="21154" y="-321.19" font-family="Times,serif" font-size="14.00">SafeExpressionsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="20458.87,-343.39 20285.13,-343.39 20285.13,-307.39 20458.87,-307.39 20458.87,-343.39"/>
+<text text-anchor="middle" x="20372" y="-321.19" font-family="Times,serif" font-size="14.00">SafeExpressionsComponent</text>
 </g>
 <!-- SafeExpressionsComponent&#45;&gt;SafePipelineModule -->
 <g id="edge226" class="edge">
 <title>SafeExpressionsComponent&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M21075.96,-343.7C21075.96,-363.54 21075.96,-392.39 21075.96,-392.39 21075.96,-392.39 20859.16,-392.39 20859.16,-392.39"/>
-<polygon fill="black" stroke="black" points="20859.16,-388.89 20849.16,-392.39 20859.16,-395.89 20859.16,-388.89"/>
+<path fill="none" stroke="black" d="M20372,-343.44C20372,-365.05 20372,-398.39 20372,-398.39 20372,-398.39 20718.53,-398.39 20718.53,-398.39"/>
+<polygon fill="black" stroke="black" points="20718.53,-401.89 20728.53,-398.39 20718.53,-394.89 20718.53,-401.89"/>
 </g>
 <!-- SafeFieldDropdownComponent -->
 <g id="node212" class="node">
 <title>SafeFieldDropdownComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="21049.37,-343.39 20854.63,-343.39 20854.63,-307.39 21049.37,-307.39 21049.37,-343.39"/>
-<text text-anchor="middle" x="20952" y="-321.19" font-family="Times,serif" font-size="14.00">SafeFieldDropdownComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="21241.37,-343.39 21046.63,-343.39 21046.63,-307.39 21241.37,-307.39 21241.37,-343.39"/>
+<text text-anchor="middle" x="21144" y="-321.19" font-family="Times,serif" font-size="14.00">SafeFieldDropdownComponent</text>
 </g>
 <!-- SafeFieldDropdownComponent&#45;&gt;SafePipelineModule -->
 <g id="edge227" class="edge">
 <title>SafeFieldDropdownComponent&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M20854.45,-325.39C20848.56,-325.39 20844.95,-325.39 20844.95,-325.39 20844.95,-325.39 20844.95,-373.38 20844.95,-373.38"/>
-<polygon fill="black" stroke="black" points="20841.45,-373.38 20844.95,-383.38 20848.45,-373.38 20841.45,-373.38"/>
+<path fill="none" stroke="black" d="M21055.68,-343.7C21055.68,-363.54 21055.68,-392.39 21055.68,-392.39 21055.68,-392.39 20869.36,-392.39 20869.36,-392.39"/>
+<polygon fill="black" stroke="black" points="20869.36,-388.89 20859.36,-392.39 20869.36,-395.89 20869.36,-388.89"/>
 </g>
 <!-- SafeGroupStageComponent -->
 <g id="node213" class="node">
 <title>SafeGroupStageComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="20836.58,-343.39 20663.42,-343.39 20663.42,-307.39 20836.58,-307.39 20836.58,-343.39"/>
-<text text-anchor="middle" x="20750" y="-321.19" font-family="Times,serif" font-size="14.00">SafeGroupStageComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="21028.58,-343.39 20855.42,-343.39 20855.42,-307.39 21028.58,-307.39 21028.58,-343.39"/>
+<text text-anchor="middle" x="20942" y="-321.19" font-family="Times,serif" font-size="14.00">SafeGroupStageComponent</text>
 </g>
 <!-- SafeGroupStageComponent&#45;&gt;SafePipelineModule -->
 <g id="edge228" class="edge">
 <title>SafeGroupStageComponent&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M20807.12,-343.4C20807.12,-343.4 20807.12,-373.25 20807.12,-373.25"/>
-<polygon fill="black" stroke="black" points="20803.62,-373.25 20807.12,-383.25 20810.62,-373.25 20803.62,-373.25"/>
+<path fill="none" stroke="black" d="M20855.4,-325.39C20851.58,-325.39 20849.32,-325.39 20849.32,-325.39 20849.32,-325.39 20849.32,-373.38 20849.32,-373.38"/>
+<polygon fill="black" stroke="black" points="20845.82,-373.38 20849.32,-383.38 20852.82,-373.38 20845.82,-373.38"/>
 </g>
 <!-- SafePipelineComponent -->
 <g id="node214" class="node">
 <title>SafePipelineComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="20645.09,-343.39 20492.91,-343.39 20492.91,-307.39 20645.09,-307.39 20645.09,-343.39"/>
-<text text-anchor="middle" x="20569" y="-321.19" font-family="Times,serif" font-size="14.00">SafePipelineComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="20837.09,-343.39 20684.91,-343.39 20684.91,-307.39 20837.09,-307.39 20837.09,-343.39"/>
+<text text-anchor="middle" x="20761" y="-321.19" font-family="Times,serif" font-size="14.00">SafePipelineComponent</text>
 </g>
 <!-- SafePipelineComponent&#45;&gt;SafePipelineModule -->
 <g id="edge229" class="edge">
 <title>SafePipelineComponent&#45;&gt;SafePipelineModule</title>
-<path fill="none" stroke="black" d="M20569,-343.42C20569,-362.97 20569,-391.39 20569,-391.39 20569,-391.39 20708.62,-391.39 20708.62,-391.39"/>
-<polygon fill="black" stroke="black" points="20708.62,-394.89 20718.62,-391.39 20708.62,-387.89 20708.62,-394.89"/>
+<path fill="none" stroke="black" d="M20809.99,-343.4C20809.99,-343.4 20809.99,-373.25 20809.99,-373.25"/>
+<polygon fill="black" stroke="black" points="20806.49,-373.25 20809.99,-383.25 20813.49,-373.25 20806.49,-373.25"/>
 </g>
 <!-- SafeAddFieldStageComponent  -->
 <g id="node216" class="node">
 <title>SafeAddFieldStageComponent </title>
-<polygon fill="#fb8072" stroke="black" points="21084.7,-495.39 20891.3,-495.39 20891.3,-459.39 21084.7,-459.39 21084.7,-495.39"/>
-<text text-anchor="middle" x="20988" y="-473.19" font-family="Times,serif" font-size="14.00">SafeAddFieldStageComponent </text>
+<polygon fill="#fb8072" stroke="black" points="20890.7,-495.39 20697.3,-495.39 20697.3,-459.39 20890.7,-459.39 20890.7,-495.39"/>
+<text text-anchor="middle" x="20794" y="-473.19" font-family="Times,serif" font-size="14.00">SafeAddFieldStageComponent </text>
 </g>
 <!-- SafePipelineModule&#45;&gt;SafeAddFieldStageComponent  -->
 <g id="edge233" class="edge">
 <title>SafePipelineModule&#45;&gt;SafeAddFieldStageComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20849.16,-410.39C20902.88,-410.39 20970.29,-410.39 20970.29,-410.39 20970.29,-410.39 20970.29,-449.08 20970.29,-449.08"/>
-<polygon fill="black" stroke="black" points="20966.79,-449.08 20970.29,-459.08 20973.79,-449.08 20966.79,-449.08"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20794,-419.4C20794,-419.4 20794,-449.25 20794,-449.25"/>
+<polygon fill="black" stroke="black" points="20790.5,-449.25 20794,-459.25 20797.5,-449.25 20790.5,-449.25"/>
 </g>
 <!-- SafeExpressionsComponent  -->
 <g id="node217" class="node">
 <title>SafeExpressionsComponent </title>
-<polygon fill="#fb8072" stroke="black" points="20872.87,-495.39 20695.13,-495.39 20695.13,-459.39 20872.87,-459.39 20872.87,-495.39"/>
-<text text-anchor="middle" x="20784" y="-473.19" font-family="Times,serif" font-size="14.00">SafeExpressionsComponent </text>
+<polygon fill="#fb8072" stroke="black" points="20678.87,-495.39 20501.13,-495.39 20501.13,-459.39 20678.87,-459.39 20678.87,-495.39"/>
+<text text-anchor="middle" x="20590" y="-473.19" font-family="Times,serif" font-size="14.00">SafeExpressionsComponent </text>
 </g>
 <!-- SafePipelineModule&#45;&gt;SafeExpressionsComponent  -->
 <g id="edge234" class="edge">
 <title>SafePipelineModule&#45;&gt;SafeExpressionsComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20784,-419.4C20784,-419.4 20784,-449.25 20784,-449.25"/>
-<polygon fill="black" stroke="black" points="20780.5,-449.25 20784,-459.25 20787.5,-449.25 20780.5,-449.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20728.84,-412.39C20700.17,-412.39 20672.89,-412.39 20672.89,-412.39 20672.89,-412.39 20672.89,-449.28 20672.89,-449.28"/>
+<polygon fill="black" stroke="black" points="20669.39,-449.28 20672.89,-459.28 20676.39,-449.28 20669.39,-449.28"/>
 </g>
 <!-- SafeFieldDropdownComponent  -->
 <g id="node218" class="node">
 <title>SafeFieldDropdownComponent </title>
-<polygon fill="#fb8072" stroke="black" points="20677.37,-495.39 20478.63,-495.39 20478.63,-459.39 20677.37,-459.39 20677.37,-495.39"/>
-<text text-anchor="middle" x="20578" y="-473.19" font-family="Times,serif" font-size="14.00">SafeFieldDropdownComponent </text>
+<polygon fill="#fb8072" stroke="black" points="20483.37,-495.39 20284.63,-495.39 20284.63,-459.39 20483.37,-459.39 20483.37,-495.39"/>
+<text text-anchor="middle" x="20384" y="-473.19" font-family="Times,serif" font-size="14.00">SafeFieldDropdownComponent </text>
 </g>
 <!-- SafePipelineModule&#45;&gt;SafeFieldDropdownComponent  -->
 <g id="edge235" class="edge">
 <title>SafePipelineModule&#45;&gt;SafeFieldDropdownComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20718.53,-412.39C20693.26,-412.39 20670.32,-412.39 20670.32,-412.39 20670.32,-412.39 20670.32,-449.28 20670.32,-449.28"/>
-<polygon fill="black" stroke="black" points="20666.82,-449.28 20670.32,-459.28 20673.82,-449.28 20666.82,-449.28"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20728.8,-405.39C20633.64,-405.39 20467.92,-405.39 20467.92,-405.39 20467.92,-405.39 20467.92,-449.22 20467.92,-449.22"/>
+<polygon fill="black" stroke="black" points="20464.42,-449.22 20467.92,-459.22 20471.42,-449.22 20464.42,-449.22"/>
 </g>
 <!-- SafeGroupStageComponent  -->
 <g id="node219" class="node">
 <title>SafeGroupStageComponent </title>
-<polygon fill="#fb8072" stroke="black" points="20461.08,-495.39 20284.92,-495.39 20284.92,-459.39 20461.08,-459.39 20461.08,-495.39"/>
-<text text-anchor="middle" x="20373" y="-473.19" font-family="Times,serif" font-size="14.00">SafeGroupStageComponent </text>
+<polygon fill="#fb8072" stroke="black" points="21259.08,-495.39 21082.92,-495.39 21082.92,-459.39 21259.08,-459.39 21259.08,-495.39"/>
+<text text-anchor="middle" x="21171" y="-473.19" font-family="Times,serif" font-size="14.00">SafeGroupStageComponent </text>
 </g>
 <!-- SafePipelineModule&#45;&gt;SafeGroupStageComponent  -->
 <g id="edge236" class="edge">
 <title>SafePipelineModule&#45;&gt;SafeGroupStageComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20718.44,-405.39C20602.43,-405.39 20373.1,-405.39 20373.1,-405.39 20373.1,-405.39 20373.1,-449.22 20373.1,-449.22"/>
-<polygon fill="black" stroke="black" points="20369.6,-449.22 20373.1,-459.22 20376.6,-449.22 20369.6,-449.22"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20859.38,-401.39C20965.15,-401.39 21162.07,-401.39 21162.07,-401.39 21162.07,-401.39 21162.07,-449.38 21162.07,-449.38"/>
+<polygon fill="black" stroke="black" points="21158.57,-449.38 21162.07,-459.38 21165.57,-449.38 21158.57,-449.38"/>
 </g>
 <!-- SafePipelineComponent  -->
 <g id="node220" class="node">
 <title>SafePipelineComponent </title>
-<polygon fill="#fb8072" stroke="black" points="21258.59,-495.39 21103.41,-495.39 21103.41,-459.39 21258.59,-459.39 21258.59,-495.39"/>
-<text text-anchor="middle" x="21181" y="-473.19" font-family="Times,serif" font-size="14.00">SafePipelineComponent </text>
+<polygon fill="#fb8072" stroke="black" points="21064.59,-495.39 20909.41,-495.39 20909.41,-459.39 21064.59,-459.39 21064.59,-495.39"/>
+<text text-anchor="middle" x="20987" y="-473.19" font-family="Times,serif" font-size="14.00">SafePipelineComponent </text>
 </g>
 <!-- SafePipelineModule&#45;&gt;SafePipelineComponent  -->
 <g id="edge237" class="edge">
 <title>SafePipelineModule&#45;&gt;SafePipelineComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20849.39,-401.39C20959.99,-401.39 21172.07,-401.39 21172.07,-401.39 21172.07,-401.39 21172.07,-449.38 21172.07,-449.38"/>
-<polygon fill="black" stroke="black" points="21168.57,-449.38 21172.07,-459.38 21175.57,-449.38 21168.57,-449.38"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M20859.61,-410.39C20909.23,-410.39 20968.87,-410.39 20968.87,-410.39 20968.87,-410.39 20968.87,-449.08 20968.87,-449.08"/>
+<polygon fill="black" stroke="black" points="20965.37,-449.08 20968.87,-459.08 20972.37,-449.08 20965.37,-449.08"/>
 </g>
 <!-- SafePreferencesModalComponent -->
 <g id="node221" class="node">
@@ -4279,7 +4295,7 @@
 <!-- SafeQueryBuilderComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge247" class="edge">
 <title>SafeQueryBuilderComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M2394.47,-252.2C2394.47,-268.33 2394.47,-289.39 2394.47,-289.39 2394.47,-289.39 3251.69,-289.39 3251.69,-289.39 3251.69,-289.39 3251.69,-296.97 3251.69,-296.97"/>
+<path fill="none" stroke="black" d="M2427.69,-252.2C2427.69,-268.33 2427.69,-289.39 2427.69,-289.39 2427.69,-289.39 3251.69,-289.39 3251.69,-289.39 3251.69,-289.39 3251.69,-296.97 3251.69,-296.97"/>
 <polygon fill="black" stroke="black" points="3248.19,-296.97 3251.69,-306.97 3255.19,-296.97 3248.19,-296.97"/>
 </g>
 <!-- SafeQueryStyleComponent -->
@@ -4291,7 +4307,7 @@
 <!-- SafeQueryStyleComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge249" class="edge">
 <title>SafeQueryStyleComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M2302.7,-252.22C2302.7,-268.67 2302.7,-290.39 2302.7,-290.39 2302.7,-290.39 3240.94,-290.39 3240.94,-290.39 3240.94,-290.39 3240.94,-297.07 3240.94,-297.07"/>
+<path fill="none" stroke="black" d="M2232.49,-252.22C2232.49,-268.67 2232.49,-290.39 2232.49,-290.39 2232.49,-290.39 3240.94,-290.39 3240.94,-290.39 3240.94,-290.39 3240.94,-297.07 3240.94,-297.07"/>
 <polygon fill="black" stroke="black" points="3237.44,-297.07 3240.94,-307.07 3244.44,-297.07 3237.44,-297.07"/>
 </g>
 <!-- SafeQueryStyleListComponent -->
@@ -4303,7 +4319,7 @@
 <!-- SafeQueryStyleListComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge250" class="edge">
 <title>SafeQueryStyleListComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M2097.33,-252.22C2097.33,-268.67 2097.33,-290.39 2097.33,-290.39 2097.33,-290.39 3230.19,-290.39 3230.19,-290.39 3230.19,-290.39 3230.19,-297.07 3230.19,-297.07"/>
+<path fill="none" stroke="black" d="M2096.83,-252.22C2096.83,-268.67 2096.83,-290.39 2096.83,-290.39 2096.83,-290.39 3230.19,-290.39 3230.19,-290.39 3230.19,-290.39 3230.19,-297.07 3230.19,-297.07"/>
 <polygon fill="black" stroke="black" points="3226.69,-297.07 3230.19,-307.07 3233.69,-297.07 3226.69,-297.07"/>
 </g>
 <!-- SafeQueryStylePreviewComponent -->
@@ -4315,7 +4331,7 @@
 <!-- SafeQueryStylePreviewComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge251" class="edge">
 <title>SafeQueryStylePreviewComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M1887.48,-252.22C1887.48,-269.01 1887.48,-291.39 1887.48,-291.39 1887.48,-291.39 3219.43,-291.39 3219.43,-291.39 3219.43,-291.39 3219.43,-297.2 3219.43,-297.2"/>
+<path fill="none" stroke="black" d="M1886.98,-252.22C1886.98,-269.01 1886.98,-291.39 1886.98,-291.39 1886.98,-291.39 3219.43,-291.39 3219.43,-291.39 3219.43,-291.39 3219.43,-297.2 3219.43,-297.2"/>
 <polygon fill="black" stroke="black" points="3215.93,-297.2 3219.43,-307.2 3222.93,-297.2 3215.93,-297.2"/>
 </g>
 <!-- SafeTabFieldsComponent -->
@@ -4351,8 +4367,8 @@
 <!-- SafeTabLayoutPreviewComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge254" class="edge">
 <title>SafeTabLayoutPreviewComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M3029.51,-252.13C3029.51,-278.74 3029.51,-325.39 3029.51,-325.39 3029.51,-325.39 3123.08,-325.39 3123.08,-325.39"/>
-<polygon fill="black" stroke="black" points="3123.08,-328.89 3133.08,-325.39 3123.08,-321.89 3123.08,-328.89"/>
+<path fill="none" stroke="black" d="M3092.76,-234.39C3104.99,-234.39 3113.19,-234.39 3113.19,-234.39 3113.19,-234.39 3113.19,-325.39 3113.19,-325.39 3113.19,-325.39 3123.11,-325.39 3123.11,-325.39"/>
+<polygon fill="black" stroke="black" points="3123.11,-328.89 3133.11,-325.39 3123.11,-321.89 3123.11,-328.89"/>
 </g>
 <!-- SafeTabSortComponent -->
 <g id="node236" class="node">
@@ -4363,7 +4379,7 @@
 <!-- SafeTabSortComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge255" class="edge">
 <title>SafeTabSortComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M2810.7,-252.17C2810.7,-267.97 2810.7,-288.39 2810.7,-288.39 2810.7,-288.39 3273.2,-288.39 3273.2,-288.39 3273.2,-288.39 3273.2,-297.32 3273.2,-297.32"/>
+<path fill="none" stroke="black" d="M2856.25,-252.17C2856.25,-267.97 2856.25,-288.39 2856.25,-288.39 2856.25,-288.39 3273.2,-288.39 3273.2,-288.39 3273.2,-288.39 3273.2,-297.32 3273.2,-297.32"/>
 <polygon fill="black" stroke="black" points="3269.7,-297.32 3273.2,-307.32 3276.7,-297.32 3269.7,-297.32"/>
 </g>
 <!-- SafeTabStyleComponent -->
@@ -4375,14 +4391,14 @@
 <!-- SafeTabStyleComponent&#45;&gt;SafeQueryBuilderModule -->
 <g id="edge256" class="edge">
 <title>SafeTabStyleComponent&#45;&gt;SafeQueryBuilderModule</title>
-<path fill="none" stroke="black" d="M2614,-252.2C2614,-268.33 2614,-289.39 2614,-289.39 2614,-289.39 3262.44,-289.39 3262.44,-289.39 3262.44,-289.39 3262.44,-296.97 3262.44,-296.97"/>
+<path fill="none" stroke="black" d="M2660.77,-252.2C2660.77,-268.33 2660.77,-289.39 2660.77,-289.39 2660.77,-289.39 3262.44,-289.39 3262.44,-289.39 3262.44,-289.39 3262.44,-296.97 3262.44,-296.97"/>
 <polygon fill="black" stroke="black" points="3258.94,-296.97 3262.44,-306.97 3265.94,-296.97 3258.94,-296.97"/>
 </g>
 <!-- SafeRecordDropdownComponent&#45;&gt;SafeRecordDropdownModule -->
 <g id="edge264" class="edge">
 <title>SafeRecordDropdownComponent&#45;&gt;SafeRecordDropdownModule</title>
-<path fill="none" stroke="black" d="M2789.47,-343.63C2789.47,-358.96 2789.47,-378.39 2789.47,-378.39 2789.47,-378.39 2661.79,-378.39 2661.79,-378.39 2661.79,-378.39 2661.79,-378.88 2661.79,-378.88"/>
-<polygon fill="black" stroke="black" points="2658.29,-373.27 2661.79,-383.27 2665.29,-373.27 2658.29,-373.27"/>
+<path fill="none" stroke="black" d="M2572.05,-343.4C2572.05,-343.4 2572.05,-373.25 2572.05,-373.25"/>
+<polygon fill="black" stroke="black" points="2568.55,-373.25 2572.05,-383.25 2575.55,-373.25 2568.55,-373.25"/>
 </g>
 <!-- RecordHistoryModalComponent -->
 <g id="node244" class="node">
@@ -4411,8 +4427,8 @@
 <!-- SafeRecordHistoryModule&#45;&gt;SafeRecordHistoryComponent  -->
 <g id="edge272" class="edge">
 <title>SafeRecordHistoryModule&#45;&gt;SafeRecordHistoryComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M15593.98,-343.54C15593.98,-355.66 15593.98,-369.39 15593.98,-369.39 15593.98,-369.39 19449.74,-369.39 19449.74,-369.39 19449.74,-369.39 19449.74,-373.15 19449.74,-373.15"/>
-<polygon fill="black" stroke="black" points="19446.24,-373.15 19449.74,-383.15 19453.24,-373.15 19446.24,-373.15"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M15593.98,-343.43C15593.98,-355.95 15593.98,-370.39 15593.98,-370.39 15593.98,-370.39 19449.74,-370.39 19449.74,-370.39 19449.74,-370.39 19449.74,-373.36 19449.74,-373.36"/>
+<polygon fill="black" stroke="black" points="19446.24,-373.36 19449.74,-383.36 19453.24,-373.36 19446.24,-373.36"/>
 </g>
 <!-- SafeRecordHistoryComponent -->
 <g id="node247" class="node">
@@ -4423,8 +4439,8 @@
 <!-- SafeRecordHistoryComponent&#45;&gt;SafeRecordHistoryModule -->
 <g id="edge270" class="edge">
 <title>SafeRecordHistoryComponent&#45;&gt;SafeRecordHistoryModule</title>
-<path fill="none" stroke="black" d="M19652.68,-383.2C19652.68,-375.11 19652.68,-367.39 19652.68,-367.39 19652.68,-367.39 15550.02,-367.39 15550.02,-367.39 15550.02,-367.39 15550.02,-353.45 15550.02,-353.45"/>
-<polygon fill="black" stroke="black" points="15553.52,-353.45 15550.02,-343.45 15546.52,-353.45 15553.52,-353.45"/>
+<path fill="none" stroke="black" d="M19652.68,-383.35C19652.68,-375.64 19652.68,-368.39 19652.68,-368.39 19652.68,-368.39 15550.02,-368.39 15550.02,-368.39 15550.02,-368.39 15550.02,-353.88 15550.02,-353.88"/>
+<polygon fill="black" stroke="black" points="15553.52,-353.88 15550.02,-343.88 15546.52,-353.88 15553.52,-353.88"/>
 </g>
 <!-- SafeRecordModalComponent -->
 <g id="node249" class="node">
@@ -4453,26 +4469,20 @@
 <!-- SafeRecordSummaryComponent -->
 <g id="node252" class="node">
 <title>SafeRecordSummaryComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="17990.58,-495.39 17789.42,-495.39 17789.42,-459.39 17990.58,-459.39 17990.58,-495.39"/>
-<text text-anchor="middle" x="17890" y="-473.19" font-family="Times,serif" font-size="14.00">SafeRecordSummaryComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="17486.58,-495.39 17285.42,-495.39 17285.42,-459.39 17486.58,-459.39 17486.58,-495.39"/>
+<text text-anchor="middle" x="17386" y="-473.19" font-family="Times,serif" font-size="14.00">SafeRecordSummaryComponent</text>
 </g>
 <!-- SafeRecordSummaryComponent&#45;&gt;SafeRecordSummaryModule -->
 <g id="edge278" class="edge">
 <title>SafeRecordSummaryComponent&#45;&gt;SafeRecordSummaryModule</title>
-<path fill="none" stroke="black" d="M17875.31,-459.27C17875.31,-444.61 17875.31,-426.39 17875.31,-426.39 17875.31,-426.39 15114.12,-426.39 15114.12,-426.39 15114.12,-426.39 15114.12,-425.71 15114.12,-425.71"/>
-<polygon fill="black" stroke="black" points="15117.62,-429.56 15114.12,-419.56 15110.62,-429.56 15117.62,-429.56"/>
-</g>
-<!-- SafeResourceDropdownComponent -->
-<g id="node254" class="node">
-<title>SafeResourceDropdownComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="17493.18,-495.39 17274.82,-495.39 17274.82,-459.39 17493.18,-459.39 17493.18,-495.39"/>
-<text text-anchor="middle" x="17384" y="-473.19" font-family="Times,serif" font-size="14.00">SafeResourceDropdownComponent</text>
+<path fill="none" stroke="black" d="M17314.21,-459.34C17314.21,-445.02 17314.21,-427.39 17314.21,-427.39 17314.21,-427.39 15114.12,-427.39 15114.12,-427.39 15114.12,-427.39 15114.12,-426.6 15114.12,-426.6"/>
+<polygon fill="black" stroke="black" points="15117.62,-429.45 15114.12,-419.45 15110.62,-429.45 15117.62,-429.45"/>
 </g>
 <!-- SafeResourceDropdownComponent&#45;&gt;SafeResourceDropdownModule -->
 <g id="edge281" class="edge">
 <title>SafeResourceDropdownComponent&#45;&gt;SafeResourceDropdownModule</title>
-<path fill="none" stroke="black" d="M17308.94,-459.35C17308.94,-446.1 17308.94,-430.39 17308.94,-430.39 17308.94,-430.39 3029.56,-430.39 3029.56,-430.39 3029.56,-430.39 3029.56,-429.31 3029.56,-429.31"/>
-<polygon fill="black" stroke="black" points="3033.06,-429.59 3029.56,-419.59 3026.06,-429.59 3033.06,-429.59"/>
+<path fill="none" stroke="black" d="M2906.06,-343.4C2906.06,-343.4 2906.06,-373.25 2906.06,-373.25"/>
+<polygon fill="black" stroke="black" points="2902.56,-373.25 2906.06,-383.25 2909.56,-373.25 2902.56,-373.25"/>
 </g>
 <!-- SafeAddRoleComponent -->
 <g id="node256" class="node">
@@ -4481,7 +4491,7 @@
 <text text-anchor="middle" x="23466" y="-229.9" font-family="Times,serif" font-size="14.00">SafeAddRoleComponent</text>
 </g>
 <!-- SafeAddRoleComponent&#45;&gt;SafeRolesModule -->
-<g id="edge283" class="edge">
+<g id="edge284" class="edge">
 <title>SafeAddRoleComponent&#45;&gt;SafeRolesModule</title>
 <path fill="none" stroke="black" d="M23466,-252.4C23466,-280.58 23466,-331.39 23466,-331.39 23466,-331.39 23196.49,-331.39 23196.49,-331.39"/>
 <polygon fill="black" stroke="black" points="23196.49,-327.89 23186.49,-331.39 23196.49,-334.89 23196.49,-327.89"/>
@@ -4493,7 +4503,7 @@
 <text text-anchor="middle" x="23292" y="-229.9" font-family="Times,serif" font-size="14.00">SafeEditRoleComponent</text>
 </g>
 <!-- SafeEditRoleComponent&#45;&gt;SafeRolesModule -->
-<g id="edge284" class="edge">
+<g id="edge285" class="edge">
 <title>SafeEditRoleComponent&#45;&gt;SafeRolesModule</title>
 <path fill="none" stroke="black" d="M23292,-252.18C23292,-277.22 23292,-319.39 23292,-319.39 23292,-319.39 23196.28,-319.39 23196.28,-319.39"/>
 <polygon fill="black" stroke="black" points="23196.28,-315.89 23186.28,-319.39 23196.28,-322.89 23196.28,-315.89"/>
@@ -4505,7 +4515,7 @@
 <text text-anchor="middle" x="23127" y="-229.9" font-family="Times,serif" font-size="14.00">SafeRolesComponent</text>
 </g>
 <!-- SafeRolesComponent&#45;&gt;SafeRolesModule -->
-<g id="edge285" class="edge">
+<g id="edge286" class="edge">
 <title>SafeRolesComponent&#45;&gt;SafeRolesModule</title>
 <path fill="none" stroke="black" d="M23128,-252.13C23128,-252.13 23128,-297.08 23128,-297.08"/>
 <polygon fill="black" stroke="black" points="23124.5,-297.08 23128,-307.08 23131.5,-297.08 23124.5,-297.08"/>
@@ -4517,7 +4527,7 @@
 <text text-anchor="middle" x="23129" y="-397.19" font-family="Times,serif" font-size="14.00">SafeRolesComponent </text>
 </g>
 <!-- SafeRolesModule&#45;&gt;SafeRolesComponent  -->
-<g id="edge288" class="edge">
+<g id="edge289" class="edge">
 <title>SafeRolesModule&#45;&gt;SafeRolesComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M23157.08,-343.4C23157.08,-343.4 23157.08,-373.25 23157.08,-373.25"/>
 <polygon fill="black" stroke="black" points="23153.58,-373.25 23157.08,-383.25 23160.58,-373.25 23153.58,-373.25"/>
@@ -4535,7 +4545,7 @@
 <text text-anchor="middle" x="15763" y="-549.19" font-family="Times,serif" font-size="14.00">SafeSchedulerModule</text>
 </g>
 <!-- SafeSchedulerComponent&#45;&gt;SafeSchedulerModule -->
-<g id="edge289" class="edge">
+<g id="edge290" class="edge">
 <title>SafeSchedulerComponent&#45;&gt;SafeSchedulerModule</title>
 <path fill="none" stroke="black" d="M15763,-495.4C15763,-495.4 15763,-525.25 15763,-525.25"/>
 <polygon fill="black" stroke="black" points="15759.5,-525.25 15763,-535.25 15766.5,-525.25 15759.5,-525.25"/>
@@ -4547,13 +4557,13 @@
 <text text-anchor="middle" x="15764" y="-625.19" font-family="Times,serif" font-size="14.00">SafeSchedulerComponent </text>
 </g>
 <!-- SafeSchedulerModule&#45;&gt;SafeSchedulerComponent  -->
-<g id="edge290" class="edge">
+<g id="edge291" class="edge">
 <title>SafeSchedulerModule&#45;&gt;SafeSchedulerComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M15786.4,-571.4C15786.4,-571.4 15786.4,-601.25 15786.4,-601.25"/>
 <polygon fill="black" stroke="black" points="15782.9,-601.25 15786.4,-611.25 15789.9,-601.25 15782.9,-601.25"/>
 </g>
 <!-- SafeSchedulerModule&#45;&gt;SafeWidgetModule -->
-<g id="edge335" class="edge">
+<g id="edge336" class="edge">
 <title>SafeSchedulerModule&#45;&gt;SafeWidgetModule</title>
 <path fill="none" stroke="black" d="M15739.6,-571.44C15739.6,-585.76 15739.6,-603.39 15739.6,-603.39 15739.6,-603.39 14638.16,-603.39 14638.16,-603.39 14638.16,-603.39 14638.16,-604.18 14638.16,-604.18"/>
 <polygon fill="black" stroke="black" points="14634.66,-601.33 14638.16,-611.33 14641.66,-601.33 14634.66,-601.33"/>
@@ -4571,7 +4581,7 @@
 <text text-anchor="middle" x="31826" y="-130.6" font-family="Times,serif" font-size="14.00">SafeSchedulerSettingsModule</text>
 </g>
 <!-- SafeSchedulerSettingsComponent&#45;&gt;SafeSchedulerSettingsModule -->
-<g id="edge291" class="edge">
+<g id="edge292" class="edge">
 <title>SafeSchedulerSettingsComponent&#45;&gt;SafeSchedulerSettingsModule</title>
 <path fill="none" stroke="black" d="M31826,-85.02C31826,-85.02 31826,-106.53 31826,-106.53"/>
 <polygon fill="black" stroke="black" points="31822.5,-106.53 31826,-116.53 31829.5,-106.53 31822.5,-106.53"/>
@@ -4583,7 +4593,7 @@
 <text text-anchor="middle" x="31826" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSchedulerSettingsComponent </text>
 </g>
 <!-- SafeSchedulerSettingsModule&#45;&gt;SafeSchedulerSettingsComponent  -->
-<g id="edge292" class="edge">
+<g id="edge293" class="edge">
 <title>SafeSchedulerSettingsModule&#45;&gt;SafeSchedulerSettingsComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M31826,-153.01C31826,-153.01 31826,-206 31826,-206"/>
 <polygon fill="black" stroke="black" points="31822.5,-206 31826,-216 31829.5,-206 31822.5,-206"/>
@@ -4595,7 +4605,7 @@
 <text text-anchor="middle" x="20221" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSearchMenuComponent</text>
 </g>
 <!-- SafeSearchMenuComponent&#45;&gt;SafeSearchMenuModule -->
-<g id="edge293" class="edge">
+<g id="edge294" class="edge">
 <title>SafeSearchMenuComponent&#45;&gt;SafeSearchMenuModule</title>
 <path fill="none" stroke="black" d="M20188.73,-252.31C20188.73,-261.77 20188.73,-271.39 20188.73,-271.39 20188.73,-271.39 20025.98,-271.39 20025.98,-271.39 20025.98,-271.39 20025.98,-297.11 20025.98,-297.11"/>
 <polygon fill="black" stroke="black" points="20022.48,-297.11 20025.98,-307.11 20029.48,-297.11 20022.48,-297.11"/>
@@ -4607,7 +4617,7 @@
 <text text-anchor="middle" x="16309" y="-397.19" font-family="Times,serif" font-size="14.00">SafeResourceGridModalComponent</text>
 </g>
 <!-- SafeResourceGridModalComponent&#45;&gt;SafeSearchResourceGridModalModule -->
-<g id="edge296" class="edge">
+<g id="edge297" class="edge">
 <title>SafeResourceGridModalComponent&#45;&gt;SafeSearchResourceGridModalModule</title>
 <path fill="none" stroke="black" d="M16382.5,-419.4C16382.5,-419.4 16382.5,-449.25 16382.5,-449.25"/>
 <polygon fill="black" stroke="black" points="16379,-449.25 16382.5,-459.25 16386,-449.25 16379,-449.25"/>
@@ -4619,7 +4629,7 @@
 <text text-anchor="middle" x="16311" y="-549.19" font-family="Times,serif" font-size="14.00">SafeResourceGridModalComponent </text>
 </g>
 <!-- SafeSearchResourceGridModalModule&#45;&gt;SafeResourceGridModalComponent  -->
-<g id="edge301" class="edge">
+<g id="edge302" class="edge">
 <title>SafeSearchResourceGridModalModule&#45;&gt;SafeResourceGridModalComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M16311,-495.4C16311,-495.4 16311,-525.25 16311,-525.25"/>
 <polygon fill="black" stroke="black" points="16307.5,-525.25 16311,-535.25 16314.5,-525.25 16307.5,-525.25"/>
@@ -4631,7 +4641,7 @@
 <text text-anchor="middle" x="5712" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSeriesMappingComponent</text>
 </g>
 <!-- SafeSeriesMappingComponent&#45;&gt;SafeSeriesMappingModule -->
-<g id="edge302" class="edge">
+<g id="edge303" class="edge">
 <title>SafeSeriesMappingComponent&#45;&gt;SafeSeriesMappingModule</title>
 <path fill="none" stroke="black" d="M5762.79,-252.13C5762.79,-252.13 5762.79,-297.08 5762.79,-297.08"/>
 <polygon fill="black" stroke="black" points="5759.29,-297.08 5762.79,-307.08 5766.29,-297.08 5759.29,-297.08"/>
@@ -4643,7 +4653,7 @@
 <text text-anchor="middle" x="16056" y="-321.19" font-family="Times,serif" font-size="14.00">SafeSnackbarSpinnerComponent</text>
 </g>
 <!-- SafeSnackbarSpinnerComponent&#45;&gt;SafeSnackbarSpinnerModule -->
-<g id="edge304" class="edge">
+<g id="edge305" class="edge">
 <title>SafeSnackbarSpinnerComponent&#45;&gt;SafeSnackbarSpinnerModule</title>
 <path fill="none" stroke="black" d="M16101.02,-343.4C16101.02,-343.4 16101.02,-373.25 16101.02,-373.25"/>
 <polygon fill="black" stroke="black" points="16097.52,-373.25 16101.02,-383.25 16104.52,-373.25 16097.52,-373.25"/>
@@ -4655,7 +4665,7 @@
 <text text-anchor="middle" x="16056" y="-473.19" font-family="Times,serif" font-size="14.00">SafeSnackbarSpinnerComponent </text>
 </g>
 <!-- SafeSnackbarSpinnerModule&#45;&gt;SafeSnackbarSpinnerComponent  -->
-<g id="edge307" class="edge">
+<g id="edge308" class="edge">
 <title>SafeSnackbarSpinnerModule&#45;&gt;SafeSnackbarSpinnerComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M16056,-419.4C16056,-419.4 16056,-449.25 16056,-449.25"/>
 <polygon fill="black" stroke="black" points="16052.5,-449.25 16056,-459.25 16059.5,-449.25 16052.5,-449.25"/>
@@ -4667,7 +4677,7 @@
 <text text-anchor="middle" x="6100" y="-229.9" font-family="Times,serif" font-size="14.00">SafeSpinnerComponent</text>
 </g>
 <!-- SafeSpinnerComponent&#45;&gt;SafeSpinnerModule -->
-<g id="edge308" class="edge">
+<g id="edge309" class="edge">
 <title>SafeSpinnerComponent&#45;&gt;SafeSpinnerModule</title>
 <path fill="none" stroke="black" d="M6112.7,-252.13C6112.7,-272.06 6112.7,-301.39 6112.7,-301.39 6112.7,-301.39 5956.99,-301.39 5956.99,-301.39 5956.99,-301.39 5956.99,-301.97 5956.99,-301.97"/>
 <polygon fill="black" stroke="black" points="5953.5,-297.2 5956.99,-307.2 5960.5,-297.2 5953.5,-297.2"/>
@@ -4685,7 +4695,7 @@
 <text text-anchor="middle" x="32059" y="-130.6" font-family="Times,serif" font-size="14.00">SafeStatusModalModule</text>
 </g>
 <!-- SafeStatusModalComponent&#45;&gt;SafeStatusModalModule -->
-<g id="edge310" class="edge">
+<g id="edge311" class="edge">
 <title>SafeStatusModalComponent&#45;&gt;SafeStatusModalModule</title>
 <path fill="none" stroke="black" d="M32059,-85.02C32059,-85.02 32059,-106.53 32059,-106.53"/>
 <polygon fill="black" stroke="black" points="32055.5,-106.53 32059,-116.53 32062.5,-106.53 32055.5,-106.53"/>
@@ -4697,7 +4707,7 @@
 <text text-anchor="middle" x="6465" y="-229.9" font-family="Times,serif" font-size="14.00">SafeTagboxComponent</text>
 </g>
 <!-- SafeTagboxComponent&#45;&gt;SafeTagboxModule -->
-<g id="edge311" class="edge">
+<g id="edge312" class="edge">
 <title>SafeTagboxComponent&#45;&gt;SafeTagboxModule</title>
 <path fill="none" stroke="black" d="M6463.3,-252.4C6463.3,-272.63 6463.3,-302.39 6463.3,-302.39 6463.3,-302.39 6047.02,-302.39 6047.02,-302.39 6047.02,-302.39 6047.02,-302.88 6047.02,-302.88"/>
 <polygon fill="black" stroke="black" points="6043.52,-297.27 6047.02,-307.27 6050.52,-297.27 6043.52,-297.27"/>
@@ -4709,7 +4719,7 @@
 <text text-anchor="middle" x="23818" y="-229.9" font-family="Times,serif" font-size="14.00">SafeEditUserComponent</text>
 </g>
 <!-- SafeEditUserComponent&#45;&gt;SafeUsersModule -->
-<g id="edge314" class="edge">
+<g id="edge315" class="edge">
 <title>SafeEditUserComponent&#45;&gt;SafeUsersModule</title>
 <path fill="none" stroke="black" d="M23767.08,-252.13C23767.08,-252.13 23767.08,-297.08 23767.08,-297.08"/>
 <polygon fill="black" stroke="black" points="23763.58,-297.08 23767.08,-307.08 23770.58,-297.08 23763.58,-297.08"/>
@@ -4721,7 +4731,7 @@
 <text text-anchor="middle" x="23653" y="-229.9" font-family="Times,serif" font-size="14.00">SafeUsersComponent</text>
 </g>
 <!-- SafeUsersComponent&#45;&gt;SafeUsersModule -->
-<g id="edge315" class="edge">
+<g id="edge316" class="edge">
 <title>SafeUsersComponent&#45;&gt;SafeUsersModule</title>
 <path fill="none" stroke="black" d="M23699.94,-252.13C23699.94,-252.13 23699.94,-297.08 23699.94,-297.08"/>
 <polygon fill="black" stroke="black" points="23696.44,-297.08 23699.94,-307.08 23703.44,-297.08 23696.44,-297.08"/>
@@ -4733,7 +4743,7 @@
 <text text-anchor="middle" x="23736" y="-397.19" font-family="Times,serif" font-size="14.00">SafeUsersComponent </text>
 </g>
 <!-- SafeUsersModule&#45;&gt;SafeUsersComponent  -->
-<g id="edge318" class="edge">
+<g id="edge319" class="edge">
 <title>SafeUsersModule&#45;&gt;SafeUsersComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M23736,-343.4C23736,-343.4 23736,-373.25 23736,-373.25"/>
 <polygon fill="black" stroke="black" points="23732.5,-373.25 23736,-383.25 23739.5,-373.25 23732.5,-373.25"/>
@@ -4751,7 +4761,7 @@
 <text text-anchor="middle" x="16047" y="-625.19" font-family="Times,serif" font-size="14.00">SafeWidgetChoiceModule</text>
 </g>
 <!-- SafeWidgetChoiceComponent&#45;&gt;SafeWidgetChoiceModule -->
-<g id="edge319" class="edge">
+<g id="edge320" class="edge">
 <title>SafeWidgetChoiceComponent&#45;&gt;SafeWidgetChoiceModule</title>
 <path fill="none" stroke="black" d="M16047,-571.4C16047,-571.4 16047,-601.25 16047,-601.25"/>
 <polygon fill="black" stroke="black" points="16043.5,-601.25 16047,-611.25 16050.5,-601.25 16043.5,-601.25"/>
@@ -4763,13 +4773,13 @@
 <text text-anchor="middle" x="16048" y="-693.19" font-family="Times,serif" font-size="14.00">SafeWidgetChoiceComponent </text>
 </g>
 <!-- SafeWidgetChoiceModule&#45;&gt;SafeWidgetChoiceComponent  -->
-<g id="edge320" class="edge">
+<g id="edge321" class="edge">
 <title>SafeWidgetChoiceModule&#45;&gt;SafeWidgetChoiceComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M16047,-647.61C16047,-647.61 16047,-669.12 16047,-669.12"/>
 <polygon fill="black" stroke="black" points="16043.5,-669.12 16047,-679.12 16050.5,-669.12 16043.5,-669.12"/>
 </g>
 <!-- SafeWidgetChoiceModule&#45;&gt;SafeWidgetGridModule -->
-<g id="edge327" class="edge">
+<g id="edge328" class="edge">
 <title>SafeWidgetChoiceModule&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M15964.32,-629.39C15922.16,-629.39 15879.68,-629.39 15879.68,-629.39 15879.68,-629.39 15879.68,-697.39 15879.68,-697.39 15879.68,-697.39 15339.78,-697.39 15339.78,-697.39"/>
 <polygon fill="black" stroke="black" points="15339.78,-693.89 15329.78,-697.39 15339.78,-700.89 15339.78,-693.89"/>
@@ -4781,7 +4791,7 @@
 <text text-anchor="middle" x="15363" y="-625.19" font-family="Times,serif" font-size="14.00">SafeExpandedWidgetComponent</text>
 </g>
 <!-- SafeExpandedWidgetComponent&#45;&gt;SafeWidgetGridModule -->
-<g id="edge321" class="edge">
+<g id="edge322" class="edge">
 <title>SafeExpandedWidgetComponent&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M15295.48,-647.61C15295.48,-647.61 15295.48,-669.12 15295.48,-669.12"/>
 <polygon fill="black" stroke="black" points="15291.98,-669.12 15295.48,-679.12 15298.98,-669.12 15291.98,-669.12"/>
@@ -4793,7 +4803,7 @@
 <text text-anchor="middle" x="15145" y="-625.19" font-family="Times,serif" font-size="14.00">SafeFloatingOptionsComponent</text>
 </g>
 <!-- SafeFloatingOptionsComponent&#45;&gt;SafeWidgetGridModule -->
-<g id="edge322" class="edge">
+<g id="edge323" class="edge">
 <title>SafeFloatingOptionsComponent&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M15210.98,-647.61C15210.98,-647.61 15210.98,-669.12 15210.98,-669.12"/>
 <polygon fill="black" stroke="black" points="15207.48,-669.12 15210.98,-679.12 15214.48,-669.12 15207.48,-669.12"/>
@@ -4805,7 +4815,7 @@
 <text text-anchor="middle" x="14951" y="-625.19" font-family="Times,serif" font-size="14.00">SafeTileDataComponent</text>
 </g>
 <!-- SafeTileDataComponent&#45;&gt;SafeWidgetGridModule -->
-<g id="edge323" class="edge">
+<g id="edge324" class="edge">
 <title>SafeTileDataComponent&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M14951,-647.42C14951,-664.45 14951,-687.39 14951,-687.39 14951,-687.39 15168.32,-687.39 15168.32,-687.39"/>
 <polygon fill="black" stroke="black" points="15168.32,-690.89 15178.32,-687.39 15168.32,-683.89 15168.32,-690.89"/>
@@ -4817,7 +4827,7 @@
 <text text-anchor="middle" x="14769" y="-625.19" font-family="Times,serif" font-size="14.00">SafeWidgetGridComponent</text>
 </g>
 <!-- SafeWidgetGridComponent&#45;&gt;SafeWidgetGridModule -->
-<g id="edge324" class="edge">
+<g id="edge325" class="edge">
 <title>SafeWidgetGridComponent&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M14769,-647.5C14769,-666.73 14769,-694.39 14769,-694.39 14769,-694.39 15168.22,-694.39 15168.22,-694.39"/>
 <polygon fill="black" stroke="black" points="15168.22,-697.89 15178.22,-694.39 15168.22,-690.89 15168.22,-697.89"/>
@@ -4829,13 +4839,13 @@
 <text text-anchor="middle" x="15254" y="-761.19" font-family="Times,serif" font-size="14.00">SafeWidgetGridComponent </text>
 </g>
 <!-- SafeWidgetGridModule&#45;&gt;SafeWidgetGridComponent  -->
-<g id="edge329" class="edge">
+<g id="edge330" class="edge">
 <title>SafeWidgetGridModule&#45;&gt;SafeWidgetGridComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M15254,-715.61C15254,-715.61 15254,-737.12 15254,-737.12"/>
 <polygon fill="black" stroke="black" points="15250.5,-737.12 15254,-747.12 15257.5,-737.12 15250.5,-737.12"/>
 </g>
 <!-- SafeWidgetModule&#45;&gt;SafeWidgetGridModule -->
-<g id="edge328" class="edge">
+<g id="edge329" class="edge">
 <title>SafeWidgetModule&#45;&gt;SafeWidgetGridModule</title>
 <path fill="none" stroke="black" d="M14595,-647.56C14595,-668.89 14595,-701.39 14595,-701.39 14595,-701.39 15168.08,-701.39 15168.08,-701.39"/>
 <polygon fill="black" stroke="black" points="15168.08,-704.89 15178.08,-701.39 15168.08,-697.89 15168.08,-704.89"/>
@@ -4847,7 +4857,7 @@
 <text text-anchor="middle" x="14635" y="-549.19" font-family="Times,serif" font-size="14.00">SafeWidgetComponent </text>
 </g>
 <!-- SafeWidgetModule&#45;&gt;SafeWidgetComponent  -->
-<g id="edge336" class="edge">
+<g id="edge337" class="edge">
 <title>SafeWidgetModule&#45;&gt;SafeWidgetComponent </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M14579.2,-611.38C14579.2,-611.38 14579.2,-581.54 14579.2,-581.54"/>
 <polygon fill="black" stroke="black" points="14582.7,-581.54 14579.2,-571.54 14575.7,-581.54 14582.7,-581.54"/>
@@ -4859,7 +4869,7 @@
 <text text-anchor="middle" x="14808" y="-549.19" font-family="Times,serif" font-size="14.00">SafeWidgetComponent</text>
 </g>
 <!-- SafeWidgetComponent&#45;&gt;SafeWidgetModule -->
-<g id="edge330" class="edge">
+<g id="edge331" class="edge">
 <title>SafeWidgetComponent&#45;&gt;SafeWidgetModule</title>
 <path fill="none" stroke="black" d="M14794.92,-571.58C14794.92,-579.67 14794.92,-587.39 14794.92,-587.39 14794.92,-587.39 14598.85,-587.39 14598.85,-587.39 14598.85,-587.39 14598.85,-601.33 14598.85,-601.33"/>
 <polygon fill="black" stroke="black" points="14595.35,-601.33 14598.85,-611.33 14602.35,-601.33 14595.35,-601.33"/>
@@ -4871,10 +4881,10 @@
 <text text-anchor="middle" x="21792" y="-229.9" font-family="Times,serif" font-size="14.00">SafeAddStepComponent</text>
 </g>
 <!-- SafeAddStepComponent&#45;&gt;SafeWorkflowStepperModule -->
-<g id="edge337" class="edge">
+<g id="edge338" class="edge">
 <title>SafeAddStepComponent&#45;&gt;SafeWorkflowStepperModule</title>
-<path fill="none" stroke="black" d="M21718.02,-252.18C21718.02,-277.22 21718.02,-319.39 21718.02,-319.39 21718.02,-319.39 21640.38,-319.39 21640.38,-319.39"/>
-<polygon fill="black" stroke="black" points="21640.38,-315.89 21630.38,-319.39 21640.38,-322.89 21640.38,-315.89"/>
+<path fill="none" stroke="black" d="M21792,-252.18C21792,-277.22 21792,-319.39 21792,-319.39 21792,-319.39 21610.6,-319.39 21610.6,-319.39"/>
+<polygon fill="black" stroke="black" points="21610.6,-315.89 21600.6,-319.39 21610.6,-322.89 21610.6,-315.89"/>
 </g>
 <!-- SafeStepComponent -->
 <g id="node300" class="node">
@@ -4883,10 +4893,10 @@
 <text text-anchor="middle" x="21631" y="-229.9" font-family="Times,serif" font-size="14.00">SafeStepComponent</text>
 </g>
 <!-- SafeStepComponent&#45;&gt;SafeWorkflowStepperModule -->
-<g id="edge338" class="edge">
+<g id="edge339" class="edge">
 <title>SafeStepComponent&#45;&gt;SafeWorkflowStepperModule</title>
-<path fill="none" stroke="black" d="M21597.91,-252.13C21597.91,-252.13 21597.91,-297.08 21597.91,-297.08"/>
-<polygon fill="black" stroke="black" points="21594.41,-297.08 21597.91,-307.08 21601.41,-297.08 21594.41,-297.08"/>
+<path fill="none" stroke="black" d="M21582.91,-252.13C21582.91,-252.13 21582.91,-297.08 21582.91,-297.08"/>
+<polygon fill="black" stroke="black" points="21579.41,-297.08 21582.91,-307.08 21586.41,-297.08 21579.41,-297.08"/>
 </g>
 <!-- SafeWorkflowStepperComponent -->
 <g id="node301" class="node">
@@ -4895,46 +4905,46 @@
 <text text-anchor="middle" x="21444" y="-229.9" font-family="Times,serif" font-size="14.00">SafeWorkflowStepperComponent</text>
 </g>
 <!-- SafeWorkflowStepperComponent&#45;&gt;SafeWorkflowStepperModule -->
-<g id="edge339" class="edge">
+<g id="edge340" class="edge">
 <title>SafeWorkflowStepperComponent&#45;&gt;SafeWorkflowStepperModule</title>
-<path fill="none" stroke="black" d="M21496.44,-252.13C21496.44,-252.13 21496.44,-297.08 21496.44,-297.08"/>
-<polygon fill="black" stroke="black" points="21492.94,-297.08 21496.44,-307.08 21499.94,-297.08 21492.94,-297.08"/>
+<path fill="none" stroke="black" d="M21481.44,-252.13C21481.44,-252.13 21481.44,-297.08 21481.44,-297.08"/>
+<polygon fill="black" stroke="black" points="21477.94,-297.08 21481.44,-307.08 21484.94,-297.08 21477.94,-297.08"/>
 </g>
 <!-- SafeAddStepComponent  -->
 <g id="node303" class="node">
 <title>SafeAddStepComponent </title>
-<polygon fill="#fb8072" stroke="black" points="21880.21,-419.39 21721.79,-419.39 21721.79,-383.39 21880.21,-383.39 21880.21,-419.39"/>
-<text text-anchor="middle" x="21801" y="-397.19" font-family="Times,serif" font-size="14.00">SafeAddStepComponent </text>
+<polygon fill="#fb8072" stroke="black" points="21652.21,-419.39 21493.79,-419.39 21493.79,-383.39 21652.21,-383.39 21652.21,-419.39"/>
+<text text-anchor="middle" x="21573" y="-397.19" font-family="Times,serif" font-size="14.00">SafeAddStepComponent </text>
 </g>
 <!-- SafeWorkflowStepperModule&#45;&gt;SafeAddStepComponent  -->
-<g id="edge342" class="edge">
+<g id="edge343" class="edge">
 <title>SafeWorkflowStepperModule&#45;&gt;SafeAddStepComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21630.28,-331.39C21704.2,-331.39 21795.62,-331.39 21795.62,-331.39 21795.62,-331.39 21795.62,-373.36 21795.62,-373.36"/>
-<polygon fill="black" stroke="black" points="21792.13,-373.36 21795.62,-383.36 21799.13,-373.36 21792.13,-373.36"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21547.01,-343.4C21547.01,-343.4 21547.01,-373.25 21547.01,-373.25"/>
+<polygon fill="black" stroke="black" points="21543.51,-373.25 21547.01,-383.25 21550.51,-373.25 21543.51,-373.25"/>
 </g>
 <!-- SafeStepComponent  -->
 <g id="node304" class="node">
 <title>SafeStepComponent </title>
-<polygon fill="#fb8072" stroke="black" points="21703.1,-419.39 21568.9,-419.39 21568.9,-383.39 21703.1,-383.39 21703.1,-419.39"/>
-<text text-anchor="middle" x="21636" y="-397.19" font-family="Times,serif" font-size="14.00">SafeStepComponent </text>
+<polygon fill="#fb8072" stroke="black" points="21475.1,-419.39 21340.9,-419.39 21340.9,-383.39 21475.1,-383.39 21475.1,-419.39"/>
+<text text-anchor="middle" x="21408" y="-397.19" font-family="Times,serif" font-size="14.00">SafeStepComponent </text>
 </g>
 <!-- SafeWorkflowStepperModule&#45;&gt;SafeStepComponent  -->
-<g id="edge343" class="edge">
+<g id="edge344" class="edge">
 <title>SafeWorkflowStepperModule&#45;&gt;SafeStepComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21599.53,-343.4C21599.53,-343.4 21599.53,-373.25 21599.53,-373.25"/>
-<polygon fill="black" stroke="black" points="21596.03,-373.25 21599.53,-383.25 21603.03,-373.25 21596.03,-373.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21455.41,-343.4C21455.41,-343.4 21455.41,-373.25 21455.41,-373.25"/>
+<polygon fill="black" stroke="black" points="21451.91,-373.25 21455.41,-383.25 21458.91,-373.25 21451.91,-373.25"/>
 </g>
 <!-- SafeWorkflowStepperComponent  -->
 <g id="node305" class="node">
 <title>SafeWorkflowStepperComponent </title>
-<polygon fill="#fb8072" stroke="black" points="21551.01,-419.39 21340.99,-419.39 21340.99,-383.39 21551.01,-383.39 21551.01,-419.39"/>
-<text text-anchor="middle" x="21446" y="-397.19" font-family="Times,serif" font-size="14.00">SafeWorkflowStepperComponent </text>
+<polygon fill="#fb8072" stroke="black" points="21880.01,-419.39 21669.99,-419.39 21669.99,-383.39 21880.01,-383.39 21880.01,-419.39"/>
+<text text-anchor="middle" x="21775" y="-397.19" font-family="Times,serif" font-size="14.00">SafeWorkflowStepperComponent </text>
 </g>
 <!-- SafeWorkflowStepperModule&#45;&gt;SafeWorkflowStepperComponent  -->
-<g id="edge344" class="edge">
+<g id="edge345" class="edge">
 <title>SafeWorkflowStepperModule&#45;&gt;SafeWorkflowStepperComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21515.88,-343.4C21515.88,-343.4 21515.88,-373.25 21515.88,-373.25"/>
-<polygon fill="black" stroke="black" points="21512.38,-373.25 21515.88,-383.25 21519.38,-373.25 21512.38,-373.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M21600.26,-331.39C21642.48,-331.39 21683.27,-331.39 21683.27,-331.39 21683.27,-331.39 21683.27,-373.36 21683.27,-373.36"/>
+<polygon fill="black" stroke="black" points="21679.77,-373.36 21683.27,-383.36 21686.77,-373.36 21679.77,-373.36"/>
 </g>
 </g>
 </svg>

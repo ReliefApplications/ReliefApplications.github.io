@@ -14,6 +14,10 @@
 <title>cluster_SafePreferencesModalModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 522,-230.8 522,-32.8 8,-32.8"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_SafePreferencesModalModule_exports</title>
+<polygon fill="none" stroke="black" points="197,-170.8 197,-222.8 425,-222.8 425,-170.8 197,-170.8"/>
+</g>
 <g id="clust4" class="cluster">
 <title>cluster_SafePreferencesModalModule_imports</title>
 <polygon fill="none" stroke="black" points="248,-40.8 248,-92.8 514,-92.8 514,-40.8 248,-40.8"/>
@@ -21,10 +25,6 @@
 <g id="clust2" class="cluster">
 <title>cluster_SafePreferencesModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 240,-92.8 240,-40.8 16,-40.8"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_SafePreferencesModalModule_exports</title>
-<polygon fill="none" stroke="black" points="197,-170.8 197,-222.8 425,-222.8 425,-170.8 197,-170.8"/>
 </g>
 <!-- SafePreferencesModalComponent -->
 <g id="node1" class="node">
