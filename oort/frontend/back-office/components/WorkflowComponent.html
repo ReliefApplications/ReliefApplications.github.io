@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts</code>
+    <code>projects/back-office/src/app/application/pages/workflow/workflow.component.ts</code>
 </p>
 
 
@@ -140,15 +140,23 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#canUpdate" >canUpdate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formActive" >formActive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#id" >id</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#loading" >loading</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#role" >role</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -163,6 +171,15 @@
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Optional</span>
                                 <a href="#workflow" >workflow</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#workflowNameForm" >workflowNameForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#workflowSubscription" >workflowSubscription</a>
                             </li>
                         </ul>
                     </td>
@@ -190,8 +207,26 @@
                                 <a href="#onActivate" >onActivate</a>
                             </li>
                             <li>
+                                <a href="#onAddStep" >onAddStep</a>
+                            </li>
+                            <li>
+                                <a href="#onDeleteStep" >onDeleteStep</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#onOpenStep" >onOpenStep</a>
+                            </li>
+                            <li>
+                                <a href="#onReorderSteps" >onReorderSteps</a>
+                            </li>
+                            <li>
+                                <a href="#saveAccess" >saveAccess</a>
+                            </li>
+                            <li>
+                                <a href="#saveName" >saveName</a>
+                            </li>
+                            <li>
+                                <a href="#toggleFormActive" >toggleFormActive</a>
                             </li>
                         </ul>
                     </td>
@@ -211,12 +246,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(apollo: Apollo, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, snackBar: SafeSnackBarService, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, previewService: <a href="../injectables/PreviewService.html" target="_self">PreviewService</a>)</code>
+<code>constructor(apollo: Apollo, workflowService: SafeWorkflowService, applicationService: SafeApplicationService, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dialog: MatDialog, snackBar: SafeSnackBarService, translate: TranslateService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:39</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:51</a></div>
                             </td>
                         </tr>
 
@@ -246,10 +281,10 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>route</td>
+                                                        <td>workflowService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                                    <code>SafeWorkflowService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -258,10 +293,22 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>snackBar</td>
+                                                        <td>applicationService</td>
                                                   
                                                         <td>
-                                                                    <code>SafeSnackBarService</code>
+                                                                    <code>SafeApplicationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -282,10 +329,34 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>previewService</td>
+                                                        <td>dialog</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PreviewService.html" target="_self" >PreviewService</a></code>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeSnackBarService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -333,8 +404,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="279"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:279</a></div>
                 </td>
             </tr>
 
@@ -372,16 +443,14 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="146"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:146</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="313"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:313</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Deletes all subscriptions of the page.</p>
-</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -411,16 +480,14 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:64</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Gets the workflow from the route.</p>
-</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -450,15 +517,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="231"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:231</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Activates the clicked element.</p>
+                    <div class="io-description"><p>Get data from within selected step</p>
 </div>
 
                     <div class="io-description">
@@ -470,7 +537,6 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -485,10 +551,116 @@
                                     </td>
 
 
-                                    <td>
-                                        <p>Element ref.</p>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAddStep"></a>
+                    <span class="name">
+                        <span ><b>onAddStep</b></span>
+                        <a href="#onAddStep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAddStep()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="226"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:226</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Navigate to the add-step component.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDeleteStep"></a>
+                    <span class="name">
+                        <span ><b>onDeleteStep</b></span>
+                        <a href="#onDeleteStep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDeleteStep(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:174</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a step if authorized.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
                                 </tr>
                             </tbody>
                         </table>
@@ -528,15 +700,86 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="125"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:125</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:295</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Navigates to the new step.</p>
+                    <div class="io-description"><p>On Open Step.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onReorderSteps"></a>
+                    <span class="name">
+                        <span ><b>onReorderSteps</b></span>
+                        <a href="#onReorderSteps"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onReorderSteps(steps: Step[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Saves the new ordering</p>
 </div>
 
                     <div class="io-description">
@@ -553,9 +796,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>index</td>
+                                    <td>steps</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <code>Step[]</code>
                                     </td>
 
                                     <td>
@@ -564,7 +807,7 @@
 
 
                                     <td>
-                                        <p>Index of the step in the workflow.</p>
+                                        <p>steps order.</p>
 
                                     </td>
                                 </tr>
@@ -579,6 +822,160 @@
                     </div>
                     <div class="io-description">
                         
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveAccess"></a>
+                    <span class="name">
+                        <span ><b>saveAccess</b></span>
+                        <a href="#saveAccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveAccess(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Edits the permissions layer.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>permission event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveName"></a>
+                    <span class="name">
+                        <span ><b>saveName</b></span>
+                        <a href="#saveName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveName()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates the name of the workflow and his linked page.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleFormActive"></a>
+                    <span class="name">
+                        <span ><b>toggleFormActive</b></span>
+                        <a href="#toggleFormActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleFormActive()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggle workflow name form.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
                     </div>
                 </td>
             </tr>
@@ -615,7 +1012,86 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:36</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canUpdate"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>canUpdate</b></span>
+                        <a href="#canUpdate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formActive"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>formActive</b></span>
+                        <a href="#formActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -647,7 +1123,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:37</a></div>
                         </td>
                     </tr>
 
@@ -673,39 +1149,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:25</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="role"></a>
-                    <span class="name">
-                            <span class="modifier">Public</span>
-                        <span ><b>role</b></span>
-                        <a href="#role"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;&#x27;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:39</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -733,7 +1177,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:51</a></div>
                         </td>
                     </tr>
 
@@ -765,7 +1209,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:40</a></div>
                         </td>
                     </tr>
 
@@ -793,7 +1237,67 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/back-office/src/app/app-preview/pages/workflow/workflow.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="workflowNameForm"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>workflowNameForm</b></span>
+                        <a href="#workflowNameForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({})</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="workflowSubscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>workflowSubscription</b></span>
+                        <a href="#workflowSubscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/back-office/src/app/application/pages/workflow/workflow.component.ts:39</a></div>
                         </td>
                     </tr>
 
@@ -808,20 +1312,29 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
 import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
 import {
-  ContentType,
+  Workflow,
   Step,
   SafeSnackBarService,
-  Workflow,
+  SafeConfirmModalComponent,
+  ContentType,
+  SafeApplicationService,
+  SafeWorkflowService,
   NOTIFICATIONS,
 } from &#x27;@safe/builder&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
 import {
-  GetWorkflowByIdQueryResponse,
-  GET_WORKFLOW_BY_ID,
-} from &#x27;../../../graphql/queries&#x27;;
-import { PreviewService } from &#x27;../../../services/preview.service&#x27;;
+  EditPageMutationResponse,
+  EDIT_PAGE,
+  DeleteStepMutationResponse,
+  DELETE_STEP,
+  EditWorkflowMutationResponse,
+  EDIT_WORKFLOW,
+} from &#x27;../../../graphql/mutations&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 
 @Component({
   selector: &#x27;app-workflow&#x27;,
@@ -835,70 +1348,198 @@ export class WorkflowComponent implements OnInit, OnDestroy {
   // &#x3D;&#x3D;&#x3D; WORKFLOW &#x3D;&#x3D;&#x3D;
   public id &#x3D; &#x27;&#x27;;
   public workflow?: Workflow;
+  private workflowSubscription?: Subscription;
   public steps: Step[] &#x3D; [];
 
-  // &#x3D;&#x3D;&#x3D; ROUTE &#x3D;&#x3D;&#x3D;
-  private routeSubscription?: Subscription;
+  // &#x3D;&#x3D;&#x3D; WORKFLOW EDITION &#x3D;&#x3D;&#x3D;
+  public formActive &#x3D; false;
+  public workflowNameForm: FormGroup &#x3D; new FormGroup({});
+  public canUpdate &#x3D; false;
 
   // &#x3D;&#x3D;&#x3D; ACTIVE STEP &#x3D;&#x3D;&#x3D;
   public activeStep &#x3D; 0;
 
-  // &#x3D;&#x3D;&#x3D; PREVIEWED ROLE &#x3D;&#x3D;&#x3D;
-  public role &#x3D; &#x27;&#x27;;
+  // &#x3D;&#x3D;&#x3D; ROUTE &#x3D;&#x3D;&#x3D;
+  private routeSubscription?: Subscription;
 
   constructor(
     private apollo: Apollo,
+    private workflowService: SafeWorkflowService,
+    private applicationService: SafeApplicationService,
     private route: ActivatedRoute,
-    private snackBar: SafeSnackBarService,
     private router: Router,
-    private previewService: PreviewService
+    public dialog: MatDialog,
+    private snackBar: SafeSnackBarService,
+    private translate: TranslateService
   ) {}
 
-  /**
-   * Gets the workflow from the route.
-   */
   ngOnInit(): void {
-    this.previewService.roleId$.subscribe((role) &#x3D;&gt; {
-      this.role &#x3D; role;
-    });
+    this.formActive &#x3D; false;
     this.routeSubscription &#x3D; this.route.params.subscribe((params) &#x3D;&gt; {
       this.id &#x3D; params.id;
-      this.apollo
-        .watchQuery&lt;GetWorkflowByIdQueryResponse&gt;({
-          query: GET_WORKFLOW_BY_ID,
-          variables: {
-            id: this.id,
-            asRole: this.role,
-          },
-        })
-        .valueChanges.subscribe(
-          (res) &#x3D;&gt; {
-            if (res.data.workflow) {
-              this.workflow &#x3D; res.data.workflow;
-              this.steps &#x3D; res.data.workflow.steps || [];
-              this.loading &#x3D; res.loading;
-              if (this.steps.length &gt; 0) {
-                this.onOpenStep(0);
-              }
-            } else {
-              this.snackBar.openSnackBar(
-                NOTIFICATIONS.accessNotProvided(&#x27;workflow&#x27;),
-                { error: true }
-              );
-            }
-          },
-          (err) &#x3D;&gt; {
-            this.snackBar.openSnackBar(err.message, { error: true });
-          }
-        );
+      this.workflowService.loadWorkflow(this.id);
     });
+
+    this.workflowSubscription &#x3D; this.workflowService.workflow$.subscribe(
+      (workflow: Workflow | null) &#x3D;&gt; {
+        if (workflow) {
+          this.steps &#x3D; workflow.steps || [];
+          this.workflowNameForm &#x3D; new FormGroup({
+            workflowName: new FormControl(workflow.name, Validators.required),
+          });
+          this.loading &#x3D; false;
+          if (!this.workflow || workflow.id !&#x3D;&#x3D; this.workflow.id) {
+            const [firstStep, ..._] &#x3D; workflow.steps || [];
+            if (firstStep) {
+              if (firstStep.type &#x3D;&#x3D;&#x3D; ContentType.form) {
+                this.router.navigate(
+                  [&#x27;./&#x27; + firstStep.type + &#x27;/&#x27; + firstStep.id],
+                  { relativeTo: this.route }
+                );
+              } else {
+                this.router.navigate(
+                  [&#x27;./&#x27; + firstStep.type + &#x27;/&#x27; + firstStep.content],
+                  { relativeTo: this.route }
+                );
+              }
+              this.activeStep &#x3D; 0;
+            }
+            if (!firstStep) {
+              this.router.navigate([&#x60;./&#x60;], { relativeTo: this.route });
+            }
+          } else {
+            if (
+              workflow.steps &amp;&amp;
+              workflow.steps.length &gt; (this.workflow.steps?.length || [])
+            ) {
+              this.activeStep &#x3D; workflow.steps.length - 1;
+            }
+          }
+          this.workflow &#x3D; workflow;
+          this.canUpdate &#x3D; this.workflow.canUpdate || false;
+        } else {
+          this.loading &#x3D; true;
+          this.steps &#x3D; [];
+        }
+      }
+    );
   }
 
   /**
-   * Activates the clicked element.
-   *
-   * @param elementRef Element ref.
+   * Toggle workflow name form.
    */
+  toggleFormActive(): void {
+    if (this.workflow?.page?.canUpdate) {
+      this.formActive &#x3D; !this.formActive;
+    }
+  }
+
+  /**
+   * Updates the name of the workflow and his linked page.
+   */
+  saveName(): void {
+    const { workflowName } &#x3D; this.workflowNameForm.value;
+    this.toggleFormActive();
+    this.apollo
+      .mutate&lt;EditPageMutationResponse&gt;({
+        mutation: EDIT_PAGE,
+        variables: {
+          id: this.workflow?.page?.id,
+          name: workflowName,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.data) {
+          this.workflow &#x3D; { ...this.workflow, name: res.data.editPage.name };
+          this.applicationService.updatePageName(res.data.editPage);
+        }
+      });
+  }
+
+  /**
+   * Edits the permissions layer.
+   *
+   * @param e permission event.
+   */
+  saveAccess(e: any): void {
+    this.apollo
+      .mutate&lt;EditPageMutationResponse&gt;({
+        mutation: EDIT_PAGE,
+        variables: {
+          id: this.workflow?.page?.id,
+          permissions: e,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        this.workflow &#x3D; {
+          ...this.workflow,
+          permissions: res.data?.editPage.permissions,
+        };
+      });
+  }
+
+  /**
+   * Deletes a step if authorized.
+   *
+   * @param step step to delete
+   */
+  onDeleteStep(index: number): void {
+    if (index &gt;&#x3D; 0 &amp;&amp; index &lt; this.steps.length) {
+      const step &#x3D; this.steps[index];
+      const currentStep &#x3D;
+        this.activeStep &gt;&#x3D; 0 ? this.steps[this.activeStep] : null;
+      const dialogRef &#x3D; this.dialog.open(SafeConfirmModalComponent, {
+        data: {
+          title: this.translate.instant(&#x27;common.deleteObject&#x27;, {
+            name: this.translate.instant(&#x27;common.step.one&#x27;),
+          }),
+          content: this.translate.instant(
+            &#x27;pages.workflow.deleteStep.confirmationMessage&#x27;,
+            { step: step.name }
+          ),
+          confirmText: this.translate.instant(&#x27;components.confirmModal.delete&#x27;),
+          confirmColor: &#x27;warn&#x27;,
+        },
+      });
+      dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+        if (value) {
+          this.apollo
+            .mutate&lt;DeleteStepMutationResponse&gt;({
+              mutation: DELETE_STEP,
+              variables: {
+                id: step.id,
+              },
+            })
+            .subscribe((res) &#x3D;&gt; {
+              if (res.data) {
+                this.snackBar.openSnackBar(NOTIFICATIONS.objectDeleted(&#x27;Step&#x27;));
+                this.steps &#x3D; this.steps.filter(
+                  (x) &#x3D;&gt; x.id !&#x3D;&#x3D; res.data?.deleteStep.id
+                );
+                if (index &#x3D;&#x3D;&#x3D; this.activeStep) {
+                  this.onOpenStep(-1);
+                } else {
+                  if (currentStep) {
+                    this.activeStep &#x3D; this.steps.findIndex(
+                      (x) &#x3D;&gt; x.id &#x3D;&#x3D;&#x3D; currentStep.id
+                    );
+                  }
+                }
+              }
+            });
+        }
+      });
+    }
+  }
+
+  /**
+   * Navigate to the add-step component.
+   */
+  onAddStep(): void {
+    this.router.navigate([&#x27;./add-step&#x27;], { relativeTo: this.route });
+  }
+
+  /** Get data from within selected step */
   onActivate(elementRef: any): void {
     if (elementRef.goToNextStep) {
       elementRef.goToNextStep.subscribe((event: any) &#x3D;&gt; {
@@ -907,6 +1548,41 @@ export class WorkflowComponent implements OnInit, OnDestroy {
         }
       });
     }
+  }
+
+  /**
+   * Saves the new ordering
+   *
+   * @param steps steps order.
+   */
+  onReorderSteps(steps: Step[]): void {
+    const currentStep &#x3D;
+      this.activeStep &gt;&#x3D; 0 ? this.steps[this.activeStep] : null;
+    this.apollo
+      .mutate&lt;EditWorkflowMutationResponse&gt;({
+        mutation: EDIT_WORKFLOW,
+        variables: {
+          id: this.id,
+          steps: steps.map((step) &#x3D;&gt; step.id),
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.data) {
+          this.snackBar.openSnackBar(NOTIFICATIONS.objectReordered(&#x27;Step&#x27;));
+          if (currentStep) {
+            const index &#x3D; steps.findIndex((x) &#x3D;&gt; x.id &#x3D;&#x3D;&#x3D; currentStep.id);
+            this.activeStep &#x3D; index;
+          }
+          this.steps &#x3D; steps;
+        } else {
+          this.snackBar.openSnackBar(
+            NOTIFICATIONS.objectNotEdited(
+              &#x27;Workflow&#x27;,
+              res.errors ? res.errors[0].message : &#x27;&#x27;
+            )
+          );
+        }
+      });
   }
 
   /**
@@ -926,9 +1602,7 @@ export class WorkflowComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Navigates to the new step.
-   *
-   * @param index Index of the step in the workflow.
+   * On Open Step.
    */
   public onOpenStep(index: number): void {
     if (index &gt;&#x3D; 0 &amp;&amp; index &lt; this.steps.length) {
@@ -948,12 +1622,12 @@ export class WorkflowComponent implements OnInit, OnDestroy {
     }
   }
 
-  /**
-   * Deletes all subscriptions of the page.
-   */
   ngOnDestroy(): void {
     if (this.routeSubscription) {
       this.routeSubscription.unsubscribe();
+    }
+    if (this.workflowSubscription) {
+      this.workflowSubscription.unsubscribe();
     }
   }
 }
@@ -963,10 +1637,54 @@ export class WorkflowComponent implements OnInit, OnDestroy {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-spinner diameter&#x3D;&quot;45&quot; class&#x3D;&quot;page-loader&quot; *ngIf&#x3D;&quot;loading&quot;&gt;&lt;/mat-spinner&gt;
 &lt;ng-container *ngIf&#x3D;&quot;!loading &amp;&amp; workflow&quot;&gt;
+  &lt;!-- HEADER --&gt;
+  &lt;div *ngIf&#x3D;&quot;!formActive&quot; class&#x3D;&quot;workflow-name-container&quot;&gt;
+    &lt;h1 class&#x3D;&quot;workflow-name&quot; (click)&#x3D;&quot;toggleFormActive()&quot;&gt;
+      {{ workflow.name }}
+    &lt;/h1&gt;
+    &lt;safe-access
+      [access]&#x3D;&quot;workflow.permissions&quot;
+      [application]&#x3D;&quot;workflow.page?.application?.id&quot;
+      (save)&#x3D;&quot;saveAccess($event)&quot;
+      *ngIf&#x3D;&quot;workflow.page?.canUpdate || false&quot;
+    &gt;&lt;/safe-access&gt;
+  &lt;/div&gt;
+  &lt;!-- NAME EDITION --&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;formActive&quot;&gt;
+    &lt;form
+      [formGroup]&#x3D;&quot;workflowNameForm&quot;
+      (ngSubmit)&#x3D;&quot;saveName()&quot;
+      class&#x3D;&quot;workflow-name-container&quot;
+    &gt;
+      &lt;mat-form-field&gt;
+        &lt;mat-label&gt;{{ &#x27;common.name&#x27; | translate }}&lt;/mat-label&gt;
+        &lt;input matInput formControlName&#x3D;&quot;workflowName&quot; type&#x3D;&quot;string&quot; /&gt;
+      &lt;/mat-form-field&gt;
+      &lt;safe-button
+        type&#x3D;&quot;submit&quot;
+        [isIcon]&#x3D;&quot;true&quot;
+        icon&#x3D;&quot;save&quot;
+        variant&#x3D;&quot;primary&quot;
+        [disabled]&#x3D;&quot;!workflowNameForm.valid&quot;
+      &gt;
+      &lt;/safe-button&gt;
+      &lt;safe-button
+        [isIcon]&#x3D;&quot;true&quot;
+        icon&#x3D;&quot;close&quot;
+        variant&#x3D;&quot;danger&quot;
+        (click)&#x3D;&quot;toggleFormActive()&quot;
+      &gt;
+      &lt;/safe-button&gt;
+    &lt;/form&gt;
+  &lt;/ng-container&gt;
   &lt;!-- STEPS --&gt;
   &lt;safe-workflow-stepper
     [steps]&#x3D;&quot;steps&quot;
+    [canUpdate]&#x3D;&quot;canUpdate&quot;
+    (add)&#x3D;&quot;onAddStep()&quot;
     (openStep)&#x3D;&quot;onOpenStep($event)&quot;
+    (delete)&#x3D;&quot;onDeleteStep($event)&quot;
+    (reorderSteps)&#x3D;&quot;onReorderSteps($event)&quot;
     [activeStep]&#x3D;&quot;activeStep&quot;
   &gt;
   &lt;/safe-workflow-stepper&gt;
@@ -979,9 +1697,41 @@ export class WorkflowComponent implements OnInit, OnDestroy {
                 <p class="comment">
                     <code>./workflow.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">safe-workflow-stepper {
+                <pre class="line-numbers"><code class="language-scss">.workflow-name-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .workflow-name {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 6px;
+    margin: unset;
+  }
+  .workflow-name:hover {
+    background-color: #dddddd54;
+  }
+}
+
+safe-workflow-stepper {
   margin: 16px -24px;
   display: block;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.step-list.cdk-drop-list-dragging .step-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 </code></pre>
     </div>
@@ -1011,7 +1761,7 @@ export class WorkflowComponent implements OnInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && workflow">  <!-- STEPS -->  <safe-workflow-stepper    [steps]="steps"    (openStep)="onOpenStep($event)"    [activeStep]="activeStep"  >  </safe-workflow-stepper></ng-container><router-outlet (activate)="onActivate($event)"></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && workflow">  <!-- HEADER -->  <div *ngIf="!formActive" class="workflow-name-container">    <h1 class="workflow-name" (click)="toggleFormActive()">      {{ workflow.name }}    </h1>    <safe-access      [access]="workflow.permissions"      [application]="workflow.page?.application?.id"      (save)="saveAccess($event)"      *ngIf="workflow.page?.canUpdate || false"    ></safe-access>  </div>  <!-- NAME EDITION -->  <ng-container *ngIf="formActive">    <form      [formGroup]="workflowNameForm"      (ngSubmit)="saveName()"      class="workflow-name-container"    >      <mat-form-field>        <mat-label>{{ \'common.name\' | translate }}</mat-label>        <input matInput formControlName="workflowName" type="string" />      </mat-form-field>      <safe-button        type="submit"        [isIcon]="true"        icon="save"        variant="primary"        [disabled]="!workflowNameForm.valid"      >      </safe-button>      <safe-button        [isIcon]="true"        icon="close"        variant="danger"        (click)="toggleFormActive()"      >      </safe-button>    </form>  </ng-container>  <!-- STEPS -->  <safe-workflow-stepper    [steps]="steps"    [canUpdate]="canUpdate"    (add)="onAddStep()"    (openStep)="onOpenStep($event)"    (delete)="onDeleteStep($event)"    (reorderSteps)="onReorderSteps($event)"    [activeStep]="activeStep"  >  </safe-workflow-stepper></ng-container><router-outlet (activate)="onActivate($event)"></router-outlet></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddDashboardComponent', 'selector': 'app-add-dashboard'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddResourceComponent', 'selector': 'app-add-resource'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardsComponent', 'selector': 'app-dashboards'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'WorkflowComponent'};

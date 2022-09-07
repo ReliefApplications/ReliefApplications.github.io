@@ -18,13 +18,13 @@
 <title>cluster_ResourcesModule_declarations</title>
 <polygon fill="none" stroke="black" points="470,-40.8 470,-92.8 754,-92.8 754,-40.8 470,-40.8"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_ResourcesModule_exports</title>
-<polygon fill="none" stroke="black" points="307,-170.8 307,-222.8 465,-222.8 465,-170.8 307,-170.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_ResourcesModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 462,-92.8 462,-40.8 16,-40.8"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_ResourcesModule_exports</title>
+<polygon fill="none" stroke="black" points="307,-170.8 307,-222.8 465,-222.8 465,-170.8 307,-170.8"/>
 </g>
 <!-- FilterComponent -->
 <g id="node1" class="node">
