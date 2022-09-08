@@ -14,6 +14,10 @@
 <title>cluster_RolesModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 314,-230.8 314,-32.8 8,-32.8"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_RolesModule_exports</title>
+<polygon fill="none" stroke="black" points="100,-170.8 100,-222.8 232,-222.8 232,-170.8 100,-170.8"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_RolesModule_declarations</title>
 <polygon fill="none" stroke="black" points="176,-40.8 176,-92.8 306,-92.8 306,-40.8 176,-40.8"/>
@@ -21,10 +25,6 @@
 <g id="clust4" class="cluster">
 <title>cluster_RolesModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 168,-92.8 168,-40.8 16,-40.8"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_RolesModule_exports</title>
-<polygon fill="none" stroke="black" points="100,-170.8 100,-222.8 232,-222.8 232,-170.8 100,-170.8"/>
 </g>
 <!-- RolesComponent -->
 <g id="node1" class="node">

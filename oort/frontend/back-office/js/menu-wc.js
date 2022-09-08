@@ -953,13 +953,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/WorkflowModule.html" data-type="entity-link" >WorkflowModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65"' : 'data-target="#xs-components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65"' }>
+                                            'data-target="#components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c"' : 'data-target="#xs-components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65"' :
-                                            'id="xs-components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c"' :
+                                            'id="xs-components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c"' }>
                                             <li class="link">
                                                 <a href="components/WorkflowComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WorkflowComponent</a>
                                             </li>
@@ -970,13 +970,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/WorkflowModule.html" data-type="entity-link" >WorkflowModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c-1"' : 'data-target="#xs-components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c-1"' }>
+                                            'data-target="#components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65-1"' : 'data-target="#xs-components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65-1"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c-1"' :
-                                            'id="xs-components-links-module-WorkflowModule-e9b12cada9eddaab50ed15d66c9bcc250b03d3f339cf3945ba91a5202b51eb6b9c9bacefcc4a9a064668869b5762fc547bfddccf969bc4f38a196edb57d8779c-1"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65-1"' :
+                                            'id="xs-components-links-module-WorkflowModule-16f0292789f5f8f1349be081b753500275128849285b618ca58a64cef5c2eb244e3e71c11cd55f4e8626a996bfb0b0f0cd26b769187436a3ca0c850f545eac65-1"' }>
                                             <li class="link">
                                                 <a href="components/WorkflowComponent-1.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >WorkflowComponent</a>
                                             </li>
