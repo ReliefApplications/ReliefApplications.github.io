@@ -227,8 +227,8 @@ Exposes the available tiles, and find the settings from a widget.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="315"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:315</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="324"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:324</a></div>
                 </td>
             </tr>
 
@@ -322,8 +322,8 @@ Exposes the available tiles, and find the settings from a widget.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="278"
-                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:278</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="286"
+                            class="link-to-prism">projects/safe/src/lib/services/grid.service.ts:286</a></div>
                 </td>
             </tr>
 
@@ -1115,6 +1115,7 @@ export class SafeGridService {
    * @param metaFields List of meta fields
    */
   public async populateMetaFields(metaFields: any): Promise&lt;void&gt; {
+    const promises: Promise&lt;any&gt;[] &#x3D; [];
     for (const fieldName of Object.keys(metaFields)) {
       const meta &#x3D; metaFields[fieldName];
       if (meta.choicesByUrl) {
@@ -1127,18 +1128,25 @@ export class SafeGridService {
               JSON.parse(localRes),
               meta.choicesByUrl
             ),
+            // choicesByUrl: null,
           };
         } else {
-          const res: any &#x3D;
-            await this.apiProxyService.promisedRequestWithHeaders(url);
-          localStorage.setItem(url, JSON.stringify(res));
-          metaFields[fieldName] &#x3D; {
-            ...meta,
-            choices: this.extractChoices(res, meta.choicesByUrl),
-          };
+          promises.push(
+            this.apiProxyService
+              .promisedRequestWithHeaders(url)
+              .then((value: any) &#x3D;&gt; {
+                localStorage.setItem(url, JSON.stringify(value));
+                metaFields[fieldName] &#x3D; {
+                  ...meta,
+                  choices: this.extractChoices(value, meta.choicesByUrl),
+                  // choicesByUrl: null,
+                };
+              })
+          );
         }
       }
     }
+    await Promise.all(promises);
   }
 
   /**
@@ -1180,6 +1188,7 @@ export class SafeGridService {
         text: choicesByUrl.otherText ? choicesByUrl.otherText : &#x27;Other&#x27;,
       });
     }
+    choices.sort((a: any, b: any) &#x3D;&gt; a.text.localeCompare(b.text));
     return choices;
   }
 

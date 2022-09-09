@@ -591,8 +591,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="370"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:370</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="372"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:372</a></div>
                 </td>
             </tr>
 
@@ -705,8 +705,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="482"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:482</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="484"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:484</a></div>
                 </td>
             </tr>
 
@@ -860,8 +860,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="494"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:494</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="496"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:496</a></div>
                 </td>
             </tr>
 
@@ -902,8 +902,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="402"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:402</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="404"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/grid/grid.component.ts:404</a></div>
                 </td>
             </tr>
 
@@ -1449,11 +1449,11 @@ import { NOTIFICATIONS } from &#x27;../../../const/notifications&#x27;;
 import { SafeAuthService } from &#x27;../../../services/auth.service&#x27;;
 import { SafeEmailService } from &#x27;../../../services/email.service&#x27;;
 import { QueryBuilderService } from &#x27;../../../services/query-builder.service&#x27;;
-import { GridLayout } from &#x27;../../ui/core-grid/models/grid-layout.model&#x27;;
 import { SafeCoreGridComponent } from &#x27;../../ui/core-grid/core-grid.component&#x27;;
 import { SafeGridLayoutService } from &#x27;../../../services/grid-layout.service&#x27;;
 import { Layout } from &#x27;../../../models/layout.model&#x27;;
 import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { cleanRecord } from &#x27;../../../utils/cleanRecord&#x27;;
 
 /** Regex for the pattern &quot;today()+[number of days to add]&quot; */
 const REGEX_PLUS &#x3D; new RegExp(&#x27;today\\(\\)\\+\\d+&#x27;);
@@ -1556,7 +1556,7 @@ export class SafeGridWidgetComponent implements OnInit {
             variables: {
               id: item.id,
               data,
-              template: this.settings.template,
+              template: this.settings.query?.template,
             },
           })
           .toPromise()
@@ -1764,12 +1764,14 @@ export class SafeGridWidgetComponent implements OnInit {
         update[modification.field.name] &#x3D; modification.value;
       }
     }
+    const data &#x3D; cleanRecord(update);
     return this.apollo
       .mutate&lt;EditRecordsMutationResponse&gt;({
         mutation: EDIT_RECORDS,
         variables: {
           ids,
-          data: update,
+          data,
+          template: this.settings.query?.template,
         },
       })
       .toPromise();

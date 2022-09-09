@@ -101,6 +101,61 @@ Only used to add on complete expression to the survey.</p>
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(domService: <a href="../injectables/DomService.html" target="_self">DomService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/safe/src/lib/services/form-builder.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the service</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>domService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DomService.html" target="_self" >DomService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The dom service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -127,8 +182,8 @@ Only used to add on complete expression to the survey.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">projects/safe/src/lib/services/form-builder.service.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">projects/safe/src/lib/services/form-builder.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -192,6 +247,8 @@ Only used to add on complete expression to the survey.</p>
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
+import { renderCustomProperties } from &#x27;../survey/custom-properties&#x27;;
+import { DomService } from &#x27;./dom.service&#x27;;
 
 /**
  * Shared form builder service.
@@ -202,6 +259,13 @@ import * as Survey from &#x27;survey-angular&#x27;;
 })
 export class SafeFormBuilderService {
   /**
+   * Constructor of the service
+   *
+   * @param domService The dom service
+   */
+  constructor(private domService: DomService) {}
+
+  /**
    * Creates new survey from the structure and add on complete expression to it.
    *
    * @param structure form structure
@@ -209,6 +273,7 @@ export class SafeFormBuilderService {
    */
   createSurvey(structure: string): Survey.Survey {
     const survey &#x3D; new Survey.Model(structure);
+    survey.onAfterRenderQuestion.add(renderCustomProperties(this.domService));
     const onCompleteExpression &#x3D; survey.toJSON().onCompleteExpression;
     if (onCompleteExpression) {
       survey.onCompleting.add(() &#x3D;&gt; {

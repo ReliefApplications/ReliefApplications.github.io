@@ -586,8 +586,8 @@ created.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="177"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/query-builder.component.ts:177</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/query-builder.component.ts:168</a></div>
                 </td>
             </tr>
 
@@ -702,8 +702,8 @@ created.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="157"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/query-builder.component.ts:157</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/query-builder.component.ts:148</a></div>
                 </td>
             </tr>
 
@@ -741,8 +741,8 @@ created.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="166"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/query-builder.component.ts:166</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/query-builder.component.ts:157</a></div>
                 </td>
             </tr>
 
@@ -1084,7 +1084,7 @@ export class SafeQueryBuilderComponent implements OnInit {
       if (this.form?.get(&#x27;filter&#x27;)) {
         this.form?.setControl(
           &#x27;filter&#x27;,
-          createFilterGroup(this.form?.value.filter, this.availableScalarFields)
+          createFilterGroup(this.form?.value.filter)
         );
       }
     } else {
@@ -1107,20 +1107,14 @@ export class SafeQueryBuilderComponent implements OnInit {
           );
           this.form?.setControl(
             &#x27;filter&#x27;,
-            createFilterGroup(
-              this.form?.value.filter,
-              this.availableScalarFields
-            )
+            createFilterGroup(this.form?.value.filter)
           );
         }
       });
       this.form?.controls.name.valueChanges.subscribe((res) &#x3D;&gt; {
         if (this.allQueries.find((x) &#x3D;&gt; x &#x3D;&#x3D;&#x3D; res)) {
           this.availableFields &#x3D; this.queryBuilder.getFields(res);
-          this.form?.setControl(
-            &#x27;filter&#x27;,
-            createFilterGroup(null, this.availableScalarFields)
-          );
+          this.form?.setControl(&#x27;filter&#x27;, createFilterGroup(null));
           this.form?.setControl(
             &#x27;fields&#x27;,
             this.formBuilder.array([], Validators.required)
@@ -1134,10 +1128,7 @@ export class SafeQueryBuilderComponent implements OnInit {
           );
         } else {
           this.availableFields &#x3D; [];
-          this.form?.setControl(
-            &#x27;filter&#x27;,
-            createFilterGroup(null, this.availableScalarFields)
-          );
+          this.form?.setControl(&#x27;filter&#x27;, createFilterGroup(null));
           this.form?.setControl(&#x27;fields&#x27;, this.formBuilder.array([]));
           this.form?.setControl(
             &#x27;sort&#x27;,

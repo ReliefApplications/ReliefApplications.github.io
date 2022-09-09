@@ -440,8 +440,8 @@ Query builder service only performs query on the schema generated on the go from
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="284"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:284</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="285"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:285</a></div>
                 </td>
             </tr>
 
@@ -519,8 +519,8 @@ Query builder service only performs query on the schema generated on the go from
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="235"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:235</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:236</a></div>
                 </td>
             </tr>
 
@@ -915,8 +915,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="310"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:310</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="311"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:311</a></div>
                 </td>
             </tr>
 
@@ -994,8 +994,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="254"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:254</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:255</a></div>
                 </td>
             </tr>
 
@@ -1089,8 +1089,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="331"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:331</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="332"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder.service.ts:332</a></div>
                 </td>
             </tr>
 
@@ -1525,7 +1525,8 @@ export class QueryBuilderService {
     }
     return [&#x27;&#x27;].concat(
       fields.map((x) &#x3D;&gt; {
-        switch (x.kind) {
+        const kind &#x3D; x.kind || x.type?.kind;
+        switch (kind) {
           case &#x27;SCALAR&#x27;: {
             return x.name + &#x27;\n&#x27;;
           }

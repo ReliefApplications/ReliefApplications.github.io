@@ -121,10 +121,19 @@
                             <a href="#AVAILABLE_TYPES" title="projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts" ><b>AVAILABLE_TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../tab-filter.component.ts)</a>
                         </li>
                         <li>
+                            <a href="#buildAddButton" title="projects/safe/src/lib/survey/components/utils.ts" ><b>buildAddButton</b>&nbsp;&nbsp;&nbsp;(projects/.../utils.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#buildSearchButton" title="projects/safe/src/lib/survey/components/utils.ts" ><b>buildSearchButton</b>&nbsp;&nbsp;&nbsp;(projects/.../utils.ts)</a>
+                        </li>
+                        <li>
                             <a href="#CACHE_ONLY" title="projects/safe/src/lib/components/record-summary/record-summary.stories.ts" ><b>CACHE_ONLY</b>&nbsp;&nbsp;&nbsp;(projects/.../record-summary.stories.ts)</a>
                         </li>
                         <li>
                             <a href="#CHART_TYPES" title="projects/safe/src/lib/components/widgets/chart-settings/constants.ts" ><b>CHART_TYPES</b>&nbsp;&nbsp;&nbsp;(projects/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#cleanRecord" title="projects/safe/src/lib/utils/cleanRecord.ts" ><b>cleanRecord</b>&nbsp;&nbsp;&nbsp;(projects/.../cleanRecord.ts)</a>
                         </li>
                         <li>
                             <a href="#cloneData" title="projects/safe/src/lib/components/ui/core-grid/core-grid.component.ts" ><b>cloneData</b>&nbsp;&nbsp;&nbsp;(projects/.../core-grid.component.ts)</a>
@@ -523,9 +532,6 @@
                             <a href="#ICON_AND_TEXT" title="projects/safe/src/lib/components/ui/button/button.stories.ts" ><b>ICON_AND_TEXT</b>&nbsp;&nbsp;&nbsp;(projects/.../button.stories.ts)</a>
                         </li>
                         <li>
-                            <a href="#init" title="projects/safe/src/lib/survey/widget.ts" ><b>init</b>&nbsp;&nbsp;&nbsp;(projects/.../widget.ts)</a>
-                        </li>
-                        <li>
                             <a href="#init" title="projects/safe/src/lib/survey/components/owner.ts" ><b>init</b>&nbsp;&nbsp;&nbsp;(projects/.../owner.ts)</a>
                         </li>
                         <li>
@@ -538,10 +544,19 @@
                             <a href="#init" title="projects/safe/src/lib/survey/components/users.ts" ><b>init</b>&nbsp;&nbsp;&nbsp;(projects/.../users.ts)</a>
                         </li>
                         <li>
+                            <a href="#init" title="projects/safe/src/lib/survey/widgets/comment-widget.ts" ><b>init</b>&nbsp;&nbsp;&nbsp;(projects/.../comment-widget.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#init" title="projects/safe/src/lib/survey/widgets/text-widget.ts" ><b>init</b>&nbsp;&nbsp;&nbsp;(projects/.../text-widget.ts)</a>
+                        </li>
+                        <li>
                             <a href="#initCreatorSettings" title="projects/safe/src/lib/survey/creator.ts" ><b>initCreatorSettings</b>&nbsp;&nbsp;&nbsp;(projects/.../creator.ts)</a>
                         </li>
                         <li>
-                            <a href="#initCustomWidgets" title="projects/safe/src/lib/survey/init.ts" ><b>initCustomWidgets</b>&nbsp;&nbsp;&nbsp;(projects/.../init.ts)</a>
+                            <a href="#initCustomProperties" title="projects/safe/src/lib/survey/custom-properties.ts" ><b>initCustomProperties</b>&nbsp;&nbsp;&nbsp;(projects/.../custom-properties.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initCustomSurvey" title="projects/safe/src/lib/survey/init.ts" ><b>initCustomSurvey</b>&nbsp;&nbsp;&nbsp;(projects/.../init.ts)</a>
                         </li>
                         <li>
                             <a href="#INITIAL_SOURCE" title="projects/safe/src/lib/components/ui/tagbox/tagbox.stories.ts" ><b>INITIAL_SOURCE</b>&nbsp;&nbsp;&nbsp;(projects/.../tagbox.stories.ts)</a>
@@ -656,6 +671,9 @@
                         </li>
                         <li>
                             <a href="#REGEX_PLUS" title="projects/safe/src/lib/components/widgets/grid/grid.component.ts" ><b>REGEX_PLUS</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#renderCustomProperties" title="projects/safe/src/lib/survey/custom-properties.ts" ><b>renderCustomProperties</b>&nbsp;&nbsp;&nbsp;(projects/.../custom-properties.ts)</a>
                         </li>
                         <li>
                             <a href="#require" title="projects/safe/src/test.ts" ><b>require</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
@@ -2474,7 +2492,7 @@ Custom functions can be used in the logic fields.</p>
     case PipelineStage.FILTER: {
       return formBuilder.group({
         type: [PipelineStage.FILTER],
-        form: createFilterGroup(value.form ? value.form : {}, null),
+        form: createFilterGroup(value.form ? value.form : {}),
       });
     }
     case PipelineStage.SORT: {
@@ -2769,7 +2787,7 @@ Custom functions can be used in the logic fields.</p>
         }),
         filter: newField
           ? formBuilder.group({})
-          : createFilterGroup(field.filter, null),
+          : createFilterGroup(field.filter),
       });
     }
     case &#x27;OBJECT&#x27;: {
@@ -2857,12 +2875,10 @@ Custom functions can be used in the logic fields.</p>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(filter: any, fields: any): FormGroup &#x3D;&gt; {
+                        <i>Default value : </i><code>(filter: any): FormGroup &#x3D;&gt; {
   if (filter) {
     if (filter.filters) {
-      const filters &#x3D; filter.filters.map((x: any) &#x3D;&gt;
-        createFilterGroup(x, fields)
-      );
+      const filters &#x3D; filter.filters.map((x: any) &#x3D;&gt; createFilterGroup(x));
       return formBuilder.group({
         logic: filter.logic || &#x27;and&#x27;,
         filters: formBuilder.array(filters),
@@ -2920,7 +2936,7 @@ Custom functions can be used in the logic fields.</p>
       field: [value &amp;&amp; value.sort ? value.sort.field : &#x27;&#x27;],
       order: [value &amp;&amp; value.sort ? value.sort.order : &#x27;asc&#x27;],
     }),
-    filter: createFilterGroup(value &amp;&amp; value.filter ? value.filter : {}, null),
+    filter: createFilterGroup(value &amp;&amp; value.filter ? value.filter : {}),
     style: formBuilder.array(
       value &amp;&amp; value.style &amp;&amp; value.style.length
         ? value.style.map((x: any) &#x3D;&gt; createStyleForm(x))
@@ -2965,7 +2981,7 @@ Custom functions can be used in the logic fields.</p>
       italic: [value?.text?.italic || false],
     }),
     fields: [value?.fields || []],
-    filter: createFilterGroup(value?.filter || {}, null),
+    filter: createFilterGroup(value?.filter || {}),
   })</code>
                     </td>
                 </tr>
@@ -3519,6 +3535,161 @@ Custom functions can be used in the logic fields.</p>
         </tbody>
     </table>
 </section>
+    <h3>projects/safe/src/lib/survey/components/utils.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildAddButton"></a>
+                    <span class="name">
+                        <span ><b>buildAddButton</b></span>
+                        <a href="#buildAddButton"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(
+  question: any,
+  multiselect: boolean,
+  dialog: MatDialog,
+  gridComponent?: SafeCoreGridComponent
+): any &#x3D;&gt; {
+  const addButton &#x3D; document.createElement(&#x27;button&#x27;);
+  addButton.innerText &#x3D; &#x27;Add new record&#x27;;
+  if (question.addRecord &amp;&amp; question.addTemplate) {
+    addButton.onclick &#x3D; () &#x3D;&gt; {
+      const dialogRef &#x3D; dialog.open(SafeFormModalComponent, {
+        disableClose: true,
+        data: {
+          template: question.addTemplate,
+          locale: question.resource.value,
+          askForConfirm: false,
+          ...(question.prefillWithCurrentRecord &amp;&amp; {
+            prefillData: question.survey.data,
+          }),
+        },
+        height: &#x27;98%&#x27;,
+        width: &#x27;100vw&#x27;,
+        panelClass: &#x27;full-screen-modal&#x27;,
+        autoFocus: false,
+      });
+      dialogRef.afterClosed().subscribe((res: any) &#x3D;&gt; {
+        if (res) {
+          // TODO: call reload method
+          // if (question.displayAsGrid &amp;&amp; gridComponent) {
+          //   gridComponent.availableRecords.push({
+          //     value: res.data.id,
+          //     text: res.data.data[question.displayField]
+          //   });
+          // }
+          if (multiselect) {
+            const newItem &#x3D; {
+              value: res.data.id,
+              text: res.data.data[question.displayField],
+            };
+            question.contentQuestion.choices &#x3D; [
+              newItem,
+              ...question.contentQuestion.choices,
+            ];
+            question.value &#x3D; question.value.concat(res.data.id);
+          } else {
+            const newItem &#x3D; {
+              value: res.data.id,
+              text: res.data.data[question.displayField],
+            };
+            question.contentQuestion.choices &#x3D; [
+              newItem,
+              ...question.contentQuestion.choices,
+            ];
+            question.value &#x3D; res.data.id;
+          }
+        }
+      });
+    };
+  }
+  addButton.style.display &#x3D;
+    question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
+  return addButton;
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Build the add button for resource and resources components</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildSearchButton"></a>
+                    <span class="name">
+                        <span ><b>buildSearchButton</b></span>
+                        <a href="#buildSearchButton"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(
+  question: any,
+  fieldsSettingsForm: FormGroup,
+  multiselect: boolean,
+  dialog: MatDialog
+): any &#x3D;&gt; {
+  const searchButton &#x3D; document.createElement(&#x27;button&#x27;);
+  searchButton.innerText &#x3D; &#x27;Search&#x27;;
+  searchButton.style.marginRight &#x3D; &#x27;8px&#x27;;
+  if (fieldsSettingsForm) {
+    searchButton.onclick &#x3D; () &#x3D;&gt; {
+      const dialogRef &#x3D; dialog.open(SafeResourceGridModalComponent, {
+        data: {
+          multiselect,
+          gridSettings: fieldsSettingsForm,
+          selectedRows: Array.isArray(question.value)
+            ? question.value
+            : question.value
+            ? [question.value]
+            : [],
+          selectable: true,
+        },
+      });
+      dialogRef.afterClosed().subscribe((rows: any[]) &#x3D;&gt; {
+        if (!rows) {
+          return;
+        }
+        if (rows.length &gt; 0) {
+          question.value &#x3D; multiselect ? rows : rows[0];
+        } else {
+          question.value &#x3D; null;
+        }
+      });
+    };
+  }
+  searchButton.style.display &#x3D;
+    !question.isReadOnly &amp;&amp; question.canSearch ? &#x27;&#x27; : &#x27;none&#x27;;
+  return searchButton;
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Build the search button for resource and resources components</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
     <h3>projects/safe/src/lib/components/record-summary/record-summary.stories.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -3821,6 +3992,38 @@ Custom functions can be used in the logic fields.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>List of available title positions</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/safe/src/lib/utils/cleanRecord.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cleanRecord"></a>
+                    <span class="name">
+                        <span ><b>cleanRecord</b></span>
+                        <a href="#cleanRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(record: any): any &#x3D;&gt; {
+  const entries &#x3D; Object.entries(record).filter(([, value]) &#x3D;&gt; value !&#x3D;&#x3D; null);
+  return entries.reduce((o, [key, value]) &#x3D;&gt; ({ ...o, [key]: value }), {});
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Remove null values from a record.</p>
 </div>
                 </td>
             </tr>
@@ -9917,709 +10120,6 @@ Commented types are not yet implemented.</p>
         </tbody>
     </table>
 </section>
-    <h3>projects/safe/src/lib/survey/widget.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="init"></a>
-                    <span class="name">
-                        <span ><b>init</b></span>
-                        <a href="#init"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>(
-  survey: any,
-  domService: DomService,
-  dialog: MatDialog,
-  environment: any
-): void &#x3D;&gt; {
-  const widget &#x3D; {
-    name: &#x27;custom-widget&#x27;,
-    widgetIsLoaded: (): boolean &#x3D;&gt; true,
-    isFit: (question: any): any &#x3D;&gt; true,
-    init: (): void &#x3D;&gt; {
-      survey.Serializer.addProperty(&#x27;question&#x27;, {
-        name: &#x27;tooltip:text&#x27;,
-        category: &#x27;general&#x27;,
-      });
-      survey.Serializer.addProperty(&#x27;comment&#x27;, {
-        name: &#x27;allowEdition:boolean&#x27;,
-        type: &#x27;boolean&#x27;,
-        dependsOn: [&#x27;readOnly&#x27;],
-        default: false,
-        category: &#x27;general&#x27;,
-        visibleIf: (obj: any) &#x3D;&gt; {
-          if (!obj || !obj.readOnly) {
-            return false;
-          } else {
-            return true;
-          }
-        },
-      });
-      survey.Serializer.removeProperty(&#x27;expression&#x27;, &#x27;readOnly&#x27;);
-      survey.Serializer.addProperty(&#x27;expression&#x27;, {
-        name: &#x27;readOnly:boolean&#x27;,
-        type: &#x27;boolean&#x27;,
-        visibleIndex: 6,
-        default: false,
-        category: &#x27;general&#x27;,
-        required: true,
-      });
-      // Pass token before the request to fetch choices by URL if it&#x27;s targeting SAFE API
-      survey.ChoicesRestfull.onBeforeSendRequest &#x3D; (
-        sender: ChoicesRestful,
-        options: { request: XMLHttpRequest }
-      ) &#x3D;&gt; {
-        if (sender.url.includes(environment.apiUrl)) {
-          const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
-          options.request.setRequestHeader(&#x27;Authorization&#x27;, &#x60;Bearer ${token}&#x60;);
-        }
-      };
-      survey.Serializer.addProperty(&#x27;survey&#x27;, {
-        name: &#x27;onCompleteExpression:expression&#x27;,
-        type: &#x27;expression&#x27;,
-        visibleIndex: 350,
-        category: &#x27;logic&#x27;,
-      });
-      // hide the min and max property for date, datetime and time types
-      survey.Serializer.getProperty(&#x27;text&#x27;, &#x27;min&#x27;).visibleIf &#x3D; (obj: any) &#x3D;&gt;
-        [&#x27;number&#x27;, &#x27;month&#x27;, &#x27;week&#x27;].includes(obj.inputType || &#x27;&#x27;);
-      survey.Serializer.getProperty(&#x27;text&#x27;, &#x27;max&#x27;).visibleIf &#x3D; (obj: any) &#x3D;&gt;
-        [&#x27;number&#x27;, &#x27;month&#x27;, &#x27;week&#x27;].includes(obj.inputType || &#x27;&#x27;);
-      // create new min and max properties for date, datetime and time types
-      survey.Serializer.addProperty(&#x27;text&#x27;, {
-        name: &#x27;dateMin&#x27;,
-        type: &#x27;date&#x27;,
-        category: &#x27;general&#x27;,
-        visibleIndex: 8,
-        dependsOn: &#x27;inputType&#x27;,
-        visibleIf: (obj: any) &#x3D;&gt;
-          [&#x27;date&#x27;, &#x27;datetime&#x27;, &#x27;datetime-local&#x27;, &#x27;time&#x27;].includes(
-            obj.inputType || &#x27;&#x27;
-          ),
-        onPropertyEditorUpdate: (obj: any, propertyEditor: any) &#x3D;&gt; {
-          if (!!obj &amp;&amp; !!obj.inputType) {
-            propertyEditor.inputType &#x3D; obj.inputType;
-          }
-        },
-        onSetValue: (obj: any, value: any) &#x3D;&gt; {
-          obj.setPropertyValue(&#x27;dateMin&#x27;, value);
-          obj.setPropertyValue(&#x27;min&#x27;, value);
-        },
-      });
-      survey.Serializer.addProperty(&#x27;text&#x27;, {
-        name: &#x27;dateMax&#x27;,
-        type: &#x27;date&#x27;,
-        category: &#x27;general&#x27;,
-        visibleIndex: 9,
-        dependsOn: &#x27;inputType&#x27;,
-        visibleIf: (obj: any) &#x3D;&gt;
-          [&#x27;date&#x27;, &#x27;datetime&#x27;, &#x27;datetime-local&#x27;, &#x27;time&#x27;].includes(
-            obj.inputType || &#x27;&#x27;
-          ),
-        onPropertyEditorUpdate: (obj: any, propertyEditor: any) &#x3D;&gt; {
-          if (!!obj &amp;&amp; !!obj.inputType) {
-            propertyEditor.inputType &#x3D; obj.inputType;
-          }
-        },
-        onSetValue: (obj: any, value: any) &#x3D;&gt; {
-          obj.setPropertyValue(&#x27;dateMax&#x27;, value);
-          obj.setPropertyValue(&#x27;max&#x27;, value);
-        },
-      });
-      // register the editor for type &quot;date&quot; with kendo date picker
-      const dateEditor &#x3D; {
-        render: (editor: any, htmlElement: any) &#x3D;&gt; {
-          const question &#x3D; editor.object;
-          const updatePickerInstance &#x3D; () &#x3D;&gt; {
-            htmlElement.querySelector(&#x27;.k-widget&#x27;)?.remove(); // .k-widget class is shared by the 3 types of picker
-            const pickerInstance &#x3D; createPickerInstance(
-              question.inputType,
-              htmlElement
-            );
-            if (pickerInstance) {
-              if (question[editor.property.name]) {
-                pickerInstance.value &#x3D; getDateDisplay(
-                  question[editor.property.name],
-                  question.inputType
-                );
-              }
-              pickerInstance.registerOnChange((value: Date | null) &#x3D;&gt; {
-                if (value) {
-                  editor.onChanged(setDateValue(value, question.inputType));
-                } else {
-                  editor.onChanged(null);
-                }
-              });
-            }
-          };
-          question.registerFunctionOnPropertyValueChanged(
-            &#x27;inputType&#x27;,
-            updatePickerInstance,
-            // eslint-disable-next-line no-underscore-dangle
-            editor.property_.name // a unique key to distinguish multiple date properties
-          );
-          // Init
-          updatePickerInstance();
-        },
-      };
-      SurveyCreator.SurveyPropertyEditorFactory.registerCustomEditor(
-        &#x27;date&#x27;,
-        dateEditor
-      );
-    },
-    isDefaultRender: true,
-    afterRender: (question: any, el: any): void &#x3D;&gt; {
-      // add kendo date pickers for text inputs with dates types
-      if (question.getType() &#x3D;&#x3D;&#x3D; &#x27;text&#x27;) {
-        const updateTextInput &#x3D; () &#x3D;&gt; {
-          el.parentElement.querySelector(&#x27;.k-widget&#x27;)?.remove(); // .k-widget class is shared by the 3 types of picker
-          if (
-            [&#x27;date&#x27;, &#x27;datetime&#x27;, &#x27;datetime-local&#x27;, &#x27;time&#x27;].includes(
-              question.inputType
-            )
-          ) {
-            const pickerInstance &#x3D; createPickerInstance(
-              question.inputType,
-              el.parentElement
-            );
-            if (pickerInstance) {
-              if (question.value) {
-                pickerInstance.value &#x3D; getDateDisplay(
-                  question.value,
-                  question.inputType
-                );
-              }
-              if (question.min) {
-                pickerInstance.min &#x3D; getDateDisplay(
-                  question.min,
-                  question.inputType
-                );
-              }
-              if (question.max) {
-                pickerInstance.max &#x3D; getDateDisplay(
-                  question.max,
-                  question.inputType
-                );
-              }
-              pickerInstance.readonly &#x3D; question.isReadOnly;
-              pickerInstance.disabled &#x3D; question.isReadOnly;
-              pickerInstance.registerOnChange((value: Date | null) &#x3D;&gt; {
-                if (value) {
-                  question.value &#x3D; setDateValue(value, question.inputType);
-                } else {
-                  question.value &#x3D; null;
-                }
-              });
-              el.style.display &#x3D; &#x27;none&#x27;;
-            }
-          } else {
-            el.style.display &#x3D; &#x27;initial&#x27;;
-          }
-        };
-        question.registerFunctionOnPropertyValueChanged(
-          &#x27;inputType&#x27;,
-          updateTextInput,
-          el.id // a unique key to distinguish fields
-        );
-        // Init
-        updateTextInput();
-      }
-      // Display of edit button for comment question
-      if (question.getType() &#x3D;&#x3D;&#x3D; &#x27;comment&#x27; &amp;&amp; question.allowEdition) {
-        const mainDiv &#x3D; document.createElement(&#x27;div&#x27;);
-        mainDiv.id &#x3D; &#x27;editComment&#x27;;
-        mainDiv.style.height &#x3D; &#x27;23px&#x27;;
-        mainDiv.style.marginBottom &#x3D; &#x27;0.5em&#x27;;
-        const btnEl &#x3D; document.createElement(&#x27;button&#x27;);
-        btnEl.innerText &#x3D; &#x27;Edit&#x27;;
-        btnEl.style.width &#x3D; &#x27;50px&#x27;;
-        mainDiv.appendChild(btnEl);
-        el.parentElement.insertBefore(mainDiv, el);
-        mainDiv.style.display &#x3D; !question.allowEdition ? &#x27;none&#x27; : &#x27;&#x27;;
-        question.registerFunctionOnPropertyValueChanged(&#x27;allowEdition&#x27;, () &#x3D;&gt; {
-          mainDiv.style.display &#x3D; !question.allowEdition ? &#x27;none&#x27; : &#x27;&#x27;;
-        });
-        question.registerFunctionOnPropertyValueChanged(&#x27;readOnly&#x27;, () &#x3D;&gt; {
-          mainDiv.style.display &#x3D; !question.readOnly ? &#x27;none&#x27; : &#x27;&#x27;;
-        });
-        btnEl.onclick &#x3D; () &#x3D;&gt; {
-          question.readOnly &#x3D; false;
-        };
-      }
-      // Display of tooltip
-      const header &#x3D;
-        el.parentElement.parentElement.querySelector(&#x27;.sv_q_title&#x27;);
-      if (header) {
-        header.title &#x3D; question.tooltip;
-        const span &#x3D; document.createElement(&#x27;span&#x27;);
-        span.innerText &#x3D; &#x27;help&#x27;;
-        span.className &#x3D; &#x27;material-icons&#x27;;
-        span.style.fontSize &#x3D; &#x27;1em&#x27;;
-        span.style.cursor &#x3D; &#x27;pointer&#x27;;
-        span.style.color &#x3D; &#x27;#008DC9&#x27;;
-        header.appendChild(span);
-        span.style.display &#x3D; !question.tooltip ? &#x27;none&#x27; : &#x27;&#x27;;
-        question.registerFunctionOnPropertyValueChanged(&#x27;tooltip&#x27;, () &#x3D;&gt; {
-          span.style.display &#x3D; !question.tooltip ? &#x27;none&#x27; : &#x27;&#x27;;
-          header.title &#x3D; question.tooltip;
-        });
-      }
-      // Display of add button for resource question
-      if (question.getType() &#x3D;&#x3D;&#x3D; &#x27;resource&#x27;) {
-        // const dropdownComponent &#x3D; buildRecordDropdown(question, el);
-        if (question.survey.mode !&#x3D;&#x3D; &#x27;display&#x27; &amp;&amp; question.resource) {
-          const actionsButtons &#x3D; document.createElement(&#x27;div&#x27;);
-          actionsButtons.id &#x3D; &#x27;actionsButtons&#x27;;
-          actionsButtons.style.display &#x3D; &#x27;flex&#x27;;
-          actionsButtons.style.marginBottom &#x3D; &#x27;0.5em&#x27;;
-
-          const searchBtn &#x3D; buildSearchButton(
-            question,
-            question.gridFieldsSettings,
-            false
-          );
-          actionsButtons.appendChild(searchBtn);
-
-          const addBtn &#x3D; buildAddButton(question, false);
-          actionsButtons.appendChild(addBtn);
-
-          el.parentElement.insertBefore(actionsButtons, el);
-
-          // actionsButtons.style.display &#x3D; ((!question.addRecord || !question.addTemplate) &amp;&amp; !question.gridFieldsSettings) ? &#x27;none&#x27; : &#x27;&#x27;;
-
-          question.registerFunctionOnPropertyValueChanged(
-            &#x27;gridFieldsSettings&#x27;,
-            () &#x3D;&gt; {
-              searchBtn.style.display &#x3D; question.gridFieldsSettings
-                ? &#x27;&#x27;
-                : &#x27;none&#x27;;
-            }
-          );
-          question.registerFunctionOnPropertyValueChanged(&#x27;canSearch&#x27;, () &#x3D;&gt; {
-            searchBtn.style.display &#x3D; question.canSearch ? &#x27;&#x27; : &#x27;none&#x27;;
-          });
-          question.registerFunctionOnPropertyValueChanged(&#x27;addTemplate&#x27;, () &#x3D;&gt; {
-            addBtn.style.display &#x3D;
-              question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
-          });
-          question.registerFunctionOnPropertyValueChanged(&#x27;addRecord&#x27;, () &#x3D;&gt; {
-            addBtn.style.display &#x3D;
-              question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
-          });
-        }
-      }
-      // Display of add button | grid for resources question
-      if (question.getType() &#x3D;&#x3D;&#x3D; &#x27;resources&#x27; &amp;&amp; question.resource) {
-        const gridComponent &#x3D; buildRecordsGrid(question, el);
-
-        if (question.survey.mode !&#x3D;&#x3D; &#x27;display&#x27;) {
-          const actionsButtons &#x3D; document.createElement(&#x27;div&#x27;);
-          actionsButtons.id &#x3D; &#x27;actionsButtons&#x27;;
-          actionsButtons.style.display &#x3D; &#x27;flex&#x27;;
-          actionsButtons.style.marginBottom &#x3D; &#x27;0.5em&#x27;;
-
-          const searchBtn &#x3D; buildSearchButton(
-            question,
-            question.gridFieldsSettings,
-            true
-          );
-          actionsButtons.appendChild(searchBtn);
-
-          const addBtn &#x3D; buildAddButton(question, true, gridComponent);
-          actionsButtons.appendChild(addBtn);
-
-          el.parentElement.insertBefore(actionsButtons, el);
-          // actionsButtons.style.display &#x3D; ((!question.addRecord || !question.addTemplate) &amp;&amp; !question.gridFieldsSettings) ? &#x27;none&#x27; : &#x27;&#x27;;
-
-          question.registerFunctionOnPropertyValueChanged(
-            &#x27;gridFieldsSettings&#x27;,
-            () &#x3D;&gt; {
-              searchBtn.style.display &#x3D; question.gridFieldsSettings
-                ? &#x27;&#x27;
-                : &#x27;none&#x27;;
-            }
-          );
-          question.registerFunctionOnPropertyValueChanged(&#x27;canSearch&#x27;, () &#x3D;&gt; {
-            searchBtn.style.display &#x3D; question.canSearch ? &#x27;&#x27; : &#x27;none&#x27;;
-          });
-          question.registerFunctionOnPropertyValueChanged(&#x27;addTemplate&#x27;, () &#x3D;&gt; {
-            addBtn.style.display &#x3D;
-              question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
-          });
-          question.registerFunctionOnPropertyValueChanged(&#x27;addRecord&#x27;, () &#x3D;&gt; {
-            addBtn.style.display &#x3D;
-              question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
-          });
-        }
-      }
-      // Adding an open url icon for urls inputs
-      if (question.inputType &#x3D;&#x3D;&#x3D; &#x27;url&#x27;) {
-        // Generate the dynamic component with its parameters
-        const button &#x3D; domService.appendComponentToBody(
-          SafeButtonComponent,
-          el.parentElement
-        );
-        const instance: SafeButtonComponent &#x3D; button.instance;
-        instance.isIcon &#x3D; true;
-        instance.icon &#x3D; &#x27;open_in_new&#x27;;
-        instance.size &#x3D; ButtonSize.SMALL;
-        instance.category &#x3D; ButtonCategory.TERTIARY;
-        instance.variant &#x3D; &#x27;default&#x27;;
-        // we override the css of the component
-        const domElem &#x3D; (button.hostView as EmbeddedViewRef&lt;any&gt;)
-          .rootNodes[0] as HTMLElement;
-        (domElem.firstChild as HTMLElement).style.minWidth &#x3D; &#x27;unset&#x27;;
-        (domElem.firstChild as HTMLElement).style.backgroundColor &#x3D; &#x27;unset&#x27;;
-        (domElem.firstChild as HTMLElement).style.color &#x3D; &#x27;black&#x27;;
-
-        // Set the default styling of the parent
-        el.parentElement.style.display &#x3D; &#x27;flex&#x27;;
-        el.parentElement.style.alignItems &#x3D; &#x27;center&#x27;;
-        el.parentElement.style.flexDirection &#x3D; &#x27;row&#x27;;
-        el.parentElement.style.pointerEvents &#x3D; &#x27;auto&#x27;;
-        el.parentElement.style.justifyContent &#x3D; &#x27;space-between&#x27;;
-        el.parentElement.title &#x3D;
-          &#x27;The URL should start with &quot;http://&quot; or &quot;https://&quot;&#x27;;
-
-        // Create an &lt;a&gt; HTMLElement only used to verify the validity of the URL
-        const urlTester &#x3D; document.createElement(&#x27;a&#x27;);
-        if (
-          el.value &amp;&amp;
-          !(el.value.startsWith(&#x27;https://&#x27;) || el.value.startsWith(&#x27;http://&#x27;))
-        ) {
-          urlTester.href &#x3D; &#x27;https://&#x27; + el.value;
-        } else {
-          urlTester.href &#x3D; el.value || &#x27;&#x27;;
-        }
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        urlTester.host &amp;&amp; urlTester.host !&#x3D;&#x3D; window.location.host
-          ? (instance.disabled &#x3D; false)
-          : (instance.disabled &#x3D; true);
-
-        question.survey.onValueChanged.add((_: any, options: any) &#x3D;&gt; {
-          if (options.question.name &#x3D;&#x3D;&#x3D; question.name) {
-            if (
-              el.value &amp;&amp;
-              !(
-                el.value.startsWith(&#x27;https://&#x27;) ||
-                el.value.startsWith(&#x27;http://&#x27;)
-              )
-            ) {
-              urlTester.href &#x3D; &#x27;https://&#x27; + el.value;
-            } else {
-              urlTester.href &#x3D; el.value || &#x27;&#x27;;
-            }
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-            urlTester.host &amp;&amp; urlTester.host !&#x3D;&#x3D; window.location.host
-              ? (instance.disabled &#x3D; false)
-              : (instance.disabled &#x3D; true);
-          }
-        });
-
-        button.instance.emittedEventSubject.subscribe((eventType: string) &#x3D;&gt; {
-          if (
-            eventType &#x3D;&#x3D;&#x3D; &#x27;click&#x27; &amp;&amp;
-            urlTester.host &amp;&amp;
-            urlTester.host !&#x3D;&#x3D; window.location.host
-          ) {
-            window.open(urlTester.href, &#x27;_blank&#x27;, &#x27;noopener,noreferrer&#x27;);
-          }
-        });
-      }
-      if (question.getType() &#x3D;&#x3D;&#x3D; &#x27;file&#x27;) {
-        question.maxSize &#x3D; 7340032;
-      }
-    },
-  };
-
-  /**
-   * Get date for input display.
-   *
-   * @param value question value
-   * @param inputType question input type
-   * @returns formatted date
-   */
-  const getDateDisplay &#x3D; (value: any, inputType: string): Date &#x3D;&gt; {
-    const date &#x3D; new Date(value);
-    if (inputType &#x3D;&#x3D;&#x3D; &#x27;time&#x27;) {
-      return new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
-    } else {
-      return date;
-    }
-  };
-
-  /**
-   * Set date for question / parameter value
-   *
-   * @param value input value
-   * @param inputType question input type
-   * @returns formatted date
-   */
-  const setDateValue &#x3D; (value: Date, inputType: string): Date | string &#x3D;&gt; {
-    if (inputType &#x3D;&#x3D;&#x3D; &#x27;time&#x27;) {
-      // for time fields, translate the date to UTC
-      return new Date(
-        Date.UTC(1970, 0, 1, value.getHours(), value.getMinutes())
-      );
-    } else {
-      return value.toISOString();
-    }
-  };
-
-  const buildSearchButton &#x3D; (
-    question: any,
-    fieldsSettingsForm: FormGroup,
-    multiselect: boolean
-  ): any &#x3D;&gt; {
-    const searchButton &#x3D; document.createElement(&#x27;button&#x27;);
-    searchButton.innerText &#x3D; &#x27;Search&#x27;;
-    searchButton.style.marginRight &#x3D; &#x27;8px&#x27;;
-    if (fieldsSettingsForm) {
-      searchButton.onclick &#x3D; () &#x3D;&gt; {
-        const dialogRef &#x3D; dialog.open(SafeResourceGridModalComponent, {
-          data: {
-            multiselect,
-            gridSettings: fieldsSettingsForm,
-            selectedRows: Array.isArray(question.value)
-              ? question.value
-              : question.value
-              ? [question.value]
-              : [],
-            selectable: true,
-          },
-        });
-        dialogRef.afterClosed().subscribe((rows: any[]) &#x3D;&gt; {
-          if (!rows) {
-            return;
-          }
-          if (rows.length &gt; 0) {
-            question.value &#x3D; multiselect ? rows : rows[0];
-          } else {
-            question.value &#x3D; null;
-          }
-        });
-      };
-    }
-    searchButton.style.display &#x3D;
-      !question.isReadOnly &amp;&amp; question.canSearch ? &#x27;&#x27; : &#x27;none&#x27;;
-    return searchButton;
-  };
-
-  const buildAddButton &#x3D; (
-    question: any,
-    multiselect: boolean,
-    gridComponent?: SafeCoreGridComponent
-  ): any &#x3D;&gt; {
-    const addButton &#x3D; document.createElement(&#x27;button&#x27;);
-    addButton.innerText &#x3D; &#x27;Add new record&#x27;;
-    if (question.addRecord &amp;&amp; question.addTemplate) {
-      addButton.onclick &#x3D; () &#x3D;&gt; {
-        const dialogRef &#x3D; dialog.open(SafeFormModalComponent, {
-          disableClose: true,
-          data: {
-            template: question.addTemplate,
-            locale: question.resource.value,
-            askForConfirm: false,
-            ...(question.prefillWithCurrentRecord &amp;&amp; {
-              prefillData: question.survey.data,
-            }),
-          },
-          height: &#x27;98%&#x27;,
-          width: &#x27;100vw&#x27;,
-          panelClass: &#x27;full-screen-modal&#x27;,
-          autoFocus: false,
-        });
-        dialogRef.afterClosed().subscribe((res) &#x3D;&gt; {
-          if (res) {
-            // TODO: call reload method
-            // if (question.displayAsGrid &amp;&amp; gridComponent) {
-            //   gridComponent.availableRecords.push({
-            //     value: res.data.id,
-            //     text: res.data.data[question.displayField]
-            //   });
-            // }
-            if (multiselect) {
-              const newItem &#x3D; {
-                value: res.data.id,
-                text: res.data.data[question.displayField],
-              };
-              question.contentQuestion.choices &#x3D; [
-                newItem,
-                ...question.contentQuestion.choices,
-              ];
-              question.value &#x3D; question.value.concat(res.data.id);
-            } else {
-              const newItem &#x3D; {
-                value: res.data.id,
-                text: res.data.data[question.displayField],
-              };
-              question.contentQuestion.choices &#x3D; [
-                newItem,
-                ...question.contentQuestion.choices,
-              ];
-              question.value &#x3D; res.data.id;
-            }
-          }
-        });
-      };
-    }
-    addButton.style.display &#x3D;
-      question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
-    return addButton;
-  };
-
-  const buildRecordDropdown &#x3D; (question: any, el: any): any &#x3D;&gt; {
-    const dropdown &#x3D; domService.appendComponentToBody(
-      SafeRecordDropdownComponent,
-      el.parentElement
-    );
-    const instance: SafeRecordDropdownComponent &#x3D; dropdown.instance;
-    instance.resourceId &#x3D; question.resource;
-    instance.filter &#x3D; question.filters;
-    instance.field &#x3D; question.displayField;
-    instance.placeholder &#x3D; question.placeholder;
-    instance.record &#x3D; question.value;
-    question.survey.onValueChanged.add((_: any, options: any) &#x3D;&gt; {
-      if (options.name &#x3D;&#x3D;&#x3D; question.name) {
-        instance.record &#x3D; question.value;
-      }
-    });
-    instance.choice.subscribe((res) &#x3D;&gt; (question.value &#x3D; res));
-    return instance;
-  };
-
-  const buildRecordsGrid &#x3D; (question: any, el: any): any &#x3D;&gt; {
-    let instance: SafeCoreGridComponent;
-    if (question.displayAsGrid) {
-      const grid &#x3D; domService.appendComponentToBody(
-        SafeCoreGridComponent,
-        el.parentElement
-      );
-      instance &#x3D; grid.instance;
-      setGridInputs(instance, question);
-      question.survey.onValueChanged.add((_: any, options: any) &#x3D;&gt; {
-        if (options.name &#x3D;&#x3D;&#x3D; question.name) {
-          setGridInputs(instance, question);
-        }
-      });
-      return instance;
-    }
-    return null;
-  };
-
-  /**
-   * Sets the inputs of the grid.
-   *
-   * @param instance grid instance.
-   * @param question survey question.
-   */
-  const setGridInputs &#x3D; (
-    instance: SafeCoreGridComponent,
-    question: any
-  ): void &#x3D;&gt; {
-    instance.multiSelect &#x3D; true;
-    const query &#x3D; question.gridFieldsSettings || {};
-    const settings &#x3D; {
-      query: {
-        ...query,
-        filter: {
-          logic: &#x27;and&#x27;,
-          filters: [
-            {
-              field: &#x27;ids&#x27;,
-              operator: &#x27;eq&#x27;,
-              value: question.value || [],
-            },
-          ],
-        },
-      },
-    };
-    if (!question.readOnlyGrid) {
-      Object.assign(settings, {
-        actions: {
-          delete: question.canDelete,
-          history: question.history,
-          convert: question.convert,
-          update: question.update,
-          inlineEdition: question.inlineEdition,
-        },
-      });
-    }
-    instance.settings &#x3D; settings;
-    instance.ngOnChanges();
-  };
-
-  /**
-   * It creates a date, datetime or time picker instance based on the input type
-   *
-   * @param inputType - The type of the input element.
-   * @param element - The element that the directive is attached to.
-   * @returns The picker instance, or null if the type is not allowed
-   */
-  const createPickerInstance &#x3D; (
-    inputType: &#x27;date&#x27; | &#x27;datetime&#x27; | &#x27;datetime-local&#x27; | &#x27;time&#x27;,
-    element: any
-  ):
-    | DatePickerComponent
-    | DateTimePickerComponent
-    | TimePickerComponent
-    | null &#x3D;&gt; {
-    switch (inputType) {
-      case &#x27;date&#x27;:
-        const datePicker &#x3D; domService.appendComponentToBody(
-          DatePickerComponent,
-          element
-        );
-        const datePickerInstance: DatePickerComponent &#x3D; datePicker.instance;
-        datePickerInstance.format &#x3D; &#x27;dd/MM/yyyy&#x27;;
-        return datePickerInstance;
-      case &#x27;datetime&#x27;:
-      case &#x27;datetime-local&#x27;:
-        const dateTimePicker &#x3D; domService.appendComponentToBody(
-          DateTimePickerComponent,
-          element
-        );
-        const dateTimePickerInstance: DateTimePickerComponent &#x3D;
-          dateTimePicker.instance;
-        dateTimePickerInstance.format &#x3D; &#x27;dd/MM/yyyy HH:mm&#x27;;
-        return dateTimePickerInstance;
-      case &#x27;time&#x27;:
-        const timePicker &#x3D; domService.appendComponentToBody(
-          TimePickerComponent,
-          element
-        );
-        const timePickerInstance: TimePickerComponent &#x3D; timePicker.instance;
-        timePickerInstance.format &#x3D; &#x27;HH:mm&#x27;;
-        return timePickerInstance;
-      default:
-        return null;
-    }
-  };
-
-  survey.CustomWidgetCollection.Instance.addCustomWidget(
-    widget,
-    &#x27;customwidget&#x27;
-  );
-}</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Custom definition for survey. Definition of all additional code built on the default logic.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
     <h3>projects/safe/src/lib/survey/components/owner.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -10636,11 +10136,9 @@ Commented types are not yet implemented.</p>
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>(
-  survey: any,
+  Survey: any,
   domService: DomService,
-  apollo: Apollo,
-  dialog: MatDialog,
-  formBuilder: FormBuilder
+  apollo: Apollo
 ): void &#x3D;&gt; {
   const component &#x3D; {
     name: &#x27;owner&#x27;,
@@ -10654,7 +10152,7 @@ Commented types are not yet implemented.</p>
       choices: [] as any[],
     },
     onInit: (): void &#x3D;&gt; {
-      survey.Serializer.addProperty(&#x27;owner&#x27;, {
+      Survey.Serializer.addProperty(&#x27;owner&#x27;, {
         name: &#x27;applications&#x27;,
         category: &#x27;Owner properties&#x27;,
         type: &#x27;applicationsDropdown&#x27;,
@@ -10701,7 +10199,7 @@ Commented types are not yet implemented.</p>
     },
     onAfterRender: (question: any, el: any): void &#x3D;&gt; {},
   };
-  survey.ComponentCollection.Instance.add(component);
+  Survey.ComponentCollection.Instance.add(component);
 }</code>
                     </td>
                 </tr>
@@ -10732,7 +10230,7 @@ Commented types are not yet implemented.</p>
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>(
-  survey: any,
+  Survey: any,
   domService: DomService,
   apollo: Apollo,
   dialog: MatDialog,
@@ -10776,7 +10274,7 @@ Commented types are not yet implemented.</p>
     resourceFieldsName: [] as any[],
     /** Initiate the resource question component */
     onInit(): void {
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;resource&#x27;,
         category: &#x27;Custom Questions&#x27;,
         type: &#x27;resourceDropdown&#x27;,
@@ -10802,7 +10300,7 @@ Commented types are not yet implemented.</p>
         resourceEditor
       );
 
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;displayField&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: &#x27;resource&#x27;,
@@ -10832,7 +10330,7 @@ Commented types are not yet implemented.</p>
         },
       });
 
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;relatedName&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: &#x27;resource&#x27;,
@@ -10849,7 +10347,7 @@ Commented types are not yet implemented.</p>
       });
 
       // Build set available grid fields button
-      survey.JsonObject.metaData.addProperty(&#x27;resource&#x27;, {
+      Survey.JsonObject.metaData.addProperty(&#x27;resource&#x27;, {
         name: &#x27;Search resource table&#x27;,
         type: &#x27;resourceFields&#x27;,
         isRequired: true,
@@ -10905,7 +10403,7 @@ Commented types are not yet implemented.</p>
         availableFieldsEditor
       );
 
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;test service&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;resource&#x27;, &#x27;displayField&#x27;],
@@ -10936,7 +10434,7 @@ Commented types are not yet implemented.</p>
           }
         },
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;addRecord:boolean&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;resource&#x27;],
@@ -10950,7 +10448,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;canSearch:boolean&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;resource&#x27;],
@@ -10965,7 +10463,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;addTemplate&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;addRecord&#x27;, &#x27;resource&#x27;],
@@ -10992,11 +10490,11 @@ Commented types are not yet implemented.</p>
           }
         },
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;placeholder&#x27;,
         category: &#x27;Custom Questions&#x27;,
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;prefillWithCurrentRecord:boolean&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;addRecord&#x27;, &#x27;resource&#x27;],
@@ -11009,7 +10507,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 8,
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         name: &#x27;selectQuestion:dropdown&#x27;,
         category: &#x27;Filter by Questions&#x27;,
         dependsOn: [&#x27;resource&#x27;, &#x27;displayField&#x27;],
@@ -11037,7 +10535,7 @@ Commented types are not yet implemented.</p>
           }
         },
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         type: &#x27;string&#x27;,
         name: &#x27;staticValue&#x27;,
         category: &#x27;Filter by Questions&#x27;,
@@ -11046,7 +10544,7 @@ Commented types are not yet implemented.</p>
           obj.selectQuestion &#x3D;&#x3D;&#x3D; &#x27;#staticValue&#x27; &amp;&amp; obj.displayField,
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         type: &#x27;dropdown&#x27;,
         name: &#x27;filterBy&#x27;,
         category: &#x27;Filter by Questions&#x27;,
@@ -11066,7 +10564,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         type: &#x27;dropdown&#x27;,
         name: &#x27;filterCondition&#x27;,
         category: &#x27;Filter by Questions&#x27;,
@@ -11089,7 +10587,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(
+      Survey.Serializer.addProperty(
         &#x27;resource&#x27;,
         {
           category: &#x27;Filter by Questions&#x27;,
@@ -11100,7 +10598,7 @@ Commented types are not yet implemented.</p>
           visibleIf: (obj: any) &#x3D;&gt; !obj.resource || !obj.displayField,
           visibleIndex: 3,
         },
-        survey.Serializer.addProperty(&#x27;resource&#x27;, {
+        Survey.Serializer.addProperty(&#x27;resource&#x27;, {
           name: &#x27;gridFieldsSettings&#x27;,
           dependsOn: [&#x27;resource&#x27;],
           visibleIf: (obj: any) &#x3D;&gt; {
@@ -11125,7 +10623,7 @@ Commented types are not yet implemented.</p>
         selectResourceText
       );
 
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         category: &#x27;Filter by Questions&#x27;,
         type: &#x27;customFilter&#x27;,
         name: &#x27;customFilterEl&#x27;,
@@ -11163,7 +10661,7 @@ Commented types are not yet implemented.</p>
         customFilterElements
       );
 
-      survey.Serializer.addProperty(&#x27;resource&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resource&#x27;, {
         category: &#x27;Filter by Questions&#x27;,
         type: &#x27;text&#x27;,
         name: &#x27;customFilter&#x27;,
@@ -11307,9 +10805,50 @@ Commented types are not yet implemented.</p>
         question.contentQuestion.choices &#x3D; [];
       }
     },
+    // Display of add button for resource question
     onAfterRender: (question: any, el: any): void &#x3D;&gt; {
-      // const element &#x3D; el.getElementsByClassName(&#x27;sv_select_wrapper&#x27;)[0];
-      // element.style.display &#x3D; &#x27;none&#x27;;
+      if (question.survey.mode !&#x3D;&#x3D; &#x27;display&#x27; &amp;&amp; question.resource) {
+        const actionsButtons &#x3D; document.createElement(&#x27;div&#x27;);
+        actionsButtons.id &#x3D; &#x27;actionsButtons&#x27;;
+        actionsButtons.style.display &#x3D; &#x27;flex&#x27;;
+        actionsButtons.style.marginBottom &#x3D; &#x27;0.5em&#x27;;
+
+        const searchBtn &#x3D; buildSearchButton(
+          question,
+          question.gridFieldsSettings,
+          false,
+          dialog
+        );
+        actionsButtons.appendChild(searchBtn);
+
+        const addBtn &#x3D; buildAddButton(question, false, dialog);
+        actionsButtons.appendChild(addBtn);
+
+        const parentElement &#x3D; el.querySelector(&#x27;.safe-qst-content&#x27;);
+        if (parentElement) {
+          parentElement.insertBefore(actionsButtons, parentElement.firstChild);
+        }
+
+        // actionsButtons.style.display &#x3D; ((!question.addRecord || !question.addTemplate) &amp;&amp; !question.gridFieldsSettings) ? &#x27;none&#x27; : &#x27;&#x27;;
+
+        question.registerFunctionOnPropertyValueChanged(
+          &#x27;gridFieldsSettings&#x27;,
+          () &#x3D;&gt; {
+            searchBtn.style.display &#x3D; question.gridFieldsSettings ? &#x27;&#x27; : &#x27;none&#x27;;
+          }
+        );
+        question.registerFunctionOnPropertyValueChanged(&#x27;canSearch&#x27;, () &#x3D;&gt; {
+          searchBtn.style.display &#x3D; question.canSearch ? &#x27;&#x27; : &#x27;none&#x27;;
+        });
+        question.registerFunctionOnPropertyValueChanged(&#x27;addTemplate&#x27;, () &#x3D;&gt; {
+          addBtn.style.display &#x3D;
+            question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
+        });
+        question.registerFunctionOnPropertyValueChanged(&#x27;addRecord&#x27;, () &#x3D;&gt; {
+          addBtn.style.display &#x3D;
+            question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
+        });
+      }
     },
     convertFromRawToFormGroup: (gridSettingsRaw: any): FormGroup | null &#x3D;&gt; {
       if (!gridSettingsRaw.fields) {
@@ -11320,7 +10859,7 @@ Commented types are not yet implemented.</p>
       return auxForm;
     },
   };
-  survey.ComponentCollection.Instance.add(component);
+  Survey.ComponentCollection.Instance.add(component);
 
   const setAdvanceFilter &#x3D; (value: string, question: string | any) &#x3D;&gt; {
     const field &#x3D; typeof question !&#x3D;&#x3D; &#x27;string&#x27; ? question.filterBy : question;
@@ -11368,7 +10907,7 @@ Commented types are not yet implemented.</p>
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>(
-  survey: any,
+  Survey: any,
   domService: DomService,
   apollo: Apollo,
   dialog: MatDialog,
@@ -11410,7 +10949,7 @@ Commented types are not yet implemented.</p>
     },
     resourceFieldsName: [] as any[],
     onInit: (): void &#x3D;&gt; {
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;resource&#x27;,
         category: &#x27;Custom Questions&#x27;,
         type: &#x27;resourcesDropdown&#x27;,
@@ -11436,7 +10975,7 @@ Commented types are not yet implemented.</p>
         resourceEditor
       );
 
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;displayField&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: &#x27;resource&#x27;,
@@ -11466,7 +11005,7 @@ Commented types are not yet implemented.</p>
         },
       });
 
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;relatedName&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: &#x27;resource&#x27;,
@@ -11483,7 +11022,7 @@ Commented types are not yet implemented.</p>
       });
 
       // Build set available grid fields button
-      survey.JsonObject.metaData.addProperty(&#x27;resources&#x27;, {
+      Survey.JsonObject.metaData.addProperty(&#x27;resources&#x27;, {
         name: &#x27;Search resource table&#x27;,
         type: &#x27;resourcesFields&#x27;,
         isRequired: true,
@@ -11550,7 +11089,7 @@ Commented types are not yet implemented.</p>
         availableFieldsEditor
       );
 
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;test service&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;resource&#x27;, &#x27;displayField&#x27;],
@@ -11581,7 +11120,7 @@ Commented types are not yet implemented.</p>
           }
         },
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;displayAsGrid:boolean&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: &#x27;resource&#x27;,
@@ -11594,7 +11133,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;addRecord:boolean&#x27;,
         displayName: &#x27;Add new records&#x27;,
         category: &#x27;Custom Questions&#x27;,
@@ -11609,7 +11148,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;canDelete:boolean&#x27;,
         displayName: &#x27;Delete records&#x27;,
         category: &#x27;Custom Questions&#x27;,
@@ -11623,7 +11162,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;history:boolean&#x27;,
         displayName: &#x27;Show history&#x27;,
         category: &#x27;Custom Questions&#x27;,
@@ -11637,7 +11176,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;convert:boolean&#x27;,
         displayName: &#x27;Convert records&#x27;,
         category: &#x27;Custom Questions&#x27;,
@@ -11651,7 +11190,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;update:boolean&#x27;,
         dislayName: &#x27;Update records&#x27;,
         category: &#x27;Custom Questions&#x27;,
@@ -11665,7 +11204,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;inlineEdition:boolean&#x27;,
         displayName: &#x27;Inline edition&#x27;,
         category: &#x27;Custom Questions&#x27;,
@@ -11679,7 +11218,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;canSearch:boolean&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: &#x27;resource&#x27;,
@@ -11694,7 +11233,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;addTemplate&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;addRecord&#x27;, &#x27;resource&#x27;],
@@ -11725,7 +11264,7 @@ Commented types are not yet implemented.</p>
           }
         },
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;prefillWithCurrentRecord:boolean&#x27;,
         category: &#x27;Custom Questions&#x27;,
         dependsOn: [&#x27;addRecord&#x27;, &#x27;resource&#x27;],
@@ -11738,7 +11277,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 8,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;selectQuestion:dropdown&#x27;,
         category: &#x27;Filter by Questions&#x27;,
         dependsOn: [&#x27;resource&#x27;, &#x27;displayField&#x27;],
@@ -11767,7 +11306,7 @@ Commented types are not yet implemented.</p>
         },
       });
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         name: &#x27;gridFieldsSettings&#x27;,
         dependsOn: &#x27;resource&#x27;,
         visibleIf: (obj: any) &#x3D;&gt; {
@@ -11777,7 +11316,7 @@ Commented types are not yet implemented.</p>
           return false;
         },
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         type: &#x27;string&#x27;,
         name: &#x27;staticValue&#x27;,
         category: &#x27;Filter by Questions&#x27;,
@@ -11786,7 +11325,7 @@ Commented types are not yet implemented.</p>
           obj.selectQuestion &#x3D;&#x3D;&#x3D; &#x27;#staticValue&#x27; &amp;&amp; obj.displayField,
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         type: &#x27;dropdown&#x27;,
         name: &#x27;filterBy&#x27;,
         category: &#x27;Filter by Questions&#x27;,
@@ -11806,7 +11345,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         type: &#x27;dropdown&#x27;,
         name: &#x27;filterCondition&#x27;,
         category: &#x27;Filter by Questions&#x27;,
@@ -11829,7 +11368,7 @@ Commented types are not yet implemented.</p>
         },
         visibleIndex: 3,
       });
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         category: &#x27;Filter by Questions&#x27;,
         type: &#x27;selectResourceText&#x27;,
         name: &#x27;selectResourceText&#x27;,
@@ -11852,7 +11391,7 @@ Commented types are not yet implemented.</p>
         selectResourceText
       );
 
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         category: &#x27;Filter by Questions&#x27;,
         type: &#x27;customFilter&#x27;,
         name: &#x27;customFilterEl&#x27;,
@@ -11862,7 +11401,7 @@ Commented types are not yet implemented.</p>
         visibleIndex: 3,
       });
 
-      survey.Serializer.addProperty(&#x27;resources&#x27;, {
+      Survey.Serializer.addProperty(&#x27;resources&#x27;, {
         category: &#x27;Filter by Questions&#x27;,
         type: &#x27;text&#x27;,
         name: &#x27;customFilter&#x27;,
@@ -12030,15 +11569,83 @@ Commented types are not yet implemented.</p>
       }
     },
     onAfterRender: (question: any, el: any): void &#x3D;&gt; {
+      // hide tagbox if grid view is enable
       if (question.displayAsGrid) {
-        // hide tagbox if grid view is enable
         const element &#x3D; el.getElementsByTagName(&#x27;select&#x27;)[0].parentElement;
         element.style.display &#x3D; &#x27;none&#x27;;
       }
+      // Display the add button | grid for resources question
+      if (question.resource) {
+        const parentElement &#x3D; el.querySelector(&#x27;.safe-qst-content&#x27;);
+        if (parentElement) {
+          const gridComponent &#x3D; buildRecordsGrid(
+            question,
+            parentElement.firstChild
+          );
+
+          if (question.survey.mode !&#x3D;&#x3D; &#x27;display&#x27;) {
+            const actionsButtons &#x3D; document.createElement(&#x27;div&#x27;);
+            actionsButtons.id &#x3D; &#x27;actionsButtons&#x27;;
+            actionsButtons.style.display &#x3D; &#x27;flex&#x27;;
+            actionsButtons.style.marginBottom &#x3D; &#x27;0.5em&#x27;;
+
+            const searchBtn &#x3D; buildSearchButton(
+              question,
+              question.gridFieldsSettings,
+              true,
+              dialog
+            );
+            actionsButtons.appendChild(searchBtn);
+
+            const addBtn &#x3D; buildAddButton(
+              question,
+              true,
+              dialog,
+              gridComponent
+            );
+            actionsButtons.appendChild(addBtn);
+
+            parentElement.insertBefore(
+              actionsButtons,
+              parentElement.firstChild
+            );
+            // actionsButtons.style.display &#x3D; ((!question.addRecord || !question.addTemplate) &amp;&amp; !question.gridFieldsSettings) ? &#x27;none&#x27; : &#x27;&#x27;;
+
+            question.registerFunctionOnPropertyValueChanged(
+              &#x27;gridFieldsSettings&#x27;,
+              () &#x3D;&gt; {
+                searchBtn.style.display &#x3D; question.gridFieldsSettings
+                  ? &#x27;&#x27;
+                  : &#x27;none&#x27;;
+              }
+            );
+            question.registerFunctionOnPropertyValueChanged(&#x27;canSearch&#x27;, () &#x3D;&gt; {
+              searchBtn.style.display &#x3D; question.canSearch ? &#x27;&#x27; : &#x27;none&#x27;;
+            });
+            question.registerFunctionOnPropertyValueChanged(
+              &#x27;addTemplate&#x27;,
+              () &#x3D;&gt; {
+                addBtn.style.display &#x3D;
+                  question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
+              }
+            );
+            question.registerFunctionOnPropertyValueChanged(&#x27;addRecord&#x27;, () &#x3D;&gt; {
+              addBtn.style.display &#x3D;
+                question.addRecord &amp;&amp; question.addTemplate ? &#x27;&#x27; : &#x27;none&#x27;;
+            });
+          }
+        }
+      }
     },
   };
-  survey.ComponentCollection.Instance.add(component);
+  Survey.ComponentCollection.Instance.add(component);
 
+  /**
+   * Set an advance filter
+   *
+   * @param value Value of the filter
+   * @param question The question object
+   */
   const setAdvanceFilter &#x3D; (value: string, question: string | any) &#x3D;&gt; {
     const field &#x3D; typeof question !&#x3D;&#x3D; &#x27;string&#x27; ? question.filterBy : question;
     if (!filters.some((x: any) &#x3D;&gt; x.field &#x3D;&#x3D;&#x3D; field)) {
@@ -12054,6 +11661,75 @@ Commented types are not yet implemented.</p>
         }
       });
     }
+  };
+
+  /**
+   * Build the grid with the records
+   *
+   * @param question The resources question
+   * @param el The html element in which we want to build the grid
+   * @returns The SafeCoreGridComponent, or null if the displayAsGrid property
+   * of the question object is false
+   */
+  const buildRecordsGrid &#x3D; (question: any, el: any): any &#x3D;&gt; {
+    let instance: SafeCoreGridComponent;
+    if (question.displayAsGrid) {
+      const grid &#x3D; domService.appendComponentToBody(
+        SafeCoreGridComponent,
+        el.parentElement
+      );
+      instance &#x3D; grid.instance;
+      setGridInputs(instance, question);
+      question.survey.onValueChanged.add((_: any, options: any) &#x3D;&gt; {
+        if (options.name &#x3D;&#x3D;&#x3D; question.name) {
+          setGridInputs(instance, question);
+        }
+      });
+      return instance;
+    }
+    return null;
+  };
+
+  /**
+   * Sets the inputs of the grid.
+   *
+   * @param instance grid instance.
+   * @param question survey question.
+   */
+  const setGridInputs &#x3D; (
+    instance: SafeCoreGridComponent,
+    question: any
+  ): void &#x3D;&gt; {
+    instance.multiSelect &#x3D; true;
+    const query &#x3D; question.gridFieldsSettings || {};
+    const settings &#x3D; {
+      query: {
+        ...query,
+        filter: {
+          logic: &#x27;and&#x27;,
+          filters: [
+            {
+              field: &#x27;ids&#x27;,
+              operator: &#x27;eq&#x27;,
+              value: question.value || [],
+            },
+          ],
+        },
+      },
+    };
+    if (!question.readOnlyGrid) {
+      Object.assign(settings, {
+        actions: {
+          delete: question.canDelete,
+          history: question.history,
+          convert: question.convert,
+          update: question.update,
+          inlineEdition: question.inlineEdition,
+        },
+      });
+    }
+    instance.settings &#x3D; settings;
+    instance.ngOnChanges();
   };
 }</code>
                     </td>
@@ -12153,11 +11829,9 @@ Commented types are not yet implemented.</p>
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>(
-  survey: any,
+  Survey: any,
   domService: DomService,
-  apollo: Apollo,
-  dialog: MatDialog,
-  formBuilder: FormBuilder
+  apollo: Apollo
 ): void &#x3D;&gt; {
   const component &#x3D; {
     name: &#x27;users&#x27;,
@@ -12171,7 +11845,7 @@ Commented types are not yet implemented.</p>
       choices: [] as any[],
     },
     onInit: (): void &#x3D;&gt; {
-      survey.Serializer.addProperty(&#x27;users&#x27;, {
+      Survey.Serializer.addProperty(&#x27;users&#x27;, {
         name: &#x27;applications&#x27;,
         category: &#x27;Users properties&#x27;,
         type: &#x27;applicationsDropdown&#x27;,
@@ -12220,7 +11894,7 @@ Commented types are not yet implemented.</p>
     },
     onAfterRender: (question: any, el: any): void &#x3D;&gt; {},
   };
-  survey.ComponentCollection.Instance.add(component);
+  Survey.ComponentCollection.Instance.add(component);
 }</code>
                     </td>
                 </tr>
@@ -12228,6 +11902,429 @@ Commented types are not yet implemented.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Inits the users component.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/safe/src/lib/survey/widgets/comment-widget.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <span ><b>init</b></span>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(Survey: any): void &#x3D;&gt; {
+  const widget &#x3D; {
+    name: &#x27;comment-widget&#x27;,
+    widgetIsLoaded: (): boolean &#x3D;&gt; true,
+    isFit: (question: any): boolean &#x3D;&gt; question.getType() &#x3D;&#x3D;&#x3D; &#x27;comment&#x27;,
+    init: (): void &#x3D;&gt; {
+      Survey.Serializer.addProperty(&#x27;comment&#x27;, {
+        name: &#x27;allowEdition:boolean&#x27;,
+        type: &#x27;boolean&#x27;,
+        dependsOn: [&#x27;readOnly&#x27;],
+        default: false,
+        category: &#x27;general&#x27;,
+        visibleIf: (obj: any) &#x3D;&gt; {
+          if (!obj || !obj.readOnly) {
+            return false;
+          } else {
+            return true;
+          }
+        },
+      });
+    },
+    isDefaultRender: true,
+    afterRender: (question: any, el: any): void &#x3D;&gt; {
+      // Display of edit button for comment question
+      if (question.allowEdition) {
+        const mainDiv &#x3D; document.createElement(&#x27;div&#x27;);
+        mainDiv.id &#x3D; &#x27;editComment&#x27;;
+        mainDiv.style.height &#x3D; &#x27;23px&#x27;;
+        mainDiv.style.marginBottom &#x3D; &#x27;0.5em&#x27;;
+        const btnEl &#x3D; document.createElement(&#x27;button&#x27;);
+        btnEl.innerText &#x3D; &#x27;Edit&#x27;;
+        btnEl.style.width &#x3D; &#x27;50px&#x27;;
+        mainDiv.appendChild(btnEl);
+        el.parentElement.insertBefore(mainDiv, el);
+        mainDiv.style.display &#x3D; !question.allowEdition ? &#x27;none&#x27; : &#x27;&#x27;;
+        question.registerFunctionOnPropertyValueChanged(&#x27;allowEdition&#x27;, () &#x3D;&gt; {
+          mainDiv.style.display &#x3D; !question.allowEdition ? &#x27;none&#x27; : &#x27;&#x27;;
+        });
+        question.registerFunctionOnPropertyValueChanged(&#x27;readOnly&#x27;, () &#x3D;&gt; {
+          mainDiv.style.display &#x3D; !question.readOnly ? &#x27;none&#x27; : &#x27;&#x27;;
+        });
+        btnEl.onclick &#x3D; () &#x3D;&gt; {
+          question.readOnly &#x3D; false;
+        };
+      }
+    },
+  };
+
+  Survey.CustomWidgetCollection.Instance.addCustomWidget(
+    widget,
+    &#x27;customwidget&#x27;
+  );
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Custom definition for overrriding the comment question. Add edit functionnality.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/safe/src/lib/survey/widgets/text-widget.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <span ><b>init</b></span>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(Survey: any, domService: DomService): void &#x3D;&gt; {
+  const widget &#x3D; {
+    name: &#x27;text-widget&#x27;,
+    widgetIsLoaded: (): boolean &#x3D;&gt; true,
+    isFit: (question: any): boolean &#x3D;&gt; question.getType() &#x3D;&#x3D;&#x3D; &#x27;text&#x27;,
+    init: (): void &#x3D;&gt; {
+      // hide the min and max property for date, datetime and time types
+      Survey.Serializer.getProperty(&#x27;text&#x27;, &#x27;min&#x27;).visibleIf &#x3D; (obj: any) &#x3D;&gt;
+        [&#x27;number&#x27;, &#x27;month&#x27;, &#x27;week&#x27;].includes(obj.inputType || &#x27;&#x27;);
+      Survey.Serializer.getProperty(&#x27;text&#x27;, &#x27;max&#x27;).visibleIf &#x3D; (obj: any) &#x3D;&gt;
+        [&#x27;number&#x27;, &#x27;month&#x27;, &#x27;week&#x27;].includes(obj.inputType || &#x27;&#x27;);
+      // create new min and max properties for date, datetime and time types
+      Survey.Serializer.addProperty(&#x27;text&#x27;, {
+        name: &#x27;dateMin&#x27;,
+        type: &#x27;date&#x27;,
+        category: &#x27;general&#x27;,
+        visibleIndex: 8,
+        dependsOn: &#x27;inputType&#x27;,
+        visibleIf: (obj: any) &#x3D;&gt;
+          [&#x27;date&#x27;, &#x27;datetime&#x27;, &#x27;datetime-local&#x27;, &#x27;time&#x27;].includes(
+            obj.inputType || &#x27;&#x27;
+          ),
+        onPropertyEditorUpdate: (obj: any, propertyEditor: any) &#x3D;&gt; {
+          if (!!obj &amp;&amp; !!obj.inputType) {
+            propertyEditor.inputType &#x3D; obj.inputType;
+          }
+        },
+        onSetValue: (obj: any, value: any) &#x3D;&gt; {
+          obj.setPropertyValue(&#x27;dateMin&#x27;, value);
+          obj.setPropertyValue(&#x27;min&#x27;, value);
+        },
+      });
+      Survey.Serializer.addProperty(&#x27;text&#x27;, {
+        name: &#x27;dateMax&#x27;,
+        type: &#x27;date&#x27;,
+        category: &#x27;general&#x27;,
+        visibleIndex: 9,
+        dependsOn: &#x27;inputType&#x27;,
+        visibleIf: (obj: any) &#x3D;&gt;
+          [&#x27;date&#x27;, &#x27;datetime&#x27;, &#x27;datetime-local&#x27;, &#x27;time&#x27;].includes(
+            obj.inputType || &#x27;&#x27;
+          ),
+        onPropertyEditorUpdate: (obj: any, propertyEditor: any) &#x3D;&gt; {
+          if (!!obj &amp;&amp; !!obj.inputType) {
+            propertyEditor.inputType &#x3D; obj.inputType;
+          }
+        },
+        onSetValue: (obj: any, value: any) &#x3D;&gt; {
+          obj.setPropertyValue(&#x27;dateMax&#x27;, value);
+          obj.setPropertyValue(&#x27;max&#x27;, value);
+        },
+      });
+      // register the editor for type &quot;date&quot; with kendo date picker
+      const dateEditor &#x3D; {
+        render: (editor: any, htmlElement: any) &#x3D;&gt; {
+          const question &#x3D; editor.object;
+          const updatePickerInstance &#x3D; () &#x3D;&gt; {
+            htmlElement.querySelector(&#x27;.k-widget&#x27;)?.remove(); // .k-widget class is shared by the 3 types of picker
+            const pickerInstance &#x3D; createPickerInstance(
+              question.inputType,
+              htmlElement
+            );
+            if (pickerInstance) {
+              if (question[editor.property.name]) {
+                pickerInstance.value &#x3D; getDateDisplay(
+                  question[editor.property.name],
+                  question.inputType
+                );
+              }
+              pickerInstance.registerOnChange((value: Date | null) &#x3D;&gt; {
+                if (value) {
+                  editor.onChanged(setDateValue(value, question.inputType));
+                } else {
+                  editor.onChanged(null);
+                }
+              });
+            }
+          };
+          question.registerFunctionOnPropertyValueChanged(
+            &#x27;inputType&#x27;,
+            updatePickerInstance,
+            // eslint-disable-next-line no-underscore-dangle
+            editor.property_.name // a unique key to distinguish multiple date properties
+          );
+          // Init
+          updatePickerInstance();
+        },
+      };
+      SurveyCreator.SurveyPropertyEditorFactory.registerCustomEditor(
+        &#x27;date&#x27;,
+        dateEditor
+      );
+    },
+    isDefaultRender: true,
+    afterRender: (question: any, el: any): void &#x3D;&gt; {
+      // add kendo date pickers for text inputs with dates types
+      const updateTextInput &#x3D; () &#x3D;&gt; {
+        el.parentElement.querySelector(&#x27;.k-widget&#x27;)?.remove(); // .k-widget class is shared by the 3 types of picker
+        if (
+          [&#x27;date&#x27;, &#x27;datetime&#x27;, &#x27;datetime-local&#x27;, &#x27;time&#x27;].includes(
+            question.inputType
+          )
+        ) {
+          const pickerInstance &#x3D; createPickerInstance(
+            question.inputType,
+            el.parentElement
+          );
+          if (pickerInstance) {
+            if (question.value) {
+              pickerInstance.value &#x3D; getDateDisplay(
+                question.value,
+                question.inputType
+              );
+            }
+            if (question.min) {
+              pickerInstance.min &#x3D; getDateDisplay(
+                question.min,
+                question.inputType
+              );
+            }
+            if (question.max) {
+              pickerInstance.max &#x3D; getDateDisplay(
+                question.max,
+                question.inputType
+              );
+            }
+            pickerInstance.readonly &#x3D; question.isReadOnly;
+            pickerInstance.disabled &#x3D; question.isReadOnly;
+            pickerInstance.registerOnChange((value: Date | null) &#x3D;&gt; {
+              if (value) {
+                question.value &#x3D; setDateValue(value, question.inputType);
+              } else {
+                question.value &#x3D; null;
+              }
+            });
+            el.style.display &#x3D; &#x27;none&#x27;;
+          }
+        } else {
+          el.style.display &#x3D; &#x27;initial&#x27;;
+        }
+      };
+      question.registerFunctionOnPropertyValueChanged(
+        &#x27;inputType&#x27;,
+        updateTextInput,
+        el.id // a unique key to distinguish fields
+      );
+      // Init
+      updateTextInput();
+
+      // Adding an open url icon for urls inputs
+      if (question.inputType &#x3D;&#x3D;&#x3D; &#x27;url&#x27;) {
+        // Generate the dynamic component with its parameters
+        const button &#x3D; domService.appendComponentToBody(
+          SafeButtonComponent,
+          el.parentElement
+        );
+        const instance: SafeButtonComponent &#x3D; button.instance;
+        instance.isIcon &#x3D; true;
+        instance.icon &#x3D; &#x27;open_in_new&#x27;;
+        instance.size &#x3D; ButtonSize.SMALL;
+        instance.category &#x3D; ButtonCategory.TERTIARY;
+        instance.variant &#x3D; &#x27;default&#x27;;
+        // we override the css of the component
+        const domElem &#x3D; (button.hostView as EmbeddedViewRef&lt;any&gt;)
+          .rootNodes[0] as HTMLElement;
+        (domElem.firstChild as HTMLElement).style.minWidth &#x3D; &#x27;unset&#x27;;
+        (domElem.firstChild as HTMLElement).style.backgroundColor &#x3D; &#x27;unset&#x27;;
+        (domElem.firstChild as HTMLElement).style.color &#x3D; &#x27;black&#x27;;
+
+        // Set the default styling of the parent
+        el.parentElement.style.display &#x3D; &#x27;flex&#x27;;
+        el.parentElement.style.alignItems &#x3D; &#x27;center&#x27;;
+        el.parentElement.style.flexDirection &#x3D; &#x27;row&#x27;;
+        el.parentElement.style.pointerEvents &#x3D; &#x27;auto&#x27;;
+        el.parentElement.style.justifyContent &#x3D; &#x27;space-between&#x27;;
+        el.parentElement.title &#x3D;
+          &#x27;The URL should start with &quot;http://&quot; or &quot;https://&quot;&#x27;;
+
+        // Create an &lt;a&gt; HTMLElement only used to verify the validity of the URL
+        const urlTester &#x3D; document.createElement(&#x27;a&#x27;);
+        if (
+          el.value &amp;&amp;
+          !(el.value.startsWith(&#x27;https://&#x27;) || el.value.startsWith(&#x27;http://&#x27;))
+        ) {
+          urlTester.href &#x3D; &#x27;https://&#x27; + el.value;
+        } else {
+          urlTester.href &#x3D; el.value || &#x27;&#x27;;
+        }
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        urlTester.host &amp;&amp; urlTester.host !&#x3D;&#x3D; window.location.host
+          ? (instance.disabled &#x3D; false)
+          : (instance.disabled &#x3D; true);
+
+        question.survey.onValueChanged.add((__: any, opt: any) &#x3D;&gt; {
+          if (opt.question.name &#x3D;&#x3D;&#x3D; question.name) {
+            if (
+              opt.question.value &amp;&amp;
+              !(
+                opt.question.value.startsWith(&#x27;https://&#x27;) ||
+                opt.question.value.startsWith(&#x27;http://&#x27;)
+              )
+            ) {
+              urlTester.href &#x3D; &#x27;https://&#x27; + opt.question.value;
+            } else {
+              urlTester.href &#x3D; opt.question.value || &#x27;&#x27;;
+            }
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+            urlTester.host &amp;&amp; urlTester.host !&#x3D;&#x3D; window.location.host
+              ? (instance.disabled &#x3D; false)
+              : (instance.disabled &#x3D; true);
+
+            console.log(opt.question.value);
+          }
+        });
+
+        button.instance.emittedEventSubject.subscribe((eventType: string) &#x3D;&gt; {
+          if (
+            eventType &#x3D;&#x3D;&#x3D; &#x27;click&#x27; &amp;&amp;
+            urlTester.host &amp;&amp;
+            urlTester.host !&#x3D;&#x3D; window.location.host
+          ) {
+            window.open(urlTester.href, &#x27;_blank&#x27;, &#x27;noopener,noreferrer&#x27;);
+          }
+        });
+      }
+    },
+  };
+
+  /**
+   * Get date for input display.
+   *
+   * @param value question value
+   * @param inputType question input type
+   * @returns formatted date
+   */
+  const getDateDisplay &#x3D; (value: any, inputType: string): Date &#x3D;&gt; {
+    const date &#x3D; new Date(value);
+    if (inputType &#x3D;&#x3D;&#x3D; &#x27;time&#x27;) {
+      return new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+    } else {
+      return date;
+    }
+  };
+
+  /**
+   * Set date for question / parameter value
+   *
+   * @param value input value
+   * @param inputType question input type
+   * @returns formatted date
+   */
+  const setDateValue &#x3D; (value: Date, inputType: string): Date | string &#x3D;&gt; {
+    if (inputType &#x3D;&#x3D;&#x3D; &#x27;time&#x27;) {
+      // for time fields, translate the date to UTC
+      return new Date(
+        Date.UTC(1970, 0, 1, value.getHours(), value.getMinutes())
+      );
+    } else {
+      return value.toISOString();
+    }
+  };
+
+  /**
+   * It creates a date, datetime or time picker instance based on the input type
+   *
+   * @param inputType - The type of the input element.
+   * @param element - The element that the directive is attached to.
+   * @returns The picker instance, or null if the type is not allowed
+   */
+  const createPickerInstance &#x3D; (
+    inputType: &#x27;date&#x27; | &#x27;datetime&#x27; | &#x27;datetime-local&#x27; | &#x27;time&#x27;,
+    element: any
+  ):
+    | DatePickerComponent
+    | DateTimePickerComponent
+    | TimePickerComponent
+    | null &#x3D;&gt; {
+    switch (inputType) {
+      case &#x27;date&#x27;:
+        const datePicker &#x3D; domService.appendComponentToBody(
+          DatePickerComponent,
+          element
+        );
+        const datePickerInstance: DatePickerComponent &#x3D; datePicker.instance;
+        datePickerInstance.format &#x3D; &#x27;dd/MM/yyyy&#x27;;
+        return datePickerInstance;
+      case &#x27;datetime&#x27;:
+      case &#x27;datetime-local&#x27;:
+        const dateTimePicker &#x3D; domService.appendComponentToBody(
+          DateTimePickerComponent,
+          element
+        );
+        const dateTimePickerInstance: DateTimePickerComponent &#x3D;
+          dateTimePicker.instance;
+        dateTimePickerInstance.format &#x3D; &#x27;dd/MM/yyyy HH:mm&#x27;;
+        return dateTimePickerInstance;
+      case &#x27;time&#x27;:
+        const timePicker &#x3D; domService.appendComponentToBody(
+          TimePickerComponent,
+          element
+        );
+        const timePickerInstance: TimePickerComponent &#x3D; timePicker.instance;
+        timePickerInstance.format &#x3D; &#x27;HH:mm&#x27;;
+        return timePickerInstance;
+      default:
+        return null;
+    }
+  };
+
+  Survey.CustomWidgetCollection.Instance.addCustomWidget(
+    widget,
+    &#x27;customwidget&#x27;
+  );
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Custom definition for overriding the text question. Allowed support for dates.</p>
 </div>
                 </td>
             </tr>
@@ -12250,18 +12347,18 @@ Commented types are not yet implemented.</p>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(survey: any): void &#x3D;&gt; {
-  survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).readOnly &#x3D; true;
-  survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).dependsOn &#x3D; &#x27;valueName&#x27;;
-  survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).onGetValue &#x3D; (obj: any) &#x3D;&gt;
+                        <i>Default value : </i><code>(Survey: any): void &#x3D;&gt; {
+  Survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).readOnly &#x3D; true;
+  Survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).dependsOn &#x3D; &#x27;valueName&#x27;;
+  Survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).onGetValue &#x3D; (obj: any) &#x3D;&gt;
     obj.valueName ? obj.valueName : obj.name;
-  survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;valueName&#x27;).isRequired &#x3D; true;
-  survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).onGetValue &#x3D; (
+  Survey.Serializer.findProperty(&#x27;question&#x27;, &#x27;valueName&#x27;).isRequired &#x3D; true;
+  Survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).onGetValue &#x3D; (
     obj: any
   ) &#x3D;&gt; false;
-  survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).readOnly &#x3D; true;
-  survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).visible &#x3D; false;
-  survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;maxSize&#x27;).onGetValue &#x3D; (obj: any) &#x3D;&gt;
+  Survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).readOnly &#x3D; true;
+  Survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).visible &#x3D; false;
+  Survey.Serializer.findProperty(&#x27;file&#x27;, &#x27;maxSize&#x27;).onGetValue &#x3D; (obj: any) &#x3D;&gt;
     7340032;
 }</code>
                     </td>
@@ -12277,23 +12374,141 @@ Commented types are not yet implemented.</p>
         </tbody>
     </table>
 </section>
+    <h3>projects/safe/src/lib/survey/custom-properties.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initCustomProperties"></a>
+                    <span class="name">
+                        <span ><b>initCustomProperties</b></span>
+                        <a href="#initCustomProperties"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(Survey: any, environment: any): void &#x3D;&gt; {
+  // change the prefix for comments
+  Survey.settings.commentPrefix &#x3D; &#x27;_comment&#x27;;
+  // add tooltip property
+  Survey.Serializer.addProperty(&#x27;question&#x27;, {
+    name: &#x27;tooltip:text&#x27;,
+    category: &#x27;general&#x27;,
+  });
+  // override default expression properties
+  Survey.Serializer.removeProperty(&#x27;expression&#x27;, &#x27;readOnly&#x27;);
+  Survey.Serializer.addProperty(&#x27;expression&#x27;, {
+    name: &#x27;readOnly:boolean&#x27;,
+    type: &#x27;boolean&#x27;,
+    visibleIndex: 6,
+    default: false,
+    category: &#x27;general&#x27;,
+    required: true,
+  });
+  // Pass token before the request to fetch choices by URL if it&#x27;s targeting SAFE API
+  Survey.ChoicesRestfull.onBeforeSendRequest &#x3D; (
+    sender: ChoicesRestful,
+    options: { request: XMLHttpRequest }
+  ) &#x3D;&gt; {
+    if (sender.url.includes(environment.apiUrl)) {
+      const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
+      options.request.setRequestHeader(&#x27;Authorization&#x27;, &#x60;Bearer ${token}&#x60;);
+    }
+  };
+  // add the onCompleteExpression property to the survey
+  Survey.Serializer.addProperty(&#x27;survey&#x27;, {
+    name: &#x27;onCompleteExpression:expression&#x27;,
+    type: &#x27;expression&#x27;,
+    visibleIndex: 350,
+    category: &#x27;logic&#x27;,
+  });
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add support for custom properties to the survey</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="renderCustomProperties"></a>
+                    <span class="name">
+                        <span ><b>renderCustomProperties</b></span>
+                        <a href="#renderCustomProperties"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(domService: DomService): ((survey: any, options: any) &#x3D;&gt; void) &#x3D;&gt;
+  (_: any, options: { question: any; htmlElement: any }): void &#x3D;&gt; {
+    // get the question and the html element of the question
+    const el &#x3D; options.htmlElement;
+    const question &#x3D; options.question;
+
+    // Display the tooltip
+    const header &#x3D; el.parentElement.parentElement.querySelector(&#x27;.sv_q_title&#x27;);
+    if (header) {
+      header.title &#x3D; question.tooltip;
+      const span &#x3D; document.createElement(&#x27;span&#x27;);
+      span.innerText &#x3D; &#x27;help&#x27;;
+      span.className &#x3D; &#x27;material-icons&#x27;;
+      span.style.fontSize &#x3D; &#x27;1em&#x27;;
+      span.style.cursor &#x3D; &#x27;pointer&#x27;;
+      span.style.color &#x3D; &#x27;#008DC9&#x27;;
+      header.appendChild(span);
+      span.style.display &#x3D; !question.tooltip ? &#x27;none&#x27; : &#x27;&#x27;;
+      question.registerFunctionOnPropertyValueChanged(&#x27;tooltip&#x27;, () &#x3D;&gt; {
+        span.style.display &#x3D; !question.tooltip ? &#x27;none&#x27; : &#x27;&#x27;;
+        header.title &#x3D; question.tooltip;
+      });
+    }
+
+    // define the max size for files
+    if (question.getType() &#x3D;&#x3D;&#x3D; &#x27;file&#x27;) {
+      question.maxSize &#x3D; 7340032;
+    }
+  }</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Render the custom properties</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
     <h3>projects/safe/src/lib/survey/init.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="initCustomWidgets"></a>
+                    <a name="initCustomSurvey"></a>
                     <span class="name">
-                        <span ><b>initCustomWidgets</b></span>
-                        <a href="#initCustomWidgets"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>initCustomSurvey</b></span>
+                        <a href="#initCustomSurvey"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>(
-  survey: any,
+  Survey: any,
   domService: DomService,
   dialog: MatDialog,
   apollo: Apollo,
@@ -12301,15 +12516,19 @@ Commented types are not yet implemented.</p>
   authService: SafeAuthService,
   environment: any
 ): void &#x3D;&gt; {
-  survey.settings.commentPrefix &#x3D; &#x27;_comment&#x27;;
-  // supportCreatorV2
-  widgets.select2tagbox(survey);
-  initResourceComponent(survey, domService, apollo, dialog, formBuilder);
-  initResourcesComponent(survey, domService, apollo, dialog, formBuilder);
-  initOwnerComponent(survey, domService, apollo, dialog, formBuilder);
-  initUsersComponent(survey, domService, apollo, dialog, formBuilder);
-  initCustomWidget(survey, domService, dialog, environment);
-  addCustomFunctions(survey, authService, apollo);
+  // load widgets (aka custom questions)
+  widgets.select2tagbox(Survey);
+  initCommentWidget(Survey);
+  initTextWidget(Survey, domService);
+  // load components (same as widgets, but with less configuration options)
+  initResourceComponent(Survey, domService, apollo, dialog, formBuilder);
+  initResourcesComponent(Survey, domService, apollo, dialog, formBuilder);
+  initOwnerComponent(Survey, domService, apollo);
+  initUsersComponent(Survey, domService, apollo);
+  // load custom properties
+  initCustomProperties(Survey, environment);
+  // load internal functions
+  addCustomFunctions(Survey, authService, apollo);
 }</code>
                     </td>
                 </tr>

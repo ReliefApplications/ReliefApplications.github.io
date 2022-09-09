@@ -433,7 +433,7 @@ Must be initialized at some point in the applications.</p>
 import * as SurveyKo from &#x27;survey-knockout&#x27;;
 import * as Survey from &#x27;survey-angular&#x27;;
 import { initCreatorSettings } from &#x27;../survey/creator&#x27;;
-import { initCustomWidgets } from &#x27;../survey/init&#x27;;
+import { initCustomSurvey } from &#x27;../survey/init&#x27;;
 import { DomService } from &#x27;./dom.service&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { Apollo } from &#x27;apollo-angular&#x27;;
@@ -470,7 +470,7 @@ export class SafeFormService {
     public authService: SafeAuthService
   ) {
     // &#x3D;&#x3D;&#x3D; CUSTOM WIDGETS / COMPONENTS &#x3D;&#x3D;&#x3D;
-    initCustomWidgets(
+    initCustomSurvey(
       SurveyKo,
       domService,
       dialog,
@@ -482,7 +482,7 @@ export class SafeFormService {
     // &#x3D;&#x3D;&#x3D; CREATOR SETTINGS &#x3D;&#x3D;&#x3D;
     initCreatorSettings(SurveyKo);
     // &#x3D;&#x3D;&#x3D; CUSTOM WIDGETS / COMPONENTS &#x3D;&#x3D;&#x3D;
-    initCustomWidgets(
+    initCustomSurvey(
       Survey,
       domService,
       dialog,
