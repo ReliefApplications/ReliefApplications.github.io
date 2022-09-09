@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Application web widget component</p>
+
+    </p>
 
 
     <p class="comment">
@@ -207,12 +214,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:27</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Application web widget component</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -221,6 +230,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -235,6 +245,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Shared layout service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -268,7 +282,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:20</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -292,7 +306,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:22</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -325,8 +339,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:36</a></div>
                 </td>
             </tr>
 
@@ -377,7 +391,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -403,7 +417,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/web-widgets/src/app/widgets/application-widget/application-widget.component.ts:27</a></div>
                         </td>
                     </tr>
 
@@ -428,6 +442,7 @@
 } from &#x27;@angular/core&#x27;;
 import { Page, SafeLayoutService } from &#x27;@safe/builder&#x27;;
 
+/** Application web widget component */
 @Component({
   selector: &#x27;app-application-widget&#x27;,
   templateUrl: &#x27;./application-widget.component.html&#x27;,
@@ -443,6 +458,11 @@ export class ApplicationWidgetComponent implements OnInit {
 
   public showSidenav &#x3D; false;
 
+  /**
+   * Application web widget component
+   *
+   * @param layoutService Shared layout service
+   */
   constructor(private layoutService: SafeLayoutService) {}
 
   ngOnInit(): void {
@@ -536,7 +556,7 @@ export class ApplicationWidgetComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container">  <mat-sidenav-content>    <div class="sidenav-content">      <app-application        [pageId]="pageId"        (pages)="pages.emit($event)"      ></app-application>    </div>  </mat-sidenav-content>  <mat-sidenav mode="side" position="end" [(opened)]="showSidenav">    <ng-template #rightSidenav></ng-template>  </mat-sidenav></mat-sidenav-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationWidgetComponent', 'selector': 'app-application-widget'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardWidgetComponent', 'selector': 'app-dashboard-widget'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormWidgetComponent', 'selector': 'app-form-widget'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowWidgetComponent', 'selector': 'app-workflow-widget'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationWidgetComponent', 'selector': 'app-application-widget'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardWidgetComponent', 'selector': 'app-dashboard-widget'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormWidgetComponent', 'selector': 'app-form-widget'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowWidgetComponent', 'selector': 'app-workflow-widget'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ApplicationWidgetComponent'};
 </script>

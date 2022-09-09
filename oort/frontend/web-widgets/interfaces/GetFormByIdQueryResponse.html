@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Get form query response</p>
+
+            </p>
 
 
         <section>
@@ -181,6 +188,7 @@
 import { Form } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; GET FORM BY ID &#x3D;&#x3D;&#x3D;
+/** Get form query */
 export const GET_SHORT_FORM_BY_ID &#x3D; gql&#x60;
   query GetShortFormById($id: ID!) {
     form(id: $id) {
@@ -200,6 +208,7 @@ export const GET_SHORT_FORM_BY_ID &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Get form query response */
 export interface GetFormByIdQueryResponse {
   loading: boolean;
   form: Form;

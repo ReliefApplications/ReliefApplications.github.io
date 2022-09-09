@@ -56,6 +56,10 @@
 <title>cluster_WorkflowModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 430,-230.8 430,-32.8 8,-32.8"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_WorkflowModule_exports</title>
+<polygon fill="none" stroke="black" points="152,-170.8 152,-222.8 310,-222.8 310,-170.8 152,-170.8"/>
+</g>
 <g id="clust4" class="cluster">
 <title>cluster_WorkflowModule_imports</title>
 <polygon fill="none" stroke="black" points="178,-40.8 178,-92.8 422,-92.8 422,-40.8 178,-40.8"/>
@@ -63,10 +67,6 @@
 <g id="clust2" class="cluster">
 <title>cluster_WorkflowModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 170,-92.8 170,-40.8 16,-40.8"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_WorkflowModule_exports</title>
-<polygon fill="none" stroke="black" points="152,-170.8 152,-222.8 310,-222.8 310,-170.8 152,-170.8"/>
 </g>
 <!-- WorkflowComponent -->
 <g id="node1" class="node">
@@ -157,6 +157,13 @@
 
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>Workflow module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -207,6 +214,9 @@ import { SafeWorkflowStepperModule } from &#x27;@safe/builder&#x27;;
 import { DashboardModule } from &#x27;../dashboard/dashboard.module&#x27;;
 import { FormModule } from &#x27;../form/form.module&#x27;;
 
+/**
+ * Workflow module.
+ */
 @NgModule({
   declarations: [WorkflowComponent],
   imports: [

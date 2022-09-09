@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Get workflow query response</p>
+
+            </p>
 
 
         <section>
@@ -181,6 +188,7 @@
 import { Workflow } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; GET WORKFLOW BY ID &#x3D;&#x3D;&#x3D;
+/** Get workflow query */
 export const GET_WORKFLOW_BY_ID &#x3D; gql&#x60;
   query GetWorkflowById($id: ID!) {
     workflow(id: $id) {
@@ -218,6 +226,7 @@ export const GET_WORKFLOW_BY_ID &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Get workflow query response */
 export interface GetWorkflowByIdQueryResponse {
   loading: boolean;
   workflow: Workflow;

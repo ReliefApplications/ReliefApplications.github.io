@@ -151,6 +151,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Authentication configuration</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -232,6 +238,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Authentication configuration</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -311,6 +323,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Authentication configuration</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -378,6 +396,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Context of the file</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -399,6 +423,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Declare the require object</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -437,7 +467,10 @@
     };
   });
 
-  const http &#x3D; httpLink.create({ uri: &#x60;${environment.apiUrl}/graphql&#x60; });
+  const http &#x3D; httpLink.create({
+    uri: &#x60;${environment.apiUrl}/graphql&#x60;,
+    extractFiles,
+  });
 
   const ws &#x3D; new WebSocketLink({
     uri: &#x60;${environment.subscriptionApiUrl}/graphql&#x60;,
@@ -543,6 +576,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get application query</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -574,6 +613,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get dashboard query</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -614,6 +659,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get form query</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -672,6 +723,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get workflow query</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>

@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Get dashboard query response</p>
+
+            </p>
 
 
         <section>
@@ -181,6 +188,7 @@
 import { Dashboard } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; GET DASHBOARD BY ID &#x3D;&#x3D;&#x3D;
+/** Get dashboard query */
 export const GET_DASHBOARD_BY_ID &#x3D; gql&#x60;
   query GetDashboardById($id: ID!) {
     dashboard(id: $id) {
@@ -191,6 +199,7 @@ export const GET_DASHBOARD_BY_ID &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Get dashboard query response */
 export interface GetDashboardByIdQueryResponse {
   loading: boolean;
   dashboard: Dashboard;

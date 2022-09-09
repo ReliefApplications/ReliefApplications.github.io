@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Dashboard component</p>
+
+    </p>
 
 
     <p class="comment">
@@ -216,12 +223,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:31</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Dashboard component</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -230,6 +239,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -244,6 +254,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Apollo service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -277,7 +291,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:25</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -301,7 +315,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:27</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -334,8 +348,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:59</a></div>
                 </td>
             </tr>
 
@@ -371,8 +385,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:40</a></div>
                 </td>
             </tr>
 
@@ -415,7 +429,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -441,7 +455,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:29</a></div>
                         </td>
                     </tr>
 
@@ -473,7 +487,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/web-widgets/src/app/components/dashboard/dashboard.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -501,6 +515,9 @@ import {
   GET_DASHBOARD_BY_ID,
 } from &#x27;./graphql/queries&#x27;;
 
+/**
+ * Dashboard component
+ */
 @Component({
   selector: &#x27;app-dashboard&#x27;,
   templateUrl: &#x27;./dashboard.component.html&#x27;,
@@ -515,6 +532,11 @@ export class DashboardComponent implements OnInit, OnChanges {
   public tiles &#x3D; [];
   public dashboard?: Dashboard;
 
+  /**
+   * Dashboard component
+   *
+   * @param apollo Apollo service
+   */
   constructor(private apollo: Apollo) {}
 
   ngOnInit(): void {
@@ -602,7 +624,7 @@ export class DashboardComponent implements OnInit, OnChanges {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><mat-spinner diameter="45" class="page-loader" *ngIf="loading"></mat-spinner><ng-container *ngIf="!loading && dashboard">  <safe-widget-grid    [widgets]="tiles"    (goToNextStep)="goToNextStep.emit($event)"  ></safe-widget-grid></ng-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationWidgetComponent', 'selector': 'app-application-widget'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardWidgetComponent', 'selector': 'app-dashboard-widget'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormWidgetComponent', 'selector': 'app-form-widget'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowWidgetComponent', 'selector': 'app-workflow-widget'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationWidgetComponent', 'selector': 'app-application-widget'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardWidgetComponent', 'selector': 'app-dashboard-widget'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormWidgetComponent', 'selector': 'app-form-widget'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowWidgetComponent', 'selector': 'app-workflow-widget'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};
 </script>

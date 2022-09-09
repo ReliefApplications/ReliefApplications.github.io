@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Get application query response</p>
+
+            </p>
 
 
         <section>
@@ -181,6 +188,7 @@
 import { Application } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; GET APPLICATION BY ID &#x3D;&#x3D;&#x3D;
+/** Get application query */
 export const GET_APPLICATION_BY_ID &#x3D; gql&#x60;
   query GetApplicationById($id: ID!) {
     application(id: $id) {
@@ -196,6 +204,7 @@ export const GET_APPLICATION_BY_ID &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Get application query response */
 export interface GetApplicationByIdQueryResponse {
   loading: boolean;
   application: Application;

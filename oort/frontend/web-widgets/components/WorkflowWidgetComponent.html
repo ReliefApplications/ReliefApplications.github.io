@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Workflow web widget component</p>
+
+    </p>
 
 
     <p class="comment">
@@ -179,12 +186,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:20</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Workflow web widget component</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -193,6 +202,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -207,6 +217,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Shared layout service</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -246,8 +260,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:29</a></div>
                 </td>
             </tr>
 
@@ -298,7 +312,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -324,7 +338,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/web-widgets/src/app/widgets/workflow-widget/workflow-widget.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -346,6 +360,7 @@
 } from &#x27;@angular/core&#x27;;
 import { SafeLayoutService } from &#x27;@safe/builder&#x27;;
 
+/** Workflow web widget component */
 @Component({
   selector: &#x27;app-workflow-widget&#x27;,
   templateUrl: &#x27;./workflow-widget.component.html&#x27;,
@@ -357,6 +372,11 @@ export class WorkflowWidgetComponent implements OnInit {
 
   public showSidenav &#x3D; false;
 
+  /**
+   * Workflow web widget component
+   *
+   * @param layoutService Shared layout service
+   */
   constructor(private layoutService: SafeLayoutService) {}
 
   ngOnInit(): void {
@@ -447,7 +467,7 @@ export class WorkflowWidgetComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container">  <mat-sidenav-content>    <div class="sidenav-content">      <app-workflow></app-workflow>    </div>  </mat-sidenav-content>  <mat-sidenav mode="side" position="end" [(opened)]="showSidenav">    <ng-template #rightSidenav></ng-template>  </mat-sidenav></mat-sidenav-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationWidgetComponent', 'selector': 'app-application-widget'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardWidgetComponent', 'selector': 'app-dashboard-widget'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormWidgetComponent', 'selector': 'app-form-widget'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowWidgetComponent', 'selector': 'app-workflow-widget'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationWidgetComponent', 'selector': 'app-application-widget'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardWidgetComponent', 'selector': 'app-dashboard-widget'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormWidgetComponent', 'selector': 'app-form-widget'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowWidgetComponent', 'selector': 'app-workflow-widget'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'WorkflowWidgetComponent'};
 </script>
