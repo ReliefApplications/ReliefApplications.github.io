@@ -77,6 +77,7 @@ import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { AccessGuard } from &#x27;./guards/access.guard&#x27;;
 import { AuthGuard } from &#x27;./guards/auth.guard&#x27;;
 
+/** Routes of back-office. */
 const routes: Routes &#x3D; [
   {
     path: &#x27;auth&#x27;,
@@ -127,8 +128,10 @@ const routes: Routes &#x3D; [
   },
 ];
 
-/** Root module of Routing. Separate the front into three modules: &#x27;auth&#x27;, &#x27;dashboard&#x27; and &#x27;application&#x27;.
-    Use lazy loading for performance. */
+/**
+ * Root module of Routing. Separate the front into three modules: &#x27;auth&#x27;, &#x27;dashboard&#x27; and &#x27;application&#x27;.
+ * Use lazy loading for performance.
+ */
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {

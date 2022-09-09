@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { FormRecordsComponent } from &#x27;./form-records.component&#x27;;
 
+/** List of routes of Form Records module */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,7 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/** Form records routing module. */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

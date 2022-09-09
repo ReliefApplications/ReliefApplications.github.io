@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { PositionComponent } from &#x27;./position.component&#x27;;
 
+/** List of routes of application position module */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * Application position routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

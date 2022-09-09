@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { SubscriptionsComponent } from &#x27;./subscriptions.component&#x27;;
 
+/** List of application subscriptions module routes */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * Application subscriptions routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { FormAnswerComponent } from &#x27;./form-answer.component&#x27;;
 
+/** List of routes of form answer module */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * Form answer routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

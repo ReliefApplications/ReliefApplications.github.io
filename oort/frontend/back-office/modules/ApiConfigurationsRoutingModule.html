@@ -76,6 +76,7 @@
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { ApiConfigurationsComponent } from &#x27;./api-configurations.component&#x27;;
 
+/** List of API configuration module routes */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * API configuration routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

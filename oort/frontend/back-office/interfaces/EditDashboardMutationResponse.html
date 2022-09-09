@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Edit dashboard mutation response</p>
+
+            </p>
 
 
         <section>
@@ -196,6 +203,7 @@ import {
 } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; EDIT USER &#x3D;&#x3D;&#x3D;
+/** Edit user mutation */
 export const EDIT_USER &#x3D; gql&#x60;
   mutation editUser($id: ID!, $roles: [ID]!, $application: ID) {
     editUser(id: $id, roles: $roles, application: $application) {
@@ -211,12 +219,14 @@ export const EDIT_USER &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit user mutation response */
 export interface EditUserMutationResponse {
   loading: boolean;
   editUser: User;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD ROLE &#x3D;&#x3D;&#x3D;
+/** Add role mutation */
 export const ADD_ROLE &#x3D; gql&#x60;
   mutation addRole($title: String!, $application: ID) {
     addRole(title: $title, application: $application) {
@@ -231,12 +241,14 @@ export const ADD_ROLE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add role mutation response */
 export interface AddRoleMutationResponse {
   loading: boolean;
   addRole: Role;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT ROLE &#x3D;&#x3D;&#x3D;
+/** edit role mutation */
 export const EDIT_ROLE &#x3D; gql&#x60;
   mutation editRole($id: ID!, $permissions: [ID]!) {
     editRole(id: $id, permissions: $permissions) {
@@ -247,12 +259,14 @@ export const EDIT_ROLE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit role mutation response */
 export interface EditRoleMutationResponse {
   loading: boolean;
   editRole: Role;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE ROLE &#x3D;&#x3D;&#x3D;
+/** Delete role mutation */
 export const DELETE_ROLE &#x3D; gql&#x60;
   mutation deleteRole($id: ID!) {
     deleteRole(id: $id) {
@@ -261,12 +275,14 @@ export const DELETE_ROLE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete role mutation response */
 export interface DeleteRoleMutationResponse {
   loading: boolean;
   deleteRole: Role;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD DASHBOARD &#x3D;&#x3D;&#x3D;
+/** Add dashboard mutation */
 export const ADD_DASHBOARD &#x3D; gql&#x60;
   mutation addDashboard($name: String!) {
     addDashboard(name: $name) {
@@ -278,12 +294,14 @@ export const ADD_DASHBOARD &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add dashboard mutation response */
 export interface AddDashboardMutationResponse {
   loading: boolean;
   addDashboard: Dashboard;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE DASHBOARD &#x3D;&#x3D;&#x3D;
+/** Delete dashboard mutation */
 export const DELETE_DASHBOARD &#x3D; gql&#x60;
   mutation deleteDashboard($id: ID!) {
     deleteDashboard(id: $id) {
@@ -293,12 +311,14 @@ export const DELETE_DASHBOARD &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete dashboard mutation response */
 export interface DeleteDashboardMutationResponse {
   loading: boolean;
   deleteDashboard: Dashboard;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD FORM &#x3D;&#x3D;&#x3D;
+/** Add form mutation */
 export const ADD_FORM &#x3D; gql&#x60;
   mutation addForm($name: String!, $resource: ID, $template: ID) {
     addForm(name: $name, resource: $resource, template: $template) {
@@ -313,12 +333,14 @@ export const ADD_FORM &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add form mutation response */
 export interface AddFormMutationResponse {
   loading: boolean;
   addForm: Form;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE FORM &#x3D;&#x3D;&#x3D;
+/** Delete form mutation */
 export const DELETE_FORM &#x3D; gql&#x60;
   mutation deleteForm($id: ID!) {
     deleteForm(id: $id) {
@@ -327,12 +349,14 @@ export const DELETE_FORM &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete form mutation response */
 export interface DeleteFormMutationResponse {
   loading: boolean;
   deleteForm: Form;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT RESOURCE &#x3D;&#x3D;&#x3D;
+/** Edit resource mutation */
 export const EDIT_RESOURCE &#x3D; gql&#x60;
   mutation editResource($id: ID!, $permissions: JSON) {
     editResource(id: $id, permissions: $permissions) {
@@ -369,13 +393,14 @@ export const EDIT_RESOURCE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit resource mutation response */
 export interface EditResourceMutationResponse {
   loading: boolean;
   editResource: Resource;
 }
 
 // &#x3D;&#x3D; DELETE RESOURCE &#x3D;&#x3D;
-
+/** Delete resource mutation */
 export const DELETE_RESOURCE &#x3D; gql&#x60;
   mutation deleteResource($id: ID!) {
     deleteResource(id: $id) {
@@ -384,12 +409,14 @@ export const DELETE_RESOURCE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete resource mutation response */
 export interface DeleteResourceMutationResponse {
   loading: boolean;
   deletedResource: Resource;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE RECORD &#x3D;&#x3D;&#x3D;
+/** Delete record mutation */
 export const DELETE_RECORD &#x3D; gql&#x60;
   mutation deleteRecord($id: ID!, $hardDelete: Boolean) {
     deleteRecord(id: $id, hardDelete: $hardDelete) {
@@ -398,12 +425,14 @@ export const DELETE_RECORD &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete record mutation response */
 export interface DeleteRecordMutationResponse {
   loading: boolean;
   deleteRecord: Record;
 }
 
 // &#x3D;&#x3D;&#x3D; RESTORE RECORD &#x3D;&#x3D;&#x3D;
+/** Restore record mutation */
 export const RESTORE_RECORD &#x3D; gql&#x60;
   mutation restoreRecord($id: ID!) {
     restoreRecord(id: $id) {
@@ -412,12 +441,14 @@ export const RESTORE_RECORD &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Restore record mutation response */
 export interface RestoreRecordMutationResponse {
   loading: boolean;
   restoreRecord: Record;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT FORM &#x3D;&#x3D;&#x3D;
+/** Edit form structure mutation */
 export const EDIT_FORM_STRUCTURE &#x3D; gql&#x60;
   mutation editForm($id: ID!, $structure: JSON!) {
     editForm(id: $id, structure: $structure) {
@@ -451,6 +482,7 @@ export const EDIT_FORM_STRUCTURE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit form status mutation */
 export const EDIT_FORM_STATUS &#x3D; gql&#x60;
   mutation editForm($id: ID!, $status: Status!) {
     editForm(id: $id, status: $status) {
@@ -459,6 +491,7 @@ export const EDIT_FORM_STATUS &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit form name mutation */
 export const EDIT_FORM_NAME &#x3D; gql&#x60;
   mutation editForm($id: ID!, $name: String!) {
     editForm(id: $id, name: $name) {
@@ -490,6 +523,7 @@ export const EDIT_FORM_NAME &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit form permissions mutation */
 export const EDIT_FORM_PERMISSIONS &#x3D; gql&#x60;
   mutation editForm($id: ID!, $permissions: JSON!) {
     editForm(id: $id, permissions: $permissions) {
@@ -521,12 +555,14 @@ export const EDIT_FORM_PERMISSIONS &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit form mutation response */
 export interface EditFormMutationResponse {
   loading: boolean;
   editForm: Form;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT DASHBOARD &#x3D;&#x3D;&#x3D;
+/** Edit dashboard mutation */
 export const EDIT_DASHBOARD &#x3D; gql&#x60;
   mutation editDashboard($id: ID!, $structure: JSON, $name: String) {
     editDashboard(id: $id, structure: $structure, name: $name) {
@@ -561,12 +597,14 @@ export const EDIT_DASHBOARD &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit dashboard mutation response */
 export interface EditDashboardMutationResponse {
   loading: boolean;
   editDashboard: Dashboard;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE APPLICATION &#x3D;&#x3D;&#x3D;
+/** Delete application mutation */
 export const DELETE_APPLICATION &#x3D; gql&#x60;
   mutation deleteApplication($id: ID!) {
     deleteApplication(id: $id) {
@@ -576,12 +614,14 @@ export const DELETE_APPLICATION &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete application mutation response */
 export interface DeleteApplicationMutationResponse {
   loading: boolean;
   deleteApplication: Application;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD APPLICATION &#x3D;&#x3D;&#x3D;
+/** Add application mutation */
 export const ADD_APPLICATION &#x3D; gql&#x60;
   mutation addApplication {
     addApplication {
@@ -599,12 +639,14 @@ export const ADD_APPLICATION &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add application mutation response */
 export interface AddApplicationMutationResponse {
   loading: boolean;
   addApplication: Application;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT APPLICATION &#x3D;&#x3D;&#x3D;
+/** Edit application mutation */
 export const EDIT_APPLICATION &#x3D; gql&#x60;
   mutation editApplication(
     $id: ID!
@@ -659,12 +701,14 @@ export const EDIT_APPLICATION &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit application mutation response */
 export interface EditApplicationMutationResponse {
   loading: boolean;
   editApplication: Application;
 }
 
 // &#x3D;&#x3D;&#x3D; DUPLICATE APPLICATION &#x3D;&#x3D;&#x3D;
+/** Duplicate application mutation */
 export const DUPLICATE_APPLICATION &#x3D; gql&#x60;
   mutation duplicateApplication($name: String!, $application: ID!) {
     duplicateApplication(name: $name, application: $application) {
@@ -694,13 +738,14 @@ export const DUPLICATE_APPLICATION &#x3D; gql&#x60;
   }
 &#x60;;
 // in () input parameters, in {} return values
-
+/** Delete application mutation response */
 export interface DuplicateApplicationMutationResponse {
   loading: boolean;
   duplicateApplication: Application;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE PAGE &#x3D;&#x3D;&#x3D;
+/** Delete page mutation */
 export const DELETE_PAGE &#x3D; gql&#x60;
   mutation deletePage($id: ID!) {
     deletePage(id: $id) {
@@ -709,12 +754,14 @@ export const DELETE_PAGE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete page mutation response */
 export interface DeletePageMutationResponse {
   loading: boolean;
   deletePage: Page;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD PAGE &#x3D;&#x3D;&#x3D;
+/** Add page mutation */
 export const ADD_PAGE &#x3D; gql&#x60;
   mutation addPage(
     $name: String
@@ -740,12 +787,14 @@ export const ADD_PAGE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add page mutation response */
 export interface AddPageMutationResponse {
   loading: boolean;
   addPage: Page;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT PAGE &#x3D;&#x3D;&#x3D;
+/** Edit page mutation */
 export const EDIT_PAGE &#x3D; gql&#x60;
   mutation editPage($id: ID!, $name: String, $permissions: JSON) {
     editPage(id: $id, name: $name, permissions: $permissions) {
@@ -769,12 +818,14 @@ export const EDIT_PAGE &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit page mutation response */
 export interface EditPageMutationResponse {
   loading: boolean;
   editPage: Page;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT WORKFLOW &#x3D;&#x3D;&#x3D;
+/** Edit workflow mutation */
 export const EDIT_WORKFLOW &#x3D; gql&#x60;
   mutation editWorkflow($id: ID!, $name: String, $steps: [ID]) {
     editWorkflow(id: $id, name: $name, steps: $steps) {
@@ -784,12 +835,14 @@ export const EDIT_WORKFLOW &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit workflow mutation response */
 export interface EditWorkflowMutationResponse {
   loading: boolean;
   editWorkflow: Workflow;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE STEP &#x3D;&#x3D;&#x3D;
+/** Delete step mutation */
 export const DELETE_STEP &#x3D; gql&#x60;
   mutation deleteStep($id: ID!) {
     deleteStep(id: $id) {
@@ -799,12 +852,14 @@ export const DELETE_STEP &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete step mutation response */
 export interface DeleteStepMutationResponse {
   loading: boolean;
   deleteStep: Step;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT STEP &#x3D;&#x3D;&#x3D;
+/** Edit step mutation */
 export const EDIT_STEP &#x3D; gql&#x60;
   mutation editStep(
     $id: ID!
@@ -843,12 +898,14 @@ export const EDIT_STEP &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit step mutation response */
 export interface EditStepMutationResponse {
   loading: boolean;
   editStep: Step;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT RECORD &#x3D;&#x3D;&#x3D;
+/** Edit record mutation */
 export const EDIT_RECORD &#x3D; gql&#x60;
   mutation editRecord($id: ID!, $data: JSON, $version: ID, $display: Boolean) {
     editRecord(id: $id, data: $data, version: $version) {
@@ -863,12 +920,14 @@ export const EDIT_RECORD &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit record mutation response */
 export interface EditRecordMutationResponse {
   loading: boolean;
   editRecord: Record;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD API CONFIGURATION &#x3D;&#x3D;&#x3D;
+/** Add API config mutation */
 export const ADD_API_CONFIGURATIION &#x3D; gql&#x60;
   mutation addApiConfiguration($name: String!) {
     addApiConfiguration(name: $name) {
@@ -900,12 +959,14 @@ export const ADD_API_CONFIGURATIION &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add API configuration mutation response */
 export interface AddApiConfigurationMutationResponse {
   loading: boolean;
   addApiConfiguration: ApiConfiguration;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE API CONFIGURATION &#x3D;&#x3D;&#x3D;
+/** Delete API configuration mutation */
 export const DELETE_API_CONFIGURATIION &#x3D; gql&#x60;
   mutation deleteApiConfiguration($id: ID!) {
     deleteApiConfiguration(id: $id) {
@@ -914,12 +975,14 @@ export const DELETE_API_CONFIGURATIION &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete API configuration mutation response */
 export interface DeleteApiConfigurationMutationResponse {
   loading: boolean;
   deleteApiConfiguration: ApiConfiguration;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT API CONFIGURATION &#x3D;&#x3D;&#x3D;
+/** Edit API configuration mutation */
 export const EDIT_API_CONFIGURATION &#x3D; gql&#x60;
   mutation editApiConfiguration(
     $id: ID!
@@ -969,12 +1032,14 @@ export const EDIT_API_CONFIGURATION &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit API configuration mutation response */
 export interface EditApiConfigurationMutationResponse {
   loading: boolean;
   editApiConfiguration: ApiConfiguration;
 }
 
 // &#x3D;&#x3D;&#x3D; ADD PULL JOB &#x3D;&#x3D;&#x3D;
+/** Add pull job mutation */
 export const ADD_PULL_JOB &#x3D; gql&#x60;
   mutation addPullJob(
     $name: String!
@@ -1022,12 +1087,14 @@ export const ADD_PULL_JOB &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Add pull job mutation response */
 export interface AddPullJobMutationResponse {
   loading: boolean;
   addPullJob: PullJob;
 }
 
 // &#x3D;&#x3D;&#x3D; DELETE PULL JOB &#x3D;&#x3D;&#x3D;
+/** Delete pull job mutation */
 export const DELETE_PULL_JOB &#x3D; gql&#x60;
   mutation deletePullJob($id: ID!) {
     deletePullJob(id: $id) {
@@ -1036,12 +1103,14 @@ export const DELETE_PULL_JOB &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Delete pull job mutation response */
 export interface DeletePullJobMutationResponse {
   loading: boolean;
   deletePullJob: PullJob;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT PULL JOB &#x3D;&#x3D;&#x3D;
+/** Edit pull job mutation */
 export const EDIT_PULL_JOB &#x3D; gql&#x60;
   mutation editPullJob(
     $id: ID!
@@ -1091,6 +1160,7 @@ export const EDIT_PULL_JOB &#x3D; gql&#x60;
   }
 &#x60;;
 
+/** Edit pull job mutation response */
 export interface EditPullJobMutationResponse {
   loading: boolean;
   editPullJob: PullJob;

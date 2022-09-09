@@ -64,6 +64,13 @@
             </p>
 
 
+                <p class="comment">
+                <h3>Description</h3>
+                </p>
+                <p class="comment">
+                    <p>Injectable for checking deactivation</p>
+
+                </p>
 
 
 
@@ -122,14 +129,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">projects/back-office/src/app/guards/can-deactivate.guard.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">projects/back-office/src/app/guards/can-deactivate.guard.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Check if the component can deactivate</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -140,6 +149,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -154,6 +164,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The component to check</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>route</td>
@@ -166,6 +180,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The route</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>state</td>
@@ -178,6 +196,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The state</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -189,7 +211,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>A boolean indicating if the component can deactivate</p>
+
                     </div>
                 </td>
             </tr>
@@ -209,6 +232,7 @@ import {
 } from &#x27;@angular/router&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
+/** Model for deactivation authorisation */
 export interface CanComponentDeactivate {
   canDeactivate: () &#x3D;&gt;
     | Observable&lt;boolean | UrlTree&gt;
@@ -217,10 +241,19 @@ export interface CanComponentDeactivate {
     | UrlTree;
 }
 
+/** Injectable for checking deactivation */
 @Injectable()
 export class CanDeactivateGuard
   implements CanDeactivate&lt;CanComponentDeactivate&gt;
 {
+  /**
+   * Check if the component can deactivate
+   *
+   * @param component The component to check
+   * @param route The route
+   * @param state The state
+   * @returns A boolean indicating if the component can deactivate
+   */
   canDeactivate(
     component: CanComponentDeactivate,
     route: ActivatedRouteSnapshot,

@@ -120,6 +120,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the authgard injectable</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -128,6 +130,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -142,6 +145,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The authentification service</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>router</td>
@@ -154,6 +161,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The router client</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -189,14 +200,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">projects/back-office/src/app/guards/auth.guard.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">projects/back-office/src/app/guards/auth.guard.ts:35</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Check if user can activate the route</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -207,6 +220,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -221,6 +235,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The route to test</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>state</td>
@@ -233,6 +251,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The current state</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -244,7 +266,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>A boolean indicating if the user can activate the route</p>
+
                     </div>
                 </td>
             </tr>
@@ -274,8 +297,21 @@ import { tap } from &#x27;rxjs/operators&#x27;;
   providedIn: &#x27;root&#x27;,
 })
 export class AuthGuard implements CanActivate {
+  /**
+   * Constructor of the authgard injectable
+   *
+   * @param authService The authentification service
+   * @param router The router client
+   */
   constructor(private authService: SafeAuthService, private router: Router) {}
 
+  /**
+   * Check if user can activate the route
+   *
+   * @param route The route to test
+   * @param state The current state
+   * @returns A boolean indicating if the user can activate the route
+   */
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot

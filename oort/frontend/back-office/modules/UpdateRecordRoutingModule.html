@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { UpdateRecordComponent } from &#x27;./update-record.component&#x27;;
 
+/** List of update record routes */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,7 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/** Update record page module. */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

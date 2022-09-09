@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { WorkflowComponent } from &#x27;./workflow.component&#x27;;
 
+/** Routes of workflow module for application preview */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -97,6 +98,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * Workflow routing module for application preview.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

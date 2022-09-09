@@ -76,6 +76,7 @@
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { PullJobsComponent } from &#x27;./pull-jobs.component&#x27;;
 
+/** List of routes of Pull Jobs page module. */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -83,6 +84,7 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/** Pull jobs page routing module. */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

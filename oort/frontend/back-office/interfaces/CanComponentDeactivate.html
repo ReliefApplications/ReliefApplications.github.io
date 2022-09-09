@@ -69,6 +69,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Model for deactivation authorisation</p>
+
+            </p>
 
 
         <section>
@@ -147,6 +154,7 @@ import {
 } from &#x27;@angular/router&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
+/** Model for deactivation authorisation */
 export interface CanComponentDeactivate {
   canDeactivate: () &#x3D;&gt;
     | Observable&lt;boolean | UrlTree&gt;
@@ -155,10 +163,19 @@ export interface CanComponentDeactivate {
     | UrlTree;
 }
 
+/** Injectable for checking deactivation */
 @Injectable()
 export class CanDeactivateGuard
   implements CanDeactivate&lt;CanComponentDeactivate&gt;
 {
+  /**
+   * Check if the component can deactivate
+   *
+   * @param component The component to check
+   * @param route The route
+   * @param state The state
+   * @returns A boolean indicating if the component can deactivate
+   */
   canDeactivate(
     component: CanComponentDeactivate,
     route: ActivatedRouteSnapshot,

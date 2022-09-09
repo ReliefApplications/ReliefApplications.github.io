@@ -76,6 +76,7 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { ApplicationComponent } from &#x27;./application.component&#x27;;
 
+/** Routes of application module */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -195,6 +196,9 @@ const routes: Routes &#x3D; [
   },
 ];
 
+/**
+ * Application routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

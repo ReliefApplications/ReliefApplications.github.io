@@ -60,6 +60,13 @@
 
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>MAIN BO Dashboard routing module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -76,12 +83,13 @@
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { DashboardComponent } from &#x27;./dashboard.component&#x27;;
 
-/** Divide the dashboard module into three modules:
-    * forms and resources
-    * dashboards
-    * users
-    Use lazy loading for performance.
-*/
+/**
+ * Divide the dashboard module into three modules:
+ * forms and resources
+ * dashboards
+ * users
+  Use lazy loading for performance.
+ */
 export const routes &#x3D; [
   {
     path: &#x27;&#x27;,
@@ -185,27 +193,6 @@ export const routes &#x3D; [
         ],
       },
       {
-        path: &#x27;dashboards&#x27;,
-        children: [
-          {
-            path: &#x27;&#x27;,
-            loadChildren: () &#x3D;&gt;
-              import(&#x27;./pages/dashboards/dashboards.module&#x27;).then(
-                (m) &#x3D;&gt; m.DashboardsModule
-              ),
-            // canActivate: [SafePermissionGuard]
-          },
-          {
-            path: &#x27;:id&#x27;,
-            loadChildren: () &#x3D;&gt;
-              import(&#x27;./pages/dashboard/dashboard.module&#x27;).then(
-                (m) &#x3D;&gt; m.DashboardModule
-              ),
-            // canActivate: [SafePermissionGuard]
-          },
-        ],
-      },
-      {
         path: &#x27;applications&#x27;,
         children: [
           {
@@ -278,6 +265,10 @@ export const routes &#x3D; [
     ],
   },
 ];
+
+/**
+ * MAIN BO Dashboard routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
