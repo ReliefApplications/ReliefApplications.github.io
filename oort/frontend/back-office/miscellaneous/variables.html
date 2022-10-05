@@ -355,10 +355,10 @@
                             <a href="#RESTORE_RECORD" title="projects/back-office/src/app/graphql/mutations.ts" ><b>RESTORE_RECORD</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
-                            <a href="#routes" title="projects/back-office/src/app/auth/auth-routing.module.ts" ><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../auth-routing.module.ts)</a>
+                            <a href="#routes" title="projects/back-office/src/app/dashboard/dashboard-routing.module.ts" ><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../dashboard-routing.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#routes" title="projects/back-office/src/app/dashboard/dashboard-routing.module.ts" ><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../dashboard-routing.module.ts)</a>
+                            <a href="#routes" title="projects/back-office/src/app/auth/auth-routing.module.ts" ><b>routes</b>&nbsp;&nbsp;&nbsp;(projects/.../auth-routing.module.ts)</a>
                         </li>
                         <li>
                             <a href="#theme" title="projects/back-office/src/themes/default/default.dev.ts" ><b>theme</b>&nbsp;&nbsp;&nbsp;(projects/.../default.dev.ts)</a>
@@ -4852,57 +4852,6 @@ Use oAuth</p>
         </tbody>
     </table>
 </section>
-    <h3>projects/back-office/src/app/auth/auth-routing.module.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="routes"></a>
-                    <span class="name">
-                        <span ><b>routes</b></span>
-                        <a href="#routes"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>[]</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>[
-  {
-    path: &#x27;&#x27;,
-    children: [
-      {
-        path: &#x27;&#x27;,
-        loadChildren: () &#x3D;&gt;
-          import(&#x27;./pages/login/login.module&#x27;).then((m) &#x3D;&gt; m.LoginModule),
-      },
-      {
-        path: &#x27;login&#x27;,
-        redirectTo: &#x27;&#x27;,
-      },
-    ],
-  },
-]</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Contain only one page, &#39;login&#39;.
-All routes starting with &#39;/auth&#39; should redirect to &#39;login&#39; page.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
     <h3>projects/back-office/src/app/dashboard/dashboard-routing.module.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -5109,6 +5058,57 @@ forms and resources
 dashboards
 users
 Use lazy loading for performance.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/back-office/src/app/auth/auth-routing.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="routes"></a>
+                    <span class="name">
+                        <span ><b>routes</b></span>
+                        <a href="#routes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  {
+    path: &#x27;&#x27;,
+    children: [
+      {
+        path: &#x27;&#x27;,
+        loadChildren: () &#x3D;&gt;
+          import(&#x27;./pages/login/login.module&#x27;).then((m) &#x3D;&gt; m.LoginModule),
+      },
+      {
+        path: &#x27;login&#x27;,
+        redirectTo: &#x27;&#x27;,
+      },
+    ],
+  },
+]</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Contain only one page, &#39;login&#39;.
+All routes starting with &#39;/auth&#39; should redirect to &#39;login&#39; page.</p>
 </div>
                 </td>
             </tr>
