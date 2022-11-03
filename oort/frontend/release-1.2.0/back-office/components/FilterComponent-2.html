@@ -1,0 +1,914 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  FilterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Filter component of Forms page.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-filter</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./filter.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./filter.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#search" >search</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#show" >show</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clear" >clear</a>
+                            </li>
+                            <li>
+                                <a href="#clearDateFilter" >clearDateFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#emitFilter" >emitFilter</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#filter" >filter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Filter component of forms page</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared form builder service.</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filter"></a>
+                        <b>filter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clear"></a>
+                    <span class="name">
+                        <span ><b>clear</b></span>
+                        <a href="#clear"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clear()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clears form.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearDateFilter"></a>
+                    <span class="name">
+                        <span ><b>clearDateFilter</b></span>
+                        <a href="#clearDateFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearDateFilter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clears date range.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="emitFilter"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>emitFilter</b></span>
+                        <a href="#emitFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>emitFilter(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Emit the filter value, so the main component can get it.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new filter value</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="search"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>search</b></span>
+                        <a href="#search"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="show"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>show</b></span>
+                        <a href="#show"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, OnInit, Output } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
+import { debounceTime, distinctUntilChanged } from &#x27;rxjs/operators&#x27;;
+
+/**
+ * Filter component of Forms page.
+ */
+@Component({
+  selector: &#x27;app-filter&#x27;,
+  templateUrl: &#x27;./filter.component.html&#x27;,
+  styleUrls: [&#x27;./filter.component.scss&#x27;],
+})
+export class FilterComponent implements OnInit {
+  public form!: FormGroup;
+  public search &#x3D; new FormControl(&#x27;&#x27;);
+  public show &#x3D; false;
+  @Output() filter &#x3D; new EventEmitter&lt;any&gt;();
+
+  /**
+   * Filter component of forms page
+   *
+   * @param formBuilder Shared form builder service.
+   */
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.form &#x3D; this.formBuilder.group({
+      name: [&#x27;&#x27;],
+      startDate: [null],
+      endDate: [null],
+      status: [&#x27;&#x27;],
+      core: [null],
+    });
+    this.form.valueChanges
+      .pipe(debounceTime(1000), distinctUntilChanged())
+      .subscribe((value) &#x3D;&gt; {
+        this.emitFilter(value);
+      });
+    // this way we can wait for 2s before sending an update
+    this.search.valueChanges
+      .pipe(debounceTime(2000), distinctUntilChanged())
+      .subscribe((value) &#x3D;&gt; {
+        this.form.controls.name.setValue(value);
+      });
+  }
+
+  /**
+   * Emit the filter value, so the main component can get it.
+   *
+   * @param value new filter value
+   */
+  private emitFilter(value: any): void {
+    const filters: any[] &#x3D; [];
+    if (value.name) {
+      filters.push({ field: &#x27;name&#x27;, operator: &#x27;contains&#x27;, value: value.name });
+    }
+    if (value.status) {
+      filters.push({ field: &#x27;status&#x27;, operator: &#x27;eq&#x27;, value: value.status });
+    }
+    if (value.startDate) {
+      filters.push({
+        field: &#x27;createdAt&#x27;,
+        operator: &#x27;gte&#x27;,
+        value: value.startDate,
+      });
+    }
+    if (value.endDate) {
+      filters.push({
+        field: &#x27;createdAt&#x27;,
+        operator: &#x27;lte&#x27;,
+        value: value.endDate,
+      });
+    }
+    if (value.core !&#x3D; null) {
+      if (value.core) {
+        filters.push({ field: &#x27;core&#x27;, operator: &#x27;eq&#x27;, value: true });
+      } else {
+        filters.push({ field: &#x27;core&#x27;, operator: &#x27;neq&#x27;, value: true });
+      }
+    }
+    const filter &#x3D; {
+      logic: &#x27;and&#x27;,
+      filters,
+    };
+    this.filter.emit(filter);
+  }
+
+  /**
+   * Clears form.
+   */
+  clear(): void {
+    this.form.reset();
+    this.search.reset();
+  }
+
+  /**
+   * Clears date range.
+   */
+  clearDateFilter(): void {
+    this.form.setValue({ ...this.form.value, startDate: null, endDate: null });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div [formGroup]&#x3D;&quot;form&quot; class&#x3D;&quot;forms-filter&quot;&gt;
+  &lt;div class&#x3D;&quot;top&quot;&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-icon matPrefix&gt;search&lt;/mat-icon&gt;
+      &lt;input
+        id&#x3D;&quot;custom-search&quot;
+        matInput
+        [formControl]&#x3D;&quot;search&quot;
+        type&#x3D;&quot;search&quot;
+        [placeholder]&#x3D;&quot;&#x27;common.placeholder.search&#x27; | translate&quot;
+      /&gt;
+    &lt;/mat-form-field&gt;
+    &lt;safe-button
+      icon&#x3D;&quot;filter_list&quot;
+      category&#x3D;&quot;tertiary&quot;
+      variant&#x3D;&quot;primary&quot;
+      (click)&#x3D;&quot;show &#x3D; !show&quot;
+    &gt;
+      {{
+        show
+          ? (&#x27;common.filter.hide&#x27; | translate)
+          : (&#x27;common.filter.show&#x27; | translate)
+      }}
+    &lt;/safe-button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;advanced&quot; *ngIf&#x3D;&quot;show&quot;&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.input.dateRange&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-date-range-input [rangePicker]&#x3D;&quot;rangePicker&quot;&gt;
+        &lt;input formControlName&#x3D;&quot;startDate&quot; matStartDate /&gt;
+        &lt;input formControlName&#x3D;&quot;endDate&quot; matEndDate /&gt;
+      &lt;/mat-date-range-input&gt;
+      &lt;mat-datepicker-toggle
+        matSuffix
+        [for]&#x3D;&quot;rangePicker&quot;
+      &gt;&lt;/mat-datepicker-toggle&gt;
+      &lt;mat-date-range-picker #rangePicker&gt;
+        &lt;mat-date-range-picker-actions&gt;
+          &lt;safe-button matDateRangePickerCancel (click)&#x3D;&quot;clearDateFilter()&quot;&gt;
+            {{ &#x27;common.clear&#x27; | translate }}
+          &lt;/safe-button&gt;
+          &lt;safe-button
+            category&#x3D;&quot;secondary&quot;
+            variant&#x3D;&quot;primary&quot;
+            matDateRangePickerApply
+          &gt;
+            {{ &#x27;common.filter.apply&#x27; | translate }}
+          &lt;/safe-button&gt;
+        &lt;/mat-date-range-picker-actions&gt;
+      &lt;/mat-date-range-picker&gt;
+    &lt;/mat-form-field&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.status&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-select formControlName&#x3D;&quot;status&quot;&gt;
+        &lt;mat-option&gt;-&lt;/mat-option&gt;
+        &lt;mat-option value&#x3D;&quot;active&quot;&gt;
+          {{ &#x27;common.status_active&#x27; | translate }}
+        &lt;/mat-option&gt;
+        &lt;mat-option value&#x3D;&quot;pending&quot;&gt;
+          {{ &#x27;common.status_pending&#x27; | translate }}
+        &lt;/mat-option&gt;
+        &lt;mat-option value&#x3D;&quot;archived&quot;&gt;
+          {{ &#x27;common.status_archived&#x27; | translate }}
+        &lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;components.forms.isCore&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-select formControlName&#x3D;&quot;core&quot;&gt;
+        &lt;mat-option&gt;-&lt;/mat-option&gt;
+        &lt;mat-option [value]&#x3D;&quot;true&quot;&gt;
+          {{ &#x27;common.true&#x27; | translate }}
+        &lt;/mat-option&gt;
+        &lt;mat-option [value]&#x3D;&quot;false&quot;&gt;
+          {{ &#x27;common.false&#x27; | translate }}
+        &lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+    &lt;safe-button variant&#x3D;&quot;danger&quot; (click)&#x3D;&quot;clear()&quot;&gt;{{
+      &#x27;common.filter.clear&#x27; | translate
+    }}&lt;/safe-button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./filter.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.forms-filter {
+  .top,
+  .advanced {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  mat-form-field {
+    margin-top: -0.25em;
+
+    #custom-search {
+      position: relative;
+      top: -0.15em;
+    }
+  }
+  ::ng-deep .mat-form-field-flex &gt; .mat-form-field-infix {
+    padding: 0.42em 0px !important;
+  }
+  ::ng-deep .mat-form-field-label-wrapper {
+    top: -1.4em;
+  }
+
+  ::ng-deep
+    .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+    .mat-form-field-label {
+    transform: translateY(-1.1em) scale(0.75);
+    width: 133.33333%;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div [formGroup]="form" class="forms-filter">  <div class="top">    <mat-form-field appearance="outline">      <mat-icon matPrefix>search</mat-icon>      <input        id="custom-search"        matInput        [formControl]="search"        type="search"        [placeholder]="\'common.placeholder.search\' | translate"      />    </mat-form-field>    <safe-button      icon="filter_list"      category="tertiary"      variant="primary"      (click)="show = !show"    >      {{        show          ? (\'common.filter.hide\' | translate)          : (\'common.filter.show\' | translate)      }}    </safe-button>  </div>  <div class="advanced" *ngIf="show">    <mat-form-field appearance="outline">      <mat-label>{{ \'common.input.dateRange\' | translate }}</mat-label>      <mat-date-range-input [rangePicker]="rangePicker">        <input formControlName="startDate" matStartDate />        <input formControlName="endDate" matEndDate />      </mat-date-range-input>      <mat-datepicker-toggle        matSuffix        [for]="rangePicker"      ></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <safe-button matDateRangePickerCancel (click)="clearDateFilter()">            {{ \'common.clear\' | translate }}          </safe-button>          <safe-button            category="secondary"            variant="primary"            matDateRangePickerApply          >            {{ \'common.filter.apply\' | translate }}          </safe-button>        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.status\' | translate }}</mat-label>      <mat-select formControlName="status">        <mat-option>-</mat-option>        <mat-option value="active">          {{ \'common.status_active\' | translate }}        </mat-option>        <mat-option value="pending">          {{ \'common.status_pending\' | translate }}        </mat-option>        <mat-option value="archived">          {{ \'common.status_archived\' | translate }}        </mat-option>      </mat-select>    </mat-form-field>    <mat-form-field appearance="outline">      <mat-label>{{ \'components.forms.isCore\' | translate }}</mat-label>      <mat-select formControlName="core">        <mat-option>-</mat-option>        <mat-option [value]="true">          {{ \'common.true\' | translate }}        </mat-option>        <mat-option [value]="false">          {{ \'common.false\' | translate }}        </mat-option>      </mat-select>    </mat-form-field>    <safe-button variant="danger" (click)="clear()">{{      \'common.filter.clear\' | translate    }}</safe-button>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelComponent', 'selector': 'app-add-channel'},{'name': 'AddFormComponent', 'selector': 'app-add-form'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddPositionComponent', 'selector': 'app-position-modal'},{'name': 'AddResourceComponent', 'selector': 'app-add-resource'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'ApplicationToolbarComponent', 'selector': 'app-application-toolbar'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationComponent', 'selector': 'app-duplicate-application'},{'name': 'EditChannelComponent', 'selector': 'app-edit-channel'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FilterComponent-2'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FilterComponent-2.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
