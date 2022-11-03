@@ -1,0 +1,2408 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  RecordsTabComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Records tab of resource page.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-records-tab</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./records-tab.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./records-tab.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#cachedRecords" >cachedRecords</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource" >dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumnsRecords" >displayedColumnsRecords</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pageInfo" >pageInfo</a>
+                            </li>
+                            <li>
+                                <a href="#recordsDefaultColumns" >recordsDefaultColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#recordsQuery" >recordsQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resource" >resource</a>
+                            </li>
+                            <li>
+                                <a href="#showDeletedRecords" >showDeletedRecords</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showUpload" >showUpload</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#deleteRecord" >deleteRecord</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fetchRecords" >fetchRecords</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filterCore" >filterCore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filterTemplates" >filterTemplates</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onDeleteRecord" >onDeleteRecord</a>
+                            </li>
+                            <li>
+                                <a href="#onDownload" >onDownload</a>
+                            </li>
+                            <li>
+                                <a href="#onDownloadTemplate" >onDownloadTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#onFileChange" >onFileChange</a>
+                            </li>
+                            <li>
+                                <a href="#onPage" >onPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onRestoreRecord" >onRestoreRecord</a>
+                            </li>
+                            <li>
+                                <a href="#onSwitchView" >onSwitchView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setDisplayedColumns" >setDisplayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#uploadFileData" >uploadFileData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apollo: Apollo, translate: TranslateService, snackBar: SafeSnackBarService, confirmService: SafeConfirmService, downloadService: SafeDownloadService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Records tab of resource page</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Apollo service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular translate service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeSnackBarService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared snackbar service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeConfirmService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared confirm service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>downloadService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeDownloadService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Service used to download.</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteRecord"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>deleteRecord</b></span>
+                        <a href="#deleteRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteRecord(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sends mutation to delete record.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of record to delete.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchRecords"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>fetchRecords</b></span>
+                        <a href="#fetchRecords"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchRecords(refetch?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="337"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:337</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch records, using GraphQL</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>refetch</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>rebuild query</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterCore"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>filterCore</b></span>
+                        <a href="#filterCore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterCore(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters the shown columns.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Event trigger on filtering.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterTemplates"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>filterTemplates</b></span>
+                        <a href="#filterTemplates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterTemplates(record: Record)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:185</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get list of forms filtering by record form.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                            <code>Record</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Record to filter templates with.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Form[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>list of different forms than the one used to create the record.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDeleteRecord"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onDeleteRecord</b></span>
+                        <a href="#onDeleteRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onDeleteRecord(element: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a record if authorized, open a confirmation modal if it&#39;s a hard delete.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>element</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Element to delete.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>click event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDownload"></a>
+                    <span class="name">
+                        <span ><b>onDownload</b></span>
+                        <a href="#onDownload"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDownload(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:232</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Downloads the list of records of the resource.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Type of the document to download ( excel or csv ).</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDownloadTemplate"></a>
+                    <span class="name">
+                        <span ><b>onDownloadTemplate</b></span>
+                        <a href="#onDownloadTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDownloadTemplate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the records template, for upload.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFileChange"></a>
+                    <span class="name">
+                        <span ><b>onFileChange</b></span>
+                        <a href="#onFileChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFileChange(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="264"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:264</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Detects changes on the file.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new file event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onPage"></a>
+                    <span class="name">
+                        <span ><b>onPage</b></span>
+                        <a href="#onPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onPage(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="306"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:306</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles page event.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>page event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRestoreRecord"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onRestoreRecord</b></span>
+                        <a href="#onRestoreRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onRestoreRecord(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Restores an archived record.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of record to restore.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>click event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSwitchView"></a>
+                    <span class="name">
+                        <span ><b>onSwitchView</b></span>
+                        <a href="#onSwitchView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSwitchView(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:295</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggle archive / active view.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>click event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDisplayedColumns"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setDisplayedColumns</b></span>
+                        <a href="#setDisplayedColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setDisplayedColumns(core: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="205"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:205</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Changes the list of displayed columns.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>core</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Is the form core.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadFileData"></a>
+                    <span class="name">
+                        <span ><b>uploadFileData</b></span>
+                        <a href="#uploadFileData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadFileData(file: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:274</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calls rest endpoint to upload new records for the resource.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>File to upload.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cachedRecords"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>cachedRecords</b></span>
+                        <a href="#cachedRecords"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Record[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataSource"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dataSource</b></span>
+                        <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new MatTableDataSource&lt;Record&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedColumnsRecords"></a>
+                    <span class="name">
+                        <span ><b>displayedColumnsRecords</b></span>
+                        <a href="#displayedColumnsRecords"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageInfo"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>pageInfo</b></span>
+                        <a href="#pageInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    pageIndex: 0,
+    pageSize: ITEMS_PER_PAGE,
+    length: 0,
+    endCursor: &#x27;&#x27;,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recordsDefaultColumns"></a>
+                    <span class="name">
+                        <span ><b>recordsDefaultColumns</b></span>
+                        <a href="#recordsDefaultColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>RECORDS_DEFAULT_COLUMNS</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recordsQuery"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>recordsQuery</b></span>
+                        <a href="#recordsQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/GetResourceRecordsQueryResponse.html" target="_self" >QueryRef&lt;GetResourceRecordsQueryResponse&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resource"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>resource</b></span>
+                        <a href="#resource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Resource</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showDeletedRecords"></a>
+                    <span class="name">
+                        <span ><b>showDeletedRecords</b></span>
+                        <a href="#showDeletedRecords"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showUpload"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>showUpload</b></span>
+                        <a href="#showUpload"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/records-tab/records-tab.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import {
+  Record,
+  Form,
+  SafeConfirmService,
+  SafeSnackBarService,
+  Resource,
+  SafeDownloadService,
+} from &#x27;@safe/builder&#x27;;
+import { Apollo, QueryRef } from &#x27;apollo-angular&#x27;;
+import get from &#x27;lodash/get&#x27;;
+import {
+  DeleteRecordMutationResponse,
+  DELETE_RECORD,
+  RestoreRecordMutationResponse,
+  RESTORE_RECORD,
+} from &#x27;../graphql/mutations&#x27;;
+import {
+  GetResourceRecordsQueryResponse,
+  GET_RESOURCE_RECORDS,
+} from &#x27;./graphql/queries&#x27;;
+
+/** Quantity of resource that will be loaded at once. */
+const ITEMS_PER_PAGE &#x3D; 10;
+
+/**
+ * Default fields for the records.
+ */
+const RECORDS_DEFAULT_COLUMNS &#x3D; [&#x27;_incrementalId&#x27;, &#x27;_actions&#x27;];
+
+/**
+ * Records tab of resource page.
+ */
+@Component({
+  selector: &#x27;app-records-tab&#x27;,
+  templateUrl: &#x27;./records-tab.component.html&#x27;,
+  styleUrls: [&#x27;./records-tab.component.scss&#x27;],
+})
+export class RecordsTabComponent implements OnInit {
+  private recordsQuery!: QueryRef&lt;GetResourceRecordsQueryResponse&gt;;
+  public dataSource &#x3D; new MatTableDataSource&lt;Record&gt;([]);
+  private cachedRecords: Record[] &#x3D; [];
+  public resource!: Resource;
+  recordsDefaultColumns: string[] &#x3D; RECORDS_DEFAULT_COLUMNS;
+  displayedColumnsRecords: string[] &#x3D; [];
+
+  showDeletedRecords &#x3D; false;
+  public pageInfo &#x3D; {
+    pageIndex: 0,
+    pageSize: ITEMS_PER_PAGE,
+    length: 0,
+    endCursor: &#x27;&#x27;,
+  };
+  public loading &#x3D; true;
+  public showUpload &#x3D; false;
+
+  /**
+   * Records tab of resource page
+   *
+   * @param apollo Apollo service
+   * @param translate Angular translate service
+   * @param snackBar Shared snackbar service
+   * @param confirmService Shared confirm service
+   * @param downloadService Service used to download.
+   */
+  constructor(
+    private apollo: Apollo,
+    private translate: TranslateService,
+    private snackBar: SafeSnackBarService,
+    private confirmService: SafeConfirmService,
+    private downloadService: SafeDownloadService
+  ) {}
+
+  ngOnInit(): void {
+    const state &#x3D; history.state;
+    this.resource &#x3D; get(state, &#x27;resource&#x27;, null);
+    this.setDisplayedColumns(false);
+    this.recordsQuery &#x3D; this.apollo.watchQuery&lt;GetResourceRecordsQueryResponse&gt;(
+      {
+        query: GET_RESOURCE_RECORDS,
+        variables: {
+          first: ITEMS_PER_PAGE,
+          id: this.resource.id,
+          display: false,
+          showDeletedRecords: this.showDeletedRecords,
+        },
+      }
+    );
+    this.recordsQuery.valueChanges.subscribe((res) &#x3D;&gt; {
+      this.cachedRecords &#x3D; res.data.resource.records.edges.map((x) &#x3D;&gt; x.node);
+      this.dataSource.data &#x3D; this.cachedRecords.slice(
+        this.pageInfo.pageSize * this.pageInfo.pageIndex,
+        this.pageInfo.pageSize * (this.pageInfo.pageIndex + 1)
+      );
+      this.pageInfo.length &#x3D; res.data.resource.records.totalCount;
+      this.pageInfo.endCursor &#x3D; res.data.resource.records.pageInfo.endCursor;
+      this.loading &#x3D; res.loading;
+    });
+  }
+
+  /**
+   * Deletes a record if authorized, open a confirmation modal if it&#x27;s a hard delete.
+   *
+   * @param element Element to delete.
+   * @param e click event.
+   */
+  public onDeleteRecord(element: any, e: any): void {
+    e.stopPropagation();
+    if (this.showDeletedRecords) {
+      const dialogRef &#x3D; this.confirmService.openConfirmModal({
+        title: this.translate.instant(&#x27;common.deleteObject&#x27;, {
+          name: this.translate.instant(&#x27;common.record.one&#x27;),
+        }),
+        content: this.translate.instant(
+          &#x27;components.record.delete.confirmationMessage&#x27;,
+          {
+            name: element.name,
+          }
+        ),
+        confirmText: this.translate.instant(&#x27;components.confirmModal.delete&#x27;),
+      });
+      dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+        if (value) {
+          this.deleteRecord(element.id);
+        }
+      });
+    } else {
+      this.deleteRecord(element.id);
+    }
+  }
+
+  /**
+   * Sends mutation to delete record.
+   *
+   * @param id Id of record to delete.
+   */
+  private deleteRecord(id: string): void {
+    this.apollo
+      .mutate&lt;DeleteRecordMutationResponse&gt;({
+        mutation: DELETE_RECORD,
+        variables: {
+          id,
+          hardDelete: this.showDeletedRecords,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        this.snackBar.openSnackBar(
+          this.translate.instant(&#x27;common.notifications.objectDeleted&#x27;, {
+            value: this.translate.instant(&#x27;common.record.one&#x27;),
+          })
+        );
+        this.fetchRecords(true);
+      });
+  }
+
+  /**
+   * Restores an archived record.
+   *
+   * @param id Id of record to restore.
+   * @param e click event.
+   */
+  public onRestoreRecord(id: string, e: any): void {
+    e.stopPropagation();
+    this.apollo
+      .mutate&lt;RestoreRecordMutationResponse&gt;({
+        mutation: RESTORE_RECORD,
+        variables: {
+          id,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        this.fetchRecords(true);
+      });
+  }
+
+  /**
+   * Get list of forms filtering by record form.
+   *
+   * @param record Record to filter templates with.
+   * @returns list of different forms than the one used to create the record.
+   */
+  public filterTemplates(record: Record): Form[] {
+    return get(this.resource, &#x27;forms&#x27;, []).filter(
+      (x: Form) &#x3D;&gt; x.id !&#x3D;&#x3D; record.form?.id
+    );
+  }
+
+  /**
+   * Filters the shown columns.
+   *
+   * @param event Event trigger on filtering.
+   */
+  public filterCore(event: any): void {
+    // this.setDisplayedColumns(event.value);
+  }
+
+  /**
+   * Changes the list of displayed columns.
+   *
+   * @param core Is the form core.
+   */
+  private setDisplayedColumns(core: boolean): void {
+    let columns &#x3D; [];
+    if (core) {
+      for (const field of this.resource.fields.filter(
+        (x: any) &#x3D;&gt; x.isRequired &#x3D;&#x3D;&#x3D; true
+      )) {
+        columns.push(field.name);
+      }
+    } else {
+      for (const field of this.resource.fields) {
+        columns.push(field.name);
+      }
+    }
+    const metadata &#x3D; get(this.resource, &#x27;metadata&#x27;, []);
+    columns &#x3D; columns
+      .filter((x) &#x3D;&gt; {
+        const fieldMeta &#x3D; metadata.find((y) &#x3D;&gt; y.name &#x3D;&#x3D;&#x3D; x);
+        return get(fieldMeta, &#x27;canSee&#x27;, false);
+      })
+      .concat(RECORDS_DEFAULT_COLUMNS);
+    this.displayedColumnsRecords &#x3D; columns;
+  }
+  /**
+   * Downloads the list of records of the resource.
+   *
+   * @param type Type of the document to download ( excel or csv ).
+   */
+  onDownload(type: string): void {
+    const path &#x3D; &#x60;download/resource/records/${this.resource.id}&#x60;;
+    const fileName &#x3D; &#x60;${this.resource.name}.${type}&#x60;;
+    const queryString &#x3D; new URLSearchParams({ type }).toString();
+    this.downloadService.getFile(
+      &#x60;${path}?${queryString}&#x60;,
+      &#x60;text/${type};charset&#x3D;utf-8;&#x60;,
+      fileName
+    );
+  }
+
+  /**
+   * Get the records template, for upload.
+   */
+  onDownloadTemplate(): void {
+    const path &#x3D; &#x60;download/resource/records/${this.resource.id}&#x60;;
+    const queryString &#x3D; new URLSearchParams({
+      type: &#x27;xlsx&#x27;,
+      template: &#x27;true&#x27;,
+    }).toString();
+    this.downloadService.getFile(
+      &#x60;${path}?${queryString}&#x60;,
+      &#x60;text/xlsx;charset&#x3D;utf-8;&#x60;,
+      &#x60;${this.resource.name}_template.xlsx&#x60;
+    );
+  }
+
+  /**
+   * Detects changes on the file.
+   *
+   * @param event new file event.
+   */
+  onFileChange(event: any): void {
+    const file &#x3D; event.files[0].rawFile;
+    this.uploadFileData(file);
+  }
+
+  /**
+   * Calls rest endpoint to upload new records for the resource.
+   *
+   * @param file File to upload.
+   */
+  uploadFileData(file: any): void {
+    const path &#x3D; &#x60;upload/resource/records/${this.resource.id}&#x60;;
+    this.downloadService.uploadFile(path, file).subscribe(
+      (res) &#x3D;&gt; {
+        if (res.status &#x3D;&#x3D;&#x3D; &#x27;OK&#x27;) {
+          this.fetchRecords(true);
+          this.showUpload &#x3D; false;
+        }
+      },
+      (error: any) &#x3D;&gt; {
+        this.snackBar.openSnackBar(error.error, { error: true });
+        this.showUpload &#x3D; false;
+      }
+    );
+  }
+
+  /**
+   * Toggle archive / active view.
+   *
+   * @param e click event.
+   */
+  onSwitchView(e: any): void {
+    e.stopPropagation();
+    this.showDeletedRecords &#x3D; !this.showDeletedRecords;
+    this.fetchRecords(true);
+  }
+
+  /**
+   * Handles page event.
+   *
+   * @param e page event.
+   */
+  onPage(e: any): void {
+    this.pageInfo.pageIndex &#x3D; e.pageIndex;
+    // Checks if with new page/size more data needs to be fetched
+    if (
+      (e.pageIndex &gt; e.previousPageIndex ||
+        e.pageSize &gt; this.pageInfo.pageSize) &amp;&amp;
+      e.length &gt; this.cachedRecords.length
+    ) {
+      // Sets the new fetch quantity of data needed as the page size
+      // If the fetch is for a new page the page size is used
+      let first &#x3D; e.pageSize;
+      // If the fetch is for a new page size, the old page size is substracted from the new one
+      if (e.pageSize &gt; this.pageInfo.pageSize) {
+        first -&#x3D; this.pageInfo.pageSize;
+      }
+      this.pageInfo.pageSize &#x3D; first;
+      this.fetchRecords();
+    } else {
+      this.dataSource.data &#x3D; this.cachedRecords.slice(
+        e.pageSize * this.pageInfo.pageIndex,
+        e.pageSize * (this.pageInfo.pageIndex + 1)
+      );
+    }
+    this.pageInfo.pageSize &#x3D; e.pageSize;
+  }
+
+  /**
+   * Fetch records, using GraphQL
+   *
+   * @param refetch rebuild query
+   */
+  private fetchRecords(refetch?: boolean): void {
+    this.loading &#x3D; true;
+    if (refetch) {
+      this.cachedRecords &#x3D; [];
+      this.pageInfo.pageIndex &#x3D; 0;
+      this.pageInfo.endCursor &#x3D; &#x27;&#x27;;
+      this.recordsQuery
+        .refetch({
+          first: this.pageInfo.pageSize,
+          afterCursor: null,
+          display: false,
+          showDeletedRecords: this.showDeletedRecords,
+        })
+        .then(() &#x3D;&gt; {
+          this.loading &#x3D; false;
+        });
+    } else {
+      this.recordsQuery.fetchMore({
+        variables: {
+          first: this.pageInfo.pageSize,
+          afterCursor: this.pageInfo.endCursor,
+          display: false,
+          showDeletedRecords: this.showDeletedRecords,
+        },
+        updateQuery: (prev, { fetchMoreResult }) &#x3D;&gt; {
+          if (!fetchMoreResult) {
+            return prev;
+          }
+          return Object.assign({}, prev, {
+            resource: {
+              records: {
+                edges: [
+                  ...prev.resource.records.edges,
+                  ...fetchMoreResult.resource.records.edges,
+                ],
+                pageInfo: fetchMoreResult.resource.records.pageInfo,
+                totalCount: fetchMoreResult.resource.records.totalCount,
+              },
+            },
+          });
+        },
+      });
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Header --&gt;
+&lt;div *ngIf&#x3D;&quot;!loading&quot; class&#x3D;&quot;flex justify-end mb-6&quot;&gt;
+  &lt;!-- Actions --&gt;
+  &lt;div class&#x3D;&quot;flex gap-2 items-center flex-wrap justify-end&quot;&gt;
+    &lt;safe-button
+      *ngIf&#x3D;&quot;resource.canUpdate &amp;&amp; !showDeletedRecords&quot;
+      icon&#x3D;&quot;search_off&quot;
+      category&#x3D;&quot;primary&quot;
+      variant&#x3D;&quot;danger&quot;
+      (click)&#x3D;&quot;onSwitchView($event)&quot;
+    &gt;
+      {{ &#x27;components.records.showArchived&#x27; | translate }}
+    &lt;/safe-button&gt;
+    &lt;safe-button
+      *ngIf&#x3D;&quot;resource.canUpdate &amp;&amp; showDeletedRecords&quot;
+      icon&#x3D;&quot;restore_page&quot;
+      category&#x3D;&quot;primary&quot;
+      variant&#x3D;&quot;success&quot;
+      (click)&#x3D;&quot;onSwitchView($event)&quot;
+    &gt;
+      {{ &#x27;components.records.showActive&#x27; | translate }}
+    &lt;/safe-button&gt;
+    &lt;safe-button
+      icon&#x3D;&quot;file_download&quot;
+      category&#x3D;&quot;secondary&quot;
+      variant&#x3D;&quot;primary&quot;
+      [matMenuTriggerFor]&#x3D;&quot;menu&quot;
+    &gt;
+      {{
+        &#x27;common.downloadObject&#x27;
+          | translate: { name: &#x27;common.record.few&#x27; | translate }
+      }}
+    &lt;/safe-button&gt;
+    &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;onDownload(&#x27;csv&#x27;)&quot;&gt;.csv&lt;/button&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;onDownload(&#x27;xlsx&#x27;)&quot;&gt;.xlsx&lt;/button&gt;
+    &lt;/mat-menu&gt;
+    &lt;safe-button
+      icon&#x3D;&quot;file_upload&quot;
+      category&#x3D;&quot;secondary&quot;
+      variant&#x3D;&quot;primary&quot;
+      [matTooltip]&#x3D;&quot;&#x27;components.records.upload.hint&#x27; | translate&quot;
+      (click)&#x3D;&quot;showUpload &#x3D; !showUpload&quot;
+      cdkOverlayOrigin
+      #uploadTrigger&#x3D;&quot;cdkOverlayOrigin&quot;
+    &gt;
+      {{
+        &#x27;common.uploadObject&#x27;
+          | translate: { name: &#x27;common.record.few&#x27; | translate }
+      }}
+    &lt;/safe-button&gt;
+    &lt;ng-template
+      cdkConnectedOverlay
+      [cdkConnectedOverlayOrigin]&#x3D;&quot;uploadTrigger&quot;
+      [cdkConnectedOverlayOpen]&#x3D;&quot;showUpload&quot;
+    &gt;
+      &lt;app-upload-menu
+        (close)&#x3D;&quot;showUpload &#x3D; false&quot;
+        (upload)&#x3D;&quot;onFileChange($event)&quot;
+        (download)&#x3D;&quot;onDownloadTemplate()&quot;
+      &gt;&lt;/app-upload-menu&gt;
+    &lt;/ng-template&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Table container --&gt;
+&lt;div class&#x3D;&quot;overflow-x-hidden&quot;&gt;
+  &lt;!-- Table scroll container --&gt;
+  &lt;div class&#x3D;&quot;overflow-auto&quot;&gt;
+    &lt;!-- Records table --&gt;
+    &lt;table *ngIf&#x3D;&quot;!loading&quot; mat-table [dataSource]&#x3D;&quot;dataSource&quot;&gt;
+      &lt;ng-container
+        *ngFor&#x3D;&quot;let column of displayedColumnsRecords&quot;
+        [matColumnDef]&#x3D;&quot;column&quot;
+        [stickyEnd]&#x3D;&quot;column &#x3D;&#x3D;&#x3D; &#x27;_actions&#x27;&quot;
+      &gt;
+        &lt;ng-container *ngIf&#x3D;&quot;!recordsDefaultColumns.includes(column)&quot;&gt;
+          &lt;th mat-header-cell *matHeaderCellDef&gt;{{ column }}&lt;/th&gt;
+          &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+            &lt;div&gt;{{ element.data[column] }}&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;column &#x3D;&#x3D;&#x3D; &#x27;_incrementalId&#x27;&quot;&gt;
+          &lt;th mat-header-cell *matHeaderCellDef&gt;ID&lt;/th&gt;
+          &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+            &lt;div&gt;{{ element.incrementalId }}&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/ng-container&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;column &#x3D;&#x3D;&#x3D; &#x27;_actions&#x27;&quot;&gt;
+          &lt;th mat-header-cell *matHeaderCellDef&gt;&lt;/th&gt;
+          &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+            &lt;safe-button
+              [isIcon]&#x3D;&quot;true&quot;
+              icon&#x3D;&quot;more_vert&quot;
+              [matMenuTriggerFor]&#x3D;&quot;recMenu&quot;
+              (click)&#x3D;&quot;$event.stopPropagation()&quot;
+            &gt;
+            &lt;/safe-button&gt;
+            &lt;mat-menu #recMenu&#x3D;&quot;matMenu&quot;&gt;
+              &lt;button
+                mat-menu-item
+                [routerLink]&#x3D;&quot;[&#x27;update&#x27;, element.id]&quot;
+                [matTooltip]&#x3D;&quot;&#x27;Edit as &#x27; + element.form.name&quot;
+                matTooltipPosition&#x3D;&quot;above&quot;
+                [matTooltipDisabled]&#x3D;&quot;(resource.forms?.length || 0) &lt;&#x3D; 1&quot;
+              &gt;
+                &lt;mat-icon&gt;edit&lt;/mat-icon&gt;
+                {{ &#x27;common.edit&#x27; | translate }}
+              &lt;/button&gt;
+              &lt;button
+                *ngIf&#x3D;&quot;(resource.forms?.length || 0) &gt; 1&quot;
+                mat-menu-item
+                [matMenuTriggerFor]&#x3D;&quot;templates&quot;
+              &gt;
+                &lt;mat-icon&gt;edit_note&lt;/mat-icon&gt;
+                {{
+                  &#x27;common.editObject&#x27;
+                    | translate: { name: &#x27;common.child&#x27; | translate }
+                }}
+              &lt;/button&gt;
+              &lt;button
+                *ngIf&#x3D;&quot;!showDeletedRecords&quot;
+                mat-menu-item
+                (click)&#x3D;&quot;onDeleteRecord(element, $event)&quot;
+              &gt;
+                &lt;mat-icon&gt;delete&lt;/mat-icon&gt;
+                {{ &#x27;common.delete&#x27; | translate }}
+              &lt;/button&gt;
+              &lt;button
+                *ngIf&#x3D;&quot;showDeletedRecords&quot;
+                mat-menu-item
+                (click)&#x3D;&quot;onDeleteRecord(element, $event)&quot;
+              &gt;
+                &lt;mat-icon&gt;delete_forever&lt;/mat-icon&gt;
+                {{ &#x27;components.record.delete.permanently&#x27; | translate }}
+              &lt;/button&gt;
+              &lt;button
+                *ngIf&#x3D;&quot;showDeletedRecords&quot;
+                mat-menu-item
+                (click)&#x3D;&quot;onRestoreRecord(element.id, $event)&quot;
+              &gt;
+                &lt;mat-icon&gt;unarchive&lt;/mat-icon&gt;
+                {{ &#x27;models.record.restore&#x27; | translate }}
+              &lt;/button&gt;
+            &lt;/mat-menu&gt;
+            &lt;mat-menu #templates&#x3D;&quot;matMenu&quot;&gt;
+              &lt;ng-container *ngFor&#x3D;&quot;let form of filterTemplates(element)&quot;&gt;
+                &lt;button
+                  mat-menu-item
+                  [routerLink]&#x3D;&quot;[&#x27;./update&#x27;, element.id]&quot;
+                  [state]&#x3D;&quot;{ template: form.id }&quot;
+                &gt;
+                  {{ form.name }}
+                &lt;/button&gt;
+              &lt;/ng-container&gt;
+            &lt;/mat-menu&gt;
+          &lt;/td&gt;
+        &lt;/ng-container&gt;
+      &lt;/ng-container&gt;
+      &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumnsRecords&quot;&gt;&lt;/tr&gt;
+      &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumnsRecords&quot;&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;safe-skeleton-table
+  *ngIf&#x3D;&quot;loading&quot;
+  [columns]&#x3D;&quot;displayedColumnsRecords&quot;
+  [actions]&#x3D;&quot;true&quot;
+&gt;
+&lt;/safe-skeleton-table&gt;
+&lt;mat-paginator
+  [disabled]&#x3D;&quot;loading&quot;
+  [pageIndex]&#x3D;&quot;pageInfo.pageIndex&quot;
+  [pageSize]&#x3D;&quot;pageInfo.pageSize&quot;
+  [length]&#x3D;&quot;pageInfo.length&quot;
+  aria-label&#x3D;&quot;Select page of records&quot;
+  (page)&#x3D;&quot;onPage($event)&quot;
+&gt;&lt;/mat-paginator&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./records-tab.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">// .table-column {
+//   padding: 0px 4px;
+// }
+
+table {
+  div {
+    max-height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 240px;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Header --><div *ngIf="!loading" class="flex justify-end mb-6">  <!-- Actions -->  <div class="flex gap-2 items-center flex-wrap justify-end">    <safe-button      *ngIf="resource.canUpdate && !showDeletedRecords"      icon="search_off"      category="primary"      variant="danger"      (click)="onSwitchView($event)"    >      {{ \'components.records.showArchived\' | translate }}    </safe-button>    <safe-button      *ngIf="resource.canUpdate && showDeletedRecords"      icon="restore_page"      category="primary"      variant="success"      (click)="onSwitchView($event)"    >      {{ \'components.records.showActive\' | translate }}    </safe-button>    <safe-button      icon="file_download"      category="secondary"      variant="primary"      [matMenuTriggerFor]="menu"    >      {{        \'common.downloadObject\'          | translate: { name: \'common.record.few\' | translate }      }}    </safe-button>    <mat-menu #menu="matMenu">      <button mat-menu-item (click)="onDownload(\'csv\')">.csv</button>      <button mat-menu-item (click)="onDownload(\'xlsx\')">.xlsx</button>    </mat-menu>    <safe-button      icon="file_upload"      category="secondary"      variant="primary"      [matTooltip]="\'components.records.upload.hint\' | translate"      (click)="showUpload = !showUpload"      cdkOverlayOrigin      #uploadTrigger="cdkOverlayOrigin"    >      {{        \'common.uploadObject\'          | translate: { name: \'common.record.few\' | translate }      }}    </safe-button>    <ng-template      cdkConnectedOverlay      [cdkConnectedOverlayOrigin]="uploadTrigger"      [cdkConnectedOverlayOpen]="showUpload"    >      <app-upload-menu        (close)="showUpload = false"        (upload)="onFileChange($event)"        (download)="onDownloadTemplate()"      ></app-upload-menu>    </ng-template>  </div></div><!-- Table container --><div class="overflow-x-hidden">  <!-- Table scroll container -->  <div class="overflow-auto">    <!-- Records table -->    <table *ngIf="!loading" mat-table [dataSource]="dataSource">      <ng-container        *ngFor="let column of displayedColumnsRecords"        [matColumnDef]="column"        [stickyEnd]="column === \'_actions\'"      >        <ng-container *ngIf="!recordsDefaultColumns.includes(column)">          <th mat-header-cell *matHeaderCellDef>{{ column }}</th>          <td mat-cell *matCellDef="let element">            <div>{{ element.data[column] }}</div>          </td>        </ng-container>        <ng-container *ngIf="column === \'_incrementalId\'">          <th mat-header-cell *matHeaderCellDef>ID</th>          <td mat-cell *matCellDef="let element">            <div>{{ element.incrementalId }}</div>          </td>        </ng-container>        <ng-container *ngIf="column === \'_actions\'">          <th mat-header-cell *matHeaderCellDef></th>          <td mat-cell *matCellDef="let element">            <safe-button              [isIcon]="true"              icon="more_vert"              [matMenuTriggerFor]="recMenu"              (click)="$event.stopPropagation()"            >            </safe-button>            <mat-menu #recMenu="matMenu">              <button                mat-menu-item                [routerLink]="[\'update\', element.id]"                [matTooltip]="\'Edit as \' + element.form.name"                matTooltipPosition="above"                [matTooltipDisabled]="(resource.forms?.length || 0) <= 1"              >                <mat-icon>edit</mat-icon>                {{ \'common.edit\' | translate }}              </button>              <button                *ngIf="(resource.forms?.length || 0) > 1"                mat-menu-item                [matMenuTriggerFor]="templates"              >                <mat-icon>edit_note</mat-icon>                {{                  \'common.editObject\'                    | translate: { name: \'common.child\' | translate }                }}              </button>              <button                *ngIf="!showDeletedRecords"                mat-menu-item                (click)="onDeleteRecord(element, $event)"              >                <mat-icon>delete</mat-icon>                {{ \'common.delete\' | translate }}              </button>              <button                *ngIf="showDeletedRecords"                mat-menu-item                (click)="onDeleteRecord(element, $event)"              >                <mat-icon>delete_forever</mat-icon>                {{ \'components.record.delete.permanently\' | translate }}              </button>              <button                *ngIf="showDeletedRecords"                mat-menu-item                (click)="onRestoreRecord(element.id, $event)"              >                <mat-icon>unarchive</mat-icon>                {{ \'models.record.restore\' | translate }}              </button>            </mat-menu>            <mat-menu #templates="matMenu">              <ng-container *ngFor="let form of filterTemplates(element)">                <button                  mat-menu-item                  [routerLink]="[\'./update\', element.id]"                  [state]="{ template: form.id }"                >                  {{ form.name }}                </button>              </ng-container>            </mat-menu>          </td>        </ng-container>      </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumnsRecords"></tr>      <tr mat-row *matRowDef="let row; columns: displayedColumnsRecords"></tr>    </table>  </div></div><safe-skeleton-table  *ngIf="loading"  [columns]="displayedColumnsRecords"  [actions]="true"></safe-skeleton-table><mat-paginator  [disabled]="loading"  [pageIndex]="pageInfo.pageIndex"  [pageSize]="pageInfo.pageSize"  [length]="pageInfo.length"  aria-label="Select page of records"  (page)="onPage($event)"></mat-paginator></div>'
+    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'RecordsTabComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RecordsTabComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

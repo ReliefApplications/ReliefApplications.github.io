@@ -1,0 +1,2075 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  FormBuilderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Form builder page</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-form-builder</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./form-builder.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./form-builder.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#activeVersion" >activeVersion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#activeVersions" >activeVersions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formActive" >formActive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#hasChanges" >hasChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#id" >id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#nameForm" >nameForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#statuses" >statuses</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#structure" >structure</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#canDeactivate" >canDeactivate</a>
+                            </li>
+                            <li>
+                                <a href="#formStructureChange" >formStructureChange</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onOpenVersion" >onOpenVersion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSave" >onSave</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resetActiveVersion" >resetActiveVersion</a>
+                            </li>
+                            <li>
+                                <a href="#saveAccess" >saveAccess</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#saveName" >saveName</a>
+                            </li>
+                            <li>
+                                <a href="#setTemplate" >setTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#toggleFormActive" >toggleFormActive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateStatus" >updateStatus</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apollo: Apollo, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, snackBar: SafeSnackBarService, dialog: MatDialog, authService: SafeAuthService, confirmService: SafeConfirmService, translate: TranslateService, breadcrumbService: SafeBreadcrumbService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Form builder page</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Apollo service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular activated route</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular router</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeSnackBarService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared snackbar service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Material dialog service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeAuthService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared authentication service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeConfirmService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared confirm service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular translate service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumbService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeBreadcrumbService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared breadcrumb service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canDeactivate"></a>
+                    <span class="name">
+                        <span ><b>canDeactivate</b></span>
+                        <a href="#canDeactivate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>canDeactivate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Show modal confirmation before leave the page if has changes on form</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable | boolean</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean of observable of boolean</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formStructureChange"></a>
+                    <span class="name">
+                        <span ><b>formStructureChange</b></span>
+                        <a href="#formStructureChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formStructureChange(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="430"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:430</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Called when form structure is updated</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>update event</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onOpenVersion"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onOpenVersion</b></span>
+                        <a href="#onOpenVersion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onOpenVersion(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="318"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:318</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Available in previous version to change the version.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new version</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSave"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onSave</b></span>
+                        <a href="#onSave"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSave(structure: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Save form structure</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>structure</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>form structure</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetActiveVersion"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>resetActiveVersion</b></span>
+                        <a href="#resetActiveVersion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>resetActiveVersion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="328"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:328</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Available in previous version to change the version.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveAccess"></a>
+                    <span class="name">
+                        <span ><b>saveAccess</b></span>
+                        <a href="#saveAccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveAccess(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="386"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:386</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Edit the permissions layer.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new permissions</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveName"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>saveName</b></span>
+                        <a href="#saveName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveName()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="336"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:336</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Edit the form name.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTemplate"></a>
+                    <span class="name">
+                        <span ><b>setTemplate</b></span>
+                        <a href="#setTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setTemplate(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:300</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Available in previous version to change the template.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id of version</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleFormActive"></a>
+                    <span class="name">
+                        <span ><b>toggleFormActive</b></span>
+                        <a href="#toggleFormActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleFormActive()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Activate or deactivate form</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateStatus"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>updateStatus</b></span>
+                        <a href="#updateStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateStatus(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="257"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:257</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update the status of the form.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new status</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activeVersion"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>activeVersion</b></span>
+                        <a href="#activeVersion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activeVersions"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>activeVersions</b></span>
+                        <a href="#activeVersions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:87</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">Material dialog service</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/Form" target="_blank" >Form</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formActive"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>formActive</b></span>
+                        <a href="#formActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasChanges"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>hasChanges</b></span>
+                        <a href="#hasChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="id"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>id</b></span>
+                        <a href="#id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nameForm"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>nameForm</b></span>
+                        <a href="#nameForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({})</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="statuses"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>statuses</b></span>
+                        <a href="#statuses"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      value: &#x27;active&#x27;,
+      key: &#x27;common.status_active&#x27;,
+      color: &#x27;primary&#x27;,
+    },
+    {
+      value: &#x27;pending&#x27;,
+      key: &#x27;common.status_pending&#x27;,
+      color: &#x27;accent&#x27;,
+    },
+    {
+      value: &#x27;archived&#x27;,
+      key: &#x27;common.status_archived&#x27;,
+      color: &#x27;warn&#x27;,
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="structure"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>structure</b></span>
+                        <a href="#structure"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/back-office/src/app/dashboard/pages/form-builder/form-builder.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import {
+  EditFormMutationResponse,
+  EDIT_FORM_NAME,
+  EDIT_FORM_PERMISSIONS,
+  EDIT_FORM_STATUS,
+  EDIT_FORM_STRUCTURE,
+} from &#x27;./graphql/mutations&#x27;;
+import {
+  GetFormByIdQueryResponse,
+  GET_SHORT_FORM_BY_ID,
+} from &#x27;./graphql/queries&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import {
+  SafeAuthService,
+  SafeSnackBarService,
+  Form,
+  SafeConfirmService,
+  SafeBreadcrumbService,
+} from &#x27;@safe/builder&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import { SafeStatusModalComponent } from &#x27;@safe/builder&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+
+/**
+ * Form builder page
+ */
+@Component({
+  selector: &#x27;app-form-builder&#x27;,
+  templateUrl: &#x27;./form-builder.component.html&#x27;,
+  styleUrls: [&#x27;./form-builder.component.scss&#x27;],
+})
+export class FormBuilderComponent implements OnInit {
+  public loading &#x3D; true;
+  public id &#x3D; &#x27;&#x27;;
+  public form?: Form;
+  public structure: any;
+  public activeVersions &#x3D; false;
+  public activeVersion: any;
+
+  // &#x3D;&#x3D;&#x3D; ENUM OF FORM STATUSES &#x3D;&#x3D;&#x3D;
+  public statuses &#x3D; [
+    {
+      value: &#x27;active&#x27;,
+      key: &#x27;common.status_active&#x27;,
+      color: &#x27;primary&#x27;,
+    },
+    {
+      value: &#x27;pending&#x27;,
+      key: &#x27;common.status_pending&#x27;,
+      color: &#x27;accent&#x27;,
+    },
+    {
+      value: &#x27;archived&#x27;,
+      key: &#x27;common.status_archived&#x27;,
+      color: &#x27;warn&#x27;,
+    },
+  ];
+
+  // &#x3D;&#x3D;&#x3D; FORM EDITION &#x3D;&#x3D;&#x3D;
+  public formActive &#x3D; false;
+  public nameForm: FormGroup &#x3D; new FormGroup({});
+  public hasChanges &#x3D; false;
+
+  /**
+   * Form builder page
+   *
+   * @param apollo Apollo service
+   * @param route Angular activated route
+   * @param router Angular router
+   * @param snackBar Shared snackbar service
+   * @param dialog Material dialog service
+   * @param authService Shared authentication service
+   * @param confirmService Shared confirm service
+   * @param translate Angular translate service
+   * @param breadcrumbService Shared breadcrumb service
+   */
+  constructor(
+    private apollo: Apollo,
+    private route: ActivatedRoute,
+    private router: Router,
+    private snackBar: SafeSnackBarService,
+    public dialog: MatDialog,
+    private authService: SafeAuthService,
+    private confirmService: SafeConfirmService,
+    private translate: TranslateService,
+    private breadcrumbService: SafeBreadcrumbService
+  ) {}
+
+  /**
+   * Show modal confirmation before leave the page if has changes on form
+   *
+   * @returns boolean of observable of boolean
+   */
+  canDeactivate(): Observable&lt;boolean&gt; | boolean {
+    if (this.hasChanges) {
+      const dialogRef &#x3D; this.confirmService.openConfirmModal({
+        title: this.translate.instant(&#x27;components.form.update.exit&#x27;),
+        content: this.translate.instant(&#x27;components.form.update.exitMessage&#x27;),
+        confirmText: this.translate.instant(&#x27;components.confirmModal.confirm&#x27;),
+        confirmColor: &#x27;primary&#x27;,
+      });
+      return dialogRef.afterClosed().pipe(
+        map((value) &#x3D;&gt; {
+          if (value) {
+            this.authService.canLogout.next(true);
+            window.localStorage.removeItem(&#x60;form:${this.id}&#x60;);
+            return true;
+          }
+          return false;
+        })
+      );
+    }
+    return true;
+  }
+
+  ngOnInit(): void {
+    this.formActive &#x3D; false;
+    this.id &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;) || &#x27;&#x27;;
+    if (this.id !&#x3D;&#x3D; null) {
+      this.apollo
+        .watchQuery&lt;GetFormByIdQueryResponse&gt;({
+          query: GET_SHORT_FORM_BY_ID,
+          variables: {
+            id: this.id,
+          },
+        })
+        .valueChanges.subscribe(
+          (res) &#x3D;&gt; {
+            if (res.data.form) {
+              this.loading &#x3D; res.loading;
+              this.form &#x3D; res.data.form;
+              this.breadcrumbService.setBreadcrumb(
+                &#x27;@form&#x27;,
+                this.form.name as string
+              );
+              this.breadcrumbService.setBreadcrumb(
+                &#x27;@resource&#x27;,
+                this.form.resource?.name as string
+              );
+              // this.breadcrumbService.setResourceName();
+              this.nameForm &#x3D; new FormGroup({
+                formName: new FormControl(this.form.name, Validators.required),
+              });
+              const storedStructure &#x3D; window.localStorage.getItem(
+                &#x60;form:${this.id}&#x60;
+              );
+              this.structure &#x3D; storedStructure
+                ? storedStructure
+                : this.form.structure;
+              if (this.structure !&#x3D;&#x3D; this.form.structure) {
+                this.hasChanges &#x3D; true;
+                this.authService.canLogout.next(!this.hasChanges);
+              }
+            } else {
+              this.snackBar.openSnackBar(
+                this.translate.instant(
+                  &#x27;common.notifications.accessNotProvided&#x27;,
+                  {
+                    type: this.translate
+                      .instant(&#x27;common.form.one&#x27;)
+                      .toLowerCase(),
+                    error: &#x27;&#x27;,
+                  }
+                ),
+                { error: true }
+              );
+              // redirect to default screen if error
+              this.router.navigate([&#x27;/forms&#x27;]);
+            }
+          },
+          (err) &#x3D;&gt; {
+            this.snackBar.openSnackBar(err.message, { error: true });
+            // redirect to default screen if error
+            this.router.navigate([&#x27;/forms&#x27;]);
+          }
+        );
+    } else {
+      this.loading &#x3D; false;
+      // redirect to default screen if error
+      this.router.navigate([&#x27;/forms&#x27;]);
+    }
+  }
+
+  /**
+   * Activate or deactivate form
+   */
+  toggleFormActive(): void {
+    if (this.form?.canUpdate) {
+      this.formActive &#x3D; !this.formActive;
+    }
+  }
+
+  /**
+   * Save form structure
+   *
+   * @param structure form structure
+   */
+  public onSave(structure: any): void {
+    if (!this.form?.id) {
+      alert(&#x27;not valid&#x27;);
+    } else {
+      const statusModal &#x3D; this.dialog.open(SafeStatusModalComponent, {
+        disableClose: true,
+        data: {
+          title: &#x27;Saving survey&#x27;,
+          showSpinner: true,
+        },
+      });
+      this.apollo
+        .mutate&lt;EditFormMutationResponse&gt;({
+          mutation: EDIT_FORM_STRUCTURE,
+          variables: {
+            id: this.form.id,
+            structure,
+          },
+        })
+        .subscribe(
+          (res) &#x3D;&gt; {
+            if (res.errors) {
+              this.snackBar.openSnackBar(res.errors[0].message, {
+                error: true,
+              });
+              statusModal.close();
+            } else {
+              this.snackBar.openSnackBar(
+                this.translate.instant(&#x27;common.notifications.objectUpdated&#x27;, {
+                  type: this.translate.instant(&#x27;common.form.one&#x27;).toLowerCase(),
+                  value: this.form?.name,
+                })
+              );
+              this.form &#x3D; { ...res.data?.editForm, structure };
+              this.structure &#x3D; structure;
+              localStorage.removeItem(&#x60;form:${this.id}&#x60;);
+              this.hasChanges &#x3D; false;
+              this.authService.canLogout.next(true);
+              statusModal.close();
+            }
+          },
+          (err) &#x3D;&gt; {
+            this.snackBar.openSnackBar(err.message, { error: true });
+            statusModal.close();
+          }
+        );
+    }
+  }
+
+  /**
+   * Update the status of the form.
+   *
+   * @param e new status
+   */
+  public updateStatus(e: any): void {
+    const statusModal &#x3D; this.dialog.open(SafeStatusModalComponent, {
+      disableClose: true,
+      data: {
+        title: &#x27;Saving survey&#x27;,
+        showSpinner: true,
+      },
+    });
+    this.apollo
+      .mutate&lt;EditFormMutationResponse&gt;({
+        mutation: EDIT_FORM_STATUS,
+        variables: {
+          id: this.id,
+          status: e.value,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.errors) {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.objectNotUpdated&#x27;, {
+              type: this.translate.instant(&#x27;common.status&#x27;),
+              error: res.errors[0].message,
+            }),
+            { error: true }
+          );
+          statusModal.close();
+        } else {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.statusUpdated&#x27;, {
+              value: e.value,
+            })
+          );
+          this.form &#x3D; { ...this.form, status: res.data?.editForm.status };
+          statusModal.close();
+        }
+      });
+  }
+
+  /**
+   * Available in previous version to change the template.
+   *
+   * @param id id of version
+   */
+  setTemplate(id: string): void {
+    this.apollo
+      .watchQuery&lt;GetFormByIdQueryResponse&gt;({
+        query: GET_SHORT_FORM_BY_ID,
+        variables: {
+          id,
+        },
+      })
+      .valueChanges.subscribe((res) &#x3D;&gt; {
+        this.structure &#x3D; res.data.form.structure;
+      });
+  }
+
+  /**
+   * Available in previous version to change the version.
+   *
+   * @param e new version
+   */
+  public onOpenVersion(e: any): void {
+    this.activeVersion &#x3D; e;
+    this.structure &#x3D; this.activeVersion.data;
+    // this.surveyCreator.makeNewViewActive(&#x27;test&#x27;);
+    // this.surveyCreator.saveSurveyFunc &#x3D; null;
+  }
+
+  /**
+   * Available in previous version to change the version.
+   */
+  public resetActiveVersion(): void {
+    this.activeVersion &#x3D; null;
+    this.structure &#x3D; this.form?.structure;
+    // this.surveyCreator.makeNewViewActive(&#x27;designer&#x27;);
+    // this.surveyCreator.saveSurveyFunc &#x3D; this.saveMySurvey;
+  }
+
+  /** Edit the form name. */
+  public saveName(): void {
+    const statusModal &#x3D; this.dialog.open(SafeStatusModalComponent, {
+      disableClose: true,
+      data: {
+        title: &#x27;Saving survey&#x27;,
+        showSpinner: true,
+      },
+    });
+    const { formName } &#x3D; this.nameForm.value;
+    this.toggleFormActive();
+    this.apollo
+      .mutate&lt;EditFormMutationResponse&gt;({
+        mutation: EDIT_FORM_NAME,
+        variables: {
+          id: this.id,
+          name: formName,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.errors) {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.objectNotUpdated&#x27;, {
+              type: this.translate.instant(&#x27;common.form.one&#x27;),
+              error: res.errors[0].message,
+            }),
+            { error: true }
+          );
+          statusModal.close();
+        } else {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.objectUpdated&#x27;, {
+              type: this.translate.instant(&#x27;common.form.one&#x27;).toLowerCase(),
+              value: formName,
+            })
+          );
+          this.form &#x3D; { ...this.form, name: res.data?.editForm.name };
+          this.breadcrumbService.setBreadcrumb(
+            &#x27;@form&#x27;,
+            this.form.name as string
+          );
+          statusModal.close();
+        }
+      });
+  }
+
+  /**
+   * Edit the permissions layer.
+   *
+   * @param e new permissions
+   */
+  saveAccess(e: any): void {
+    const statusModal &#x3D; this.dialog.open(SafeStatusModalComponent, {
+      disableClose: true,
+      data: {
+        title: &#x27;Saving survey&#x27;,
+        showSpinner: true,
+      },
+    });
+    this.apollo
+      .mutate&lt;EditFormMutationResponse&gt;({
+        mutation: EDIT_FORM_PERMISSIONS,
+        variables: {
+          id: this.id,
+          permissions: e,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.errors) {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.objectNotUpdated&#x27;, {
+              type: this.translate.instant(&#x27;common.access&#x27;),
+              error: res.errors[0].message,
+            }),
+            { error: true }
+          );
+          statusModal.close();
+        } else {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.objectUpdated&#x27;, {
+              type: this.translate.instant(&#x27;common.access&#x27;).toLowerCase(),
+              value: &#x27;&#x27;,
+            })
+          );
+          this.form &#x3D; { ...res.data?.editForm, structure: this.structure };
+          statusModal.close();
+        }
+      });
+  }
+
+  /**
+   * Called when form structure is updated
+   *
+   * @param event update event
+   */
+  formStructureChange(event: any): void {
+    this.hasChanges &#x3D; event !&#x3D;&#x3D; this.form?.structure;
+    localStorage.setItem(&#x60;form:${this.id}&#x60;, event);
+    this.authService.canLogout.next(!this.hasChanges);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container *ngIf&#x3D;&quot;form&quot;&gt;
+  &lt;div class&#x3D;&quot;flex flex-wrap items-center justify-between mb-6 gap-4&quot;&gt;
+    &lt;div class&#x3D;&quot;flex items-center overflow-hidden&quot;&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;!formActive&quot;&gt;
+        &lt;h1
+          class&#x3D;&quot;!m-0 overflow-hidden text-ellipsis hover:bg-neutral-200 rounded-lg&quot;
+          (click)&#x3D;&quot;toggleFormActive()&quot;
+        &gt;
+          {{ form.name }} {{ activeVersion ? activeVersion.id : &#x27;&#x27; }}
+        &lt;/h1&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container *ngIf&#x3D;&quot;formActive&quot;&gt;
+        &lt;form [formGroup]&#x3D;&quot;nameForm&quot; (ngSubmit)&#x3D;&quot;saveName()&quot;&gt;
+          &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+            &lt;mat-label&gt;{{ &#x27;common.name&#x27; | translate }}&lt;/mat-label&gt;
+            &lt;input matInput formControlName&#x3D;&quot;formName&quot; type&#x3D;&quot;string&quot; /&gt;
+            &lt;safe-button
+              matSuffix
+              type&#x3D;&quot;submit&quot;
+              [isIcon]&#x3D;&quot;true&quot;
+              icon&#x3D;&quot;done&quot;
+              variant&#x3D;&quot;primary&quot;
+              [disabled]&#x3D;&quot;!nameForm.valid&quot;
+            &gt;
+            &lt;/safe-button&gt;
+            &lt;safe-button
+              matSuffix
+              [isIcon]&#x3D;&quot;true&quot;
+              icon&#x3D;&quot;close&quot;
+              variant&#x3D;&quot;danger&quot;
+              (click)&#x3D;&quot;toggleFormActive()&quot;
+            &gt;
+            &lt;/safe-button&gt;
+          &lt;/mat-form-field&gt;
+        &lt;/form&gt;
+      &lt;/ng-container&gt;
+      &lt;safe-access
+        [access]&#x3D;&quot;form.permissions&quot;
+        [objectTypeName]&#x3D;&quot;&#x27;common.form.one&#x27; | translate&quot;
+        (save)&#x3D;&quot;saveAccess($event)&quot;
+        *ngIf&#x3D;&quot;form.canUpdate &amp;&amp; !formActive&quot;
+      &gt;&lt;/safe-access&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex items-center&quot; *ngIf&#x3D;&quot;!formActive&quot;&gt;
+      &lt;mat-button-toggle-group
+        appearance&#x3D;&quot;legacy&quot;
+        [value]&#x3D;&quot;form.status&quot;
+        (change)&#x3D;&quot;updateStatus($event)&quot;
+      &gt;
+        &lt;mat-button-toggle
+          *ngFor&#x3D;&quot;let status of statuses&quot;
+          [value]&#x3D;&quot;status.value&quot;
+          [className]&#x3D;&quot;&#x27;toggle-&#x27; + status.value&quot;
+          &gt;{{ status.key | translate }}&lt;/mat-button-toggle
+        &gt;
+      &lt;/mat-button-toggle-group&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;app-history
+    *ngIf&#x3D;&quot;activeVersions&quot;
+    [dataSource]&#x3D;&quot;form.versions || []&quot;
+    (open)&#x3D;&quot;onOpenVersion($event)&quot;
+  &gt;&lt;/app-history&gt;
+  &lt;safe-form-builder
+    [form]&#x3D;&quot;form&quot;
+    (save)&#x3D;&quot;onSave($event)&quot;
+    (formChange)&#x3D;&quot;formStructureChange($event)&quot;
+  &gt;&lt;/safe-form-builder&gt;
+&lt;/ng-container&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./form-builder.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="form">  <div class="flex flex-wrap items-center justify-between mb-6 gap-4">    <div class="flex items-center overflow-hidden">      <ng-container *ngIf="!formActive">        <h1          class="!m-0 overflow-hidden text-ellipsis hover:bg-neutral-200 rounded-lg"          (click)="toggleFormActive()"        >          {{ form.name }} {{ activeVersion ? activeVersion.id : \'\' }}        </h1>      </ng-container>      <ng-container *ngIf="formActive">        <form [formGroup]="nameForm" (ngSubmit)="saveName()">          <mat-form-field appearance="outline">            <mat-label>{{ \'common.name\' | translate }}</mat-label>            <input matInput formControlName="formName" type="string" />            <safe-button              matSuffix              type="submit"              [isIcon]="true"              icon="done"              variant="primary"              [disabled]="!nameForm.valid"            >            </safe-button>            <safe-button              matSuffix              [isIcon]="true"              icon="close"              variant="danger"              (click)="toggleFormActive()"            >            </safe-button>          </mat-form-field>        </form>      </ng-container>      <safe-access        [access]="form.permissions"        [objectTypeName]="\'common.form.one\' | translate"        (save)="saveAccess($event)"        *ngIf="form.canUpdate && !formActive"      ></safe-access>    </div>    <div class="flex items-center" *ngIf="!formActive">      <mat-button-toggle-group        appearance="legacy"        [value]="form.status"        (change)="updateStatus($event)"      >        <mat-button-toggle          *ngFor="let status of statuses"          [value]="status.value"          [className]="\'toggle-\' + status.value"          >{{ status.key | translate }}</mat-button-toggle        >      </mat-button-toggle-group>    </div>  </div>  <app-history    *ngIf="activeVersions"    [dataSource]="form.versions || []"    (open)="onOpenVersion($event)"  ></app-history>  <safe-form-builder    [form]="form"    (save)="onSave($event)"    (formChange)="formStructureChange($event)"  ></safe-form-builder></ng-container></div>'
+    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FormBuilderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FormBuilderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
