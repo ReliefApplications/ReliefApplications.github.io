@@ -1,0 +1,421 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li
+  >
+  GetGroupsQueryResponse</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/safe/src/lib/components/role-summary/graphql/queries.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Model for GetGroupsQueryResponse object</p>
+
+            </p>
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#groups" 
+>
+                                            groups
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="groups"></a>
+                                        <span class="name "><b>groups</b>
+                                            <a href="#groups">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>groups:         <code><a href="../interfaces/Group.html" target="_self" >Group[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/Group.html" target="_self" >Group[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
+import { Application } from &#x27;../../../models/application.model&#x27;;
+import { Resource } from &#x27;../../../models/resource.model&#x27;;
+import { Channel } from &#x27;../../../models/channel.model&#x27;;
+import { Group, Permission, Role } from &#x27;../../../models/user.model&#x27;;
+import { Workflow } from &#x27;../../../models/workflow.model&#x27;;
+
+/** Get role by id GraphQL query */
+export const GET_ROLE &#x3D; gql&#x60;
+  query GetRole($id: ID!) {
+    role(id: $id) {
+      id
+      title
+      description
+      permissions {
+        id
+        type
+      }
+      application {
+        id
+      }
+      autoAssignment
+    }
+  }
+&#x60;;
+
+/** Interface of Get role query */
+export interface GetRoleQueryResponse {
+  loading: boolean;
+  role: Role;
+}
+
+/** Graphql request for getting permissions */
+export const GET_PERMISSIONS &#x3D; gql&#x60;
+  query GetPermissions($application: Boolean) {
+    permissions(application: $application) {
+      id
+      type
+      global
+    }
+  }
+&#x60;;
+
+/** Model for GetPermissionsQueryResponse object */
+export interface GetPermissionsQueryResponse {
+  loading: boolean;
+  permissions: Permission[];
+}
+
+/** Graphql request for getting channels (optionnally by an application id) */
+export const GET_CHANNELS &#x3D; gql&#x60;
+  query getChannels($application: ID) {
+    channels(application: $application) {
+      id
+      title
+      application {
+        id
+        name
+      }
+    }
+  }
+&#x60;;
+
+/** Model for GetChannelsQueryResponse object */
+export interface GetChannelsQueryResponse {
+  loading: boolean;
+  channels: Channel[];
+}
+
+/** Graphql request for getting the features of an application by its id */
+export const GET_APPLICATION_FEATURES &#x3D; gql&#x60;
+  query getApplicationFeatures($id: ID!) {
+    application(id: $id) {
+      id
+      pages {
+        id
+        name
+        type
+        content
+        permissions {
+          canSee {
+            id
+          }
+        }
+      }
+    }
+  }
+&#x60;;
+
+/** Model for the response of the getApplicationFeatures query */
+export interface GetApplicationFeaturesQueryResponse {
+  application: Application;
+}
+
+/** Graphql request for getting the steps of a workflow by its id */
+export const GET_WORKFLOW_STEPS &#x3D; gql&#x60;
+  query getWorkflowSteps($id: ID!) {
+    workflow(id: $id) {
+      id
+      steps {
+        id
+        name
+        type
+        content
+        permissions {
+          canSee {
+            id
+          }
+        }
+      }
+    }
+  }
+&#x60;;
+
+/** Model for the response of the getWorkflowSteps query */
+export interface GetWorkflowStepsQueryResponse {
+  workflow: Workflow;
+}
+
+/** Graphql query for getting resources with a filter and more data */
+export const GET_RESOURCES &#x3D; gql&#x60;
+  query GetResources(
+    $first: Int
+    $afterCursor: ID
+    $filter: JSON
+    $sortField: String
+    $sortOrder: String
+    $role: ID!
+  ) {
+    resources(
+      first: $first
+      afterCursor: $afterCursor
+      filter: $filter
+      sortField: $sortField
+      sortOrder: $sortOrder
+    ) {
+      edges {
+        node {
+          id
+          queryName
+          name
+          rolePermissions(role: $role)
+          fields
+        }
+        cursor
+      }
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+&#x60;;
+
+/** Interface of Get Resources Query response */
+export interface GetResourcesQueryResponse {
+  loading: boolean;
+  resources: {
+    edges: {
+      node: Resource;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    };
+    totalCount: number;
+  };
+}
+
+/** GraphQL query to get a single resource */
+export const GET_RESOURCE &#x3D; gql&#x60;
+  query GetResources($id: ID!, $role: ID!) {
+    resource(id: $id) {
+      id
+      queryName
+      name
+      rolePermissions(role: $role)
+      metadata
+      fields
+    }
+  }
+&#x60;;
+
+/** Interface of Get Resource Query response */
+export interface GetResourceQueryResponse {
+  resource: Resource;
+}
+
+/** Graphql request for getting groups */
+export const GET_GROUPS &#x3D; gql&#x60;
+  query GetGroups {
+    groups {
+      id
+      title
+    }
+  }
+&#x60;;
+
+/** Model for GetGroupsQueryResponse object */
+export interface GetGroupsQueryResponse {
+  groups: Group[];
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'GetGroupsQueryResponse.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

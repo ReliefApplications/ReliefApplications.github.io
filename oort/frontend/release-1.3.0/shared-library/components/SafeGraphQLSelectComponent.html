@@ -1,0 +1,3182 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeGraphQLSelectComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/graphql-select/graphql-select.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component for a dropdown with pagination</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                    <code><a href="../interfaces/Access.html" target="_self" >ControlValueAccessor</a></code>
+                    <code><a href="../interfaces/Form.html" target="_self" >MatFormFieldControl</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../miscellaneous/variables.html#L" target="_self" >{
+    provide: MAT_SELECT_SCROLL_STRATEGY, useFactory: scrollFactory, deps: [Overlay],
+}</a></code>
+                                <code><a href="../interfaces/Form.html" target="_self" >{
+    provide: MatFormFieldControl, useExisting: SafeGraphQLSelectComponent,
+}</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-graphql-select</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./graphql-select.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./graphql-select.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#controlType" >controlType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#elements" >elements</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#elements$" >elements$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#elementSelect" >elementSelect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ePlaceholder" >ePlaceholder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#focused" >focused</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#formField" >formField</a>
+                            </li>
+                            <li>
+                                <a href="#id" >id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isRequired" >isRequired</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#nextId" >nextId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngControl" >ngControl</a>
+                            </li>
+                            <li>
+                                <a href="#onChange" >onChange</a>
+                            </li>
+                            <li>
+                                <a href="#onTouched" >onTouched</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#pageInfo" >pageInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#queryName" >queryName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#stateChanges" >stateChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#touched" >touched</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadOnScroll" >loadOnScroll</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onContainerClick" >onContainerClick</a>
+                            </li>
+                            <li>
+                                <a href="#onFocusIn" >onFocusIn</a>
+                            </li>
+                            <li>
+                                <a href="#onFocusOut" >onFocusOut</a>
+                            </li>
+                            <li>
+                                <a href="#onOpenSelect" >onOpenSelect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSelectionChange" >onSelectionChange</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnChange" >registerOnChange</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnTouched" >registerOnTouched</a>
+                            </li>
+                            <li>
+                                <a href="#setDescribedByIds" >setDescribedByIds</a>
+                            </li>
+                            <li>
+                                <a href="#writeValue" >writeValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#aria-describedby" >aria-describedby</a>
+                            </li>
+                            <li>
+                                <a href="#disabled" >disabled</a>
+                            </li>
+                            <li>
+                                <a href="#path" >path</a>
+                            </li>
+                            <li>
+                                <a href="#placeholder" >placeholder</a>
+                            </li>
+                            <li>
+                                <a href="#query" >query</a>
+                            </li>
+                            <li>
+                                <a href="#required" >required</a>
+                            </li>
+                            <li>
+                                <a href="#selectedElements" >selectedElements</a>
+                            </li>
+                            <li>
+                                <a href="#selectionChange" >selectionChange</a>
+                            </li>
+                            <li>
+                                <a href="#textField" >textField</a>
+                            </li>
+                            <li>
+                                <a href="#value" >value</a>
+                            </li>
+                            <li>
+                                <a href="#valueField" >valueField</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class.floating" >class.floating</a>
+                            </li>
+                            <li>
+                                <a href="#id" >id</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#value" >value</a>
+                                </li>
+                                <li>
+                                    <a href="#placeholder" >placeholder</a>
+                                </li>
+                                <li>
+                                    <a href="#empty" >empty</a>
+                                </li>
+                                <li>
+                                    <a href="#shouldLabelFloat" >shouldLabelFloat</a>
+                                </li>
+                                <li>
+                                    <a href="#required" >required</a>
+                                </li>
+                                <li>
+                                    <a href="#disabled" >disabled</a>
+                                </li>
+                                <li>
+                                    <a href="#errorState" >errorState</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: <a href="../anys/L.html" target="_self">ElementRef&lt;HTMLElement&gt;</a>, formField: <a href="../interfaces/Form.html" target="_self">MatFormField</a>, ngControl: <a href="https://angular.io/api/forms/NgControl" target="_blank">NgControl</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="249" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:249</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructor function is a special function that is called when a new instance of the class is
+created</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/variables.html#L" target="_self" >ElementRef&lt;HTMLElement&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>shared element ref service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>formField</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >MatFormField</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>MatFormField</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>ngControl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/NgControl" target="_blank" >NgControl</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>form control shared service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="aria-describedby"></a>
+                        <b>aria-describedby</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:180</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <b>disabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:155</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates whether the field is disabled</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="path"></a>
+                        <b>path</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="239" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:239</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="placeholder"></a>
+                        <b>placeholder</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:93</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets the placeholder for the select</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="query"></a>
+                        <b>query</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>QueryRef&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="236" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:236</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Query reference for getting the available contents</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="required"></a>
+                        <b>required</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:136</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates whether the field is required</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedElements"></a>
+                        <b>selectedElements</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="240" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:240</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectionChange"></a>
+                        <b>selectionChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new EventEmitter&lt;string | string[] | null&gt;()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:66</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="textField"></a>
+                        <b>textField</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:63</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <b>value</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | string[] | null</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:72</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Gets the value</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="valueField"></a>
+                        <b>valueField</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:62</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="class.floating"></a>
+                    <span class="name">
+                        <span ><b>class.floating</b></span>
+                        <a href="#class.floating"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:126</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indicates whether the label should be in the floating position</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="id"></a>
+                    <span class="name">
+                        <span ><b>id</b></span>
+                        <a href="#id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x60;safe-graphql-select-${SafeGraphQLSelectComponent.nextId++}&#x60;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadOnScroll"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>loadOnScroll</b></span>
+                        <a href="#loadOnScroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadOnScroll(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="347"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:347</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches more resources on scroll.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>scroll event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:295</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:269</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onContainerClick"></a>
+                    <span class="name">
+                        <span ><b>onContainerClick</b></span>
+                        <a href="#onContainerClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onContainerClick(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles mouse click on container</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Mouse event</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFocusIn"></a>
+                    <span class="name">
+                        <span ><b>onFocusIn</b></span>
+                        <a href="#onFocusIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFocusIn(event: FocusEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="304"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:304</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles focus on input</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>FocusEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The focus event</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFocusOut"></a>
+                    <span class="name">
+                        <span ><b>onFocusOut</b></span>
+                        <a href="#onFocusOut"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFocusOut(event: FocusEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="316"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:316</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles lost focus on input</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>FocusEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The focus event</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onOpenSelect"></a>
+                    <span class="name">
+                        <span ><b>onOpenSelect</b></span>
+                        <a href="#onOpenSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onOpenSelect(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="333"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:333</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds scroll listener to select.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>open select event.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelectionChange"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onSelectionChange</b></span>
+                        <a href="#onSelectionChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSelectionChange(event: <a href="../interfaces/Change.html" target="_self">MatSelectChange</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="393"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:393</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Triggers on selection change</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../interfaces/Change.html" target="_self" >MatSelectChange</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the selection change event</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnChange"></a>
+                    <span class="name">
+                        <span ><b>registerOnChange</b></span>
+                        <a href="#registerOnChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnChange(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:220</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Registers new onChange function</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>onChange function</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnTouched"></a>
+                    <span class="name">
+                        <span ><b>registerOnTouched</b></span>
+                        <a href="#registerOnTouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnTouched(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:229</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Registers new onTouched function</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>onTouched function</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDescribedByIds"></a>
+                    <span class="name">
+                        <span ><b>setDescribedByIds</b></span>
+                        <a href="#setDescribedByIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setDescribedByIds(ids: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets element ids that should be used for the aria-describedby attribute of your control</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ids</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id array</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="writeValue"></a>
+                    <span class="name">
+                        <span ><b>writeValue</b></span>
+                        <a href="#writeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>writeValue(val: string | null)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>ControlValueAccessor set value</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>val</td>
+                                    <td>
+                                            <code>string | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>new value</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="controlType"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>controlType</b></span>
+                        <a href="#controlType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;safe-graphql-select&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:178</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elements"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>elements</b></span>
+                        <a href="#elements"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;any[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:241</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elements$"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>elements$</b></span>
+                        <a href="#elements$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="242" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:242</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elementSelect"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>elementSelect</b></span>
+                        <a href="#elementSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatSelect</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(MatSelect)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="249" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:249</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ePlaceholder"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ePlaceholder</b></span>
+                        <a href="#ePlaceholder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:104</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="focused"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>focused</b></span>
+                        <a href="#focused"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:105</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formField"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>formField</b></span>
+                        <a href="#formField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >MatFormField</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Optional()<br />@Inject(MAT_FORM_FIELD)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="261" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:261</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">MatFormField</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="id"></a>
+                    <span class="name">
+                        <span ><b>id</b></span>
+                        <a href="#id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x60;safe-graphql-select-${SafeGraphQLSelectComponent.nextId++}&#x60;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isRequired"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>isRequired</b></span>
+                        <a href="#isRequired"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:147</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="247" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:247</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextId"></a>
+                    <span class="name">
+                            <span class="modifier">Static</span>
+                        <span ><b>nextId</b></span>
+                        <a href="#nextId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngControl"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>ngControl</b></span>
+                        <a href="#ngControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/NgControl" target="_blank" >NgControl</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Optional()<br />@Self()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="262" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:262</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">form control shared service</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onChange"></a>
+                    <span class="name">
+                        <span ><b>onChange</b></span>
+                        <a href="#onChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onTouched"></a>
+                    <span class="name">
+                        <span ><b>onTouched</b></span>
+                        <a href="#onTouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:107</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageInfo"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>pageInfo</b></span>
+                        <a href="#pageInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="243" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:243</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryName"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>queryName</b></span>
+                        <a href="#queryName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:238</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stateChanges"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>stateChanges</b></span>
+                        <a href="#stateChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="touched"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>touched</b></span>
+                        <a href="#touched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:106</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>value()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:72</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Gets the value</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>string | [] | null</code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>value(val: string | string[] | null)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:77</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Sets the value</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>val</td>
+                                                    
+                                                            <td>
+                                                                        <code>string | string[] | null</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="placeholder"></a>
+                        <span class="name"><b>placeholder</b><a href="#placeholder"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>placeholder()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:93</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Gets the placeholder for the select</p>
+</div>
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>placeholder(plh)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:100</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Sets the placeholder</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>plh</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="empty"></a>
+                        <span class="name"><b>empty</b><a href="#empty"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>empty()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:115</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Gets the empty status</p>
+</div>
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shouldLabelFloat"></a>
+                        <span class="name"><b>shouldLabelFloat</b><a href="#shouldLabelFloat"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>shouldLabelFloat()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:126</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Indicates whether the label should be in the floating position</p>
+</div>
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="required"></a>
+                        <span class="name"><b>required</b><a href="#required"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>required()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:136</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Indicates whether the field is required</p>
+</div>
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>required(req)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:143</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Sets whether the field is required</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>req</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <span class="name"><b>disabled</b><a href="#disabled"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>disabled()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:155</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Indicates whether the field is disabled</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>disabled(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:160</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Sets whether the field is disabled</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorState"></a>
+                        <span class="name"><b>errorState</b><a href="#errorState"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>errorState()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">projects/safe/src/lib/components/graphql-select/graphql-select.component.ts:172</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Indicates whether the input is in an error state</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  Inject,
+  Input,
+  OnDestroy,
+  OnInit,
+  Optional,
+  Output,
+  Self,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+import { QueryRef } from &#x27;apollo-angular&#x27;;
+import { BehaviorSubject, Observable, Subject } from &#x27;rxjs&#x27;;
+import {
+  MAT_SELECT_SCROLL_STRATEGY,
+  MatSelect,
+  MatSelectChange,
+} from &#x27;@angular/material/select&#x27;;
+import { Overlay } from &#x27;@angular/cdk/overlay&#x27;;
+import { scrollFactory } from &#x27;../../utils/scroll-factory&#x27;;
+import { cloneDeep, get, set } from &#x27;lodash&#x27;;
+import {
+  MatFormField,
+  MatFormFieldControl,
+  MAT_FORM_FIELD,
+} from &#x27;@angular/material/form-field&#x27;;
+import { NgControl, ControlValueAccessor } from &#x27;@angular/forms&#x27;;
+import { coerceBooleanProperty } from &#x27;@angular/cdk/coercion&#x27;;
+
+/** A constant that is used to determine how many items should be added on scroll. */
+const ITEMS_PER_RELOAD &#x3D; 10;
+
+/** Component for a dropdown with pagination */
+@Component({
+  selector: &#x27;safe-graphql-select&#x27;,
+  templateUrl: &#x27;./graphql-select.component.html&#x27;,
+  styleUrls: [&#x27;./graphql-select.component.scss&#x27;],
+  providers: [
+    {
+      provide: MAT_SELECT_SCROLL_STRATEGY,
+      useFactory: scrollFactory,
+      deps: [Overlay],
+    },
+    {
+      provide: MatFormFieldControl,
+      useExisting: SafeGraphQLSelectComponent,
+    },
+  ],
+})
+export class SafeGraphQLSelectComponent
+  implements
+    OnInit,
+    OnDestroy,
+    ControlValueAccessor,
+    MatFormFieldControl&lt;string | string[]&gt;
+{
+  static nextId &#x3D; 0;
+
+  @Input() valueField &#x3D; &#x27;&#x27;;
+  @Input() textField &#x3D; &#x27;&#x27;;
+  @Input()
+  @Output()
+  selectionChange &#x3D; new EventEmitter&lt;string | string[] | null&gt;();
+  /**
+   * Gets the value
+   *
+   * @returns the value
+   */
+  @Input() get value(): string | string[] | null {
+    return this.ngControl.value;
+  }
+
+  /** Sets the value */
+  set value(val: string | string[] | null) {
+    this.onChange(val);
+    this.stateChanges.next();
+    this.selectionChange.emit(val);
+  }
+
+  public stateChanges &#x3D; new Subject&lt;void&gt;();
+  @HostBinding()
+  id &#x3D; &#x60;safe-graphql-select-${SafeGraphQLSelectComponent.nextId++}&#x60;;
+
+  /**
+   * Gets the placeholder for the select
+   *
+   * @returns the placeholder
+   */
+  @Input()
+  get placeholder() {
+    return this.ePlaceholder;
+  }
+
+  /**
+   * Sets the placeholder
+   */
+  set placeholder(plh) {
+    this.ePlaceholder &#x3D; plh;
+    this.stateChanges.next();
+  }
+  private ePlaceholder &#x3D; &#x27;&#x27;;
+  public focused &#x3D; false;
+  public touched &#x3D; false;
+  onTouched &#x3D; () &#x3D;&gt; {};
+  onChange &#x3D; (_: any) &#x3D;&gt; {};
+
+  /**
+   * Gets the empty status
+   *
+   * @returns if an option is selected
+   */
+  get empty() {
+    // return !this.selected.value;
+    return !this.ngControl.control?.value;
+  }
+
+  /**
+   * Indicates whether the label should be in the floating position
+   *
+   * @returns whether the label should be in the floating position
+   */
+  @HostBinding(&#x27;class.floating&#x27;)
+  get shouldLabelFloat() {
+    return this.focused || !this.empty;
+  }
+
+  /**
+   * Indicates whether the field is required
+   *
+   * @returns whether the field is required
+   */
+  @Input()
+  get required() {
+    return this.isRequired;
+  }
+
+  /**
+   * Sets whether the field is required
+   */
+  set required(req) {
+    this.isRequired &#x3D; coerceBooleanProperty(req);
+    this.stateChanges.next();
+  }
+  private isRequired &#x3D; false;
+
+  /**
+   * Indicates whether the field is disabled
+   *
+   * @returns whether the field is disabled
+   */
+  @Input()
+  get disabled(): boolean {
+    return this.ngControl.disabled || false;
+  }
+
+  /** Sets whether the field is disabled */
+  set disabled(value: boolean) {
+    const isDisabled &#x3D; coerceBooleanProperty(value);
+    if (isDisabled) this.ngControl.control?.disable();
+    else this.ngControl.control?.enable();
+    this.stateChanges.next();
+  }
+
+  /**
+   * Indicates whether the input is in an error state
+   *
+   * @returns whether the input is in an error state
+   */
+  get errorState(): boolean {
+    return (this.ngControl.invalid &amp;&amp; this.touched) || false;
+    // return this.ngControl.invalid &amp;&amp; this.touched;
+    // return this.selected.invalid &amp;&amp; this.touched;
+  }
+
+  public controlType &#x3D; &#x27;safe-graphql-select&#x27;;
+
+  @Input(&#x27;aria-describedby&#x27;) userAriaDescribedBy!: string;
+
+  /**
+   * Sets element ids that should be used for the aria-describedby attribute of your control
+   *
+   * @param ids id array
+   */
+  setDescribedByIds(ids: string[]) {
+    const controlElement &#x3D; this.elementRef.nativeElement.querySelector(
+      &#x27;.safe-graphql-select-container&#x27;
+    );
+    if (!controlElement) return;
+    controlElement.setAttribute(&#x27;aria-describedby&#x27;, ids.join(&#x27; &#x27;));
+  }
+
+  /**
+   * Handles mouse click on container
+   *
+   * @param event Mouse event
+   */
+  onContainerClick(event: MouseEvent) {
+    if ((event.target as Element).tagName.toLowerCase() !&#x3D;&#x3D; &#x27;input&#x27;) {
+      this.elementRef.nativeElement.querySelector(&#x27;input&#x27;)?.focus();
+    }
+  }
+
+  /**
+   * ControlValueAccessor set value
+   *
+   * @param val new value
+   */
+  writeValue(val: string | null): void {
+    this.value &#x3D; val;
+  }
+
+  /**
+   * Registers new onChange function
+   *
+   * @param fn onChange function
+   */
+  registerOnChange(fn: any): void {
+    this.onChange &#x3D; fn;
+  }
+
+  /**
+   * Registers new onTouched function
+   *
+   * @param fn onTouched function
+   */
+  registerOnTouched(fn: any): void {
+    this.onTouched &#x3D; fn;
+  }
+
+  // public selected: FormControl;
+
+  /** Query reference for getting the available contents */
+  @Input(&#x27;query&#x27;) query!: QueryRef&lt;any&gt;;
+
+  private queryName!: string;
+  @Input() path &#x3D; &#x27;&#x27;;
+  @Input() selectedElements: any[] &#x3D; [];
+  public elements &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
+  public elements$!: Observable&lt;any[]&gt;;
+  private pageInfo &#x3D; {
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true,
+  };
+  public loading &#x3D; true;
+
+  @ViewChild(MatSelect) elementSelect?: MatSelect;
+
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created
+   *
+   * @param elementRef shared element ref service
+   * @param formField MatFormField
+   * @param ngControl form control shared service
+   */
+  constructor(
+    private elementRef: ElementRef&lt;HTMLElement&gt;,
+    @Optional() @Inject(MAT_FORM_FIELD) public formField: MatFormField,
+    @Optional() @Self() public ngControl: NgControl
+  ) {
+    if (this.ngControl !&#x3D; null) {
+      this.ngControl.valueAccessor &#x3D; this;
+    }
+  }
+
+  ngOnInit(): void {
+    this.elements$ &#x3D; this.elements.asObservable();
+    this.query.valueChanges.subscribe((res: any) &#x3D;&gt; {
+      this.queryName &#x3D; Object.keys(res.data)[0];
+      const path &#x3D; this.path
+        ? &#x60;${this.queryName}.${this.path}&#x60;
+        : this.queryName;
+      const nodes: any[] &#x3D; get(res.data, path).edges
+        ? get(res.data, path).edges.map((x: any) &#x3D;&gt; x.node)
+        : get(res.data, path);
+      this.selectedElements &#x3D; this.selectedElements.filter(
+        (element) &#x3D;&gt;
+          element &amp;&amp;
+          !nodes.find(
+            (node) &#x3D;&gt; node[this.valueField] &#x3D;&#x3D;&#x3D; element[this.valueField]
+          )
+      );
+      this.elements.next([...this.selectedElements, ...nodes]);
+      this.pageInfo &#x3D; get(res.data, path).pageInfo;
+      this.loading &#x3D; res.loading;
+    });
+    this.ngControl.valueChanges?.subscribe((value) &#x3D;&gt; {
+      this.selectionChange.emit(value);
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.stateChanges.complete();
+  }
+
+  /**
+   * Handles focus on input
+   *
+   * @param event The focus event
+   */
+  onFocusIn(event: FocusEvent) {
+    if (!this.focused) {
+      this.focused &#x3D; true;
+      this.stateChanges.next();
+    }
+  }
+
+  /**
+   * Handles lost focus on input
+   *
+   * @param event The focus event
+   */
+  onFocusOut(event: FocusEvent) {
+    if (
+      this.focused &amp;&amp;
+      !this.elementRef.nativeElement.contains(event.relatedTarget as Element)
+    ) {
+      this.touched &#x3D; true;
+      this.focused &#x3D; false;
+      this.onTouched();
+      this.stateChanges.next();
+    }
+  }
+
+  /**
+   * Adds scroll listener to select.
+   *
+   * @param e open select event.
+   */
+  onOpenSelect(e: any): void {
+    if (e &amp;&amp; this.elementSelect) {
+      const panel &#x3D; this.elementSelect.panel.nativeElement;
+      panel.addEventListener(&#x27;scroll&#x27;, (event: any) &#x3D;&gt;
+        this.loadOnScroll(event)
+      );
+    }
+  }
+
+  /**
+   * Fetches more resources on scroll.
+   *
+   * @param e scroll event.
+   */
+  private loadOnScroll(e: any): void {
+    if (
+      e.target.scrollHeight - (e.target.clientHeight + e.target.scrollTop) &lt;
+      50
+    ) {
+      if (!this.loading &amp;&amp; this.pageInfo.hasNextPage) {
+        this.loading &#x3D; true;
+        this.query.fetchMore({
+          variables: {
+            ...this.query.variables,
+            first: ITEMS_PER_RELOAD,
+            afterCursor: this.pageInfo.endCursor,
+          },
+          updateQuery: (prev, { fetchMoreResult }) &#x3D;&gt; {
+            if (!fetchMoreResult) {
+              this.loading &#x3D; false;
+              return prev;
+            }
+            const prevCpy &#x3D; cloneDeep(prev);
+            const path &#x3D; this.path
+              ? &#x60;${this.queryName}.${this.path}&#x60;
+              : this.queryName;
+            set(prevCpy, path, {
+              edges: [
+                ...(get(prev, path).edges
+                  ? get(prev, path).edges
+                  : get(prev, path)),
+                ...(get(fetchMoreResult, path).edges
+                  ? get(fetchMoreResult, path).edges
+                  : get(fetchMoreResult, path)),
+              ],
+              pageInfo: get(fetchMoreResult, path).pageInfo,
+              totalCount: get(fetchMoreResult, path).totalCount,
+            });
+            return prevCpy;
+          },
+        });
+      }
+    }
+  }
+
+  /**
+   * Triggers on selection change
+   *
+   * @param event the selection change event
+   */
+  public onSelectionChange(event: MatSelectChange) {
+    this.value &#x3D; event.value;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-select
+  [formControl]&#x3D;&quot;ngControl &amp;&amp; $any(ngControl.control)&quot;
+  (openedChange)&#x3D;&quot;onOpenSelect($event)&quot;
+  [required]&#x3D;&quot;required&quot;
+  (focusin)&#x3D;&quot;onFocusIn($event)&quot;
+  (focusout)&#x3D;&quot;onFocusOut($event)&quot;
+&gt;
+  &lt;mat-option
+    *ngFor&#x3D;&quot;let element of elements$ | async&quot;
+    [value]&#x3D;&quot;element[valueField]&quot;
+  &gt;
+    {{ element[textField] }}
+  &lt;/mat-option&gt;
+  &lt;mat-spinner
+    *ngIf&#x3D;&quot;loading&quot;
+    diameter&#x3D;&quot;24&quot;
+    style&#x3D;&quot;padding-top: 1em&quot;
+  &gt;&lt;/mat-spinner&gt;
+&lt;/mat-select&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./graphql-select.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-select  [formControl]="ngControl && $any(ngControl.control)"  (openedChange)="onOpenSelect($event)"  [required]="required"  (focusin)="onFocusIn($event)"  (focusout)="onFocusOut($event)">  <mat-option    *ngFor="let element of elements$ | async"    [value]="element[valueField]"  >    {{ element[textField] }}  </mat-option>  <mat-spinner    *ngIf="loading"    diameter="24"    style="padding-top: 1em"  ></mat-spinner></mat-select></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafeGraphQLSelectComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeGraphQLSelectComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

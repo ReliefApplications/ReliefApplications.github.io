@@ -1,0 +1,2013 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >QueryBuilderService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/safe/src/lib/services/query-builder/query-builder.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared query builder service. The query builder service is used by the widgets, that creates the query based on their settings.
+Query builder service only performs query on the schema generated on the go from the forms / resources definitions.</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#availableQueries" >availableQueries</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#availableTypes" >availableTypes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#userFields" >userFields</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#buildFields" >buildFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#buildMetaFields" >buildMetaFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#buildMetaQuery" >buildMetaQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#buildQuery" >buildQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractFieldsFromType" >extractFieldsFromType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#filterToString" >filterToString</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getFields" >getFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getFieldsFromType" >getFieldsFromType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getQueryMetaData" >getQueryMetaData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getQueryNameFromResourceName" >getQueryNameFromResourceName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getQuerySource" >getQuerySource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#graphqlQuery" >graphqlQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sourceQuery" >sourceQuery</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#availableQueries$" >availableQueries$</a>
+                                </li>
+                                <li>
+                                    <a href="#availableTypes$" >availableTypes$</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apollo: Apollo, formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Shared query builder service. The query builder service is used by the widgets, that creates the query based on their settings.
+Query builder service only performs query on the schema generated on the go from the forms / resources definitions.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Apollo client</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular form builder</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>buildFields</b></span>
+                        <a href="#buildFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildFields(fields: any[], withId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:147</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds the fields part of the GraphQL query.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>List of fields to query.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>withId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Boolean to add a default ID field.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>QL document to build the query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildMetaFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>buildMetaFields</b></span>
+                        <a href="#buildMetaFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildMetaFields(fields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds the fields part of the GraphQL meta query.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of fields to query.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>QL document to build the query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildMetaQuery"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>buildMetaQuery</b></span>
+                        <a href="#buildMetaQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildMetaQuery(query: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="310"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:310</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds a GraphQL meta query of a form / resource from widget settings.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Widget query.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>GraphQL meta query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildQuery"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>buildQuery</b></span>
+                        <a href="#buildQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildQuery(settings: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="261"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:261</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds a form / resource query from widget settings.
+TODO: we should pass directly the query definition, instead of the settings.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>settings</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Widget settings.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>GraphQL query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractFieldsFromType"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>extractFieldsFromType</b></span>
+                        <a href="#extractFieldsFromType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractFieldsFromType(type: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets list of fields from a type.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Corresponding type from availablTypes.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>List of fields of this type.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterToString"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>filterToString</b></span>
+                        <a href="#filterToString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>filterToString(filter: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:195</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds parsable GraphQL string from the filter definition.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Filter definition</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>GraphQL parsable strinf for the filter.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFields"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getFields</b></span>
+                        <a href="#getFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFields(queryName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets list of fields from a query name.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>queryName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Form / Resource query name.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>List of fields of this structure.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFieldsFromType"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getFieldsFromType</b></span>
+                        <a href="#getFieldsFromType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFieldsFromType(typeName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:130</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets list of fields from a type.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>typeName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Form / Resource type.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>List of fields of this structure.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQueryMetaData"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getQueryMetaData</b></span>
+                        <a href="#getQueryMetaData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getQueryMetaData(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="361"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:361</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get metadata of form or resource</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id of form or resource</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>metadata query</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQueryNameFromResourceName"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getQueryNameFromResourceName</b></span>
+                        <a href="#getQueryNameFromResourceName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getQueryNameFromResourceName(resourceName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="377"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:377</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the query name from a resource name.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>resourceName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Resource name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Query name</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuerySource"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getQuerySource</b></span>
+                        <a href="#getQuerySource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getQuerySource(query: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="336"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:336</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get source query ( form / resource ) from query</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>custom query</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>apollo query to get source</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="graphqlQuery"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>graphqlQuery</b></span>
+                        <a href="#graphqlQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>graphqlQuery(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, fields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="280"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:280</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds a graphQL query from name and fields strings.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>name of the query.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>fields to fetch.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>GraphQL query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sourceQuery"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>sourceQuery</b></span>
+                        <a href="#sourceQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sourceQuery(queryName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="398"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:398</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Finds the source of a query.
+Used in order to find related forms.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>queryName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Query name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Apollo query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="availableQueries"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>availableQueries</b></span>
+                        <a href="#availableQueries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;any[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:32</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Available forms / resources queries</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="availableTypes"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>availableTypes</b></span>
+                        <a href="#availableTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;any[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:39</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Available forms / resources types</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userFields"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>userFields</b></span>
+                        <a href="#userFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:45</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>User fields</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="availableQueries$"></a>
+                        <span class="name"><b>availableQueries$</b><a href="#availableQueries$"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>availableQueries$()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:34</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="availableTypes$"></a>
+                        <span class="name"><b>availableTypes$</b><a href="#availableTypes$"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>availableTypes$()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:41</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo, gql } from &#x27;apollo-angular&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import {
+  GetQueryMetaDataQueryResponse,
+  GetQueryTypes,
+  GET_QUERY_META_DATA,
+  GET_QUERY_TYPES,
+} from &#x27;./graphql/queries&#x27;;
+import { FormBuilder } from &#x27;@angular/forms&#x27;;
+import { ApolloQueryResult } from &#x27;@apollo/client&#x27;;
+import get from &#x27;lodash/get&#x27;;
+
+/** List of fields part of the schema but not selectable */
+const NON_SELECTABLE_FIELDS &#x3D; [&#x27;canUpdate&#x27;, &#x27;canDelete&#x27;];
+/** List of fields part of the schema but not selectable */
+const SELECTABLE_ID_FIELDS &#x3D; [&#x27;id&#x27;, &#x27;incrementalId&#x27;, &#x27;form&#x27;];
+/** List of user fields */
+const USER_FIELDS &#x3D; [&#x27;id&#x27;, &#x27;name&#x27;, &#x27;username&#x27;];
+/** ReferenceData identifier convention */
+export const REFERENCE_DATA_END &#x3D; &#x27;Ref&#x27;;
+
+/**
+ * Shared query builder service. The query builder service is used by the widgets, that creates the query based on their settings.
+ * Query builder service only performs query on the schema generated on the go from the forms / resources definitions.
+ */
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class QueryBuilderService {
+  /** Available forms / resources queries */
+  private availableQueries &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
+  /** @returns Available forms / resources queries as observalbe */
+  get availableQueries$(): Observable&lt;any&gt; {
+    return this.availableQueries.asObservable();
+  }
+
+  /** Available forms / resources types */
+  private availableTypes &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
+  /** @returns Available forms / resources types as observable */
+  get availableTypes$(): Observable&lt;any&gt; {
+    return this.availableTypes.asObservable();
+  }
+  /** User fields */
+  private userFields &#x3D; [];
+
+  /**
+   * Shared query builder service. The query builder service is used by the widgets, that creates the query based on their settings.
+   * Query builder service only performs query on the schema generated on the go from the forms / resources definitions.
+   *
+   * @param apollo Apollo client
+   * @param formBuilder Angular form builder
+   */
+  constructor(private apollo: Apollo, private formBuilder: FormBuilder) {
+    this.apollo
+      .query&lt;GetQueryTypes&gt;({
+        query: GET_QUERY_TYPES,
+      })
+      .subscribe((res) &#x3D;&gt; {
+        // eslint-disable-next-line no-underscore-dangle
+        this.availableTypes.next(res.data.__schema.types);
+        this.availableQueries.next(
+          // eslint-disable-next-line no-underscore-dangle
+          res.data.__schema.queryType.fields.filter((x: any) &#x3D;&gt;
+            x.name.startsWith(&#x27;all&#x27;)
+          )
+        );
+        // eslint-disable-next-line no-underscore-dangle
+        this.userFields &#x3D; res.data.__schema.types
+          .find((x: any) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; &#x27;User&#x27;)
+          .fields.filter((x: any) &#x3D;&gt; USER_FIELDS.includes(x.name));
+      });
+  }
+
+  /**
+   * Gets list of fields from a type.
+   *
+   * @param type Corresponding type from availablTypes.
+   * @returns List of fields of this type.
+   */
+  private extractFieldsFromType(type: any): any[] {
+    return type.fields
+      .filter(
+        (x: any) &#x3D;&gt;
+          !NON_SELECTABLE_FIELDS.includes(x.name) &amp;&amp;
+          (SELECTABLE_ID_FIELDS.includes(x.name) || x.type.name !&#x3D;&#x3D; &#x27;ID&#x27;) &amp;&amp;
+          (x.type.kind !&#x3D;&#x3D; &#x27;LIST&#x27; || x.type.ofType.name !&#x3D;&#x3D; &#x27;ID&#x27;)
+      )
+      .map((x: any) &#x3D;&gt; {
+        if (x.type.kind &#x3D;&#x3D;&#x3D; &#x27;OBJECT&#x27;) {
+          return Object.assign({}, x, {
+            type: Object.assign({}, x.type, {
+              fields: x.type.fields.filter(
+                (y: any) &#x3D;&gt;
+                  y.type.kind &#x3D;&#x3D;&#x3D; &#x27;SCALAR&#x27; &amp;&amp;
+                  !NON_SELECTABLE_FIELDS.includes(y.name) &amp;&amp;
+                  (x.type.name !&#x3D;&#x3D; &#x27;User&#x27; || USER_FIELDS.includes(y.name))
+              ),
+            }),
+          });
+        }
+        return x;
+      })
+      .sort((a: any, b: any) &#x3D;&gt; a.name.localeCompare(b.name));
+  }
+
+  /**
+   * Gets list of fields from a query name.
+   *
+   * @param queryName Form / Resource query name.
+   * @returns List of fields of this structure.
+   */
+  public getFields(queryName: string): any[] {
+    const query &#x3D; this.availableQueries
+      .getValue()
+      .find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; queryName);
+    const typeName &#x3D; query?.type?.name.replace(&#x27;Connection&#x27;, &#x27;&#x27;) || &#x27;&#x27;;
+    const type &#x3D; this.availableTypes
+      .getValue()
+      .find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; typeName);
+    return type ? this.extractFieldsFromType(type) : [];
+  }
+
+  /**
+   * Gets list of fields from a type.
+   *
+   * @param typeName Form / Resource type.
+   * @returns List of fields of this structure.
+   */
+  public getFieldsFromType(typeName: string): any[] {
+    if (typeName &#x3D;&#x3D;&#x3D; &#x27;User&#x27;) {
+      return this.userFields;
+    }
+    const type &#x3D; this.availableTypes
+      .getValue()
+      .find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; typeName);
+    return type ? this.extractFieldsFromType(type) : [];
+  }
+
+  /**
+   * Builds the fields part of the GraphQL query.
+   *
+   * @param fields List of fields to query.
+   * @param withId Boolean to add a default ID field.
+   * @returns QL document to build the query.
+   */
+  private buildFields(fields: any[], withId &#x3D; true): string[] {
+    const defaultField: string[] &#x3D; withId ? [&#x27;id\n&#x27;] : [];
+    return defaultField.concat(
+      fields.map((x) &#x3D;&gt; {
+        switch (x.kind) {
+          case &#x27;SCALAR&#x27;: {
+            return x.name + &#x27;\n&#x27;;
+          }
+          case &#x27;LIST&#x27;: {
+            if (x.type.endsWith(REFERENCE_DATA_END)) {
+              return (
+                &#x60;${x.name} {
+              ${this.buildFields(x.fields, false)}
+            }&#x60; + &#x27;\n&#x27;
+              );
+            }
+            return (
+              &#x60;${x.name} (
+            sortField: ${x.sort.field ? &#x60;&quot;${x.sort.field}&quot;&#x60; : null},
+            sortOrder: &quot;${x.sort.order}&quot;,
+            first: ${get(x, &#x27;first&#x27;, null)},
+            filter: ${this.filterToString(x.filter)}
+          ) {
+            ${[&#x27;canUpdate\ncanDelete\n&#x27;].concat(this.buildFields(x.fields))}
+          }&#x60; + &#x27;\n&#x27;
+            );
+          }
+          case &#x27;OBJECT&#x27;: {
+            return (
+              &#x60;${x.name} {
+            ${this.buildFields(x.fields, !x.type.endsWith(REFERENCE_DATA_END))}
+          }&#x60; + &#x27;\n&#x27;
+            );
+          }
+          default: {
+            return &#x27;&#x27;;
+          }
+        }
+      })
+    );
+  }
+
+  /**
+   * Builds parsable GraphQL string from the filter definition.
+   *
+   * @param filter Filter definition
+   * @returns GraphQL parsable strinf for the filter.
+   */
+  private filterToString(filter: any): string {
+    if (filter.filters) {
+      return &#x60;{ logic: &quot;${filter.logic}&quot;, filters: [${filter.filters.map(
+        (x: any) &#x3D;&gt; this.filterToString(x)
+      )}]}&#x60;;
+    } else {
+      return &#x60;{ field: &quot;${filter.field}&quot;, operator: &quot;${filter.operator}&quot;, value: &quot;${filter.value}&quot; }&#x60;;
+    }
+  }
+
+  /**
+   * Builds the fields part of the GraphQL meta query.
+   *
+   * @param fields List of fields to query.
+   * @returns QL document to build the query.
+   */
+  private buildMetaFields(fields: any[]): any {
+    if (!fields) {
+      return &#x27;&#x27;;
+    }
+    return [&#x27;&#x27;].concat(
+      fields.map((x) &#x3D;&gt; {
+        const kind &#x3D; x.kind || x.type?.kind;
+        switch (kind) {
+          case &#x27;SCALAR&#x27;: {
+            return x.name + &#x27;\n&#x27;;
+          }
+          case &#x27;LIST&#x27;: {
+            const subFields &#x3D; get(x, &#x27;fields&#x27;, []) || get(x, &#x27;type.fields&#x27;, []);
+            if (subFields.length &gt; 0) {
+              return (
+                &#x60;${x.name} {
+              ${this.buildMetaFields(subFields)}
+            }&#x60; + &#x27;\n&#x27;
+              );
+            } else {
+              return &#x27;&#x27;;
+            }
+          }
+          case &#x27;OBJECT&#x27;: {
+            const subFields &#x3D; get(x, &#x27;fields&#x27;, []) || get(x, &#x27;type.fields&#x27;, []);
+            if (subFields.length &gt; 0) {
+              return (
+                &#x60;${x.name} {
+              ${this.buildMetaFields(subFields)}
+            }&#x60; + &#x27;\n&#x27;
+              );
+            } else {
+              return &#x27;&#x27;;
+            }
+          }
+          default: {
+            return &#x27;&#x27;;
+          }
+        }
+      })
+    );
+  }
+
+  /**
+   * Builds a form / resource query from widget settings.
+   * TODO: we should pass directly the query definition, instead of the settings.
+   *
+   * @param settings Widget settings.
+   * @returns GraphQL query.
+   */
+  public buildQuery(settings: any): any {
+    const builtQuery &#x3D; settings.query;
+    if (builtQuery?.fields?.length &gt; 0) {
+      const fields &#x3D; [&#x27;canUpdate\ncanDelete\n&#x27;].concat(
+        this.buildFields(builtQuery.fields)
+      );
+      return this.graphqlQuery(builtQuery.name, fields);
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Builds a graphQL query from name and fields strings.
+   *
+   * @param name name of the query.
+   * @param fields fields to fetch.
+   * @returns GraphQL query.
+   */
+  public graphqlQuery(name: string, fields: any) {
+    return gql&#x60;
+    query GetCustomQuery($first: Int, $skip: Int, $filter: JSON, $sortField: String, $sortOrder: String, $display: Boolean, $styles: JSON) {
+      ${name}(
+      first: $first,
+      skip: $skip,
+      sortField: $sortField,
+      sortOrder: $sortOrder,
+      filter: $filter,
+      display: $display
+      styles: $styles
+      ) {
+        edges {
+          node {
+            ${fields}
+          }
+          meta
+        }
+        totalCount
+      }
+    }
+  &#x60;;
+  }
+
+  /**
+   * Builds a GraphQL meta query of a form / resource from widget settings.
+   *
+   * @param query Widget query.
+   * @returns GraphQL meta query.
+   */
+  public buildMetaQuery(query: any): Observable&lt;ApolloQueryResult&lt;any&gt;&gt; | null {
+    if (query &amp;&amp; query.fields.length &gt; 0) {
+      const metaFields &#x3D; this.buildMetaFields(query.fields);
+      const metaQuery &#x3D; gql&#x60;
+        query GetCustomMetaQuery {
+          _${query.name}Meta {
+            ${metaFields}
+          }
+        }
+      &#x60;;
+      return this.apollo.query&lt;any&gt;({
+        query: metaQuery,
+        variables: {},
+        fetchPolicy: &#x27;cache-first&#x27;,
+      });
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Get source query ( form / resource ) from query
+   *
+   * @param query custom query
+   * @returns apollo query to get source
+   */
+  public getQuerySource(query: any): Observable&lt;ApolloQueryResult&lt;any&gt;&gt; | null {
+    if (query) {
+      const sourceQuery &#x3D; gql&#x60;
+      query GetSourceQuery {
+        _${query.name}Meta {
+          _source
+        }
+      }
+    &#x60;;
+      return this.apollo.query&lt;any&gt;({
+        query: sourceQuery,
+        variables: {},
+        fetchPolicy: &#x27;cache-first&#x27;,
+      });
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Get metadata of form or resource
+   *
+   * @param id id of form or resource
+   * @returns metadata query
+   */
+  public getQueryMetaData(id: string) {
+    return this.apollo.query&lt;GetQueryMetaDataQueryResponse&gt;({
+      query: GET_QUERY_META_DATA,
+      variables: {
+        id,
+      },
+      fetchPolicy: &#x27;cache-first&#x27;,
+    });
+  }
+
+  /**
+   * Returns the query name from a resource name.
+   *
+   * @param resourceName Resource name
+   * @returns Query name
+   */
+  public getQueryNameFromResourceName(resourceName: string): any {
+    const nameTrimmed &#x3D; resourceName
+      .replace(/_|-/g, &#x27;&#x27;)
+      .replace(/\s+(?&#x3D;\d)/g, &#x27;_&#x27;)
+      .replace(/\s/g, &#x27;&#x27;)
+      .toLowerCase();
+    return (
+      this.availableQueries
+        .getValue()
+        .find((x) &#x3D;&gt; x.type.name.toLowerCase() &#x3D;&#x3D;&#x3D; nameTrimmed + &#x27;connection&#x27;)
+        ?.name || &#x27;&#x27;
+    );
+  }
+
+  /**
+   * Finds the source of a query.
+   * Used in order to find related forms.
+   *
+   * @param queryName Query name
+   * @returns Apollo query.
+   */
+  public sourceQuery(queryName: string): any {
+    const queries &#x3D; this.availableQueries.getValue().map((x) &#x3D;&gt; x.name);
+    if (queries.includes(queryName)) {
+      const query &#x3D; gql&#x60;
+        query GetCustomSourceQuery {
+          _${queryName}Meta {
+            _source
+          }
+        }
+      &#x60;;
+      return this.apollo.query&lt;any&gt;({
+        query,
+        variables: {},
+      });
+    } else {
+      return null;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'QueryBuilderService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

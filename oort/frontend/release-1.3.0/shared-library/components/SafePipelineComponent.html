@@ -1,0 +1,1202 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafePipelineComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Aggregation pipeline component.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-pipeline</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./pipeline.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./pipeline.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fieldsPerStage" >fieldsPerStage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#initialFields" >initialFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#metaFields" >metaFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#stageList" >stageList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#stageType" >stageType</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addStage" >addStage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#deleteStage" >deleteStage</a>
+                            </li>
+                            <li>
+                                <a href="#drop" >drop</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateFieldsPerStage" >updateFieldsPerStage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fields$" >fields$</a>
+                            </li>
+                            <li>
+                                <a href="#metaFields$" >metaFields$</a>
+                            </li>
+                            <li>
+                                <a href="#pipelineForm" >pipelineForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(aggregationBuilder: <a href="../injectables/AggregationBuilderService.html" target="_self">AggregationBuilderService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Aggregation pipeline component.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>aggregationBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AggregationBuilderService.html" target="_self" >AggregationBuilderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared aggregation builder</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fields$"></a>
+                        <b>fields$</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:23</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metaFields$"></a>
+                        <b>metaFields$</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:24</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pipelineForm"></a>
+                        <b>pipelineForm</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormArray</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addStage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>addStage</b></span>
+                        <a href="#addStage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addStage(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a stage to the aggregation pipeline.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>type of stage</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteStage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>deleteStage</b></span>
+                        <a href="#deleteStage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteStage(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a stage at specified index.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of stage to remove in pipeline.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="drop"></a>
+                    <span class="name">
+                        <span ><b>drop</b></span>
+                        <a href="#drop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>drop(event: CdkDragDrop<string[]>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Moves an element in array.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>CdkDragDrop&lt;string[]&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>positions to move.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFieldsPerStage"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>updateFieldsPerStage</b></span>
+                        <a href="#updateFieldsPerStage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFieldsPerStage(pipeline: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates fields for the stage.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pipeline</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of pipeline stages.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fieldsPerStage"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>fieldsPerStage</b></span>
+                        <a href="#fieldsPerStage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialFields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>initialFields</b></span>
+                        <a href="#initialFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="metaFields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>metaFields</b></span>
+                        <a href="#metaFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stageList"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>stageList</b></span>
+                        <a href="#stageList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>Object.values(PipelineStage)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stageType"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>stageType</b></span>
+                        <a href="#stageType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>PipelineStage</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/safe/src/lib/components/ui/aggregation-builder/pipeline/pipeline.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { FormArray } from &#x27;@angular/forms&#x27;;
+import { AggregationBuilderService } from &#x27;../../../../services/aggregation-builder/aggregation-builder.service&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { PipelineStage } from &#x27;./pipeline-stage.enum&#x27;;
+import { addStage } from &#x27;../aggregation-builder-forms&#x27;;
+import { debounceTime } from &#x27;rxjs/operators&#x27;;
+import { CdkDragDrop } from &#x27;@angular/cdk/drag-drop&#x27;;
+
+/**
+ * Aggregation pipeline component.
+ */
+@Component({
+  selector: &#x27;safe-pipeline&#x27;,
+  templateUrl: &#x27;./pipeline.component.html&#x27;,
+  styleUrls: [&#x27;./pipeline.component.scss&#x27;],
+})
+export class SafePipelineComponent implements OnInit {
+  public stageType &#x3D; PipelineStage;
+  public stageList: string[] &#x3D; Object.values(PipelineStage);
+
+  // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
+  @Input() public fields$!: Observable&lt;any[]&gt;;
+  @Input() public metaFields$!: Observable&lt;any[]&gt;;
+  public metaFields: any[] &#x3D; [];
+  public initialFields: any[] &#x3D; [];
+  public fieldsPerStage: any[] &#x3D; [];
+
+  // &#x3D;&#x3D;&#x3D; PARENT FORM &#x3D;&#x3D;&#x3D;
+  @Input() pipelineForm!: FormArray;
+
+  /**
+   * Aggregation pipeline component.
+   *
+   * @param aggregationBuilder Shared aggregation builder
+   */
+  constructor(private aggregationBuilder: AggregationBuilderService) {}
+
+  ngOnInit(): void {
+    this.fields$.subscribe((fields: any[]) &#x3D;&gt; {
+      this.initialFields &#x3D; [...fields];
+      this.fieldsPerStage &#x3D; [];
+      this.updateFieldsPerStage(this.pipelineForm.value);
+    });
+    this.metaFields$.subscribe((meta: any) &#x3D;&gt; {
+      this.metaFields &#x3D; Object.assign({}, meta);
+    });
+    this.pipelineForm.valueChanges
+      .pipe(debounceTime(500))
+      .subscribe((pipeline: any[]) &#x3D;&gt; this.updateFieldsPerStage(pipeline));
+  }
+
+  /**
+   * Updates fields for the stage.
+   *
+   * @param pipeline list of pipeline stages.
+   */
+  private updateFieldsPerStage(pipeline: any[]): void {
+    for (let index &#x3D; 0; index &lt; pipeline.length; index++) {
+      this.fieldsPerStage[index] &#x3D; this.aggregationBuilder.fieldsAfter(
+        this.initialFields,
+        pipeline.slice(0, index)
+      );
+      if (
+        pipeline[index]?.type &#x3D;&#x3D;&#x3D; PipelineStage.FILTER ||
+        pipeline[index]?.type &#x3D;&#x3D;&#x3D; PipelineStage.SORT
+      ) {
+        this.fieldsPerStage[index] &#x3D; this.fieldsPerStage[index].filter(
+          (field: any) &#x3D;&gt; field.type.kind &#x3D;&#x3D;&#x3D; &#x27;SCALAR&#x27;
+        );
+      }
+    }
+  }
+
+  /**
+   * Adds a stage to the aggregation pipeline.
+   *
+   * @param type type of stage
+   */
+  public addStage(type: string) {
+    this.pipelineForm.push(addStage({ type }));
+  }
+
+  /**
+   * Deletes a stage at specified index.
+   *
+   * @param index index of stage to remove in pipeline.
+   */
+  public deleteStage(index: number) {
+    this.pipelineForm.removeAt(index);
+  }
+
+  /**
+   * Moves an element in array.
+   *
+   * @param event positions to move.
+   */
+  drop(event: CdkDragDrop&lt;string[]&gt;) {
+    const temp &#x3D; this.pipelineForm.at(event.previousIndex);
+
+    this.pipelineForm.removeAt(event.previousIndex);
+    this.pipelineForm.insert(event.currentIndex, temp);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-accordion
+  cdkDropList
+  (cdkDropListDropped)&#x3D;&quot;drop($event)&quot;
+  class&#x3D;&quot;collapsible-form-group&quot;
+&gt;
+  &lt;mat-expansion-panel
+    cdkDrag
+    *ngFor&#x3D;&quot;let stageForm of pipelineForm.controls; let index &#x3D; index&quot;
+  &gt;
+    &lt;mat-expansion-panel-header cdkDragHandle&gt;
+      &lt;mat-panel-title&gt;
+        {{
+          &#x27;components.aggregationBuilder.stages.&#x27; + stageForm.value.type
+            | translate
+        }}
+        &lt;safe-icon
+          icon&#x3D;&quot;info_outline&quot;
+          variant&#x3D;&quot;grey&quot;
+          [inline]&#x3D;&quot;true&quot;
+          [size]&#x3D;&quot;18&quot;
+          [matTooltip]&#x3D;&quot;
+            &#x27;components.aggregationBuilder.tooltip.&#x27; + stageForm.value.type
+              | translate
+          &quot;
+          matTooltipPosition&#x3D;&quot;right&quot;
+        &gt;&lt;/safe-icon&gt;
+      &lt;/mat-panel-title&gt;
+    &lt;/mat-expansion-panel-header&gt;
+    &lt;ng-container [ngSwitch]&#x3D;&quot;stageForm.value.type&quot;&gt;
+      &lt;ng-container *ngSwitchCase&#x3D;&quot;stageType.FILTER&quot;&gt;
+        &lt;safe-filter
+          [form]&#x3D;&quot;$any(stageForm).controls.form&quot;
+          [fields]&#x3D;&quot;fieldsPerStage[index]&quot;
+        &gt;&lt;/safe-filter&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngSwitchCase&#x3D;&quot;stageType.SORT&quot;&gt;
+        &lt;safe-tab-sort
+          [form]&#x3D;&quot;$any(stageForm).controls.form&quot;
+          [fields]&#x3D;&quot;fieldsPerStage[index]&quot;
+        &gt;&lt;/safe-tab-sort&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngSwitchCase&#x3D;&quot;stageType.GROUP&quot;&gt;
+        &lt;safe-group-stage
+          [form]&#x3D;&quot;$any(stageForm).controls.form&quot;
+          [fields]&#x3D;&quot;fieldsPerStage[index]&quot;
+        &gt;&lt;/safe-group-stage&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngSwitchCase&#x3D;&quot;stageType.ADD_FIELDS&quot;&gt;
+        &lt;safe-add-field-stage
+          [form]&#x3D;&quot;$any(stageForm).controls.form&quot;
+          [fields]&#x3D;&quot;fieldsPerStage[index]&quot;
+        &gt;&lt;/safe-add-field-stage&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngSwitchCase&#x3D;&quot;stageType.UNWIND&quot;&gt;
+        &lt;safe-field-dropdown
+          [fieldControl]&#x3D;&quot;$any(stageForm).controls.form.controls.field&quot;
+          [fields]&#x3D;&quot;fieldsPerStage[index]&quot;
+        &gt;&lt;/safe-field-dropdown&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngSwitchCase&#x3D;&quot;stageType.CUSTOM&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+          &lt;mat-label&gt;{{ &#x27;common.input.rawJson&#x27; | translate }}&lt;/mat-label&gt;
+          &lt;textarea
+            matInput
+            [formControl]&#x3D;&quot;$any(stageForm).controls.form.controls.raw&quot;
+            [cdkTextareaAutosize]&#x3D;&quot;true&quot;
+            [cdkAutosizeMinRows]&#x3D;&quot;5&quot;
+          &gt;&lt;/textarea&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/ng-container&gt;
+    &lt;/ng-container&gt;
+    &lt;mat-action-row&gt;
+      &lt;safe-button
+        [isIcon]&#x3D;&quot;true&quot;
+        icon&#x3D;&quot;delete&quot;
+        variant&#x3D;&quot;danger&quot;
+        (click)&#x3D;&quot;deleteStage(index)&quot;
+      &gt;&lt;/safe-button&gt;
+    &lt;/mat-action-row&gt;
+  &lt;/mat-expansion-panel&gt;
+&lt;/mat-accordion&gt;
+&lt;div&gt;
+  &lt;safe-button
+    icon&#x3D;&quot;add&quot;
+    category&#x3D;&quot;primary&quot;
+    [matMenuTriggerFor]&#x3D;&quot;menu&quot;
+    [block]&#x3D;&quot;true&quot;
+    (click)&#x3D;&quot;$event.stopPropagation()&quot;
+  &gt;
+    {{ &#x27;components.aggregationBuilder.addStage&#x27; | translate }}
+  &lt;/safe-button&gt;
+  &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+    &lt;button
+      *ngFor&#x3D;&quot;let stage of stageList&quot;
+      mat-menu-item
+      (click)&#x3D;&quot;addStage(stage)&quot;
+    &gt;
+      {{ &#x27;components.aggregationBuilder.stages.&#x27; + stage | translate }}
+    &lt;/button&gt;
+  &lt;/mat-menu&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./pipeline.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  ::ng-deep .mat-expansion-panel-body {
+    overflow-x: auto;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-accordion  cdkDropList  (cdkDropListDropped)="drop($event)"  class="collapsible-form-group">  <mat-expansion-panel    cdkDrag    *ngFor="let stageForm of pipelineForm.controls; let index = index"  >    <mat-expansion-panel-header cdkDragHandle>      <mat-panel-title>        {{          \'components.aggregationBuilder.stages.\' + stageForm.value.type            | translate        }}        <safe-icon          icon="info_outline"          variant="grey"          [inline]="true"          [size]="18"          [matTooltip]="            \'components.aggregationBuilder.tooltip.\' + stageForm.value.type              | translate          "          matTooltipPosition="right"        ></safe-icon>      </mat-panel-title>    </mat-expansion-panel-header>    <ng-container [ngSwitch]="stageForm.value.type">      <ng-container *ngSwitchCase="stageType.FILTER">        <safe-filter          [form]="$any(stageForm).controls.form"          [fields]="fieldsPerStage[index]"        ></safe-filter>      </ng-container>      <ng-container *ngSwitchCase="stageType.SORT">        <safe-tab-sort          [form]="$any(stageForm).controls.form"          [fields]="fieldsPerStage[index]"        ></safe-tab-sort>      </ng-container>      <ng-container *ngSwitchCase="stageType.GROUP">        <safe-group-stage          [form]="$any(stageForm).controls.form"          [fields]="fieldsPerStage[index]"        ></safe-group-stage>      </ng-container>      <ng-container *ngSwitchCase="stageType.ADD_FIELDS">        <safe-add-field-stage          [form]="$any(stageForm).controls.form"          [fields]="fieldsPerStage[index]"        ></safe-add-field-stage>      </ng-container>      <ng-container *ngSwitchCase="stageType.UNWIND">        <safe-field-dropdown          [fieldControl]="$any(stageForm).controls.form.controls.field"          [fields]="fieldsPerStage[index]"        ></safe-field-dropdown>      </ng-container>      <ng-container *ngSwitchCase="stageType.CUSTOM">        <mat-form-field appearance="outline">          <mat-label>{{ \'common.input.rawJson\' | translate }}</mat-label>          <textarea            matInput            [formControl]="$any(stageForm).controls.form.controls.raw"            [cdkTextareaAutosize]="true"            [cdkAutosizeMinRows]="5"          ></textarea>        </mat-form-field>      </ng-container>    </ng-container>    <mat-action-row>      <safe-button        [isIcon]="true"        icon="delete"        variant="danger"        (click)="deleteStage(index)"      ></safe-button>    </mat-action-row>  </mat-expansion-panel></mat-accordion><div>  <safe-button    icon="add"    category="primary"    [matMenuTriggerFor]="menu"    [block]="true"    (click)="$event.stopPropagation()"  >    {{ \'components.aggregationBuilder.addStage\' | translate }}  </safe-button>  <mat-menu #menu="matMenu">    <button      *ngFor="let stage of stageList"      mat-menu-item      (click)="addStage(stage)"    >      {{ \'components.aggregationBuilder.stages.\' + stage | translate }}    </button>  </mat-menu></div></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafePipelineComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafePipelineComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

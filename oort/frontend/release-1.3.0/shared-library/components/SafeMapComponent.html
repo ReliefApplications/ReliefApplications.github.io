@@ -1,0 +1,2592 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeMapComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/widgets/map/map.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component for the map widget</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-map</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./map.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./map.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#basemap" >basemap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#dataQuery" >dataQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#dataSubscription" >dataSubscription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#esriApiKey" >esriApiKey</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fields" >fields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#lastUpdate" >lastUpdate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#layerControl" >layerControl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#legendControl" >legendControl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#map" >map</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#mapId" >mapId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#markersCategories" >markersCategories</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#markersLayer" >markersLayer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#overlays" >overlays</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#popupMarker" >popupMarker</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#drawMap" >drawMap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#flatDeep" >flatDeep</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#generateUniqueId" >generateUniqueId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getData" >getData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFields" >getFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getLegendControl" >getLegendControl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getSearchbarControl" >getSearchbarControl</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setBasemap" >setBasemap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setClorophlet" >setClorophlet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setLayers" >setLayers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setMarker" >setMarker</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#header" >header</a>
+                            </li>
+                            <li>
+                                <a href="#settings" >settings</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, apollo: Apollo, queryBuilder: <a href="../injectables/QueryBuilderService.html" target="_self">QueryBuilderService</a>, domService: <a href="../injectables/DomService.html" target="_self">DomService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:87</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the map widget component</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>environment</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>platform environment</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Apollo client</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>queryBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/QueryBuilderService.html" target="_self" >QueryBuilderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The querybuilder service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>domService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DomService.html" target="_self" >DomService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared dom service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="header"></a>
+                        <b>header</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:83</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="settings"></a>
+                        <b>settings</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:84</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="drawMap"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>drawMap</b></span>
+                        <a href="#drawMap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>drawMap()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates the map and adds all the controls we use</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="flatDeep"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>flatDeep</b></span>
+                        <a href="#flatDeep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>flatDeep(arr: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Flatten an array</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>arr</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>any[] - the array to be flattened</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the array with all the nested arrays flattened.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateUniqueId"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>generateUniqueId</b></span>
+                        <a href="#generateUniqueId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateUniqueId(parts: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Generation of an unique id for the map (in case multiple widgets use map).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>parts</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>4</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Number of parts in the id (seperated by dashes &quot;-&quot;)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A random unique id</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getData"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getData</b></span>
+                        <a href="#getData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="233"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:233</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load the data, using widget parameters.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getFields</b></span>
+                        <a href="#getFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFields(fields: any[], prefix?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="179"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get list of query fields from settings</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of fields</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>prefix</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>prefix to add to field name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>flat list of fields</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLegendControl"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getLegendControl</b></span>
+                        <a href="#getLegendControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getLegendControl()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="447"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:447</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a custom legend control.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Returns the custom control</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSearchbarControl"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getSearchbarControl</b></span>
+                        <a href="#getSearchbarControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSearchbarControl()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="665"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:665</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a custom searchbar control with esri geocoding</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Returns the custom control</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Once template is ready, build the map.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="719"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:719</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Removes subscriptions of the component.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setBasemap"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>setBasemap</b></span>
+                        <a href="#setBasemap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setBasemap(basemap: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="706"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:706</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the basemap.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>basemap</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>String containing the id (name) of the basemap</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setClorophlet"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setClorophlet</b></span>
+                        <a href="#setClorophlet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setClorophlet(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="405"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:405</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a clorophlet using the passed data.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Properties of the clorophlet.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Query data feeded to the clorophlet.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a geoJSON layer</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLayers"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setLayers</b></span>
+                        <a href="#setLayers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLayers(res: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="260"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:260</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks all the data passed and generates new layers accordingly.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>data query result</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setMarker"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setMarker</b></span>
+                        <a href="#setMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setMarker(item: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="351"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:351</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a marker with the data passed and adds it to the correspondant category.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>data of the marker</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="basemap"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>basemap</b></span>
+                        <a href="#basemap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataQuery"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>dataQuery</b></span>
+                        <a href="#dataQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataSubscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>dataSubscription</b></span>
+                        <a href="#dataSubscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Subscription.html" target="_self" >Subscription</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:79</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="esriApiKey"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>esriApiKey</b></span>
+                        <a href="#esriApiKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fields"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>fields</b></span>
+                        <a href="#fields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lastUpdate"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>lastUpdate</b></span>
+                        <a href="#lastUpdate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="layerControl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>layerControl</b></span>
+                        <a href="#layerControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="legendControl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>legendControl</b></span>
+                        <a href="#legendControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="map"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>map</b></span>
+                        <a href="#map"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mapId"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>mapId</b></span>
+                        <a href="#mapId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="markersCategories"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>markersCategories</b></span>
+                        <a href="#markersCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IMarkersLayerValue.html" target="_self" >IMarkersLayerValue</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="markersLayer"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>markersLayer</b></span>
+                        <a href="#markersLayer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="overlays"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>overlays</b></span>
+                        <a href="#overlays"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IMarkersLayerValue.html" target="_self" >IMarkersLayerValue</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="popupMarker"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>popupMarker</b></span>
+                        <a href="#popupMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">projects/safe/src/lib/components/widgets/map/map.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
+import {
+  Component,
+  AfterViewInit,
+  Input,
+  OnDestroy,
+  Inject,
+} from &#x27;@angular/core&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { applyFilters } from &#x27;./filter&#x27;;
+import { DomService } from &#x27;../../../services/dom/dom.service&#x27;;
+import get from &#x27;lodash/get&#x27;;
+import { SafeMapPopupComponent } from &#x27;./map-popup/map-popup.component&#x27;;
+import { QueryBuilderService } from &#x27;../../../services/query-builder/query-builder.service&#x27;;
+
+// Declares L to be able to use Leaflet from CDN
+// Leaflet
+//import &#x27;leaflet.markercluster&#x27;;
+declare let L: any;
+
+/** Default options for the marker */
+const MARKER_OPTIONS &#x3D; {
+  color: &#x27;#0090d1&#x27;,
+  opacity: 0.25,
+  weight: 12,
+  fillColor: &#x27;#0090d1&#x27;,
+  fillOpacity: 1,
+  radius: 6,
+  pane: &#x27;markers&#x27;,
+};
+
+/** Declares an interface that will be used in the cluster markers layers */
+interface IMarkersLayerValue {
+  [name: string]: any;
+}
+
+/** Available basemaps */
+const BASEMAP_LAYERS: any &#x3D; {
+  Streets: &#x27;ArcGIS:Streets&#x27;,
+  Navigation: &#x27;ArcGIS:Navigation&#x27;,
+  Topographic: &#x27;ArcGIS:Topographic&#x27;,
+  &#x27;Light Gray&#x27;: &#x27;ArcGIS:LightGray&#x27;,
+  &#x27;Dark Gray&#x27;: &#x27;ArcGIS:DarkGray&#x27;,
+  &#x27;Streets Relief&#x27;: &#x27;ArcGIS:StreetsRelief&#x27;,
+  Imagery: &#x27;ArcGIS:Imagery&#x27;,
+  ChartedTerritory: &#x27;ArcGIS:ChartedTerritory&#x27;,
+  ColoredPencil: &#x27;ArcGIS:ColoredPencil&#x27;,
+  Nova: &#x27;ArcGIS:Nova&#x27;,
+  Midcentury: &#x27;ArcGIS:Midcentury&#x27;,
+  OSM: &#x27;OSM:Standard&#x27;,
+  &#x27;OSM:Streets&#x27;: &#x27;OSM:Streets&#x27;,
+};
+
+/** Component for the map widget */
+@Component({
+  selector: &#x27;safe-map&#x27;,
+  templateUrl: &#x27;./map.component.html&#x27;,
+  styleUrls: [&#x27;./map.component.scss&#x27;],
+})
+export class SafeMapComponent implements AfterViewInit, OnDestroy {
+  // &#x3D;&#x3D;&#x3D; MAP &#x3D;&#x3D;&#x3D;
+  public mapId: string;
+  public map: any;
+  public esriApiKey: string;
+  private basemap: any;
+
+  // &#x3D;&#x3D;&#x3D; MARKERS &#x3D;&#x3D;&#x3D;
+  private markersLayer: any &#x3D; null;
+  private popupMarker: any;
+  private markersCategories: IMarkersLayerValue &#x3D; [];
+  private overlays: IMarkersLayerValue &#x3D; {};
+  private layerControl: any;
+
+  // &#x3D;&#x3D;&#x3D; LEGEND &#x3D;&#x3D;&#x3D;
+  private legendControl: any;
+
+  // &#x3D;&#x3D;&#x3D; RECORDS &#x3D;&#x3D;&#x3D;
+  private dataQuery: any;
+  private dataSubscription?: Subscription;
+  private fields: any[] &#x3D; [];
+
+  // &#x3D;&#x3D;&#x3D; WIDGET CONFIGURATION &#x3D;&#x3D;&#x3D;
+  @Input() header &#x3D; true;
+  @Input() settings: any &#x3D; null;
+
+  // &#x3D;&#x3D;&#x3D; QUERY UPDATE INFO &#x3D;&#x3D;&#x3D;
+  public lastUpdate &#x3D; &#x27;&#x27;;
+
+  /**
+   * Constructor of the map widget component
+   *
+   * @param environment platform environment
+   * @param apollo Apollo client
+   * @param queryBuilder The querybuilder service
+   * @param domService Shared dom service
+   */
+  constructor(
+    @Inject(&#x27;environment&#x27;) environment: any,
+    private apollo: Apollo,
+    private queryBuilder: QueryBuilderService,
+    private domService: DomService
+  ) {
+    this.esriApiKey &#x3D; environment.esriApiKey;
+    this.mapId &#x3D; this.generateUniqueId();
+  }
+
+  /**
+   * Generation of an unique id for the map (in case multiple widgets use map).
+   *
+   * @param parts Number of parts in the id (seperated by dashes &quot;-&quot;)
+   * @returns A random unique id
+   */
+  private generateUniqueId(parts: number &#x3D; 4): string {
+    const stringArr: string[] &#x3D; [];
+    for (let i &#x3D; 0; i &lt; parts; i++) {
+      // eslint-disable-next-line no-bitwise
+      const S4 &#x3D; (((1 + Math.random()) * 0x10000) | 0)
+        .toString(16)
+        .substring(1);
+      stringArr.push(S4);
+    }
+    return stringArr.join(&#x27;-&#x27;);
+  }
+
+  /** Once template is ready, build the map. */
+  ngAfterViewInit(): void {
+    // Creates the map and adds all the controls we use.
+    this.drawMap();
+
+    // Gets the settings from the DB.
+    if (this.settings.query) {
+      const builtQuery &#x3D; this.queryBuilder.buildQuery(this.settings);
+      this.dataQuery &#x3D; this.apollo.watchQuery&lt;any&gt;({
+        query: builtQuery,
+        variables: {
+          first: 100,
+          filter: this.settings.query.filter,
+        },
+      });
+      // Handles the settings data and changes the map accordingly.
+      this.getData();
+    }
+
+    const flatQueryFields &#x3D; this.getFields(
+      get(this.settings, &#x27;query.fields&#x27;, [])
+    );
+    const popupFields &#x3D; get(this.settings, &#x27;popupFields&#x27;, []);
+    if (popupFields.length &gt; 0) {
+      this.fields &#x3D; flatQueryFields.filter((field) &#x3D;&gt;
+        popupFields.includes(field.name)
+      );
+    } else {
+      this.fields &#x3D; flatQueryFields;
+    }
+
+    setTimeout(() &#x3D;&gt; this.map.invalidateSize(), 100);
+  }
+
+  /**
+   * Flatten an array
+   *
+   * @param {any[]} arr - any[] - the array to be flattened
+   * @returns the array with all the nested arrays flattened.
+   */
+  private flatDeep(arr: any[]): any[] {
+    return arr.reduce(
+      (acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? this.flatDeep(val) : val),
+      []
+    );
+  }
+
+  /**
+   * Get list of query fields from settings
+   *
+   * @param fields list of fields
+   * @param prefix prefix to add to field name
+   * @returns flat list of fields
+   */
+  private getFields(
+    fields: any[],
+    prefix?: string
+  ): { name: string; label: string }[] {
+    return this.flatDeep(
+      fields
+        .filter((x) &#x3D;&gt; x.kind !&#x3D;&#x3D; &#x27;LIST&#x27;)
+        .map((f) &#x3D;&gt; {
+          switch (f.kind) {
+            case &#x27;OBJECT&#x27;: {
+              return this.getFields(f.fields, f.name);
+            }
+            default: {
+              return {
+                name: prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name,
+                label: f.label,
+              };
+            }
+          }
+        })
+    );
+  }
+
+  /** Creates the map and adds all the controls we use */
+  private drawMap(): void {
+    // Set bounds
+    const centerLong &#x3D; Number(get(this.settings, &#x27;centerLong&#x27;, 0));
+    const centerLat &#x3D; Number(get(this.settings, &#x27;centerLat&#x27;, 0));
+    const bounds &#x3D; L.latLngBounds(L.latLng(-90, -1000), L.latLng(90, 1000));
+
+    // Create leaflet map
+    this.map &#x3D; L.map(this.mapId, {
+      zoomControl: false,
+      maxBounds: bounds,
+      minZoom: 2,
+      maxZoom: 18,
+      worldCopyJump: true,
+      zoom: get(this.settings, &#x27;zoom&#x27;, 3),
+    }).setView([centerLat, centerLong], get(this.settings, &#x27;zoom&#x27;, 3));
+
+    // TODO: see if fixable, issue is that it does not work if leaflet not put in html imports
+    this.setBasemap(this.settings.basemap);
+
+    // Adds all the controls we use to the map
+    L.control.zoom({ position: &#x27;bottomleft&#x27; }).addTo(this.map);
+    this.getSearchbarControl().addTo(this.map);
+    this.legendControl &#x3D; this.getLegendControl().addTo(this.map);
+
+    // Creates a pane for markers so they are always shown in top, used in the marker options;
+    this.map.createPane(&#x27;markers&#x27;);
+    this.map.getPane(&#x27;markers&#x27;).style.zIndex &#x3D; 650;
+  }
+
+  /** Load the data, using widget parameters. */
+  private getData(): void {
+    this.map.closePopup(this.popupMarker);
+
+    this.dataSubscription &#x3D; this.dataQuery.valueChanges.subscribe(
+      (res: any) &#x3D;&gt; {
+        const today &#x3D; new Date();
+        this.lastUpdate &#x3D;
+          (&#x27;0&#x27; + today.getHours()).slice(-2) +
+          &#x27;:&#x27; +
+          (&#x27;0&#x27; + today.getMinutes()).slice(-2);
+        // Empties all variables used in map
+        this.setLayers(res);
+        this.legendControl.update(
+          this.map,
+          this.settings,
+          this.overlays,
+          Object.keys(this.markersCategories)
+        );
+      }
+    );
+  }
+
+  /**
+   * Checks all the data passed and generates new layers accordingly.
+   *
+   * @param res data query result
+   */
+  private setLayers(res: any): void {
+    // Removes layer control and clears all marker sub-layers from the cluster group
+    if (this.layerControl) {
+      this.layerControl.remove();
+    }
+
+    // Creates a featureGroup which will contain all the markers/pointer
+    if (!this.markersLayer) {
+      const markersLayerGroup &#x3D; L.featureGroup().addTo(this.map);
+      // Deactivated cluster feature
+      // this.markersLayer &#x3D; L.markerClusterGroup({}).addTo(markersLayerGroup);
+      this.markersLayer &#x3D; markersLayerGroup;
+    } else {
+      this.markersLayer.clearLayers();
+    }
+
+    // Loops throught fields to get all markers
+    this.markersCategories &#x3D; [];
+    for (const field in res.data) {
+      if (Object.prototype.hasOwnProperty.call(res.data, field)) {
+        res.data[field].edges.map((x: any) &#x3D;&gt; {
+          // Creates the marker
+          this.setMarker(x.node);
+        });
+      }
+    }
+
+    // setting up layer with all markers, if it doesn&#x27;t exist
+    if (!this.markersCategories.hasOwnProperty(&#x27;Markers&#x27;)) {
+      const allLayers: any[] &#x3D; [];
+      Object.keys(this.markersCategories).forEach((name: string) &#x3D;&gt; {
+        allLayers.push(...this.markersCategories[name]);
+      });
+      // eslint-disable-next-line @typescript-eslint/dot-notation
+      this.markersCategories[&#x27;undefined&#x27;] &#x3D; allLayers;
+    }
+
+    // Renders all the markers
+    Object.keys(this.markersCategories).map((name: string) &#x3D;&gt; {
+      if (name !&#x3D;&#x3D; &#x27;null&#x27;) {
+        const layerName &#x3D; name !&#x3D;&#x3D; &#x27;undefined&#x27; ? name : &#x27;Markers&#x27;;
+        this.overlays[layerName] &#x3D; L.featureGroup
+          .subGroup(this.markersLayer, this.markersCategories[name])
+          .addTo(this.map);
+        this.overlays[layerName].type &#x3D; &#x27;Marker&#x27;;
+      }
+    });
+
+    // Loops throught clorophlets and adds them to the map
+    if (this.settings.clorophlets) {
+      this.settings.clorophlets.map((value: any) &#x3D;&gt; {
+        if (value.divisions.length &gt; 0) {
+          // Renders the clorophlet
+          this.overlays[value.name] &#x3D; this.setClorophlet(value, res.data).addTo(
+            this.map
+          );
+          this.overlays[value.name].type &#x3D; &#x27;Clorophlet&#x27;;
+        }
+      });
+    }
+
+    // Loops throught online layers and add them to the map
+    if (this.settings.onlineLayers) {
+      this.settings.onlineLayers.map((layer: any) &#x3D;&gt; {
+        this.overlays[layer.title] &#x3D; L.esri.featureLayer({
+          url: layer.url + &#x27;/0&#x27;,
+          simplifyFactor: 1,
+          apikey: this.esriApiKey,
+        });
+        this.overlays[layer.title].metadata((error: any) &#x3D;&gt; {
+          if (!error) {
+            this.overlays[layer.title].addTo(this.map);
+          } else {
+            console.error(error);
+          }
+        });
+      });
+    }
+    // Set ups a layer control with the new layers.
+    if (Object.keys(this.overlays).length &gt; 0) {
+      this.layerControl &#x3D; L.control
+        .layers(null, this.overlays, { collapsed: true })
+        .addTo(this.map);
+    }
+  }
+
+  /**
+   * Creates a marker with the data passed and adds it to the correspondant category.
+   *
+   * @param item data of the marker
+   */
+  private setMarker(item: any): void {
+    const latitude &#x3D; Number(get(item, this.settings.latitude, undefined));
+    const longitude &#x3D; Number(get(item, this.settings.longitude, undefined));
+    if (!isNaN(latitude) &amp;&amp; latitude &gt;&#x3D; -90 &amp;&amp; latitude &lt;&#x3D; 90) {
+      if (!isNaN(longitude) &amp;&amp; longitude &gt;&#x3D; -180 &amp;&amp; longitude &lt;&#x3D; 180) {
+        // Sets the style of the marker depending on the rules applied.
+        const options &#x3D; Object.assign({}, MARKER_OPTIONS);
+        Object.assign(options, { id: item.id });
+        this.settings.markerRules?.map((rule: any, i: any) &#x3D;&gt; {
+          if (applyFilters(item, rule.filter)) {
+            options.color &#x3D; rule.color;
+            options.fillColor &#x3D; rule.color;
+            options.weight *&#x3D; rule.size;
+            options.radius *&#x3D; rule.size;
+            Object.assign(options, { divisionID: &#x60;${rule.label}-${i}&#x60; });
+          }
+        });
+
+        // Creates the marker and adds it to the correct category.
+        const marker &#x3D; L.circleMarker([latitude, longitude], options);
+        const category &#x3D; get(item, this.settings.category, null);
+        if (!this.markersCategories[category]) {
+          this.markersCategories[category] &#x3D; [];
+        }
+        this.markersCategories[category].push(marker);
+        marker.bindPopup(() &#x3D;&gt; {
+          const div &#x3D; document.createElement(&#x27;div&#x27;);
+          const popupContent &#x3D; this.domService.appendComponentToBody(
+            SafeMapPopupComponent,
+            div
+          );
+          const instance &#x3D; popupContent.instance;
+          instance.data &#x3D; item;
+          instance.fields &#x3D; this.fields;
+          this.popupMarker &#x3D; L.popup({
+            width: 350,
+          })
+            .setLatLng([latitude, longitude])
+            .setContent(div)
+            .addTo(this.map);
+          instance.loaded.subscribe(() &#x3D;&gt; this.popupMarker.update());
+          return;
+        });
+      }
+    }
+  }
+
+  /**
+   * Creates a clorophlet using the passed data.
+   *
+   * @param value Properties of the clorophlet.
+   * @param data Query data feeded to the clorophlet.
+   * @returns a geoJSON layer
+   */
+  private setClorophlet(value: any, data: any) {
+    return L.geoJson(JSON.parse(value.geoJSON), {
+      interactive: false,
+      style: (feature: any): any &#x3D;&gt; {
+        let color &#x3D; &#x27;transparent&#x27;;
+        let label &#x3D; &#x27;&#x27;;
+        for (const field in data) {
+          if (Object.prototype.hasOwnProperty.call(data, field)) {
+            data[field].edges.map((entry: any) &#x3D;&gt; {
+              if (
+                entry.node[value.place] &amp;&amp;
+                feature.properties[value.geoJSONfield] &amp;&amp;
+                entry.node[value.place].toString() &#x3D;&#x3D;&#x3D;
+                  feature.properties[value.geoJSONfield].toString()
+              ) {
+                value.divisions.map((div: any, i: number) &#x3D;&gt; {
+                  if (applyFilters(entry.node, div.filter)) {
+                    color &#x3D; div.color;
+                    label &#x3D; div.label.empty ? &#x27;Division &#x27; + (i + 1) : div.label;
+                  }
+                });
+              }
+            });
+          }
+        }
+        return {
+          fillColor: color,
+          fillOpacity: value.opacity / 100 || 1,
+          weight: 0.5,
+          opacity: 1,
+          color: color &#x3D;&#x3D;&#x3D; &#x27;transparent&#x27; ? &#x27;transparent&#x27; : &#x27;white&#x27;,
+          label,
+        };
+      },
+    });
+  }
+
+  /**
+   * Returns a custom legend control.
+   *
+   * @returns Returns the custom control
+   */
+  private getLegendControl(): any {
+    const legendControl &#x3D; L.control({ position: &#x27;bottomright&#x27; });
+
+    /**
+     *  Defines the method which will be called when the legend control is added to the map
+     *
+     * @param map current leaflet map
+     * @returns legend container
+     */
+    legendControl.onAdd &#x3D; function (map: any) {
+      this.div &#x3D; L.DomUtil.create(&#x27;div&#x27;, &#x27;map-legend-container&#x27;);
+      return this.div;
+    };
+
+    /**
+     * Defines a method to be able to update the legend control once it is already added to the map
+     *
+     * @param map current leaflet map
+     * @param data current map data
+     * @param overlays list of overlays
+     * @param markersNames list of markers
+     */
+    legendControl.update &#x3D; function (
+      map: any,
+      data: any,
+      overlays: any,
+      markersNames: string[]
+    ) {
+      const div &#x3D; this.div;
+      div.innerHTML &#x3D; &#x27;&#x27;;
+      // Prevent double click on legend panel to zoom
+      L.DomEvent.on(div, &#x27;dblclick&#x27;, (e: any) &#x3D;&gt; {
+        e.stopPropagation();
+      });
+      // Creates legend for clorophlets
+      data.clorophlets?.map((clorophlet: any) &#x3D;&gt; {
+        const layer &#x3D; overlays[clorophlet.name];
+
+        if (clorophlet.divisions.length &gt; 0) {
+          // Generates header of legend
+          const legendLayerDiv &#x3D; L.DomUtil.create(&#x27;div&#x27;, &#x27;map-legend&#x27;, div);
+          const legendLayerHeader &#x3D; L.DomUtil.create(
+            &#x27;div&#x27;,
+            &#x27;map-legend-header&#x27;,
+            legendLayerDiv
+          );
+          legendLayerHeader.innerHTML &#x3D; &#x60;&lt;h4&gt;${clorophlet.name}&lt;/h4&gt;&#x60;;
+          L.DomEvent.on(
+            legendLayerHeader,
+            &#x27;click&#x27;,
+            () &#x3D;&gt; {
+              if (map.hasLayer(layer)) {
+                L.DomUtil.addClass(legendLayerDiv, &#x27;map-legend-hide&#x27;);
+                map.removeLayer(layer);
+              } else {
+                map.addLayer(layer);
+                L.DomUtil.removeClass(legendLayerDiv, &#x27;map-legend-hide&#x27;);
+              }
+            },
+            this
+          );
+          // Generates divisions legend
+          clorophlet.divisions.map((division: any, i: number) &#x3D;&gt; {
+            const legendDivisionDiv &#x3D; L.DomUtil.create(
+              &#x27;div&#x27;,
+              &#x27;map-legend-division&#x27;,
+              legendLayerDiv
+            );
+            legendDivisionDiv.innerHTML &#x3D;
+              &#x27;&lt;i style&#x3D;&quot;background:&#x27; +
+              division.color +
+              &#x27;&quot;&gt;&lt;/i&gt;&#x27; +
+              (division.label.length &gt; 0
+                ? division.label
+                : &#x27;Division &#x27; + (i + 1)) +
+              &#x27;&lt;br&gt;&#x27;;
+            L.DomEvent.on(
+              legendDivisionDiv,
+              &#x27;click&#x27;,
+              () &#x3D;&gt; {
+                // eslint-disable-next-line no-underscore-dangle
+                const layers &#x3D; overlays[clorophlet.name]._layers;
+                const isHidden &#x3D; L.DomUtil.hasClass(
+                  legendDivisionDiv,
+                  &#x27;legend-division-hide&#x27;
+                );
+                if (isHidden) {
+                  L.DomUtil.removeClass(
+                    legendDivisionDiv,
+                    &#x27;legend-division-hide&#x27;
+                  );
+                  Object.keys(layers).forEach((layerName: any) &#x3D;&gt; {
+                    const divisionLayer &#x3D; layers[layerName];
+                    if (divisionLayer.options.label &#x3D;&#x3D;&#x3D; division.label)
+                      map.addLayer(divisionLayer);
+                  });
+                } else {
+                  L.DomUtil.addClass(legendDivisionDiv, &#x27;legend-division-hide&#x27;);
+                  Object.keys(layers).forEach((layerName: any) &#x3D;&gt; {
+                    const divisionLayer &#x3D; layers[layerName];
+                    if (divisionLayer.options.label &#x3D;&#x3D;&#x3D; division.label)
+                      map.removeLayer(divisionLayer);
+                  });
+                }
+              },
+              this
+            );
+          });
+        }
+      });
+      // Creates legend for markers
+      if (data.markerRules &amp;&amp; data.markerRules.length &gt; 0) {
+        const legendLayerDiv &#x3D; L.DomUtil.create(&#x27;div&#x27;, &#x27;map-legend&#x27;, div);
+        const legendLayerHeader &#x3D; L.DomUtil.create(
+          &#x27;div&#x27;,
+          &#x27;map-legend-header&#x27;,
+          legendLayerDiv
+        );
+        legendLayerHeader.innerHTML &#x3D; &#x60;&lt;h4&gt;Markers&lt;/h4&gt;&#x60;;
+        L.DomEvent.on(
+          legendLayerHeader,
+          &#x27;click&#x27;,
+          () &#x3D;&gt; {
+            markersNames.map((marker: string) &#x3D;&gt; {
+              const layer &#x3D;
+                marker &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27; ? overlays.Markers : overlays[marker];
+              if (map.hasLayer(layer)) {
+                L.DomUtil.addClass(legendLayerDiv, &#x27;map-legend-hide&#x27;);
+                map.removeLayer(layer);
+              } else {
+                map.addLayer(layer);
+                L.DomUtil.removeClass(legendLayerDiv, &#x27;map-legend-hide&#x27;);
+              }
+            });
+          },
+          this
+        );
+        data.markerRules?.map((rule: any, i: number) &#x3D;&gt; {
+          const legendDivisionDiv &#x3D; L.DomUtil.create(
+            &#x27;div&#x27;,
+            &#x27;map-legend-division&#x27;,
+            legendLayerDiv
+          );
+          legendDivisionDiv.innerHTML &#x3D;
+            &#x27;&lt;i style&#x3D;&quot;background:&#x27; +
+            rule.color +
+            &#x27;&quot;&gt;&lt;/i&gt;&#x27; +
+            rule.label +
+            &#x27;&lt;br&gt;&#x27;;
+
+          L.DomEvent.on(
+            legendDivisionDiv,
+            &#x27;click&#x27;,
+            () &#x3D;&gt; {
+              // eslint-disable-next-line no-underscore-dangle
+              const layers &#x3D; overlays.Markers._layers;
+
+              // // array with all the clusters displayed and the markers in each of them
+              // const clusteredLayers: { cluster: any; hiddenMarkers: any[] }[] &#x3D;
+              //   [];
+              // map.eachLayer((layer: any) &#x3D;&gt; {
+              //   if (layer.getAllChildMarkers)
+              //     clusteredLayers.push({
+              //       cluster: layer,
+              //       hiddenMarkers: layer.getAllChildMarkers(),
+              //     });
+              // });
+              const isHidden &#x3D; L.DomUtil.hasClass(
+                legendDivisionDiv,
+                &#x27;legend-division-hide&#x27;
+              );
+              if (isHidden) {
+                L.DomUtil.removeClass(
+                  legendDivisionDiv,
+                  &#x27;legend-division-hide&#x27;
+                );
+                Object.keys(layers).map((layerName: any) &#x3D;&gt; {
+                  const divisionLayer &#x3D; layers[layerName];
+                  if (divisionLayer.options.divisionID &#x3D;&#x3D;&#x3D; &#x60;${rule.label}-${i}&#x60;)
+                    map.addLayer(divisionLayer);
+                });
+              } else {
+                L.DomUtil.addClass(legendDivisionDiv, &#x27;legend-division-hide&#x27;);
+                Object.keys(layers).map((layerName: any) &#x3D;&gt; {
+                  const divisionLayer &#x3D; layers[layerName];
+                  if (
+                    divisionLayer.options.divisionID &#x3D;&#x3D;&#x3D; &#x60;${rule.label}-${i}&#x60;
+                  ) {
+                    // const cluster &#x3D; clusteredLayers.find((c) &#x3D;&gt;
+                    //   c.hiddenMarkers.includes(divisionLayer)
+                    // );
+                    // // marker isn&#x27;t in any cluster
+                    // if (!cluster) {
+                    map.removeLayer(divisionLayer);
+                    // } else {
+                    //   // cluster.cluster.removeLayer(divisionLayer);
+                    // }
+                  }
+                });
+              }
+            },
+            this
+          );
+        });
+      }
+      if (div.innerHTML.length &#x3D;&#x3D;&#x3D; 0) {
+        div.style.display &#x3D; &#x27;none&#x27;;
+      }
+    };
+
+    return legendControl;
+  }
+
+  /**
+   * Creates a custom searchbar control with esri geocoding
+   *
+   * @returns Returns the custom control
+   */
+  private getSearchbarControl(): any {
+    const searchControl &#x3D; L.esri.Geocoding.geosearch({
+      position: &#x27;topleft&#x27;,
+      placeholder: &#x27;Enter an address or place e.g. 1 York St&#x27;,
+      useMapBounds: false,
+      providers: [
+        L.esri.Geocoding.arcgisOnlineProvider({
+          apikey: this.esriApiKey,
+          nearby: {
+            lat: -33.8688,
+            lng: 151.2093,
+          },
+        }),
+      ],
+    });
+
+    const results &#x3D; L.layerGroup().addTo(this.map);
+
+    searchControl.on(&#x27;results&#x27;, (data: any) &#x3D;&gt; {
+      results.clearLayers();
+      for (let i &#x3D; data.results.length - 1; i &gt;&#x3D; 0; i--) {
+        const lat &#x3D; Math.round(data.results[i].latlng.lat * 100000) / 100000;
+        const lng &#x3D; Math.round(data.results[i].latlng.lng * 100000) / 100000;
+        const marker &#x3D; L.circleMarker(data.results[i].latlng, MARKER_OPTIONS);
+        marker.bindPopup(&#x60;
+          &lt;p&gt;${data.results[i].properties.ShortLabel}&lt;/br&gt;
+          &lt;b&gt;${&#x27;latitude: &#x27;}&lt;/b&gt;${lat}&lt;/br&gt;
+          &lt;b&gt;${&#x27;longitude: &#x27;}&lt;/b&gt;${lng}&lt;/p&gt;&#x60;);
+        results.addLayer(marker);
+        marker.openPopup();
+      }
+    });
+
+    return searchControl;
+  }
+
+  /**
+   * Set the basemap.
+   *
+   * @param basemap String containing the id (name) of the basemap
+   */
+  public setBasemap(basemap: string) {
+    if (this.basemap) {
+      this.basemap.remove();
+    }
+    const basemapName &#x3D; get(BASEMAP_LAYERS, basemap, BASEMAP_LAYERS.OSM);
+    this.basemap &#x3D; L.esri.Vector.vectorBasemapLayer(basemapName, {
+      apiKey: this.esriApiKey,
+    }).addTo(this.map);
+  }
+
+  /**
+   * Removes subscriptions of the component.
+   */
+  public ngOnDestroy(): void {
+    if (this.dataSubscription) {
+      this.dataSubscription.unsubscribe();
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;widget-container&quot;&gt;
+  &lt;kendo-tilelayout-item-header *ngIf&#x3D;&quot;header&quot; class&#x3D;&quot;widget-header&quot;&gt;
+    &lt;span class&#x3D;&quot;widget-title&quot; [title]&#x3D;&quot;settings ? settings.title : &#x27;&#x27;&quot;&gt;{{
+      settings.title
+    }}&lt;/span&gt;
+  &lt;/kendo-tilelayout-item-header&gt;
+  &lt;div [id]&#x3D;&quot;mapId&quot; class&#x3D;&quot;widget-content&quot;&gt;
+    &lt;p class&#x3D;&quot;widget-last-update&quot; *ngIf&#x3D;&quot;lastUpdate &amp;&amp; lastUpdate.length &gt; 0&quot;&gt;
+      Last update: {{ lastUpdate }}
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./map.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.mapstyle {
+  width: 100%;
+  height: 100%;
+}
+.map-frame {
+  height: 100%;
+}
+
+.map-wrapper {
+  height: 100%;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="widget-container">  <kendo-tilelayout-item-header *ngIf="header" class="widget-header">    <span class="widget-title" [title]="settings ? settings.title : \'\'">{{      settings.title    }}</span>  </kendo-tilelayout-item-header>  <div [id]="mapId" class="widget-content">    <p class="widget-last-update" *ngIf="lastUpdate && lastUpdate.length > 0">      Last update: {{ lastUpdate }}    </p>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafeMapComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeMapComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

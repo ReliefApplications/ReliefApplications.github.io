@@ -1,0 +1,1887 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeFormBuilderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/form-builder/form-builder.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component used to build forms in applications</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="../interfaces/Change.html" target="_self" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-form-builder</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./form-builder.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./form-builder.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                <a href="#environment" >environment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#json" >json</a>
+                            </li>
+                            <li>
+                                <a href="#saveMySurvey" >saveMySurvey</a>
+                            </li>
+                            <li>
+                                <a href="#surveyCreator" >surveyCreator</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addCustomClassToCoreFields" >addCustomClassToCoreFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isSnakeCase" >isSnakeCase</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onSetCustomCss" >onSetCustomCss</a>
+                            </li>
+                            <li>
+                                <a href="#setCustomTheme" >setCustomTheme</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setFormBuilder" >setFormBuilder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setQuestionNames" >setQuestionNames</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#toSnakeCase" >toSnakeCase</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#validateValueNames" >validateValueNames</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#form" >form</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#formChange" >formChange</a>
+                            </li>
+                            <li>
+                                <a href="#save" >save</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, dialog: MatDialog, snackBar: <a href="../injectables/SafeSnackBarService.html" target="_self">SafeSnackBarService</a>, translate: TranslateService, referenceDataService: <a href="../injectables/SafeReferenceDataService.html" target="_self">SafeReferenceDataService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructor function is a special function that is called when a new instance of the class is
+created.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>environment</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the environment in which we are running the application, it changes the theme of the form builder (color etc.)</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the Angular Material Dialog service used to display dialog modals</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeSnackBarService.html" target="_self" >SafeSnackBarService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that will be used to display the snackbar.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular translate service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>referenceDataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeReferenceDataService.html" target="_self" >SafeReferenceDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Reference data service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <b>form</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:91</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="formChange"></a>
+                        <b>formChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:93</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="save"></a>
+                        <b>save</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:92</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addCustomClassToCoreFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>addCustomClassToCoreFields</b></span>
+                        <a href="#addCustomClassToCoreFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addCustomClassToCoreFields(coreFields: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="277"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:277</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add new class to questions considered as core fields</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>coreFields</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of core fields</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSnakeCase"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>isSnakeCase</b></span>
+                        <a href="#isSnakeCase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isSnakeCase(text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="370"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:370</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if a string is already in snake case</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>text</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The text to check</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>True if the text is in snake case, false otherwise</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSetCustomCss"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>onSetCustomCss</b></span>
+                        <a href="#onSetCustomCss"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSetCustomCss(options: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="510"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:510</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add custom CSS classes to the survey elements.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>survey options.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCustomTheme"></a>
+                    <span class="name">
+                        <span ><b>setCustomTheme</b></span>
+                        <a href="#setCustomTheme"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setCustomTheme()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="290"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:290</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set a theme for the form builder depending on the environment</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFormBuilder"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setFormBuilder</b></span>
+                        <a href="#setFormBuilder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setFormBuilder(structure: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="162"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:162</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates the form builder and sets up all the options.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>structure</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Optional param used as the form struc</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setQuestionNames"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setQuestionNames</b></span>
+                        <a href="#setQuestionNames"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setQuestionNames(element: <a href="../interfaces/Question.html" target="_self">AnyQuestion</a>, page: <a href="../interfaces/Page.html" target="_self">Survey.Page</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="380"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:380</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Recursively set the question names of the form.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>element</td>
+                                    <td>
+                                                <code><a href="../interfaces/Question.html" target="_self" >AnyQuestion</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The element of the form whose name we need to set</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="../interfaces/Page.html" target="_self" >Survey.Page</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The page of the form</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toSnakeCase"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>toSnakeCase</b></span>
+                        <a href="#toSnakeCase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toSnakeCase(text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="357"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:357</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Convert a string to snake_case. Overrides the snakeCase function of lodash
+by first checking if the text is not already in snake case</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>text</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The text to convert</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The text in snake_case</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateValueNames"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>validateValueNames</b></span>
+                        <a href="#validateValueNames"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateValueNames()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="326"
+                            class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:326</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Makes sure that value names are existent and snake case, to not cause backend problems.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:113</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">This is the Angular Material Dialog service used to display dialog modals</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="json"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>json</b></span>
+                        <a href="#json"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:97</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveMySurvey"></a>
+                    <span class="name">
+                        <span ><b>saveMySurvey</b></span>
+                        <a href="#saveMySurvey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:313</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Custom SurveyJS method, save the form when edited.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="surveyCreator"></a>
+                    <span class="name">
+                        <span ><b>surveyCreator</b></span>
+                        <a href="#surveyCreator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>SurveyCreator.SurveyCreator</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/safe/src/lib/components/form-builder/form-builder.component.ts:96</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  EventEmitter,
+  Inject,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+} from &#x27;@angular/core&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import * as SurveyCreator from &#x27;survey-creator&#x27;;
+import * as Survey from &#x27;survey-angular&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { snakeCase, get, uniqBy, difference } from &#x27;lodash&#x27;;
+import { SafeSnackBarService } from &#x27;../../services/snackbar/snackbar.service&#x27;;
+import { SafeReferenceDataService } from &#x27;../../services/reference-data/reference-data.service&#x27;;
+import { Form } from &#x27;../../models/form.model&#x27;;
+import { renderGlobalProperties } from &#x27;../../survey/render-global-properties&#x27;;
+import { AnyQuestion } from &#x27;../../survey/types&#x27;;
+
+/**
+ * Array containing the different types of questions.
+ * Commented types are not yet implemented.
+ */
+const QUESTION_TYPES &#x3D; [
+  &#x27;text&#x27;,
+  &#x27;checkbox&#x27;,
+  &#x27;radiogroup&#x27;,
+  &#x27;dropdown&#x27;,
+  &#x27;comment&#x27;,
+  // &#x27;rating&#x27;,
+  // &#x27;ranking&#x27;,
+  // &#x27;imagepicker&#x27;,
+  &#x27;boolean&#x27;,
+  &#x27;image&#x27;,
+  &#x27;html&#x27;,
+  // &#x27;signaturepad&#x27;,
+  &#x27;expression&#x27;,
+  &#x27;file&#x27;,
+  &#x27;matrix&#x27;,
+  &#x27;matrixdropdown&#x27;,
+  &#x27;matrixdynamic&#x27;,
+  &#x27;multipletext&#x27;,
+  &#x27;panel&#x27;,
+  &#x27;paneldynamic&#x27;,
+  &#x27;tagbox&#x27;,
+];
+
+/**
+ * Allowed properties for a core question in a child form.
+ */
+const CORE_QUESTION_ALLOWED_PROPERTIES &#x3D; [
+  &#x27;width&#x27;,
+  &#x27;maxWidth&#x27;,
+  &#x27;minWidth&#x27;,
+  &#x27;startWithNewLine&#x27;,
+  &#x27;indent&#x27;,
+  &#x27;page&#x27;,
+  &#x27;titleLocation&#x27;,
+  &#x27;descriptionLocation&#x27;,
+  &#x27;state&#x27;,
+  &#x27;defaultValue&#x27;,
+  &#x27;defaultValueExpression&#x27;,
+  &#x27;relatedName&#x27;,
+  &#x27;addRecord&#x27;,
+  &#x27;addTemplate&#x27;,
+  &#x27;Search resource table&#x27;,
+  &#x27;visible&#x27;,
+  &#x27;readOnly&#x27;,
+  &#x27;isRequired&#x27;,
+  &#x27;placeHolder&#x27;,
+  &#x27;enableIf&#x27;,
+  &#x27;visibleIf&#x27;,
+  &#x27;tooltip&#x27;,
+];
+
+/**
+ * Class name to add to core field question.
+ */
+const CORE_FIELD_CLASS &#x3D; &#x27;core-question&#x27;;
+
+/**
+ * Component used to build forms in applications
+ */
+@Component({
+  selector: &#x27;safe-form-builder&#x27;,
+  templateUrl: &#x27;./form-builder.component.html&#x27;,
+  styleUrls: [&#x27;./form-builder.component.scss&#x27;],
+})
+export class SafeFormBuilderComponent implements OnInit, OnChanges {
+  @Input() form!: Form;
+  @Output() save: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+  @Output() formChange: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+  // &#x3D;&#x3D;&#x3D; CREATOR &#x3D;&#x3D;&#x3D;
+  surveyCreator!: SurveyCreator.SurveyCreator;
+  public json: any;
+
+  environment: any;
+
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
+   *
+   * @param environment This is the environment in which we are running the application, it changes the theme of the form builder (color etc.)
+   * @param dialog This is the Angular Material Dialog service used to display dialog modals
+   * @param snackBar This is the service that will be used to display the snackbar.
+   * @param translate Angular translate service
+   * @param referenceDataService Reference data service
+   */
+  constructor(
+    @Inject(&#x27;environment&#x27;) environment: any,
+    public dialog: MatDialog,
+    private snackBar: SafeSnackBarService,
+    private translate: TranslateService,
+    private referenceDataService: SafeReferenceDataService
+  ) {
+    this.environment &#x3D; environment;
+    // translate the editor in the same language as the interface
+    SurveyCreator.localization.currentLocale &#x3D; this.translate.currentLang;
+    this.translate.onLangChange.subscribe(() &#x3D;&gt; {
+      SurveyCreator.localization.currentLocale &#x3D; this.translate.currentLang;
+      this.setFormBuilder(this.surveyCreator.text);
+    });
+  }
+
+  ngOnInit(): void {
+    this.setFormBuilder(get(this.form, &#x27;structure&#x27;, &#x27;&#x27;));
+  }
+
+  ngOnChanges(): void {
+    if (this.surveyCreator) {
+      this.surveyCreator.text &#x3D; this.form.structure || &#x27;&#x27;;
+      if (!this.form.structure) {
+        this.surveyCreator.survey.showQuestionNumbers &#x3D; &#x27;off&#x27;;
+      }
+      // skip if form is core
+      if (!this.form.core) {
+        const coreFields &#x3D;
+          this.form.fields?.filter((x) &#x3D;&gt; x.isCore).map((x) &#x3D;&gt; x.name) || [];
+        // Highlight core fields
+        this.addCustomClassToCoreFields(coreFields);
+      }
+
+      this.surveyCreator.survey.onUpdateQuestionCssClasses.add(
+        (survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+          this.onSetCustomCss(options)
+      );
+
+      // add the rendering of custom properties
+      this.surveyCreator.survey.onAfterRenderQuestion.add(
+        renderGlobalProperties(this.referenceDataService)
+      );
+    }
+  }
+
+  /**
+   * Creates the form builder and sets up all the options.
+   *
+   * @param structure Optional param used as the form struc
+   */
+  private setFormBuilder(structure: string) {
+    const creatorOptions &#x3D; {
+      showEmbededSurveyTab: false,
+      showJSONEditorTab: false,
+      generateValidJSON: true,
+      showTranslationTab: true,
+      questionTypes: QUESTION_TYPES,
+    };
+
+    this.setCustomTheme();
+
+    this.surveyCreator &#x3D; new SurveyCreator.SurveyCreator(
+      &#x27;surveyCreatorContainer&#x27;,
+      creatorOptions
+    );
+    this.surveyCreator.haveCommercialLicense &#x3D; true;
+    this.surveyCreator.text &#x3D; structure;
+    this.surveyCreator.saveSurveyFunc &#x3D; this.saveMySurvey;
+    this.surveyCreator.showToolbox &#x3D; &#x27;right&#x27;;
+    this.surveyCreator.showPropertyGrid &#x3D; &#x27;right&#x27;;
+    this.surveyCreator.rightContainerActiveItem(&#x27;toolbox&#x27;);
+    if (!this.form.structure) {
+      this.surveyCreator.survey.showQuestionNumbers &#x3D; &#x27;off&#x27;;
+    }
+    this.surveyCreator.toolbox.changeCategories(
+      QUESTION_TYPES.map((x) &#x3D;&gt; ({
+        name: x,
+        category: this.translate.instant(
+          &#x27;pages.formBuilder.questionsCategories.core&#x27;
+        ),
+      }))
+    );
+
+    // Notify parent that form structure has changed
+    this.surveyCreator.onModified.add((survey, option) &#x3D;&gt; {
+      this.formChange.emit(survey.text);
+    });
+    this.surveyCreator.survey.onUpdateQuestionCssClasses.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; this.onSetCustomCss(options)
+    );
+    this.surveyCreator.onTestSurveyCreated.add((sender, opt) &#x3D;&gt; {
+      opt.survey.onUpdateQuestionCssClasses.add((_: any, opt2: any) &#x3D;&gt;
+        this.onSetCustomCss(opt2)
+      );
+    });
+
+    // &#x3D;&#x3D;&#x3D; CORE QUESTIONS FOR CHILD FORM &#x3D;&#x3D;&#x3D;
+    // Skip if form is core
+    if (!this.form.core) {
+      const coreFields &#x3D;
+        this.form.fields?.filter((x) &#x3D;&gt; x.isCore).map((x) &#x3D;&gt; x.name) || [];
+      // Remove core fields adorners
+      this.surveyCreator.onElementAllowOperations.add((sender, opt) &#x3D;&gt; {
+        const obj &#x3D; opt.obj;
+        if (!obj || !obj.page) {
+          return;
+        }
+        // If it is a core field
+        if (coreFields.includes(obj.valueName)) {
+          // Disable deleting, editing, changing type and changing if required or not
+          opt.allowDelete &#x3D; false;
+          opt.allowChangeType &#x3D; false;
+          opt.allowChangeRequired &#x3D; false;
+          opt.allowAddToToolbox &#x3D; false;
+          opt.allowCopy &#x3D; false;
+          opt.allowShowEditor &#x3D; false;
+          opt.allowShowHideTitle &#x3D; false;
+          opt.allowDragging &#x3D; true;
+        }
+      });
+      // Block core fields edition
+      this.surveyCreator.onShowingProperty.add((sender, opt) &#x3D;&gt; {
+        const obj &#x3D; opt.obj;
+        if (!obj || !obj.page) {
+          return;
+        }
+        // If it is a core field
+        if (
+          coreFields.includes(obj.valueName) &amp;&amp;
+          !CORE_QUESTION_ALLOWED_PROPERTIES.includes(opt.property.name)
+        ) {
+          opt.canShow &#x3D; false;
+        }
+      });
+      // Highlight core fields
+      this.addCustomClassToCoreFields(coreFields);
+    }
+
+    // Scroll to question when adde
+    this.surveyCreator.onQuestionAdded.add((sender, opt) &#x3D;&gt; {
+      const name &#x3D; opt.question.name;
+      setTimeout(() &#x3D;&gt; {
+        const el &#x3D; document.querySelector(&#x27;[data-name&#x3D;&quot;&#x27; + name + &#x27;&quot;]&#x27;);
+        el?.scrollIntoView({ behavior: &#x27;smooth&#x27; });
+        this.surveyCreator.showQuestionEditor(opt.question);
+      });
+    });
+
+    // add the rendering of custom properties
+    this.surveyCreator.survey.onAfterRenderQuestion.add(
+      renderGlobalProperties(this.referenceDataService)
+    );
+    this.surveyCreator.onTestSurveyCreated.add((_, options) &#x3D;&gt;
+      options.survey.onAfterRenderQuestion.add(
+        renderGlobalProperties(this.referenceDataService)
+      )
+    );
+    // this.surveyCreator.survey.locale &#x3D; this.translate.currentLang; // -&gt; set the defaultLanguage property also
+  }
+
+  /**
+   * Add new class to questions considered as core fields
+   *
+   * @param coreFields list of core fields
+   */
+  private addCustomClassToCoreFields(coreFields: string[]): void {
+    this.surveyCreator.survey.onAfterRenderQuestion.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
+        if (coreFields.includes(options.question.valueName)) {
+          options.htmlElement.children[0].className +&#x3D; &#x60; ${CORE_FIELD_CLASS}&#x60;;
+        }
+      }
+    );
+  }
+
+  /**
+   * Set a theme for the form builder depending on the environment
+   */
+  setCustomTheme(): void {
+    const defaultThemeColorsSurvey &#x3D; Survey.StylesManager.ThemeColors.default;
+    defaultThemeColorsSurvey[&#x27;$main-color&#x27;] &#x3D; this.environment.theme.primary;
+    defaultThemeColorsSurvey[&#x27;$main-hover-color&#x27;] &#x3D;
+      this.environment.theme.primary;
+
+    const defaultThemeColorsEditor &#x3D;
+      SurveyCreator.StylesManager.ThemeColors.default;
+    defaultThemeColorsEditor[&#x27;$primary-color&#x27;] &#x3D; this.environment.theme.primary;
+    defaultThemeColorsEditor[&#x27;$secondary-color&#x27;] &#x3D;
+      this.environment.theme.primary;
+    defaultThemeColorsEditor[&#x27;$primary-hover-color&#x27;] &#x3D;
+      this.environment.theme.primary;
+    defaultThemeColorsEditor[&#x27;$selection-border-color&#x27;] &#x3D;
+      this.environment.theme.primary;
+
+    Survey.StylesManager.applyTheme();
+    SurveyCreator.StylesManager.applyTheme();
+  }
+
+  /**
+   * Custom SurveyJS method, save the form when edited.
+   */
+  saveMySurvey &#x3D; () &#x3D;&gt; {
+    this.validateValueNames()
+      .then(() &#x3D;&gt; {
+        this.save.emit(this.surveyCreator.text);
+      })
+      .catch((error) &#x3D;&gt; {
+        this.snackBar.openSnackBar(error.message, { error: true });
+      });
+  };
+
+  /**
+   * Makes sure that value names are existent and snake case, to not cause backend problems.
+   */
+  private async validateValueNames(): Promise&lt;void&gt; {
+    const survey &#x3D; new Survey.SurveyModel(this.surveyCreator.JSON);
+    await survey.pages.forEach((page: Survey.Page) &#x3D;&gt; {
+      page.elements.forEach((element: AnyQuestion) &#x3D;&gt;
+        this.setQuestionNames(element, page)
+      );
+      const duplicatedFields &#x3D; difference(
+        page.elements as AnyQuestion[],
+        uniqBy(page.elements as AnyQuestion[], &#x27;valueName&#x27;)
+      );
+      if (duplicatedFields.length &gt; 0) {
+        throw new Error(
+          this.translate.instant(
+            &#x27;pages.formBuilder.errors.dataFieldDuplicated&#x27;,
+            {
+              name: duplicatedFields[0].valueName,
+            }
+          )
+        );
+      }
+    });
+    this.surveyCreator.JSON &#x3D; survey.toJSON();
+  }
+
+  /**
+   * Convert a string to snake_case. Overrides the snakeCase function of lodash
+   * by first checking if the text is not already in snake case
+   *
+   * @param text The text to convert
+   * @returns The text in snake_case
+   */
+  private toSnakeCase(text: string): string {
+    if (this.isSnakeCase(text)) {
+      return text;
+    }
+    return snakeCase(text);
+  }
+
+  /**
+   * Checks if a string is already in snake case
+   *
+   * @param text The text to check
+   * @returns True if the text is in snake case, false otherwise
+   */
+  private isSnakeCase(text: string): any {
+    return text.match(/^[a-z]+[a-z0-9_]+$/);
+  }
+
+  /**
+   * Recursively set the question names of the form.
+   *
+   * @param element The element of the form whose name we need to set
+   * @param page The page of the form
+   */
+  private setQuestionNames(element: AnyQuestion, page: Survey.Page): void {
+    // create the valueName of the element in snake case
+    if (!element.valueName) {
+      if (element.title) {
+        element.valueName &#x3D; this.toSnakeCase(element.title);
+      } else if (element.name) {
+        element.valueName &#x3D; this.toSnakeCase(element.name);
+      } else {
+        throw new Error(
+          this.translate.instant(&#x27;pages.formBuilder.errors.missingName&#x27;, {
+            page: page.name,
+          })
+        );
+      }
+    } else {
+      if (!this.isSnakeCase(element.valueName)) {
+        throw new Error(
+          this.translate.instant(&#x27;pages.formBuilder.errors.snakecase&#x27;, {
+            name: element.valueName,
+            page: page.name,
+          })
+        );
+      }
+    }
+    // if choices object exists, checks for duplicate values
+    if (element.choices) {
+      const values &#x3D; element.choices.map(
+        (choice: { value: string; text: string }) &#x3D;&gt; choice.value || choice
+      );
+      const distinctValues &#x3D; [...new Set(values)];
+
+      if (values.length &gt; distinctValues.length) {
+        throw new Error(
+          this.translate.instant(
+            &#x27;pages.formBuilder.errors.choices.valueDuplicated&#x27;,
+            {
+              question: element.valueName,
+            }
+          )
+        );
+      }
+    }
+    if (element.getType() &#x3D;&#x3D;&#x3D; &#x27;multipletext&#x27;) {
+      element.items.forEach((item: any) &#x3D;&gt; {
+        if (!item.name &amp;&amp; !item.title) {
+          throw new Error(
+            this.translate.instant(
+              &#x27;pages.formBuilder.errors.multipletext.missingName&#x27;,
+              {
+                question: element.valueName,
+              }
+            )
+          );
+        }
+        item.name &#x3D; this.toSnakeCase(item.name);
+      });
+    }
+    if (element.getType() &#x3D;&#x3D;&#x3D; &#x27;matrix&#x27;) {
+      element.columns.forEach(
+        (x: any) &#x3D;&gt; (x.value &#x3D; this.toSnakeCase(x.value || x.text || x))
+      );
+      element.rows.forEach(
+        (x: any) &#x3D;&gt; (x.value &#x3D; this.toSnakeCase(x.value || x.text || x))
+      );
+    }
+    if (element.getType() &#x3D;&#x3D;&#x3D; &#x27;matrixdropdown&#x27;) {
+      element.columns.forEach((x: any) &#x3D;&gt; {
+        x.name &#x3D; this.toSnakeCase(x.name || x.title || x);
+        x.title &#x3D; x.title || x.name || x;
+      });
+      element.rows.forEach((x: any) &#x3D;&gt; {
+        x.value &#x3D; this.toSnakeCase(x.value || x.text || x);
+      });
+    }
+    if ([&#x27;resource&#x27;, &#x27;resources&#x27;].includes(element.getType())) {
+      if (element.relatedName) {
+        element.relatedName &#x3D; this.toSnakeCase(element.relatedName);
+      } else {
+        throw new Error(
+          this.translate.instant(
+            &#x27;components.formBuilder.errors.missingRelatedName&#x27;,
+            {
+              question: element.name,
+              page: page.name,
+            }
+          )
+        );
+      }
+
+      if (element.addRecord &amp;&amp; !element.addTemplate) {
+        throw new Error(
+          this.translate.instant(
+            &#x27;components.formBuilder.errors.missingTemplate&#x27;,
+            {
+              question: element.name,
+              page: page.name,
+            }
+          )
+        );
+      }
+    }
+    // Check that at least an application is selected in the properties of users and owner question
+    if ([&#x27;users&#x27;, &#x27;owner&#x27;].includes(element.getType())) {
+      if (!element.applications) {
+        throw new Error(
+          this.translate.instant(&#x27;pages.formBuilder.errors.selectApplication&#x27;, {
+            question: element.name,
+            page: page.name,
+          })
+        );
+      }
+    }
+    // if the element contains other elements, apply the same rule on them
+    if (element.elements) {
+      element.elements.forEach((elt: AnyQuestion) &#x3D;&gt;
+        this.setQuestionNames(elt, page)
+      );
+    }
+    if (element.templateElements) {
+      element.templateElements.forEach((elt: AnyQuestion) &#x3D;&gt;
+        this.setQuestionNames(elt, page)
+      );
+    }
+  }
+
+  /**
+   * Add custom CSS classes to the survey elements.
+   *
+   * @param options survey options.
+   */
+  private onSetCustomCss(options: any): void {
+    const classes &#x3D; options.cssClasses;
+    classes.content +&#x3D; &#x27;safe-qst-content&#x27;;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;surveyCreatorContainer&quot;&gt;&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./form-builder.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../style/survey.scss&#x27;;
+
+::ng-deep .svd_content {
+  padding: 8px 0 !important;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div id="surveyCreatorContainer"></div></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafeFormBuilderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeFormBuilderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

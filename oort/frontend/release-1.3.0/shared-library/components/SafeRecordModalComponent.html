@@ -1,0 +1,2211 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeRecordModalComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/record-modal/record-modal.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component used to display a modal to modify a record</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-record-modal</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./record-modal.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./record-modal.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#canEdit" >canEdit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialogRef" >dialogRef</a>
+                            </li>
+                            <li>
+                                <a href="#environment" >environment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                <a href="#formContainer" >formContainer</a>
+                            </li>
+                            <li>
+                                <a href="#formContainerNext" >formContainerNext</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#modifiedAt" >modifiedAt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#pages" >pages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#record" >record</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectedTabIndex" >selectedTabIndex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#survey" >survey</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#surveyNext" >surveyNext</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#confirmRevertDialog" >confirmRevertDialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#onClose" >onClose</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onDownloadFile" >onDownloadFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onEdit" >onEdit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onSetCustomCss" >onSetCustomCss</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onShowHistory" >onShowHistory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onShowPage" >onShowPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setPages" >setPages</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#pages$" >pages$</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialogRef: <a href="../interfaces/Record.html" target="_self">MatDialogRef&lt;SafeRecordModalComponent&gt;</a>, data: <a href="../interfaces/DialogData.html" target="_self">DialogData</a>, environment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, apollo: Apollo, dialog: MatDialog, restService: <a href="../injectables/SafeRestService.html" target="_self">SafeRestService</a>, authService: <a href="../injectables/SafeAuthService.html" target="_self">SafeAuthService</a>, snackBar: <a href="../injectables/SafeSnackBarService.html" target="_self">SafeSnackBarService</a>, formBuilderService: <a href="../injectables/SafeFormBuilderService.html" target="_self">SafeFormBuilderService</a>, confirmService: <a href="../injectables/SafeConfirmService.html" target="_self">SafeConfirmService</a>, translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:80</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructor function is a special function that is called when a new instance of the class is
+created.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialogRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Record.html" target="_self" >MatDialogRef&lt;SafeRecordModalComponent&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the reference to the dialog that is being opened.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/DialogData.html" target="_self" >DialogData</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the data that is passed to the modal when it is opened.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>environment</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the environment in which we run the application.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the Apollo client that we&#39;ll use to make GraphQL requests.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the Material dialog service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>restService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeRestService.html" target="_self" >SafeRestService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that is used to make http requests.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeAuthService.html" target="_self" >SafeAuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that handles the authentication of the user</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeSnackBarService.html" target="_self" >SafeSnackBarService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that allows you to display a snackbar message to the user.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeFormBuilderService.html" target="_self" >SafeFormBuilderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that will be used to build forms.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeConfirmService.html" target="_self" >SafeConfirmService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that will be used to display confirm window.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that allows us to translate the text in the modal.</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmRevertDialog"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>confirmRevertDialog</b></span>
+                        <a href="#confirmRevertDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmRevertDialog(record: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, version: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="317"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:317</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Open a dialog modal to confirm the recovery of data</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>record</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The record whose data we need to recover</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>version</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The version to recover</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onClose"></a>
+                    <span class="name">
+                        <span ><b>onClose</b></span>
+                        <a href="#onClose"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onClose()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="307"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:307</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Closes the modal without sending any data.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDownloadFile"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>onDownloadFile</b></span>
+                        <a href="#onDownloadFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onDownloadFile(survey: Survey.SurveyModel, options: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="256"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:256</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Download the file.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>survey</td>
+                                    <td>
+                                            <code>Survey.SurveyModel</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The survey from which we download the file</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Options regarding the download</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onEdit"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onEdit</b></span>
+                        <a href="#onEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onEdit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="285"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:285</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles the edition of the record and closes the dialog</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSetCustomCss"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>onSetCustomCss</b></span>
+                        <a href="#onSetCustomCss"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSetCustomCss(options: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="371"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:371</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add custom CSS classes to the survey elements.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>survey options.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onShowHistory"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onShowHistory</b></span>
+                        <a href="#onShowHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onShowHistory()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="355"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:355</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens the history of the record in a modal.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onShowPage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onShowPage</b></span>
+                        <a href="#onShowPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onShowPage(i: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="242"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:242</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Shows a page of the form</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>i</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Index of the page to show</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPages"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setPages</b></span>
+                        <a href="#setPages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setPages()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="292"
+                            class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:292</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the pages of the form</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canEdit"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>canEdit</b></span>
+                        <a href="#canEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>boolean | undefined</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/DialogData.html" target="_self" >DialogData</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Inject(MAT_DIALOG_DATA)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:100</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">This is the data that is passed to the modal when it is opened.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:103</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">This is the Material dialog service</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialogRef"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialogRef</b></span>
+                        <a href="#dialogRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Record.html" target="_self" >MatDialogRef&lt;SafeRecordModalComponent&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:99</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">This is the reference to the dialog that is being opened.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formContainer"></a>
+                    <span class="name">
+                        <span ><b>formContainer</b></span>
+                        <a href="#formContainer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;formContainer&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formContainerNext"></a>
+                    <span class="name">
+                        <span ><b>formContainerNext</b></span>
+                        <a href="#formContainerNext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;formContainerNext&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modifiedAt"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>modifiedAt</b></span>
+                        <a href="#modifiedAt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Date | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pages"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>pages</b></span>
+                        <a href="#pages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;any[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="record"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>record</b></span>
+                        <a href="#record"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Record.html" target="_self" >Record</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedTabIndex"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>selectedTabIndex</b></span>
+                        <a href="#selectedTabIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="survey"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>survey</b></span>
+                        <a href="#survey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Survey.Model</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="surveyNext"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>surveyNext</b></span>
+                        <a href="#surveyNext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Survey.Model | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pages$"></a>
+                        <span class="name"><b>pages$</b><a href="#pages$"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>pages$()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/safe/src/lib/components/record-modal/record-modal.component.ts:78</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Getter for the different pages of the form</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  OnInit,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+import {
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+  MatDialog,
+} from &#x27;@angular/material/dialog&#x27;;
+import { Form } from &#x27;../../models/form.model&#x27;;
+import { Record } from &#x27;../../models/record.model&#x27;;
+import * as Survey from &#x27;survey-angular&#x27;;
+import {
+  GetRecordByIdQueryResponse,
+  GET_RECORD_BY_ID,
+  GetFormByIdQueryResponse,
+  GET_FORM_STRUCTURE,
+} from &#x27;./graphql/queries&#x27;;
+import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
+import { SafeRestService } from &#x27;../../services/rest/rest.service&#x27;;
+import { SafeAuthService } from &#x27;../../services/auth/auth.service&#x27;;
+import { SafeConfirmService } from &#x27;../../services/confirm/confirm.service&#x27;;
+import { EDIT_RECORD, EditRecordMutationResponse } from &#x27;./graphql/mutations&#x27;;
+import { SafeSnackBarService } from &#x27;../../services/snackbar/snackbar.service&#x27;;
+import { SafeFormBuilderService } from &#x27;../../services/form-builder/form-builder.service&#x27;;
+import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import isEqual from &#x27;lodash/isEqual&#x27;;
+
+/**
+ * Interface that describes the structure of the data that will be shown in the dialog
+ */
+interface DialogData {
+  recordId: string;
+  compareTo?: any;
+  canUpdate?: boolean;
+  template?: string;
+}
+
+/**
+ * Component used to display a modal to modify a record
+ */
+@Component({
+  selector: &#x27;safe-record-modal&#x27;,
+  templateUrl: &#x27;./record-modal.component.html&#x27;,
+  styleUrls: [&#x27;./record-modal.component.scss&#x27;],
+})
+export class SafeRecordModalComponent implements AfterViewInit {
+  // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
+  public loading &#x3D; true;
+  public form?: Form;
+  public record: Record &#x3D; {};
+  public modifiedAt: Date | null &#x3D; null;
+  public selectedTabIndex &#x3D; 0;
+  public survey!: Survey.Model;
+  public surveyNext: Survey.Model | null &#x3D; null;
+  private pages &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
+  public canEdit: boolean | undefined &#x3D; false;
+
+  @ViewChild(&#x27;formContainer&#x27;, { static: false })
+  formContainer!: ElementRef;
+  @ViewChild(&#x27;formContainerNext&#x27;, { static: false })
+  formContainerNext!: ElementRef;
+
+  environment: any;
+
+  /**
+   * Getter for the different pages of the form
+   *
+   * @returns The pages as an observable
+   */
+  public get pages$(): Observable&lt;any[]&gt; {
+    return this.pages.asObservable();
+  }
+
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
+   *
+   * @param dialogRef This is the reference to the dialog that is being opened.
+   * @param data This is the data that is passed to the modal when it is opened.
+   * @param environment This is the environment in which we run the application.
+   * @param apollo This is the Apollo client that we&#x27;ll use to make GraphQL requests.
+   * @param dialog This is the Material dialog service
+   * @param restService This is the service that is used to make http requests.
+   * @param authService This is the service that handles the authentication of the user
+   * @param snackBar This is the service that allows you to display a snackbar message to the user.
+   * @param formBuilderService This is the service that will be used to build forms.
+   * @param confirmService This is the service that will be used to display confirm window.
+   * @param translate This is the service that allows us to translate the text in the modal.
+   */
+  constructor(
+    public dialogRef: MatDialogRef&lt;SafeRecordModalComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(&#x27;environment&#x27;) environment: any,
+    private apollo: Apollo,
+    public dialog: MatDialog,
+    private restService: SafeRestService,
+    private authService: SafeAuthService,
+    private snackBar: SafeSnackBarService,
+    private formBuilderService: SafeFormBuilderService,
+    private confirmService: SafeConfirmService,
+    private translate: TranslateService
+  ) {
+    this.environment &#x3D; environment;
+  }
+
+  async ngAfterViewInit(): Promise&lt;void&gt; {
+    this.canEdit &#x3D; this.data.canUpdate;
+    const defaultThemeColorsSurvey &#x3D; Survey.StylesManager.ThemeColors.default;
+    defaultThemeColorsSurvey[&#x27;$main-color&#x27;] &#x3D; this.environment.theme.primary;
+    defaultThemeColorsSurvey[&#x27;$main-hover-color&#x27;] &#x3D;
+      this.environment.theme.primary;
+
+    Survey.StylesManager.applyTheme();
+    const promises: Promise&lt;
+      GetFormByIdQueryResponse | GetRecordByIdQueryResponse | void
+    &gt;[] &#x3D; [];
+    // Fetch structure from template if needed
+    if (this.data.template) {
+      promises.push(
+        this.apollo
+          .query&lt;GetFormByIdQueryResponse&gt;({
+            query: GET_FORM_STRUCTURE,
+            variables: {
+              id: this.data.template,
+            },
+          })
+          .toPromise()
+          .then((res) &#x3D;&gt; {
+            this.form &#x3D; res.data.form;
+          })
+      );
+    }
+    // Fetch record data
+    promises.push(
+      this.apollo
+        .query&lt;GetRecordByIdQueryResponse&gt;({
+          query: GET_RECORD_BY_ID,
+          variables: {
+            id: this.data.recordId,
+          },
+        })
+        .toPromise()
+        .then((res) &#x3D;&gt; {
+          this.record &#x3D; res.data.record;
+          this.modifiedAt &#x3D; this.record.modifiedAt || null;
+          if (!this.data.template) {
+            this.form &#x3D; this.record.form;
+          }
+        })
+    );
+    await Promise.all(promises);
+    // INIT SURVEY
+    addCustomFunctions(Survey, this.authService, this.apollo, this.record);
+    this.survey &#x3D; this.formBuilderService.createSurvey(
+      this.form?.structure || &#x27;&#x27;,
+      this.form?.metadata,
+      this.record
+    );
+    this.survey.onDownloadFile.add((survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+      this.onDownloadFile(survey, options)
+    );
+    this.survey.onCurrentPageChanged.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
+        this.selectedTabIndex &#x3D; survey.currentPageNo;
+      }
+    );
+    this.survey.onUpdateQuestionCssClasses.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; this.onSetCustomCss(options)
+    );
+    this.survey.data &#x3D; this.record.data;
+    this.survey.mode &#x3D; &#x27;display&#x27;;
+    this.survey.showNavigationButtons &#x3D; &#x27;none&#x27;;
+    this.survey.focusFirstQuestionAutomatic &#x3D; false;
+    this.survey.showProgressBar &#x3D; &#x27;off&#x27;;
+    this.survey.render(this.formContainer.nativeElement);
+    setTimeout(() &#x3D;&gt; {}, 100);
+    this.setPages();
+    if (this.data.compareTo) {
+      this.surveyNext &#x3D; this.formBuilderService.createSurvey(
+        this.form?.structure || &#x27;&#x27;,
+        this.form?.metadata,
+        this.record
+      );
+      this.survey.onDownloadFile.add(
+        (survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+          this.onDownloadFile(survey, options)
+      );
+      this.surveyNext.data &#x3D; this.data.compareTo.data;
+      this.surveyNext.mode &#x3D; &#x27;display&#x27;;
+      this.surveyNext.showNavigationButtons &#x3D; &#x27;none&#x27;;
+      this.surveyNext.focusFirstQuestionAutomatic &#x3D; false;
+      this.surveyNext.showProgressBar &#x3D; &#x27;off&#x27;;
+      // Set list of updated questions
+      const updatedQuestions: string[] &#x3D; [];
+      const allQuestions &#x3D; [this.surveyNext.data, this.survey.data].reduce(
+        (keys, object) &#x3D;&gt; keys.concat(Object.keys(object)),
+        []
+      );
+      for (const question of allQuestions) {
+        const valueNext &#x3D; this.surveyNext.data[question];
+        const value &#x3D; this.survey.data[question];
+        if (!isEqual(value, valueNext)) {
+          updatedQuestions.push(question);
+        }
+      }
+      this.survey.onAfterRenderQuestion.add(
+        (survey: Survey.SurveyModel, options: any): void &#x3D;&gt; {
+          if (updatedQuestions.includes(options.question.valueName)) {
+            options.htmlElement.style.background &#x3D; &#x27;#b2ebbf&#x27;;
+          }
+        }
+      );
+      this.surveyNext.onAfterRenderQuestion.add(
+        (survey: Survey.SurveyModel, options: any): void &#x3D;&gt; {
+          if (updatedQuestions.includes(options.question.valueName)) {
+            options.htmlElement.style.background &#x3D; &#x27;#EBB2B2&#x27;;
+          }
+        }
+      );
+      this.surveyNext.onUpdateQuestionCssClasses.add(
+        (survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+          this.onSetCustomCss(options)
+      );
+      this.surveyNext.render(this.formContainerNext.nativeElement);
+    }
+    this.loading &#x3D; false;
+  }
+
+  /**
+   * Shows a page of the form
+   *
+   * @param i Index of the page to show
+   */
+  public onShowPage(i: number): void {
+    this.survey.currentPageNo &#x3D; i;
+    this.selectedTabIndex &#x3D; i;
+    if (this.data.compareTo &amp;&amp; this.surveyNext) {
+      this.surveyNext.currentPageNo &#x3D; i;
+    }
+  }
+
+  /**
+   * Download the file.
+   *
+   * @param survey The survey from which we download the file
+   * @param options Options regarding the download
+   */
+  private onDownloadFile(survey: Survey.SurveyModel, options: any): void {
+    const xhr &#x3D; new XMLHttpRequest();
+    xhr.open(
+      &#x27;GET&#x27;,
+      &#x60;${this.restService.apiUrl}/download/file/${options.content}&#x60;
+    );
+    xhr.setRequestHeader(
+      &#x27;Authorization&#x27;,
+      &#x60;Bearer ${localStorage.getItem(&#x27;idtoken&#x27;)}&#x60;
+    );
+    xhr.onloadstart &#x3D; () &#x3D;&gt; {
+      xhr.responseType &#x3D; &#x27;blob&#x27;;
+    };
+    xhr.onload &#x3D; () &#x3D;&gt; {
+      const file &#x3D; new File([xhr.response], options.fileValue.name, {
+        type: options.fileValue.type,
+      });
+      const reader &#x3D; new FileReader();
+      reader.onload &#x3D; (e) &#x3D;&gt; {
+        options.callback(&#x27;success&#x27;, e.target?.result);
+      };
+      reader.readAsDataURL(file);
+    };
+    xhr.send();
+  }
+
+  /**
+   * Handles the edition of the record and closes the dialog
+   */
+  public onEdit(): void {
+    this.dialogRef.close(true);
+  }
+
+  /**
+   * Set the pages of the form
+   */
+  private setPages(): void {
+    const pages &#x3D; [];
+    if (this.survey) {
+      for (const page of this.survey.pages) {
+        if (page.isVisible) {
+          pages.push(page);
+        }
+      }
+    }
+    this.pages.next(pages);
+  }
+
+  /**
+   * Closes the modal without sending any data.
+   */
+  onClose(): void {
+    this.dialogRef.close();
+  }
+
+  /**
+   * Open a dialog modal to confirm the recovery of data
+   *
+   * @param record The record whose data we need to recover
+   * @param version The version to recover
+   */
+  private confirmRevertDialog(record: any, version: any): void {
+    // eslint-disable-next-line radix
+    const date &#x3D; new Date(parseInt(version.createdAt, 0));
+    const formatDate &#x3D; &#x60;${date.getDate()}/${
+      date.getMonth() + 1
+    }/${date.getFullYear()}&#x60;;
+    const dialogRef &#x3D; this.confirmService.openConfirmModal({
+      title: this.translate.instant(&#x27;components.record.recovery.title&#x27;),
+      content: this.translate.instant(
+        &#x27;components.record.recovery.confirmationMessage&#x27;,
+        { date: formatDate }
+      ),
+      confirmText: this.translate.instant(&#x27;components.confirmModal.confirm&#x27;),
+      confirmColor: &#x27;primary&#x27;,
+    });
+    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+      if (value) {
+        this.apollo
+          .mutate&lt;EditRecordMutationResponse&gt;({
+            mutation: EDIT_RECORD,
+            variables: {
+              id: record.id,
+              version: version.id,
+            },
+          })
+          .subscribe((res) &#x3D;&gt; {
+            this.snackBar.openSnackBar(
+              this.translate.instant(&#x27;common.notifications.dataRecovered&#x27;)
+            );
+            this.dialogRef.close();
+          });
+      }
+    });
+  }
+
+  /**
+   * Opens the history of the record in a modal.
+   */
+  public onShowHistory(): void {
+    this.dialog.open(RecordHistoryModalComponent, {
+      data: {
+        id: this.record.id,
+        revert: (version: any) &#x3D;&gt;
+          this.confirmRevertDialog(this.record, version),
+      },
+      autoFocus: false,
+    });
+  }
+
+  /**
+   * Add custom CSS classes to the survey elements.
+   *
+   * @param options survey options.
+   */
+  private onSetCustomCss(options: any): void {
+    const classes &#x3D; options.cssClasses;
+    classes.content +&#x3D; &#x27;safe-qst-content&#x27;;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;safe-modal size&#x3D;&quot;big&quot; [closable]&#x3D;&quot;true&quot;&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;!loading&quot;&gt;
+    &lt;div class&#x3D;&quot;form-infos&quot;&gt;
+      &lt;safe-record-summary
+        *ngIf&#x3D;&quot;!data.compareTo&quot;
+        [record]&#x3D;&quot;record&quot;
+        (showHistory)&#x3D;&quot;onShowHistory()&quot;
+      &gt;&lt;/safe-record-summary&gt;
+
+      &lt;safe-form-actions
+        [survey]&#x3D;&quot;survey&quot;
+        [surveyNext]&#x3D;&quot;surveyNext || undefined&quot;
+      &gt;&lt;/safe-form-actions&gt;
+    &lt;/div&gt;
+    &lt;div mat-dialog-title&gt;
+      &lt;mat-tab-group
+        animationDuration&#x3D;&quot;0ms&quot;
+        [selectedIndex]&#x3D;&quot;selectedTabIndex&quot;
+        (selectedIndexChange)&#x3D;&quot;onShowPage($event)&quot;
+      &gt;
+        &lt;mat-tab
+          *ngFor&#x3D;&quot;let page of pages$ | async&quot;
+          [label]&#x3D;&quot;page.title ? page.title : page.name&quot;
+        &gt;&lt;/mat-tab&gt;
+      &lt;/mat-tab-group&gt;
+      &lt;div class&#x3D;&quot;versions-info&quot; *ngIf&#x3D;&quot;data.compareTo&quot;&gt;
+        &lt;div class&#x3D;&quot;version-info&quot;&gt;
+          &lt;div&gt;{{ &#x27;components.record.history.version.old&#x27; | translate }}&lt;/div&gt;
+          &lt;span&gt;{{ data.compareTo.createdAt | safeDate: &#x27;short&#x27; }}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;version-info&quot;&gt;
+          &lt;div&gt;
+            {{ &#x27;components.record.history.version.current&#x27; | translate }}
+          &lt;/div&gt;
+          &lt;span&gt;{{ record.modifiedAt | safeDate: &#x27;short&#x27; }}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+  &lt;mat-dialog-content&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;!data.compareTo&quot;&gt;
+      &lt;div #formContainer class&#x3D;&quot;form-container&quot;&gt;&lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;data.compareTo&quot;&gt;
+      &lt;div #formContainerNext class&#x3D;&quot;form-container&quot;&gt;&lt;/div&gt;
+      &lt;div #formContainer class&#x3D;&quot;form-container&quot;&gt;&lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/mat-dialog-content&gt;
+  &lt;mat-dialog-actions align&#x3D;&quot;end&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; data.compareTo&quot;&gt;
+    &lt;safe-button (click)&#x3D;&quot;onClose()&quot;&gt;
+      {{ &#x27;common.close&#x27; | translate }}
+    &lt;/safe-button&gt;
+    &lt;safe-button
+      category&#x3D;&quot;secondary&quot;
+      variant&#x3D;&quot;primary&quot;
+      mat-dialog-close&#x3D;&quot;true&quot;
+      cdkFocusInitial
+    &gt;
+      {{ &#x27;components.record.history.revert&#x27; | translate }}
+    &lt;/safe-button&gt;
+  &lt;/mat-dialog-actions&gt;
+  &lt;mat-dialog-actions align&#x3D;&quot;end&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; !data.compareTo&quot;&gt;
+    &lt;safe-button (click)&#x3D;&quot;onClose()&quot; variant&#x3D;&quot;danger&quot;&gt;
+      {{ &#x27;common.close&#x27; | translate }}
+    &lt;/safe-button&gt;
+
+    &lt;ng-container *ngIf&#x3D;&quot;pages$ | async as pages&quot;&gt;
+      &lt;safe-button
+        category&#x3D;&quot;secondary&quot;
+        variant&#x3D;&quot;primary&quot;
+        cdkFocusInitial
+        *ngIf&#x3D;&quot;pages.length &gt; 1&quot;
+        (click)&#x3D;&quot;survey.prevPage()&quot;
+        [disabled]&#x3D;&quot;survey.isFirstPage&quot;
+      &gt;
+        {{ &#x27;common.previous&#x27; | translate }}
+      &lt;/safe-button&gt;
+      &lt;safe-button
+        category&#x3D;&quot;secondary&quot;
+        variant&#x3D;&quot;primary&quot;
+        cdkFocusInitial
+        *ngIf&#x3D;&quot;pages.length &gt; 1&quot;
+        (click)&#x3D;&quot;survey.nextPage()&quot;
+        [disabled]&#x3D;&quot;survey.isLastPage&quot;
+      &gt;
+        {{ &#x27;common.next&#x27; | translate }}
+      &lt;/safe-button&gt;
+    &lt;/ng-container&gt;
+    &lt;safe-button
+      category&#x3D;&quot;secondary&quot;
+      variant&#x3D;&quot;primary&quot;
+      cdkFocusInitial
+      *ngIf&#x3D;&quot;canEdit&quot;
+      (click)&#x3D;&quot;onEdit()&quot;
+    &gt;
+      {{
+        &#x27;common.editObject&#x27;
+          | translate: { name: &#x27;common.record.one&#x27; | translate }
+      }}
+    &lt;/safe-button&gt;
+  &lt;/mat-dialog-actions&gt;
+&lt;/safe-modal&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./record-modal.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../style/survey.scss&#x27;;
+
+mat-dialog-content {
+  flex: 1;
+  max-height: unset !important;
+  display: flex;
+  flex-direction: row;
+
+  .form-container {
+    flex: 1;
+  }
+}
+
+.versions-info {
+  display: flex;
+  justify-content: space-between;
+
+  .version-info {
+    div {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    span {
+      color: #9e9e9e;
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 8px;
+    }
+  }
+  .version-info:not(:first-child) {
+    div {
+      text-align: right;
+    }
+  }
+}
+
+.sv_body {
+  border: none;
+  padding: 0;
+}
+
+.form-infos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><safe-modal size="big" [closable]="true">  <ng-container *ngIf="!loading">    <div class="form-infos">      <safe-record-summary        *ngIf="!data.compareTo"        [record]="record"        (showHistory)="onShowHistory()"      ></safe-record-summary>      <safe-form-actions        [survey]="survey"        [surveyNext]="surveyNext || undefined"      ></safe-form-actions>    </div>    <div mat-dialog-title>      <mat-tab-group        animationDuration="0ms"        [selectedIndex]="selectedTabIndex"        (selectedIndexChange)="onShowPage($event)"      >        <mat-tab          *ngFor="let page of pages$ | async"          [label]="page.title ? page.title : page.name"        ></mat-tab>      </mat-tab-group>      <div class="versions-info" *ngIf="data.compareTo">        <div class="version-info">          <div>{{ \'components.record.history.version.old\' | translate }}</div>          <span>{{ data.compareTo.createdAt | safeDate: \'short\' }}</span>        </div>        <div class="version-info">          <div>            {{ \'components.record.history.version.current\' | translate }}          </div>          <span>{{ record.modifiedAt | safeDate: \'short\' }}</span>        </div>      </div>    </div>  </ng-container>  <mat-dialog-content>    <ng-container *ngIf="!data.compareTo">      <div #formContainer class="form-container"></div>    </ng-container>    <ng-container *ngIf="data.compareTo">      <div #formContainerNext class="form-container"></div>      <div #formContainer class="form-container"></div>    </ng-container>  </mat-dialog-content>  <mat-dialog-actions align="end" *ngIf="!loading && data.compareTo">    <safe-button (click)="onClose()">      {{ \'common.close\' | translate }}    </safe-button>    <safe-button      category="secondary"      variant="primary"      mat-dialog-close="true"      cdkFocusInitial    >      {{ \'components.record.history.revert\' | translate }}    </safe-button>  </mat-dialog-actions>  <mat-dialog-actions align="end" *ngIf="!loading && !data.compareTo">    <safe-button (click)="onClose()" variant="danger">      {{ \'common.close\' | translate }}    </safe-button>    <ng-container *ngIf="pages$ | async as pages">      <safe-button        category="secondary"        variant="primary"        cdkFocusInitial        *ngIf="pages.length > 1"        (click)="survey.prevPage()"        [disabled]="survey.isFirstPage"      >        {{ \'common.previous\' | translate }}      </safe-button>      <safe-button        category="secondary"        variant="primary"        cdkFocusInitial        *ngIf="pages.length > 1"        (click)="survey.nextPage()"        [disabled]="survey.isLastPage"      >        {{ \'common.next\' | translate }}      </safe-button>    </ng-container>    <safe-button      category="secondary"      variant="primary"      cdkFocusInitial      *ngIf="canEdit"      (click)="onEdit()"    >      {{        \'common.editObject\'          | translate: { name: \'common.record.one\' | translate }      }}    </safe-button>  </mat-dialog-actions></safe-modal></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafeRecordModalComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeRecordModalComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
