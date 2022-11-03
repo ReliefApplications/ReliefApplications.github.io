@@ -79,13 +79,13 @@
                             <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.local.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.local.ts)</a>
                         </li>
                         <li>
-                            <a href="#authConfig" title="projects/front-office/src/environments/environment.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
+                            <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.prod.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.prod.ts)</a>
                         </li>
                         <li>
                             <a href="#authConfig" title="projects/front-office/src/environments/environment.prod.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.prod.ts)</a>
                         </li>
                         <li>
-                            <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.prod.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.prod.ts)</a>
+                            <a href="#authConfig" title="projects/front-office/src/environments/environment.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
                         </li>
                         <li>
                             <a href="#createApollo" title="projects/front-office/src/app/graphql.module.ts" ><b>createApollo</b>&nbsp;&nbsp;&nbsp;(projects/.../graphql.module.ts)</a>
@@ -109,13 +109,13 @@
                             <a href="#environment" title="projects/front-office/src/environments/environment.oort.local.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.local.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/front-office/src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
+                            <a href="#environment" title="projects/front-office/src/environments/environment.oort.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.prod.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="projects/front-office/src/environments/environment.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.prod.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/front-office/src/environments/environment.oort.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.prod.ts)</a>
+                            <a href="#environment" title="projects/front-office/src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.ts)</a>
                         </li>
                         <li>
                             <a href="#GET_DASHBOARD_BY_ID" title="projects/front-office/src/app/dashboard/pages/dashboard/graphql/queries.ts" ><b>GET_DASHBOARD_BY_ID</b>&nbsp;&nbsp;&nbsp;(projects/.../queries.ts)</a>
@@ -718,7 +718,7 @@
         </tbody>
     </table>
 </section>
-    <h3>projects/front-office/src/environments/environment.ts</h3>
+    <h3>projects/front-office/src/environments/environment.oort.prod.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -740,9 +740,9 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
-  issuer: &#x27;https://id-dev.oortcloud.tech/auth/realms/oort&#x27;,
-  redirectUri: &#x27;http://localhost:4200/&#x27;,
-  postLogoutRedirectUri: &#x27;http://localhost:4200/auth/&#x27;,
+  issuer: &#x27;https://id.oortcloud.tech/auth/realms/oort&#x27;,
+  redirectUri: &#x27;https://dms.oortcloud.tech/&#x27;,
+  postLogoutRedirectUri: &#x27;https://dms.oortcloud.tech/auth/&#x27;,
   clientId: &#x27;oort-client&#x27;,
   scope: &#x27;openid profile email offline_access&#x27;,
   responseType: &#x27;code&#x27;,
@@ -780,13 +780,13 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
-  production: false,
-  apiUrl: &#x27;http://localhost:3000&#x27;,
-  subscriptionApiUrl: &#x27;ws://localhost:3000&#x27;,
-  frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
-  backOfficeUri: &#x27;http://localhost:4200/&#x27;,
+  production: true,
+  apiUrl: &#x27;https://dms.oortcloud.tech/api&#x27;,
+  subscriptionApiUrl: &#x27;wss://dms.oortcloud.tech/api&#x27;,
+  frontOfficeUri: &#x27;https://dms.oortcloud.tech&#x27;,
+  backOfficeUri: &#x27;https://dms.oortcloud.tech/admin/&#x27;,
   module: &#x27;frontoffice&#x27;,
-  availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;, &#x27;test&#x27;],
+  availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;],
   authConfig,
   esriApiKey:
     &#x27;AAPKf2bae9b3f32943e2a8d58b0b96ffea3fj8Vt8JYDt1omhzN_lONXPRHN8B89umU-pA9t7ze1rfCIiiEVXizYEiFRFiVrl6wg&#x27;,
@@ -895,7 +895,7 @@
         </tbody>
     </table>
 </section>
-    <h3>projects/front-office/src/environments/environment.oort.prod.ts</h3>
+    <h3>projects/front-office/src/environments/environment.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -917,9 +917,9 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
-  issuer: &#x27;https://id.oortcloud.tech/auth/realms/oort&#x27;,
-  redirectUri: &#x27;https://dms.oortcloud.tech/&#x27;,
-  postLogoutRedirectUri: &#x27;https://dms.oortcloud.tech/auth/&#x27;,
+  issuer: &#x27;https://id-dev.oortcloud.tech/auth/realms/oort&#x27;,
+  redirectUri: &#x27;http://localhost:4200/&#x27;,
+  postLogoutRedirectUri: &#x27;http://localhost:4200/auth/&#x27;,
   clientId: &#x27;oort-client&#x27;,
   scope: &#x27;openid profile email offline_access&#x27;,
   responseType: &#x27;code&#x27;,
@@ -957,13 +957,13 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
-  production: true,
-  apiUrl: &#x27;https://dms.oortcloud.tech/api&#x27;,
-  subscriptionApiUrl: &#x27;wss://dms.oortcloud.tech/api&#x27;,
-  frontOfficeUri: &#x27;https://dms.oortcloud.tech&#x27;,
-  backOfficeUri: &#x27;https://dms.oortcloud.tech/admin/&#x27;,
+  production: false,
+  apiUrl: &#x27;http://localhost:3000&#x27;,
+  subscriptionApiUrl: &#x27;ws://localhost:3000&#x27;,
+  frontOfficeUri: &#x27;http://localhost:4200/&#x27;,
+  backOfficeUri: &#x27;http://localhost:4200/&#x27;,
   module: &#x27;frontoffice&#x27;,
-  availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;],
+  availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;, &#x27;test&#x27;],
   authConfig,
   esriApiKey:
     &#x27;AAPKf2bae9b3f32943e2a8d58b0b96ffea3fj8Vt8JYDt1omhzN_lONXPRHN8B89umU-pA9t7ze1rfCIiiEVXizYEiFRFiVrl6wg&#x27;,
