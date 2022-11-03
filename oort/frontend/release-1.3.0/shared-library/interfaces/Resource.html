@@ -161,6 +161,7 @@
                                         </a>
                                 </li>
                                 <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#metadata" 
 >
                                             metadata
@@ -619,6 +620,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -847,7 +853,7 @@ export interface Resource {
     canUpdateRecords: any;
     canDeleteRecords: any;
   };
-  metadata: any[];
+  metadata?: any[];
 }
 </code></pre>
     </div>

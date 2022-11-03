@@ -1958,7 +1958,7 @@ export class SafeRoleResourceFiltersComponent implements OnInit {
       filters.map((x) &#x3D;&gt; this.createAccessFilterFormGroup(x))
     );
     this.initialValue &#x3D; this.filtersFormArray.value;
-    this.filterFields &#x3D; this.resource.metadata
+    this.filterFields &#x3D; get(this.resource, &#x27;metadata&#x27;, [])
       .filter((x: any) &#x3D;&gt; x.filterable !&#x3D;&#x3D; false)
       .map((x: any) &#x3D;&gt; ({ ...x }));
 
