@@ -1,0 +1,2075 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeTabFilterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component for displaying the filtering options</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-tab-filter</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tab-filter.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tab-filter.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#inputs" >inputs</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#metaQuery" >metaQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#operators" >operators</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectedFields" >selectedFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#types" >types</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onAddFilter" >onAddFilter</a>
+                            </li>
+                            <li>
+                                <a href="#onAddFilterGroup" >onAddFilterGroup</a>
+                            </li>
+                            <li>
+                                <a href="#onChangeEditor" >onChangeEditor</a>
+                            </li>
+                            <li>
+                                <a href="#onDeleteFilter" >onDeleteFilter</a>
+                            </li>
+                            <li>
+                                <a href="#onDeleteFilterGroup" >onDeleteFilterGroup</a>
+                            </li>
+                            <li>
+                                <a href="#onKey" >onKey</a>
+                            </li>
+                            <li>
+                                <a href="#onSetField" >onSetField</a>
+                            </li>
+                            <li>
+                                <a href="#setCurrentDate" >setCurrentDate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#canDelete" >canDelete</a>
+                            </li>
+                            <li>
+                                <a href="#fields" >fields</a>
+                            </li>
+                            <li>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                <a href="#metaFields" >metaFields</a>
+                            </li>
+                            <li>
+                                <a href="#query" >query</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#delete" >delete</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#filters" >filters</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, queryBuilder: <a href="../injectables/QueryBuilderService.html" target="_self">QueryBuilderService</a>, gridService: <a href="../injectables/SafeGridService.html" target="_self">SafeGridService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:191</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructor function is a special function that is called when a new instance of the class is
+created.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that will be used to build forms.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>queryBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/QueryBuilderService.html" target="_self" >QueryBuilderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>This is the service that will be used to build the query.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>gridService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeGridService.html" target="_self" >SafeGridService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared grid service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canDelete"></a>
+                        <b>canDelete</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:172</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fields"></a>
+                        <b>fields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:169</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <b>form</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({})</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:168</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="metaFields"></a>
+                        <b>metaFields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:171</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="query"></a>
+                        <b>query</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:170</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="delete"></a>
+                        <b>delete</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:173</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="207"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:207</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAddFilter"></a>
+                    <span class="name">
+                        <span ><b>onAddFilter</b></span>
+                        <a href="#onAddFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAddFilter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="322"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:322</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a filter</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAddFilterGroup"></a>
+                    <span class="name">
+                        <span ><b>onAddFilterGroup</b></span>
+                        <a href="#onAddFilterGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAddFilterGroup()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="382"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:382</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a filter group</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onChangeEditor"></a>
+                    <span class="name">
+                        <span ><b>onChangeEditor</b></span>
+                        <a href="#onChangeEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onChangeEditor(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:269</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Change editor for a field.
+It is possible, for date questions, to use text editor instead of date selection.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of filter field</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDeleteFilter"></a>
+                    <span class="name">
+                        <span ><b>onDeleteFilter</b></span>
+                        <a href="#onDeleteFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDeleteFilter(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="364"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:364</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a filter</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the filter to delete</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDeleteFilterGroup"></a>
+                    <span class="name">
+                        <span ><b>onDeleteFilterGroup</b></span>
+                        <a href="#onDeleteFilterGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDeleteFilterGroup(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="374"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:374</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a filter group</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the filter group to delete</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onKey"></a>
+                    <span class="name">
+                        <span ><b>onKey</b></span>
+                        <a href="#onKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onKey(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, filterName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="283"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:283</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles the onKey event</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Event to handle</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filterName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Name of the filter where the user typed</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSetField"></a>
+                    <span class="name">
+                        <span ><b>onSetField</b></span>
+                        <a href="#onSetField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSetField(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="339"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:339</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles the setting of a field</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The event to handle</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The index of the field to set</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCurrentDate"></a>
+                    <span class="name">
+                        <span ><b>setCurrentDate</b></span>
+                        <a href="#setCurrentDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setCurrentDate(filterName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="259"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:259</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set the current date to today</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filterName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Name of the filter to set the date to</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inputs"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>inputs</b></span>
+                        <a href="#inputs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:191</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="metaQuery"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>metaQuery</b></span>
+                        <a href="#metaQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:178</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operators"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>operators</b></span>
+                        <a href="#operators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>OPERATORS</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:180</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedFields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>selectedFields</b></span>
+                        <a href="#selectedFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:175</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="types"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>types</b></span>
+                        <a href="#types"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>TYPES</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:177</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filters"></a>
+                        <span class="name"><b>filters</b><a href="#filters"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>filters()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:187</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Getter for the filters</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="../interfaces/Form.html" target="_self" >FormArray</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, OnInit, Output } from &#x27;@angular/core&#x27;;
+import { FormArray, FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { clone, isDate } from &#x27;lodash&#x27;;
+import { SafeApiProxyService } from &#x27;../../../services/api-proxy.service&#x27;;
+import { SafeGridService } from &#x27;../../../services/grid.service&#x27;;
+import { QueryBuilderService } from &#x27;../../../services/query-builder.service&#x27;;
+
+/**
+ * Defines the operators available for filtering
+ */
+const OPERATORS: any &#x3D; {
+  eq: {
+    value: &#x27;eq&#x27;,
+    label: &#x27;Is equal to&#x27;,
+  },
+  neq: {
+    value: &#x27;neq&#x27;,
+    label: &#x27;Is not equal to&#x27;,
+  },
+  gte: {
+    value: &#x27;gte&#x27;,
+    label: &#x27;Is greater than or equal to&#x27;,
+  },
+  gt: {
+    value: &#x27;gt&#x27;,
+    label: &#x27;Is greater than&#x27;,
+  },
+  lte: {
+    value: &#x27;lte&#x27;,
+    label: &#x27;Is less than or equal to&#x27;,
+  },
+  lt: {
+    value: &#x27;lt&#x27;,
+    label: &#x27;Is less than&#x27;,
+  },
+  isnull: {
+    value: &#x27;isnull&#x27;,
+    label: &#x27;Is null&#x27;,
+  },
+  isnotnull: {
+    value: &#x27;isnotnull&#x27;,
+    label: &#x27;Is not null&#x27;,
+  },
+  isempty: {
+    value: &#x27;isempty&#x27;,
+    label: &#x27;Is empty&#x27;,
+  },
+  isnotempty: {
+    value: &#x27;isnotempty&#x27;,
+    label: &#x27;Is not empty&#x27;,
+  },
+  contains: {
+    value: &#x27;contains&#x27;,
+    label: &#x27;Contains&#x27;,
+  },
+  doesnotcontain: {
+    value: &#x27;doesnotcontain&#x27;,
+    label: &#x27;Does not contain&#x27;,
+  },
+  startswith: {
+    value: &#x27;startswith&#x27;,
+    label: &#x27;Starts with&#x27;,
+  },
+  endswith: {
+    value: &#x27;endswith&#x27;,
+    label: &#x27;Ends with&#x27;,
+  },
+};
+/**
+ * Defines the operators allowed for each type
+ */
+const TYPES: any &#x3D; {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Int: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;],
+  },
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Float: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;],
+  },
+  // eslint-disable-next-line id-blacklist, @typescript-eslint/naming-convention
+  String: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [
+      &#x27;eq&#x27;,
+      &#x27;neq&#x27;,
+      &#x27;contains&#x27;,
+      &#x27;doesnotcontain&#x27;,
+      &#x27;startswith&#x27;,
+      &#x27;endswith&#x27;,
+      &#x27;isnull&#x27;,
+      &#x27;isnotnull&#x27;,
+      &#x27;isempty&#x27;,
+      &#x27;isnotempty&#x27;,
+    ],
+  },
+  // eslint-disable-next-line id-blacklist, @typescript-eslint/naming-convention
+  ID: {
+    defaultOperator: &#x27;contains&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;contains&#x27;, &#x27;doesnotcontain&#x27;, &#x27;startswith&#x27;],
+  },
+  // eslint-disable-next-line id-blacklist, @typescript-eslint/naming-convention
+  Form: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;],
+  },
+  // eslint-disable-next-line id-blacklist, @typescript-eslint/naming-convention
+  Boolean: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;],
+  },
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Date: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;],
+  },
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  DateTime: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;],
+  },
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Time: {
+    defaultOperator: &#x27;eq&#x27;,
+    operators: [&#x27;eq&#x27;, &#x27;neq&#x27;, &#x27;gte&#x27;, &#x27;gt&#x27;, &#x27;lte&#x27;, &#x27;lt&#x27;, &#x27;isnull&#x27;, &#x27;isnotnull&#x27;],
+  },
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  JSON: {
+    defaultOperator: &#x27;contains&#x27;,
+    operators: [
+      &#x27;eq&#x27;,
+      &#x27;neq&#x27;,
+      &#x27;contains&#x27;,
+      &#x27;doesnotcontain&#x27;,
+      &#x27;isempty&#x27;,
+      &#x27;isnotempty&#x27;,
+    ],
+  },
+};
+
+/**
+ * Defines the data types available
+ */
+const AVAILABLE_TYPES &#x3D; [
+  &#x27;Int&#x27;,
+  &#x27;Float&#x27;,
+  &#x27;String&#x27;,
+  &#x27;Boolean&#x27;,
+  &#x27;Date&#x27;,
+  &#x27;DateTime&#x27;,
+  &#x27;Time&#x27;,
+  &#x27;JSON&#x27;,
+  &#x27;ID&#x27;,
+  &#x27;Form&#x27;,
+];
+
+/**
+ * Component for displaying the filtering options
+ */
+@Component({
+  selector: &#x27;safe-tab-filter&#x27;,
+  templateUrl: &#x27;./tab-filter.component.html&#x27;,
+  styleUrls: [&#x27;./tab-filter.component.scss&#x27;],
+})
+export class SafeTabFilterComponent implements OnInit {
+  @Input() form: FormGroup &#x3D; new FormGroup({});
+  @Input() fields: any[] &#x3D; [];
+  @Input() query: any;
+  @Input() metaFields: any &#x3D; {};
+  @Input() canDelete &#x3D; false;
+  @Output() delete: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+  public selectedFields: any[] &#x3D; [];
+
+  public types: any &#x3D; TYPES;
+  private metaQuery: any;
+
+  public operators: any &#x3D; OPERATORS;
+
+  /**
+   * Getter for the filters
+   *
+   * @returns The filters in an array
+   */
+  get filters(): FormArray {
+    return this.form.get(&#x27;filters&#x27;) as FormArray;
+  }
+
+  private inputs &#x3D; &#x27;&#x27;;
+
+  /**
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created.
+   *
+   * @param formBuilder This is the service that will be used to build forms.
+   * @param queryBuilder This is the service that will be used to build the query.
+   * @param gridService Shared grid service
+   */
+  constructor(
+    private formBuilder: FormBuilder,
+    private queryBuilder: QueryBuilderService,
+    private gridService: SafeGridService
+  ) {}
+
+  ngOnInit(): void {
+    // TODO: move somewhere else
+    if (this.query) {
+      // Get MetaData from all scalar fields of the datasource
+      const queryWithAllScalarField &#x3D; clone(this.query);
+      queryWithAllScalarField.fields &#x3D; this.fields;
+      this.metaQuery &#x3D; this.queryBuilder.buildMetaQuery(
+        queryWithAllScalarField
+      );
+      if (this.metaQuery) {
+        this.metaQuery.subscribe(async (res: any) &#x3D;&gt; {
+          for (const field in res.data) {
+            if (Object.prototype.hasOwnProperty.call(res.data, field)) {
+              this.metaFields &#x3D; Object.assign({}, res.data[field]);
+              await this.gridService.populateMetaFields(this.metaFields);
+            }
+          }
+        });
+      }
+    } else {
+      this.gridService.populateMetaFields(this.metaFields);
+    }
+    this.form.value?.filters.forEach((x: any, index: number) &#x3D;&gt; {
+      if (x.field) {
+        const field &#x3D; this.fields.find((y) &#x3D;&gt; y.name &#x3D;&#x3D;&#x3D; x.field);
+        if (field &amp;&amp; field.type &amp;&amp; AVAILABLE_TYPES.includes(field.type.name)) {
+          const type &#x3D; field.name &#x3D;&#x3D;&#x3D; &#x27;form&#x27; ? &#x27;Form&#x27; : field.type.name;
+          this.selectedFields.splice(index, 1, {
+            name: field.name,
+            type,
+          });
+          if ([&#x27;Date&#x27;, &#x27;DateTime&#x27;].includes(type)) {
+            const valueAsDate &#x3D; new Date(x.value);
+            if (isDate(valueAsDate) &amp;&amp; isNaN(valueAsDate.getTime())) {
+              const formGroup &#x3D; this.filters.at(index) as FormGroup;
+              formGroup.get(&#x27;useExpression&#x27;)?.setValue(true);
+            }
+          }
+        } else {
+          this.selectedFields.splice(index, 1, {});
+        }
+      } else {
+        this.selectedFields.splice(index, 1, {});
+      }
+    });
+  }
+
+  /**
+   * Set the current date to today
+   *
+   * @param filterName Name of the filter to set the date to
+   */
+  setCurrentDate(filterName: string): void {
+    this.form.controls[filterName].setValue(&#x27;today()&#x27;);
+  }
+
+  /**
+   * Change editor for a field.
+   * It is possible, for date questions, to use text editor instead of date selection.
+   *
+   * @param index index of filter field
+   */
+  onChangeEditor(index: number): void {
+    const formGroup &#x3D; this.filters.at(index) as FormGroup;
+    formGroup
+      .get(&#x27;useExpression&#x27;)
+      ?.setValue(!formGroup.get(&#x27;useExpression&#x27;)?.value);
+    formGroup.get(&#x27;value&#x27;)?.setValue(null);
+  }
+
+  /**
+   * Handles the onKey event
+   *
+   * @param e Event to handle
+   * @param filterName Name of the filter where the user typed
+   */
+  onKey(e: any, filterName: string): void {
+    if (e.target.value &#x3D;&#x3D;&#x3D; &#x27;&#x27;) {
+      this.inputs &#x3D; &#x27;&#x27;;
+    }
+    if (e.keyCode &#x3D;&#x3D;&#x3D; 8) {
+      this.inputs &#x3D; this.inputs.slice(0, this.inputs.length - 1);
+    }
+    if (this.inputs.length &lt;&#x3D; 9) {
+      if (RegExp(&#x27;^[0-9]*$&#x27;).test(e.key)) {
+        if (this.inputs.length &#x3D;&#x3D;&#x3D; 3 || this.inputs.length &#x3D;&#x3D;&#x3D; 6) {
+          this.inputs +&#x3D; e.key + &#x27;/&#x27;;
+          e.target.value +&#x3D; &#x27;/&#x27;;
+        } else {
+          this.inputs +&#x3D; e.key;
+        }
+      } else if (e.key &#x3D;&#x3D;&#x3D; &#x27;/&#x27;) {
+        e.stopPropagation();
+        this.inputs &#x3D; this.inputs.slice(0, this.inputs.length - 1);
+      } else {
+        e.stopPropagation();
+        e.target.value &#x3D; e.target.value.replace(/[^0-9\/]/g, &#x27;&#x27;);
+      }
+    } else {
+      e.stopPropagation();
+      e.target.value &#x3D; this.inputs;
+    }
+    if (
+      this.inputs.length &gt; 9 &amp;&amp;
+      !RegExp(&#x27;\\d{4}\\/(0?[1-9]|1[012])\\/(0?[1-9]|[12][0-9]|3[01])*&#x27;).test(
+        this.inputs
+      )
+    ) {
+      this.form.controls[filterName].setErrors({ incorrect: true });
+    }
+  }
+
+  /**
+   * Adds a filter
+   */
+  onAddFilter(): void {
+    const filter &#x3D; this.formBuilder.group({
+      field: &#x27;&#x27;,
+      operator: &#x27;eq&#x27;,
+      value: null,
+      useExpression: false,
+    });
+    this.filters.push(filter);
+    this.selectedFields.push({});
+  }
+
+  /**
+   * Handles the setting of a field
+   *
+   * @param e The event to handle
+   * @param index The index of the field to set
+   */
+  onSetField(e: any, index: number): void {
+    if (e.value) {
+      const field &#x3D; this.fields.find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; e.value);
+      if (field &amp;&amp; field.type &amp;&amp; AVAILABLE_TYPES.includes(field.type.name)) {
+        const type &#x3D; field.name &#x3D;&#x3D;&#x3D; &#x27;form&#x27; ? &#x27;Form&#x27; : field.type.name;
+        const operator &#x3D; TYPES[type].defaultOperator;
+        this.filters.at(index).get(&#x27;operator&#x27;)?.setValue(operator);
+        this.filters.at(index).get(&#x27;value&#x27;)?.setValue(null);
+        this.selectedFields.splice(index, 1, {
+          name: field.name,
+          type,
+        });
+      } else {
+        this.selectedFields.splice(index, 1, {});
+      }
+    } else {
+      this.selectedFields.splice(index, 1, {});
+    }
+  }
+
+  /**
+   * Deletes a filter
+   *
+   * @param index The index of the filter to delete
+   */
+  onDeleteFilter(index: number): void {
+    this.filters.removeAt(index);
+    this.selectedFields.splice(index, 1);
+  }
+
+  /**
+   * Deletes a filter group
+   *
+   * @param index The index of the filter group to delete
+   */
+  onDeleteFilterGroup(index: number): void {
+    this.filters.removeAt(index);
+    this.selectedFields.splice(index, 1);
+  }
+
+  /**
+   * Adds a filter group
+   */
+  onAddFilterGroup(): void {
+    const filter &#x3D; this.formBuilder.group({
+      logic: &#x27;and&#x27;,
+      filters: this.formBuilder.array([]),
+    });
+    this.filters.push(filter);
+    this.selectedFields.push({});
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form [formGroup]&#x3D;&quot;form&quot;&gt;
+  &lt;div class&#x3D;&quot;filter-header&quot;&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{
+        &#x27;components.queryBuilder.filter.logic&#x27; | translate
+      }}&lt;/mat-label&gt;
+      &lt;mat-select formControlName&#x3D;&quot;logic&quot;&gt;
+        &lt;mat-option value&#x3D;&quot;or&quot;&gt;{{
+          &#x27;components.queryBuilder.filter.or&#x27; | translate
+        }}&lt;/mat-option&gt;
+        &lt;mat-option value&#x3D;&quot;and&quot;&gt;{{
+          &#x27;components.queryBuilder.filter.and&#x27; | translate
+        }}&lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+    &lt;safe-button
+      [isIcon]&#x3D;&quot;true&quot;
+      icon&#x3D;&quot;delete&quot;
+      (click)&#x3D;&quot;delete.emit(true)&quot;
+      variant&#x3D;&quot;danger&quot;
+      *ngIf&#x3D;&quot;canDelete&quot;
+    &gt;
+    &lt;/safe-button&gt;
+  &lt;/div&gt;
+  &lt;div
+    formArrayName&#x3D;&quot;filters&quot;
+    class&#x3D;&quot;filter-list&quot;
+    *ngIf&#x3D;&quot;selectedFields.length &gt; 0&quot;
+  &gt;
+    &lt;div *ngFor&#x3D;&quot;let filter of filters.controls; let i &#x3D; index&quot;&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;filters.at(i).value.logic&quot;&gt;
+        &lt;safe-tab-filter
+          [form]&#x3D;&quot;$any(filters.at(i))&quot;
+          [fields]&#x3D;&quot;fields&quot;
+          (delete)&#x3D;&quot;onDeleteFilterGroup(i)&quot;
+          [canDelete]&#x3D;&quot;true&quot;
+          [metaFields]&#x3D;&quot;metaFields&quot;
+        &gt;&lt;/safe-tab-filter&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;!filters.at(i).value.logic&quot;&gt;
+        &lt;div [formGroup]&#x3D;&quot;$any(filters.at(i))&quot; class&#x3D;&quot;filter-row&quot;&gt;
+          &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+            &lt;mat-label&gt;{{ &#x27;common.field.one&#x27; | translate }}&lt;/mat-label&gt;
+            &lt;mat-select
+              formControlName&#x3D;&quot;field&quot;
+              (selectionChange)&#x3D;&quot;onSetField($event, i)&quot;
+            &gt;
+              &lt;mat-option *ngFor&#x3D;&quot;let field of fields&quot; [value]&#x3D;&quot;field.name&quot;&gt;{{
+                field.name
+              }}&lt;/mat-option&gt;
+            &lt;/mat-select&gt;
+          &lt;/mat-form-field&gt;
+          &lt;ng-container *ngIf&#x3D;&quot;selectedFields[i].name&quot;&gt;
+            &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+              &lt;mat-label&gt;{{
+                &#x27;components.queryBuilder.filter.operator&#x27; | translate
+              }}&lt;/mat-label&gt;
+              &lt;mat-select formControlName&#x3D;&quot;operator&quot;&gt;
+                &lt;mat-option
+                  *ngFor&#x3D;&quot;
+                    let operator of types[selectedFields[i].type].operators
+                  &quot;
+                  [value]&#x3D;&quot;operators[operator].value&quot;
+                  &gt;{{ operators[operator].label }}&lt;/mat-option
+                &gt;
+              &lt;/mat-select&gt;
+            &lt;/mat-form-field&gt;
+            &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+              &lt;mat-label&gt;{{ &#x27;common.value.one&#x27; | translate }}&lt;/mat-label&gt;
+              &lt;ng-container
+                *ngIf&#x3D;&quot;[&#x27;Int&#x27;, &#x27;Float&#x27;].includes(selectedFields[i].type)&quot;
+              &gt;
+                &lt;input matInput formControlName&#x3D;&quot;value&quot; type&#x3D;&quot;number&quot; /&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngIf&#x3D;&quot;selectedFields[i].type &#x3D;&#x3D;&#x3D; &#x27;Boolean&#x27;&quot;&gt;
+                &lt;mat-select formControlName&#x3D;&quot;value&quot;&gt;
+                  &lt;mat-option [value]&#x3D;&quot;true&quot;&gt;{{
+                    &#x27;common.true&#x27; | translate
+                  }}&lt;/mat-option&gt;
+                  &lt;mat-option [value]&#x3D;&quot;false&quot;&gt;{{
+                    &#x27;common.false&#x27; | translate
+                  }}&lt;/mat-option&gt;
+                  &lt;mat-option [value]&#x3D;&quot;null&quot;&gt;{{
+                    &#x27;common.input.none&#x27; | translate
+                  }}&lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container
+                *ngIf&#x3D;&quot;
+                  [&#x27;String&#x27;, &#x27;Time&#x27;, &#x27;ID&#x27;, &#x27;Form&#x27;].includes(
+                    selectedFields[i].type
+                  )
+                &quot;
+              &gt;
+                &lt;mat-select
+                  formControlName&#x3D;&quot;value&quot;
+                  *ngIf&#x3D;&quot;
+                    metaFields[selectedFields[i].name] &amp;&amp;
+                    [&#x27;dropdown&#x27;, &#x27;radiogroup&#x27;].includes(
+                      metaFields[selectedFields[i].name].type
+                    )
+                  &quot;
+                &gt;
+                  &lt;mat-option
+                    *ngFor&#x3D;&quot;
+                      let choice of metaFields[selectedFields[i].name].choices
+                    &quot;
+                    [value]&#x3D;&quot;choice.value&quot;
+                    &gt;{{ choice.text }}&lt;/mat-option
+                  &gt;
+                &lt;/mat-select&gt;
+                &lt;input
+                  *ngIf&#x3D;&quot;
+                    !metaFields[selectedFields[i].name] ||
+                    ![&#x27;dropdown&#x27;, &#x27;radiogroup&#x27;].includes(
+                      metaFields[selectedFields[i].name].type
+                    )
+                  &quot;
+                  matInput
+                  formControlName&#x3D;&quot;value&quot;
+                  type&#x3D;&quot;string&quot;
+                /&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container *ngIf&#x3D;&quot;selectedFields[i].type &#x3D;&#x3D;&#x3D; &#x27;JSON&#x27;&quot;&gt;
+                &lt;mat-select
+                  formControlName&#x3D;&quot;value&quot;
+                  *ngIf&#x3D;&quot;!metaFields[selectedFields[i].name]&quot;
+                &gt;
+                  &lt;mat-option&gt;None&lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+                &lt;mat-select
+                  formControlName&#x3D;&quot;value&quot;
+                  multiple
+                  *ngIf&#x3D;&quot;metaFields[selectedFields[i].name]&quot;
+                &gt;
+                  &lt;mat-option
+                    *ngFor&#x3D;&quot;
+                      let choice of metaFields[selectedFields[i].name].choices
+                    &quot;
+                    [value]&#x3D;&quot;choice.value&quot;
+                    &gt;{{ choice.text }}&lt;/mat-option
+                  &gt;
+                &lt;/mat-select&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container
+                *ngIf&#x3D;&quot;
+                  [&#x27;Date&#x27;, &#x27;DateTime&#x27;].includes(selectedFields[i].type) &amp;&amp;
+                  $any(filters.at(i)).get(&#x27;useExpression&#x27;)?.value
+                &quot;
+              &gt;
+                &lt;input
+                  matInput
+                  matTooltip&#x3D;&quot;YYYY/MM/DD&quot;
+                  [matTooltipPosition]&#x3D;&quot;&#x27;above&#x27;&quot;
+                  formControlName&#x3D;&quot;value&quot;
+                  type&#x3D;&quot;text&quot;
+                  placeholder&#x3D;&quot;YYYY/MM/DD&quot;
+                /&gt;
+              &lt;/ng-container&gt;
+              &lt;input
+                *ngIf&#x3D;&quot;
+                  [&#x27;Date&#x27;, &#x27;DateTime&#x27;].includes(selectedFields[i].type) &amp;&amp;
+                  !$any(filters.at(i)).get(&#x27;useExpression&#x27;)?.value
+                &quot;
+                matInput
+                [matDatepicker]&#x3D;&quot;datePicker&quot;
+                formControlName&#x3D;&quot;value&quot;
+              /&gt;
+              &lt;mat-datepicker-toggle
+                *ngIf&#x3D;&quot;
+                  [&#x27;Date&#x27;, &#x27;DateTime&#x27;].includes(selectedFields[i].type) &amp;&amp;
+                  !$any(filters.at(i)).get(&#x27;useExpression&#x27;)?.value
+                &quot;
+                matSuffix
+                [for]&#x3D;&quot;datePicker&quot;
+              &gt;
+              &lt;/mat-datepicker-toggle&gt;
+              &lt;mat-datepicker #datePicker&gt;&lt;/mat-datepicker&gt;
+            &lt;/mat-form-field&gt;
+          &lt;/ng-container&gt;
+          &lt;safe-button
+            *ngIf&#x3D;&quot;[&#x27;Date&#x27;, &#x27;DateTime&#x27;].includes(selectedFields[i].type)&quot;
+            [isIcon]&#x3D;&quot;true&quot;
+            icon&#x3D;&quot;change_circle_outline&quot;
+            variant&#x3D;&quot;primary&quot;
+            (click)&#x3D;&quot;onChangeEditor(i)&quot;
+            [matTooltip]&#x3D;&quot;
+              ($any(filters.at(i)).get(&#x27;useExpression&#x27;)?.value
+                ? &#x27;components.queryBuilder.tooltip.filter.date.usePicker&#x27;
+                : &#x27;components.queryBuilder.tooltip.filter.date.useExpression&#x27;
+              ) | translate
+            &quot;
+          &gt;
+          &lt;/safe-button&gt;
+          &lt;safe-button
+            [isIcon]&#x3D;&quot;true&quot;
+            icon&#x3D;&quot;delete&quot;
+            (click)&#x3D;&quot;onDeleteFilter(i)&quot;
+            variant&#x3D;&quot;danger&quot;
+          &gt;
+          &lt;/safe-button&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;filter-buttons&quot;&gt;
+    &lt;safe-button (click)&#x3D;&quot;onAddFilter()&quot; category&#x3D;&quot;tertiary&quot;&gt;{{
+      &#x27;components.queryBuilder.filter.new&#x27; | translate
+    }}&lt;/safe-button&gt;
+    &lt;safe-button (click)&#x3D;&quot;onAddFilterGroup()&quot; category&#x3D;&quot;tertiary&quot;&gt;{{
+      &#x27;components.queryBuilder.filter.newGroup&#x27; | translate
+    }}&lt;/safe-button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./tab-filter.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.filter-header {
+  display: flex;
+  align-items: baseline;
+}
+
+.filter-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.filter-list {
+  margin-left: 24px;
+  border-left: 2px solid gray;
+  padding-left: 24px;
+  padding-bottom: 16px;
+}
+
+.filter-buttons {
+  padding: 8px 0;
+  safe-button:first-child {
+    margin-right: 8px;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form [formGroup]="form">  <div class="filter-header">    <mat-form-field appearance="outline">      <mat-label>{{        \'components.queryBuilder.filter.logic\' | translate      }}</mat-label>      <mat-select formControlName="logic">        <mat-option value="or">{{          \'components.queryBuilder.filter.or\' | translate        }}</mat-option>        <mat-option value="and">{{          \'components.queryBuilder.filter.and\' | translate        }}</mat-option>      </mat-select>    </mat-form-field>    <safe-button      [isIcon]="true"      icon="delete"      (click)="delete.emit(true)"      variant="danger"      *ngIf="canDelete"    >    </safe-button>  </div>  <div    formArrayName="filters"    class="filter-list"    *ngIf="selectedFields.length > 0"  >    <div *ngFor="let filter of filters.controls; let i = index">      <ng-container *ngIf="filters.at(i).value.logic">        <safe-tab-filter          [form]="$any(filters.at(i))"          [fields]="fields"          (delete)="onDeleteFilterGroup(i)"          [canDelete]="true"          [metaFields]="metaFields"        ></safe-tab-filter>      </ng-container>      <ng-container *ngIf="!filters.at(i).value.logic">        <div [formGroup]="$any(filters.at(i))" class="filter-row">          <mat-form-field appearance="outline">            <mat-label>{{ \'common.field.one\' | translate }}</mat-label>            <mat-select              formControlName="field"              (selectionChange)="onSetField($event, i)"            >              <mat-option *ngFor="let field of fields" [value]="field.name">{{                field.name              }}</mat-option>            </mat-select>          </mat-form-field>          <ng-container *ngIf="selectedFields[i].name">            <mat-form-field appearance="outline">              <mat-label>{{                \'components.queryBuilder.filter.operator\' | translate              }}</mat-label>              <mat-select formControlName="operator">                <mat-option                  *ngFor="                    let operator of types[selectedFields[i].type].operators                  "                  [value]="operators[operator].value"                  >{{ operators[operator].label }}</mat-option                >              </mat-select>            </mat-form-field>            <mat-form-field appearance="outline">              <mat-label>{{ \'common.value.one\' | translate }}</mat-label>              <ng-container                *ngIf="[\'Int\', \'Float\'].includes(selectedFields[i].type)"              >                <input matInput formControlName="value" type="number" />              </ng-container>              <ng-container *ngIf="selectedFields[i].type === \'Boolean\'">                <mat-select formControlName="value">                  <mat-option [value]="true">{{                    \'common.true\' | translate                  }}</mat-option>                  <mat-option [value]="false">{{                    \'common.false\' | translate                  }}</mat-option>                  <mat-option [value]="null">{{                    \'common.input.none\' | translate                  }}</mat-option>                </mat-select>              </ng-container>              <ng-container                *ngIf="                  [\'String\', \'Time\', \'ID\', \'Form\'].includes(                    selectedFields[i].type                  )                "              >                <mat-select                  formControlName="value"                  *ngIf="                    metaFields[selectedFields[i].name] &&                    [\'dropdown\', \'radiogroup\'].includes(                      metaFields[selectedFields[i].name].type                    )                  "                >                  <mat-option                    *ngFor="                      let choice of metaFields[selectedFields[i].name].choices                    "                    [value]="choice.value"                    >{{ choice.text }}</mat-option                  >                </mat-select>                <input                  *ngIf="                    !metaFields[selectedFields[i].name] ||                    ![\'dropdown\', \'radiogroup\'].includes(                      metaFields[selectedFields[i].name].type                    )                  "                  matInput                  formControlName="value"                  type="string"                />              </ng-container>              <ng-container *ngIf="selectedFields[i].type === \'JSON\'">                <mat-select                  formControlName="value"                  *ngIf="!metaFields[selectedFields[i].name]"                >                  <mat-option>None</mat-option>                </mat-select>                <mat-select                  formControlName="value"                  multiple                  *ngIf="metaFields[selectedFields[i].name]"                >                  <mat-option                    *ngFor="                      let choice of metaFields[selectedFields[i].name].choices                    "                    [value]="choice.value"                    >{{ choice.text }}</mat-option                  >                </mat-select>              </ng-container>              <ng-container                *ngIf="                  [\'Date\', \'DateTime\'].includes(selectedFields[i].type) &&                  $any(filters.at(i)).get(\'useExpression\')?.value                "              >                <input                  matInput                  matTooltip="YYYY/MM/DD"                  [matTooltipPosition]="\'above\'"                  formControlName="value"                  type="text"                  placeholder="YYYY/MM/DD"                />              </ng-container>              <input                *ngIf="                  [\'Date\', \'DateTime\'].includes(selectedFields[i].type) &&                  !$any(filters.at(i)).get(\'useExpression\')?.value                "                matInput                [matDatepicker]="datePicker"                formControlName="value"              />              <mat-datepicker-toggle                *ngIf="                  [\'Date\', \'DateTime\'].includes(selectedFields[i].type) &&                  !$any(filters.at(i)).get(\'useExpression\')?.value                "                matSuffix                [for]="datePicker"              >              </mat-datepicker-toggle>              <mat-datepicker #datePicker></mat-datepicker>            </mat-form-field>          </ng-container>          <safe-button            *ngIf="[\'Date\', \'DateTime\'].includes(selectedFields[i].type)"            [isIcon]="true"            icon="change_circle_outline"            variant="primary"            (click)="onChangeEditor(i)"            [matTooltip]="              ($any(filters.at(i)).get(\'useExpression\')?.value                ? \'components.queryBuilder.tooltip.filter.date.usePicker\'                : \'components.queryBuilder.tooltip.filter.date.useExpression\'              ) | translate            "          >          </safe-button>          <safe-button            [isIcon]="true"            icon="delete"            (click)="onDeleteFilter(i)"            variant="danger"          >          </safe-button>        </div>      </ng-container>    </div>  </div>  <div class="filter-buttons">    <safe-button (click)="onAddFilter()" category="tertiary">{{      \'components.queryBuilder.filter.new\' | translate    }}</safe-button>    <safe-button (click)="onAddFilterGroup()" category="tertiary">{{      \'components.queryBuilder.filter.newGroup\' | translate    }}</safe-button>  </div></form></div>'
+    var COMPONENTS = [{'name': 'AddLayoutComponent', 'selector': 'safe-add-layout'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'LayoutsParametersComponent', 'selector': 'safe-layouts-parameters'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEditRoleComponent', 'selector': 'safe-edit-role'},{'name': 'SafeEditTemplateComponent', 'selector': 'safe-edit-template'},{'name': 'SafeEditUserComponent', 'selector': 'safe-edit-user'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFloatingButtonSettingsComponent', 'selector': 'safe-floating-button-settings'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLayoutModalComponent', 'selector': 'safe-layout-modal'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviousButtonComponent', 'selector': 'safe-previous-button'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SafeTabFilterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeTabFilterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
