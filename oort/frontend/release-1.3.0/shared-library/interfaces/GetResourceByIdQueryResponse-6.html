@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widgets/chart-settings/graphql/queries.ts</code>
+            <code>projects/safe/src/lib/components/widgets/scheduler/graphql/queries.ts</code>
         </p>
 
 
@@ -185,76 +185,89 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
+import { Form } from &#x27;../../../../models/form.model&#x27;;
 import { Resource } from &#x27;../../../../models/resource.model&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET RESOURCES &#x3D;&#x3D;&#x3D;
-/** Graphql query for getting multiple resources with a cursor */
-export const GET_RESOURCES &#x3D; gql&#x60;
-  query GetResources($first: Int, $afterCursor: ID, $sortField: String) {
-    resources(first: $first, afterCursor: $afterCursor, sortField: $sortField) {
-      edges {
-        node {
-          id
-          name
-          forms {
-            id
-            name
-          }
-        }
-        cursor
+// &#x3D;&#x3D;&#x3D; GET FORM BY ID &#x3D;&#x3D;&#x3D;
+
+/** Graphql request for getting form data by its id */
+export const GET_FORM_BY_ID &#x3D; gql&#x60;
+  query GetFormById($id: ID!) {
+    form(id: $id) {
+      id
+      name
+      createdAt
+      structure
+      status
+      fields
+      resource {
+        id
       }
-      totalCount
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
+      canUpdate
     }
   }
 &#x60;;
 
-/** Model for GetResourcesQueryResponse object */
-export interface GetResourcesQueryResponse {
+/** Model for GetFormByIdQueryResponse object */
+export interface GetFormByIdQueryResponse {
   loading: boolean;
-  resources: {
-    edges: {
-      node: Resource;
-      cursor: string;
-    }[];
-    pageInfo: {
-      endCursor: string;
-      hasNextPage: boolean;
-    };
-    totalCount: number;
-  };
+  form: Form;
 }
 
-/** Graphql request to get resource */
-export const GET_RESOURCE &#x3D; gql&#x60;
-  query GetResource($id: ID!, $aggregationIds: [ID]) {
+// &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
+
+/** Graphql request for getting data of a resource by its id */
+export const GET_RESOURCE_BY_ID &#x3D; gql&#x60;
+  query GetResourceById($id: ID!, $filter: JSON, $display: Boolean) {
     resource(id: $id) {
       id
       name
-      queryName
-      forms {
-        id
-        name
-      }
-      aggregations(ids: $aggregationIds) {
+      createdAt
+      records(filter: $filter) {
         edges {
           node {
             id
-            name
-            sourceFields
-            pipeline
-            createdAt
+            data(display: $display)
           }
+          cursor
         }
+        totalCount
         pageInfo {
           hasNextPage
           endCursor
         }
-        totalCount
       }
+      fields
+      forms {
+        id
+        name
+        status
+        createdAt
+        recordsCount
+        core
+        canUpdate
+        canDelete
+      }
+      coreForm {
+        uniqueRecord {
+          id
+        }
+      }
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
+      }
+      canUpdate
     }
   }
 &#x60;;

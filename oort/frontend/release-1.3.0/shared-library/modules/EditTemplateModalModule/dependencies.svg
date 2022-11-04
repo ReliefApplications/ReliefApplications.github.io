@@ -18,13 +18,13 @@
 <title>cluster_EditTemplateModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="160,-40.8 160,-92.8 370,-92.8 370,-40.8 160,-40.8"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_EditTemplateModalModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 152,-92.8 152,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_EditTemplateModalModule_exports</title>
 <polygon fill="none" stroke="black" points="86,-170.8 86,-222.8 300,-222.8 300,-170.8 86,-170.8"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_EditTemplateModalModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 152,-92.8 152,-40.8 16,-40.8"/>
 </g>
 <!-- EditTemplateModalComponent -->
 <g id="node1" class="node">
