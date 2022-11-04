@@ -18,13 +18,13 @@
 <title>cluster_TabButtonsModule_imports</title>
 <polygon fill="none" stroke="black" points="186,-40.8 186,-92.8 607,-92.8 607,-40.8 186,-40.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_TabButtonsModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 178,-92.8 178,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_TabButtonsModule_exports</title>
 <polygon fill="none" stroke="black" points="233,-170.8 233,-222.8 399,-222.8 399,-170.8 233,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_TabButtonsModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 178,-92.8 178,-40.8 16,-40.8"/>
 </g>
 <!-- TabButtonsComponent -->
 <g id="node1" class="node">

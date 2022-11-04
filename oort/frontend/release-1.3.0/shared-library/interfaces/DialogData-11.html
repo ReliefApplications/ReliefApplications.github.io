@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/aggregation/add-aggregation-modal/add-aggregation-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/aggregation/edit-aggregation-modal/edit-aggregation-modal.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Data needed for the dialog, should contain an aggregations array, a form and a resource</p>
+                <p>Interface describing the structure of the data displayed in the dialog</p>
 
             </p>
 
@@ -91,20 +91,13 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#aggregations" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#aggregation" 
 >
-                                            aggregations
+                                            aggregation
                                         </a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#form" 
->
-                                            form
-                                        </a>
-                                </li>
-                                <li>
-                                            <span class="modifier">Optional</span>
                                         <a href="#resource" 
 >
                                             resource
@@ -125,9 +118,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="aggregations"></a>
-                                        <span class="name "><b>aggregations</b>
-                                            <a href="#aggregations">
+                                        <a name="aggregation"></a>
+                                        <span class="name "><b>aggregation</b>
+                                            <a href="#aggregation">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -135,7 +128,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>aggregations:         <code><a href="../interfaces/Aggregation.html" target="_self" >Aggregation[]</a></code>
+                                        <code>aggregation:         <code><a href="../interfaces/Aggregation.html" target="_self" >Aggregation</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -143,40 +136,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Aggregation.html" target="_self" >Aggregation[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="form"></a>
-                                        <span class="name "><b>form</b>
-                                            <a href="#form">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>form:         <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >Form</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/Aggregation.html" target="_self" >Aggregation</a></code>
 
                                         </td>
                                     </tr>
@@ -219,11 +179,6 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -235,122 +190,69 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from &#x27;@angular/material/dialog&#x27;;
-import { Form } from &#x27;../../../models/form.model&#x27;;
-import { Resource } from &#x27;../../../models/resource.model&#x27;;
-import { SafeEditAggregationModalComponent } from &#x27;../edit-aggregation-modal/edit-aggregation-modal.component&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 import { Aggregation } from &#x27;../../../models/aggregation.model&#x27;;
-import { SafeAggregationService } from &#x27;../../../services/aggregation/aggregation.service&#x27;;
-import {
-  GetResourceAggregationsResponse,
-  GET_RESOURCE_AGGREGATIONS,
-} from &#x27;./graphql/queries&#x27;;
-import { Apollo, QueryRef } from &#x27;apollo-angular&#x27;;
-import { FormControl } from &#x27;@angular/forms&#x27;;
-import { SafeGraphQLSelectComponent } from &#x27;../../graphql-select/graphql-select.component&#x27;;
+import { Resource } from &#x27;../../../models/resource.model&#x27;;
+import { createAggregationForm } from &#x27;../../ui/aggregation-builder/aggregation-builder-forms&#x27;;
 
 /**
- * Data needed for the dialog, should contain an aggregations array, a form and a resource
+ * Interface describing the structure of the data displayed in the dialog
  */
 interface DialogData {
-  aggregations: Aggregation[];
-  form?: Form;
-  resource?: Resource;
+  aggregation?: Aggregation;
+  resource: Resource;
 }
 
 /**
- * Modal to add or select an aggregation.
- * Result of the action will be added to the component list that triggered the modal.
+ * Modal to edit aggregation.
  */
 @Component({
-  selector: &#x27;safe-add-aggregation-modal&#x27;,
-  templateUrl: &#x27;./add-aggregation-modal.component.html&#x27;,
-  styleUrls: [&#x27;./add-aggregation-modal.component.scss&#x27;],
+  selector: &#x27;safe-edit-aggregation-modal&#x27;,
+  templateUrl: &#x27;./edit-aggregation-modal.component.html&#x27;,
+  styleUrls: [&#x27;./edit-aggregation-modal.component.scss&#x27;],
 })
-export class AddAggregationModalComponent implements OnInit {
-  private form?: Form;
-  private resource?: Resource;
-  public aggregations: Aggregation[] &#x3D; [];
-  public nextStep &#x3D; false;
-
-  public queryRef!: QueryRef&lt;GetResourceAggregationsResponse&gt;;
-
-  public selectedAggregationControl &#x3D; new FormControl(&#x27;&#x27;);
-
-  /** Reference to graphql select for layout */
-  @ViewChild(SafeGraphQLSelectComponent)
-  aggregationSelect?: SafeGraphQLSelectComponent;
+export class SafeEditAggregationModalComponent implements OnInit {
+  public formGroup!: FormGroup;
+  public resource!: Resource;
+  // public templates: any[] &#x3D; [];
+  // public layoutPreviewData!: { form: FormGroup; defaultLayout: any };
 
   /**
-   * Modal to add or select an aggregation.
-   * Result of the action will be added to the component list that triggered the modal.
+   * Modal to edit aggregation.
    *
-   * @param dialogRef Material dialog reference
-   * @param dialog Material dialog instance
-   * @param apollo Apollo client service
-   * @param data Data used by the modal
-   * @param aggregationService Shared aggregation service
+   * @param dialogRef This is the reference of the dialog that will be opened.
+   * @param data This is the data that is passed to the modal when it is opened.
    */
   constructor(
-    private dialogRef: MatDialogRef&lt;AddAggregationModalComponent&gt;,
-    private dialog: MatDialog,
-    private apollo: Apollo,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    private aggregationService: SafeAggregationService
-  ) {
-    this.aggregations &#x3D; data.aggregations;
-    this.form &#x3D; data.form;
-    this.resource &#x3D; data.resource;
-  }
+    public dialogRef: MatDialogRef&lt;SafeEditAggregationModalComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+  ) {}
 
   ngOnInit(): void {
-    this.queryRef &#x3D; this.apollo.watchQuery&lt;GetResourceAggregationsResponse&gt;({
-      query: GET_RESOURCE_AGGREGATIONS,
-      variables: {
-        resource: this.resource?.id,
-      },
-    });
-
-    // emits selected aggregation
-    this.selectedAggregationControl.valueChanges.subscribe((value) &#x3D;&gt; {
-      if (value) {
-        this.dialogRef.close(
-          this.aggregationSelect?.elements
-            .getValue()
-            .find((x) &#x3D;&gt; x.id &#x3D;&#x3D;&#x3D; value)
-        );
-      }
-    });
+    this.resource &#x3D; this.data.resource;
+    this.formGroup &#x3D; createAggregationForm(this.data.aggregation);
+    // TODO: edit with the parameters the aggregation has
+    // this.formGroup &#x3D; this.formBuilder.group({
+    //   name: [this.data.aggregation?.name, Validators.required],
+    //   query: createQueryForm(this.data.aggregation?.query),
+    //   display: createDisplayForm(this.data.aggregation?.display),
+    // });
+    // this.layoutPreviewData &#x3D; {
+    //   form: this.form,
+    //   defaultLayout: this.data.layout?.display,
+    // };
+    // this.form.get(&#x27;display&#x27;)?.valueChanges.subscribe((value: any) &#x3D;&gt; {
+    //   this.layoutPreviewData.defaultLayout &#x3D; value;
+    // });
   }
 
   /**
-   * Opens the panel to create a new aggregation.
+   * Closes the modal sending tile form value.
    */
-  public onCreate(): void {
-    const dialogRef &#x3D; this.dialog.open(SafeEditAggregationModalComponent, {
-      disableClose: true,
-      data: {
-        resource: this.resource,
-      },
-    });
-    dialogRef.afterClosed().subscribe((aggregation) &#x3D;&gt; {
-      if (aggregation) {
-        this.aggregationService
-          .addAggregation(aggregation, this.resource?.id, this.form?.id)
-          .subscribe((res) &#x3D;&gt; {
-            if (res.data?.addAggregation) {
-              this.dialogRef.close(res.data.addAggregation);
-            } else {
-              this.dialogRef.close();
-            }
-          });
-      }
-    });
+  onSubmit(): void {
+    this.dialogRef.close(this.formGroup?.getRawValue());
   }
 }
 </code></pre>

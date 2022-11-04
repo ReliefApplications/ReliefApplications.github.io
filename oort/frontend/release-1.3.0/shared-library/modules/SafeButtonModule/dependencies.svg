@@ -14,13 +14,13 @@
 <title>cluster_SafeButtonModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 464,-230.8 464,-32.8 8,-32.8"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeButtonModule_imports</title>
-<polygon fill="none" stroke="black" points="184,-40.8 184,-92.8 456,-92.8 456,-40.8 184,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeButtonModule_exports</title>
 <polygon fill="none" stroke="black" points="174,-170.8 174,-222.8 338,-222.8 338,-170.8 174,-170.8"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeButtonModule_imports</title>
+<polygon fill="none" stroke="black" points="184,-40.8 184,-92.8 456,-92.8 456,-40.8 184,-40.8"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeButtonModule_declarations</title>
