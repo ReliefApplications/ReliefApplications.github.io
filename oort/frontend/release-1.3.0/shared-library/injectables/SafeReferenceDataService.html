@@ -339,8 +339,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="211"
-                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:211</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:217</a></div>
                 </td>
             </tr>
 
@@ -418,8 +418,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="262"
-                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:262</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:268</a></div>
                 </td>
             </tr>
 
@@ -611,8 +611,8 @@ Include caching for requests to optimise number of requests.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="144"
-                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:144</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:150</a></div>
                 </td>
             </tr>
 
@@ -772,7 +772,7 @@ Include caching for requests to optimise number of requests.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="277" class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:277</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="283" class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:283</a></div>
                         </td>
                     </tr>
 
@@ -937,8 +937,13 @@ export class SafeReferenceDataService {
       operator: string;
     }
   ): Promise&lt;{ value: string | number; text: string }[]&gt; {
+    const sortByDisplayField &#x3D; (a: any, b: any) &#x3D;&gt;
+      a[displayField] &gt; b[displayField] ? 1 : -1;
+
     // get items
-    const { items, valueField } &#x3D; await this.getItems(referenceDataID);
+    const { items: items_, valueField } &#x3D; await this.getItems(referenceDataID);
+    // sort items by displayField
+    const items &#x3D; items_.sort(sortByDisplayField);
     // if we ask to filter
     if (filter) {
       const { items: foreignItems, valueField: foreignValueField } &#x3D;
@@ -954,6 +959,7 @@ export class SafeReferenceDataService {
             item[filter.localField]
           )
         )
+        .sort(sortByDisplayField)
         .map((item) &#x3D;&gt; ({
           value: item[valueField],
           text: item[displayField],
