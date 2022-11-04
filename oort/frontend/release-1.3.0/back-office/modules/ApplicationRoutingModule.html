@@ -185,9 +185,19 @@ const routes: Routes &#x3D; [
                   &quot;import(\
                     &#x27;./pages/position-attributes/position-attributes.module&#x27;\
                   ).then((m) &#x3D;&gt; m.PositionAttributesModule)&quot;,
+                data: {
+                  breadcrumb: {
+                    alias: &#x27;@attribute&#x27;,
+                  },
+                },
                 // canActivate: [SafePermissionGuard]
               },
             ],
+            data: {
+              breadcrumb: {
+                key: &#x27;common.attribute.few&#x27;,
+              },
+            },
           },
           {
             path: &#x27;channels&#x27;,
