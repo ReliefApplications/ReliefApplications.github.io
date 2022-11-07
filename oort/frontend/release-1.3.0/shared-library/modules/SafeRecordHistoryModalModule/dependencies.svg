@@ -18,13 +18,13 @@
 <title>cluster_SafeRecordHistoryModalModule_imports</title>
 <polygon fill="none" stroke="black" points="240,-40.8 240,-92.8 561,-92.8 561,-40.8 240,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeRecordHistoryModalModule_exports</title>
-<polygon fill="none" stroke="black" points="221,-170.8 221,-222.8 441,-222.8 441,-170.8 221,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeRecordHistoryModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 232,-92.8 232,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeRecordHistoryModalModule_exports</title>
+<polygon fill="none" stroke="black" points="221,-170.8 221,-222.8 441,-222.8 441,-170.8 221,-170.8"/>
 </g>
 <!-- RecordHistoryModalComponent -->
 <g id="node1" class="node">

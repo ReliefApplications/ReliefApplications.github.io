@@ -14,13 +14,13 @@
 <title>cluster_SafePaletteControlModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-295.8 338,-295.8 338,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafePaletteControlModule_exports</title>
-<polygon fill="none" stroke="black" points="70,-235.8 70,-287.8 276,-287.8 276,-235.8 70,-235.8"/>
-</g>
 <g id="clust3" class="cluster">
 <title>cluster_SafePaletteControlModule_SafePaletteControlComponent_providers</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-157.8 330,-157.8 330,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafePaletteControlModule_exports</title>
+<polygon fill="none" stroke="black" points="70,-235.8 70,-287.8 276,-287.8 276,-235.8 70,-235.8"/>
 </g>
 <!-- SafePaletteControlComponent -->
 <g id="node1" class="node">

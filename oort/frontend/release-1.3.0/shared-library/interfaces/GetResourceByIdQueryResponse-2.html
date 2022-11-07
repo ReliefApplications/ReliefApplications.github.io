@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Model for GetResourceByIdQueryResponse object</p>
+                <p>Interface for GET_RESOURCE_AGGREGATIONS query</p>
 
             </p>
 
@@ -215,11 +215,26 @@ export const GET_RESOURCE_AGGREGATIONS &#x3D; gql&#x60;
   }
 &#x60;;
 
-// &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
-/** Model for GetResourceByIdQueryResponse object */
+/** Interface for GET_RESOURCE_AGGREGATIONS query */
 export interface GetResourceByIdQueryResponse {
   loading: boolean;
   resource: Resource;
+}
+
+/** Query definition to get aggregation data */
+export const GET_AGGREGATION_DATA &#x3D; gql&#x60;
+  query GetAggregationData($resource: ID!, $aggregation: ID!, $mapping: JSON) {
+    recordsAggregation(
+      resource: $resource
+      aggregation: $aggregation
+      mapping: $mapping
+    )
+  }
+&#x60;;
+
+/** Interface for get aggregation data query */
+export interface GetAggregationDataQueryResponse {
+  recordsAggregation: any[];
 }
 </code></pre>
     </div>

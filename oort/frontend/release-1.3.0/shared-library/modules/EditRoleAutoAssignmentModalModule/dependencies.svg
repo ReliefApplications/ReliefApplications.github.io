@@ -14,10 +14,6 @@
 <title>cluster_EditRoleAutoAssignmentModalModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 579,-230.8 579,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_EditRoleAutoAssignmentModalModule_exports</title>
-<polygon fill="none" stroke="black" points="79,-170.8 79,-222.8 361,-222.8 361,-170.8 79,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_EditRoleAutoAssignmentModalModule_declarations</title>
 <polygon fill="none" stroke="black" points="293,-40.8 293,-92.8 571,-92.8 571,-40.8 293,-40.8"/>
@@ -25,6 +21,10 @@
 <g id="clust4" class="cluster">
 <title>cluster_EditRoleAutoAssignmentModalModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 285,-92.8 285,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_EditRoleAutoAssignmentModalModule_exports</title>
+<polygon fill="none" stroke="black" points="79,-170.8 79,-222.8 361,-222.8 361,-170.8 79,-170.8"/>
 </g>
 <!-- EditRoleAutoAssignmentModalComponent -->
 <g id="node1" class="node">

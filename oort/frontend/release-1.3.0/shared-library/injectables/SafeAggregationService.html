@@ -90,6 +90,9 @@
                                 <a href="#addAggregation" >addAggregation</a>
                             </li>
                             <li>
+                                <a href="#aggregationDataQuery" >aggregationDataQuery</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#deleteAggregation" >deleteAggregation</a>
                             </li>
@@ -124,7 +127,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:36</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:40</a></div>
                             </td>
                         </tr>
 
@@ -196,8 +199,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="109"
-                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:109</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:136</a></div>
                 </td>
             </tr>
 
@@ -289,6 +292,115 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="aggregationDataQuery"></a>
+                    <span class="name">
+                        <span ><b>aggregationDataQuery</b></span>
+                        <a href="#aggregationDataQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>aggregationDataQuery(resource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, aggregation: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, mapping?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Builds the aggregation query from aggregation definition</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>resource</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Resource Id</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>aggregation</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Aggregation definition</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mapping</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>aggregation mapping ( category, field, series )</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ApolloQueryResult&lt;GetAggregationDataQueryResponse&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Aggregation query</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="deleteAggregation"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -307,8 +419,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="128"
-                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:128</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="155"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:155</a></div>
                 </td>
             </tr>
 
@@ -418,8 +530,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="84"
-                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:84</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:111</a></div>
                 </td>
             </tr>
 
@@ -545,8 +657,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">projects/safe/src/lib/services/aggregation/aggregation.service.ts:56</a></div>
                 </td>
             </tr>
 
@@ -633,7 +745,9 @@ import {
   EDIT_AGGREGATION,
 } from &#x27;./graphql/mutations&#x27;;
 import {
+  GetAggregationDataQueryResponse,
   GetResourceByIdQueryResponse,
+  GET_AGGREGATION_DATA,
   GET_RESOURCE_AGGREGATIONS,
 } from &#x27;./graphql/queries&#x27;;
 import {
@@ -641,6 +755,8 @@ import {
   AggregationConnection,
 } from &#x27;../../models/aggregation.model&#x27;;
 import { Apollo } from &#x27;apollo-angular&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { ApolloQueryResult } from &#x27;@apollo/client&#x27;;
 
 /** Fallback AggregationConnection */
 const FALLBACK_AGGREGATIONS: AggregationConnection &#x3D; {
@@ -695,6 +811,29 @@ export class SafeAggregationService {
           return res.data.resource.aggregations || FALLBACK_AGGREGATIONS;
         }
       });
+  }
+
+  /**
+   * Builds the aggregation query from aggregation definition
+   *
+   * @param resource Resource Id
+   * @param aggregation Aggregation definition
+   * @param mapping aggregation mapping ( category, field, series )
+   * @returns Aggregation query
+   */
+  aggregationDataQuery(
+    resource: string,
+    aggregation: string,
+    mapping?: any
+  ): Observable&lt;ApolloQueryResult&lt;GetAggregationDataQueryResponse&gt;&gt; {
+    return this.apollo.query&lt;GetAggregationDataQueryResponse&gt;({
+      query: GET_AGGREGATION_DATA,
+      variables: {
+        resource,
+        aggregation,
+        mapping,
+      },
+    });
   }
 
   /**
