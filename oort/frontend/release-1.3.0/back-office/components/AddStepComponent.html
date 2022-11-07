@@ -1647,7 +1647,8 @@ export class AddStepComponent implements OnInit, OnDestroy {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;form [formGroup]&#x3D;&quot;stepForm&quot;&gt;
-  &lt;div class&#x3D;&quot;flex flex-col&quot; [ngSwitch]&#x3D;&quot;stage&quot;&gt;
+  &lt;div class&#x3D;&quot;flex flex-col items-center&quot; [ngSwitch]&#x3D;&quot;stage&quot;&gt;
+    &lt;!-- Selection of type of content --&gt;
     &lt;ng-container *ngSwitchCase&#x3D;&quot;1&quot;&gt;
       &lt;h2&gt;{{ &#x27;pages.workflow.addStep.selectType&#x27; | translate }}&lt;/h2&gt;
       &lt;safe-content-choice
@@ -1655,28 +1656,35 @@ export class AddStepComponent implements OnInit, OnDestroy {
         [contentTypes]&#x3D;&quot;contentTypes&quot;
       &gt;&lt;/safe-content-choice&gt;
     &lt;/ng-container&gt;
+    &lt;!-- Form selection --&gt;
     &lt;ng-container *ngSwitchCase&#x3D;&quot;2&quot;&gt;
-      &lt;h2&gt;{{ &#x27;pages.forms.title&#x27; | translate }}&lt;/h2&gt;
-      &lt;safe-forms-dropdown
-        [forms$]&#x3D;&quot;forms$&quot;
-        [label]&#x3D;&quot;&#x27;models.form.select&#x27; | translate&quot;
-        [sourceControl]&#x3D;&quot;stepForm.controls.content&quot;
-        [loadingMore]&#x3D;&quot;loadingMore&quot;
-        (filter)&#x3D;&quot;onFilterDataSource($event)&quot;
-        (scrolled)&#x3D;&quot;onScrollDataSource($event)&quot;
-      &gt;&lt;/safe-forms-dropdown&gt;
-      &lt;safe-button
-        icon&#x3D;&quot;add&quot;
-        category&#x3D;&quot;secondary&quot;
-        variant&#x3D;&quot;primary&quot;
-        (click)&#x3D;&quot;onAdd()&quot;
-        [disabled]&#x3D;&quot;!canCreateForm&quot;
-      &gt;
-        {{ &#x27;models.form.create&#x27; | translate }}
-      &lt;/safe-button&gt;
+      &lt;div class&#x3D;&quot;flex flex-col w-80 items-center&quot;&gt;
+        &lt;!-- Existing form --&gt;
+        &lt;safe-forms-dropdown
+          [forms$]&#x3D;&quot;forms$&quot;
+          [label]&#x3D;&quot;&#x27;models.form.select&#x27; | translate&quot;
+          [sourceControl]&#x3D;&quot;stepForm.controls.content&quot;
+          [loadingMore]&#x3D;&quot;loadingMore&quot;
+          (filter)&#x3D;&quot;onFilterDataSource($event)&quot;
+          (scrolled)&#x3D;&quot;onScrollDataSource($event)&quot;
+        &gt;&lt;/safe-forms-dropdown&gt;
+        &lt;safe-divider [text]&#x3D;&quot;&#x27;or&#x27;&quot;&gt;&lt;/safe-divider&gt;
+        &lt;!-- New form --&gt;
+        &lt;safe-button
+          class&#x3D;&quot;mt-4&quot;
+          icon&#x3D;&quot;add&quot;
+          category&#x3D;&quot;secondary&quot;
+          variant&#x3D;&quot;primary&quot;
+          (click)&#x3D;&quot;onAdd()&quot;
+          [disabled]&#x3D;&quot;!canCreateForm&quot;
+        &gt;
+          {{ &#x27;models.form.create&#x27; | translate }}
+        &lt;/safe-button&gt;
+      &lt;/div&gt;
     &lt;/ng-container&gt;
   &lt;/div&gt;
 &lt;/form&gt;
+&lt;!-- Actions --&gt;
 &lt;div class&#x3D;&quot;add-step-stepper&quot; *ngIf&#x3D;&quot;stage !&#x3D;&#x3D; 1&quot;&gt;
   &lt;safe-button [disabled]&#x3D;&quot;stage &lt;&#x3D; 1&quot; (click)&#x3D;&quot;onBack()&quot;&gt;{{
     &#x27;common.back&#x27; | translate
@@ -1738,7 +1746,7 @@ safe-content-choice {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><form [formGroup]="stepForm">  <div class="flex flex-col" [ngSwitch]="stage">    <ng-container *ngSwitchCase="1">      <h2>{{ \'pages.workflow.addStep.selectType\' | translate }}</h2>      <safe-content-choice        formControlName="type"        [contentTypes]="contentTypes"      ></safe-content-choice>    </ng-container>    <ng-container *ngSwitchCase="2">      <h2>{{ \'pages.forms.title\' | translate }}</h2>      <safe-forms-dropdown        [forms$]="forms$"        [label]="\'models.form.select\' | translate"        [sourceControl]="stepForm.controls.content"        [loadingMore]="loadingMore"        (filter)="onFilterDataSource($event)"        (scrolled)="onScrollDataSource($event)"      ></safe-forms-dropdown>      <safe-button        icon="add"        category="secondary"        variant="primary"        (click)="onAdd()"        [disabled]="!canCreateForm"      >        {{ \'models.form.create\' | translate }}      </safe-button>    </ng-container>  </div></form><div class="add-step-stepper" *ngIf="stage !== 1">  <safe-button [disabled]="stage <= 1" (click)="onBack()">{{    \'common.back\' | translate  }}</safe-button>  <safe-button    category="secondary"    variant="primary"    (click)="onNext()"    [disabled]="!isStageValid(stage)"    >{{ \'common.next\' | translate }}</safe-button  ></div></div>'
+        var COMPONENT_TEMPLATE = '<div><form [formGroup]="stepForm">  <div class="flex flex-col items-center" [ngSwitch]="stage">    <!-- Selection of type of content -->    <ng-container *ngSwitchCase="1">      <h2>{{ \'pages.workflow.addStep.selectType\' | translate }}</h2>      <safe-content-choice        formControlName="type"        [contentTypes]="contentTypes"      ></safe-content-choice>    </ng-container>    <!-- Form selection -->    <ng-container *ngSwitchCase="2">      <div class="flex flex-col w-80 items-center">        <!-- Existing form -->        <safe-forms-dropdown          [forms$]="forms$"          [label]="\'models.form.select\' | translate"          [sourceControl]="stepForm.controls.content"          [loadingMore]="loadingMore"          (filter)="onFilterDataSource($event)"          (scrolled)="onScrollDataSource($event)"        ></safe-forms-dropdown>        <safe-divider [text]="\'or\'"></safe-divider>        <!-- New form -->        <safe-button          class="mt-4"          icon="add"          category="secondary"          variant="primary"          (click)="onAdd()"          [disabled]="!canCreateForm"        >          {{ \'models.form.create\' | translate }}        </safe-button>      </div>    </ng-container>  </div></form><!-- Actions --><div class="add-step-stepper" *ngIf="stage !== 1">  <safe-button [disabled]="stage <= 1" (click)="onBack()">{{    \'common.back\' | translate  }}</safe-button>  <safe-button    category="secondary"    variant="primary"    (click)="onNext()"    [disabled]="!isStageValid(stage)"    >{{ \'common.next\' | translate }}</safe-button  ></div></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AddStepComponent'};
