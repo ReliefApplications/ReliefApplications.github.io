@@ -537,6 +537,10 @@ export class SafeAlertComponent implements OnChanges {
                 <pre class="line-numbers"><code class="language-scss">$spacing-left: 0.8em;
 $spacing-right: 0.8em;
 
+:host {
+  display: block;
+}
+
 .safe-alert-content {
   flex-grow: 1;
   padding: $spacing-left $spacing-right;

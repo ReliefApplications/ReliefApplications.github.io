@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/record-history-modal/record-history-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/record-modal/record-modal.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>This interface describes the structure of the data that will be displayed in the dialog modal</p>
+                <p>Interface that describes the structure of the data that will be shown in the dialog</p>
 
             </p>
 
@@ -91,15 +91,30 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#id" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#canUpdate" 
 >
-                                            id
+                                            canUpdate
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#revert" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#compareTo" 
 >
-                                            revert
+                                            compareTo
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#recordId" 
+>
+                                            recordId
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#template" 
+>
+                                            template
                                         </a>
                                 </li>
                             </ul>
@@ -117,9 +132,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="id"></a>
-                                        <span class="name "><b>id</b>
-                                            <a href="#id">
+                                        <a name="canUpdate"></a>
+                                        <span class="name "><b>canUpdate</b>
+                                            <a href="#canUpdate">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -127,7 +142,83 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>id:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>canUpdate:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="compareTo"></a>
+                                        <span class="name "><b>compareTo</b>
+                                            <a href="#compareTo">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>compareTo:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="recordId"></a>
+                                        <span class="name "><b>recordId</b>
+                                            <a href="#recordId">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>recordId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -150,9 +241,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="revert"></a>
-                                        <span class="name "><b>revert</b>
-                                            <a href="#revert">
+                                        <a name="template"></a>
+                                        <span class="name "><b>template</b>
+                                            <a href="#template">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -160,7 +251,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>revert:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>template:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -168,11 +259,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -184,56 +280,379 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo } from &#x27;apollo-angular&#x27;;
 import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  OnInit,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+import {
+  MatDialogRef,
   MAT_DIALOG_DATA,
   MatDialog,
-  MatDialogRef,
 } from &#x27;@angular/material/dialog&#x27;;
+import { Form } from &#x27;../../models/form.model&#x27;;
+import { Record } from &#x27;../../models/record.model&#x27;;
+import * as Survey from &#x27;survey-angular&#x27;;
+import {
+  GetRecordByIdQueryResponse,
+  GET_RECORD_BY_ID,
+  GetFormByIdQueryResponse,
+  GET_FORM_STRUCTURE,
+} from &#x27;./graphql/queries&#x27;;
+import addCustomFunctions from &#x27;../../utils/custom-functions&#x27;;
+import { SafeRestService } from &#x27;../../services/rest/rest.service&#x27;;
+import { SafeAuthService } from &#x27;../../services/auth/auth.service&#x27;;
+import { SafeConfirmService } from &#x27;../../services/confirm/confirm.service&#x27;;
+import { EDIT_RECORD, EditRecordMutationResponse } from &#x27;./graphql/mutations&#x27;;
+import { SafeSnackBarService } from &#x27;../../services/snackbar/snackbar.service&#x27;;
+import { SafeFormBuilderService } from &#x27;../../services/form-builder/form-builder.service&#x27;;
+import { RecordHistoryModalComponent } from &#x27;../record-history-modal/record-history-modal.component&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import isEqual from &#x27;lodash/isEqual&#x27;;
 
 /**
- * This interface describes the structure of the data that will be displayed in the dialog modal
+ * Interface that describes the structure of the data that will be shown in the dialog
  */
 interface DialogData {
-  id: string;
-  revert: any;
+  recordId: string;
+  compareTo?: any;
+  canUpdate?: boolean;
+  template?: string;
 }
 
 /**
- * This component is used to display a modal with the history of a record
+ * Component used to display a modal to modify a record
  */
 @Component({
-  selector: &#x27;safe-history-modal&#x27;,
-  templateUrl: &#x27;./record-history-modal.component.html&#x27;,
-  styleUrls: [&#x27;./record-history-modal.component.scss&#x27;],
+  selector: &#x27;safe-record-modal&#x27;,
+  templateUrl: &#x27;./record-modal.component.html&#x27;,
+  styleUrls: [&#x27;./record-modal.component.scss&#x27;],
 })
-export class RecordHistoryModalComponent implements OnInit {
+export class SafeRecordModalComponent implements AfterViewInit {
+  // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
+  public loading &#x3D; true;
+  public form?: Form;
+  public record: Record &#x3D; {};
+  public modifiedAt: Date | null &#x3D; null;
+  public selectedTabIndex &#x3D; 0;
+  public survey!: Survey.Model;
+  public surveyNext: Survey.Model | null &#x3D; null;
+  private pages &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
+  public canEdit: boolean | undefined &#x3D; false;
+
+  @ViewChild(&#x27;formContainer&#x27;, { static: false })
+  formContainer!: ElementRef;
+  @ViewChild(&#x27;formContainerNext&#x27;, { static: false })
+  formContainerNext!: ElementRef;
+
+  environment: any;
+
+  /**
+   * Getter for the different pages of the form
+   *
+   * @returns The pages as an observable
+   */
+  public get pages$(): Observable&lt;any[]&gt; {
+    return this.pages.asObservable();
+  }
+
   /**
    * The constructor function is a special function that is called when a new instance of the class is
-   * created
+   * created.
    *
-   * @param dialogRef The reference of the dialog modal that will be opened
-   * @param data This is the data that is passed into the modal when it is
-   * opened.
-   * @param dialog This is the Material service that allows us to open a dialog.
+   * @param dialogRef This is the reference to the dialog that is being opened.
+   * @param data This is the data that is passed to the modal when it is opened.
+   * @param environment This is the environment in which we run the application.
+   * @param apollo This is the Apollo client that we&#x27;ll use to make GraphQL requests.
+   * @param dialog This is the Material dialog service
+   * @param restService This is the service that is used to make http requests.
+   * @param authService This is the service that handles the authentication of the user
+   * @param snackBar This is the service that allows you to display a snackbar message to the user.
+   * @param formBuilderService This is the service that will be used to build forms.
+   * @param confirmService This is the service that will be used to display confirm window.
+   * @param translate This is the service that allows us to translate the text in the modal.
    */
   constructor(
-    public dialogRef: MatDialogRef&lt;RecordHistoryModalComponent&gt;,
+    public dialogRef: MatDialogRef&lt;SafeRecordModalComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    public dialog: MatDialog
-  ) {}
+    @Inject(&#x27;environment&#x27;) environment: any,
+    private apollo: Apollo,
+    public dialog: MatDialog,
+    private restService: SafeRestService,
+    private authService: SafeAuthService,
+    private snackBar: SafeSnackBarService,
+    private formBuilderService: SafeFormBuilderService,
+    private confirmService: SafeConfirmService,
+    private translate: TranslateService
+  ) {
+    this.environment &#x3D; environment;
+  }
 
-  ngOnInit(): void {}
+  async ngAfterViewInit(): Promise&lt;void&gt; {
+    this.canEdit &#x3D; this.data.canUpdate;
+    const defaultThemeColorsSurvey &#x3D; Survey.StylesManager.ThemeColors.default;
+    defaultThemeColorsSurvey[&#x27;$main-color&#x27;] &#x3D; this.environment.theme.primary;
+    defaultThemeColorsSurvey[&#x27;$main-hover-color&#x27;] &#x3D;
+      this.environment.theme.primary;
+
+    Survey.StylesManager.applyTheme();
+    const promises: Promise&lt;
+      GetFormByIdQueryResponse | GetRecordByIdQueryResponse | void
+    &gt;[] &#x3D; [];
+    // Fetch structure from template if needed
+    if (this.data.template) {
+      promises.push(
+        this.apollo
+          .query&lt;GetFormByIdQueryResponse&gt;({
+            query: GET_FORM_STRUCTURE,
+            variables: {
+              id: this.data.template,
+            },
+          })
+          .toPromise()
+          .then((res) &#x3D;&gt; {
+            this.form &#x3D; res.data.form;
+          })
+      );
+    }
+    // Fetch record data
+    promises.push(
+      this.apollo
+        .query&lt;GetRecordByIdQueryResponse&gt;({
+          query: GET_RECORD_BY_ID,
+          variables: {
+            id: this.data.recordId,
+          },
+        })
+        .toPromise()
+        .then((res) &#x3D;&gt; {
+          this.record &#x3D; res.data.record;
+          this.modifiedAt &#x3D; this.record.modifiedAt || null;
+          if (!this.data.template) {
+            this.form &#x3D; this.record.form;
+          }
+        })
+    );
+    await Promise.all(promises);
+    // INIT SURVEY
+    addCustomFunctions(Survey, this.authService, this.apollo, this.record);
+    this.survey &#x3D; this.formBuilderService.createSurvey(
+      this.form?.structure || &#x27;&#x27;,
+      this.form?.metadata,
+      this.record
+    );
+    this.survey.onDownloadFile.add((survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+      this.onDownloadFile(survey, options)
+    );
+    this.survey.onCurrentPageChanged.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
+        this.selectedTabIndex &#x3D; survey.currentPageNo;
+      }
+    );
+    this.survey.onUpdateQuestionCssClasses.add(
+      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; this.onSetCustomCss(options)
+    );
+    this.survey.data &#x3D; this.record.data;
+    this.survey.mode &#x3D; &#x27;display&#x27;;
+    this.survey.showNavigationButtons &#x3D; &#x27;none&#x27;;
+    this.survey.focusFirstQuestionAutomatic &#x3D; false;
+    this.survey.showProgressBar &#x3D; &#x27;off&#x27;;
+    this.survey.render(this.formContainer.nativeElement);
+    setTimeout(() &#x3D;&gt; {}, 100);
+    this.setPages();
+    if (this.data.compareTo) {
+      this.surveyNext &#x3D; this.formBuilderService.createSurvey(
+        this.form?.structure || &#x27;&#x27;,
+        this.form?.metadata,
+        this.record
+      );
+      this.survey.onDownloadFile.add(
+        (survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+          this.onDownloadFile(survey, options)
+      );
+      this.surveyNext.data &#x3D; this.data.compareTo.data;
+      this.surveyNext.mode &#x3D; &#x27;display&#x27;;
+      this.surveyNext.showNavigationButtons &#x3D; &#x27;none&#x27;;
+      this.surveyNext.focusFirstQuestionAutomatic &#x3D; false;
+      this.surveyNext.showProgressBar &#x3D; &#x27;off&#x27;;
+      // Set list of updated questions
+      const updatedQuestions: string[] &#x3D; [];
+      const allQuestions &#x3D; [this.surveyNext.data, this.survey.data].reduce(
+        (keys, object) &#x3D;&gt; keys.concat(Object.keys(object)),
+        []
+      );
+      for (const question of allQuestions) {
+        const valueNext &#x3D; this.surveyNext.data[question];
+        const value &#x3D; this.survey.data[question];
+        if (!isEqual(value, valueNext)) {
+          updatedQuestions.push(question);
+        }
+      }
+      this.survey.onAfterRenderQuestion.add(
+        (survey: Survey.SurveyModel, options: any): void &#x3D;&gt; {
+          if (updatedQuestions.includes(options.question.valueName)) {
+            options.htmlElement.style.background &#x3D; &#x27;#b2ebbf&#x27;;
+          }
+        }
+      );
+      this.surveyNext.onAfterRenderQuestion.add(
+        (survey: Survey.SurveyModel, options: any): void &#x3D;&gt; {
+          if (updatedQuestions.includes(options.question.valueName)) {
+            options.htmlElement.style.background &#x3D; &#x27;#EBB2B2&#x27;;
+          }
+        }
+      );
+      this.surveyNext.onUpdateQuestionCssClasses.add(
+        (survey: Survey.SurveyModel, options: any) &#x3D;&gt;
+          this.onSetCustomCss(options)
+      );
+      this.surveyNext.render(this.formContainerNext.nativeElement);
+    }
+    this.loading &#x3D; false;
+  }
 
   /**
-   * Closes the modal on event
+   * Shows a page of the form
    *
-   * @param e The event
+   * @param i Index of the page to show
    */
-  closeModal(e: any): void {
-    if (e) {
-      this.dialogRef.close();
+  public onShowPage(i: number): void {
+    this.survey.currentPageNo &#x3D; i;
+    this.selectedTabIndex &#x3D; i;
+    if (this.data.compareTo &amp;&amp; this.surveyNext) {
+      this.surveyNext.currentPageNo &#x3D; i;
     }
+  }
+
+  /**
+   * Download the file.
+   *
+   * @param survey The survey from which we download the file
+   * @param options Options regarding the download
+   */
+  private onDownloadFile(survey: Survey.SurveyModel, options: any): void {
+    const xhr &#x3D; new XMLHttpRequest();
+    xhr.open(
+      &#x27;GET&#x27;,
+      &#x60;${this.restService.apiUrl}/download/file/${options.content}&#x60;
+    );
+    xhr.setRequestHeader(
+      &#x27;Authorization&#x27;,
+      &#x60;Bearer ${localStorage.getItem(&#x27;idtoken&#x27;)}&#x60;
+    );
+    xhr.onloadstart &#x3D; () &#x3D;&gt; {
+      xhr.responseType &#x3D; &#x27;blob&#x27;;
+    };
+    xhr.onload &#x3D; () &#x3D;&gt; {
+      const file &#x3D; new File([xhr.response], options.fileValue.name, {
+        type: options.fileValue.type,
+      });
+      const reader &#x3D; new FileReader();
+      reader.onload &#x3D; (e) &#x3D;&gt; {
+        options.callback(&#x27;success&#x27;, e.target?.result);
+      };
+      reader.readAsDataURL(file);
+    };
+    xhr.send();
+  }
+
+  /**
+   * Handles the edition of the record and closes the dialog
+   */
+  public onEdit(): void {
+    this.dialogRef.close(true);
+  }
+
+  /**
+   * Set the pages of the form
+   */
+  private setPages(): void {
+    const pages &#x3D; [];
+    if (this.survey) {
+      for (const page of this.survey.pages) {
+        if (page.isVisible) {
+          pages.push(page);
+        }
+      }
+    }
+    this.pages.next(pages);
+  }
+
+  /**
+   * Closes the modal without sending any data.
+   */
+  onClose(): void {
+    this.dialogRef.close();
+  }
+
+  /**
+   * Open a dialog modal to confirm the recovery of data
+   *
+   * @param record The record whose data we need to recover
+   * @param version The version to recover
+   */
+  private confirmRevertDialog(record: any, version: any): void {
+    // eslint-disable-next-line radix
+    const date &#x3D; new Date(parseInt(version.createdAt, 0));
+    const formatDate &#x3D; &#x60;${date.getDate()}/${
+      date.getMonth() + 1
+    }/${date.getFullYear()}&#x60;;
+    const dialogRef &#x3D; this.confirmService.openConfirmModal({
+      title: this.translate.instant(&#x27;components.record.recovery.title&#x27;),
+      content: this.translate.instant(
+        &#x27;components.record.recovery.confirmationMessage&#x27;,
+        { date: formatDate }
+      ),
+      confirmText: this.translate.instant(&#x27;components.confirmModal.confirm&#x27;),
+      confirmColor: &#x27;primary&#x27;,
+    });
+    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+      if (value) {
+        this.apollo
+          .mutate&lt;EditRecordMutationResponse&gt;({
+            mutation: EDIT_RECORD,
+            variables: {
+              id: record.id,
+              version: version.id,
+            },
+          })
+          .subscribe((res) &#x3D;&gt; {
+            this.snackBar.openSnackBar(
+              this.translate.instant(&#x27;common.notifications.dataRecovered&#x27;)
+            );
+            this.dialogRef.close();
+          });
+      }
+    });
+  }
+
+  /**
+   * Opens the history of the record in a modal.
+   */
+  public onShowHistory(): void {
+    this.dialog.open(RecordHistoryModalComponent, {
+      data: {
+        id: this.record.id,
+        revert: (version: any) &#x3D;&gt;
+          this.confirmRevertDialog(this.record, version),
+      },
+      autoFocus: false,
+    });
+  }
+
+  /**
+   * Add custom CSS classes to the survey elements.
+   *
+   * @param options survey options.
+   */
+  private onSetCustomCss(options: any): void {
+    const classes &#x3D; options.cssClasses;
+    classes.content +&#x3D; &#x27;safe-qst-content&#x27;;
   }
 }
 </code></pre>
