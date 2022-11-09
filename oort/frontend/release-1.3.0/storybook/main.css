@@ -1155,11 +1155,11 @@ video {
 .mt-8{
   margin-top: 2rem;
 }
-.ml-2{
-  margin-left: 0.5rem;
-}
 .mb-4{
   margin-bottom: 1rem;
+}
+.ml-2{
+  margin-left: 0.5rem;
 }
 .mt-0{
   margin-top: 0px;
