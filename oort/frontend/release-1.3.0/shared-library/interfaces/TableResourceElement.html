@@ -642,16 +642,53 @@ export class RoleResourcesComponent implements OnInit {
    * @returns the name of the icon to be displayed
    */
   private getIcon(resource: Resource, permission: Permission) {
-    const hasPermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, false);
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
     switch (permission) {
-      case Permission.SEE:
-        return hasPermission ? &#x27;visibility&#x27; : &#x27;visibility_off&#x27;;
+      case Permission.SEE: {
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;visibility_outline&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;visibility&#x27;;
+          }
+          default: {
+            return &#x27;visibility_off&#x27;;
+          }
+        }
+      }
       case Permission.CREATE:
-        return &#x27;add&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;add_circle_outline&#x27;;
+          }
+          default:
+          case &#x27;full&#x27;: {
+            return &#x27;add_circle&#x27;;
+          }
+        }
       case Permission.UPDATE:
-        return hasPermission ? &#x27;edit&#x27; : &#x27;edit_off&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;edit_outline&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;edit&#x27;;
+          }
+          default: {
+            return &#x27;edit_off&#x27;;
+          }
+        }
       case Permission.DELETE:
-        return &#x27;delete&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;delete_outline&#x27;;
+          }
+          default:
+          case &#x27;full&#x27;: {
+            return &#x27;delete&#x27;;
+          }
+        }
     }
   }
 
@@ -663,8 +700,16 @@ export class RoleResourcesComponent implements OnInit {
    * @returns the name of the icon to be displayed
    */
   private getVariant(resource: Resource, permission: Permission) {
-    const hasPermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, false);
-    return hasPermission ? &#x27;primary&#x27; : &#x27;grey&#x27;;
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
+    switch (permissionLevel) {
+      case &#x27;limited&#x27;:
+      case &#x27;full&#x27;: {
+        return &#x27;primary&#x27;;
+      }
+      default: {
+        return &#x27;grey&#x27;;
+      }
+    }
   }
 
   /**
@@ -675,24 +720,75 @@ export class RoleResourcesComponent implements OnInit {
    * @returns the name of the icon to be displayed
    */
   private getTooltip(resource: Resource, permission: Permission) {
-    const hasPermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, false);
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
     switch (permission) {
-      case Permission.SEE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordAccessibility&#x27;
-          : &#x27;components.role.tooltip.allowRecordAccessibility&#x27;;
+      case Permission.SEE: {
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;components.role.tooltip.limitedReadRecordsPermission&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantReadRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantReadRecordsPermission&#x27;;
+          }
+        }
+      }
       case Permission.CREATE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordCreation&#x27;
-          : &#x27;components.role.tooltip.allowRecordCreation&#x27;;
+        switch (permissionLevel) {
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantAddRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantAddRecordsPermission&#x27;;
+          }
+        }
       case Permission.UPDATE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordUpdate&#x27;
-          : &#x27;components.role.tooltip.allowRecordUpdate&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;components.role.tooltip.limitedUpdateRecordsPermission&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantUpdateRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantUpdateRecordsPermission&#x27;;
+          }
+        }
       case Permission.DELETE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordDeletion&#x27;
-          : &#x27;components.role.tooltip.allowRecordDeletion&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;components.role.tooltip.limitedDeleteRecordsPermission&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantDeleteRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantDeleteRecordsPermission&#x27;;
+          }
+        }
+    }
+  }
+
+  /**
+   * Get the level of permission of the role on a resource.
+   *
+   * @param resource resource to get permission of
+   * @param permission permission to check
+   * @returns level of permission ( false, &#x27;limited&#x27;, &#x27;full&#x27; )
+   */
+  private permissionLevel(resource: Resource, permission: Permission) {
+    const rolePermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, null);
+    if (rolePermission) {
+      const filters &#x3D; get(rolePermission, &#x27;access.filters&#x27;, []);
+      if (filters.length &gt; 0) {
+        return &#x27;limited&#x27;;
+      } else {
+        return &#x27;full&#x27;;
+      }
+    } else {
+      return false;
     }
   }
 }

@@ -229,6 +229,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
+                                <a href="#permissionLevel" >permissionLevel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
                                 <a href="#setTableElement" >setTableElement</a>
                             </li>
                             <li>
@@ -714,7 +718,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>&quot;add&quot; | &quot;visibility&quot; | &quot;visibility_off&quot; | &quot;edit&quot; | &quot;edit_off&quot; | &quot;delete&quot;</code>
+                        <b>Returns : </b>    <code>&quot;visibility_outline&quot; | &quot;visibility&quot; | &quot;visibility_off&quot; | &quot;add_circle_outline&quot; | &quot;add_circle&quot; | &quot;edit_outline&quot; | &quot;edit&quot; | &quot;edit_off&quot; | &quot;delete_outline&quot; | &quot;delete&quot;</code>
 
                     </div>
                     <div class="io-description">
@@ -747,8 +751,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="491"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:491</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="536"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:536</a></div>
                 </td>
             </tr>
 
@@ -809,7 +813,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>&quot;components.role.tooltip.disallowRecordAccessibility&quot; | &quot;components.role.tooltip.allowRecordAccessibility&quot; | &quot;components.role.tooltip.disallowRecordCreation&quot; | &quot;components.role.tooltip.allowRecordCreation&quot; | &quot;components.role.tooltip.disallowRecordUpdate&quot; | &quot;components.role.tooltip.allowRecordUpdate&quot; | &quot;components.ro...</code>
+                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#Permission" target="_self" >&quot;components.role.tooltip.limitedReadRecordsPermission&quot; | &quot;components.role.tooltip.grantReadRecordsPermission&quot; | &quot;components.role.tooltip.notGrantReadRecordsPermission&quot; | ... 7 more ... | &quot;components.role.tooltip.notGrantDeleteRecordsPermission&quot;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -842,8 +846,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="479"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:479</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="516"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:516</a></div>
                 </td>
             </tr>
 
@@ -1209,6 +1213,101 @@
                     </div>
                     <div class="io-description">
                         
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="permissionLevel"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>permissionLevel</b></span>
+                        <a href="#permissionLevel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>permissionLevel(resource: <a href="../interfaces/Resource.html" target="_self">Resource</a>, permission: <a href="../interfaces/Permission.html" target="_self">Permission</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="595"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:595</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the level of permission of the role on a resource.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>resource</td>
+                                    <td>
+                                                <code><a href="../interfaces/Resource.html" target="_self" >Resource</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>resource to get permission of</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>permission</td>
+                                    <td>
+                                                <code><a href="../interfaces/Permission.html" target="_self" >Permission</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>permission to check</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>false | &quot;limited&quot; | &quot;full&quot;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>level of permission ( false, &#39;limited&#39;, &#39;full&#39; )</p>
+
                     </div>
                 </td>
             </tr>
@@ -2205,16 +2304,53 @@ export class RoleResourcesComponent implements OnInit {
    * @returns the name of the icon to be displayed
    */
   private getIcon(resource: Resource, permission: Permission) {
-    const hasPermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, false);
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
     switch (permission) {
-      case Permission.SEE:
-        return hasPermission ? &#x27;visibility&#x27; : &#x27;visibility_off&#x27;;
+      case Permission.SEE: {
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;visibility_outline&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;visibility&#x27;;
+          }
+          default: {
+            return &#x27;visibility_off&#x27;;
+          }
+        }
+      }
       case Permission.CREATE:
-        return &#x27;add&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;add_circle_outline&#x27;;
+          }
+          default:
+          case &#x27;full&#x27;: {
+            return &#x27;add_circle&#x27;;
+          }
+        }
       case Permission.UPDATE:
-        return hasPermission ? &#x27;edit&#x27; : &#x27;edit_off&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;edit_outline&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;edit&#x27;;
+          }
+          default: {
+            return &#x27;edit_off&#x27;;
+          }
+        }
       case Permission.DELETE:
-        return &#x27;delete&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;delete_outline&#x27;;
+          }
+          default:
+          case &#x27;full&#x27;: {
+            return &#x27;delete&#x27;;
+          }
+        }
     }
   }
 
@@ -2226,8 +2362,16 @@ export class RoleResourcesComponent implements OnInit {
    * @returns the name of the icon to be displayed
    */
   private getVariant(resource: Resource, permission: Permission) {
-    const hasPermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, false);
-    return hasPermission ? &#x27;primary&#x27; : &#x27;grey&#x27;;
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
+    switch (permissionLevel) {
+      case &#x27;limited&#x27;:
+      case &#x27;full&#x27;: {
+        return &#x27;primary&#x27;;
+      }
+      default: {
+        return &#x27;grey&#x27;;
+      }
+    }
   }
 
   /**
@@ -2238,24 +2382,75 @@ export class RoleResourcesComponent implements OnInit {
    * @returns the name of the icon to be displayed
    */
   private getTooltip(resource: Resource, permission: Permission) {
-    const hasPermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, false);
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
     switch (permission) {
-      case Permission.SEE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordAccessibility&#x27;
-          : &#x27;components.role.tooltip.allowRecordAccessibility&#x27;;
+      case Permission.SEE: {
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;components.role.tooltip.limitedReadRecordsPermission&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantReadRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantReadRecordsPermission&#x27;;
+          }
+        }
+      }
       case Permission.CREATE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordCreation&#x27;
-          : &#x27;components.role.tooltip.allowRecordCreation&#x27;;
+        switch (permissionLevel) {
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantAddRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantAddRecordsPermission&#x27;;
+          }
+        }
       case Permission.UPDATE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordUpdate&#x27;
-          : &#x27;components.role.tooltip.allowRecordUpdate&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;components.role.tooltip.limitedUpdateRecordsPermission&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantUpdateRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantUpdateRecordsPermission&#x27;;
+          }
+        }
       case Permission.DELETE:
-        return hasPermission
-          ? &#x27;components.role.tooltip.disallowRecordDeletion&#x27;
-          : &#x27;components.role.tooltip.allowRecordDeletion&#x27;;
+        switch (permissionLevel) {
+          case &#x27;limited&#x27;: {
+            return &#x27;components.role.tooltip.limitedDeleteRecordsPermission&#x27;;
+          }
+          case &#x27;full&#x27;: {
+            return &#x27;components.role.tooltip.grantDeleteRecordsPermission&#x27;;
+          }
+          default: {
+            return &#x27;components.role.tooltip.notGrantDeleteRecordsPermission&#x27;;
+          }
+        }
+    }
+  }
+
+  /**
+   * Get the level of permission of the role on a resource.
+   *
+   * @param resource resource to get permission of
+   * @param permission permission to check
+   * @returns level of permission ( false, &#x27;limited&#x27;, &#x27;full&#x27; )
+   */
+  private permissionLevel(resource: Resource, permission: Permission) {
+    const rolePermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, null);
+    if (rolePermission) {
+      const filters &#x3D; get(rolePermission, &#x27;access.filters&#x27;, []);
+      if (filters.length &gt; 0) {
+        return &#x27;limited&#x27;;
+      } else {
+        return &#x27;full&#x27;;
+      }
+    } else {
+      return false;
     }
   }
 }
