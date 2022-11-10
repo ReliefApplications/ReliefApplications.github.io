@@ -425,8 +425,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="132"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/tab-main/tab-main.component.ts:132</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/tab-main/tab-main.component.ts:145</a></div>
                 </td>
             </tr>
 
@@ -466,8 +466,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="153"
-                            class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/tab-main/tab-main.component.ts:153</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/tab-main/tab-main.component.ts:166</a></div>
                 </td>
             </tr>
 
@@ -955,18 +955,31 @@ export class TabMainComponent implements OnInit {
    */
   private setAvailableSeriesFields(): void {
     if (this.aggregation) {
+      const fields &#x3D; this.queryBuilder
+        .getFields(this.resource?.queryName as string)
+        .filter(
+          (field: any) &#x3D;&gt;
+            !(
+              field.name.includes(&#x27;_id&#x27;) &amp;&amp;
+              (field.type.name &#x3D;&#x3D;&#x3D; &#x27;ID&#x27; ||
+                (field.type.kind &#x3D;&#x3D;&#x3D; &#x27;LIST&#x27; &amp;&amp; field.type.ofType.name &#x3D;&#x3D;&#x3D; &#x27;ID&#x27;))
+            )
+        );
+      const selectedFields &#x3D; this.aggregation.sourceFields.map((x: string) &#x3D;&gt; {
+        const field &#x3D; { ...fields.find((y) &#x3D;&gt; x &#x3D;&#x3D;&#x3D; y.name) };
+        if (field.type.kind !&#x3D;&#x3D; &#x27;SCALAR&#x27;) {
+          field.fields &#x3D; this.queryBuilder
+            .getFieldsFromType(
+              field.type.kind &#x3D;&#x3D;&#x3D; &#x27;OBJECT&#x27;
+                ? field.type.name
+                : field.type.ofType.name
+            )
+            .filter((y) &#x3D;&gt; y.type.name !&#x3D;&#x3D; &#x27;ID&#x27; &amp;&amp; y.type.kind &#x3D;&#x3D;&#x3D; &#x27;SCALAR&#x27;);
+        }
+        return field;
+      });
       this.availableSeriesFields &#x3D; this.aggregationBuilder.fieldsAfter(
-        this.queryBuilder
-          .getFields(this.resource?.queryName as string)
-          .filter(
-            (field: any) &#x3D;&gt;
-              !(
-                field.name.includes(&#x27;_id&#x27;) &amp;&amp;
-                (field.type.name &#x3D;&#x3D;&#x3D; &#x27;ID&#x27; ||
-                  (field.type.kind &#x3D;&#x3D;&#x3D; &#x27;LIST&#x27; &amp;&amp;
-                    field.type.ofType.name &#x3D;&#x3D;&#x3D; &#x27;ID&#x27;))
-              )
-          ),
+        selectedFields,
         this.aggregation?.pipeline
       );
     } else {
