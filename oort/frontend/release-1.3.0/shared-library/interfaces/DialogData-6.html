@@ -899,7 +899,6 @@ export class SafeFormModalComponent implements OnInit {
       options.content.indexOf(&#x27;http&#x27;) !&#x3D;&#x3D; -1
     ) {
       options.callback(&#x27;success&#x27;, options.content);
-      return;
     } else {
       const xhr &#x3D; new XMLHttpRequest();
       xhr.open(

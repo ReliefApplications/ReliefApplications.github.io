@@ -536,29 +536,36 @@ export class SafeRecordModalComponent implements AfterViewInit {
    * @param options Options regarding the download
    */
   private onDownloadFile(survey: Survey.SurveyModel, options: any): void {
-    const xhr &#x3D; new XMLHttpRequest();
-    xhr.open(
-      &#x27;GET&#x27;,
-      &#x60;${this.restService.apiUrl}/download/file/${options.content}&#x60;
-    );
-    xhr.setRequestHeader(
-      &#x27;Authorization&#x27;,
-      &#x60;Bearer ${localStorage.getItem(&#x27;idtoken&#x27;)}&#x60;
-    );
-    xhr.onloadstart &#x3D; () &#x3D;&gt; {
-      xhr.responseType &#x3D; &#x27;blob&#x27;;
-    };
-    xhr.onload &#x3D; () &#x3D;&gt; {
-      const file &#x3D; new File([xhr.response], options.fileValue.name, {
-        type: options.fileValue.type,
-      });
-      const reader &#x3D; new FileReader();
-      reader.onload &#x3D; (e) &#x3D;&gt; {
-        options.callback(&#x27;success&#x27;, e.target?.result);
+    if (
+      options.content.indexOf(&#x27;base64&#x27;) !&#x3D;&#x3D; -1 ||
+      options.content.indexOf(&#x27;http&#x27;) !&#x3D;&#x3D; -1
+    ) {
+      options.callback(&#x27;success&#x27;, options.content);
+    } else {
+      const xhr &#x3D; new XMLHttpRequest();
+      xhr.open(
+        &#x27;GET&#x27;,
+        &#x60;${this.restService.apiUrl}/download/file/${options.content}&#x60;
+      );
+      xhr.setRequestHeader(
+        &#x27;Authorization&#x27;,
+        &#x60;Bearer ${localStorage.getItem(&#x27;idtoken&#x27;)}&#x60;
+      );
+      xhr.onloadstart &#x3D; () &#x3D;&gt; {
+        xhr.responseType &#x3D; &#x27;blob&#x27;;
       };
-      reader.readAsDataURL(file);
-    };
-    xhr.send();
+      xhr.onload &#x3D; () &#x3D;&gt; {
+        const file &#x3D; new File([xhr.response], options.fileValue.name, {
+          type: options.fileValue.type,
+        });
+        const reader &#x3D; new FileReader();
+        reader.onload &#x3D; (e) &#x3D;&gt; {
+          options.callback(&#x27;success&#x27;, e.target?.result);
+        };
+        reader.readAsDataURL(file);
+      };
+      xhr.send();
+    }
   }
 
   /**

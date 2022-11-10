@@ -1638,8 +1638,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="695"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:695</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="702"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:702</a></div>
                 </td>
             </tr>
 
@@ -2096,8 +2096,8 @@ TODO: avoid template call</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="621"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:621</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="628"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:628</a></div>
                 </td>
             </tr>
 
@@ -2600,8 +2600,8 @@ TODO: avoid template call</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="631"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:631</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="638"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:638</a></div>
                 </td>
             </tr>
 
@@ -2694,8 +2694,8 @@ TODO: avoid template call</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="599"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:599</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="606"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:606</a></div>
                 </td>
             </tr>
 
@@ -3207,8 +3207,8 @@ TODO: avoid template call</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="674"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:674</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="681"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:681</a></div>
                 </td>
             </tr>
 
@@ -3248,8 +3248,8 @@ TODO: avoid template call</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="708"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:708</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="715"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:715</a></div>
                 </td>
             </tr>
 
@@ -3368,8 +3368,8 @@ TODO: avoid template call</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="656"
-                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:656</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="663"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/core-grid/grid/grid.component.ts:663</a></div>
                 </td>
             </tr>
 
@@ -4600,8 +4600,15 @@ export class SafeGridComponent implements OnInit, AfterViewInit {
    * @param file File to download.
    */
   public onDownload(file: any): void {
-    const path &#x3D; &#x60;download/file/${file.content}&#x60;;
-    this.downloadService.getFile(path, file.type, file.name);
+    if (file.content.startsWith(&#x27;data&#x27;)) {
+      const downloadLink &#x3D; document.createElement(&#x27;a&#x27;);
+      downloadLink.href &#x3D; file.content;
+      downloadLink.download &#x3D; file.name;
+      downloadLink.click();
+    } else {
+      const path &#x3D; &#x60;download/file/${file.content}&#x60;;
+      this.downloadService.getFile(path, file.type, file.name);
+    }
   }
 
   /**
