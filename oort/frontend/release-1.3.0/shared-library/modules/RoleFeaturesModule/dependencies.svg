@@ -14,119 +14,119 @@
 <title>cluster_RoleFeaturesModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1151,-230.8 1151,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_RoleFeaturesModule_declarations</title>
-<polygon fill="none" stroke="black" points="430,-40.8 430,-92.8 1143,-92.8 1143,-40.8 430,-40.8"/>
-</g>
 <g id="clust7" class="cluster">
 <title>cluster_RoleFeaturesModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 422,-92.8 422,-40.8 16,-40.8"/>
+<polygon fill="none" stroke="black" points="737,-40.8 737,-92.8 1143,-92.8 1143,-40.8 737,-40.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_RoleFeaturesModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 729,-92.8 729,-40.8 16,-40.8"/>
 </g>
 <g id="clust8" class="cluster">
 <title>cluster_RoleFeaturesModule_exports</title>
-<polygon fill="none" stroke="black" points="436,-170.8 436,-222.8 610,-222.8 610,-170.8 436,-170.8"/>
+<polygon fill="none" stroke="black" points="547,-170.8 547,-222.8 721,-222.8 721,-170.8 547,-170.8"/>
 </g>
 <!-- RoleDashboardsComponent -->
 <g id="node1" class="node">
 <title>RoleDashboardsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1134.87,-84.8 961.13,-84.8 961.13,-48.8 1134.87,-48.8 1134.87,-84.8"/>
-<text text-anchor="middle" x="1048" y="-62.6" font-family="Times,serif" font-size="14.00">RoleDashboardsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="720.87,-84.8 547.13,-84.8 547.13,-48.8 720.87,-48.8 720.87,-84.8"/>
+<text text-anchor="middle" x="634" y="-62.6" font-family="Times,serif" font-size="14.00">RoleDashboardsComponent</text>
 </g>
 <!-- RoleFeaturesModule -->
 <g id="node5" class="node">
 <title>RoleFeaturesModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="589.92,-149.8 586.92,-153.8 565.92,-153.8 562.92,-149.8 456.08,-149.8 456.08,-113.8 589.92,-113.8 589.92,-149.8"/>
-<text text-anchor="middle" x="523" y="-127.6" font-family="Times,serif" font-size="14.00">RoleFeaturesModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="700.92,-149.8 697.92,-153.8 676.92,-153.8 673.92,-149.8 567.08,-149.8 567.08,-113.8 700.92,-113.8 700.92,-149.8"/>
+<text text-anchor="middle" x="634" y="-127.6" font-family="Times,serif" font-size="14.00">RoleFeaturesModule</text>
 </g>
 <!-- RoleDashboardsComponent&#45;&gt;RoleFeaturesModule -->
 <g id="edge1" class="edge">
 <title>RoleDashboardsComponent&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M1048,-85.09C1048,-107.01 1048,-140.8 1048,-140.8 1048,-140.8 599.76,-140.8 599.76,-140.8"/>
-<polygon fill="black" stroke="black" points="599.76,-137.3 589.76,-140.8 599.76,-144.3 599.76,-137.3"/>
+<path fill="none" stroke="black" d="M634,-84.91C634,-84.91 634,-103.79 634,-103.79"/>
+<polygon fill="black" stroke="black" points="630.5,-103.79 634,-113.79 637.5,-103.79 630.5,-103.79"/>
 </g>
 <!-- RoleFeaturesComponent -->
 <g id="node2" class="node">
 <title>RoleFeaturesComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="942.7,-84.8 787.3,-84.8 787.3,-48.8 942.7,-48.8 942.7,-84.8"/>
-<text text-anchor="middle" x="865" y="-62.6" font-family="Times,serif" font-size="14.00">RoleFeaturesComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="528.7,-84.8 373.3,-84.8 373.3,-48.8 528.7,-48.8 528.7,-84.8"/>
+<text text-anchor="middle" x="451" y="-62.6" font-family="Times,serif" font-size="14.00">RoleFeaturesComponent</text>
 </g>
 <!-- RoleFeaturesComponent&#45;&gt;RoleFeaturesModule -->
 <g id="edge2" class="edge">
 <title>RoleFeaturesComponent&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M865,-84.91C865,-104.14 865,-131.8 865,-131.8 865,-131.8 599.75,-131.8 599.75,-131.8"/>
-<polygon fill="black" stroke="black" points="599.75,-128.3 589.75,-131.8 599.75,-135.3 599.75,-128.3"/>
+<path fill="none" stroke="black" d="M451,-84.83C451,-101.2 451,-122.8 451,-122.8 451,-122.8 557.16,-122.8 557.16,-122.8"/>
+<polygon fill="black" stroke="black" points="557.16,-126.3 567.16,-122.8 557.16,-119.3 557.16,-126.3"/>
 </g>
 <!-- RoleFormsComponent -->
 <g id="node3" class="node">
 <title>RoleFormsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="769.56,-84.8 626.44,-84.8 626.44,-48.8 769.56,-48.8 769.56,-84.8"/>
-<text text-anchor="middle" x="698" y="-62.6" font-family="Times,serif" font-size="14.00">RoleFormsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="355.56,-84.8 212.44,-84.8 212.44,-48.8 355.56,-48.8 355.56,-84.8"/>
+<text text-anchor="middle" x="284" y="-62.6" font-family="Times,serif" font-size="14.00">RoleFormsComponent</text>
 </g>
 <!-- RoleFormsComponent&#45;&gt;RoleFeaturesModule -->
 <g id="edge3" class="edge">
 <title>RoleFormsComponent&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M698,-84.83C698,-101.2 698,-122.8 698,-122.8 698,-122.8 600.16,-122.8 600.16,-122.8"/>
-<polygon fill="black" stroke="black" points="600.16,-119.3 590.16,-122.8 600.16,-126.3 600.16,-119.3"/>
+<path fill="none" stroke="black" d="M284,-84.91C284,-104.14 284,-131.8 284,-131.8 284,-131.8 556.93,-131.8 556.93,-131.8"/>
+<polygon fill="black" stroke="black" points="556.93,-135.3 566.93,-131.8 556.93,-128.3 556.93,-135.3"/>
 </g>
 <!-- RoleWorkflowsComponent -->
 <g id="node4" class="node">
 <title>RoleWorkflowsComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="608.26,-84.8 437.74,-84.8 437.74,-48.8 608.26,-48.8 608.26,-84.8"/>
-<text text-anchor="middle" x="523" y="-62.6" font-family="Times,serif" font-size="14.00">RoleWorkflowsComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="194.26,-84.8 23.74,-84.8 23.74,-48.8 194.26,-48.8 194.26,-84.8"/>
+<text text-anchor="middle" x="109" y="-62.6" font-family="Times,serif" font-size="14.00">RoleWorkflowsComponent</text>
 </g>
 <!-- RoleWorkflowsComponent&#45;&gt;RoleFeaturesModule -->
 <g id="edge4" class="edge">
 <title>RoleWorkflowsComponent&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M523,-84.91C523,-84.91 523,-103.79 523,-103.79"/>
-<polygon fill="black" stroke="black" points="519.5,-103.79 523,-113.79 526.5,-103.79 519.5,-103.79"/>
+<path fill="none" stroke="black" d="M109,-85.09C109,-107.01 109,-140.8 109,-140.8 109,-140.8 557.24,-140.8 557.24,-140.8"/>
+<polygon fill="black" stroke="black" points="557.24,-144.3 567.24,-140.8 557.24,-137.3 557.24,-144.3"/>
 </g>
 <!-- RoleFeaturesComponent  -->
 <g id="node9" class="node">
 <title>RoleFeaturesComponent </title>
-<polygon fill="#fb8072" stroke="black" points="602.2,-214.8 443.8,-214.8 443.8,-178.8 602.2,-178.8 602.2,-214.8"/>
-<text text-anchor="middle" x="523" y="-192.6" font-family="Times,serif" font-size="14.00">RoleFeaturesComponent </text>
+<polygon fill="#fb8072" stroke="black" points="713.2,-214.8 554.8,-214.8 554.8,-178.8 713.2,-178.8 713.2,-214.8"/>
+<text text-anchor="middle" x="634" y="-192.6" font-family="Times,serif" font-size="14.00">RoleFeaturesComponent </text>
 </g>
 <!-- RoleFeaturesModule&#45;&gt;RoleFeaturesComponent  -->
 <g id="edge8" class="edge">
 <title>RoleFeaturesModule&#45;&gt;RoleFeaturesComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M523,-149.91C523,-149.91 523,-168.79 523,-168.79"/>
-<polygon fill="black" stroke="black" points="519.5,-168.79 523,-178.79 526.5,-168.79 519.5,-168.79"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M634,-149.91C634,-149.91 634,-168.79 634,-168.79"/>
+<polygon fill="black" stroke="black" points="630.5,-168.79 634,-178.79 637.5,-168.79 630.5,-168.79"/>
 </g>
 <!-- SafeButtonModule -->
 <g id="node6" class="node">
 <title>SafeButtonModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="414.05,-84.8 411.05,-88.8 390.05,-88.8 387.05,-84.8 291.95,-84.8 291.95,-48.8 414.05,-48.8 414.05,-84.8"/>
-<text text-anchor="middle" x="353" y="-62.6" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="1135.05,-84.8 1132.05,-88.8 1111.05,-88.8 1108.05,-84.8 1012.95,-84.8 1012.95,-48.8 1135.05,-48.8 1135.05,-84.8"/>
+<text text-anchor="middle" x="1074" y="-62.6" font-family="Times,serif" font-size="14.00">SafeButtonModule</text>
 </g>
 <!-- SafeButtonModule&#45;&gt;RoleFeaturesModule -->
 <g id="edge5" class="edge">
 <title>SafeButtonModule&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M353,-84.83C353,-101.2 353,-122.8 353,-122.8 353,-122.8 445.81,-122.8 445.81,-122.8"/>
-<polygon fill="black" stroke="black" points="445.81,-126.3 455.81,-122.8 445.81,-119.3 445.81,-126.3"/>
+<path fill="none" stroke="black" d="M1074,-85.09C1074,-107.01 1074,-140.8 1074,-140.8 1074,-140.8 710.83,-140.8 710.83,-140.8"/>
+<polygon fill="black" stroke="black" points="710.83,-137.3 700.83,-140.8 710.83,-144.3 710.83,-137.3"/>
 </g>
 <!-- SafeEmptyModule -->
 <g id="node7" class="node">
 <title>SafeEmptyModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="273.76,-84.8 270.76,-88.8 249.76,-88.8 246.76,-84.8 152.24,-84.8 152.24,-48.8 273.76,-48.8 273.76,-84.8"/>
-<text text-anchor="middle" x="213" y="-62.6" font-family="Times,serif" font-size="14.00">SafeEmptyModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="994.76,-84.8 991.76,-88.8 970.76,-88.8 967.76,-84.8 873.24,-84.8 873.24,-48.8 994.76,-48.8 994.76,-84.8"/>
+<text text-anchor="middle" x="934" y="-62.6" font-family="Times,serif" font-size="14.00">SafeEmptyModule</text>
 </g>
 <!-- SafeEmptyModule&#45;&gt;RoleFeaturesModule -->
 <g id="edge6" class="edge">
 <title>SafeEmptyModule&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M213,-84.91C213,-104.14 213,-131.8 213,-131.8 213,-131.8 446.12,-131.8 446.12,-131.8"/>
-<polygon fill="black" stroke="black" points="446.12,-135.3 456.12,-131.8 446.12,-128.3 446.12,-135.3"/>
+<path fill="none" stroke="black" d="M934,-84.91C934,-104.14 934,-131.8 934,-131.8 934,-131.8 710.95,-131.8 710.95,-131.8"/>
+<polygon fill="black" stroke="black" points="710.95,-128.3 700.95,-131.8 710.95,-135.3 710.95,-128.3"/>
 </g>
 <!-- SafeIconModule -->
 <g id="node8" class="node">
 <title>SafeIconModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="133.8,-84.8 130.8,-88.8 109.8,-88.8 106.8,-84.8 24.2,-84.8 24.2,-48.8 133.8,-48.8 133.8,-84.8"/>
-<text text-anchor="middle" x="79" y="-62.6" font-family="Times,serif" font-size="14.00">SafeIconModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="854.8,-84.8 851.8,-88.8 830.8,-88.8 827.8,-84.8 745.2,-84.8 745.2,-48.8 854.8,-48.8 854.8,-84.8"/>
+<text text-anchor="middle" x="800" y="-62.6" font-family="Times,serif" font-size="14.00">SafeIconModule</text>
 </g>
 <!-- SafeIconModule&#45;&gt;RoleFeaturesModule -->
 <g id="edge7" class="edge">
 <title>SafeIconModule&#45;&gt;RoleFeaturesModule</title>
-<path fill="none" stroke="black" d="M79,-85.09C79,-107.01 79,-140.8 79,-140.8 79,-140.8 446.05,-140.8 446.05,-140.8"/>
-<polygon fill="black" stroke="black" points="446.05,-144.3 456.05,-140.8 446.05,-137.3 446.05,-144.3"/>
+<path fill="none" stroke="black" d="M800,-84.83C800,-101.2 800,-122.8 800,-122.8 800,-122.8 711.04,-122.8 711.04,-122.8"/>
+<polygon fill="black" stroke="black" points="711.04,-119.3 701.04,-122.8 711.04,-126.3 711.04,-119.3"/>
 </g>
 </g>
 </svg>

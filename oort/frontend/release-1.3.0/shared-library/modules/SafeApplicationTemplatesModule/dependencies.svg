@@ -14,71 +14,71 @@
 <title>cluster_SafeApplicationTemplatesModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 708,-230.8 708,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeApplicationTemplatesModule_declarations</title>
-<polygon fill="none" stroke="black" points="454,-40.8 454,-92.8 700,-92.8 700,-40.8 454,-40.8"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeApplicationTemplatesModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 446,-92.8 446,-40.8 16,-40.8"/>
+<polygon fill="none" stroke="black" points="270,-40.8 270,-92.8 700,-92.8 700,-40.8 270,-40.8"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeApplicationTemplatesModule_exports</title>
-<polygon fill="none" stroke="black" points="186,-170.8 186,-222.8 436,-222.8 436,-170.8 186,-170.8"/>
+<polygon fill="none" stroke="black" points="224,-170.8 224,-222.8 474,-222.8 474,-170.8 224,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeApplicationTemplatesModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 262,-92.8 262,-40.8 16,-40.8"/>
 </g>
 <!-- SafeApplicationTemplatesComponent -->
 <g id="node1" class="node">
 <title>SafeApplicationTemplatesComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="692.11,-84.8 461.89,-84.8 461.89,-48.8 692.11,-48.8 692.11,-84.8"/>
-<text text-anchor="middle" x="577" y="-62.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="254.11,-84.8 23.89,-84.8 23.89,-48.8 254.11,-48.8 254.11,-84.8"/>
+<text text-anchor="middle" x="139" y="-62.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesComponent</text>
 </g>
 <!-- SafeApplicationTemplatesModule -->
 <g id="node2" class="node">
 <title>SafeApplicationTemplatesModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="415.34,-149.8 412.34,-153.8 391.34,-153.8 388.34,-149.8 206.66,-149.8 206.66,-113.8 415.34,-113.8 415.34,-149.8"/>
-<text text-anchor="middle" x="311" y="-127.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="453.34,-149.8 450.34,-153.8 429.34,-153.8 426.34,-149.8 244.66,-149.8 244.66,-113.8 453.34,-113.8 453.34,-149.8"/>
+<text text-anchor="middle" x="349" y="-127.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesModule</text>
 </g>
 <!-- SafeApplicationTemplatesComponent&#45;&gt;SafeApplicationTemplatesModule -->
 <g id="edge1" class="edge">
 <title>SafeApplicationTemplatesComponent&#45;&gt;SafeApplicationTemplatesModule</title>
-<path fill="none" stroke="black" d="M577,-84.91C577,-104.14 577,-131.8 577,-131.8 577,-131.8 425.37,-131.8 425.37,-131.8"/>
-<polygon fill="black" stroke="black" points="425.37,-128.3 415.37,-131.8 425.37,-135.3 425.37,-128.3"/>
+<path fill="none" stroke="black" d="M249.44,-84.91C249.44,-84.91 249.44,-103.79 249.44,-103.79"/>
+<polygon fill="black" stroke="black" points="245.94,-103.79 249.44,-113.79 252.94,-103.79 245.94,-103.79"/>
 </g>
 <!-- SafeApplicationTemplatesComponent  -->
 <g id="node5" class="node">
 <title>SafeApplicationTemplatesComponent </title>
-<polygon fill="#fb8072" stroke="black" points="428.11,-214.8 193.89,-214.8 193.89,-178.8 428.11,-178.8 428.11,-214.8"/>
-<text text-anchor="middle" x="311" y="-192.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesComponent </text>
+<polygon fill="#fb8072" stroke="black" points="466.11,-214.8 231.89,-214.8 231.89,-178.8 466.11,-178.8 466.11,-214.8"/>
+<text text-anchor="middle" x="349" y="-192.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesComponent </text>
 </g>
 <!-- SafeApplicationTemplatesModule&#45;&gt;SafeApplicationTemplatesComponent  -->
 <g id="edge4" class="edge">
 <title>SafeApplicationTemplatesModule&#45;&gt;SafeApplicationTemplatesComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M311,-149.91C311,-149.91 311,-168.79 311,-168.79"/>
-<polygon fill="black" stroke="black" points="307.5,-168.79 311,-178.79 314.5,-168.79 307.5,-168.79"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M349,-149.91C349,-149.91 349,-168.79 349,-168.79"/>
+<polygon fill="black" stroke="black" points="345.5,-168.79 349,-178.79 352.5,-168.79 345.5,-168.79"/>
 </g>
 <!-- SafeApplicationTemplatesRoutingModule -->
 <g id="node3" class="node">
 <title>SafeApplicationTemplatesRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="437.95,-84.8 434.95,-88.8 413.95,-88.8 410.95,-84.8 184.05,-84.8 184.05,-48.8 437.95,-48.8 437.95,-84.8"/>
-<text text-anchor="middle" x="311" y="-62.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="691.95,-84.8 688.95,-88.8 667.95,-88.8 664.95,-84.8 438.05,-84.8 438.05,-48.8 691.95,-48.8 691.95,-84.8"/>
+<text text-anchor="middle" x="565" y="-62.6" font-family="Times,serif" font-size="14.00">SafeApplicationTemplatesRoutingModule</text>
 </g>
 <!-- SafeApplicationTemplatesRoutingModule&#45;&gt;SafeApplicationTemplatesModule -->
 <g id="edge2" class="edge">
 <title>SafeApplicationTemplatesRoutingModule&#45;&gt;SafeApplicationTemplatesModule</title>
-<path fill="none" stroke="black" d="M311,-84.91C311,-84.91 311,-103.79 311,-103.79"/>
-<polygon fill="black" stroke="black" points="307.5,-103.79 311,-113.79 314.5,-103.79 307.5,-103.79"/>
+<path fill="none" stroke="black" d="M445.72,-84.91C445.72,-84.91 445.72,-103.79 445.72,-103.79"/>
+<polygon fill="black" stroke="black" points="442.22,-103.79 445.72,-113.79 449.22,-103.79 442.22,-103.79"/>
 </g>
 <!-- SafeTemplatesModule -->
 <g id="node4" class="node">
 <title>SafeTemplatesModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="166.24,-84.8 163.24,-88.8 142.24,-88.8 139.24,-84.8 23.76,-84.8 23.76,-48.8 166.24,-48.8 166.24,-84.8"/>
-<text text-anchor="middle" x="95" y="-62.6" font-family="Times,serif" font-size="14.00">SafeTemplatesModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="420.24,-84.8 417.24,-88.8 396.24,-88.8 393.24,-84.8 277.76,-84.8 277.76,-48.8 420.24,-48.8 420.24,-84.8"/>
+<text text-anchor="middle" x="349" y="-62.6" font-family="Times,serif" font-size="14.00">SafeTemplatesModule</text>
 </g>
 <!-- SafeTemplatesModule&#45;&gt;SafeApplicationTemplatesModule -->
 <g id="edge3" class="edge">
 <title>SafeTemplatesModule&#45;&gt;SafeApplicationTemplatesModule</title>
-<path fill="none" stroke="black" d="M95,-84.91C95,-104.14 95,-131.8 95,-131.8 95,-131.8 196.48,-131.8 196.48,-131.8"/>
-<polygon fill="black" stroke="black" points="196.48,-135.3 206.48,-131.8 196.48,-128.3 196.48,-135.3"/>
+<path fill="none" stroke="black" d="M349,-84.91C349,-84.91 349,-103.79 349,-103.79"/>
+<polygon fill="black" stroke="black" points="345.5,-103.79 349,-113.79 352.5,-103.79 345.5,-103.79"/>
 </g>
 </g>
 </svg>
