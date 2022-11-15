@@ -145,7 +145,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnChanges, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
 import { ChartComponent } from &#x27;@progress/kendo-angular-charts&#x27;;
 import get from &#x27;lodash/get&#x27;;
 
@@ -204,7 +204,7 @@ interface ChartOptions {
 /**
  * Pie chart component, based on kendo chart component.
  */
-export class SafePieChartComponent implements OnInit {
+export class SafePieChartComponent implements OnInit, OnChanges {
   @Input() title: ChartTitle | undefined;
 
   @Input() legend: ChartLegend | undefined;
@@ -233,6 +233,10 @@ export class SafePieChartComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.setLabelContent();
+  }
+
+  ngOnChanges(): void {
     this.setLabelContent();
   }
 

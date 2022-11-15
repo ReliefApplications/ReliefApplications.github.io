@@ -409,6 +409,7 @@ export class SafeColumnChartComponent implements OnInit, OnChanges {
     this.min &#x3D; get(this.options, &#x27;axes.y.min&#x27;);
     this.max &#x3D; get(this.options, &#x27;axes.y.max&#x27;);
     this.stack &#x3D; this.series.length &gt; 1 ? get(this.options, &#x27;stack&#x27;) : false;
+    this.setLabelContent();
   }
 
   /**
@@ -418,7 +419,6 @@ export class SafeColumnChartComponent implements OnInit, OnChanges {
     const showCategory &#x3D; get(this.options, &#x27;labels.showCategory&#x27;, false);
     const showValue &#x3D; get(this.options, &#x27;labels.showValue&#x27;, false);
     const valueType &#x3D; get(this.options, &#x27;labels.valueType&#x27;, &#x27;value&#x27;);
-
     if (showCategory) {
       if (showValue) {
         switch (valueType) {
