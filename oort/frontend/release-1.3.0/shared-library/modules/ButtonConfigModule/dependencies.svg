@@ -14,13 +14,13 @@
 <title>cluster_ButtonConfigModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-295.8 664,-295.8 664,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_ButtonConfigModule_exports</title>
-<polygon fill="none" stroke="black" points="287,-235.8 287,-287.8 465,-287.8 465,-235.8 287,-235.8"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_ButtonConfigModule_imports</title>
 <polygon fill="none" stroke="black" points="211,-105.8 211,-157.8 656,-157.8 656,-105.8 211,-105.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_ButtonConfigModule_exports</title>
+<polygon fill="none" stroke="black" points="287,-235.8 287,-287.8 465,-287.8 465,-235.8 287,-235.8"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_ButtonConfigModule_declarations</title>
