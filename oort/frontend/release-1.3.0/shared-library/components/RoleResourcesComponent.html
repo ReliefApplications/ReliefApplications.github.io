@@ -484,8 +484,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="356"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:356</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="372"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:372</a></div>
                 </td>
             </tr>
 
@@ -656,8 +656,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="458"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:458</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="474"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:474</a></div>
                 </td>
             </tr>
 
@@ -751,8 +751,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="536"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:536</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="552"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:552</a></div>
                 </td>
             </tr>
 
@@ -846,8 +846,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="516"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:516</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="532"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:532</a></div>
                 </td>
             </tr>
 
@@ -978,8 +978,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="398"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:398</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="414"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:414</a></div>
                 </td>
             </tr>
 
@@ -1240,8 +1240,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="595"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:595</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="611"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts:611</a></div>
                 </td>
             </tr>
 
@@ -1302,7 +1302,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>false | &quot;limited&quot; | &quot;full&quot;</code>
+                        <b>Returns : </b>    <code>false | &quot;full&quot; | &quot;limited&quot;</code>
 
                     </div>
                     <div class="io-description">
@@ -2151,14 +2151,30 @@ export class RoleResourcesComponent implements OnInit {
       add?: string[] | { role: string }[];
       remove?: string[] | { role: string }[];
     } &#x3D; {};
-    const hasCurrPermission &#x3D; get(
-      resource,
-      &#x60;rolePermissions.${permission}&#x60;,
-      false
-    );
-    Object.assign(updatedPermissions, {
-      [hasCurrPermission ? &#x27;remove&#x27; : &#x27;add&#x27;]: [{ role: this.role.id }],
-    });
+    const permissionLevel &#x3D; this.permissionLevel(resource, permission);
+    switch (permissionLevel) {
+      case &#x27;full&#x27;: {
+        Object.assign(updatedPermissions, {
+          remove: [{ role: this.role.id }],
+        });
+        break;
+      }
+      case &#x27;limited&#x27;: {
+        Object.assign(updatedPermissions, {
+          add: [{ role: this.role.id }],
+        });
+        break;
+      }
+      case false: {
+        Object.assign(updatedPermissions, {
+          add: [{ role: this.role.id }],
+        });
+        break;
+      }
+      default: {
+        return;
+      }
+    }
 
     this.apollo
       .mutate&lt;EditResourceAccessMutationResponse&gt;({
@@ -2443,11 +2459,11 @@ export class RoleResourcesComponent implements OnInit {
   private permissionLevel(resource: Resource, permission: Permission) {
     const rolePermission &#x3D; get(resource, &#x60;rolePermissions.${permission}&#x60;, null);
     if (rolePermission) {
-      const filters &#x3D; get(rolePermission, &#x27;access.filters&#x27;, []);
-      if (filters.length &gt; 0) {
-        return &#x27;limited&#x27;;
-      } else {
+      const full &#x3D; get(rolePermission, &#x27;full&#x27;, false);
+      if (full) {
         return &#x27;full&#x27;;
+      } else {
+        return &#x27;limited&#x27;;
       }
     } else {
       return false;
