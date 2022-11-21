@@ -233,7 +233,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:23</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -254,7 +254,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:24</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -280,7 +280,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:25</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -304,7 +304,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:26</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -337,8 +337,8 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:35</a></div>
                 </td>
             </tr>
 
@@ -376,8 +376,8 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:52</a></div>
                 </td>
             </tr>
 
@@ -479,7 +479,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -505,7 +505,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-fields/resource-fields.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -520,6 +520,7 @@ In this table, it&#39;s possible to toggle if field is visible / editable.</p>
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, OnInit, Output } from &#x27;@angular/core&#x27;;
 import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
+import { sortBy } from &#x27;lodash&#x27;;
 import { Resource } from &#x27;../../../../models/resource.model&#x27;;
 import { Role } from &#x27;../../../../models/user.model&#x27;;
 
@@ -552,11 +553,14 @@ export class ResourceFieldsComponent implements OnInit {
   public displayedColumns: string[] &#x3D; [&#x27;name&#x27;, &#x27;actions&#x27;];
 
   ngOnInit() {
-    this.fields.data &#x3D; this.resource.fields.map((field: any) &#x3D;&gt; ({
-      name: field.name,
-      canSee: !!field.permissions?.canSee?.includes(this.role.id),
-      canUpdate: !!field.permissions?.canUpdate?.includes(this.role.id),
-    }));
+    this.fields.data &#x3D; sortBy(
+      this.resource.fields.map((field: any) &#x3D;&gt; ({
+        name: field.name,
+        canSee: !!field.permissions?.canSee?.includes(this.role.id),
+        canUpdate: !!field.permissions?.canUpdate?.includes(this.role.id),
+      })),
+      &#x27;name&#x27;
+    );
   }
 
   /**
