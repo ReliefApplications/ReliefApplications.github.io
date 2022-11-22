@@ -14,6 +14,10 @@
 <title>cluster_TabPreviewModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1300,-230.8 1300,-32.8 8,-32.8"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_TabPreviewModule_exports</title>
+<polygon fill="none" stroke="black" points="550,-170.8 550,-222.8 718,-222.8 718,-170.8 550,-170.8"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_TabPreviewModule_declarations</title>
 <polygon fill="none" stroke="black" points="1128,-40.8 1128,-92.8 1292,-92.8 1292,-40.8 1128,-40.8"/>
@@ -21,10 +25,6 @@
 <g id="clust4" class="cluster">
 <title>cluster_TabPreviewModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 1120,-92.8 1120,-40.8 16,-40.8"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_TabPreviewModule_exports</title>
-<polygon fill="none" stroke="black" points="550,-170.8 550,-222.8 718,-222.8 718,-170.8 550,-170.8"/>
 </g>
 <!-- TabPreviewComponent -->
 <g id="node1" class="node">

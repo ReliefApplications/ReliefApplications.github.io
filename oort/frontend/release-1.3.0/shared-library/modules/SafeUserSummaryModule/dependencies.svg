@@ -18,13 +18,13 @@
 <title>cluster_SafeUserSummaryModule_declarations</title>
 <polygon fill="none" stroke="black" points="448,-40.8 448,-92.8 652,-92.8 652,-40.8 448,-40.8"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeUserSummaryModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 440,-92.8 440,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeUserSummaryModule_exports</title>
 <polygon fill="none" stroke="black" points="192,-170.8 192,-222.8 398,-222.8 398,-170.8 192,-170.8"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeUserSummaryModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 440,-92.8 440,-40.8 16,-40.8"/>
 </g>
 <!-- SafeUserSummaryComponent -->
 <g id="node1" class="node">

@@ -67,6 +67,9 @@
                             <a href="#ADD_CHANNEL" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>ADD_CHANNEL</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
+                            <a href="#ADD_DISTRIBUTION_LIST" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>ADD_DISTRIBUTION_LIST</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
                             <a href="#ADD_GROUP" title="projects/safe/src/lib/components/roles/graphql/mutations.ts" ><b>ADD_GROUP</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -418,6 +421,9 @@
                             <a href="#DELETE_CHANNEL" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>DELETE_CHANNEL</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
+                            <a href="#DELETE_DISTRIBUTION_LIST" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>DELETE_DISTRIBUTION_LIST</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
                             <a href="#DELETE_GROUP" title="projects/safe/src/lib/components/roles/graphql/mutations.ts" ><b>DELETE_GROUP</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
@@ -557,6 +563,9 @@
                         </li>
                         <li>
                             <a href="#EMAIL_EDITOR_CONFIG" title="projects/safe/src/lib/const/tinymce.const.ts" ><b>EMAIL_EDITOR_CONFIG</b>&nbsp;&nbsp;&nbsp;(projects/.../tinymce.const.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#EMAIL_REGEX" title="projects/safe/src/lib/components/distribution-lists/components/edit-distribution-list-modal/edit-distribution-list-modal.component.ts" ><b>EMAIL_REGEX</b>&nbsp;&nbsp;&nbsp;(projects/.../edit-distribution-list-modal.component.ts)</a>
                         </li>
                         <li>
                             <a href="#EMPTY" title="projects/safe/src/lib/components/mapping/mapping.stories.ts" ><b>EMPTY</b>&nbsp;&nbsp;&nbsp;(projects/.../mapping.stories.ts)</a>
@@ -1108,7 +1117,7 @@
                             <a href="#SELECTABLE_SETTINGS" title="projects/safe/src/lib/components/ui/core-grid/grid/grid.constants.ts" ><b>SELECTABLE_SETTINGS</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.constants.ts)</a>
                         </li>
                         <li>
-                            <a href="#SEPARATOR_KEYS_CODE" title="projects/safe/src/lib/components/widgets/grid-settings/button-config/button-config.component.ts" ><b>SEPARATOR_KEYS_CODE</b>&nbsp;&nbsp;&nbsp;(projects/.../button-config.component.ts)</a>
+                            <a href="#SEPARATOR_KEYS_CODE" title="projects/safe/src/lib/components/distribution-lists/components/edit-distribution-list-modal/edit-distribution-list-modal.component.ts" ><b>SEPARATOR_KEYS_CODE</b>&nbsp;&nbsp;&nbsp;(projects/.../edit-distribution-list-modal.component.ts)</a>
                         </li>
                         <li>
                             <a href="#SURVEY_LOCALIZABLE_STRINGS" title="projects/safe/src/lib/survey/localization.ts" ><b>SURVEY_LOCALIZABLE_STRINGS</b>&nbsp;&nbsp;&nbsp;(projects/.../localization.ts)</a>
@@ -1229,6 +1238,9 @@
                         </li>
                         <li>
                             <a href="#TOGGLE_APPLICATION_LOCK" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>TOGGLE_APPLICATION_LOCK</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#UPDATE_DISTRIBUTION_LIST" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>UPDATE_DISTRIBUTION_LIST</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
                         </li>
                         <li>
                             <a href="#UPDATE_TEMPLATE" title="projects/safe/src/lib/services/application/graphql/mutations.ts" ><b>UPDATE_TEMPLATE</b>&nbsp;&nbsp;&nbsp;(projects/.../mutations.ts)</a>
@@ -1417,6 +1429,46 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Graphql request for adding a new channel to an application</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ADD_DISTRIBUTION_LIST"></a>
+                    <span class="name">
+                        <span ><b>ADD_DISTRIBUTION_LIST</b></span>
+                        <a href="#ADD_DISTRIBUTION_LIST"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>gql&#x60;
+  mutation addDistributionList(
+    $application: ID!
+    $distributionList: DistributionListInputType!
+  ) {
+    addDistributionList(
+      application: $application
+      distributionList: $distributionList
+    ) {
+      id
+      name
+      emails
+    }
+  }
+&#x60;</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Graphql request for adding a template of an application</p>
 </div>
                 </td>
             </tr>
@@ -1695,6 +1747,40 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Graphql request for deleting a channel</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="DELETE_DISTRIBUTION_LIST"></a>
+                    <span class="name">
+                        <span ><b>DELETE_DISTRIBUTION_LIST</b></span>
+                        <a href="#DELETE_DISTRIBUTION_LIST"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>gql&#x60;
+  mutation deleteDistributionList($application: ID!, $id: ID!) {
+    deleteDistributionList(application: $application, id: $id) {
+      id
+      name
+      emails
+    }
+  }
+&#x60;</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Graphql request for adding a template of an application</p>
 </div>
                 </td>
             </tr>
@@ -2295,6 +2381,48 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Graphql request for toggling the application lock state</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UPDATE_DISTRIBUTION_LIST"></a>
+                    <span class="name">
+                        <span ><b>UPDATE_DISTRIBUTION_LIST</b></span>
+                        <a href="#UPDATE_DISTRIBUTION_LIST"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>gql&#x60;
+  mutation editDistributionList(
+    $application: ID!
+    $id: ID!
+    $distributionList: DistributionListInputType!
+  ) {
+    editDistributionList(
+      application: $application
+      id: $id
+      distributionList: $distributionList
+    ) {
+      id
+      name
+      emails
+    }
+  }
+&#x60;</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Graphql request for editing a distribution list of an application</p>
 </div>
                 </td>
             </tr>
@@ -6620,7 +6748,7 @@ Commented types are not yet implemented.</p>
     ],
     sendMail: [value &amp;&amp; value.sendMail ? value.sendMail : false],
     distributionList: [
-      value &amp;&amp; value.distributionList ? value.distributionList : [],
+      get(value, &#x27;distributionList&#x27;, null),
       value &amp;&amp; value.sendMail ? Validators.required : null,
     ],
     templates: [
@@ -10827,38 +10955,6 @@ Commented types are not yet implemented.</p>
 
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="SEPARATOR_KEYS_CODE"></a>
-                    <span class="name">
-                        <span ><b>SEPARATOR_KEYS_CODE</b></span>
-                        <a href="#SEPARATOR_KEYS_CODE"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>[]</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>[ENTER, COMMA, TAB, SPACE]</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Key codes of separators</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
 </section>
     <h3>projects/safe/src/lib/services/dashboard/graphql/mutations.ts</h3>
     <section>
@@ -11808,6 +11904,67 @@ Commented types are not yet implemented.</p>
         </tbody>
     </table>
 </section>
+    <h3>projects/safe/src/lib/components/distribution-lists/components/edit-distribution-list-modal/edit-distribution-list-modal.component.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="EMAIL_REGEX"></a>
+                    <span class="name">
+                        <span ><b>EMAIL_REGEX</b></span>
+                        <a href="#EMAIL_REGEX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Regex pattern for email</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SEPARATOR_KEYS_CODE"></a>
+                    <span class="name">
+                        <span ><b>SEPARATOR_KEYS_CODE</b></span>
+                        <a href="#SEPARATOR_KEYS_CODE"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[ENTER, COMMA, TAB, SPACE]</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Key codes of separators</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
     <h3>projects/safe/src/lib/components/ui/core-grid/grid/grid.constants.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -12454,6 +12611,11 @@ Commented types are not yet implemented.</p>
         name
         type
         content
+      }
+      distributionLists {
+        id
+        name
+        emails
       }
       pages {
         id

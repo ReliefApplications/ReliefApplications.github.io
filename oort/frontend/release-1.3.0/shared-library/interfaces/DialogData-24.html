@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widgets/map-settings/map-layers/map-clorophlet/map-clorophlet.component.ts</code>
+            <code>projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-data/tile-data.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Interface of dialog data of the component</p>
+                <p>Model for dialog data</p>
 
             </p>
 
@@ -91,27 +91,15 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#fields" 
+                                        <a href="#template" 
 >
-                                            fields
+                                            template
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#formatedFields" 
+                                        <a href="#tile" 
 >
-                                            formatedFields
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="#query" 
->
-                                            query
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="#value" 
->
-                                            value
+                                            tile
                                         </a>
                                 </li>
                             </ul>
@@ -129,9 +117,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="fields"></a>
-                                        <span class="name "><b>fields</b>
-                                            <a href="#fields">
+                                        <a name="template"></a>
+                                        <span class="name "><b>template</b>
+                                            <a href="#template">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -139,73 +127,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>fields:     <code>any[]</code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>any[]</code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="formatedFields"></a>
-                                        <span class="name "><b>formatedFields</b>
-                                            <a href="#formatedFields">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>formatedFields:     <code>any[]</code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>any[]</code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="query"></a>
-                                        <span class="name "><b>query</b>
-                                            <a href="#query">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>query:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>template:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -228,9 +150,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="value"></a>
-                                        <span class="name "><b>value</b>
-                                            <a href="#value">
+                                        <a name="tile"></a>
+                                        <span class="name "><b>tile</b>
+                                            <a href="#tile">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -238,7 +160,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>value:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>tile:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -262,131 +184,67 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { FormArray, FormGroup } from &#x27;@angular/forms&#x27;;
-import { MatDialog, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { clorophletForm, divisionForm } from &#x27;../../map-forms&#x27;;
-import { MapClorophletDivisionComponent } from &#x27;../map-clorophlet-division/map-clorophlet-division.component&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  OnInit,
+  Inject,
+  ViewChild,
+  ViewContainerRef,
+  AfterViewInit,
+} from &#x27;@angular/core&#x27;;
+import { FormGroup } from &#x27;@angular/forms&#x27;;
+import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 
-/** Interface of dialog data of the component */
+/** Model for dialog data */
 interface DialogData {
-  value: any;
-  fields: any[];
-  formatedFields: any[];
-  query: any;
+  tile: any;
+  template: any;
 }
 
-/**
- * Single Clorophlet Configuration in Map Settings.
- */
+/** Component for a data tile */
 @Component({
-  selector: &#x27;safe-map-clorophlet&#x27;,
-  templateUrl: &#x27;./map-clorophlet.component.html&#x27;,
-  styleUrls: [&#x27;./map-clorophlet.component.scss&#x27;],
+  selector: &#x27;safe-tile-data&#x27;,
+  templateUrl: &#x27;./tile-data.component.html&#x27;,
+  styleUrls: [&#x27;./tile-data.component.scss&#x27;],
 })
-export class MapClorophletComponent implements OnInit {
-  public form!: FormGroup;
+/** Modal content to edit the settings of a component. */
+export class SafeTileDataComponent implements OnInit, AfterViewInit {
+  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
+  tileForm?: FormGroup;
 
-  public tableColumns &#x3D; [&#x27;label&#x27;, &#x27;color&#x27;, &#x27;actions&#x27;];
-
-  public fields: any[] &#x3D; [];
-  public formatedFields: any[] &#x3D; [];
-  public geoJSONfields: string[] &#x3D; [];
-  public query: any;
-
-  /**
-   * Clorophlet divisions as form array.
-   *
-   * @returns Divisions as form array.
-   */
-  get divisions(): FormArray {
-    return this.form.get(&#x27;divisions&#x27;) as FormArray;
-  }
+  // &#x3D;&#x3D;&#x3D; TEMPLATE REFERENCE &#x3D;&#x3D;&#x3D;
+  @ViewChild(&#x27;settingsContainer&#x27;, { read: ViewContainerRef })
+  settingsContainer: any;
 
   /**
-   * Single Clorophlet Configuration in Map Settings.
+   * Constructor of a data tile
    *
-   * @param data dialog data
-   * @param dialog Material dialog service
+   * @param dialogRef Reference to a dialog opened via the material dialog service
+   * @param data The dialog data
    */
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    private dialog: MatDialog
-  ) {
-    this.form &#x3D; clorophletForm(data.value);
-    this.fields &#x3D; data.fields;
-    this.formatedFields &#x3D; data.formatedFields;
-    this.query &#x3D; data.query;
-    if (this.form.value.geoJSON) {
-      this.updateGeoJSONfields(this.form.value.geoJSON);
-    }
-  }
+    public dialogRef: MatDialogRef&lt;SafeTileDataComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+  ) {}
 
   ngOnInit(): void {}
 
-  /**
-   * Adds a new division.
-   */
-  public addDivision(): void {
-    this.divisions.push(divisionForm());
-  }
-
-  /**
-   * Remove division at index.
-   *
-   * @param index index of division to remove
-   */
-  public removeDivision(index: number): void {
-    this.divisions.removeAt(index);
-  }
-
-  /**
-   * Edit division at index.
-   *
-   * @param index index of division to edit
-   */
-  public editDivision(index: number): void {
-    const dialogRef &#x3D; this.dialog.open(MapClorophletDivisionComponent, {
-      data: {
-        value: this.divisions.at(index).value,
-        fields: this.formatedFields,
-        query: this.query,
-      },
-    });
-    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
-      if (value) {
-        this.divisions.setControl(index, divisionForm(value));
-      }
+  /** Once the template is ready, inject the settings component linked to the widget type passed as a parameter. */
+  ngAfterViewInit(): void {
+    const componentRef &#x3D; this.settingsContainer.createComponent(
+      this.data.template
+    );
+    componentRef.instance.tile &#x3D; this.data.tile;
+    componentRef.instance.change.subscribe((e: any) &#x3D;&gt; {
+      this.tileForm &#x3D; e;
     });
   }
 
   /**
-   * Add a GeoJSON file to the clorophlet.
+   * Closes the modal sending tile form value.
    */
-  public async uploadGeoJSON(): Promise&lt;void&gt; {
-    const file &#x3D; document.getElementById(&#x27;geojson&#x27;) as HTMLInputElement;
-    if (file) {
-      if (file.files &amp;&amp; file.files.length &gt; 0) {
-        this.form.patchValue({
-          geoJSONname: file.files[0].name,
-          geoJSON: await file.files[0].text(),
-        });
-        this.updateGeoJSONfields(this.form.value.geoJSON);
-      }
-    }
-  }
-
-  /**
-   * Updates the geoJSON selectable fields.
-   *
-   * @param geoJSON geoJSON to check.
-   */
-  private updateGeoJSONfields(geoJSON: string): void {
-    const parsed &#x3D; JSON.parse(geoJSON);
-    this.geoJSONfields &#x3D; [];
-    for (const property of Object.keys(parsed.features[0].properties)) {
-      this.geoJSONfields.push(property);
-    }
+  onSubmit(): void {
+    this.dialogRef.close(this.tileForm?.getRawValue());
   }
 }
 </code></pre>

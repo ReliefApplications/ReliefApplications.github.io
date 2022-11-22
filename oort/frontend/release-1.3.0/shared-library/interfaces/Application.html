@@ -134,6 +134,13 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
+                                        <a href="#distributionLists" 
+>
+                                            distributionLists
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#id" 
 >
                                             id
@@ -468,6 +475,44 @@
                                     <tr>
                                         <td class="col-md-4">
                                             <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="distributionLists"></a>
+                                        <span class="name "><b>distributionLists</b>
+                                            <a href="#distributionLists">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>distributionLists:         <code><a href="../interfaces/DistributionList.html" target="_self" >DistributionList[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/DistributionList.html" target="_self" >DistributionList[]</a></code>
 
                                         </td>
                                     </tr>
@@ -1103,6 +1148,7 @@ import { Subscription } from &#x27;./subscription.model&#x27;;
 import { PositionAttributeCategory } from &#x27;./position-attribute-category.model&#x27;;
 import { status } from &#x27;./form.model&#x27;;
 import { Template } from &#x27;./template.model&#x27;;
+import { DistributionList } from &#x27;./distribution-list.model&#x27;;
 
 /** Model for Application object. */
 export interface Application {
@@ -1128,6 +1174,7 @@ export interface Application {
   lockedBy?: User;
   lockedByUser?: boolean;
   templates?: Template[];
+  distributionLists?: DistributionList[];
 }
 </code></pre>
     </div>

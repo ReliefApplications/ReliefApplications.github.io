@@ -193,6 +193,7 @@ import { Subscription } from &#x27;../../../models/subscription.model&#x27;;
 import { PositionAttributeCategory } from &#x27;../../../models/position-attribute-category.model&#x27;;
 import { Application } from &#x27;../../../models/application.model&#x27;;
 import { Template } from &#x27;../../../models/template.model&#x27;;
+import { DistributionList } from &#x27;../../../models/distribution-list.model&#x27;;
 
 // &#x3D;&#x3D;&#x3D; ADD PAGE &#x3D;&#x3D;&#x3D;
 /** Graphql request for adding a new page of a given type to an application */
@@ -799,6 +800,67 @@ export const DELETE_TEMPLATE &#x3D; gql&#x60;
 export interface DeleteTemplateMutationResponse {
   loading: boolean;
   deleteTemplate: Template;
+}
+
+/** Graphql request for editing a distribution list of an application */
+export const UPDATE_DISTRIBUTION_LIST &#x3D; gql&#x60;
+  mutation editDistributionList(
+    $application: ID!
+    $id: ID!
+    $distributionList: DistributionListInputType!
+  ) {
+    editDistributionList(
+      application: $application
+      id: $id
+      distributionList: $distributionList
+    ) {
+      id
+      name
+      emails
+    }
+  }
+&#x60;;
+
+/** Model for UpdateDistributionListMutationResponse object */
+export interface UpdateDistributionListMutationResponse {
+  editDistributionList: DistributionList;
+}
+
+/** Graphql request for adding a template of an application */
+export const ADD_DISTRIBUTION_LIST &#x3D; gql&#x60;
+  mutation addDistributionList(
+    $application: ID!
+    $distributionList: DistributionListInputType!
+  ) {
+    addDistributionList(
+      application: $application
+      distributionList: $distributionList
+    ) {
+      id
+      name
+      emails
+    }
+  }
+&#x60;;
+
+/** Model for AddDistributionListMutationResponse object */
+export interface AddDistributionListMutationResponse {
+  addDistributionList: DistributionList;
+}
+/** Graphql request for adding a template of an application */
+export const DELETE_DISTRIBUTION_LIST &#x3D; gql&#x60;
+  mutation deleteDistributionList($application: ID!, $id: ID!) {
+    deleteDistributionList(application: $application, id: $id) {
+      id
+      name
+      emails
+    }
+  }
+&#x60;;
+
+/** Model for AddDistributionListMutationResponse object */
+export interface DeleteDistributionListMutationResponse {
+  deleteDistributionList: DistributionList;
 }
 </code></pre>
     </div>

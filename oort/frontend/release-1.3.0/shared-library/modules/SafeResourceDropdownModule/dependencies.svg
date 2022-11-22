@@ -14,13 +14,13 @@
 <title>cluster_SafeResourceDropdownModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 454,-230.8 454,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeResourceDropdownModule_exports</title>
-<polygon fill="none" stroke="black" points="112,-170.8 112,-222.8 350,-222.8 350,-170.8 112,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeResourceDropdownModule_declarations</title>
 <polygon fill="none" stroke="black" points="212,-40.8 212,-92.8 446,-92.8 446,-40.8 212,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeResourceDropdownModule_exports</title>
+<polygon fill="none" stroke="black" points="112,-170.8 112,-222.8 350,-222.8 350,-170.8 112,-170.8"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeResourceDropdownModule_imports</title>

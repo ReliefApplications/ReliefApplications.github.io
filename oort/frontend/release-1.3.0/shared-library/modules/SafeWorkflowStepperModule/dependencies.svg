@@ -18,13 +18,13 @@
 <title>cluster_SafeWorkflowStepperModule_declarations</title>
 <polygon fill="none" stroke="black" points="435,-40.8 435,-92.8 980,-92.8 980,-40.8 435,-40.8"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_SafeWorkflowStepperModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 427,-92.8 427,-40.8 16,-40.8"/>
-</g>
 <g id="clust7" class="cluster">
 <title>cluster_SafeWorkflowStepperModule_exports</title>
 <polygon fill="none" stroke="black" points="149,-170.8 149,-222.8 704,-222.8 704,-170.8 149,-170.8"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_SafeWorkflowStepperModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 427,-92.8 427,-40.8 16,-40.8"/>
 </g>
 <!-- SafeAddStepComponent -->
 <g id="node1" class="node">
