@@ -1140,11 +1140,11 @@ video {
 .mb-5{
   margin-bottom: 1.25rem;
 }
-.mb-2{
-  margin-bottom: 0.5rem;
-}
 .mb-6{
   margin-bottom: 1.5rem;
+}
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 .mb-8{
   margin-bottom: 2rem;
@@ -1275,6 +1275,9 @@ video {
 .rounded-lg{
   border-radius: 0.5rem;
 }
+.\!rounded-lg{
+  border-radius: 0.5rem !important;
+}
 .border{
   border-width: 1px;
 }
@@ -1401,9 +1404,7 @@ video {
   width: 64px;
 }
 .mat-chip {
-  border-radius: 0px !important;
   min-width: 75px;
-  max-width: 1px;
   justify-content: center;
   font-weight: 500 !important;
 }
