@@ -214,6 +214,14 @@ export const routes &#x3D; [
                   ),
                 // canActivate: [WhoPermissionGuard]
               },
+              {
+                path: &#x27;distribution-lists&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationDistributionListsModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
             ],
           },
         ],

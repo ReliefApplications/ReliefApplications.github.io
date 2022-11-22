@@ -1842,6 +1842,14 @@ All routes starting with &#39;/auth&#39; should redirect to &#39;login&#39; page
                   ),
                 // canActivate: [WhoPermissionGuard]
               },
+              {
+                path: &#x27;distribution-lists&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationDistributionListsModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
             ],
           },
         ],
