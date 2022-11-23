@@ -70,9 +70,6 @@
                             <a href="#authConfig" title="projects/front-office/src/environments/environment.azure.uat.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.azure.uat.ts)</a>
                         </li>
                         <li>
-                            <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.demo.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.demo.ts)</a>
-                        </li>
-                        <li>
                             <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.dev.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
                         </li>
                         <li>
@@ -80,6 +77,9 @@
                         </li>
                         <li>
                             <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.local.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.local.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.demo.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.demo.ts)</a>
                         </li>
                         <li>
                             <a href="#authConfig" title="projects/front-office/src/environments/environment.oort.prod.ts" ><b>authConfig</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.prod.ts)</a>
@@ -103,9 +103,6 @@
                             <a href="#environment" title="projects/front-office/src/environments/environment.azure.uat.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.azure.uat.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="projects/front-office/src/environments/environment.oort.demo.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.demo.ts)</a>
-                        </li>
-                        <li>
                             <a href="#environment" title="projects/front-office/src/environments/environment.oort.dev.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.dev.ts)</a>
                         </li>
                         <li>
@@ -113,6 +110,9 @@
                         </li>
                         <li>
                             <a href="#environment" title="projects/front-office/src/environments/environment.oort.local.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.local.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="projects/front-office/src/environments/environment.oort.demo.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.demo.ts)</a>
                         </li>
                         <li>
                             <a href="#environment" title="projects/front-office/src/environments/environment.oort.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(projects/.../environment.oort.prod.ts)</a>
@@ -463,93 +463,6 @@
         </tbody>
     </table>
 </section>
-    <h3>projects/front-office/src/environments/environment.oort.demo.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="authConfig"></a>
-                    <span class="name">
-                        <span ><b>authConfig</b></span>
-                        <a href="#authConfig"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>AuthConfig</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  issuer: &#x27;https://id.oortcloud.tech/auth/realms/oort-demo&#x27;,
-  redirectUri: &#x27;https://demo.oortcloud.tech/&#x27;,
-  postLogoutRedirectUri: &#x27;https://demo.oortcloud.tech/auth/&#x27;,
-  clientId: &#x27;oort-client&#x27;,
-  scope: &#x27;openid profile email offline_access&#x27;,
-  responseType: &#x27;code&#x27;,
-  showDebugInformation: true,
-}</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Authentication configuration of the module.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="environment"></a>
-                    <span class="name">
-                        <span ><b>environment</b></span>
-                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  production: true,
-  apiUrl: &#x27;https://demo.oortcloud.tech/api&#x27;,
-  subscriptionApiUrl: &#x27;wss://demo.oortcloud.tech/api&#x27;,
-  frontOfficeUri: &#x27;https://demo.oortcloud.tech&#x27;,
-  backOfficeUri: &#x27;https://demo.oortcloud.tech/admin/&#x27;,
-  module: &#x27;frontoffice&#x27;,
-  availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;],
-  authConfig,
-  esriApiKey:
-    &#x27;AAPKf2bae9b3f32943e2a8d58b0b96ffea3fj8Vt8JYDt1omhzN_lONXPRHN8B89umU-pA9t7ze1rfCIiiEVXizYEiFRFiVrl6wg&#x27;,
-  theme,
-}</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Environment configuration</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
     <h3>projects/front-office/src/environments/environment.oort.dev.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -793,6 +706,93 @@
   backOfficeUri: &#x27;http://localhost:4200/&#x27;,
   module: &#x27;frontoffice&#x27;,
   availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;, &#x27;test&#x27;],
+  authConfig,
+  esriApiKey:
+    &#x27;AAPKf2bae9b3f32943e2a8d58b0b96ffea3fj8Vt8JYDt1omhzN_lONXPRHN8B89umU-pA9t7ze1rfCIiiEVXizYEiFRFiVrl6wg&#x27;,
+  theme,
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Environment configuration</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/front-office/src/environments/environment.oort.demo.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authConfig"></a>
+                    <span class="name">
+                        <span ><b>authConfig</b></span>
+                        <a href="#authConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AuthConfig</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  issuer: &#x27;https://id.oortcloud.tech/auth/realms/oort-demo&#x27;,
+  redirectUri: &#x27;https://demo.oortcloud.tech/&#x27;,
+  postLogoutRedirectUri: &#x27;https://demo.oortcloud.tech/auth/&#x27;,
+  clientId: &#x27;oort-client&#x27;,
+  scope: &#x27;openid profile email offline_access&#x27;,
+  responseType: &#x27;code&#x27;,
+  showDebugInformation: true,
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Authentication configuration of the module.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  production: true,
+  apiUrl: &#x27;https://demo.oortcloud.tech/api&#x27;,
+  subscriptionApiUrl: &#x27;wss://demo.oortcloud.tech/api&#x27;,
+  frontOfficeUri: &#x27;https://demo.oortcloud.tech&#x27;,
+  backOfficeUri: &#x27;https://demo.oortcloud.tech/admin/&#x27;,
+  module: &#x27;frontoffice&#x27;,
+  availableLanguages: [&#x27;en&#x27;, &#x27;fr&#x27;],
   authConfig,
   esriApiKey:
     &#x27;AAPKf2bae9b3f32943e2a8d58b0b96ffea3fj8Vt8JYDt1omhzN_lONXPRHN8B89umU-pA9t7ze1rfCIiiEVXizYEiFRFiVrl6wg&#x27;,
@@ -1770,6 +1770,22 @@ All routes starting with &#39;/auth&#39; should redirect to &#39;login&#39; page
             path: &#x27;settings&#x27;,
             children: [
               {
+                path: &#x27;templates&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationTemplatesModule
+                  ),
+                // canActivate: [WhoPermissionGuard]
+              },
+              {
+                path: &#x27;distribution-lists&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationDistributionListsModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
+              {
                 path: &#x27;roles&#x27;,
                 children: [
                   {
@@ -1833,22 +1849,6 @@ All routes starting with &#39;/auth&#39; should redirect to &#39;login&#39; page
               },
               {
                 path: &#x27;**&#x27;,
-              },
-              {
-                path: &#x27;templates&#x27;,
-                loadChildren: () &#x3D;&gt;
-                  import(&#x27;@safe/builder&#x27;).then(
-                    (m) &#x3D;&gt; m.SafeApplicationTemplatesModule
-                  ),
-                // canActivate: [WhoPermissionGuard]
-              },
-              {
-                path: &#x27;distribution-lists&#x27;,
-                loadChildren: () &#x3D;&gt;
-                  import(&#x27;@safe/builder&#x27;).then(
-                    (m) &#x3D;&gt; m.SafeApplicationDistributionListsModule
-                  ),
-                // canActivate: [SafePermissionGuard]
               },
             ],
           },

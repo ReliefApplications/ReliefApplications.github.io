@@ -142,6 +142,22 @@ export const routes &#x3D; [
             path: &#x27;settings&#x27;,
             children: [
               {
+                path: &#x27;templates&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationTemplatesModule
+                  ),
+                // canActivate: [WhoPermissionGuard]
+              },
+              {
+                path: &#x27;distribution-lists&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationDistributionListsModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
+              {
                 path: &#x27;roles&#x27;,
                 children: [
                   {
@@ -205,22 +221,6 @@ export const routes &#x3D; [
               },
               {
                 path: &#x27;**&#x27;,
-              },
-              {
-                path: &#x27;templates&#x27;,
-                loadChildren: () &#x3D;&gt;
-                  import(&#x27;@safe/builder&#x27;).then(
-                    (m) &#x3D;&gt; m.SafeApplicationTemplatesModule
-                  ),
-                // canActivate: [WhoPermissionGuard]
-              },
-              {
-                path: &#x27;distribution-lists&#x27;,
-                loadChildren: () &#x3D;&gt;
-                  import(&#x27;@safe/builder&#x27;).then(
-                    (m) &#x3D;&gt; m.SafeApplicationDistributionListsModule
-                  ),
-                // canActivate: [SafePermissionGuard]
               },
             ],
           },
