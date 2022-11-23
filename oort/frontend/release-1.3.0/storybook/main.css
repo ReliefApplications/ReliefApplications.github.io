@@ -1201,6 +1201,12 @@ video {
 .\!hidden{
   display: none !important;
 }
+.\!w-auto{
+  width: auto !important;
+}
+.w-auto{
+  width: auto;
+}
 .w-80{
   width: 20rem;
 }
@@ -1236,6 +1242,9 @@ video {
 }
 .justify-end{
   justify-content: flex-end;
+}
+.justify-center{
+  justify-content: center;
 }
 .justify-between{
   justify-content: space-between;
@@ -33304,6 +33313,11 @@ mat-tab-group[vertical] > .mat-tab-body-wrapper > .mat-tab-body > .mat-tab-body-
 .hover\:bg-neutral-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+@media not all and (min-width: 640px){
+  .max-sm\:\!w-auto{
+    width: auto !important;
+  }
 }
 @media (min-width: 640px){
   .sm\:flex-row{
