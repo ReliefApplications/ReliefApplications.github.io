@@ -452,14 +452,14 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>(httpLink: HttpLink): ApolloClientOptions&lt;any&gt; &#x3D;&gt; {
-  const basic &#x3D; setContext((operation, context) &#x3D;&gt; ({
+  const basic &#x3D; setContext(() &#x3D;&gt; ({
     headers: {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       Accept: &#x27;charset&#x3D;utf-8&#x27;,
     },
   }));
 
-  const auth &#x3D; setContext((operation, context) &#x3D;&gt; {
+  const auth &#x3D; setContext(() &#x3D;&gt; {
     // Get the authentication token from local storage if it exists
     const token &#x3D; localStorage.getItem(&#x27;idtoken&#x27;);
     return {
@@ -482,7 +482,7 @@
       connectionParams: {
         authToken: localStorage.getItem(&#x27;idtoken&#x27;),
       },
-      connectionCallback: (error) &#x3D;&gt; {
+      connectionCallback: () &#x3D;&gt; {
         // if (localStorage.getItem(&#x27;loaded&#x27;) &#x3D;&#x3D;&#x3D; &#x27;true&#x27;) {
         //   // location.reload();
         //   localStorage.setItem(&#x27;loaded&#x27;, &#x27;false&#x27;);
