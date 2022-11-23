@@ -1,0 +1,1342 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  FilterRowComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Composite filter row.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="../interfaces/Change.html" target="_self" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-filter-row</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./filter-row.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./filter-row.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#booleanEditor" >booleanEditor</a>
+                            </li>
+                            <li>
+                                <a href="#dateEditor" >dateEditor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#editor" >editor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#field" >field</a>
+                            </li>
+                            <li>
+                                <a href="#numericEditor" >numericEditor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#operators" >operators</a>
+                            </li>
+                            <li>
+                                <a href="#selectEditor" >selectEditor</a>
+                            </li>
+                            <li>
+                                <a href="#textEditor" >textEditor</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setEditor" >setEditor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setField" >setField</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fields" >fields</a>
+                            </li>
+                            <li>
+                                <a href="#form" >form</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#delete" >delete</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#valueControl" >valueControl</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fields"></a>
+                        <b>fields</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:27</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <b>form</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="delete"></a>
+                        <b>delete</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:26</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setEditor"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setEditor</b></span>
+                        <a href="#setEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setEditor(field: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set field editor.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>filter field</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setField"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setField</b></span>
+                        <a href="#setField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setField(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, init?)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set field.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>field name</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>init</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>is new field or not</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="booleanEditor"></a>
+                    <span class="name">
+                        <span ><b>booleanEditor</b></span>
+                        <a href="#booleanEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;booleanEditor&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dateEditor"></a>
+                    <span class="name">
+                        <span ><b>dateEditor</b></span>
+                        <a href="#dateEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;dateEditor&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editor"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>editor</b></span>
+                        <a href="#editor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="field"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>field</b></span>
+                        <a href="#field"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="numericEditor"></a>
+                    <span class="name">
+                        <span ><b>numericEditor</b></span>
+                        <a href="#numericEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;numericEditor&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operators"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>operators</b></span>
+                        <a href="#operators"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectEditor"></a>
+                    <span class="name">
+                        <span ><b>selectEditor</b></span>
+                        <a href="#selectEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;selectEditor&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="textEditor"></a>
+                    <span class="name">
+                        <span ><b>textEditor</b></span>
+                        <a href="#textEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Template.html" target="_self" >TemplateRef&lt;any&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;textEditor&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="valueControl"></a>
+                        <span class="name"><b>valueControl</b><a href="#valueControl"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>valueControl()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/components/filter/filter-row/filter-row.component.ts:33</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="../interfaces/Form.html" target="_self" >FormControl</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterViewInit,
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  TemplateRef,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+import { FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
+import { clone, get } from &#x27;lodash&#x27;;
+import { FIELD_TYPES, FILTER_OPERATORS } from &#x27;../filter.const&#x27;;
+
+/**
+ * Composite filter row.
+ */
+@Component({
+  selector: &#x27;safe-filter-row&#x27;,
+  templateUrl: &#x27;./filter-row.component.html&#x27;,
+  styleUrls: [&#x27;./filter-row.component.scss&#x27;],
+})
+export class FilterRowComponent implements OnInit, OnChanges, AfterViewInit {
+  @Input() form!: FormGroup;
+  @Output() delete &#x3D; new EventEmitter();
+  @Input() fields: any[] &#x3D; [];
+
+  public field?: any;
+  public editor?: TemplateRef&lt;any&gt;;
+
+  /** @returns value form field as form control. */
+  get valueControl(): FormControl {
+    return this.form.get(&#x27;value&#x27;) as FormControl;
+  }
+
+  @ViewChild(&#x27;textEditor&#x27;, { static: false }) textEditor!: TemplateRef&lt;any&gt;;
+  @ViewChild(&#x27;booleanEditor&#x27;, { static: false })
+  booleanEditor!: TemplateRef&lt;any&gt;;
+  @ViewChild(&#x27;selectEditor&#x27;, { static: false }) selectEditor!: TemplateRef&lt;any&gt;;
+  @ViewChild(&#x27;numericEditor&#x27;, { static: false })
+  numericEditor!: TemplateRef&lt;any&gt;;
+  @ViewChild(&#x27;dateEditor&#x27;, { static: false }) dateEditor!: TemplateRef&lt;any&gt;;
+
+  public operators: any[] &#x3D; [];
+
+  ngOnInit(): void {
+    this.form.get(&#x27;field&#x27;)?.valueChanges.subscribe((value) &#x3D;&gt; {
+      // remove value
+      this.form.get(&#x27;value&#x27;)?.setValue(null);
+      this.setField(value, true);
+    });
+    this.form.get(&#x27;operator&#x27;)?.valueChanges.subscribe((value) &#x3D;&gt; {
+      const operator &#x3D; this.operators.find((x) &#x3D;&gt; x.value &#x3D;&#x3D;&#x3D; value);
+      if (operator?.disableValue) {
+        this.form.get(&#x27;value&#x27;)?.disable();
+      } else {
+        this.form.get(&#x27;value&#x27;)?.enable();
+      }
+    });
+  }
+
+  ngAfterViewInit(): void {
+    const initialField &#x3D; this.form.get(&#x27;field&#x27;)?.value;
+    if (initialField &amp;&amp; this.fields.length &gt; 0) {
+      this.setField(initialField);
+    }
+  }
+
+  ngOnChanges(): void {
+    const initialField &#x3D; this.form.get(&#x27;field&#x27;)?.value;
+    if (initialField &amp;&amp; this.fields.length &gt; 0) {
+      this.setField(initialField);
+    }
+  }
+
+  /**
+   * Set field.
+   *
+   * @param name field name
+   * @param init is new field or not
+   */
+  private setField(name: string, init?: true) {
+    // get field, and operators
+    const nameFragments &#x3D;
+      name.startsWith(&#x27;{{attributes.&#x27;) &amp;&amp; name.endsWith(&#x27;}}&#x27;)
+        ? [name]
+        : name.split(&#x27;.&#x27;);
+    let fields &#x3D; clone(this.fields);
+    let field &#x3D; null;
+    // Loop over name fragments to find correct field
+    for (const fragment of nameFragments) {
+      field &#x3D; fields.find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; fragment);
+      fields &#x3D; clone(field.fields);
+    }
+    if (field) {
+      this.field &#x3D; field;
+      const type &#x3D; {
+        ...FIELD_TYPES.find((x) &#x3D;&gt; x.editor &#x3D;&#x3D;&#x3D; this.field.editor),
+        ...this.field.filter,
+      };
+      this.operators &#x3D; FILTER_OPERATORS.filter((x) &#x3D;&gt;
+        type?.operators.includes(x.value)
+      );
+      if (init) {
+        this.form.get(&#x27;operator&#x27;)?.setValue(type?.defaultOperator);
+      } else {
+        this.form.get(&#x27;operator&#x27;)?.setValue(this.form.value.operator);
+      }
+      // set operator template
+      this.setEditor(this.field);
+    }
+  }
+
+  /**
+   * Set field editor.
+   *
+   * @param field filter field
+   */
+  private setEditor(field: any) {
+    if (get(field, &#x27;filter.template&#x27;, null)) {
+      this.editor &#x3D; field.filter.template;
+    } else {
+      switch (field.editor) {
+        case &#x27;text&#x27;: {
+          this.editor &#x3D; this.textEditor;
+          break;
+        }
+        case &#x27;boolean&#x27;: {
+          this.editor &#x3D; this.booleanEditor;
+          break;
+        }
+        case &#x27;attribute&#x27;:
+        case &#x27;select&#x27;: {
+          this.editor &#x3D; this.selectEditor;
+          break;
+        }
+        case &#x27;numeric&#x27;: {
+          this.editor &#x3D; this.numericEditor;
+          break;
+        }
+        case &#x27;datetime&#x27;:
+        case &#x27;date&#x27;: {
+          this.editor &#x3D; this.dateEditor;
+          break;
+        }
+        default: {
+          this.editor &#x3D; this.textEditor;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form [formGroup]&#x3D;&quot;form&quot;&gt;
+  &lt;!-- FIELD SELECTION --&gt;
+  &lt;ng-container *ngTemplateOutlet&#x3D;&quot;fieldSelect&quot;&gt;&lt;/ng-container&gt;
+  &lt;!-- OPERATOR --&gt;
+  &lt;mat-form-field appearance&#x3D;&quot;outline&quot; *ngIf&#x3D;&quot;operators.length &gt; 0&quot;&gt;
+    &lt;mat-label&gt;{{
+      &#x27;components.queryBuilder.filter.operator&#x27; | translate
+    }}&lt;/mat-label&gt;
+    &lt;mat-select formControlName&#x3D;&quot;operator&quot;&gt;
+      &lt;mat-option *ngFor&#x3D;&quot;let operator of operators&quot; [value]&#x3D;&quot;operator.value&quot;&gt;{{
+        operator.label | translate
+      }}&lt;/mat-option&gt;
+    &lt;/mat-select&gt;
+  &lt;/mat-form-field&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;field &amp;&amp; editor&quot;&gt;
+    &lt;ng-container
+      [ngTemplateOutlet]&#x3D;&quot;editor&quot;
+      [ngTemplateOutletContext]&#x3D;&quot;{ valueControl: valueControl }&quot;
+    &gt;&lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+  &lt;!-- DELETE ROW --&gt;
+  &lt;safe-button
+    [isIcon]&#x3D;&quot;true&quot;
+    icon&#x3D;&quot;delete&quot;
+    variant&#x3D;&quot;danger&quot;
+    (click)&#x3D;&quot;delete.emit()&quot;
+  &gt;
+  &lt;/safe-button&gt;
+
+  &lt;!-- DEFAULT FIELD TEMPLATE --&gt;
+  &lt;ng-template #fieldSelect&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.field.one&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-select formControlName&#x3D;&quot;field&quot;&gt;
+        &lt;ng-container *ngFor&#x3D;&quot;let field of fields&quot;&gt;
+          &lt;mat-option *ngIf&#x3D;&quot;!field.fields&quot; [value]&#x3D;&quot;field.name&quot;&gt;
+            {{ field.text || field.name }}
+          &lt;/mat-option&gt;
+          &lt;mat-optgroup *ngIf&#x3D;&quot;field.fields&quot; [label]&#x3D;&quot;field.text || field.name&quot;&gt;
+            &lt;mat-option
+              *ngFor&#x3D;&quot;let subField of field.fields&quot;
+              [value]&#x3D;&quot;field.name + &#x27;.&#x27; + subField.name&quot;
+            &gt;
+              {{
+                field.name &#x3D;&#x3D;&#x3D; &#x27;$attribute&#x27;
+                  ? subField.text || subField.name
+                  : field.name + &#x27; - &#x27; + (subField.text || subField.name)
+              }}
+            &lt;/mat-option&gt;
+          &lt;/mat-optgroup&gt;
+        &lt;/ng-container&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/ng-template&gt;
+
+  &lt;!-- TEXT EDITOR --&gt;
+  &lt;ng-template #textEditor&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.value.one&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;input matInput formControlName&#x3D;&quot;value&quot; type&#x3D;&quot;string&quot; /&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/ng-template&gt;
+
+  &lt;!-- BOOLEAN EDITOR --&gt;
+  &lt;ng-template #booleanEditor&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.value.one&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-select formControlName&#x3D;&quot;value&quot;&gt;
+        &lt;mat-option [value]&#x3D;&quot;true&quot;&gt;{{ &#x27;common.true&#x27; | translate }}&lt;/mat-option&gt;
+        &lt;mat-option [value]&#x3D;&quot;false&quot;&gt;{{
+          &#x27;common.false&#x27; | translate
+        }}&lt;/mat-option&gt;
+        &lt;mat-option [value]&#x3D;&quot;null&quot;&gt;{{
+          &#x27;common.input.none&#x27; | translate
+        }}&lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/ng-template&gt;
+
+  &lt;!-- NUMERIC EDITOR --&gt;
+  &lt;ng-template #numericEditor&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.value.one&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;input matInput formControlName&#x3D;&quot;value&quot; type&#x3D;&quot;number&quot; /&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/ng-template&gt;
+
+  &lt;!-- SELECT EDITOR --&gt;
+  &lt;ng-template #selectEditor&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.value.one&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-select *ngIf&#x3D;&quot;!field.multiSelect&quot; formControlName&#x3D;&quot;value&quot;&gt;
+        &lt;mat-option&gt;{{ &#x27;common.input.none&#x27; | translate }}&lt;/mat-option&gt;
+        &lt;mat-option *ngFor&#x3D;&quot;let option of field.options&quot; [value]&#x3D;&quot;option.value&quot;&gt;
+          {{ option.text }}
+        &lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+      &lt;mat-select
+        *ngIf&#x3D;&quot;field.multiSelect&quot;
+        formControlName&#x3D;&quot;value&quot;
+        multiple&#x3D;&quot;true&quot;
+      &gt;
+        &lt;mat-option&gt;{{ &#x27;common.input.none&#x27; | translate }}&lt;/mat-option&gt;
+        &lt;mat-option *ngFor&#x3D;&quot;let option of field.options&quot; [value]&#x3D;&quot;option.value&quot;&gt;
+          {{ option.text }}
+        &lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/ng-template&gt;
+
+  &lt;!-- DATE EDITOR --&gt;
+  &lt;ng-template #dateEditor&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;common.value.one&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;input matInput [matDatepicker]&#x3D;&quot;datePicker&quot; formControlName&#x3D;&quot;value&quot; /&gt;
+      &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;datePicker&quot;&gt;
+      &lt;/mat-datepicker-toggle&gt;
+      &lt;mat-datepicker #datePicker&gt;&lt;/mat-datepicker&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/ng-template&gt;
+&lt;/form&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./filter-row.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    ::ng-deep .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form [formGroup]="form">  <!-- FIELD SELECTION -->  <ng-container *ngTemplateOutlet="fieldSelect"></ng-container>  <!-- OPERATOR -->  <mat-form-field appearance="outline" *ngIf="operators.length > 0">    <mat-label>{{      \'components.queryBuilder.filter.operator\' | translate    }}</mat-label>    <mat-select formControlName="operator">      <mat-option *ngFor="let operator of operators" [value]="operator.value">{{        operator.label | translate      }}</mat-option>    </mat-select>  </mat-form-field>  <ng-container *ngIf="field && editor">    <ng-container      [ngTemplateOutlet]="editor"      [ngTemplateOutletContext]="{ valueControl: valueControl }"    ></ng-container>  </ng-container>  <!-- DELETE ROW -->  <safe-button    [isIcon]="true"    icon="delete"    variant="danger"    (click)="delete.emit()"  >  </safe-button>  <!-- DEFAULT FIELD TEMPLATE -->  <ng-template #fieldSelect>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.field.one\' | translate }}</mat-label>      <mat-select formControlName="field">        <ng-container *ngFor="let field of fields">          <mat-option *ngIf="!field.fields" [value]="field.name">            {{ field.text || field.name }}          </mat-option>          <mat-optgroup *ngIf="field.fields" [label]="field.text || field.name">            <mat-option              *ngFor="let subField of field.fields"              [value]="field.name + \'.\' + subField.name"            >              {{                field.name === \'$attribute\'                  ? subField.text || subField.name                  : field.name + \' - \' + (subField.text || subField.name)              }}            </mat-option>          </mat-optgroup>        </ng-container>      </mat-select>    </mat-form-field>  </ng-template>  <!-- TEXT EDITOR -->  <ng-template #textEditor>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.value.one\' | translate }}</mat-label>      <input matInput formControlName="value" type="string" />    </mat-form-field>  </ng-template>  <!-- BOOLEAN EDITOR -->  <ng-template #booleanEditor>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.value.one\' | translate }}</mat-label>      <mat-select formControlName="value">        <mat-option [value]="true">{{ \'common.true\' | translate }}</mat-option>        <mat-option [value]="false">{{          \'common.false\' | translate        }}</mat-option>        <mat-option [value]="null">{{          \'common.input.none\' | translate        }}</mat-option>      </mat-select>    </mat-form-field>  </ng-template>  <!-- NUMERIC EDITOR -->  <ng-template #numericEditor>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.value.one\' | translate }}</mat-label>      <input matInput formControlName="value" type="number" />    </mat-form-field>  </ng-template>  <!-- SELECT EDITOR -->  <ng-template #selectEditor>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.value.one\' | translate }}</mat-label>      <mat-select *ngIf="!field.multiSelect" formControlName="value">        <mat-option>{{ \'common.input.none\' | translate }}</mat-option>        <mat-option *ngFor="let option of field.options" [value]="option.value">          {{ option.text }}        </mat-option>      </mat-select>      <mat-select        *ngIf="field.multiSelect"        formControlName="value"        multiple="true"      >        <mat-option>{{ \'common.input.none\' | translate }}</mat-option>        <mat-option *ngFor="let option of field.options" [value]="option.value">          {{ option.text }}        </mat-option>      </mat-select>    </mat-form-field>  </ng-template>  <!-- DATE EDITOR -->  <ng-template #dateEditor>    <mat-form-field appearance="outline">      <mat-label>{{ \'common.value.one\' | translate }}</mat-label>      <input matInput [matDatepicker]="datePicker" formControlName="value" />      <mat-datepicker-toggle matSuffix [for]="datePicker">      </mat-datepicker-toggle>      <mat-datepicker #datePicker></mat-datepicker>    </mat-form-field>  </ng-template></form></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'DistributionListsComponent', 'selector': 'safe-distribution-lists'},{'name': 'EditDistributionListModalComponent', 'selector': 'safe-edit-distribution-list-modal'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddCardComponent', 'selector': 'safe-add-card'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAggregationGridComponent', 'selector': 'safe-aggregation-grid'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDistributionListsComponent', 'selector': 'safe-application-distribution-lists'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeCardModalComponent', 'selector': 'safe-card-modal'},{'name': 'SafeCardTemplateComponent', 'selector': 'safe-card-template'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDataSourceTabComponent', 'selector': 'safe-data-source-tab'},{'name': 'SafeDisplayTabComponent', 'selector': 'safe-display-tab'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditCalculatedFieldModalComponent', 'selector': 'safe-edit-calculated-field-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviewTabComponent', 'selector': 'safe-preview-tab'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeSummaryCardComponent', 'selector': 'safe-summary-card'},{'name': 'SafeSummaryCardSettingsComponent', 'selector': 'safe-summary-card-settings'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTextEditorTabComponent', 'selector': 'safe-text-editor-tab'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeValueSelectorTabComponent', 'selector': 'safe-value-selector-tab'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'SummaryCardItemComponent', 'selector': 'safe-summary-card-item'},{'name': 'SummaryCardItemContentComponent', 'selector': 'safe-summary-card-item-content'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'FilterRowComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FilterRowComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

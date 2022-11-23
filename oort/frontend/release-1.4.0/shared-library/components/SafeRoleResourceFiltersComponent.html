@@ -1,0 +1,2584 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeRoleResourceFiltersComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Modal for the definition of access/permissions for a given resource</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-resource-access-filters</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./resource-access-filters.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./resource-access-filters.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns" >displayedColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filterFields" >filterFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filters" >filters</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filtersFormArray" >filtersFormArray</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initialValue" >initialValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#openedFilterFormGroup" >openedFilterFormGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openedFilterIndex" >openedFilterIndex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#opMap" >opMap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#permissionTypes" >permissionTypes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translate" >translate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addFilter" >addFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createAccessFilterFormGroup" >createAccessFilterFormGroup</a>
+                            </li>
+                            <li>
+                                <a href="#deleteFilter" >deleteFilter</a>
+                            </li>
+                            <li>
+                                <a href="#getAccessString" >getAccessString</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getIcon" >getIcon</a>
+                            </li>
+                            <li>
+                                <a href="#getPrettyValue" >getPrettyValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getTooltip" >getTooltip</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getVariant" >getVariant</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#save" >save</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setTableElement" >setTableElement</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setTableElements" >setTableElements</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleFilterAccess" >toggleFilterAccess</a>
+                            </li>
+                            <li>
+                                <a href="#toggleFilterEdition" >toggleFilterEdition</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#resource" >resource</a>
+                            </li>
+                            <li>
+                                <a href="#role" >role</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#update" >update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(translate: TranslateService, fb: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, restService: <a href="../injectables/SafeRestService.html" target="_self">SafeRestService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:89</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Modal for the definition of access/permissions for a given resource</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular translate service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular form builder</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>restService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeRestService.html" target="_self" >SafeRestService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Safe REST service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resource"></a>
+                        <b>resource</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Resource.html" target="_self" >Resource</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:77</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="role"></a>
+                        <b>role</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:74</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="update"></a>
+                        <b>update</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:85</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFilter"></a>
+                    <span class="name">
+                        <span ><b>addFilter</b></span>
+                        <a href="#addFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addFilter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="379"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:379</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds new access filter to access list and toggles the edition for it</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createAccessFilterFormGroup"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>createAccessFilterFormGroup</b></span>
+                        <a href="#createAccessFilterFormGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createAccessFilterFormGroup(filter?: <a href="../undefineds/AccessPermissions.html" target="_self">AccessPermissions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create access filter group from value</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>initial value</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>filter as form group</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFilter"></a>
+                    <span class="name">
+                        <span ><b>deleteFilter</b></span>
+                        <a href="#deleteFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteFilter(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="391"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:391</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete a filter from the accesses array</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of filter to remove</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAccessString"></a>
+                    <span class="name">
+                        <span ><b>getAccessString</b></span>
+                        <a href="#getAccessString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAccessString(access: <a href="../interfaces/Access.html" target="_self">Access</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the string representation of an access object</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>access</td>
+                                    <td>
+                                                <code><a href="../interfaces/Access.html" target="_self" >Access</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The access object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the string representation of an access object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getIcon"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getIcon</b></span>
+                        <a href="#getIcon"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getIcon(access: <a href="../undefineds/AccessPermissions.html" target="_self">AccessPermissions</a>, permission: <a href="../interfaces/Permission.html" target="_self">Permission</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:273</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the correspondent icon for a given permission</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>access</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the accesses</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>permission</td>
+                                    <td>
+                                                <code><a href="../interfaces/Permission.html" target="_self" >Permission</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The permission name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;add&quot; | &quot;visibility&quot; | &quot;visibility_off&quot; | &quot;edit&quot; | &quot;edit_off&quot; | &quot;delete&quot;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the name of the icon to be displayed</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPrettyValue"></a>
+                    <span class="name">
+                        <span ><b>getPrettyValue</b></span>
+                        <a href="#getPrettyValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPrettyValue(field: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="351"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:351</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the prettified version of the value for a given question</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>field</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The name of the field</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The value</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the prettified value</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTooltip"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getTooltip</b></span>
+                        <a href="#getTooltip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTooltip(access: <a href="../undefineds/AccessPermissions.html" target="_self">AccessPermissions</a>, permission: <a href="../interfaces/Permission.html" target="_self">Permission</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="306"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:306</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the correspondent tooltip for a given permission</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>access</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the accesses</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>permission</td>
+                                    <td>
+                                                <code><a href="../interfaces/Permission.html" target="_self" >Permission</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The permission name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#Permission" target="_self" >&quot;components.role.tooltip.grantFilterReadRecordsPermission&quot; | &quot;components.role.tooltip.notGrantFilterReadRecordsPermission&quot; | &quot;components.role.tooltip.grantFilterUpdateRecordsPermission&quot; | &quot;components.role.tooltip.notGrantFilterUpdateRecordsPermission&quot; | &quot;components.role.tooltip.grantFilterDeleteRecordsPermission&quot; | ...</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the name of the icon to be displayed</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getVariant"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getVariant</b></span>
+                        <a href="#getVariant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getVariant(access: <a href="../undefineds/AccessPermissions.html" target="_self">AccessPermissions</a>, permission: <a href="../interfaces/Permission.html" target="_self">Permission</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="294"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:294</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the correspondent variant for a given permission</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>access</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the accesses</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>permission</td>
+                                    <td>
+                                                <code><a href="../interfaces/Permission.html" target="_self" >Permission</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The permission name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;primary&quot; | &quot;grey&quot;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the name of the icon to be displayed</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:104</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="save"></a>
+                    <span class="name">
+                        <span ><b>save</b></span>
+                        <a href="#save"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>save()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="406"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:406</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calculates the difference between the initial access array
+and the current one, closes the dialog ang returns the array of updates needed
+to go from the initial value to the current one</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTableElement"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setTableElement</b></span>
+                        <a href="#setTableElement"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setTableElement(filter: <a href="../undefineds/AccessPermissions.html" target="_self">AccessPermissions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="239"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:239</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Serialize single table element from filter</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>filter to serialize</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>serialized element</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setTableElements"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setTableElements</b></span>
+                        <a href="#setTableElements"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setTableElements(filters: <a href="../undefineds/AccessPermissions.html" target="_self">AccessPermissions[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="262"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:262</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Serialize list of table elements from filter</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filters</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>filters to serialize</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>serialized elements</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleFilterAccess"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>toggleFilterAccess</b></span>
+                        <a href="#toggleFilterAccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toggleFilterAccess(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:190</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update permission of filter at index</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of filter access to update</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>permission to update</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleFilterEdition"></a>
+                    <span class="name">
+                        <span ><b>toggleFilterEdition</b></span>
+                        <a href="#toggleFilterEdition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleFilterEdition(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="329"
+                            class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:329</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Toggles the edition for a selected access row</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of filter to edit</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedColumns"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>displayedColumns</b></span>
+                        <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;filter&#x27;, &#x27;actions&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:88</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterFields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filterFields</b></span>
+                        <a href="#filterFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filters"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filters</b></span>
+                        <a href="#filters"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new MatTableDataSource&lt;AccessPermissions&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:89</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filtersFormArray"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filtersFormArray</b></span>
+                        <a href="#filtersFormArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormArray</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialValue"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>initialValue</b></span>
+                        <a href="#initialValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#AccessPermissions" target="_self" >AccessPermissions[]</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openedFilterFormGroup"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>openedFilterFormGroup</b></span>
+                        <a href="#openedFilterFormGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:84</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openedFilterIndex"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>openedFilterIndex</b></span>
+                        <a href="#openedFilterIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="opMap"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>opMap</b></span>
+                        <a href="#opMap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    eq: this.translate.instant(&#x27;kendo.grid.filterEqOperator&#x27;),
+    neq: this.translate.instant(&#x27;kendo.grid.filterNotEqOperator&#x27;),
+    contains: this.translate.instant(&#x27;kendo.grid.filterContainsOperator&#x27;),
+    doesnotcontain: this.translate.instant(
+      &#x27;kendo.grid.filterNotContainsOperator&#x27;
+    ),
+    startswith: this.translate.instant(&#x27;kendo.grid.filterStartsWithOperator&#x27;),
+    endswith: this.translate.instant(&#x27;kendo.grid.filterEndsWithOperator&#x27;),
+    isnull: this.translate.instant(&#x27;kendo.grid.filterIsNullOperator&#x27;),
+    isnotnull: this.translate.instant(&#x27;kendo.grid.filterIsNotNullOperator&#x27;),
+    isempty: this.translate.instant(&#x27;kendo.grid.filterIsEmptyOperator&#x27;),
+    isnotempty: this.translate.instant(&#x27;kendo.grid.filterIsNotEmptyOperator&#x27;),
+    in: this.translate.instant(&#x27;kendo.grid.filterIsInOperator&#x27;),
+    notin: this.translate.instant(&#x27;kendo.grid.filterIsNotInOperator&#x27;),
+    gt: this.translate.instant(&#x27;kendo.grid.filterGtOperator&#x27;),
+    gte: this.translate.instant(&#x27;kendo.grid.filterGteOperator&#x27;),
+    lt: this.translate.instant(&#x27;kendo.grid.filterLtOperator&#x27;),
+    lte: this.translate.instant(&#x27;kendo.grid.filterLteOperator&#x27;),
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="permissionTypes"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>permissionTypes</b></span>
+                        <a href="#permissionTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>Object.values(Permission)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="translate"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>translate</b></span>
+                        <a href="#translate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>TranslateService</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/safe/src/lib/components/role-summary/role-resources/resource-access-filters/resource-access-filters.component.ts:99</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">Angular translate service</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, OnInit, Output } from &#x27;@angular/core&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { get, isEqual, set } from &#x27;lodash&#x27;;
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from &#x27;@angular/animations&#x27;;
+import { Resource } from &#x27;../../../../models/resource.model&#x27;;
+import { Access, Permission } from &#x27;../permissions.types&#x27;;
+import { createFilterGroup } from &#x27;../../../query-builder/query-builder-forms&#x27;;
+import { FormArray, FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
+import { SafeRestService } from &#x27;../../../../services/rest/rest.service&#x27;;
+
+type AccessPermissions &#x3D; {
+  access: Access;
+  permissions: {
+    [key in Permission]: boolean;
+  };
+};
+
+/** Permissions to apply by default to all access filters */
+const BASE_PERMISSIONS &#x3D; {
+  canCreateRecords: false,
+  canSeeRecords: false,
+  canUpdateRecords: false,
+  canDeleteRecords: false,
+};
+
+/** Modal for the definition of access/permissions for a given resource */
+@Component({
+  selector: &#x27;safe-resource-access-filters&#x27;,
+  templateUrl: &#x27;./resource-access-filters.component.html&#x27;,
+  styleUrls: [&#x27;./resource-access-filters.component.scss&#x27;],
+  animations: [
+    trigger(&#x27;detailExpand&#x27;, [
+      state(&#x27;collapsed&#x27;, style({ height: &#x27;0px&#x27;, minHeight: &#x27;0&#x27; })),
+      state(&#x27;expanded&#x27;, style({ height: &#x27;*&#x27; })),
+      transition(
+        &#x27;expanded &lt;&#x3D;&gt; collapsed&#x27;,
+        animate(&#x27;225ms cubic-bezier(0.4, 0.0, 0.2, 1)&#x27;)
+      ),
+    ]),
+  ],
+})
+export class SafeRoleResourceFiltersComponent implements OnInit {
+  private opMap: {
+    [key: string]: string;
+  } &#x3D; {
+    eq: this.translate.instant(&#x27;kendo.grid.filterEqOperator&#x27;),
+    neq: this.translate.instant(&#x27;kendo.grid.filterNotEqOperator&#x27;),
+    contains: this.translate.instant(&#x27;kendo.grid.filterContainsOperator&#x27;),
+    doesnotcontain: this.translate.instant(
+      &#x27;kendo.grid.filterNotContainsOperator&#x27;
+    ),
+    startswith: this.translate.instant(&#x27;kendo.grid.filterStartsWithOperator&#x27;),
+    endswith: this.translate.instant(&#x27;kendo.grid.filterEndsWithOperator&#x27;),
+    isnull: this.translate.instant(&#x27;kendo.grid.filterIsNullOperator&#x27;),
+    isnotnull: this.translate.instant(&#x27;kendo.grid.filterIsNotNullOperator&#x27;),
+    isempty: this.translate.instant(&#x27;kendo.grid.filterIsEmptyOperator&#x27;),
+    isnotempty: this.translate.instant(&#x27;kendo.grid.filterIsNotEmptyOperator&#x27;),
+    in: this.translate.instant(&#x27;kendo.grid.filterIsInOperator&#x27;),
+    notin: this.translate.instant(&#x27;kendo.grid.filterIsNotInOperator&#x27;),
+    gt: this.translate.instant(&#x27;kendo.grid.filterGtOperator&#x27;),
+    gte: this.translate.instant(&#x27;kendo.grid.filterGteOperator&#x27;),
+    lt: this.translate.instant(&#x27;kendo.grid.filterLtOperator&#x27;),
+    lte: this.translate.instant(&#x27;kendo.grid.filterLteOperator&#x27;),
+  };
+  public permissionTypes &#x3D; Object.values(Permission);
+
+  @Input() role!: string; // Opened role
+
+  // &#x3D;&#x3D;&#x3D; RESOURCE &#x3D;&#x3D;&#x3D;
+  @Input() resource!: Resource; // Opened resource
+  public filterFields: any[] &#x3D; [];
+
+  // &#x3D;&#x3D;&#x3D; EDITION &#x3D;&#x3D;&#x3D;
+  private initialValue!: AccessPermissions[];
+  public openedFilterIndex: number | null &#x3D; null;
+  public filtersFormArray!: FormArray;
+  public openedFilterFormGroup?: FormGroup;
+  @Output() update &#x3D; new EventEmitter();
+
+  // &#x3D;&#x3D;&#x3D; TABLE ELEMENTS &#x3D;&#x3D;&#x3D;
+  public displayedColumns: string[] &#x3D; [&#x27;filter&#x27;, &#x27;actions&#x27;];
+  public filters &#x3D; new MatTableDataSource&lt;AccessPermissions&gt;([]);
+
+  /**
+   * Modal for the definition of access/permissions for a given resource
+   *
+   * @param translate Angular translate service
+   * @param fb Angular form builder
+   * @param restService Safe REST service
+   */
+  constructor(
+    public translate: TranslateService,
+    private fb: FormBuilder,
+    private restService: SafeRestService
+  ) {}
+
+  async ngOnInit(): Promise&lt;void&gt; {
+    const filters: AccessPermissions[] &#x3D; [];
+    Object.keys(get(this.resource, &#x27;rolePermissions&#x27;, {})).forEach(
+      (permission) &#x3D;&gt; {
+        const access &#x3D; get(
+          this.resource,
+          &#x60;rolePermissions.${permission}.access&#x60;,
+          {}
+        );
+        for (const filter of get(access, &#x27;filters&#x27;, [])) {
+          const existingFilter &#x3D; filters.find((x) &#x3D;&gt; isEqual(x.access, filter));
+          if (existingFilter) {
+            set(existingFilter, &#x60;permissions.${permission}&#x60;, true);
+          } else {
+            filters.push({
+              access: filter,
+              permissions: {
+                ...BASE_PERMISSIONS,
+                [permission]: true,
+              },
+            });
+          }
+        }
+      }
+    );
+
+    this.filters.data &#x3D; this.setTableElements(filters);
+    this.filtersFormArray &#x3D; this.fb.array(
+      filters.map((x) &#x3D;&gt; this.createAccessFilterFormGroup(x))
+    );
+    this.initialValue &#x3D; this.filtersFormArray.value;
+    this.filterFields &#x3D; get(this.resource, &#x27;metadata&#x27;, [])
+      .filter((x: any) &#x3D;&gt; x.filterable !&#x3D;&#x3D; false)
+      .map((x: any) &#x3D;&gt; ({ ...x }));
+
+    const userAttributes: { value: string; text: string }[] &#x3D;
+      await this.restService.get(&#x27;/permissions/attributes&#x27;).toPromise();
+
+    const options &#x3D; this.filterFields.map((x) &#x3D;&gt; ({
+      value: x.name,
+      text: x.label || x.name,
+    }));
+
+    const attrFields &#x3D; userAttributes.map((x) &#x3D;&gt; ({
+      text: x.text,
+      name: x.value,
+      editor: &#x27;attribute&#x27;,
+      options,
+    }));
+
+    this.filterFields.unshift({
+      text: this.translate.instant(&#x27;common.attribute.few&#x27;),
+      // regular questions can&#x27;t have dollar signs in their name
+      name: &#x60;$attribute&#x60;,
+      filter: {
+        operators: [&#x27;eq&#x27;, &#x27;in&#x27;, &#x27;neq&#x27;, &#x27;notin&#x27;],
+      },
+      fields: attrFields,
+      editor: null,
+    });
+  }
+
+  /**
+   * Create access filter group from value
+   *
+   * @param filter initial value
+   * @returns filter as form group
+   */
+  private createAccessFilterFormGroup(filter?: AccessPermissions) {
+    return this.fb.group({
+      access: createFilterGroup(get(filter, &#x27;access&#x27;, null)),
+      permissions: this.fb.group({
+        canCreateRecords: get(filter, &#x27;permissions.canCreateRecords&#x27;, false),
+        canDeleteRecords: get(filter, &#x27;permissions.canDeleteRecords&#x27;, false),
+        canSeeRecords: get(filter, &#x27;permissions.canSeeRecords&#x27;, false),
+        canUpdateRecords: get(filter, &#x27;permissions.canUpdateRecords&#x27;, false),
+      }),
+    });
+  }
+
+  /**
+   * Update permission of filter at index
+   *
+   * @param index index of filter access to update
+   * @param action permission to update
+   */
+  public toggleFilterAccess(index: number, action: string) {
+    const formGroup &#x3D; this.filtersFormArray.at(index);
+    const formControl &#x3D; formGroup.get(&#x60;permissions.${action}&#x60;);
+    formControl?.setValue(!formControl.value);
+    this.filters.data &#x3D; this.setTableElements(this.filtersFormArray.value);
+  }
+
+  /**
+   * Gets the string representation of an access object
+   *
+   * @param access The access object
+   * @returns the string representation of an access object
+   */
+  getAccessString(access: Access) {
+    const rulesStr: string[] &#x3D; [];
+    access.filters.forEach((rule) &#x3D;&gt; {
+      // nested access
+      if (rule.hasOwnProperty(&#x27;logic&#x27;)) {
+        const nestedAccess &#x3D; rule as Access;
+        rulesStr.push(&#x60;(${this.getAccessString(nestedAccess)})&#x60;);
+      } else {
+        const r &#x3D; rule as {
+          field: string;
+          operator: string;
+          value: string;
+        };
+        rulesStr.push(
+          &#x60;${r.field} ${this.opMap[
+            r.operator
+          ].toLowerCase()} ${this.getPrettyValue(r.field, r.value)}&#x60;.trim()
+        );
+      }
+    });
+    if (rulesStr.length)
+      return rulesStr.join(
+        &#x60; ${(access.logic &#x3D;&#x3D;&#x3D; &#x27;and&#x27;
+          ? this.translate.instant(&#x27;kendo.grid.filterAndLogic&#x27;)
+          : this.translate.instant(&#x27;kendo.grid.filterOrLogic&#x27;)
+        ).toLowerCase()} &#x60;
+      );
+    else return this.translate.instant(&#x27;components.role.summary.newFilter&#x27;);
+  }
+
+  /**
+   * Serialize single table element from filter
+   *
+   * @param filter filter to serialize
+   * @returns serialized element
+   */
+  private setTableElement(filter: AccessPermissions): any {
+    return {
+      access: filter.access,
+      permissions: [
+        Permission.SEE,
+        Permission.CREATE,
+        Permission.UPDATE,
+        Permission.DELETE,
+      ].map((x) &#x3D;&gt; ({
+        name: x,
+        icon: this.getIcon(filter, x),
+        variant: this.getVariant(filter, x),
+        tooltip: this.getTooltip(filter, x),
+      })),
+    };
+  }
+
+  /**
+   * Serialize list of table elements from filter
+   *
+   * @param filters filters to serialize
+   * @returns serialized elements
+   */
+  private setTableElements(filters: AccessPermissions[]): any[] {
+    return filters.map((x: AccessPermissions) &#x3D;&gt; this.setTableElement(x));
+  }
+
+  /**
+   * Gets the correspondent icon for a given permission
+   *
+   * @param access the accesses
+   * @param permission The permission name
+   * @returns the name of the icon to be displayed
+   */
+  private getIcon(access: AccessPermissions, permission: Permission) {
+    const hasPermission &#x3D; get(access, &#x60;permissions.${permission}&#x60;, false);
+    switch (permission) {
+      case Permission.SEE:
+        return hasPermission ? &#x27;visibility&#x27; : &#x27;visibility_off&#x27;;
+      case Permission.CREATE:
+        return &#x27;add&#x27;;
+      case Permission.UPDATE:
+        return hasPermission ? &#x27;edit&#x27; : &#x27;edit_off&#x27;;
+      case Permission.DELETE:
+        return &#x27;delete&#x27;;
+    }
+  }
+
+  /**
+   * Gets the correspondent variant for a given permission
+   *
+   * @param access the accesses
+   * @param permission The permission name
+   * @returns the name of the icon to be displayed
+   */
+  private getVariant(access: AccessPermissions, permission: Permission) {
+    const hasPermission &#x3D; get(access, &#x60;permissions.${permission}&#x60;, false);
+    return hasPermission ? &#x27;primary&#x27; : &#x27;grey&#x27;;
+  }
+
+  /**
+   * Gets the correspondent tooltip for a given permission
+   *
+   * @param access the accesses
+   * @param permission The permission name
+   * @returns the name of the icon to be displayed
+   */
+  private getTooltip(access: AccessPermissions, permission: Permission) {
+    const hasPermission &#x3D; get(access, &#x60;permissions.${permission}&#x60;, false);
+    switch (permission) {
+      case Permission.SEE:
+        return hasPermission
+          ? &#x27;components.role.tooltip.grantFilterReadRecordsPermission&#x27;
+          : &#x27;components.role.tooltip.notGrantFilterReadRecordsPermission&#x27;;
+      case Permission.UPDATE:
+        return hasPermission
+          ? &#x27;components.role.tooltip.grantFilterUpdateRecordsPermission&#x27;
+          : &#x27;components.role.tooltip.notGrantFilterUpdateRecordsPermission&#x27;;
+      default:
+        return hasPermission
+          ? &#x27;components.role.tooltip.grantFilterDeleteRecordsPermission&#x27;
+          : &#x27;components.role.tooltip.notGrantFilterDeleteRecordsPermission&#x27;;
+    }
+  }
+
+  /**
+   * Toggles the edition for a selected access row
+   *
+   * @param index index of filter to edit
+   */
+  toggleFilterEdition(index: number) {
+    if (index &lt; 0) return;
+    if (index !&#x3D;&#x3D; this.openedFilterIndex) {
+      this.filters.data &#x3D; this.setTableElements(this.filtersFormArray.value);
+      const filterFormGroup &#x3D; this.filtersFormArray.at(index).get(&#x27;access&#x27;);
+      if (filterFormGroup) {
+        this.openedFilterFormGroup &#x3D; filterFormGroup as FormGroup;
+        this.openedFilterIndex &#x3D; index;
+      }
+    } else {
+      this.openedFilterIndex &#x3D; null;
+      this.filters.data &#x3D; this.setTableElements(this.filtersFormArray.value);
+    }
+  }
+
+  /**
+   * Gets the prettified version of the value for a given question
+   *
+   * @param field The name of the field
+   * @param value The value
+   * @returns the prettified value
+   */
+  getPrettyValue(field: string, value: any) {
+    return value;
+    // const fieldMeta &#x3D; this.metaFields[field];
+    // if (!fieldMeta) return value;
+
+    // switch (fieldMeta.type) {
+    //   case &#x27;dropdown&#x27;:
+    //   case &#x27;radiogroup&#x27;:
+    //     const choice &#x3D; fieldMeta.choices.find((x: any) &#x3D;&gt; x.value &#x3D;&#x3D;&#x3D; value);
+    //     return choice ? choice.text : value;
+    //   case &#x27;tagbox&#x27;:
+    //   case &#x27;checkbox&#x27;:
+    //     if (!isArray(value)) return value;
+    //     return value.map((op: any) &#x3D;&gt; {
+    //       const choices &#x3D; fieldMeta.choices.find((x: any) &#x3D;&gt; x.value &#x3D;&#x3D;&#x3D; op);
+    //       return choices ? choices.text : op;
+    //     });
+    //   case &#x27;boolean&#x27;:
+    //     if (typeof value !&#x3D;&#x3D; &#x27;boolean&#x27;) return value;
+    //     return value
+    //       ? this.translate.instant(&#x27;common.true&#x27;)
+    //       : this.translate.instant(&#x27;common.false&#x27;);
+    //   default:
+    //     return value;
+    // }
+  }
+
+  /** Adds new access filter to access list and toggles the edition for it */
+  addFilter() {
+    const accessFilterGroup &#x3D; this.createAccessFilterFormGroup();
+    this.filtersFormArray.push(accessFilterGroup);
+    this.filters.data &#x3D; this.setTableElements(this.filtersFormArray.value);
+    this.toggleFilterEdition(this.filters.data.length - 1);
+  }
+
+  /**
+   * Delete a filter from the accesses array
+   *
+   * @param index index of filter to remove
+   */
+  deleteFilter(index: number) {
+    this.openedFilterIndex &#x3D; null;
+    this.openedFilterFormGroup &#x3D; undefined;
+    this.filtersFormArray.removeAt(index);
+    this.filters.data &#x3D; this.setTableElements(this.filtersFormArray.value);
+    if (this.filters.data.length &#x3D;&#x3D;&#x3D; 0) {
+      this.save();
+    }
+  }
+
+  /**
+   * Calculates the difference between the initial access array
+   * and the current one, closes the dialog ang returns the array of updates needed
+   * to go from the initial value to the current one
+   */
+  save() {
+    const initial &#x3D; this.initialValue;
+    const current &#x3D; this.filtersFormArray.value as AccessPermissions[];
+
+    const update: {
+      [key in Permission]?: {
+        add?: { role: string; access: Access }[];
+        remove?: { role: string; access: Access }[];
+      };
+    } &#x3D; {};
+
+    // Loops through the initial array. If element is not in the current array,
+    // the permissions for that access should be removed, if it is in the current array
+    // and permissions are different, they should be updated.
+    initial.forEach((init) &#x3D;&gt; {
+      const currIndex &#x3D; current.findIndex((x) &#x3D;&gt;
+        isEqual(x.access, init.access)
+      );
+      if (currIndex &gt;&#x3D; 0) {
+        // Filter still exists, checking for permission differences
+        const [access] &#x3D; current.splice(currIndex, 1);
+        if (!isEqual(init.permissions, access.permissions)) {
+          this.permissionTypes.forEach((permission) &#x3D;&gt; {
+            if (
+              init.permissions[permission] !&#x3D;&#x3D; access.permissions[permission]
+            ) {
+              // if its different and the current one is True, should add / else &#x3D;&gt; remove
+              const action &#x3D; access.permissions[permission] ? &#x27;add&#x27; : &#x27;remove&#x27;;
+              const opPerm &#x3D; update[permission];
+              if (!opPerm)
+                Object.assign(update, {
+                  [permission]: {
+                    [action]: [{ role: this.role, access: access.access }],
+                  },
+                });
+              else if (opPerm &amp;&amp; !opPerm?.hasOwnProperty(action)) {
+                opPerm[action] &#x3D; [{ role: this.role, access: access.access }];
+              } else {
+                opPerm[action]?.push({
+                  role: this.role,
+                  access: access.access,
+                });
+              }
+            }
+          });
+        }
+      } else {
+        // Filter no longer exists, remove if previously had access
+        this.permissionTypes.forEach((permission) &#x3D;&gt; {
+          if (init.permissions[permission]) {
+            const opPerm &#x3D; update[permission];
+            if (!opPerm)
+              Object.assign(update, {
+                [permission]: {
+                  remove: [{ role: this.role, access: init.access }],
+                },
+              });
+            else if (opPerm &amp;&amp; !opPerm.remove) {
+              opPerm.remove &#x3D; [{ role: this.role, access: init.access }];
+            } else {
+              opPerm.remove?.push({
+                role: this.role,
+                access: init.access,
+              });
+            }
+          }
+        });
+      }
+    });
+
+    // Loops through the remaining elements of the current array
+    // each one lasting (not spliced in the previous loop) should be pushed
+    current.forEach((curr) &#x3D;&gt; {
+      this.permissionTypes.forEach((permission) &#x3D;&gt; {
+        if (curr.permissions[permission]) {
+          const opPerm &#x3D; update[permission];
+          if (!opPerm)
+            Object.assign(update, {
+              [permission]: {
+                add: [{ role: this.role, access: curr.access }],
+              },
+            });
+          else if (opPerm &amp;&amp; !opPerm.add) {
+            opPerm.add &#x3D; [{ role: this.role, access: curr.access }];
+          } else {
+            opPerm.add?.push({
+              role: this.role,
+              access: curr.access,
+            });
+          }
+        }
+      });
+    });
+
+    this.update.emit(update);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Header --&gt;
+&lt;h2&gt;{{ &#x27;common.filter.few&#x27; | translate }}&lt;/h2&gt;
+&lt;!-- Content --&gt;
+&lt;div *ngIf&#x3D;&quot;filters.data.length &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;empty-indicator&quot;&gt;
+  &lt;safe-icon icon&#x3D;&quot;folder_open&quot;&gt;&lt;/safe-icon&gt;
+  &lt;h3&gt;{{ &#x27;components.role.summary.noFilters&#x27; | translate }}&lt;/h3&gt;
+&lt;/div&gt;
+&lt;!-- Table container --&gt;
+&lt;div class&#x3D;&quot;overflow-x-hidden&quot;&gt;
+  &lt;!-- Table scroll container --&gt;
+  &lt;div class&#x3D;&quot;overflow-auto&quot;&gt;
+    &lt;table
+      mat-table
+      [dataSource]&#x3D;&quot;filters&quot;
+      *ngIf&#x3D;&quot;filters.data.length &gt; 0&quot;
+      multiTemplateDataRows
+    &gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;filter&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef&gt;
+          {{ &#x27;components.queryBuilder.filter.title&#x27; | translate }}
+        &lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+          {{ getAccessString(element.access) }}
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;actions&quot; [stickyEnd]&#x3D;&quot;true&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef style&#x3D;&quot;text-align: end&quot;&gt;
+          &lt;safe-button variant&#x3D;&quot;primary&quot; category&#x3D;&quot;tertiary&quot; (click)&#x3D;&quot;save()&quot;&gt;{{
+            &#x27;common.save&#x27; | translate
+          }}&lt;/safe-button&gt;
+        &lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element; let i &#x3D; dataIndex&quot;&gt;
+          &lt;div style&#x3D;&quot;display: flex&quot;&gt;
+            &lt;ng-container *ngFor&#x3D;&quot;let permission of element.permissions&quot;&gt;
+              &lt;safe-button
+                *ngIf&#x3D;&quot;permission.name !&#x3D;&#x3D; &#x27;canCreateRecords&#x27;&quot;
+                [isIcon]&#x3D;&quot;true&quot;
+                [icon]&#x3D;&quot;permission.icon&quot;
+                [variant]&#x3D;&quot;permission.variant&quot;
+                [matTooltip]&#x3D;&quot;permission.tooltip | translate&quot;
+                (click)&#x3D;&quot;
+                  $event.stopPropagation();
+                  toggleFilterAccess(i, permission.name)
+                &quot;
+              &gt;
+              &lt;/safe-button&gt;
+            &lt;/ng-container&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;expandedDetail&quot;&gt;
+        &lt;td
+          mat-cell
+          *matCellDef&#x3D;&quot;let element; let i &#x3D; dataIndex&quot;
+          [attr.colspan]&#x3D;&quot;displayedColumns.length&quot;
+        &gt;
+          &lt;div
+            [ngClass]&#x3D;&quot;{
+              &#x27;expanded-filter&#x27;: i &#x3D;&#x3D;&#x3D; openedFilterIndex
+            }&quot;
+            [@detailExpand]&#x3D;&quot;i &#x3D;&#x3D;&#x3D; openedFilterIndex ? &#x27;expanded&#x27; : &#x27;collapsed&#x27;&quot;
+          &gt;
+            &lt;safe-filter
+              *ngIf&#x3D;&quot;i &#x3D;&#x3D;&#x3D; openedFilterIndex&quot;
+              [form]&#x3D;&quot;openedFilterFormGroup!&quot;
+              [fields]&#x3D;&quot;filterFields&quot;
+            &gt;
+            &lt;/safe-filter&gt;
+            &lt;safe-button
+              *ngIf&#x3D;&quot;i &#x3D;&#x3D;&#x3D; openedFilterIndex&quot;
+              variant&#x3D;&quot;danger&quot;
+              category&#x3D;&quot;secondary&quot;
+              icon&#x3D;&quot;delete&quot;
+              (click)&#x3D;&quot;deleteFilter(i)&quot;
+              style&#x3D;&quot;width: fit-content&quot;
+            &gt;
+              {{ &#x27;components.role.summary.removeFilter&#x27; | translate }}
+            &lt;/safe-button&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+
+      &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+      &lt;tr
+        *matRowDef&#x3D;&quot;let row; columns: displayedColumns; let i &#x3D; dataIndex&quot;
+        mat-row
+        (click)&#x3D;&quot;toggleFilterEdition(i)&quot;
+        class&#x3D;&quot;cursor-pointer&quot;
+      &gt;&lt;/tr&gt;
+      &lt;tr
+        mat-row
+        *matRowDef&#x3D;&quot;let row; columns: [&#x27;expandedDetail&#x27;]&quot;
+        style&#x3D;&quot;height: 0&quot;
+        class&#x3D;&quot;cursor-pointer&quot;
+      &gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;safe-button
+  variant&#x3D;&quot;primary&quot;
+  category&#x3D;&quot;secondary&quot;
+  (click)&#x3D;&quot;addFilter()&quot;
+  style&#x3D;&quot;align-self: center&quot;
+&gt;
+  {{ &#x27;components.role.summary.addFilter&#x27; | translate }}
+&lt;/safe-button&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./resource-access-filters.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100%;
+}
+
+.expanded-filter {
+  padding-block: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  cursor: auto;
+}
+
+.empty-indicator {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  align-items: center;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Header --><h2>{{ \'common.filter.few\' | translate }}</h2><!-- Content --><div *ngIf="filters.data.length === 0" class="empty-indicator">  <safe-icon icon="folder_open"></safe-icon>  <h3>{{ \'components.role.summary.noFilters\' | translate }}</h3></div><!-- Table container --><div class="overflow-x-hidden">  <!-- Table scroll container -->  <div class="overflow-auto">    <table      mat-table      [dataSource]="filters"      *ngIf="filters.data.length > 0"      multiTemplateDataRows    >      <ng-container matColumnDef="filter">        <th mat-header-cell *matHeaderCellDef>          {{ \'components.queryBuilder.filter.title\' | translate }}        </th>        <td mat-cell *matCellDef="let element">          {{ getAccessString(element.access) }}        </td>      </ng-container>      <ng-container matColumnDef="actions" [stickyEnd]="true">        <th mat-header-cell *matHeaderCellDef style="text-align: end">          <safe-button variant="primary" category="tertiary" (click)="save()">{{            \'common.save\' | translate          }}</safe-button>        </th>        <td mat-cell *matCellDef="let element; let i = dataIndex">          <div style="display: flex">            <ng-container *ngFor="let permission of element.permissions">              <safe-button                *ngIf="permission.name !== \'canCreateRecords\'"                [isIcon]="true"                [icon]="permission.icon"                [variant]="permission.variant"                [matTooltip]="permission.tooltip | translate"                (click)="                  $event.stopPropagation();                  toggleFilterAccess(i, permission.name)                "              >              </safe-button>            </ng-container>          </div>        </td>      </ng-container>      <ng-container matColumnDef="expandedDetail">        <td          mat-cell          *matCellDef="let element; let i = dataIndex"          [attr.colspan]="displayedColumns.length"        >          <div            [ngClass]="{              \'expanded-filter\': i === openedFilterIndex            }"            [@detailExpand]="i === openedFilterIndex ? \'expanded\' : \'collapsed\'"          >            <safe-filter              *ngIf="i === openedFilterIndex"              [form]="openedFilterFormGroup!"              [fields]="filterFields"            >            </safe-filter>            <safe-button              *ngIf="i === openedFilterIndex"              variant="danger"              category="secondary"              icon="delete"              (click)="deleteFilter(i)"              style="width: fit-content"            >              {{ \'components.role.summary.removeFilter\' | translate }}            </safe-button>          </div>        </td>      </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr        *matRowDef="let row; columns: displayedColumns; let i = dataIndex"        mat-row        (click)="toggleFilterEdition(i)"        class="cursor-pointer"      ></tr>      <tr        mat-row        *matRowDef="let row; columns: [\'expandedDetail\']"        style="height: 0"        class="cursor-pointer"      ></tr>    </table>  </div></div><safe-button  variant="primary"  category="secondary"  (click)="addFilter()"  style="align-self: center">  {{ \'components.role.summary.addFilter\' | translate }}</safe-button></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'DistributionListsComponent', 'selector': 'safe-distribution-lists'},{'name': 'EditDistributionListModalComponent', 'selector': 'safe-edit-distribution-list-modal'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddCardComponent', 'selector': 'safe-add-card'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAggregationGridComponent', 'selector': 'safe-aggregation-grid'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDistributionListsComponent', 'selector': 'safe-application-distribution-lists'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeCardModalComponent', 'selector': 'safe-card-modal'},{'name': 'SafeCardTemplateComponent', 'selector': 'safe-card-template'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDataSourceTabComponent', 'selector': 'safe-data-source-tab'},{'name': 'SafeDisplayTabComponent', 'selector': 'safe-display-tab'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditCalculatedFieldModalComponent', 'selector': 'safe-edit-calculated-field-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviewTabComponent', 'selector': 'safe-preview-tab'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeSummaryCardComponent', 'selector': 'safe-summary-card'},{'name': 'SafeSummaryCardSettingsComponent', 'selector': 'safe-summary-card-settings'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTextEditorTabComponent', 'selector': 'safe-text-editor-tab'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeValueSelectorTabComponent', 'selector': 'safe-value-selector-tab'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'SummaryCardItemComponent', 'selector': 'safe-summary-card-item'},{'name': 'SummaryCardItemContentComponent', 'selector': 'safe-summary-card-item-content'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafeRoleResourceFiltersComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeRoleResourceFiltersComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

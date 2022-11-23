@@ -1,0 +1,1240 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >SafeReferenceDataService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/safe/src/lib/services/reference-data/reference-data.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service for reference data</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#operate" >operate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#buildGraphQLQuery" >buildGraphQLQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#fetchItems" >fetchItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#formatDateSQL" >formatDateSQL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getChoices" >getChoices</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getItems" >getItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loadReferenceData" >loadReferenceData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(apollo: Apollo, apiProxy: <a href="../injectables/SafeApiProxyService.html" target="_self">SafeApiProxyService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the service</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The apollo client</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>apiProxy</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeApiProxyService.html" target="_self" >SafeApiProxyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The api proxy service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildGraphQLQuery"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>buildGraphQLQuery</b></span>
+                        <a href="#buildGraphQLQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildGraphQLQuery(referenceData: <a href="../interfaces/ReferenceData.html" target="_self">ReferenceData</a>, newItems)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Build a graphQL query based on the ReferenceData configuration.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>referenceData</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReferenceData.html" target="_self" >ReferenceData</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>Reference data configuration.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>newItems</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>do we need to query only new items</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>GraphQL query.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchItems"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>fetchItems</b></span>
+                        <a href="#fetchItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchItems(referenceData: <a href="../interfaces/ReferenceData.html" target="_self">ReferenceData</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:217</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch items from reference data parameters and set cache</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>referenceData</td>
+                                    <td>
+                                                <code><a href="../interfaces/ReferenceData.html" target="_self" >ReferenceData</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>reference data to query items of</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>list of items</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatDateSQL"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>formatDateSQL</b></span>
+                        <a href="#formatDateSQL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>formatDateSQL(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:268</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Format a date to YYYY-MM-DD HH:MM:SS.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>date to format.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>String formatted to YYYY-MM-DD HH:MM:SS.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getChoices"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getChoices</b></span>
+                        <a href="#getChoices"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getChoices(referenceDataID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, displayField: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, filter?: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Asynchronously fetch choices from ReferenceData and return them in the right format for a selectable questions.
+Include caching for requests to optimise number of requests.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>referenceDataID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>ReferenceData ID.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>displayField</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Field used for display in the question.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>The filter object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;literal type[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promised choices.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getItems"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getItems</b></span>
+                        <a href="#getItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getItems(referenceDataID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the items and the value field of a reference data</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>referenceDataID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The reference data id</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The item list and the value field</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadReferenceData"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>loadReferenceData</b></span>
+                        <a href="#loadReferenceData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadReferenceData(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Return a promise with the reference data corresponding to the id passed.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Reference data ID.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/ReferenceData.html" target="_self" >Promise&lt;ReferenceData&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promised ReferenceData.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operate"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>operate</b></span>
+                        <a href="#operate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="283" class="link-to-prism">projects/safe/src/lib/services/reference-data/reference-data.service.ts:283</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calculate an operation for filters</p>
+</div>
+                </td>
+            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">
+                                <b>Parameters :</b>
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                    <td>foreignValue</td>
+                                                    <td>
+                                                            <code><p>The value which comes from the record item</p>
+</code>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                    <td>operator</td>
+                                                    <td>
+                                                            <code><p>The operator to use for the operation</p>
+</code>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                    <td>localValue</td>
+                                                    <td>
+                                                            <code><p>The value which comes from the filter</p>
+</code>
+                                                    </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Apollo } from &#x27;apollo-angular&#x27;;
+import { isArray, isEqual, get } from &#x27;lodash&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import localForage from &#x27;localforage&#x27;;
+import {
+  ReferenceData,
+  referenceDataType,
+} from &#x27;../../models/reference-data.model&#x27;;
+import {
+  GetReferenceDataByIdQueryResponse,
+  GET_REFERENCE_DATA_BY_ID,
+} from &#x27;./graphql/queries&#x27;;
+import { SafeApiProxyService } from &#x27;../api-proxy/api-proxy.service&#x27;;
+
+/** Local storage key for last modified */
+const LAST_MODIFIED_KEY &#x3D; &#x27;_last_modified&#x27;;
+/** Local storage key for last request */
+const LAST_REQUEST_KEY &#x3D; &#x27;_last_request&#x27;;
+/** Property for filtering in requests */
+const LAST_UPDATE_CODE &#x3D; &#x27;{{lastUpdate}}&#x27;;
+
+/** Service for reference data */
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class SafeReferenceDataService {
+  /**
+   * Constructor of the service
+   *
+   * @param apollo The apollo client
+   * @param apiProxy The api proxy service
+   */
+  constructor(private apollo: Apollo, private apiProxy: SafeApiProxyService) {}
+
+  /**
+   * Return a promise with the reference data corresponding to the id passed.
+   *
+   * @param id Reference data ID.
+   * @returns Promised ReferenceData.
+   */
+  public loadReferenceData(id: string): Promise&lt;ReferenceData&gt; {
+    return this.apollo
+      .query&lt;GetReferenceDataByIdQueryResponse&gt;({
+        query: GET_REFERENCE_DATA_BY_ID,
+        variables: {
+          id,
+        },
+      })
+      .pipe(map((res) &#x3D;&gt; res.data.referenceData))
+      .toPromise();
+  }
+
+  /**
+   * Build a graphQL query based on the ReferenceData configuration.
+   *
+   * @param referenceData Reference data configuration.
+   * @param newItems do we need to query only new items
+   * @returns GraphQL query.
+   */
+  private buildGraphQLQuery(
+    referenceData: ReferenceData,
+    newItems &#x3D; false
+  ): string {
+    let query &#x3D; &#x27;{ &#x27; + (referenceData.query || &#x27;&#x27;);
+    if (newItems &amp;&amp; referenceData.graphQLFilter) {
+      let filter &#x3D; &#x60;${referenceData.graphQLFilter}&#x60;;
+      if (filter.includes(LAST_UPDATE_CODE)) {
+        const lastUpdate &#x3D;
+          localStorage.getItem(referenceData.id + LAST_REQUEST_KEY) ||
+          this.formatDateSQL(new Date(0));
+        filter &#x3D; filter.split(LAST_UPDATE_CODE).join(lastUpdate);
+      }
+      query +&#x3D; &#x27;(&#x27; + filter + &#x27;)&#x27;;
+    }
+    query +&#x3D; &#x27; { &#x27;;
+    for (const field of referenceData.fields || []) {
+      query +&#x3D; field + &#x27; &#x27;;
+    }
+    query +&#x3D; &#x27;} }&#x27;;
+    return query;
+  }
+
+  /**
+   * Asynchronously fetch choices from ReferenceData and return them in the right format for a selectable questions.
+   * Include caching for requests to optimise number of requests.
+   *
+   * @param referenceDataID ReferenceData ID.
+   * @param displayField Field used for display in the question.
+   * @param filter The filter object
+   * @param filter.foreignReferenceData The reference data name of the foreign question
+   * @param filter.foreignField The field name for the foreign question
+   * @param filter.foreignValue The value to filter on for the foreign field
+   * @param filter.localField The field to filter on on the local reference data
+   * @param filter.operator The operator to filter
+   * @returns Promised choices.
+   */
+  public async getChoices(
+    referenceDataID: string,
+    displayField: string,
+    filter?: {
+      foreignReferenceData: string;
+      foreignField: string;
+      foreignValue: any;
+      localField: string;
+      operator: string;
+    }
+  ): Promise&lt;{ value: string | number; text: string }[]&gt; {
+    const sortByDisplayField &#x3D; (a: any, b: any) &#x3D;&gt;
+      a[displayField] &gt; b[displayField] ? 1 : -1;
+
+    // get items
+    const { items: items_, valueField } &#x3D; await this.getItems(referenceDataID);
+    // sort items by displayField
+    const items &#x3D; items_.sort(sortByDisplayField);
+    // if we ask to filter
+    if (filter) {
+      const { items: foreignItems, valueField: foreignValueField } &#x3D;
+        await this.getItems(filter.foreignReferenceData);
+      const selectedForeignItem &#x3D; foreignItems.find(
+        (item) &#x3D;&gt; item[foreignValueField] &#x3D;&#x3D;&#x3D; filter.foreignValue
+      );
+      return items
+        .filter((item) &#x3D;&gt;
+          this.operate(
+            selectedForeignItem[filter.foreignField],
+            filter.operator,
+            item[filter.localField]
+          )
+        )
+        .sort(sortByDisplayField)
+        .map((item) &#x3D;&gt; ({
+          value: item[valueField],
+          text: item[displayField],
+        }));
+    }
+    // if we don&#x27;t have to filter
+    return items.map((item) &#x3D;&gt; ({
+      value: item[valueField],
+      text: item[displayField],
+    }));
+  }
+
+  /**
+   * Get the items and the value field of a reference data
+   *
+   * @param referenceDataID The reference data id
+   * @returns The item list and the value field
+   */
+  private async getItems(referenceDataID: string): Promise&lt;{
+    items: any[];
+    valueField: string;
+  }&gt; {
+    // Initialisation
+    let items: any;
+    const referenceData &#x3D; await this.loadReferenceData(referenceDataID);
+    const cacheKey &#x3D; referenceData.id || &#x27;&#x27;;
+    const valueField &#x3D; referenceData.valueField || &#x27;id&#x27;;
+    const cacheTimestamp &#x3D; localStorage.getItem(cacheKey + LAST_MODIFIED_KEY);
+    const modifiedAt &#x3D; referenceData.modifiedAt || &#x27;&#x27;;
+
+    // Check if referenceData has changed. In this case, refresh choices instead of using cached ones.
+    if (!cacheTimestamp || cacheTimestamp &lt; modifiedAt) {
+      items &#x3D; await this.fetchItems(referenceData);
+    } else {
+      // If referenceData has not changed, use cached value and check for updates for graphQL.
+      if (referenceData.type &#x3D;&#x3D;&#x3D; referenceDataType.graphql) {
+        const isCached &#x3D; (await localForage.keys()).includes(cacheKey);
+        // Fetch items
+        const url &#x3D;
+          this.apiProxy.baseUrl +
+          referenceData.apiConfiguration?.name +
+          referenceData.apiConfiguration?.graphQLEndpoint;
+        const body &#x3D; { query: this.buildGraphQLQuery(referenceData, isCached) };
+        const data &#x3D; (await this.apiProxy.buildPostRequest(url, body)) as any;
+        items &#x3D; referenceData.path ? get(data, referenceData.path) : data;
+        items &#x3D; referenceData.query ? items[referenceData.query] : items;
+        // Cache items
+        if (isCached) {
+          const cache: any[] | null &#x3D; await localForage.getItem(cacheKey);
+          if (cache &amp;&amp; items &amp;&amp; items.length) {
+            for (const newItem of items) {
+              const cachedItemIndex &#x3D; cache.findIndex(
+                (cachedItem) &#x3D;&gt; cachedItem[valueField] &#x3D;&#x3D;&#x3D; newItem[valueField]
+              );
+              if (cachedItemIndex !&#x3D;&#x3D; -1) {
+                cache[cachedItemIndex] &#x3D; newItem;
+              } else {
+                cache.push(newItem);
+              }
+            }
+          }
+          items &#x3D; cache || [];
+        }
+        localForage.setItem(cacheKey, items);
+        localStorage.setItem(
+          cacheKey + LAST_REQUEST_KEY,
+          this.formatDateSQL(new Date())
+        );
+      } else {
+        // If referenceData has not changed, use cached value for non graphQL.
+        items &#x3D; await localForage.getItem(cacheKey);
+        if (!items) {
+          items &#x3D; await this.fetchItems(referenceData);
+        }
+      }
+    }
+    return { items, valueField };
+  }
+
+  /**
+   * Fetch items from reference data parameters and set cache
+   *
+   * @param referenceData reference data to query items of
+   * @returns list of items
+   */
+  private async fetchItems(referenceData: ReferenceData): Promise&lt;any&gt; {
+    const cacheKey &#x3D; referenceData.id || &#x27;&#x27;;
+    const modifiedAt &#x3D; referenceData.modifiedAt || &#x27;&#x27;;
+    // Initialisation
+    let items: any;
+    switch (referenceData.type) {
+      case referenceDataType.graphql: {
+        const url &#x3D;
+          this.apiProxy.baseUrl +
+          referenceData.apiConfiguration?.name +
+          referenceData.apiConfiguration?.graphQLEndpoint;
+        const body &#x3D; { query: this.buildGraphQLQuery(referenceData, false) };
+        const data &#x3D; (await this.apiProxy.buildPostRequest(url, body)) as any;
+        items &#x3D; referenceData.path ? get(data, referenceData.path) : data;
+        items &#x3D; referenceData.query ? items[referenceData.query] : items;
+        localStorage.setItem(
+          cacheKey + LAST_REQUEST_KEY,
+          this.formatDateSQL(new Date())
+        );
+        break;
+      }
+      case referenceDataType.rest: {
+        const url &#x3D;
+          this.apiProxy.baseUrl +
+          referenceData.apiConfiguration?.name +
+          referenceData.query;
+        const data &#x3D; await this.apiProxy.promisedRequestWithHeaders(url);
+        items &#x3D; referenceData.path ? get(data, referenceData.path) : data;
+        break;
+      }
+      case referenceDataType.static: {
+        items &#x3D; referenceData.data;
+        break;
+      }
+      default: {
+        items &#x3D; referenceData.data;
+        break;
+      }
+    }
+    // Cache items and timestamp
+    localForage.setItem(cacheKey, items);
+    localStorage.setItem(cacheKey + LAST_MODIFIED_KEY, modifiedAt);
+    return items;
+  }
+
+  /**
+   * Format a date to YYYY-MM-DD HH:MM:SS.
+   *
+   * @param date date to format.
+   * @returns String formatted to YYYY-MM-DD HH:MM:SS.
+   */
+  private formatDateSQL(date: Date): string {
+    return new Date(date.getTime() - date.getTimezoneOffset() * 60 * 1000) // remove timezone
+      .toISOString() // convert to iso string
+      .replace(&#x27;T&#x27;, &#x27; &#x27;) // remove the T between date and time
+      .split(&#x27;.&#x27;)[0]; // remove the decimals after the seconds
+  }
+
+  /**
+   * Calculate an operation for filters
+   *
+   * @param foreignValue The value which comes from the record item
+   * @param operator The operator to use for the operation
+   * @param localValue The value which comes from the filter
+   * @returns A boolean, indicating the result of the operation
+   */
+  private operate &#x3D; (
+    foreignValue: any,
+    operator: string,
+    localValue: any
+  ): boolean &#x3D;&gt; {
+    switch (operator) {
+      case &#x27;eq&#x27;:
+        return isEqual(foreignValue, localValue);
+      case &#x27;neq&#x27;:
+        return !isEqual(foreignValue, localValue);
+      case &#x27;gte&#x27;:
+        return foreignValue &gt;&#x3D; localValue;
+      case &#x27;gt&#x27;:
+        return foreignValue &gt; localValue;
+      case &#x27;lte&#x27;:
+        return foreignValue &lt;&#x3D; localValue;
+      case &#x27;lt&#x27;:
+        return foreignValue &lt; localValue;
+      case &#x27;contains&#x27;:
+        if (foreignValue &#x3D;&#x3D;&#x3D; null) return false;
+        if (isArray(localValue)) {
+          for (const itemValue of localValue) {
+            if (!foreignValue.includes(itemValue)) {
+              return false;
+            }
+          }
+          return true;
+        } else {
+          return foreignValue.includes(localValue);
+        }
+      case &#x27;doesnotcontain&#x27;:
+        if (foreignValue &#x3D;&#x3D;&#x3D; null) return true;
+        if (isArray(localValue)) {
+          for (const itemValue of localValue) {
+            if (foreignValue.includes(itemValue)) {
+              return false;
+            }
+          }
+          return true;
+        } else {
+          return !foreignValue.includes(localValue);
+        }
+      case &#x27;iscontained&#x27;:
+        return this.operate(localValue, &#x27;contains&#x27;, foreignValue);
+      case &#x27;isnotcontained&#x27;:
+        return this.operate(localValue, &#x27;doesnotcontain&#x27;, foreignValue);
+      default:
+        return true;
+    }
+  };
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeReferenceDataService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

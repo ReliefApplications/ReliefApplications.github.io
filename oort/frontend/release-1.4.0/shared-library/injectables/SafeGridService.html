@@ -1,0 +1,1397 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >SafeGridService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/safe/src/lib/services/grid/grid.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Shared grid service for the dashboards.
+Exposes the available tiles, and find the settings from a widget.</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createFormGroup" >createFormGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractChoices" >extractChoices</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFieldEditor" >getFieldEditor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFieldFilter" >getFieldFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFieldFormat" >getFieldFormat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getFields" >getFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#populateMetaFields" >populateMetaFields</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>, apiProxyService: <a href="../injectables/SafeApiProxyService.html" target="_self">SafeApiProxyService</a>, translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Shared grid service for the dashboards.
+Exposes the available tiles, and find the settings from a widget.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular form builder</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>apiProxyService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeApiProxyService.html" target="_self" >SafeApiProxyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared API proxy service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Translate service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createFormGroup"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>createFormGroup</b></span>
+                        <a href="#createFormGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createFormGroup(dataItem: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, fields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="363"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:363</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates form group for inline edition.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dataItem</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Data item to open in inline edition.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of grid fields.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Form group of the item.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractChoices"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>extractChoices</b></span>
+                        <a href="#extractChoices"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractChoices(res: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, choicesByUrl: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="325"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:325</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Extracts choices using choicesByUrl properties</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Result of http request.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>choicesByUrl</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Choices By Url property.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>list of choices.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFieldEditor"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getFieldEditor</b></span>
+                        <a href="#getFieldEditor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFieldEditor(type: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="178"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:178</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets editor of a field from its type.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Field type.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>name of the editor.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFieldFilter"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getFieldFilter</b></span>
+                        <a href="#getFieldFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFieldFilter(type: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:232</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets filter type of a field from its type.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Type of the field.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Name of the field filter.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFieldFormat"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getFieldFormat</b></span>
+                        <a href="#getFieldFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFieldFormat(type: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="213"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:213</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets format of a field from its type ( only for date fields ).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Type of the field.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Format of the field.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFields"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getFields</b></span>
+                        <a href="#getFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFields(fields: any[], metaFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, layoutFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, prefix?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, options: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Generates list of fields for the grid, based on grid parameters.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>list of fields saved in settings.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>metaFields</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>list of metaFields (createdBy, updateBy...)</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>layoutFields</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>list of layout fields</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>prefix</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>prefix of the field.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{
+      disabled: false,
+      hidden: false,
+      filter: true,
+    }</code>
+                                    </td>
+
+                                    <td>
+                                        <p>additional options ( disable / hidden / filter )</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The list of fields formatted for a grid component</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="populateMetaFields"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>populateMetaFields</b></span>
+                        <a href="#populateMetaFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>populateMetaFields(metaFields: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="266"
+                            class="link-to-prism">projects/safe/src/lib/services/grid/grid.service.ts:266</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches choices from URL for fields with url parameter.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>metaFields</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of meta fields</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { prettifyLabel } from &#x27;../../utils/prettify&#x27;;
+import get from &#x27;lodash/get&#x27;;
+import { SafeApiProxyService } from &#x27;../api-proxy/api-proxy.service&#x27;;
+import { MULTISELECT_TYPES } from &#x27;../../components/ui/core-grid/grid/grid.constants&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { REFERENCE_DATA_END } from &#x27;../query-builder/query-builder.service&#x27;;
+import { isNil } from &#x27;lodash&#x27;;
+
+/** List of disabled fields */
+const DISABLED_FIELDS &#x3D; [
+  &#x27;id&#x27;,
+  &#x27;incrementalId&#x27;,
+  &#x27;createdAt&#x27;,
+  &#x27;modifiedAt&#x27;,
+  &#x27;form&#x27;,
+];
+/**
+ * Transforms a list with nested lists into a flat list
+ *
+ * @param arr The list to flat
+ * @returns The flated list
+ */
+const flatDeep &#x3D; (arr: any[]): any[] &#x3D;&gt;
+  arr.reduce(
+    (acc, val) &#x3D;&gt; acc.concat(Array.isArray(val) ? flatDeep(val) : val),
+    []
+  );
+
+/**
+ * Shared grid service for the dashboards.
+ * Exposes the available tiles, and find the settings from a widget.
+ */
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class SafeGridService {
+  /**
+   * Shared grid service for the dashboards.
+   * Exposes the available tiles, and find the settings from a widget.
+   *
+   * @param formBuilder Angular form builder
+   * @param apiProxyService Shared API proxy service
+   * @param translate Translate service
+   */
+  constructor(
+    private formBuilder: FormBuilder,
+    private apiProxyService: SafeApiProxyService,
+    private translate: TranslateService
+  ) {}
+
+  /**
+   * Generates list of fields for the grid, based on grid parameters.
+   *
+   * @param fields list of fields saved in settings.
+   * @param metaFields list of metaFields (createdBy, updateBy...)
+   * @param layoutFields list of layout fields
+   * @param prefix prefix of the field.
+   * @param options additional options ( disable / hidden / filter )
+   * @param options.disabled disable the grid
+   * @param options.hidden hide the grid
+   * @param options.filter filter options for the grid
+   * @returns The list of fields formatted for a grid component
+   */
+  public getFields(
+    fields: any[],
+    metaFields: any,
+    layoutFields: any,
+    prefix?: string,
+    options: { disabled?: boolean; hidden?: boolean; filter: boolean } &#x3D; {
+      disabled: false,
+      hidden: false,
+      filter: true,
+    }
+  ): any[] {
+    return flatDeep(
+      fields.map((f) &#x3D;&gt; {
+        const fullName: string &#x3D; prefix ? &#x60;${prefix}.${f.name}&#x60; : f.name;
+        let metaData &#x3D; get(metaFields, fullName);
+        const canSee &#x3D; get(metaData, &#x27;permissions.canSee&#x27;);
+        const canUpdate &#x3D; get(metaData, &#x27;permissions.canUpdate&#x27;, false);
+        const hidden: boolean &#x3D;
+          (!isNil(canSee) &amp;&amp; !canSee) || options.hidden || false;
+        const disabled: boolean &#x3D; options.disabled || !canUpdate;
+
+        switch (f.kind) {
+          case &#x27;OBJECT&#x27;: {
+            return this.getFields(
+              f.fields,
+              metaFields,
+              layoutFields,
+              fullName,
+              {
+                disabled: true,
+                hidden,
+                filter: prefix ? false : options.filter,
+              }
+            );
+          }
+          case &#x27;LIST&#x27;: {
+            metaData &#x3D; Object.assign([], metaData);
+            if (f.type.endsWith(REFERENCE_DATA_END)) {
+              metaData.type &#x3D; &#x27;referenceData&#x27;;
+            } else {
+              metaData.type &#x3D; &#x27;records&#x27;;
+            }
+            const cachedField &#x3D; get(layoutFields, fullName);
+            const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
+            const subFields &#x3D; this.getFields(
+              f.fields,
+              metaFields,
+              layoutFields,
+              fullName,
+              {
+                disabled: true,
+                hidden: !f.type.endsWith(REFERENCE_DATA_END),
+                filter: false,
+              }
+            );
+            return {
+              name: fullName,
+              title,
+              type: f.type,
+              format: this.getFieldFormat(f.type),
+              editor: this.getFieldEditor(f.type),
+              filter: prefix ? &#x27;&#x27; : this.getFieldFilter(f.type),
+              meta: metaData,
+              disabled: true,
+              hidden: hidden || cachedField?.hidden || false,
+              width: cachedField?.width || title.length * 7 + 50,
+              order: cachedField?.order,
+              query: {
+                sort: f.sort,
+                fields: f.fields,
+                filter: f.filter,
+              },
+              subFields,
+              canSee: true,
+            };
+          }
+          default: {
+            const cachedField &#x3D; get(layoutFields, fullName);
+            const title &#x3D; f.label ? f.label : prettifyLabel(f.name);
+            return {
+              name: fullName,
+              title,
+              type: f.type,
+              layoutFormat: f.format,
+              format: this.getFieldFormat(f.type),
+              editor: this.getFieldEditor(f.type),
+              filter: !options.filter ? &#x27;&#x27; : this.getFieldFilter(f.type),
+              meta: metaData,
+              disabled:
+                disabled ||
+                DISABLED_FIELDS.includes(f.name) ||
+                metaData?.readOnly ||
+                metaData?.isCalculated,
+              hidden: hidden || cachedField?.hidden || false,
+              width: cachedField?.width || title.length * 7 + 50,
+              order: cachedField?.order,
+              canSee,
+            };
+          }
+        }
+      })
+    )
+      .filter((f) &#x3D;&gt; f.canSee)
+      .sort((a, b) &#x3D;&gt; a.order - b.order);
+  }
+
+  /**
+   * Gets editor of a field from its type.
+   *
+   * @param type Field type.
+   * @returns name of the editor.
+   */
+  private getFieldEditor(type: any): string {
+    switch (type) {
+      case &#x27;Int&#x27;: {
+        return &#x27;numeric&#x27;;
+      }
+      case &#x27;Float&#x27;: {
+        return &#x27;numeric&#x27;;
+      }
+      case &#x27;Boolean&#x27;: {
+        return &#x27;boolean&#x27;;
+      }
+      case &#x27;Date&#x27;: {
+        return &#x27;date&#x27;;
+      }
+      case &#x27;DateTime&#x27;: {
+        return &#x27;datetime&#x27;;
+      }
+      case &#x27;Time&#x27;: {
+        return &#x27;time&#x27;;
+      }
+      case &#x27;JSON&#x27;: {
+        return &#x27;&#x27;;
+      }
+      default: {
+        return &#x27;text&#x27;;
+      }
+    }
+  }
+
+  /**
+   * Gets format of a field from its type ( only for date fields ).
+   *
+   * @param type Type of the field.
+   * @returns Format of the field.
+   */
+  private getFieldFormat(type: any): string {
+    switch (type) {
+      case &#x27;Date&#x27;:
+        return &#x27;dd/MM/yy&#x27;;
+      case &#x27;DateTime&#x27;:
+        return &#x27;dd/MM/yy HH:mm&#x27;;
+      case &#x27;Time&#x27;:
+        return &#x27;HH:mm&#x27;;
+      default:
+        return &#x27;&#x27;;
+    }
+  }
+
+  /**
+   * Gets filter type of a field from its type.
+   *
+   * @param type Type of the field.
+   * @returns Name of the field filter.
+   */
+  private getFieldFilter(type: any): string {
+    switch (type) {
+      case &#x27;Int&#x27;: {
+        return &#x27;numeric&#x27;;
+      }
+      case &#x27;Float&#x27;: {
+        return &#x27;numeric&#x27;;
+      }
+      case &#x27;Boolean&#x27;: {
+        return &#x27;boolean&#x27;;
+      }
+      case &#x27;Date&#x27;: {
+        return &#x27;date&#x27;;
+      }
+      case &#x27;DateTime&#x27;: {
+        return &#x27;date&#x27;;
+      }
+      case &#x27;Time&#x27;: {
+        return &#x27;date&#x27;;
+      }
+      case &#x27;JSON&#x27;: {
+        return &#x27;&#x27;;
+      }
+      default: {
+        return &#x27;text&#x27;;
+      }
+    }
+  }
+
+  /**
+   * Fetches choices from URL for fields with url parameter.
+   *
+   * @param metaFields List of meta fields
+   */
+  public async populateMetaFields(metaFields: any): Promise&lt;void&gt; {
+    const promises: Promise&lt;any&gt;[] &#x3D; [];
+    for (const fieldName of Object.keys(metaFields)) {
+      const meta &#x3D; metaFields[fieldName];
+      if (meta.choicesByUrl) {
+        const url: string &#x3D; meta.choicesByUrl.url;
+        const localRes &#x3D; localStorage.getItem(url);
+        if (localRes) {
+          metaFields[fieldName] &#x3D; {
+            ...meta,
+            choices: this.extractChoices(
+              JSON.parse(localRes),
+              meta.choicesByUrl
+            ),
+            // choicesByUrl: null,
+          };
+        } else {
+          promises.push(
+            this.apiProxyService
+              .promisedRequestWithHeaders(url)
+              .then((value: any) &#x3D;&gt; {
+                localStorage.setItem(url, JSON.stringify(value));
+                metaFields[fieldName] &#x3D; {
+                  ...meta,
+                  choices: this.extractChoices(value, meta.choicesByUrl),
+                  // choicesByUrl: null,
+                };
+              })
+          );
+        }
+      }
+      if (meta.choices) {
+        metaFields[fieldName] &#x3D; {
+          ...meta,
+          choices: meta.choices.map((choice: any) &#x3D;&gt; ({
+            value: choice.value,
+            text:
+              choice.text[this.translate.currentLang] ||
+              choice.text.default ||
+              choice.text,
+          })),
+        };
+      }
+    }
+    await Promise.all(promises);
+  }
+
+  /**
+   * Extracts choices using choicesByUrl properties
+   *
+   * @param res Result of http request.
+   * @param choicesByUrl Choices By Url property.
+   * @param choicesByUrl.path The path of the url to fetch
+   * @param choicesByUrl.value The key for values in the response
+   * @param choicesByUrl.text The key for labels in the response
+   * @param choicesByUrl.hasOther If the &quot;other&quot; option is enabled
+   * @param choicesByUrl.otherText Label fot the &quot;other&quot; option if enabled
+   * @returns list of choices.
+   */
+  private extractChoices(
+    res: any,
+    choicesByUrl: {
+      path?: string;
+      value?: string;
+      text?: string;
+      hasOther?: boolean;
+      otherText?: string;
+    }
+  ): { value: string; text: string }[] {
+    let choices &#x3D; choicesByUrl.path ? [...res[choicesByUrl.path]] : [...res];
+    choices &#x3D; choices
+      ? choices.map((x: any) &#x3D;&gt; ({
+          value: (choicesByUrl.value ? x[choicesByUrl.value] : x).toString(),
+          text: choicesByUrl.text
+            ? x[choicesByUrl.text]
+            : choicesByUrl.value
+            ? x[choicesByUrl.value]
+            : x,
+        }))
+      : [];
+    if (choicesByUrl.hasOther) {
+      choices.push({
+        value: &#x27;other&#x27;,
+        text: choicesByUrl.otherText ? choicesByUrl.otherText : &#x27;Other&#x27;,
+      });
+    }
+    choices.sort((a: any, b: any) &#x3D;&gt; a.text.localeCompare(b.text));
+    return choices;
+  }
+
+  /**
+   * Creates form group for inline edition.
+   *
+   * @param dataItem Data item to open in inline edition.
+   * @param fields List of grid fields.
+   * @returns Form group of the item.
+   */
+  public createFormGroup(dataItem: any, fields: any[]): FormGroup {
+    const formGroup: any &#x3D; {};
+    fields
+      .filter((x) &#x3D;&gt; !x.disabled)
+      .forEach((field, index) &#x3D;&gt; {
+        if (
+          field.type !&#x3D;&#x3D; &#x27;JSON&#x27; ||
+          MULTISELECT_TYPES.includes(field.meta.type)
+        ) {
+          formGroup[field.name] &#x3D; [dataItem[field.name]];
+        } else {
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;multipletext&#x27;) {
+            const fieldGroup: any &#x3D; {};
+            for (const item of field.meta.items) {
+              fieldGroup[item.name] &#x3D; [
+                dataItem[field.name] ? dataItem[field.name][item.name] : null,
+              ];
+            }
+            formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
+          }
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrix&#x27;) {
+            const fieldGroup: any &#x3D; {};
+            for (const row of field.meta.rows) {
+              fieldGroup[row.name] &#x3D; [
+                dataItem[field.name] ? dataItem[field.name][row.name] : null,
+              ];
+            }
+            formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
+          }
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrixdropdown&#x27;) {
+            const fieldGroup: any &#x3D; {};
+            const fieldValue &#x3D; dataItem[field.name];
+            for (const row of field.meta.rows) {
+              const rowValue &#x3D; fieldValue ? fieldValue[row.name] : null;
+              const rowGroup: any &#x3D; {};
+              for (const column of field.meta.columns) {
+                const columnValue &#x3D; rowValue ? rowValue[column.name] : null;
+                rowGroup[column.name] &#x3D; [columnValue];
+              }
+              fieldGroup[row.name] &#x3D; this.formBuilder.group(rowGroup);
+            }
+            formGroup[field.name] &#x3D; this.formBuilder.group(fieldGroup);
+          }
+          if (field.meta.type &#x3D;&#x3D;&#x3D; &#x27;matrixdynamic&#x27;) {
+            const fieldArray: any &#x3D; [];
+            const fieldValue &#x3D; dataItem[field.name] ? dataItem[field.name] : [];
+            for (const rowValue of fieldValue) {
+              const rowGroup: any &#x3D; {};
+              for (const column of field.meta.columns) {
+                const columnValue &#x3D; rowValue ? rowValue[column.name] : null;
+                if (MULTISELECT_TYPES.includes(column.cellType)) {
+                  rowGroup[column.name] &#x3D; [columnValue];
+                } else {
+                  rowGroup[column.name] &#x3D; columnValue;
+                }
+              }
+              fieldArray.push(this.formBuilder.group(rowGroup));
+            }
+            formGroup[field.name] &#x3D; this.formBuilder.array(fieldArray);
+          }
+        }
+      });
+    return this.formBuilder.group(formGroup);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeGridService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

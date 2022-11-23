@@ -1,0 +1,2452 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SafeRecordHistoryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/safe/src/lib/components/record-history/record-history.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This is a component to access the history of a record</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>safe-record-history</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./record-history.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./record-history.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns" >displayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#endDate" >endDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filterField" >filterField</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filterHistory" >filterHistory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#filtersDate" >filtersDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#history" >history</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#record" >record</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showMore" >showMore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sortedFields" >sortedFields</a>
+                            </li>
+                            <li>
+                                <a href="#startDate" >startDate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#applyFilter" >applyFilter</a>
+                            </li>
+                            <li>
+                                <a href="#clearDateFilter" >clearDateFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#extractFields" >extractFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFields" >getFields</a>
+                            </li>
+                            <li>
+                                <a href="#getHTMLFromChange" >getHTMLFromChange</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onCancel" >onCancel</a>
+                            </li>
+                            <li>
+                                <a href="#onDownload" >onDownload</a>
+                            </li>
+                            <li>
+                                <a href="#onRevert" >onRevert</a>
+                            </li>
+                            <li>
+                                <a href="#sortFields" >sortFields</a>
+                            </li>
+                            <li>
+                                <a href="#toReadableObjectValue" >toReadableObjectValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#id" >id</a>
+                            </li>
+                            <li>
+                                <a href="#revert" >revert</a>
+                            </li>
+                            <li>
+                                <a href="#template" >template</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancel" >cancel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#fileName" >fileName</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialog: MatDialog, downloadService: <a href="../injectables/SafeDownloadService.html" target="_self">SafeDownloadService</a>, translate: TranslateService, dateFormat: <a href="../injectables/SafeDateTranslateService.html" target="_self">SafeDateTranslateService</a>, apollo: Apollo, snackBar: <a href="../injectables/SafeSnackBarService.html" target="_self">SafeSnackBarService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor of the record history component</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The material dialog service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>downloadService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeDownloadService.html" target="_self" >SafeDownloadService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The download service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The translation service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dateFormat</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeDateTranslateService.html" target="_self" >SafeDateTranslateService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The dateTranslation service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The apollo client</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SafeSnackBarService.html" target="_self" >SafeSnackBarService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>The snackbar service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <b>id</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:57</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="revert"></a>
+                        <b>revert</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:58</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="template"></a>
+                        <b>template</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:59</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cancel"></a>
+                        <b>cancel</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:60</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyFilter"></a>
+                    <span class="name">
+                        <span ><b>applyFilter</b></span>
+                        <a href="#applyFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>applyFilter(filterField?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="282"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:282</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Triggers when the selected date and field filters are changed
+and filters the history accordingly</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filterField</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>the name of the field being filtered, if any</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearDateFilter"></a>
+                    <span class="name">
+                        <span ><b>clearDateFilter</b></span>
+                        <a href="#clearDateFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearDateFilter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:268</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clears the date filter, empties it</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>extractFields</b></span>
+                        <a href="#extractFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extractFields(object: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, fields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="394"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:394</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Extract fields from form structure in order to get titles.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>object</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Structure to inspect, can be a page, a panel.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Array of fields.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFields"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getFields</b></span>
+                        <a href="#getFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFields()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="367"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:367</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get fields from the form</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Returns an array with all the fields.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getHTMLFromChange"></a>
+                    <span class="name">
+                        <span ><b>getHTMLFromChange</b></span>
+                        <a href="#getHTMLFromChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getHTMLFromChange(change: <a href="../interfaces/Change.html" target="_self">Change</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:160</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the HTML element from a change object</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>change</td>
+                                    <td>
+                                                <code><a href="../interfaces/Change.html" target="_self" >Change</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The field change object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the innerHTML for the listing</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCancel"></a>
+                    <span class="name">
+                        <span ><b>onCancel</b></span>
+                        <a href="#onCancel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCancel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles the cancelling of the edition of the history</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDownload"></a>
+                    <span class="name">
+                        <span ><b>onDownload</b></span>
+                        <a href="#onDownload"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDownload(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="329"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:329</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handle the download event. Send a request to the server to get excel / csv file.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Type of document to download</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRevert"></a>
+                    <span class="name">
+                        <span ><b>onRevert</b></span>
+                        <a href="#onRevert"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onRevert(version: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="248"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:248</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Display a modal to show previous version, and revert to it if user accepts.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>version</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The version to revert</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortFields"></a>
+                    <span class="name">
+                        <span ><b>sortFields</b></span>
+                        <a href="#sortFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sortFields(fields: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="353"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:353</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Parses the structure of the record and sorts the fields
+based on their names or lables, if available</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Array of fields</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>sorted array of fields</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toReadableObjectValue"></a>
+                    <span class="name">
+                        <span ><b>toReadableObjectValue</b></span>
+                        <a href="#toReadableObjectValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toReadableObjectValue(object: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="222"
+                            class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:222</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Transforms a object in a more readable inline string (or list)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>object</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A &#39;readable&#39; version of that object, in which the the format key (value1, value2)</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:97</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">The material dialog service</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedColumns"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>displayedColumns</b></span>
+                        <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;position&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="endDate"></a>
+                    <span class="name">
+                        <span ><b>endDate</b></span>
+                        <a href="#endDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatEndDate&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;endDate&#x27;, {read: MatEndDate})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:74</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterField"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filterField</b></span>
+                        <a href="#filterField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterHistory"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filterHistory</b></span>
+                        <a href="#filterHistory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Record.html" target="_self" >RecordHistory</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filtersDate"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>filtersDate</b></span>
+                        <a href="#filtersDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ startDate: &#x27;&#x27;, endDate: &#x27;&#x27; }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="history"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>history</b></span>
+                        <a href="#history"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Record.html" target="_self" >RecordHistory</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="record"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>record</b></span>
+                        <a href="#record"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Record.html" target="_self" >Record</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showMore"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>showMore</b></span>
+                        <a href="#showMore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortedFields"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>sortedFields</b></span>
+                        <a href="#sortedFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startDate"></a>
+                    <span class="name">
+                        <span ><b>startDate</b></span>
+                        <a href="#startDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatStartDate&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;startDate&#x27;, {read: MatStartDate})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileName"></a>
+                        <span class="name"><b>fileName</b><a href="#fileName"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fileName()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">projects/safe/src/lib/components/record-history/record-history.component.ts:77</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  OnInit,
+  Input,
+  EventEmitter,
+  Output,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+import { Record } from &#x27;../../models/record.model&#x27;;
+import { MatEndDate, MatStartDate } from &#x27;@angular/material/datepicker&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { SafeRecordModalComponent } from &#x27;../record-modal/record-modal.component&#x27;;
+import { SafeDownloadService } from &#x27;../../services/download/download.service&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { SafeDateTranslateService } from &#x27;../../services/date-translate/date-translate.service&#x27;;
+import { Apollo } from &#x27;apollo-angular&#x27;;
+import { SafeSnackBarService } from &#x27;../../services/snackbar/snackbar.service&#x27;;
+import {
+  GetRecordByIdQueryResponse,
+  GetRecordHistoryByIdResponse,
+  GET_RECORD_BY_ID_FOR_HISTORY,
+  GET_RECORD_HISTORY_BY_ID,
+} from &#x27;./graphql/queries&#x27;;
+import { Change, RecordHistory } from &#x27;../../models/recordsHistory&#x27;;
+import { Version } from &#x27;../../models/form.model&#x27;;
+
+/**
+ * Return the type of the old value if existing, else the type of the new value.
+ *
+ * @param oldVal The previous value
+ * @param newVal The next value
+ * @returns The type of the value: primitive, object or array
+ */
+const getValueType &#x3D; (
+  oldVal: any,
+  newVal: any
+): &#x27;primitive&#x27; | &#x27;object&#x27; | &#x27;array&#x27; &#x3D;&gt; {
+  if (oldVal) {
+    if (Array.isArray(oldVal)) return &#x27;array&#x27;;
+    if (oldVal instanceof Object) return &#x27;object&#x27;;
+    return &#x27;primitive&#x27;;
+  }
+  if (Array.isArray(newVal)) return &#x27;array&#x27;;
+  if (newVal instanceof Object) return &#x27;object&#x27;;
+  return &#x27;primitive&#x27;;
+};
+
+/**
+ * This is a component to access the history of a record
+ */
+@Component({
+  selector: &#x27;safe-record-history&#x27;,
+  templateUrl: &#x27;./record-history.component.html&#x27;,
+  styleUrls: [&#x27;./record-history.component.scss&#x27;],
+})
+export class SafeRecordHistoryComponent implements OnInit {
+  @Input() id!: string;
+  @Input() revert!: (version: Version) &#x3D;&gt; void;
+  @Input() template?: string;
+  @Output() cancel &#x3D; new EventEmitter();
+
+  public record!: Record;
+  public history: RecordHistory &#x3D; [];
+  public filterHistory: RecordHistory &#x3D; [];
+  public loading &#x3D; true;
+  public showMore &#x3D; false;
+  public displayedColumns: string[] &#x3D; [&#x27;position&#x27;];
+  public filtersDate &#x3D; { startDate: &#x27;&#x27;, endDate: &#x27;&#x27; };
+  public sortedFields: any[] &#x3D; [];
+  public filterField: string | null &#x3D; null;
+
+  @ViewChild(&#x27;startDate&#x27;, { read: MatStartDate })
+  startDate!: MatStartDate&lt;string&gt;;
+  @ViewChild(&#x27;endDate&#x27;, { read: MatEndDate }) endDate!: MatEndDate&lt;string&gt;;
+
+  /** @returns filename from current date and record inc. id */
+  get fileName(): string {
+    const today &#x3D; new Date();
+    const formatDate &#x3D; &#x60;${today.toLocaleString(&#x27;en-us&#x27;, {
+      month: &#x27;short&#x27;,
+      day: &#x27;numeric&#x27;,
+    })} ${today.getFullYear()}&#x60;;
+    return &#x60;${this.record.incrementalId} ${formatDate}&#x60;;
+  }
+
+  /**
+   * Constructor of the record history component
+   *
+   * @param dialog The material dialog service
+   * @param downloadService The download service
+   * @param translate The translation service
+   * @param dateFormat The dateTranslation service
+   * @param apollo The apollo client
+   * @param snackBar The snackbar service
+   */
+  constructor(
+    public dialog: MatDialog,
+    private downloadService: SafeDownloadService,
+    private translate: TranslateService,
+    private dateFormat: SafeDateTranslateService,
+    private apollo: Apollo,
+    private snackBar: SafeSnackBarService
+  ) {}
+
+  ngOnInit(): void {
+    // this.sortFields();
+
+    this.apollo
+      .query&lt;GetRecordByIdQueryResponse&gt;({
+        query: GET_RECORD_BY_ID_FOR_HISTORY,
+        variables: {
+          id: this.id,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        this.record &#x3D; res.data.record;
+        this.sortedFields &#x3D; this.sortFields(this.getFields());
+      });
+
+    this.apollo
+      .query&lt;GetRecordHistoryByIdResponse&gt;({
+        query: GET_RECORD_HISTORY_BY_ID,
+        variables: {
+          id: this.id,
+          lang: this.translate.currentLang,
+        },
+      })
+      .subscribe((res) &#x3D;&gt; {
+        if (res.errors) {
+          this.snackBar.openSnackBar(
+            this.translate.instant(&#x27;common.notifications.history.error&#x27;, {
+              error: res.errors[0].message,
+            }),
+            { error: true }
+          );
+          this.cancel.emit(true);
+        } else {
+          this.history &#x3D; res.data.recordHistory.filter(
+            (item) &#x3D;&gt; item.changes.length
+          );
+          this.filterHistory &#x3D; this.history;
+          this.loading &#x3D; false;
+        }
+      });
+  }
+
+  /**
+   * Handles the cancelling of the edition of the history
+   */
+  onCancel(): void {
+    this.cancel.emit(true);
+  }
+
+  /**
+   * Gets the HTML element from a change object
+   *
+   * @param change The field change object
+   * @returns the innerHTML for the listing
+   */
+  getHTMLFromChange(change: Change) {
+    const translations &#x3D; {
+      withValue: this.translate.instant(&#x27;components.history.changes.withValue&#x27;),
+      from: this.translate.instant(&#x27;components.history.changes.from&#x27;),
+      to: this.translate.instant(&#x27;components.history.changes.to&#x27;),
+      add: this.translate.instant(&#x27;components.history.changes.add&#x27;),
+      remove: this.translate.instant(&#x27;components.history.changes.remove&#x27;),
+      modify: this.translate.instant(&#x27;components.history.changes.modify&#x27;),
+    };
+
+    let oldVal &#x3D; change.old ? JSON.parse(change.old) : undefined;
+    let newVal &#x3D; change.new ? JSON.parse(change.new) : undefined;
+
+    const valueType &#x3D; getValueType(oldVal, newVal);
+
+    if (valueType &#x3D;&#x3D;&#x3D; &#x27;object&#x27;) {
+      if (oldVal) oldVal &#x3D; this.toReadableObjectValue(oldVal);
+      if (newVal) newVal &#x3D; this.toReadableObjectValue(newVal);
+    }
+
+    if (valueType &#x3D;&#x3D;&#x3D; &#x27;array&#x27;) {
+      if (oldVal &amp;&amp; !(oldVal[0] instanceof Object)) oldVal &#x3D; oldVal.join(&#x27;, &#x27;);
+      else if (oldVal) oldVal &#x3D; this.toReadableObjectValue(oldVal);
+      if (newVal &amp;&amp; !(newVal[0] instanceof Object)) newVal &#x3D; newVal.join(&#x27;, &#x27;);
+      else if (newVal) newVal &#x3D; this.toReadableObjectValue(newVal);
+    }
+
+    switch (change.type) {
+      case &#x27;remove&#x27;:
+      case &#x27;add&#x27;:
+        return &#x60;
+          &lt;p&gt;
+            &lt;span class&#x3D;&quot;${change.type}-field&quot;&gt;
+            ${translations[change.type]}
+            &lt;/span&gt;
+            &lt;b&gt; ${change.displayName} &lt;/b&gt;
+            ${translations.withValue}
+            &lt;b&gt; ${change.type &#x3D;&#x3D;&#x3D; &#x27;add&#x27; ? newVal : oldVal}&lt;/b&gt;
+          &lt;p&gt;
+          &#x60;;
+      case &#x27;modify&#x27;:
+        return &#x60;
+          &lt;p&gt;
+            &lt;span class&#x3D;&quot;${change.type}-field&quot;&gt;
+            ${translations[change.type]}
+            &lt;/span&gt;
+            &lt;b&gt; ${change.displayName} &lt;/b&gt;
+            ${translations.from}
+            &lt;b&gt; ${oldVal}&lt;/b&gt;
+            ${translations.to}
+            &lt;b&gt; ${newVal}&lt;/b&gt;
+          &lt;p&gt;
+          &#x60;;
+    }
+  }
+
+  /**
+   * Transforms a object in a more readable inline string (or list)
+   *
+   * @param object The object
+   * @returns A &#x27;readable&#x27; version of that object, in which the the format key (value1, value2)
+   */
+  toReadableObjectValue(object: any): any {
+    // base case
+    if (typeof object !&#x3D;&#x3D; &#x27;object&#x27;) return object;
+
+    // arrys
+    if (Array.isArray(object)) {
+      return object.map((elem) &#x3D;&gt; this.toReadableObjectValue(elem));
+    }
+
+    // objects - non arrays
+    const res: any[] &#x3D; [];
+    const keys &#x3D; Object.keys(object);
+    keys.forEach((key, i) &#x3D;&gt; {
+      res.push(
+        &#x60;${i ? &#x27; &#x27; : &#x27;&#x27;}${key} (${this.toReadableObjectValue(object[key])})&#x60;
+      );
+    });
+
+    return res;
+  }
+
+  /**
+   * Display a modal to show previous version, and revert to it if user accepts.
+   *
+   * @param version The version to revert
+   */
+  onRevert(version: any): void {
+    const dialogRef &#x3D; this.dialog.open(SafeRecordModalComponent, {
+      data: {
+        recordId: this.id,
+        compareTo: this.history.find((item) &#x3D;&gt; item.version?.id &#x3D;&#x3D;&#x3D; version.id)
+          ?.version,
+        template: this.template,
+      },
+      autoFocus: false,
+    });
+    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+      if (value) {
+        this.revert(version);
+      }
+    });
+  }
+
+  /**
+   * Clears the date filter, empties it
+   */
+  clearDateFilter(): void {
+    this.filtersDate.startDate &#x3D; &#x27;&#x27;;
+    this.filtersDate.endDate &#x3D; &#x27;&#x27;;
+    this.filterHistory &#x3D; this.history;
+    this.startDate.value &#x3D; &#x27;&#x27;;
+    this.endDate.value &#x3D; &#x27;&#x27;;
+  }
+
+  /**
+   * Triggers when the selected date and field filters are changed
+   * and filters the history accordingly
+   *
+   * @param filterField the name of the field being filtered, if any
+   */
+  applyFilter(filterField?: string): void {
+    // undefined &#x3D;&gt; function called from date change
+    // null &#x3D;&gt; &#x27;All fields&#x27; selected
+    // other &#x3D;&gt; Field name for filter
+    if (filterField !&#x3D;&#x3D; undefined) this.filterField &#x3D; filterField || null;
+
+    const startDate &#x3D; this.filtersDate.startDate
+      ? new Date(this.filtersDate.startDate)
+      : undefined;
+    if (startDate) startDate.setHours(0, 0, 0, 0);
+    const endDate &#x3D; this.filtersDate.endDate
+      ? new Date(this.filtersDate.endDate)
+      : undefined;
+    if (endDate) endDate.setHours(23, 59, 59, 99);
+
+    // filtering by date
+    this.filterHistory &#x3D; this.history.filter((item) &#x3D;&gt; {
+      const createdAt &#x3D; new Date(item.createdAt);
+      return (
+        !startDate ||
+        !endDate ||
+        (createdAt &gt;&#x3D; startDate &amp;&amp; createdAt &lt;&#x3D; endDate)
+      );
+    });
+
+    // filtering by field
+    if (this.filterField !&#x3D;&#x3D; null) {
+      this.filterHistory &#x3D; this.filterHistory
+        .filter(
+          (item) &#x3D;&gt;
+            !!item.changes.find((change) &#x3D;&gt; this.filterField &#x3D;&#x3D;&#x3D; change.field)
+        )
+        .map((item) &#x3D;&gt; {
+          const newItem &#x3D; Object.assign({}, item);
+          newItem.changes &#x3D; item.changes.filter(
+            (change) &#x3D;&gt; change.field &#x3D;&#x3D;&#x3D; this.filterField
+          );
+          return newItem;
+        });
+    }
+  }
+
+  /**
+   * Handle the download event. Send a request to the server to get excel / csv file.
+   *
+   * @param type Type of document to download
+   */
+  onDownload(type: string): void {
+    const path &#x3D; &#x60;download/form/records/${this.id}/history&#x60;;
+    const queryString &#x3D; new URLSearchParams({
+      type,
+      from: &#x60;${new Date(this.filtersDate.startDate).getTime()}&#x60;,
+      to: &#x60;${new Date(this.filtersDate.endDate).getTime()}&#x60;,
+      lng: this.translate.currentLang,
+      dateLocale: this.dateFormat.currentLang,
+      ...(this.filterField &amp;&amp; { field: this.filterField }),
+    }).toString();
+    this.downloadService.getFile(
+      &#x60;${path}?${queryString}&#x60;,
+      &#x60;text/${type};charset&#x3D;utf-8;&#x60;,
+      &#x60;${this.fileName}.${type}&#x60;
+    );
+  }
+
+  /**
+   * Parses the structure of the record and sorts the fields
+   * based on their names or lables, if available
+   *
+   * @param fields Array of fields
+   * @returns sorted array of fields
+   */
+  sortFields(fields: any[]) {
+    const unsortedFields &#x3D; [...fields];
+    return unsortedFields.sort((a, b) &#x3D;&gt; {
+      const compA: string &#x3D; a.title || a.name;
+      const compB: string &#x3D; b.title || b.name;
+      return compA.toLowerCase() &gt; compB.toLowerCase() ? 1 : -1;
+    });
+  }
+
+  /**
+   * Get fields from the form
+   *
+   * @returns Returns an array with all the fields.
+   */
+  private getFields(): any[] {
+    const fields: any[] &#x3D; [];
+    // No form, break the display
+    if (this.record.form) {
+      // Take the fields from the form
+      this.record.form.fields?.map((field: any) &#x3D;&gt; {
+        fields.push(Object.assign({}, field));
+      });
+      if (this.record.form.structure) {
+        const structure &#x3D; JSON.parse(this.record.form.structure);
+        if (!structure.pages || !structure.pages.length) {
+          return [];
+        }
+        for (const page of structure.pages) {
+          this.extractFields(page, fields);
+        }
+      }
+    }
+    return fields;
+  }
+
+  /**
+   * Extract fields from form structure in order to get titles.
+   *
+   * @param object Structure to inspect, can be a page, a panel.
+   * @param fields Array of fields.
+   */
+  private extractFields(object: any, fields: any[]): void {
+    if (object.elements) {
+      for (const element of object.elements) {
+        if (element.type &#x3D;&#x3D;&#x3D; &#x27;panel&#x27;) {
+          this.extractFields(element, fields);
+        } else {
+          const field &#x3D; fields.find((x) &#x3D;&gt; x.name &#x3D;&#x3D;&#x3D; element.name);
+          if (field &amp;&amp; element.title) {
+            if (typeof element.title &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+              field.title &#x3D; element.title;
+            } else {
+              field.title &#x3D; element.title.default;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;history-header&quot;&gt;
+  &lt;!-- HEADER --&gt;
+  &lt;div class&#x3D;&quot;flex justify-between items-center mb-2&quot;&gt;
+    &lt;h2&gt;{{ &#x27;common.history&#x27; | translate }}&lt;/h2&gt;
+    &lt;safe-button
+      [isIcon]&#x3D;&quot;true&quot;
+      icon&#x3D;&quot;close&quot;
+      style&#x3D;&quot;float: right&quot;
+      (click)&#x3D;&quot;onCancel()&quot;
+    &gt;
+    &lt;/safe-button&gt;
+  &lt;/div&gt;
+  &lt;!-- FILTER --&gt;
+  &lt;div style&#x3D;&quot;clear: both; display: flex; flex-direction: column&quot;&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-date-range-input
+        (click)&#x3D;&quot;rangePicker.open()&quot;
+        [rangePicker]&#x3D;&quot;rangePicker&quot;
+      &gt;
+        &lt;input
+          #startDate
+          (dateInput)&#x3D;&quot;filtersDate[&#x27;startDate&#x27;] &#x3D; $event.value&quot;
+          matStartDate
+          placeholder&#x3D;&quot;Start date&quot;
+          readonly
+        /&gt;
+        &lt;input
+          #endDate
+          (dateInput)&#x3D;&quot;filtersDate[&#x27;endDate&#x27;] &#x3D; $event.value&quot;
+          matEndDate
+          placeholder&#x3D;&quot;End date&quot;
+          readonly
+        /&gt;
+      &lt;/mat-date-range-input&gt;
+      &lt;mat-datepicker-toggle
+        matSuffix
+        [for]&#x3D;&quot;rangePicker&quot;
+      &gt;&lt;/mat-datepicker-toggle&gt;
+      &lt;mat-date-range-picker #rangePicker&gt;
+        &lt;mat-date-range-picker-actions&gt;
+          &lt;safe-button matDateRangePickerCancel (click)&#x3D;&quot;clearDateFilter()&quot;&gt;{{
+            &#x27;common.clear&#x27; | translate
+          }}&lt;/safe-button&gt;
+          &lt;safe-button
+            category&#x3D;&quot;secondary&quot;
+            variant&#x3D;&quot;primary&quot;
+            matDateRangePickerApply
+            (click)&#x3D;&quot;applyFilter()&quot;
+            &gt;{{ &#x27;common.filter.apply&#x27; | translate }}&lt;/safe-button
+          &gt;
+        &lt;/mat-date-range-picker-actions&gt;
+      &lt;/mat-date-range-picker&gt;
+    &lt;/mat-form-field&gt;
+    &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+      &lt;mat-label&gt;{{ &#x27;components.history.field.select&#x27; | translate }}&lt;/mat-label&gt;
+      &lt;mat-select
+        (selectionChange)&#x3D;&quot;applyFilter($event.value)&quot;
+        [value]&#x3D;&quot;filterField&quot;
+      &gt;
+        &lt;mat-option value&#x3D;&quot;&quot;&gt;{{
+          &#x27;components.history.field.all&#x27; | translate
+        }}&lt;/mat-option&gt;
+        &lt;mat-option
+          *ngFor&#x3D;&quot;let field of sortedFields&quot;
+          value&#x3D;&quot;{{ field.name }}&quot;
+          &gt;{{ field.title || field.name }}&lt;/mat-option
+        &gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/div&gt;
+  &lt;!-- ACTIONS --&gt;
+  &lt;div class&#x3D;&quot;actions&quot;&gt;
+    &lt;safe-button
+      category&#x3D;&quot;secondary&quot;
+      variant&#x3D;&quot;primary&quot;
+      [matMenuTriggerFor]&#x3D;&quot;menu&quot;
+    &gt;
+      {{ &#x27;components.history.download&#x27; | translate }}
+    &lt;/safe-button&gt;
+    &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;onDownload(&#x27;csv&#x27;)&quot;&gt;.csv&lt;/button&gt;
+      &lt;button mat-menu-item (click)&#x3D;&quot;onDownload(&#x27;xlsx&#x27;)&quot;&gt;.xlsx&lt;/button&gt;
+    &lt;/mat-menu&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- LOADING --&gt;
+&lt;div class&#x3D;&quot;history-container&quot; *ngIf&#x3D;&quot;loading&quot;&gt;
+  &lt;ng-container *ngFor&#x3D;&quot;let _ of [].constructor(4)&quot;&gt;
+    &lt;mat-expansion-panel closed&gt;
+      &lt;mat-expansion-panel-header&gt;
+        &lt;mat-panel-title&gt;
+          &lt;kendo-skeleton width&#x3D;&quot;50%&quot;&gt;&lt;/kendo-skeleton&gt;
+          &lt;kendo-skeleton
+            class&#x3D;&quot;history-user&quot;
+            width&#x3D;&quot;30%&quot;
+            height&#x3D;&quot;2em&quot;
+          &gt;&lt;/kendo-skeleton&gt;
+        &lt;/mat-panel-title&gt;
+      &lt;/mat-expansion-panel-header&gt;
+    &lt;/mat-expansion-panel&gt;
+  &lt;/ng-container&gt;
+&lt;/div&gt;
+&lt;!-- HISTORY CHANGES --&gt;
+&lt;div class&#x3D;&quot;history-container&quot; *ngIf&#x3D;&quot;!loading&quot;&gt;
+  &lt;ng-container *ngFor&#x3D;&quot;let item of filterHistory&quot;&gt;
+    &lt;mat-expansion-panel (closed)&#x3D;&quot;showMore &#x3D; false&quot;&gt;
+      &lt;mat-expansion-panel-header&gt;
+        &lt;mat-panel-title&gt;
+          &lt;span class&#x3D;&quot;history-date&quot;&gt;{{
+            item.createdAt | safeDate: &#x27;shortDate&#x27;
+          }}&lt;/span&gt;
+          {{ item.createdAt | safeDate: &#x27;shortTime&#x27; }}
+          &lt;span class&#x3D;&quot;history-user&quot; *ngIf&#x3D;&quot;item.createdBy&quot;&gt;{{
+            item.createdBy
+          }}&lt;/span&gt;
+        &lt;/mat-panel-title&gt;
+      &lt;/mat-expansion-panel-header&gt;
+
+      &lt;ng-template matExpansionPanelContent&gt;
+        &lt;div
+          class&#x3D;&quot;changes-content&quot;
+          *ngFor&#x3D;&quot;
+            let value of showMore ? item.changes : item.changes.slice(0, 4)
+          &quot;
+          [innerHTML]&#x3D;&quot;getHTMLFromChange(value)&quot;
+        &gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;full-history&quot;&gt;
+          &lt;safe-button
+            variant&#x3D;&quot;primary&quot;
+            *ngIf&#x3D;&quot;!showMore &amp;&amp; item.changes.length &gt; 4&quot;
+            (click)&#x3D;&quot;showMore &#x3D; true&quot;
+            &gt;{{ &#x27;common.pagination.loadMore&#x27; | translate }} ({{
+              item.changes.length - 4
+            }})&lt;/safe-button
+          &gt;
+        &lt;/div&gt;
+        &lt;safe-button
+          icon&#x3D;&quot;update&quot;
+          class&#x3D;&quot;revert-icon&quot;
+          (click)&#x3D;&quot;onRevert(item.version)&quot;
+          *ngIf&#x3D;&quot;item.version&quot;
+        &gt;
+          {{ &#x27;components.history.preview&#x27; | translate }}
+        &lt;/safe-button&gt;
+      &lt;/ng-template&gt;
+    &lt;/mat-expansion-panel&gt;
+  &lt;/ng-container&gt;
+  &lt;safe-empty
+    *ngIf&#x3D;&quot;filterHistory.length &#x3D;&#x3D;&#x3D; 0&quot;
+    [title]&#x3D;&quot;&#x27;components.history.empty&#x27; | translate&quot;
+  &gt;&lt;/safe-empty&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./record-history.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 328px;
+}
+
+.history-header {
+  align-items: center;
+  padding: 16px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+  h2 {
+    float: left;
+    margin-bottom: unset;
+  }
+}
+
+.history-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.history-user {
+  background-color: #b2c9eb;
+  border-radius: 10px;
+  padding: 4px;
+  margin-left: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+}
+
+::ng-deep .modify-field,
+::ng-deep .add-field,
+::ng-deep .remove-field {
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 0.5em;
+}
+
+::ng-deep .modify-field {
+  background-color: #e8ddb8;
+}
+
+::ng-deep .add-field {
+  background-color: #b2ebbf;
+}
+
+::ng-deep .remove-field {
+  background-color: #ebb2b2;
+}
+
+.changes-content {
+  margin-top: 0.7rem;
+}
+
+mat-expansion-panel {
+  box-shadow: none !important;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+}
+
+.mat-expansion-panel-header-title {
+  align-items: center;
+  font-size: 14px;
+}
+
+::ng-deep p {
+  line-height: 2;
+}
+
+.history-date {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.revert-icon {
+  float: right;
+}
+
+.full-history {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  text-align: end;
+  margin-left: auto;
+}
+
+safe-empty {
+  margin: auto;
+  padding: 24px 0;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="history-header">  <!-- HEADER -->  <div class="flex justify-between items-center mb-2">    <h2>{{ \'common.history\' | translate }}</h2>    <safe-button      [isIcon]="true"      icon="close"      style="float: right"      (click)="onCancel()"    >    </safe-button>  </div>  <!-- FILTER -->  <div style="clear: both; display: flex; flex-direction: column">    <mat-form-field appearance="outline">      <mat-date-range-input        (click)="rangePicker.open()"        [rangePicker]="rangePicker"      >        <input          #startDate          (dateInput)="filtersDate[\'startDate\'] = $event.value"          matStartDate          placeholder="Start date"          readonly        />        <input          #endDate          (dateInput)="filtersDate[\'endDate\'] = $event.value"          matEndDate          placeholder="End date"          readonly        />      </mat-date-range-input>      <mat-datepicker-toggle        matSuffix        [for]="rangePicker"      ></mat-datepicker-toggle>      <mat-date-range-picker #rangePicker>        <mat-date-range-picker-actions>          <safe-button matDateRangePickerCancel (click)="clearDateFilter()">{{            \'common.clear\' | translate          }}</safe-button>          <safe-button            category="secondary"            variant="primary"            matDateRangePickerApply            (click)="applyFilter()"            >{{ \'common.filter.apply\' | translate }}</safe-button          >        </mat-date-range-picker-actions>      </mat-date-range-picker>    </mat-form-field>    <mat-form-field appearance="outline">      <mat-label>{{ \'components.history.field.select\' | translate }}</mat-label>      <mat-select        (selectionChange)="applyFilter($event.value)"        [value]="filterField"      >        <mat-option value="">{{          \'components.history.field.all\' | translate        }}</mat-option>        <mat-option          *ngFor="let field of sortedFields"          value="{{ field.name }}"          >{{ field.title || field.name }}</mat-option        >      </mat-select>    </mat-form-field>  </div>  <!-- ACTIONS -->  <div class="actions">    <safe-button      category="secondary"      variant="primary"      [matMenuTriggerFor]="menu"    >      {{ \'components.history.download\' | translate }}    </safe-button>    <mat-menu #menu="matMenu">      <button mat-menu-item (click)="onDownload(\'csv\')">.csv</button>      <button mat-menu-item (click)="onDownload(\'xlsx\')">.xlsx</button>    </mat-menu>  </div></div><!-- LOADING --><div class="history-container" *ngIf="loading">  <ng-container *ngFor="let _ of [].constructor(4)">    <mat-expansion-panel closed>      <mat-expansion-panel-header>        <mat-panel-title>          <kendo-skeleton width="50%"></kendo-skeleton>          <kendo-skeleton            class="history-user"            width="30%"            height="2em"          ></kendo-skeleton>        </mat-panel-title>      </mat-expansion-panel-header>    </mat-expansion-panel>  </ng-container></div><!-- HISTORY CHANGES --><div class="history-container" *ngIf="!loading">  <ng-container *ngFor="let item of filterHistory">    <mat-expansion-panel (closed)="showMore = false">      <mat-expansion-panel-header>        <mat-panel-title>          <span class="history-date">{{            item.createdAt | safeDate: \'shortDate\'          }}</span>          {{ item.createdAt | safeDate: \'shortTime\' }}          <span class="history-user" *ngIf="item.createdBy">{{            item.createdBy          }}</span>        </mat-panel-title>      </mat-expansion-panel-header>      <ng-template matExpansionPanelContent>        <div          class="changes-content"          *ngFor="            let value of showMore ? item.changes : item.changes.slice(0, 4)          "          [innerHTML]="getHTMLFromChange(value)"        ></div>        <div class="full-history">          <safe-button            variant="primary"            *ngIf="!showMore && item.changes.length > 4"            (click)="showMore = true"            >{{ \'common.pagination.loadMore\' | translate }} ({{              item.changes.length - 4            }})</safe-button          >        </div>        <safe-button          icon="update"          class="revert-icon"          (click)="onRevert(item.version)"          *ngIf="item.version"        >          {{ \'components.history.preview\' | translate }}        </safe-button>      </ng-template>    </mat-expansion-panel>  </ng-container>  <safe-empty    *ngIf="filterHistory.length === 0"    [title]="\'components.history.empty\' | translate"  ></safe-empty></div></div>'
+    var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'DistributionListsComponent', 'selector': 'safe-distribution-lists'},{'name': 'EditDistributionListModalComponent', 'selector': 'safe-edit-distribution-list-modal'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddCardComponent', 'selector': 'safe-add-card'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAggregationGridComponent', 'selector': 'safe-aggregation-grid'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDistributionListsComponent', 'selector': 'safe-application-distribution-lists'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeCardModalComponent', 'selector': 'safe-card-modal'},{'name': 'SafeCardTemplateComponent', 'selector': 'safe-card-template'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDataSourceTabComponent', 'selector': 'safe-data-source-tab'},{'name': 'SafeDisplayTabComponent', 'selector': 'safe-display-tab'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditCalculatedFieldModalComponent', 'selector': 'safe-edit-calculated-field-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafePreviewTabComponent', 'selector': 'safe-preview-tab'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeSummaryCardComponent', 'selector': 'safe-summary-card'},{'name': 'SafeSummaryCardSettingsComponent', 'selector': 'safe-summary-card-settings'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTextEditorTabComponent', 'selector': 'safe-text-editor-tab'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeValueSelectorTabComponent', 'selector': 'safe-value-selector-tab'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'SummaryCardItemComponent', 'selector': 'safe-summary-card-item'},{'name': 'SummaryCardItemContentComponent', 'selector': 'safe-summary-card-item-content'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
+    var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
+    var ACTUAL_COMPONENT = {'name': 'SafeRecordHistoryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SafeRecordHistoryComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
