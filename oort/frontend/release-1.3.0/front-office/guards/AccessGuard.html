@@ -114,7 +114,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">projects/front-office/src/app/guards/access.guard.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">projects/front-office/src/app/guards/access.guard.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -193,15 +193,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>canActivate(route: <a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank">ActivatedRouteSnapshot</a>, state: <a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank">RouterStateSnapshot</a>)</code>
+<code>canActivate()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">projects/front-office/src/app/guards/access.guard.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">projects/front-office/src/app/guards/access.guard.ts:28</a></div>
                 </td>
             </tr>
 
@@ -212,54 +212,6 @@
 Passes if the user is authenticated.</p>
 </div>
 
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>route</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Current route</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>state</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Current state</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     <div>
                     </div>
                     <div class="io-description">
@@ -280,13 +232,7 @@ Passes if the user is authenticated.</p>
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
             <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import {
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  UrlTree,
-  Router,
-} from &#x27;@angular/router&#x27;;
+import { CanActivate, UrlTree, Router } from &#x27;@angular/router&#x27;;
 import { SafeAuthService } from &#x27;@safe/builder&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { map } from &#x27;rxjs/operators&#x27;;
@@ -310,14 +256,9 @@ export class AccessGuard implements CanActivate {
    * Defines the logic of the guard.
    * Passes if the user is authenticated.
    *
-   * @param route Current route
-   * @param state Current state
    * @returns Can the user continue navigation
    */
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ):
+  canActivate():
     | Observable&lt;boolean | UrlTree&gt;
     | Promise&lt;boolean | UrlTree&gt;
     | boolean
