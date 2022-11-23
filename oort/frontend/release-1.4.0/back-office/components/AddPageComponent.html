@@ -1,0 +1,1855 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>oort-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">oort-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  AddPageComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/back-office/src/app/application/pages/add-page/add-page.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Add page component.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-add-page</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./add-page.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./add-page.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#authSubscription" >authSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#canCreateForm" >canCreateForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#contentTypes" >contentTypes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#forms" >forms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#forms$" >forms$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#formSelect" >formSelect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#formsQuery" >formsQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loadingMore" >loadingMore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pageForm" >pageForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#pageInfo" >pageInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#step" >step</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fetchMoreForms" >fetchMoreForms</a>
+                            </li>
+                            <li>
+                                <a href="#isStepValid" >isStepValid</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onAdd" >onAdd</a>
+                            </li>
+                            <li>
+                                <a href="#onBack" >onBack</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onFilterDataSource" >onFilterDataSource</a>
+                            </li>
+                            <li>
+                                <a href="#onNext" >onNext</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onScrollDataSource" >onScrollDataSource</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, apollo: Apollo, applicationService: SafeApplicationService, dialog: MatDialog, snackBar: SafeSnackBarService, authService: SafeAuthService, translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Add page component</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular form builder</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>apollo</td>
+                                                  
+                                                        <td>
+                                                                    <code>Apollo</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Apollo service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>applicationService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeApplicationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared application service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Material dialog service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeSnackBarService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared snackbar service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                    <code>SafeAuthService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Shared authentication service</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Angular translate service</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchMoreForms"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>fetchMoreForms</b></span>
+                        <a href="#fetchMoreForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchMoreForms(nextPage: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, filter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="265"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:265</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches more forms using filtering and pagination.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nextPage</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>boolean to indicate if we must fetch the next page.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the forms fetched must respect this filter</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isStepValid"></a>
+                    <span class="name">
+                        <span ><b>isStepValid</b></span>
+                        <a href="#isStepValid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isStepValid(step: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:122</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if step is valid or not</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>step</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>step index</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>is step valid</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:229</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAdd"></a>
+                    <span class="name">
+                        <span ><b>onAdd</b></span>
+                        <a href="#onAdd"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAdd()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a new form.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onBack"></a>
+                    <span class="name">
+                        <span ><b>onBack</b></span>
+                        <a href="#onBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onBack()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:146</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Go to previous step.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFilterDataSource"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onFilterDataSource</b></span>
+                        <a href="#onFilterDataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onFilterDataSource(filter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="252"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:252</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters forms by name</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>string used to filter.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onNext"></a>
+                    <span class="name">
+                        <span ><b>onNext</b></span>
+                        <a href="#onNext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onNext()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Go to next step.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onScrollDataSource"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>onScrollDataSource</b></span>
+                        <a href="#onScrollDataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onScrollDataSource(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="240"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:240</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetches next page of forms to add to list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>boolean that decides wether a next page of forms should be fetched</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:139</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Submit form to application service for creation</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authSubscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>authSubscription</b></span>
+                        <a href="#authSubscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canCreateForm"></a>
+                    <span class="name">
+                        <span ><b>canCreateForm</b></span>
+                        <a href="#canCreateForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contentTypes"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>contentTypes</b></span>
+                        <a href="#contentTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>CONTENT_TYPES</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">Material dialog service</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="forms"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>forms</b></span>
+                        <a href="#forms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;Form[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="forms$"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>forms$</b></span>
+                        <a href="#forms$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;Form[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formSelect"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>formSelect</b></span>
+                        <a href="#formSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatSelect</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;formSelect&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formsQuery"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>formsQuery</b></span>
+                        <a href="#formsQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>QueryRef&lt;GetFormsQueryResponse&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadingMore"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loadingMore</b></span>
+                        <a href="#loadingMore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageForm"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>pageForm</b></span>
+                        <a href="#pageForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({})</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageInfo"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>pageInfo</b></span>
+                        <a href="#pageInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="step"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>step</b></span>
+                        <a href="#step"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/back-office/src/app/application/pages/add-page/add-page.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Apollo, QueryRef } from &#x27;apollo-angular&#x27;;
+import { Component, OnDestroy, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import {
+  ContentType,
+  CONTENT_TYPES,
+  Form,
+  Permissions,
+  SafeApplicationService,
+  SafeAuthService,
+  SafeSnackBarService,
+} from &#x27;@safe/builder&#x27;;
+import { BehaviorSubject, Observable, Subscription } from &#x27;rxjs&#x27;;
+import { AddFormModalComponent } from &#x27;../../../components/add-form-modal/add-form-modal.component&#x27;;
+import { AddFormMutationResponse, ADD_FORM } from &#x27;./graphql/mutations&#x27;;
+import { GET_FORMS, GetFormsQueryResponse } from &#x27;./graphql/queries&#x27;;
+import { MatSelect } from &#x27;@angular/material/select&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+
+/**
+ * Number of items per page.
+ */
+const ITEMS_PER_PAGE &#x3D; 10;
+
+/**
+ * Add page component.
+ */
+@Component({
+  selector: &#x27;app-add-page&#x27;,
+  templateUrl: &#x27;./add-page.component.html&#x27;,
+  styleUrls: [&#x27;./add-page.component.scss&#x27;],
+})
+export class AddPageComponent implements OnInit, OnDestroy {
+  // &#x3D;&#x3D;&#x3D; DATA &#x3D;&#x3D;&#x3D;
+  public contentTypes &#x3D; CONTENT_TYPES;
+  private forms &#x3D; new BehaviorSubject&lt;Form[]&gt;([]);
+  public forms$!: Observable&lt;Form[]&gt;;
+  private formsQuery!: QueryRef&lt;GetFormsQueryResponse&gt;;
+  private pageInfo &#x3D; {
+    endCursor: &#x27;&#x27;,
+    hasNextPage: true,
+  };
+  private loading &#x3D; true;
+  public loadingMore &#x3D; false;
+
+  @ViewChild(&#x27;formSelect&#x27;) formSelect?: MatSelect;
+
+  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
+  public pageForm: FormGroup &#x3D; new FormGroup({});
+  public step &#x3D; 1;
+
+  // &#x3D;&#x3D;&#x3D; PERMISSIONS &#x3D;&#x3D;&#x3D;
+  canCreateForm &#x3D; false;
+  private authSubscription?: Subscription;
+
+  /**
+   * Add page component
+   *
+   * @param formBuilder Angular form builder
+   * @param apollo Apollo service
+   * @param applicationService Shared application service
+   * @param dialog Material dialog service
+   * @param snackBar Shared snackbar service
+   * @param authService Shared authentication service
+   * @param translate Angular translate service
+   */
+  constructor(
+    private formBuilder: FormBuilder,
+    private apollo: Apollo,
+    private applicationService: SafeApplicationService,
+    public dialog: MatDialog,
+    private snackBar: SafeSnackBarService,
+    private authService: SafeAuthService,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit(): void {
+    this.pageForm &#x3D; this.formBuilder.group({
+      type: [&#x27;&#x27;, Validators.required],
+      content: [&#x27;&#x27;],
+      newForm: [false],
+    });
+    this.pageForm.get(&#x27;type&#x27;)?.valueChanges.subscribe((type) &#x3D;&gt; {
+      const contentControl &#x3D; this.pageForm.controls.content;
+      if (type &#x3D;&#x3D;&#x3D; ContentType.form) {
+        this.formsQuery &#x3D; this.apollo.watchQuery&lt;GetFormsQueryResponse&gt;({
+          query: GET_FORMS,
+          variables: {
+            first: ITEMS_PER_PAGE,
+          },
+        });
+
+        this.forms$ &#x3D; this.forms.asObservable();
+        this.formsQuery.valueChanges.subscribe((res) &#x3D;&gt; {
+          this.forms.next(res.data.forms.edges.map((x) &#x3D;&gt; x.node));
+          this.pageInfo &#x3D; res.data.forms.pageInfo;
+          this.loadingMore &#x3D; res.loading;
+        });
+        contentControl.setValidators([Validators.required]);
+        contentControl.updateValueAndValidity();
+      } else {
+        contentControl.setValidators(null);
+        contentControl.setValue(null);
+        contentControl.updateValueAndValidity();
+      }
+      this.onNext();
+    });
+    this.authSubscription &#x3D; this.authService.user.subscribe(() &#x3D;&gt; {
+      this.canCreateForm &#x3D; this.authService.userHasClaim(
+        Permissions.canCreateForms
+      );
+    });
+  }
+
+  /**
+   * Check if step is valid or not
+   *
+   * @param step step index
+   * @returns is step valid
+   */
+  isStepValid(step: number): boolean {
+    switch (step) {
+      case 1: {
+        return this.pageForm.controls.type.valid;
+      }
+      case 2: {
+        return this.pageForm.controls.content.valid;
+      }
+      default: {
+        return true;
+      }
+    }
+  }
+
+  /**
+   * Submit form to application service for creation
+   */
+  onSubmit(): void {
+    this.applicationService.addPage(this.pageForm.value);
+  }
+
+  /**
+   * Go to previous step.
+   */
+  onBack(): void {
+    this.step -&#x3D; 1;
+  }
+
+  /**
+   * Go to next step.
+   */
+  onNext(): void {
+    switch (this.step) {
+      case 1: {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        this.pageForm.controls.type.value &#x3D;&#x3D;&#x3D; ContentType.form
+          ? (this.step +&#x3D; 1)
+          : this.onSubmit();
+        break;
+      }
+      case 2: {
+        this.onSubmit();
+        break;
+      }
+      default: {
+        this.step +&#x3D; 1;
+        break;
+      }
+    }
+  }
+
+  /**
+   * Add a new form.
+   */
+  onAdd(): void {
+    const dialogRef &#x3D; this.dialog.open(AddFormModalComponent);
+    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+      if (value) {
+        const data &#x3D; { name: value.name };
+        Object.assign(
+          data,
+          value.resource &amp;&amp; { resource: value.resource },
+          value.template &amp;&amp; { template: value.template }
+        );
+        this.apollo
+          .mutate&lt;AddFormMutationResponse&gt;({
+            mutation: ADD_FORM,
+            variables: data,
+          })
+          .subscribe(
+            (res) &#x3D;&gt; {
+              if (res.errors) {
+                this.snackBar.openSnackBar(
+                  this.translate.instant(
+                    &#x27;common.notifications.objectNotCreated&#x27;,
+                    {
+                      type: this.translate
+                        .instant(&#x27;common.form.one&#x27;)
+                        .toLowerCase(),
+                      error: res.errors[0].message,
+                    }
+                  ),
+                  { error: true }
+                );
+              } else {
+                const id &#x3D; res.data?.addForm.id || &#x27;&#x27;;
+                this.pageForm.controls.content.setValue(id);
+                this.snackBar.openSnackBar(
+                  this.translate.instant(&#x27;common.notifications.objectCreated&#x27;, {
+                    type: this.translate
+                      .instant(&#x27;common.page.one&#x27;)
+                      .toLowerCase(),
+                    value: value.name,
+                  })
+                );
+
+                this.onSubmit();
+              }
+            },
+            (err) &#x3D;&gt; {
+              this.snackBar.openSnackBar(err.message, { error: true });
+            }
+          );
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.authSubscription) {
+      this.authSubscription.unsubscribe();
+    }
+  }
+
+  /**
+   * Fetches next page of forms to add to list.
+   *
+   * @param value boolean that decides wether a next page of forms should be fetched
+   */
+  public onScrollDataSource(value: boolean): void {
+    if (!this.loadingMore &amp;&amp; this.pageInfo.hasNextPage) {
+      this.loadingMore &#x3D; true;
+      this.fetchMoreForms(value);
+    }
+  }
+
+  /**
+   * Filters forms by name
+   *
+   * @param filter string used to filter.
+   */
+  public onFilterDataSource(filter: string): void {
+    if (!this.loadingMore) {
+      this.loadingMore &#x3D; true;
+      this.fetchMoreForms(false, filter);
+    }
+  }
+
+  /**
+   * Fetches more forms using filtering and pagination.
+   *
+   * @param nextPage boolean to indicate if we must fetch the next page.
+   * @param filter the forms fetched must respect this filter
+   */
+  public fetchMoreForms(nextPage: boolean &#x3D; false, filter: string &#x3D; &#x27;&#x27;) {
+    const variables: any &#x3D; {
+      first: ITEMS_PER_PAGE,
+    };
+    variables.filter &#x3D; {
+      logic: &#x27;and&#x27;,
+      filters: [
+        {
+          field: &#x27;name&#x27;,
+          operator: &#x27;contains&#x27;,
+          value: filter,
+        },
+      ],
+    };
+    if (nextPage) {
+      variables.afterCursor &#x3D; this.pageInfo.endCursor;
+    }
+    this.formsQuery.fetchMore({
+      variables,
+      updateQuery: (prev, { fetchMoreResult }) &#x3D;&gt; {
+        if (!fetchMoreResult) {
+          return prev;
+        }
+        return Object.assign({}, prev, {
+          forms: {
+            edges: prev.forms.edges.concat(
+              fetchMoreResult.forms.edges.filter(
+                (x) &#x3D;&gt; !prev.forms.edges.some((y) &#x3D;&gt; y.node.id &#x3D;&#x3D;&#x3D; x.node.id)
+              )
+            ),
+            pageInfo: fetchMoreResult.forms.pageInfo,
+            totalCount: fetchMoreResult.forms.totalCount,
+          },
+        });
+      },
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form [formGroup]&#x3D;&quot;pageForm&quot;&gt;
+  &lt;div class&#x3D;&quot;flex flex-col items-center&quot; [ngSwitch]&#x3D;&quot;step&quot;&gt;
+    &lt;!-- Selection of type of content --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;1&quot;&gt;
+      &lt;h2&gt;{{ &#x27;pages.application.addPage.selectType&#x27; | translate }}&lt;/h2&gt;
+      &lt;safe-content-choice
+        formControlName&#x3D;&quot;type&quot;
+        [contentTypes]&#x3D;&quot;contentTypes&quot;
+      &gt;&lt;/safe-content-choice&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- Form selection --&gt;
+    &lt;ng-container *ngSwitchCase&#x3D;&quot;2&quot;&gt;
+      &lt;div class&#x3D;&quot;flex flex-col w-80 items-center&quot;&gt;
+        &lt;!-- Existing form --&gt;
+        &lt;safe-forms-dropdown
+          [forms$]&#x3D;&quot;forms$&quot;
+          [label]&#x3D;&quot;&#x27;models.form.select&#x27; | translate&quot;
+          [sourceControl]&#x3D;&quot;pageForm.controls.content&quot;
+          [loadingMore]&#x3D;&quot;loadingMore&quot;
+          (filter)&#x3D;&quot;onFilterDataSource($event)&quot;
+          (scrolled)&#x3D;&quot;onScrollDataSource($event)&quot;
+        &gt;&lt;/safe-forms-dropdown&gt;
+        &lt;safe-divider [text]&#x3D;&quot;&#x27;or&#x27;&quot;&gt;&lt;/safe-divider&gt;
+        &lt;!-- New form --&gt;
+        &lt;safe-button
+          class&#x3D;&quot;mt-4&quot;
+          icon&#x3D;&quot;add&quot;
+          category&#x3D;&quot;secondary&quot;
+          variant&#x3D;&quot;primary&quot;
+          (click)&#x3D;&quot;onAdd()&quot;
+          [disabled]&#x3D;&quot;!canCreateForm&quot;
+        &gt;
+          {{ &#x27;models.form.create&#x27; | translate }}
+        &lt;/safe-button&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;!-- Actions --&gt;
+&lt;div class&#x3D;&quot;add-page-stepper&quot; *ngIf&#x3D;&quot;step !&#x3D;&#x3D; 1&quot;&gt;
+  &lt;safe-button [disabled]&#x3D;&quot;step &lt;&#x3D; 1&quot; (click)&#x3D;&quot;onBack()&quot;&gt;{{
+    &#x27;common.back&#x27; | translate
+  }}&lt;/safe-button&gt;
+  &lt;safe-button
+    category&#x3D;&quot;secondary&quot;
+    variant&#x3D;&quot;primary&quot;
+    (click)&#x3D;&quot;onNext()&quot;
+    [disabled]&#x3D;&quot;!isStepValid(step)&quot;
+    &gt;{{ &#x27;common.next&#x27; | translate }}&lt;/safe-button
+  &gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./add-page.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.add-page-stepper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 64px;
+
+  button {
+    margin: 0 4px;
+  }
+}
+
+safe-content-choice {
+  margin-top: 32px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form [formGroup]="pageForm">  <div class="flex flex-col items-center" [ngSwitch]="step">    <!-- Selection of type of content -->    <ng-container *ngSwitchCase="1">      <h2>{{ \'pages.application.addPage.selectType\' | translate }}</h2>      <safe-content-choice        formControlName="type"        [contentTypes]="contentTypes"      ></safe-content-choice>    </ng-container>    <!-- Form selection -->    <ng-container *ngSwitchCase="2">      <div class="flex flex-col w-80 items-center">        <!-- Existing form -->        <safe-forms-dropdown          [forms$]="forms$"          [label]="\'models.form.select\' | translate"          [sourceControl]="pageForm.controls.content"          [loadingMore]="loadingMore"          (filter)="onFilterDataSource($event)"          (scrolled)="onScrollDataSource($event)"        ></safe-forms-dropdown>        <safe-divider [text]="\'or\'"></safe-divider>        <!-- New form -->        <safe-button          class="mt-4"          icon="add"          category="secondary"          variant="primary"          (click)="onAdd()"          [disabled]="!canCreateForm"        >          {{ \'models.form.create\' | translate }}        </safe-button>      </div>    </ng-container>  </div></form><!-- Actions --><div class="add-page-stepper" *ngIf="step !== 1">  <safe-button [disabled]="step <= 1" (click)="onBack()">{{    \'common.back\' | translate  }}</safe-button>  <safe-button    category="secondary"    variant="primary"    (click)="onNext()"    [disabled]="!isStepValid(step)"    >{{ \'common.next\' | translate }}</safe-button  ></div></div>'
+    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'CalculatedFieldsTabComponent', 'selector': 'app-calculated-fields-tab'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddPageComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddPageComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
