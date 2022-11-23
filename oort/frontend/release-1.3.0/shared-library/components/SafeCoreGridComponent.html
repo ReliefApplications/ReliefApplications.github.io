@@ -4864,7 +4864,7 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
       .filter((x) &#x3D;&gt; [&#x27;Time&#x27;].includes(x.type))
       .map((x) &#x3D;&gt; x.name);
     items.map((x) &#x3D;&gt; {
-      for (const [key, value] of Object.entries(x)) {
+      for (const [key] of Object.entries(x)) {
         if (dateFields.includes(key) || timeFields.includes(key)) {
           x[key] &#x3D; x[key] &amp;&amp; new Date(x[key]);
           if (timeFields.includes(key)) {
@@ -5433,7 +5433,7 @@ export class SafeCoreGridComponent implements OnInit, OnChanges, OnDestroy {
               version: version.id,
             },
           })
-          .subscribe((res) &#x3D;&gt; {
+          .subscribe(() &#x3D;&gt; {
             this.reloadData();
             this.layoutService.setRightSidenav(null);
             this.snackBar.openSnackBar(

@@ -187,7 +187,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
 import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
 import { Apollo, QueryRef } from &#x27;apollo-angular&#x27;;
-import { get, has, isEqual } from &#x27;lodash&#x27;;
+import { get, isEqual } from &#x27;lodash&#x27;;
 import {
   animate,
   state,
@@ -211,9 +211,7 @@ import {
   EditResourceFieldPermissionMutationResponse,
   EDIT_FULL_RESOURCE_ACCESS,
 } from &#x27;../graphql/mutations&#x27;;
-import { SafeRoleResourceFiltersComponent } from &#x27;./resource-access-filters/resource-access-filters.component&#x27;;
-import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
-import { Permission, ResourceRolePermissions } from &#x27;./permissions.types&#x27;;
+import { Permission } from &#x27;./permissions.types&#x27;;
 
 /** Default page size  */
 const DEFAULT_PAGE_SIZE &#x3D; 10;

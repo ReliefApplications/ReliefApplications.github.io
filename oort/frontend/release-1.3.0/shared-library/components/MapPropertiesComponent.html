@@ -516,7 +516,7 @@ export class MapPropertiesComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit(): void {
     const map &#x3D; this.previewMap.map;
-    map.on(&#x27;zoomend&#x27;, (e: any) &#x3D;&gt; {
+    map.on(&#x27;zoomend&#x27;, () &#x3D;&gt; {
       this.form.get(&#x27;zoom&#x27;)?.setValue(map.getZoom(), { emitEvent: false });
     });
     map.on(&#x27;moveend&#x27;, () &#x3D;&gt; {

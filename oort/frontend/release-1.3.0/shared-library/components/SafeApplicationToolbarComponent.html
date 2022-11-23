@@ -1065,7 +1065,7 @@ export class SafeApplicationToolbarComponent implements OnInit, OnDestroy {
       ),
       confirmColor: &#x27;primary&#x27;,
     });
-    dialogRef.afterClosed().subscribe((value) &#x3D;&gt; {
+    dialogRef.afterClosed().subscribe(() &#x3D;&gt; {
       this.applicationService.lockApplication();
     });
   }

@@ -458,8 +458,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="196"
-                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:196</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:195</a></div>
                 </td>
             </tr>
 
@@ -494,7 +494,7 @@
 
 
                                     <td>
-                                        <p>Weather the cell is edited</p>
+                                        <p>The data of the item</p>
 
                                     </td>
                                 </tr>
@@ -536,8 +536,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="236"
-                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:236</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:235</a></div>
                 </td>
             </tr>
 
@@ -577,8 +577,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="215"
-                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:215</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="214"
+                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:214</a></div>
                 </td>
             </tr>
 
@@ -656,8 +656,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="251"
-                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:251</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="250"
+                            class="link-to-prism">projects/safe/src/lib/components/users/components/invite-users/invite-users.component.ts:250</a></div>
                 </td>
             </tr>
 
@@ -1671,11 +1671,10 @@ export class SafeInviteUsersComponent implements OnInit {
    * Handles cell click events. Creates form group for edition.
    *
    * @param param0 cell click event.
-   * @param param0.isEdited Weather the cell is edited
    * @param param0.dataItem The data of the item
    * @param param0.rowIndex The index of the current row
    */
-  public cellClickHandler({ isEdited, dataItem, rowIndex }: any): void {
+  public cellClickHandler({ dataItem, rowIndex }: any): void {
     if (!this.editionActive) {
       this.formGroup &#x3D; this.createFormGroup(dataItem);
       this.editionActive &#x3D; true;

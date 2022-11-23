@@ -127,7 +127,7 @@ Used by widgets to send request to the back to send emails.</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -248,8 +248,8 @@ Used by widgets to send request to the back to send emails.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="263"
-                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:263</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="262"
+                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:262</a></div>
                 </td>
             </tr>
 
@@ -344,8 +344,8 @@ Used by widgets to send request to the back to send emails.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="172"
-                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:172</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:171</a></div>
                 </td>
             </tr>
 
@@ -554,8 +554,8 @@ or not (optional).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="57"
-                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:57</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:56</a></div>
                 </td>
             </tr>
 
@@ -637,8 +637,8 @@ request body</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="84"
-                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:84</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">projects/safe/src/lib/services/email/email.service.ts:83</a></div>
                 </td>
             </tr>
 
@@ -852,7 +852,6 @@ or not (optional).</p>
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { SafeSnackBarService } from &#x27;../snackbar/snackbar.service&#x27;;
 import { SafeSnackbarSpinnerComponent } from &#x27;../../components/snackbar-spinner/snackbar-spinner.component&#x27;;
-// import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 import { HttpHeaders } from &#x27;@angular/common/http&#x27;;
 import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { SafeEmailPreviewComponent } from &#x27;../../components/email-preview/email-preview.component&#x27;;
@@ -987,7 +986,7 @@ export class SafeEmailService {
         { headers }
       )
       .subscribe(
-        (res) &#x3D;&gt; {
+        () &#x3D;&gt; {
           snackBarRef.instance.data &#x3D; {
             message: this.translate.instant(&#x27;common.notifications.email.sent&#x27;),
             loading: false,

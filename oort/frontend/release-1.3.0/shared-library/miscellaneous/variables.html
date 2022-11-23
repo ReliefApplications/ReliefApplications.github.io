@@ -175,9 +175,6 @@
                             <a href="#COMPLEX_INPUTS" title="projects/safe/src/lib/components/ui/core-grid/grid/grid.stories.ts" ><b>COMPLEX_INPUTS</b>&nbsp;&nbsp;&nbsp;(projects/.../grid.stories.ts)</a>
                         </li>
                         <li>
-                            <a href="#CONFIG" title="projects/safe/src/lib/components/storybook-translate/storybook-translate-module.ts" ><b>CONFIG</b>&nbsp;&nbsp;&nbsp;(projects/.../storybook-translate-module.ts)</a>
-                        </li>
-                        <li>
                             <a href="#contains" title="projects/safe/src/lib/utils/array-filter.ts" ><b>contains</b>&nbsp;&nbsp;&nbsp;(projects/.../array-filter.ts)</a>
                         </li>
                         <li>
@@ -392,12 +389,6 @@
                         </li>
                         <li>
                             <a href="#DEFAULT_OPERATORS" title="projects/safe/src/lib/components/ui/aggregation-builder/pipeline/expressions/operators.ts" ><b>DEFAULT_OPERATORS</b>&nbsp;&nbsp;&nbsp;(projects/.../operators.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#DEFAULT_PAGE_SIZE" title="projects/safe/src/lib/components/role-summary/role-summary.component.ts" ><b>DEFAULT_PAGE_SIZE</b>&nbsp;&nbsp;&nbsp;(projects/.../role-summary.component.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#DEFAULT_PAGE_SIZE" title="projects/safe/src/lib/services/grid-layout/grid-layout.service.ts" ><b>DEFAULT_PAGE_SIZE</b>&nbsp;&nbsp;&nbsp;(projects/.../grid-layout.service.ts)</a>
                         </li>
                         <li>
                             <a href="#DEFAULT_PAGE_SIZE" title="projects/safe/src/lib/components/role-summary/role-resources/role-resources.component.ts" ><b>DEFAULT_PAGE_SIZE</b>&nbsp;&nbsp;&nbsp;(projects/.../role-resources.component.ts)</a>
@@ -4445,8 +4436,7 @@ Custom functions can be used in the logic fields.</p>
                         <i>Default value : </i><code>(
   question: any,
   multiselect: boolean,
-  dialog: MatDialog,
-  gridComponent?: SafeCoreGridComponent
+  dialog: MatDialog
 ): any &#x3D;&gt; {
   const addButton &#x3D; document.createElement(&#x27;button&#x27;);
   addButton.innerText &#x3D; surveyLocalization.getString(
@@ -6049,62 +6039,6 @@ Custom functions can be used in the logic fields.</p>
         </tbody>
     </table>
 </section>
-    <h3>projects/safe/src/lib/components/storybook-translate/storybook-translate-module.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="CONFIG"></a>
-                    <span class="name">
-                        <span ><b>CONFIG</b></span>
-                        <a href="#CONFIG"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>undefined</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>An unused configuration constant set to undefined</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="httpTranslateLoader"></a>
-                    <span class="name">
-                        <span ><b>httpTranslateLoader</b></span>
-                        <a href="#httpTranslateLoader"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>(http: HttpClient) &#x3D;&gt;
-  new TranslateHttpLoader(http)</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Sets up translator.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
     <h3>projects/safe/src/lib/utils/array-filter.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -7185,7 +7119,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template: &#x27;&lt;safe-mapping [mappingForm]&#x3D;&quot;mappingForm&quot;&gt;&lt;/safe-mapping&gt;&#x27;,
   props: {
     // Need to pass formArray there otherwise we get an error: https://github.com/storybookjs/storybook/discussions/15602
@@ -7236,7 +7170,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template: &#x27;&lt;safe-mapping [mappingForm]&#x3D;&quot;mappingForm&quot;&gt;&lt;/safe-mapping&gt;&#x27;,
   props: {
     // Need to pass formArray there otherwise we get an error: https://github.com/storybookjs/storybook/discussions/15602
@@ -7617,7 +7551,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template: &#x27;&lt;safe-mapping-modal&gt;&lt;/safe-mapping-modal&gt;&#x27;,
 })</code>
                     </td>
@@ -9489,7 +9423,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template:
     &#x27;&lt;safe-pipeline [fields$]&#x3D;fields$ [metaFields$]&#x3D;metaFields$ [pipelineForm]&#x3D;&quot;pipelineForm&quot;&gt;&lt;/safe-pipeline&gt;&#x27;,
   props: {
@@ -9793,7 +9727,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template:
     &#x27;&lt;safe-add-field-stage [form]&#x3D;form [fields]&#x3D;fields [operators]&#x3D;operators&gt;&lt;/safe-add-field-stage&gt;&#x27;,
   props: {
@@ -9948,7 +9882,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template:
     &#x27;&lt;safe-expressions [form]&#x3D;form [fields]&#x3D;fields [operators]&#x3D;operators&gt;&lt;/safe-expressions&gt;&#x27;,
   props: {
@@ -10106,7 +10040,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template: &#x27;&lt;safe-group-stage [form]&#x3D;form [fields]&#x3D;fields&gt;&lt;/safe-group-stage&gt;&#x27;,
   props: {
     // Need to pass formGroup there otherwise we get an error: https://github.com/storybookjs/storybook/discussions/15602
@@ -10360,7 +10294,7 @@ Commented types are not yet implemented.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>(args) &#x3D;&gt; ({
+                        <i>Default value : </i><code>() &#x3D;&gt; ({
   template:
     &#x27;&lt;safe-series-mapping [fields$]&#x3D;fields$ [mappingForm]&#x3D;mappingForm&gt;&lt;/safe-series-mapping&gt;&#x27;,
   props: {
@@ -10568,116 +10502,6 @@ Commented types are not yet implemented.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Array of operators which are not requiring any field selection.</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
-    <h3>projects/safe/src/lib/components/role-summary/role-summary.component.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="DEFAULT_PAGE_SIZE"></a>
-                    <span class="name">
-                        <span ><b>DEFAULT_PAGE_SIZE</b></span>
-                        <a href="#DEFAULT_PAGE_SIZE"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>10</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Default items per query for pagination</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-</section>
-    <h3>projects/safe/src/lib/services/grid-layout/grid-layout.service.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="DEFAULT_PAGE_SIZE"></a>
-                    <span class="name">
-                        <span ><b>DEFAULT_PAGE_SIZE</b></span>
-                        <a href="#DEFAULT_PAGE_SIZE"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>10</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Default page size for layouts</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="FALLBACK_LAYOUTS"></a>
-                    <span class="name">
-                        <span ><b>FALLBACK_LAYOUTS</b></span>
-                        <a href="#FALLBACK_LAYOUTS"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="../interfaces/LayoutConnection.html" target="_self" >LayoutConnection</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  edges: [],
-  totalCount: 0,
-  pageInfo: {
-    startCursor: null,
-    endCursor: null,
-    hasNextPage: false,
-  },
-}</code>
-                    </td>
-                </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Fallback LayoutConnection</p>
 </div>
                 </td>
             </tr>
@@ -12250,6 +12074,49 @@ Commented types are not yet implemented.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Fallback AggregationConnection</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>projects/safe/src/lib/services/grid-layout/grid-layout.service.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="FALLBACK_LAYOUTS"></a>
+                    <span class="name">
+                        <span ><b>FALLBACK_LAYOUTS</b></span>
+                        <a href="#FALLBACK_LAYOUTS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/LayoutConnection.html" target="_self" >LayoutConnection</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  edges: [],
+  totalCount: 0,
+  pageInfo: {
+    startCursor: null,
+    endCursor: null,
+    hasNextPage: false,
+  },
+}</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fallback LayoutConnection</p>
 </div>
                 </td>
             </tr>
@@ -17182,6 +17049,36 @@ Commented types are not yet implemented.</p>
         </tbody>
     </table>
 </section>
+    <h3>projects/safe/src/lib/components/storybook-translate/storybook-translate-module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="httpTranslateLoader"></a>
+                    <span class="name">
+                        <span ><b>httpTranslateLoader</b></span>
+                        <a href="#httpTranslateLoader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(http: HttpClient) &#x3D;&gt;
+  new TranslateHttpLoader(http)</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets up translator.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
     <h3>projects/safe/src/lib/survey/components/owner.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -17259,7 +17156,7 @@ Commented types are not yet implemented.</p>
           }
         });
     },
-    onAfterRender: (question: QuestionOwner, el: HTMLElement): void &#x3D;&gt; {},
+    onAfterRender: (): void &#x3D;&gt; {},
   };
   Survey.ComponentCollection.Instance.add(component);
 }</code>
@@ -17416,7 +17313,7 @@ Commented types are not yet implemented.</p>
           btn.style.border &#x3D; &#x27;none&#x27;;
           btn.style.padding &#x3D; &#x27;10px&#x27;;
           htmlElement.appendChild(btn);
-          btn.onclick &#x3D; (ev: any) &#x3D;&gt; {
+          btn.onclick &#x3D; () &#x3D;&gt; {
             const currentQuestion &#x3D; editor.object;
             getResourceById({ id: currentQuestion.resource }).subscribe(
               (response) &#x3D;&gt; {
@@ -17809,13 +17706,8 @@ Commented types are not yet implemented.</p>
      *
      * @param question The current question
      * @param propertyName The name of the property
-     * @param newValue The new value assigned to the property by the user
      */
-    onPropertyChanged(
-      question: QuestionResource,
-      propertyName: string,
-      newValue: any
-    ): void {
+    onPropertyChanged(question: QuestionResource, propertyName: string): void {
       if (propertyName &#x3D;&#x3D;&#x3D; &#x27;resource&#x27;) {
         question.displayField &#x3D; null;
         this.filters &#x3D; [];
@@ -18093,7 +17985,7 @@ Commented types are not yet implemented.</p>
           btn.style.border &#x3D; &#x27;none&#x27;;
           btn.style.padding &#x3D; &#x27;10px&#x27;;
           htmlElement.appendChild(btn);
-          btn.onclick &#x3D; (ev: any) &#x3D;&gt; {
+          btn.onclick &#x3D; () &#x3D;&gt; {
             const currentQuestion &#x3D; editor.object;
             getResourceById({ id: currentQuestion.resource }).subscribe(
               (response) &#x3D;&gt; {
@@ -18637,13 +18529,8 @@ Commented types are not yet implemented.</p>
      *
      * @param question The current question
      * @param propertyName The name of the property
-     * @param newValue The new value assigned to the property by user
      */
-    onPropertyChanged(
-      question: any,
-      propertyName: string,
-      newValue: any
-    ): void {
+    onPropertyChanged(question: any, propertyName: string): void {
       if (propertyName &#x3D;&#x3D;&#x3D; &#x27;resource&#x27;) {
         question.displayField &#x3D; null;
         filters &#x3D; [];
@@ -18663,10 +18550,7 @@ Commented types are not yet implemented.</p>
       if (question.resource) {
         const parentElement &#x3D; el.querySelector(&#x27;.safe-qst-content&#x27;);
         if (parentElement) {
-          const gridComponent &#x3D; buildRecordsGrid(
-            question,
-            parentElement.firstChild
-          );
+          buildRecordsGrid(question, parentElement.firstChild);
 
           if (question.survey.mode !&#x3D;&#x3D; &#x27;display&#x27;) {
             el.parentElement.querySelector(&#x27;#actionsButtons&#x27;)?.remove();
@@ -18683,12 +18567,7 @@ Commented types are not yet implemented.</p>
             );
             actionsButtons.appendChild(searchBtn);
 
-            const addBtn &#x3D; buildAddButton(
-              question,
-              true,
-              dialog,
-              gridComponent
-            );
+            const addBtn &#x3D; buildAddButton(question, true, dialog);
             actionsButtons.appendChild(addBtn);
 
             parentElement.insertBefore(
@@ -18978,7 +18857,7 @@ Commented types are not yet implemented.</p>
           }
         });
     },
-    onAfterRender: (question: any, el: any): void &#x3D;&gt; {},
+    onAfterRender: (): void &#x3D;&gt; {},
   };
   Survey.ComponentCollection.Instance.add(component);
 }</code>
@@ -19927,11 +19806,10 @@ Commented types are not yet implemented.</p>
   serializer.findProperty(&#x27;question&#x27;, &#x27;name&#x27;).onGetValue &#x3D; (obj: Question) &#x3D;&gt;
     obj.valueName ? obj.valueName : obj.name;
   serializer.findProperty(&#x27;question&#x27;, &#x27;valueName&#x27;).isRequired &#x3D; true;
-  serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).onGetValue &#x3D; (obj: any) &#x3D;&gt;
-    false;
+  serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).onGetValue &#x3D; () &#x3D;&gt; false;
   serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).readOnly &#x3D; true;
   serializer.findProperty(&#x27;file&#x27;, &#x27;storeDataAsText&#x27;).visible &#x3D; false;
-  serializer.findProperty(&#x27;file&#x27;, &#x27;maxSize&#x27;).onGetValue &#x3D; (obj: any) &#x3D;&gt; 7340032;
+  serializer.findProperty(&#x27;file&#x27;, &#x27;maxSize&#x27;).onGetValue &#x3D; () &#x3D;&gt; 7340032;
 }</code>
                     </td>
                 </tr>

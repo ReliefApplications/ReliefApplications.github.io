@@ -1086,7 +1086,7 @@ export class SafeAuthService {
     // Redirect to previous path
     this.oauthService.events
       .pipe(filter((e: any) &#x3D;&gt; e.type &#x3D;&#x3D;&#x3D; &#x27;user_profile_loaded&#x27;))
-      .subscribe((e) &#x3D;&gt; {
+      .subscribe(() &#x3D;&gt; {
         const redirectPath &#x3D; localStorage.getItem(&#x27;redirectPath&#x27;);
         if (redirectPath) {
           this.router.navigateByUrl(redirectPath);
