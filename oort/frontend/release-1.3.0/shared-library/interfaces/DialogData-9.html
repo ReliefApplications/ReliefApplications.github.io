@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/search-resource-grid-modal/search-resource-grid-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/record-history-modal/record-history-modal.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Dialog data interface of the component</p>
+                <p>This interface describes the structure of the data that will be displayed in the dialog modal</p>
 
             </p>
 
@@ -91,28 +91,15 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#gridSettings" 
+                                        <a href="#id" 
 >
-                                            gridSettings
+                                            id
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#multiselect" 
+                                        <a href="#revert" 
 >
-                                            multiselect
-                                        </a>
-                                </li>
-                                <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#selectable" 
->
-                                            selectable
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="#selectedRows" 
->
-                                            selectedRows
+                                            revert
                                         </a>
                                 </li>
                             </ul>
@@ -130,9 +117,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="gridSettings"></a>
-                                        <span class="name "><b>gridSettings</b>
-                                            <a href="#gridSettings">
+                                        <a name="id"></a>
+                                        <span class="name "><b>id</b>
+                                            <a href="#id">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -140,7 +127,40 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>gridSettings:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>id:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="revert"></a>
+                                        <span class="name "><b>revert</b>
+                                            <a href="#revert">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>revert:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -159,220 +179,60 @@
 
                         </tbody>
                     </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="multiselect"></a>
-                                        <span class="name "><b>multiselect</b>
-                                            <a href="#multiselect">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>multiselect:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="selectable"></a>
-                                        <span class="name "><b>selectable</b>
-                                            <a href="#selectable">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>selectable:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="selectedRows"></a>
-                                        <span class="name "><b>selectedRows</b>
-                                            <a href="#selectedRows">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>selectedRows:     <code>string[]</code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>string[]</code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
             </section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ApplicationRef, Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { MAT_DIALOG_DATA, MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
-import { GridSettings } from &#x27;../ui/core-grid/models/grid-settings.model&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
+import {
+  MAT_DIALOG_DATA,
+  MatDialog,
+  MatDialogRef,
+} from &#x27;@angular/material/dialog&#x27;;
 
 /**
- * Dialog data interface of the component
+ * This interface describes the structure of the data that will be displayed in the dialog modal
  */
 interface DialogData {
-  gridSettings: any;
-  multiselect: boolean;
-  selectedRows: string[];
-  selectable?: boolean;
+  id: string;
+  revert: any;
 }
 
 /**
- * Grid of records for resource / resources questions.
+ * This component is used to display a modal with the history of a record
  */
 @Component({
-  selector: &#x27;safe-search-resource-grid-modal&#x27;,
-  templateUrl: &#x27;./search-resource-grid-modal.component.html&#x27;,
-  styleUrls: [&#x27;./search-resource-grid-modal.component.scss&#x27;],
+  selector: &#x27;safe-history-modal&#x27;,
+  templateUrl: &#x27;./record-history-modal.component.html&#x27;,
+  styleUrls: [&#x27;./record-history-modal.component.scss&#x27;],
 })
-export class SafeResourceGridModalComponent implements OnInit {
-  public multiSelect &#x3D; false;
-  public gridSettings: GridSettings &#x3D; {};
-
-  public selectedRows: any[] &#x3D; [];
-
+export class RecordHistoryModalComponent implements OnInit {
   /**
-   * Is the data selectable
+   * The constructor function is a special function that is called when a new instance of the class is
+   * created
    *
-   * @returns is the data selectable
-   */
-  get selectable(): boolean {
-    return this.data.selectable || false;
-  }
-
-  /**
-   * Grid of records for resource / resources questions.
-   *
-   * @param data dialog data
-   * @param dialogRef Material dialog reference of the component
-   * @param ref Application reference
+   * @param dialogRef The reference of the dialog modal that will be opened
+   * @param data This is the data that is passed into the modal when it is
+   * opened.
+   * @param dialog This is the Material service that allows us to open a dialog.
    */
   constructor(
+    public dialogRef: MatDialogRef&lt;RecordHistoryModalComponent&gt;,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    public dialogRef: MatDialogRef&lt;SafeResourceGridModalComponent&gt;,
-    private ref: ApplicationRef
-  ) {
-    this.multiSelect &#x3D; this.data.multiselect;
-    if (this.data.gridSettings.sort &amp;&amp; !this.data.gridSettings.sort.field) {
-      delete this.data.gridSettings.sort;
-    }
-    this.gridSettings &#x3D; {
-      query: this.data.gridSettings,
-      actions: {
-        delete: false,
-        history: true,
-        convert: false,
-        update: false,
-        inlineEdition: false,
-      },
-    };
-    if (this.data.selectedRows) {
-      this.selectedRows &#x3D; [...this.data.selectedRows];
-    }
-    this.ref.tick();
-  }
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {}
 
   /**
-   * Handle selection change in the grid.
+   * Closes the modal on event
    *
-   * @param selection selection event
+   * @param e The event
    */
-  onSelectionChange(selection: any): void {
-    if (this.multiSelect) {
-      if (selection.selectedRows.length &gt; 0) {
-        this.selectedRows &#x3D; this.selectedRows.concat(
-          selection.selectedRows.map((x: any) &#x3D;&gt; x.dataItem.id)
-        );
-      }
-      if (selection.deselectedRows.length &gt; 0) {
-        const deselectedRows &#x3D; selection.deselectedRows.map(
-          (r: any) &#x3D;&gt; r.dataItem.id
-        );
-        this.selectedRows &#x3D; this.selectedRows.filter(
-          (r: any) &#x3D;&gt; !deselectedRows.includes(r)
-        );
-      }
-    } else {
-      this.selectedRows &#x3D; selection.selectedRows.map((x: any) &#x3D;&gt; x.dataItem.id);
-    }
-  }
-
-  /**
-   * Close the modal, indicating if update is required
-   *
-   * @param saveChanges is update required
-   */
-  closeModal(saveChanges: boolean &#x3D; true): void {
-    this.ref.tick();
-    if (saveChanges) {
-      this.dialogRef.close(this.selectedRows);
+  closeModal(e: any): void {
+    if (e) {
+      this.dialogRef.close();
     }
   }
 }

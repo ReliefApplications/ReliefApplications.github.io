@@ -1448,22 +1448,22 @@ export class SafeTagboxComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;mat-form-field appearance&#x3D;&quot;outline&quot; class&#x3D;&quot;flex-1&quot;&gt;
   &lt;mat-label&gt;{{ label }}&lt;/mat-label&gt;
+  &lt;!-- Chip list --&gt;
   &lt;mat-chip-list #chipList&gt;
-    &lt;mat-basic-chip
+    &lt;!-- Individual chip choice --&gt;
+    &lt;mat-chip
       *ngFor&#x3D;&quot;let choice of selectedChoices&quot;
-      (removed)&#x3D;&quot;remove(choice)&quot;
+      [selectable]&#x3D;&quot;true&quot;
+      [removable]&#x3D;&quot;true&quot;
       [value]&#x3D;&quot;choice&quot;
+      (removed)&#x3D;&quot;remove(choice)&quot;
     &gt;
-      &lt;div class&#x3D;&quot;chip-text&quot;&gt;{{ choice[displayKey] }}&lt;/div&gt;
-      &lt;safe-icon
-        matChipRemove
-        icon&#x3D;&quot;close&quot;
-        [size]&#x3D;&quot;16&quot;
-        [inline]&#x3D;&quot;true&quot;
-      &gt;&lt;/safe-icon&gt;
-    &lt;/mat-basic-chip&gt;
+      {{ choice[displayKey] }}
+      &lt;safe-icon matChipRemove icon&#x3D;&quot;cancel&quot; [size]&#x3D;&quot;18&quot;&gt;&lt;/safe-icon&gt;
+    &lt;/mat-chip&gt;
+    &lt;!-- Search text control --&gt;
     &lt;input
       type&#x3D;&quot;text&quot;
       [placeholder]&#x3D;&quot;label&quot;
@@ -1478,7 +1478,7 @@ export class SafeTagboxComponent implements OnInit {
       *ngIf&#x3D;&quot;showInput&quot;
     /&gt;
   &lt;/mat-chip-list&gt;
-
+  &lt;!-- Filter choices --&gt;
   &lt;mat-autocomplete
     #auto&#x3D;&quot;matAutocomplete&quot;
     (optionSelected)&#x3D;&quot;selected($event)&quot;
@@ -1496,36 +1496,7 @@ export class SafeTagboxComponent implements OnInit {
                 <p class="comment">
                     <code>./tagbox.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.mat-form-field {
-  width: 100%;
-  height: 100%;
-}
-
-.chip-text {
-  max-width: calc(100%);
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-mat-basic-chip {
-  height: 24px;
-  background-color: rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin-top: -2px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-right: 4px;
-  max-width: none;
-  padding: 0 8px;
-
-  safe-icon {
-    margin-top: 2px;
-    margin-right: -2px;
-    cursor: pointer;
-  }
-}
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -1553,7 +1524,7 @@ mat-basic-chip {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-form-field appearance="outline">  <mat-label>{{ label }}</mat-label>  <mat-chip-list #chipList>    <mat-basic-chip      *ngFor="let choice of selectedChoices"      (removed)="remove(choice)"      [value]="choice"    >      <div class="chip-text">{{ choice[displayKey] }}</div>      <safe-icon        matChipRemove        icon="close"        [size]="16"        [inline]="true"      ></safe-icon>    </mat-basic-chip>    <input      type="text"      [placeholder]="label"      #textInput      matInput      [formControl]="inputFormControl"      [matAutocomplete]="auto"      [matChipInputFor]="chipList"      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"      (matChipInputTokenEnd)="add($event)"      [disabled]="choicesEmpty"      *ngIf="showInput"    />  </mat-chip-list>  <mat-autocomplete    #auto="matAutocomplete"    (optionSelected)="selected($event)"    [displayWith]="displayName"  >    <mat-option *ngFor="let choice of filteredChoices | async" [value]="choice">      {{ choice[displayKey] }}    </mat-option>  </mat-autocomplete></mat-form-field></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-form-field appearance="outline" class="flex-1">  <mat-label>{{ label }}</mat-label>  <!-- Chip list -->  <mat-chip-list #chipList>    <!-- Individual chip choice -->    <mat-chip      *ngFor="let choice of selectedChoices"      [selectable]="true"      [removable]="true"      [value]="choice"      (removed)="remove(choice)"    >      {{ choice[displayKey] }}      <safe-icon matChipRemove icon="cancel" [size]="18"></safe-icon>    </mat-chip>    <!-- Search text control -->    <input      type="text"      [placeholder]="label"      #textInput      matInput      [formControl]="inputFormControl"      [matAutocomplete]="auto"      [matChipInputFor]="chipList"      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"      (matChipInputTokenEnd)="add($event)"      [disabled]="choicesEmpty"      *ngIf="showInput"    />  </mat-chip-list>  <!-- Filter choices -->  <mat-autocomplete    #auto="matAutocomplete"    (optionSelected)="selected($event)"    [displayWith]="displayName"  >    <mat-option *ngFor="let choice of filteredChoices | async" [value]="choice">      {{ choice[displayKey] }}    </mat-option>  </mat-autocomplete></mat-form-field></div>'
     var COMPONENTS = [{'name': 'AddAggregationModalComponent', 'selector': 'safe-add-aggregation-modal'},{'name': 'AddLayoutModalComponent', 'selector': 'safe-add-layout-modal'},{'name': 'AggregationTableComponent', 'selector': 'safe-aggregation-table'},{'name': 'ButtonConfigComponent', 'selector': 'safe-button-config'},{'name': 'ConfigDisplayGridFieldsModalComponent', 'selector': 'safe-config-display-grid-fields-modal'},{'name': 'DateFilterEditorComponent', 'selector': 'safe-date-filter-editor'},{'name': 'DistributionListsComponent', 'selector': 'safe-distribution-lists'},{'name': 'EditDistributionListModalComponent', 'selector': 'safe-edit-distribution-list-modal'},{'name': 'EditRoleAutoAssignmentModalComponent', 'selector': 'safe-edit-role-auto-assignment-modal'},{'name': 'EditTemplateModalComponent', 'selector': 'safe-edit-template'},{'name': 'EmailTemplateModalComponent', 'selector': 'safe-email-template-modal'},{'name': 'FilterComponent', 'selector': 'safe-role-resources-filter'},{'name': 'FilterGroupComponent', 'selector': 'safe-filter-group'},{'name': 'FilterRowComponent', 'selector': 'safe-filter-row'},{'name': 'LayoutTableComponent', 'selector': 'safe-layout-table'},{'name': 'MapClorophletComponent', 'selector': 'safe-map-clorophlet'},{'name': 'MapClorophletDivisionComponent', 'selector': 'safe-map-clorophlet-division'},{'name': 'MapClorophletsComponent', 'selector': 'safe-map-clorophlets'},{'name': 'MapGeneralComponent', 'selector': 'safe-map-general'},{'name': 'MapLayersComponent', 'selector': 'safe-map-layers'},{'name': 'MapMarkerRuleComponent', 'selector': 'safe-map-marker-rule'},{'name': 'MapMarkersComponent', 'selector': 'safe-map-markers'},{'name': 'MapOnlineLayersComponent', 'selector': 'safe-map-online-layers'},{'name': 'MapPropertiesComponent', 'selector': 'safe-map-properties'},{'name': 'RecordHistoryModalComponent', 'selector': 'safe-history-modal'},{'name': 'ResourceFieldsComponent', 'selector': 'safe-resource-fields'},{'name': 'RoleAutoAssignmentComponent', 'selector': 'safe-role-auto-assignment'},{'name': 'RoleChannelsComponent', 'selector': 'safe-role-channels'},{'name': 'RoleDashboardsComponent', 'selector': 'safe-role-dashboards'},{'name': 'RoleDetailsComponent', 'selector': 'safe-role-details'},{'name': 'RoleFeaturesComponent', 'selector': 'safe-role-features'},{'name': 'RoleFormsComponent', 'selector': 'safe-role-forms'},{'name': 'RoleResourcesComponent', 'selector': 'safe-role-resources'},{'name': 'RoleUsersComponent', 'selector': 'safe-role-users'},{'name': 'RoleWorkflowsComponent', 'selector': 'safe-role-workflows'},{'name': 'SafeAccessComponent', 'selector': 'safe-access'},{'name': 'SafeAddApplicationComponent', 'selector': 'safe-add-application'},{'name': 'SafeAddFieldStageComponent', 'selector': 'safe-add-field-stage'},{'name': 'SafeAddRoleComponent', 'selector': 'safe-add-role'},{'name': 'SafeAddStepComponent', 'selector': 'safe-add-step'},{'name': 'SafeAddUserComponent', 'selector': 'safe-add-user'},{'name': 'SafeAggregationBuilderComponent', 'selector': 'safe-aggregation-builder'},{'name': 'SafeAggregationGridComponent', 'selector': 'safe-aggregation-grid'},{'name': 'SafeAlertComponent', 'selector': 'safe-alert'},{'name': 'SafeApplicationDistributionListsComponent', 'selector': 'safe-application-distribution-lists'},{'name': 'SafeApplicationDropdownComponent', 'selector': 'safe-application-dropdown'},{'name': 'SafeApplicationsSummaryComponent', 'selector': 'safe-applications-summary'},{'name': 'SafeApplicationSummaryComponent', 'selector': 'safe-application-summary'},{'name': 'SafeApplicationTemplatesComponent', 'selector': 'safe-application-templates'},{'name': 'SafeApplicationToolbarComponent', 'selector': 'safe-app-application-toolbar'},{'name': 'SafeArrayFilterComponent', 'selector': 'safe-array-filter'},{'name': 'SafeArrayFilterMenuComponent', 'selector': 'safe-array-filter-menu'},{'name': 'SafeAvatarComponent', 'selector': 'safe-avatar'},{'name': 'SafeBadgeComponent', 'selector': 'safe-badge'},{'name': 'SafeBarChartComponent', 'selector': 'safe-bar-chart'},{'name': 'SafeBreadcrumbComponent', 'selector': 'safe-breadcrumb'},{'name': 'SafeButtonComponent', 'selector': 'safe-button'},{'name': 'SafeChartComponent', 'selector': 'safe-chart'},{'name': 'SafeChartSettingsComponent', 'selector': 'safe-chart-settings'},{'name': 'SafeCheckboxTreeComponent', 'selector': 'safe-checkbox-tree'},{'name': 'SafeChooseRecordModalComponent', 'selector': 'safe-choose-record-modal'},{'name': 'SafeColumnChartComponent', 'selector': 'safe-column-chart'},{'name': 'SafeConfirmModalComponent', 'selector': 'safe-confirm-modal'},{'name': 'SafeContentChoiceComponent', 'selector': 'safe-content-choice'},{'name': 'SafeConvertModalComponent', 'selector': 'safe-convert-modal'},{'name': 'SafeCoreGridComponent', 'selector': 'safe-core-grid'},{'name': 'SafeDividerComponent', 'selector': 'safe-divider'},{'name': 'SafeDonutChartComponent', 'selector': 'safe-donut-chart'},{'name': 'SafeDropdownFilterComponent', 'selector': 'safe-dropdown-filter'},{'name': 'SafeDropdownFilterMenuComponent', 'selector': 'safe-dropdown-filter-menu'},{'name': 'SafeEditAccessComponent', 'selector': 'safe-edit-access'},{'name': 'SafeEditAggregationModalComponent', 'selector': 'safe-edit-aggregation-modal'},{'name': 'SafeEditLayoutModalComponent', 'selector': 'safe-edit-layout-modal'},{'name': 'SafeEditorComponent', 'selector': 'safe-editor'},{'name': 'SafeEditorSettingsComponent', 'selector': 'safe-editor-settings'},{'name': 'SafeEmailPreviewComponent', 'selector': 'safe-email-preview'},{'name': 'SafeEmptyComponent', 'selector': 'safe-empty'},{'name': 'SafeErrorsModalComponent', 'selector': 'safe-errors-modal'},{'name': 'SafeExpandedCommentComponent', 'selector': 'safe-expanded-comment'},{'name': 'SafeExpandedWidgetComponent', 'selector': 'safe-expanded-widget'},{'name': 'SafeExportComponent', 'selector': 'safe-export'},{'name': 'SafeExpressionsComponent', 'selector': 'safe-expressions'},{'name': 'SafeFieldDropdownComponent', 'selector': 'safe-field-dropdown'},{'name': 'SafeFilterComponent', 'selector': 'safe-filter'},{'name': 'SafeFloatingOptionsComponent', 'selector': 'safe-floating-options'},{'name': 'SafeFormActionsComponent', 'selector': 'safe-form-actions'},{'name': 'SafeFormBuilderComponent', 'selector': 'safe-form-builder'},{'name': 'SafeFormComponent', 'selector': 'safe-form'},{'name': 'SafeFormModalComponent', 'selector': 'safe-form-modal'},{'name': 'SafeFormsDropdownComponent', 'selector': 'safe-forms-dropdown'},{'name': 'SafeGraphQLSelectComponent', 'selector': 'safe-graphql-select'},{'name': 'SafeGridComponent', 'selector': 'safe-grid'},{'name': 'SafeGridRowActionsComponent', 'selector': 'safe-grid-row-actions'},{'name': 'SafeGridSettingsComponent', 'selector': 'safe-grid-settings'},{'name': 'SafeGridToolbarComponent', 'selector': 'safe-grid-toolbar'},{'name': 'SafeGridWidgetComponent', 'selector': 'safe-grid-widget'},{'name': 'SafeGroupListComponent', 'selector': 'safe-group-list'},{'name': 'SafeGroupStageComponent', 'selector': 'safe-group-stage'},{'name': 'SafeIconComponent', 'selector': 'safe-icon'},{'name': 'SafeInviteUsersComponent', 'selector': 'safe-invite-users'},{'name': 'SafeLayoutComponent', 'selector': 'safe-layout'},{'name': 'SafeLeftSidenavComponent', 'selector': 'safe-left-sidenav'},{'name': 'SafeLineChartComponent', 'selector': 'safe-line-chart'},{'name': 'SafeMapComponent', 'selector': 'safe-map'},{'name': 'SafeMappingComponent', 'selector': 'safe-mapping'},{'name': 'SafeMappingModalComponent', 'selector': 'safe-mapping-modal'},{'name': 'SafeMapPopupComponent', 'selector': 'safe-map-popup'},{'name': 'SafeMapSettingsComponent', 'selector': 'safe-map-settings'},{'name': 'SafeModalComponent', 'selector': 'safe-modal'},{'name': 'SafePaletteControlComponent', 'selector': 'safe-palette-control'},{'name': 'SafePieChartComponent', 'selector': 'safe-pie-chart'},{'name': 'SafePipelineComponent', 'selector': 'safe-pipeline'},{'name': 'SafePreferencesModalComponent', 'selector': 'safe-preferences-modal'},{'name': 'SafeProfileComponent', 'selector': 'safe-profile'},{'name': 'SafeQueryBuilderComponent', 'selector': 'safe-query-builder'},{'name': 'SafeQueryStyleComponent', 'selector': 'safe-query-style'},{'name': 'SafeQueryStyleListComponent', 'selector': 'safe-query-style-list'},{'name': 'SafeQueryStylePreviewComponent', 'selector': 'safe-query-style-preview'},{'name': 'SafeRecordDropdownComponent', 'selector': 'safe-record-dropdown'},{'name': 'SafeRecordHistoryComponent', 'selector': 'safe-record-history'},{'name': 'SafeRecordModalComponent', 'selector': 'safe-record-modal'},{'name': 'SafeRecordSummaryComponent', 'selector': 'safe-record-summary'},{'name': 'SafeReferenceDataDropdownComponent', 'selector': 'safe-reference-data-dropdown'},{'name': 'SafeResourceDropdownComponent', 'selector': 'safe-resource-dropdown'},{'name': 'SafeResourceGridModalComponent', 'selector': 'safe-search-resource-grid-modal'},{'name': 'SafeRoleListComponent', 'selector': 'safe-role-list'},{'name': 'SafeRoleResourceFiltersComponent', 'selector': 'safe-resource-access-filters'},{'name': 'SafeRolesComponent', 'selector': 'safe-roles'},{'name': 'SafeRoleSummaryComponent', 'selector': 'safe-role-summary'},{'name': 'SafeSchedulerComponent', 'selector': 'safe-scheduler'},{'name': 'SafeSchedulerSettingsComponent', 'selector': 'safe-scheduler-settings'},{'name': 'SafeSearchMenuComponent', 'selector': 'safe-search-menu'},{'name': 'SafeSeriesMappingComponent', 'selector': 'safe-series-mapping'},{'name': 'SafeSkeletonTableComponent', 'selector': 'safe-skeleton-table'},{'name': 'SafeSnackbarSpinnerComponent', 'selector': 'safe-snackbar-spinner'},{'name': 'SafeSpinnerComponent', 'selector': 'safe-spinner'},{'name': 'SafeStatusModalComponent', 'selector': 'safe-status-modal'},{'name': 'SafeStepComponent', 'selector': 'safe-step'},{'name': 'SafeTabFieldsComponent', 'selector': 'safe-tab-fields'},{'name': 'SafeTabFilterComponent', 'selector': 'safe-tab-filter'},{'name': 'SafeTabLayoutPreviewComponent', 'selector': 'safe-tab-layout-preview'},{'name': 'SafeTabPaginationComponent', 'selector': 'safe-tab-pagination'},{'name': 'SafeTabSortComponent', 'selector': 'safe-tab-sort'},{'name': 'SafeTabStyleComponent', 'selector': 'safe-tab-style'},{'name': 'SafeTagboxComponent', 'selector': 'safe-tagbox'},{'name': 'SafeTemplatesComponent', 'selector': 'safe-templates'},{'name': 'SafeTileDataComponent', 'selector': 'safe-tile-data'},{'name': 'SafeUsersComponent', 'selector': 'safe-users'},{'name': 'SafeUserSummaryComponent', 'selector': 'safe-user-summary'},{'name': 'SafeWidgetChoiceComponent', 'selector': 'safe-widget-choice'},{'name': 'SafeWidgetComponent', 'selector': 'safe-widget'},{'name': 'SafeWidgetGridComponent', 'selector': 'safe-widget-grid'},{'name': 'SafeWorkflowStepperComponent', 'selector': 'safe-workflow-stepper'},{'name': 'TabActionsComponent', 'selector': 'safe-tab-actions'},{'name': 'TabButtonsComponent', 'selector': 'safe-tab-buttons'},{'name': 'TabDisplayComponent', 'selector': 'safe-tab-display'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabMainComponent', 'selector': 'safe-tab-main'},{'name': 'TabPreviewComponent', 'selector': 'safe-tab-preview'},{'name': 'UserAppRolesComponent', 'selector': 'safe-user-app-roles'},{'name': 'UserBackRolesComponent', 'selector': 'safe-user-back-roles'},{'name': 'UserDetailsComponent', 'selector': 'safe-user-details'},{'name': 'UserGroupsComponent', 'selector': 'safe-user-groups'},{'name': 'UserRolesComponent', 'selector': 'safe-user-roles'}];
     var DIRECTIVES = [{'name': 'SafeSkeletonDirective', 'selector': '[safeSkeleton]'}];
     var ACTUAL_COMPONENT = {'name': 'SafeTagboxComponent'};
