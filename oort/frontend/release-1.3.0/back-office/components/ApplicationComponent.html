@@ -871,7 +871,6 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
-import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
 import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
 import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 import {
@@ -880,6 +879,7 @@ import {
   SafeApplicationService,
   SafeConfirmService,
 } from &#x27;@safe/builder&#x27;;
+import get from &#x27;lodash/get&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
 
 /**
@@ -1008,7 +1008,7 @@ export class ApplicationComponent implements OnInit, OnDestroy {
               },
             ];
             if (!this.application || application.id !&#x3D;&#x3D; this.application.id) {
-              const [firstPage, ..._] &#x3D; application.pages || [];
+              const firstPage &#x3D; get(application, &#x27;pages&#x27;, [])[0];
               if (
                 this.router.url.endsWith(application?.id || &#x27;&#x27;) ||
                 !firstPage

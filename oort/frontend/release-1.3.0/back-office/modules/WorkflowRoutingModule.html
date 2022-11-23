@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/workflow/workflow-routing.module.ts</code>
+            <code>projects/back-office/src/app/app-preview/pages/workflow/workflow-routing.module.ts</code>
         </p>
 
 
@@ -76,56 +76,30 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import { WorkflowComponent } from &#x27;./workflow.component&#x27;;
 
-/** List of routes of application workflow module */
+/** Routes of workflow module for application preview */
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
     component: WorkflowComponent,
     children: [
       {
-        path: &#x27;&#x27;,
-        loadChildren: () &#x3D;&gt;
-          &quot;import(&#x27;./components/home/home.module&#x27;).then((m) &#x3D;&gt; m.HomeModule)&quot;,
-      },
-      {
-        path: &#x27;add-step&#x27;,
-        loadChildren: () &#x3D;&gt;
-          &quot;import(&#x27;./components/add-step/add-step.module&#x27;).then(\
-            (m) &#x3D;&gt; m.AddStepModule\
-          )&quot;,
-      },
-      {
         path: &#x27;dashboard/:id&#x27;,
         loadChildren: () &#x3D;&gt;
-          &quot;import(&#x27;../../../dashboard/pages/dashboard/dashboard.module&#x27;).then(\
+          &quot;import(&#x27;../dashboard/dashboard.module&#x27;).then(\
             (m) &#x3D;&gt; m.DashboardModule\
           )&quot;,
       },
       {
         path: &#x27;form/:id&#x27;,
-        children: [
-          {
-            path: &#x27;&#x27;,
-            loadChildren: () &#x3D;&gt;
-              &quot;import(&#x27;../form/form.module&#x27;).then((m) &#x3D;&gt; m.FormModule)&quot;,
-            // canActivate: [SafePermissionGuard]
-          },
-          {
-            path: &#x27;builder/:id&#x27;,
-            loadChildren: () &#x3D;&gt;
-              &quot;import(\
-                &#x27;../../../dashboard/pages/form-builder/form-builder.module&#x27;\
-              ).then((m) &#x3D;&gt; m.FormBuilderModule)&quot;,
-            // canActivate: [SafePermissionGuard]
-          },
-        ],
+        loadChildren: () &#x3D;&gt;
+          &quot;import(&#x27;../form/form.module&#x27;).then((m) &#x3D;&gt; m.FormModule)&quot;,
       },
     ],
   },
 ];
 
 /**
- * Application workflow routing module.
+ * Workflow routing module for application preview.
  */
 @NgModule({
   imports: [RouterModule.forChild(routes)],

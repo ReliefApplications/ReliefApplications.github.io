@@ -367,15 +367,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>window:resize(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>window:resize()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:62</a></div>
                 </td>
             </tr>
 
@@ -385,36 +385,6 @@
                     <div class="io-description"><p>Updates the innerWidth variable.</p>
 </div>
 
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>event</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Window resize event</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
                 </td>
             </tr>
         </tbody>
@@ -445,8 +415,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="112"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:112</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:110</a></div>
                 </td>
             </tr>
 
@@ -484,8 +454,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="120"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:120</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:118</a></div>
                 </td>
             </tr>
 
@@ -525,8 +495,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:71</a></div>
                 </td>
             </tr>
 
@@ -631,7 +601,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onResize(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>onResize()</code>
                 </td>
             </tr>
 
@@ -645,8 +615,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/forms/components/filter/filter.component.ts:62</a></div>
                 </td>
             </tr>
 
@@ -657,45 +627,8 @@
 </div>
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>event</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Window resize event</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -878,11 +811,9 @@ export class FilterComponent implements OnInit {
 
   /**
    * Updates the innerWidth variable.
-   *
-   * @param event Window resize event
    */
   @HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])
-  onResize(event: any): void {
+  onResize(): void {
     this.innerWidth &#x3D; window.innerWidth;
   }
 

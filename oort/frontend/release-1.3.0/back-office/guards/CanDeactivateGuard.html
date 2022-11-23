@@ -122,15 +122,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>canDeactivate(component: <a href="../interfaces/CanComponentDeactivate.html" target="_self">CanComponentDeactivate</a>, route: <a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank">ActivatedRouteSnapshot</a>, state: <a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank">RouterStateSnapshot</a>)</code>
+<code>canDeactivate(component: <a href="../interfaces/CanComponentDeactivate.html" target="_self">CanComponentDeactivate</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">projects/back-office/src/app/guards/can-deactivate.guard.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">projects/back-office/src/app/guards/can-deactivate.guard.ts:25</a></div>
                 </td>
             </tr>
 
@@ -169,38 +169,6 @@
 
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>route</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>The route</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>state</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>The state</p>
-
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -224,12 +192,7 @@
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
             <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import {
-  ActivatedRouteSnapshot,
-  CanDeactivate,
-  RouterStateSnapshot,
-  UrlTree,
-} from &#x27;@angular/router&#x27;;
+import { CanDeactivate, UrlTree } from &#x27;@angular/router&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 
 /** Model for deactivation authorisation */
@@ -250,15 +213,9 @@ export class CanDeactivateGuard
    * Check if the component can deactivate
    *
    * @param component The component to check
-   * @param route The route
-   * @param state The state
    * @returns A boolean indicating if the component can deactivate
    */
-  canDeactivate(
-    component: CanComponentDeactivate,
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): any {
+  canDeactivate(component: CanComponentDeactivate): any {
     return component.canDeactivate ? component.canDeactivate() : true;
   }
 }

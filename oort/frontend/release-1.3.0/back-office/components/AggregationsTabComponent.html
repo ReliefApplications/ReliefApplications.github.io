@@ -362,8 +362,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="126"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:126</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:127</a></div>
                 </td>
             </tr>
 
@@ -438,8 +438,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="162"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:162</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:163</a></div>
                 </td>
             </tr>
 
@@ -477,8 +477,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="222"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:222</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="223"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:223</a></div>
                 </td>
             </tr>
 
@@ -553,8 +553,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="190"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:190</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="191"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/aggregations-tab.component.ts:191</a></div>
                 </td>
             </tr>
 
@@ -1025,6 +1025,7 @@ export class AggregationsTabComponent implements OnInit {
       if (e.pageSize &gt; this.pageInfo.pageSize) {
         first -&#x3D; this.pageInfo.pageSize;
       }
+      this.pageInfo.pageSize &#x3D; first;
       this.fetchAggregations();
     } else {
       this.aggregations &#x3D; this.cachedAggregations.slice(

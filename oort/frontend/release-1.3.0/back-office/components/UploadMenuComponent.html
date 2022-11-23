@@ -534,15 +534,15 @@ Contains file upload and template download.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onDownloadTemplate(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>onDownloadTemplate()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="67"
-                            class="link-to-prism">projects/back-office/src/app/components/upload-menu/upload-menu.component.ts:67</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">projects/back-office/src/app/components/upload-menu/upload-menu.component.ts:65</a></div>
                 </td>
             </tr>
 
@@ -554,45 +554,8 @@ Event is transmitted by the component to other components.</p>
 </div>
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>e</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>click event.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -776,10 +739,8 @@ export class UploadMenuComponent implements OnInit {
   /**
    * Handles download template event.
    * Event is transmitted by the component to other components.
-   *
-   * @param e click event.
    */
-  onDownloadTemplate(e: any): void {
+  onDownloadTemplate(): void {
     this.download.emit();
   }
 }
@@ -799,7 +760,7 @@ export class UploadMenuComponent implements OnInit {
 &lt;safe-button
   variant&#x3D;&quot;primary&quot;
   category&#x3D;&quot;tertiary&quot;
-  (click)&#x3D;&quot;onDownloadTemplate($event)&quot;
+  (click)&#x3D;&quot;onDownloadTemplate()&quot;
 &gt;
   {{ &#x27;common.downloadTemplate&#x27; | translate }}
 &lt;/safe-button&gt;
@@ -854,7 +815,7 @@ export class UploadMenuComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><kendo-upload  #fileReader  name="Upload XLSX"  data-max-size="5120"  (upload)="onUpload($event)"  accept=".xlsx"  [multiple]="false"></kendo-upload><safe-button  variant="primary"  category="tertiary"  (click)="onDownloadTemplate($event)">  {{ \'common.downloadTemplate\' | translate }}</safe-button></div>'
+        var COMPONENT_TEMPLATE = '<div><kendo-upload  #fileReader  name="Upload XLSX"  data-max-size="5120"  (upload)="onUpload($event)"  accept=".xlsx"  [multiple]="false"></kendo-upload><safe-button  variant="primary"  category="tertiary"  (click)="onDownloadTemplate()">  {{ \'common.downloadTemplate\' | translate }}</safe-button></div>'
     var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'UploadMenuComponent'};

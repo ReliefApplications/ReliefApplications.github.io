@@ -207,7 +207,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:41</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:42</a></div>
                             </td>
                         </tr>
 
@@ -347,8 +347,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="183"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:183</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:184</a></div>
                 </td>
             </tr>
 
@@ -424,8 +424,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="197"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:197</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:198</a></div>
                 </td>
             </tr>
 
@@ -463,8 +463,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:64</a></div>
                 </td>
             </tr>
 
@@ -513,7 +513,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -547,7 +547,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:41</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -585,7 +585,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -623,7 +623,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:37</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -661,7 +661,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/back-office/src/app/app-preview/app-preview.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -689,6 +689,7 @@ import {
   Permissions,
   SafeApplicationService,
 } from &#x27;@safe/builder&#x27;;
+import get from &#x27;lodash/get&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
 import { PreviewService } from &#x27;../services/preview.service&#x27;;
 
@@ -826,7 +827,7 @@ export class AppPreviewComponent implements OnInit, OnDestroy {
               },
             ];
             if (!this.application || application.id !&#x3D;&#x3D; this.application.id) {
-              const [firstPage, ..._] &#x3D; application.pages || [];
+              const firstPage &#x3D; get(application, &#x27;pages&#x27;, [])[0];
               if (
                 this.router.url.endsWith(&#x27;/&#x27;) ||
                 (this.application &amp;&amp; application.id !&#x3D;&#x3D; this.application?.id) ||
