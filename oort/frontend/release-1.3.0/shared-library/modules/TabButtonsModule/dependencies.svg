@@ -14,13 +14,13 @@
 <title>cluster_TabButtonsModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 746,-230.8 746,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_TabButtonsModule_declarations</title>
-<polygon fill="none" stroke="black" points="576,-40.8 576,-92.8 738,-92.8 738,-40.8 576,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_TabButtonsModule_exports</title>
 <polygon fill="none" stroke="black" points="266,-170.8 266,-222.8 432,-222.8 432,-170.8 266,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_TabButtonsModule_declarations</title>
+<polygon fill="none" stroke="black" points="576,-40.8 576,-92.8 738,-92.8 738,-40.8 576,-40.8"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_TabButtonsModule_imports</title>

@@ -18,13 +18,13 @@
 <title>cluster_SafeApplicationTemplatesModule_declarations</title>
 <polygon fill="none" stroke="black" points="454,-40.8 454,-92.8 700,-92.8 700,-40.8 454,-40.8"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeApplicationTemplatesModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 446,-92.8 446,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeApplicationTemplatesModule_exports</title>
 <polygon fill="none" stroke="black" points="186,-170.8 186,-222.8 436,-222.8 436,-170.8 186,-170.8"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeApplicationTemplatesModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 446,-92.8 446,-40.8 16,-40.8"/>
 </g>
 <!-- SafeApplicationTemplatesComponent -->
 <g id="node1" class="node">

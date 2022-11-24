@@ -1652,13 +1652,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafePipelineModule.html" data-type="entity-link" >SafePipelineModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' : 'data-target="#xs-components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' }>
+                                            'data-target="#components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' : 'data-target="#xs-components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' :
-                                            'id="xs-components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' :
+                                            'id="xs-components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' }>
                                             <li class="link">
                                                 <a href="components/SafeAddFieldStageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafeAddFieldStageComponent</a>
                                             </li>
@@ -1673,6 +1673,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/SafePipelineComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafePipelineComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SafeSortStageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafeSortStageComponent</a>
                                             </li>
                                         </ul>
                                     </li>

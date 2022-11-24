@@ -14,13 +14,13 @@
 <title>cluster_DistributionListsModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 918,-230.8 918,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_DistributionListsModule_declarations</title>
-<polygon fill="none" stroke="black" points="718,-40.8 718,-92.8 910,-92.8 910,-40.8 718,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_DistributionListsModule_exports</title>
 <polygon fill="none" stroke="black" points="316,-170.8 316,-222.8 512,-222.8 512,-170.8 316,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_DistributionListsModule_declarations</title>
+<polygon fill="none" stroke="black" points="718,-40.8 718,-92.8 910,-92.8 910,-40.8 718,-40.8"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_DistributionListsModule_imports</title>
