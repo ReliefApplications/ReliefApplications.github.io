@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/dashboard/pages/resource/aggregations-tab/graphql/queries.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/resource/forms-tab/graphql/queries.ts</code>
         </p>
 
 
@@ -187,26 +187,21 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import { Resource } from &#x27;@safe/builder&#x27;;
 
-/** Graphql query for getting resource aggregations */
-export const GET_RESOURCE_AGGREGATIONS &#x3D; gql&#x60;
-  query GetResourceById($id: ID!, $first: Int, $afterCursor: ID) {
+/** Graphql query for getting a resource by its id */
+export const GET_RESOURCE_FORMS &#x3D; gql&#x60;
+  query GetResourceById($id: ID!) {
     resource(id: $id) {
       id
-      aggregations(first: $first, afterCursor: $afterCursor) {
-        edges {
-          node {
-            id
-            name
-            sourceFields
-            pipeline
-            createdAt
-          }
-        }
-        pageInfo {
-          hasNextPage
-          endCursor
-        }
-        totalCount
+      forms {
+        id
+        name
+        status
+        createdAt
+        recordsCount
+        core
+        canUpdate
+        canDelete
+        canCreateRecords
       }
       canUpdate
     }
