@@ -368,7 +368,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DashboardModule-284669ca98845c51df012b335df739451c0bcf286b862ce17044279dd5a5bddbf6cc493037cebcfc3d7b82a7c3e5d465bc358d26107d92564b63236de77dde5f-2"' :
                                             'id="xs-components-links-module-DashboardModule-284669ca98845c51df012b335df739451c0bcf286b862ce17044279dd5a5bddbf6cc493037cebcfc3d7b82a7c3e5d465bc358d26107d92564b63236de77dde5f-2"' }>
                                             <li class="link">
-                                                <a href="components/DashboardComponent-1.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >DashboardComponent</a>
+                                                <a href="components/DashboardComponent-2.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >DashboardComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/ShareUrlComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ShareUrlComponent</a>
@@ -1069,7 +1069,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-UsersModule-3c09a129397c11ef6ae6cf9f11ba34f4d00ca681192add90d8a46788d612132eb1591f7d32c3f5857fe2b07d1b241ebcf6f9287f7f5f673f9be89737c081cd03-1"' :
                                             'id="xs-components-links-module-UsersModule-3c09a129397c11ef6ae6cf9f11ba34f4d00ca681192add90d8a46788d612132eb1591f7d32c3f5857fe2b07d1b241ebcf6f9287f7f5f673f9be89737c081cd03-1"' }>
                                             <li class="link">
-                                                <a href="components/UsersComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >UsersComponent</a>
+                                                <a href="components/UsersComponent-1.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >UsersComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1211,16 +1211,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
-                                <a href="components/DashboardComponent-2.html" data-type="entity-link" >DashboardComponent</a>
-                            </li>
-                            <li class="link">
                                 <a href="components/FilterComponent-1.html" data-type="entity-link" >FilterComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/FilterComponent-2.html" data-type="entity-link" >FilterComponent</a>
-                            </li>
-                            <li class="link">
-                                <a href="components/UsersComponent-1.html" data-type="entity-link" >UsersComponent</a>
                             </li>
                         </ul>
                     </li>
