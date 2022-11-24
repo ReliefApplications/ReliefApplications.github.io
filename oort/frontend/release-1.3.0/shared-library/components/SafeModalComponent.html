@@ -82,6 +82,7 @@
     </p>
     <p class="comment">
                     <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="../interfaces/Change.html" target="_self" >OnChanges</a></code>
     </p>
 
 
@@ -141,6 +142,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
                             <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
@@ -325,6 +329,43 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">projects/safe/src/lib/components/ui/modal/modal.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <span ><b>ngOnInit</b></span>
@@ -364,7 +405,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnChanges, OnInit } from &#x27;@angular/core&#x27;;
 import { MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
 import { ModalSize } from &#x27;./modal-size.enum&#x27;;
 
@@ -376,7 +417,7 @@ import { ModalSize } from &#x27;./modal-size.enum&#x27;;
   templateUrl: &#x27;./modal.component.html&#x27;,
   styleUrls: [&#x27;./modal.component.scss&#x27;],
 })
-export class SafeModalComponent implements OnInit {
+export class SafeModalComponent implements OnInit, OnChanges {
   @Input() closable &#x3D; false;
   @Input() padding &#x3D; true;
   @Input() size: ModalSize | string &#x3D; &#x27;&#x27;;
@@ -389,6 +430,35 @@ export class SafeModalComponent implements OnInit {
   constructor(private dialogRef: MatDialogRef&lt;SafeModalComponent&gt;) {}
 
   ngOnInit(): void {
+    switch (this.size) {
+      case ModalSize.FULLSCREEN: {
+        this.dialogRef.addPanelClass(&#x27;fullscreen-dialog&#x27;);
+        break;
+      }
+      case ModalSize.SMALL: {
+        this.dialogRef.updateSize(&#x27;300px&#x27;);
+        break;
+      }
+      case ModalSize.MEDIUM: {
+        this.dialogRef.updateSize(&#x27;700px&#x27;);
+        break;
+      }
+      case ModalSize.BIG: {
+        this.dialogRef.updateSize(&#x27;100vw&#x27;, &#x27;98%&#x27;);
+        break;
+      }
+      default: {
+        this.dialogRef.removePanelClass(&#x27;fullscreen-dialog&#x27;);
+        break;
+      }
+    }
+
+    if (!this.padding) {
+      this.dialogRef.addPanelClass(&#x27;no-padding-dialog&#x27;);
+    }
+  }
+
+  ngOnChanges(): void {
     switch (this.size) {
       case ModalSize.FULLSCREEN: {
         this.dialogRef.addPanelClass(&#x27;fullscreen-dialog&#x27;);
