@@ -14,10 +14,6 @@
 <title>cluster_MapGeneralModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 636,-230.8 636,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_MapGeneralModule_exports</title>
-<polygon fill="none" stroke="black" points="237,-170.8 237,-222.8 407,-222.8 407,-170.8 237,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_MapGeneralModule_declarations</title>
 <polygon fill="none" stroke="black" points="460,-40.8 460,-92.8 628,-92.8 628,-40.8 460,-40.8"/>
@@ -25,6 +21,10 @@
 <g id="clust4" class="cluster">
 <title>cluster_MapGeneralModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 452,-92.8 452,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_MapGeneralModule_exports</title>
+<polygon fill="none" stroke="black" points="237,-170.8 237,-222.8 407,-222.8 407,-170.8 237,-170.8"/>
 </g>
 <!-- MapGeneralComponent -->
 <g id="node1" class="node">

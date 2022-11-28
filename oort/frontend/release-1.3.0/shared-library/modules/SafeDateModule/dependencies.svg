@@ -14,13 +14,13 @@
 <title>cluster_SafeDateModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 136,-230.8 136,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeDateModule_declarations</title>
-<polygon fill="none" stroke="black" points="18,-40.8 18,-92.8 126,-92.8 126,-40.8 18,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeDateModule_exports</title>
 <polygon fill="none" stroke="black" points="16,-170.8 16,-222.8 128,-222.8 128,-170.8 16,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeDateModule_declarations</title>
+<polygon fill="none" stroke="black" points="18,-40.8 18,-92.8 126,-92.8 126,-40.8 18,-40.8"/>
 </g>
 <!-- SafeDatePipe -->
 <g id="node1" class="node">

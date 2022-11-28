@@ -18,13 +18,13 @@
 <title>cluster_SafeAccessModule_declarations</title>
 <polygon fill="none" stroke="black" points="301,-40.8 301,-92.8 651,-92.8 651,-40.8 301,-40.8"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_SafeAccessModule_exports</title>
-<polygon fill="none" stroke="black" points="226,-170.8 226,-222.8 392,-222.8 392,-170.8 226,-170.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeAccessModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 293,-92.8 293,-40.8 16,-40.8"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_SafeAccessModule_exports</title>
+<polygon fill="none" stroke="black" points="226,-170.8 226,-222.8 392,-222.8 392,-170.8 226,-170.8"/>
 </g>
 <!-- SafeAccessComponent -->
 <g id="node1" class="node">

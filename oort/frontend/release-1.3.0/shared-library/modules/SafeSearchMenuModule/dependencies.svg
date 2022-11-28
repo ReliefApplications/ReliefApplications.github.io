@@ -14,13 +14,13 @@
 <title>cluster_SafeSearchMenuModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 508,-230.8 508,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeSearchMenuModule_exports</title>
-<polygon fill="none" stroke="black" points="133,-170.8 133,-222.8 329,-222.8 329,-170.8 133,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeSearchMenuModule_declarations</title>
 <polygon fill="none" stroke="black" points="308,-40.8 308,-92.8 500,-92.8 500,-40.8 308,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeSearchMenuModule_exports</title>
+<polygon fill="none" stroke="black" points="133,-170.8 133,-222.8 329,-222.8 329,-170.8 133,-170.8"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeSearchMenuModule_imports</title>
