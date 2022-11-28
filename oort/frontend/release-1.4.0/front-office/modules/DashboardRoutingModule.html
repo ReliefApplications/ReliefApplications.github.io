@@ -158,6 +158,14 @@ export const routes &#x3D; [
                 // canActivate: [SafePermissionGuard]
               },
               {
+                path: &#x27;notifications&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationNotificationsModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
+              {
                 path: &#x27;roles&#x27;,
                 children: [
                   {

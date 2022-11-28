@@ -399,8 +399,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="271"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:271</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="289"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:289</a></div>
                 </td>
             </tr>
 
@@ -476,8 +476,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="247"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:247</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="265"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:265</a></div>
                 </td>
             </tr>
 
@@ -555,8 +555,8 @@ On load, try to open the first application accessible to the user.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="261"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:261</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="279"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:279</a></div>
                 </td>
             </tr>
 
@@ -633,8 +633,8 @@ On load, try to open the first application accessible to the user.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="288"
-                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:288</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="306"
+                            class="link-to-prism">projects/front-office/src/app/dashboard/dashboard.component.ts:306</a></div>
                 </td>
             </tr>
 
@@ -1331,6 +1331,24 @@ export class DashboardComponent implements OnInit, OnDestroy {
               this.adminNavItems.push({
                 name: this.translate.instant(&#x27;common.distributionList.few&#x27;),
                 path: &#x60;./${this.appID}/settings/distribution-lists&#x60;,
+                icon: &#x27;mail&#x27;,
+              });
+            }
+            if (
+              this.permissions.some(
+                (x) &#x3D;&gt;
+                  (x.type &#x3D;&#x3D;&#x3D; Permissions.canManageCustomNotifications &amp;&amp;
+                    this.roles.some(
+                      (y) &#x3D;&gt;
+                        y.application?.id &#x3D;&#x3D;&#x3D; application.id &amp;&amp;
+                        y.permissions?.some((perm) &#x3D;&gt; perm.id &#x3D;&#x3D;&#x3D; x.id)
+                    )) ||
+                  (x.type &#x3D;&#x3D;&#x3D; Permissions.canManageApplications &amp;&amp; x.global)
+              )
+            ) {
+              this.adminNavItems.push({
+                name: this.translate.instant(&#x27;common.customNotification.few&#x27;),
+                path: &#x60;./${this.appID}/settings/notifications&#x60;,
                 icon: &#x27;mail&#x27;,
               });
             }

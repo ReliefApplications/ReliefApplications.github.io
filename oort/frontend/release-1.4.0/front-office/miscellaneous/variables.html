@@ -1786,6 +1786,14 @@ All routes starting with &#39;/auth&#39; should redirect to &#39;login&#39; page
                 // canActivate: [SafePermissionGuard]
               },
               {
+                path: &#x27;notifications&#x27;,
+                loadChildren: () &#x3D;&gt;
+                  import(&#x27;@safe/builder&#x27;).then(
+                    (m) &#x3D;&gt; m.SafeApplicationNotificationsModule
+                  ),
+                // canActivate: [SafePermissionGuard]
+              },
+              {
                 path: &#x27;roles&#x27;,
                 children: [
                   {
