@@ -946,7 +946,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-RoleSummaryModule-b12d2e98131e8d506d839512d0194308e3a55c922017ca342ab66af12613c840998a58dcf05f4d0657c12e6637e028a7b996ce8662d668b9e9fde0185efb4ebb-2"' :
                                             'id="xs-components-links-module-RoleSummaryModule-b12d2e98131e8d506d839512d0194308e3a55c922017ca342ab66af12613c840998a58dcf05f4d0657c12e6637e028a7b996ce8662d668b9e9fde0185efb4ebb-2"' }>
                                             <li class="link">
-                                                <a href="components/RoleSummaryComponent-2.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RoleSummaryComponent</a>
+                                                <a href="components/RoleSummaryComponent-1.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RoleSummaryComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1215,6 +1215,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/FilterComponent-2.html" data-type="entity-link" >FilterComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/RoleSummaryComponent-2.html" data-type="entity-link" >RoleSummaryComponent</a>
                             </li>
                         </ul>
                     </li>
