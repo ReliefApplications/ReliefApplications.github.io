@@ -712,13 +712,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PullJobsModule.html" data-type="entity-link" >PullJobsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-PullJobsModule-120709c79856d24dc9efaf71f5cb04d418188099ec6ce6da5e1affe9c764e76b8af9d9b32693fdb7b6e511b561cb42cd29918206b2f367f172984b2b7c27a09c"' : 'data-target="#xs-components-links-module-PullJobsModule-120709c79856d24dc9efaf71f5cb04d418188099ec6ce6da5e1affe9c764e76b8af9d9b32693fdb7b6e511b561cb42cd29918206b2f367f172984b2b7c27a09c"' }>
+                                            'data-target="#components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' : 'data-target="#xs-components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-120709c79856d24dc9efaf71f5cb04d418188099ec6ce6da5e1affe9c764e76b8af9d9b32693fdb7b6e511b561cb42cd29918206b2f367f172984b2b7c27a09c"' :
-                                            'id="xs-components-links-module-PullJobsModule-120709c79856d24dc9efaf71f5cb04d418188099ec6ce6da5e1affe9c764e76b8af9d9b32693fdb7b6e511b561cb42cd29918206b2f367f172984b2b7c27a09c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' :
+                                            'id="xs-components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' }>
                                             <li class="link">
                                                 <a href="components/PullJobModalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PullJobModalComponent</a>
                                             </li>
@@ -946,7 +946,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-RoleSummaryModule-b12d2e98131e8d506d839512d0194308e3a55c922017ca342ab66af12613c840998a58dcf05f4d0657c12e6637e028a7b996ce8662d668b9e9fde0185efb4ebb-2"' :
                                             'id="xs-components-links-module-RoleSummaryModule-b12d2e98131e8d506d839512d0194308e3a55c922017ca342ab66af12613c840998a58dcf05f4d0657c12e6637e028a7b996ce8662d668b9e9fde0185efb4ebb-2"' }>
                                             <li class="link">
-                                                <a href="components/RoleSummaryComponent-1.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RoleSummaryComponent</a>
+                                                <a href="components/RoleSummaryComponent-2.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >RoleSummaryComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1215,9 +1215,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/FilterComponent-2.html" data-type="entity-link" >FilterComponent</a>
-                            </li>
-                            <li class="link">
-                                <a href="components/RoleSummaryComponent-2.html" data-type="entity-link" >RoleSummaryComponent</a>
                             </li>
                         </ul>
                     </li>
