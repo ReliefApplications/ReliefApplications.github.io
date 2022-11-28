@@ -14,13 +14,13 @@
 <title>cluster_RoleResourcesModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1478,-230.8 1478,-32.8 8,-32.8"/>
 </g>
-<g id="clust8" class="cluster">
-<title>cluster_RoleResourcesModule_exports</title>
-<polygon fill="none" stroke="black" points="566,-170.8 566,-222.8 750,-222.8 750,-170.8 566,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_RoleResourcesModule_declarations</title>
 <polygon fill="none" stroke="black" points="735,-40.8 735,-92.8 1470,-92.8 1470,-40.8 735,-40.8"/>
+</g>
+<g id="clust8" class="cluster">
+<title>cluster_RoleResourcesModule_exports</title>
+<polygon fill="none" stroke="black" points="566,-170.8 566,-222.8 750,-222.8 750,-170.8 566,-170.8"/>
 </g>
 <g id="clust7" class="cluster">
 <title>cluster_RoleResourcesModule_imports</title>

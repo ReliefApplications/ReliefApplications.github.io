@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/templates/components/edit-template-modal/edit-template-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/ui/core-grid/errors-modal/errors-modal.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Model for the data input</p>
+                <p>Model for the dialog data</p>
 
             </p>
 
@@ -91,24 +91,15 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#content" 
+                                        <a href="#errors" 
 >
-                                            content
+                                            errors
                                         </a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#name" 
+                                        <a href="#incrementalId" 
 >
-                                            name
-                                        </a>
-                                </li>
-                                <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#type" 
->
-                                            type
+                                            incrementalId
                                         </a>
                                 </li>
                             </ul>
@@ -126,9 +117,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="content"></a>
-                                        <span class="name "><b>content</b>
-                                            <a href="#content">
+                                        <a name="errors"></a>
+                                        <span class="name "><b>errors</b>
+                                            <a href="#errors">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -136,7 +127,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>content:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>errors:     <code>literal type[]</code>
 </code>
                                     </td>
                                 </tr>
@@ -144,16 +135,11 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>    <code>literal type[]</code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -164,9 +150,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="name"></a>
-                                        <span class="name "><b>name</b>
-                                            <a href="#name">
+                                        <a name="incrementalId"></a>
+                                        <span class="name "><b>incrementalId</b>
+                                            <a href="#incrementalId">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -174,7 +160,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>name:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>incrementalId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -187,49 +173,6 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="type"></a>
-                                        <span class="name "><b>type</b>
-                                            <a href="#type">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>type:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -242,62 +185,38 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { SafeEditorService } from &#x27;../../../../services/editor/editor.service&#x27;;
-import { EMAIL_EDITOR_CONFIG } from &#x27;../../../../const/tinymce.const&#x27;;
-import get from &#x27;lodash/get&#x27;;
 
-/** Model for the data input */
+/** Model for the dialog data */
 interface DialogData {
-  name?: string;
-  type?: string;
-  content?: any;
+  incrementalId: string;
+  errors: {
+    question: string;
+    errors: string[];
+  }[];
 }
 
-/** Component for editing a template */
+/** Component for the errors modal component */
 @Component({
-  selector: &#x27;safe-edit-template&#x27;,
-  templateUrl: &#x27;./edit-template-modal.component.html&#x27;,
-  styleUrls: [&#x27;./edit-template-modal.component.scss&#x27;],
+  selector: &#x27;safe-errors-modal&#x27;,
+  templateUrl: &#x27;./errors-modal.component.html&#x27;,
+  styleUrls: [&#x27;./errors-modal.component.scss&#x27;],
 })
-export class EditTemplateModalComponent implements OnInit {
-  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  form: FormGroup &#x3D; new FormGroup({});
-
-  /** tinymce editor */
-  public editor: any &#x3D; EMAIL_EDITOR_CONFIG;
+export class SafeErrorsModalComponent implements OnInit {
+  public displayedColumns &#x3D; [&#x27;question&#x27;, &#x27;errors&#x27;];
 
   /**
-   * Component for editing a template
+   * Constructor of the component
    *
-   * @param formBuilder Angular form builder service
-   * @param dialogRef Material dialog ref of the component
-   * @param data Data input of the modal
-   * @param editorService Editor service used to get main URL and current language
+   * @param dialogRef The reference of the dialog
+   * @param data The data for the dialog
    */
   constructor(
-    private formBuilder: FormBuilder,
-    public dialogRef: MatDialogRef&lt;EditTemplateModalComponent&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    private editorService: SafeEditorService
-  ) {
-    // Set the editor base url based on the environment file
-    this.editor.base_url &#x3D; editorService.url;
-    // Set the editor language
-    this.editor.language &#x3D; editorService.language;
-  }
+    public dialogRef: MatDialogRef&lt;SafeErrorsModalComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+  ) {}
 
-  /** Build the form. */
-  ngOnInit(): void {
-    // In the future, change this according to the type of template
-    this.form &#x3D; this.formBuilder.group({
-      name: [get(this.data, &#x27;name&#x27;, null), Validators.required],
-      type: [get(this.data, &#x27;type&#x27;, &#x27;email&#x27;), Validators.required],
-      subject: [get(this.data, &#x27;content.subject&#x27;, null), Validators.required],
-      body: [get(this.data, &#x27;content.body&#x27;, &#x27;&#x27;), Validators.required],
-    });
-  }
+  ngOnInit(): void {}
 }
 </code></pre>
     </div>

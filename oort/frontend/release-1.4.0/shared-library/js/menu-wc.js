@@ -190,6 +190,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/EditNotificationModalModule.html" data-type="entity-link" >EditNotificationModalModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-EditNotificationModalModule-ad999b4e9e0c105ede3a79d9d1c4d5bb027d6509531d9e2a4cba0b83cabc746ea6fe1933bd8943c02e5b456a851c172eb32ef73b469b0a16a4c4416859893b48"' : 'data-target="#xs-components-links-module-EditNotificationModalModule-ad999b4e9e0c105ede3a79d9d1c4d5bb027d6509531d9e2a4cba0b83cabc746ea6fe1933bd8943c02e5b456a851c172eb32ef73b469b0a16a4c4416859893b48"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-EditNotificationModalModule-ad999b4e9e0c105ede3a79d9d1c4d5bb027d6509531d9e2a4cba0b83cabc746ea6fe1933bd8943c02e5b456a851c172eb32ef73b469b0a16a4c4416859893b48"' :
+                                            'id="xs-components-links-module-EditNotificationModalModule-ad999b4e9e0c105ede3a79d9d1c4d5bb027d6509531d9e2a4cba0b83cabc746ea6fe1933bd8943c02e5b456a851c172eb32ef73b469b0a16a4c4416859893b48"' }>
+                                            <li class="link">
+                                                <a href="components/EditNotificationModalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >EditNotificationModalComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/EditRoleAutoAssignmentModalModule.html" data-type="entity-link" >EditRoleAutoAssignmentModalModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -406,6 +423,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             'id="xs-components-links-module-MapPropertiesModule-ce3e7c3557e2653ddb1fdcba08ffbeb74664decd8db0c43f470e902cfcc29a376ad570932b60c061eda9946228e490b9bc6909600560233c48180b15ef7208f3"' }>
                                             <li class="link">
                                                 <a href="components/MapPropertiesComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >MapPropertiesComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/NotificationsModule.html" data-type="entity-link" >NotificationsModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-NotificationsModule-36fa0f5ae9b40086a5e0d3cd59d069dc7e18d95c17245595e04f4ace82d0272384756ffa27b9bd6d469768998541ff86d98393c631e0a7a0afe41029a340985a"' : 'data-target="#xs-components-links-module-NotificationsModule-36fa0f5ae9b40086a5e0d3cd59d069dc7e18d95c17245595e04f4ace82d0272384756ffa27b9bd6d469768998541ff86d98393c631e0a7a0afe41029a340985a"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NotificationsModule-36fa0f5ae9b40086a5e0d3cd59d069dc7e18d95c17245595e04f4ace82d0272384756ffa27b9bd6d469768998541ff86d98393c631e0a7a0afe41029a340985a"' :
+                                            'id="xs-components-links-module-NotificationsModule-36fa0f5ae9b40086a5e0d3cd59d069dc7e18d95c17245595e04f4ace82d0272384756ffa27b9bd6d469768998541ff86d98393c631e0a7a0afe41029a340985a"' }>
+                                            <li class="link">
+                                                <a href="components/NotificationsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NotificationsComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -676,6 +710,26 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeApplicationNotificationsModule.html" data-type="entity-link" >SafeApplicationNotificationsModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-SafeApplicationNotificationsModule-63969065320d95e3329f0f26c29eecea19c0b2ab698c189a292b4d3c81eb9c959ee68b54160a7197904f313f733a868611c0fc660bb04acd5291d146bccc6ea6"' : 'data-target="#xs-components-links-module-SafeApplicationNotificationsModule-63969065320d95e3329f0f26c29eecea19c0b2ab698c189a292b4d3c81eb9c959ee68b54160a7197904f313f733a868611c0fc660bb04acd5291d146bccc6ea6"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafeApplicationNotificationsModule-63969065320d95e3329f0f26c29eecea19c0b2ab698c189a292b4d3c81eb9c959ee68b54160a7197904f313f733a868611c0fc660bb04acd5291d146bccc6ea6"' :
+                                            'id="xs-components-links-module-SafeApplicationNotificationsModule-63969065320d95e3329f0f26c29eecea19c0b2ab698c189a292b4d3c81eb9c959ee68b54160a7197904f313f733a868611c0fc660bb04acd5291d146bccc6ea6"' }>
+                                            <li class="link">
+                                                <a href="components/SafeApplicationNotificationsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafeApplicationNotificationsComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeApplicationNotificationsRoutingModule.html" data-type="entity-link" >SafeApplicationNotificationsRoutingModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeApplicationsSummaryModule.html" data-type="entity-link" >SafeApplicationsSummaryModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -714,6 +768,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                         </ul>
                                     </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeApplicationTemplatesRoutingModule.html" data-type="entity-link" >SafeApplicationTemplatesRoutingModule</a>
                             </li>
                             <li class="link">
                                 <a href="modules/SafeApplicationTemplatesRoutingModule.html" data-type="entity-link" >SafeApplicationTemplatesRoutingModule</a>
@@ -2667,6 +2724,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/SafeApiProxyService.html" data-type="entity-link" >SafeApiProxyService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/SafeApplicationNotificationsService.html" data-type="entity-link" >SafeApplicationNotificationsService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/SafeApplicationService.html" data-type="entity-link" >SafeApplicationService</a>
                                 </li>
                                 <li class="link">
@@ -2773,6 +2833,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/AddChannelMutationResponse.html" data-type="entity-link" >AddChannelMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/AddCustomNotificationMutationResponse.html" data-type="entity-link" >AddCustomNotificationMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/AddDistributionListMutationResponse.html" data-type="entity-link" >AddDistributionListMutationResponse</a>
@@ -2928,6 +2991,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ConvertRecordMutationResponse.html" data-type="entity-link" >ConvertRecordMutationResponse</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/CustomNotification.html" data-type="entity-link" >CustomNotification</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Dashboard.html" data-type="entity-link" >Dashboard</a>
                             </li>
                             <li class="link">
@@ -2935,6 +3001,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/DeleteChannelMutationResponse.html" data-type="entity-link" >DeleteChannelMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DeleteCustomNotificationMutationResponse.html" data-type="entity-link" >DeleteCustomNotificationMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/DeleteDistributionListMutationResponse.html" data-type="entity-link" >DeleteDistributionListMutationResponse</a>
@@ -3175,6 +3244,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetChannelsQueryResponse-1.html" data-type="entity-link" >GetChannelsQueryResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GetCustomNotificationsQueryResponse.html" data-type="entity-link" >GetCustomNotificationsQueryResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/GetFormByIdQueryResponse.html" data-type="entity-link" >GetFormByIdQueryResponse</a>
@@ -3511,6 +3583,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ToggleApplicationLockMutationResponse.html" data-type="entity-link" >ToggleApplicationLockMutationResponse</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/UpdateCustomNotificationMutationResponse.html" data-type="entity-link" >UpdateCustomNotificationMutationResponse</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/UpdateDistributionListMutationResponse.html" data-type="entity-link" >UpdateDistributionListMutationResponse</a>
