@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widget-grid/floating-options/menu/tile-data/tile-data.component.ts</code>
+            <code>projects/safe/src/lib/components/widgets/map-settings/map-layers/map-marker-rule/map-marker-rule.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Model for dialog data</p>
+                <p>Interface of dialog data of the component</p>
 
             </p>
 
@@ -91,15 +91,21 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#template" 
+                                        <a href="#fields" 
 >
-                                            template
+                                            fields
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#tile" 
+                                        <a href="#query" 
 >
-                                            tile
+                                            query
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#value" 
+>
+                                            value
                                         </a>
                                 </li>
                             </ul>
@@ -117,9 +123,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="template"></a>
-                                        <span class="name "><b>template</b>
-                                            <a href="#template">
+                                        <a name="fields"></a>
+                                        <span class="name "><b>fields</b>
+                                            <a href="#fields">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -127,7 +133,40 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>template:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>fields:     <code>any[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>any[]</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="query"></a>
+                                        <span class="name "><b>query</b>
+                                            <a href="#query">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>query:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -150,9 +189,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="tile"></a>
-                                        <span class="name "><b>tile</b>
-                                            <a href="#tile">
+                                        <a name="value"></a>
+                                        <span class="name "><b>value</b>
+                                            <a href="#value">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -160,7 +199,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>tile:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>value:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -184,68 +223,45 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  Component,
-  OnInit,
-  Inject,
-  ViewChild,
-  ViewContainerRef,
-  AfterViewInit,
-} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
 import { FormGroup } from &#x27;@angular/forms&#x27;;
-import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
+import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
+import { markerRuleForm } from &#x27;../../map-forms&#x27;;
 
-/** Model for dialog data */
+/** Interface of dialog data of the component */
 interface DialogData {
-  tile: any;
-  template: any;
+  value: any;
+  fields: any[];
+  query: any;
 }
 
-/** Component for a data tile */
+/**
+ * Single Marker Rule component.
+ * Used in dialog.
+ */
 @Component({
-  selector: &#x27;safe-tile-data&#x27;,
-  templateUrl: &#x27;./tile-data.component.html&#x27;,
-  styleUrls: [&#x27;./tile-data.component.scss&#x27;],
+  selector: &#x27;safe-map-marker-rule&#x27;,
+  templateUrl: &#x27;./map-marker-rule.component.html&#x27;,
+  styleUrls: [&#x27;./map-marker-rule.component.scss&#x27;],
 })
-/** Modal content to edit the settings of a component. */
-export class SafeTileDataComponent implements OnInit, AfterViewInit {
-  // &#x3D;&#x3D;&#x3D; REACTIVE FORM &#x3D;&#x3D;&#x3D;
-  tileForm?: FormGroup;
+export class MapMarkerRuleComponent implements OnInit {
+  public form!: FormGroup;
 
-  // &#x3D;&#x3D;&#x3D; TEMPLATE REFERENCE &#x3D;&#x3D;&#x3D;
-  @ViewChild(&#x27;settingsContainer&#x27;, { read: ViewContainerRef })
-  settingsContainer: any;
+  public fields: any[] &#x3D; [];
+  public query: any;
 
   /**
-   * Constructor of a data tile
+   * Single Marker Rule component.
    *
-   * @param dialogRef Reference to a dialog opened via the material dialog service
-   * @param data The dialog data
+   * @param data dialog data
    */
-  constructor(
-    public dialogRef: MatDialogRef&lt;SafeTileDataComponent&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
+    this.form &#x3D; markerRuleForm(data.value);
+    this.fields &#x3D; data.fields;
+    this.query &#x3D; data.query;
+  }
 
   ngOnInit(): void {}
-
-  /** Once the template is ready, inject the settings component linked to the widget type passed as a parameter. */
-  ngAfterViewInit(): void {
-    const componentRef &#x3D; this.settingsContainer.createComponent(
-      this.data.template
-    );
-    componentRef.instance.tile &#x3D; this.data.tile;
-    componentRef.instance.change.subscribe((e: any) &#x3D;&gt; {
-      this.tileForm &#x3D; e;
-    });
-  }
-
-  /**
-   * Closes the modal sending tile form value.
-   */
-  onSubmit(): void {
-    this.dialogRef.close(this.tileForm?.getRawValue());
-  }
 }
 </code></pre>
     </div>
