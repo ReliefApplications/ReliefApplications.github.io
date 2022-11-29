@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/resource-dropdown/graphql/queries.ts</code>
+            <code>projects/safe/src/lib/components/role-summary/graphql/queries.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Model for GetResourcesQueryResponse object</p>
+                <p>Interface of Get Resources Query response</p>
 
             </p>
 
@@ -185,36 +185,148 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
+import { Application } from &#x27;../../../models/application.model&#x27;;
 import { Resource } from &#x27;../../../models/resource.model&#x27;;
+import { Channel } from &#x27;../../../models/channel.model&#x27;;
+import { Group, Permission, Role } from &#x27;../../../models/user.model&#x27;;
+import { Workflow } from &#x27;../../../models/workflow.model&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET RESOURCE BY ID &#x3D;&#x3D;&#x3D;
-
-/** Graphql request for getting the name of a resource by its id */
-export const GET_SHORT_RESOURCE_BY_ID &#x3D; gql&#x60;
-  query GetShortResourceById($id: ID!) {
-    resource(id: $id) {
+/** Get role by id GraphQL query */
+export const GET_ROLE &#x3D; gql&#x60;
+  query GetRole($id: ID!) {
+    role(id: $id) {
       id
-      name
+      title
+      description
+      permissions {
+        id
+        type
+      }
+      application {
+        id
+      }
+      autoAssignment
     }
   }
 &#x60;;
 
-/** Model for GetResourceByIdQueryResponse object */
-export interface GetResourceByIdQueryResponse {
+/** Interface of Get role query */
+export interface GetRoleQueryResponse {
   loading: boolean;
-  resource: Resource;
+  role: Role;
 }
 
-// &#x3D;&#x3D;&#x3D; GET RESOURCES &#x3D;&#x3D;&#x3D;
+/** Graphql request for getting permissions */
+export const GET_PERMISSIONS &#x3D; gql&#x60;
+  query GetPermissions($application: Boolean) {
+    permissions(application: $application) {
+      id
+      type
+      global
+    }
+  }
+&#x60;;
 
-/** Graphql request for getting resources */
+/** Model for GetPermissionsQueryResponse object */
+export interface GetPermissionsQueryResponse {
+  loading: boolean;
+  permissions: Permission[];
+}
+
+/** Graphql request for getting channels (optionnally by an application id) */
+export const GET_CHANNELS &#x3D; gql&#x60;
+  query getChannels($application: ID) {
+    channels(application: $application) {
+      id
+      title
+      application {
+        id
+        name
+      }
+    }
+  }
+&#x60;;
+
+/** Model for GetChannelsQueryResponse object */
+export interface GetChannelsQueryResponse {
+  loading: boolean;
+  channels: Channel[];
+}
+
+/** Graphql request for getting the features of an application by its id */
+export const GET_APPLICATION_FEATURES &#x3D; gql&#x60;
+  query getApplicationFeatures($id: ID!) {
+    application(id: $id) {
+      id
+      pages {
+        id
+        name
+        type
+        content
+        permissions {
+          canSee {
+            id
+          }
+        }
+      }
+    }
+  }
+&#x60;;
+
+/** Model for the response of the getApplicationFeatures query */
+export interface GetApplicationFeaturesQueryResponse {
+  application: Application;
+}
+
+/** Graphql request for getting the steps of a workflow by its id */
+export const GET_WORKFLOW_STEPS &#x3D; gql&#x60;
+  query getWorkflowSteps($id: ID!) {
+    workflow(id: $id) {
+      id
+      steps {
+        id
+        name
+        type
+        content
+        permissions {
+          canSee {
+            id
+          }
+        }
+      }
+    }
+  }
+&#x60;;
+
+/** Model for the response of the getWorkflowSteps query */
+export interface GetWorkflowStepsQueryResponse {
+  workflow: Workflow;
+}
+
+/** Graphql query for getting resources with a filter and more data */
 export const GET_RESOURCES &#x3D; gql&#x60;
-  query GetResources($first: Int, $afterCursor: ID, $sortField: String) {
-    resources(first: $first, afterCursor: $afterCursor, sortField: $sortField) {
+  query GetResources(
+    $first: Int
+    $afterCursor: ID
+    $filter: JSON
+    $sortField: String
+    $sortOrder: String
+    $role: ID!
+  ) {
+    resources(
+      first: $first
+      afterCursor: $afterCursor
+      filter: $filter
+      sortField: $sortField
+      sortOrder: $sortOrder
+    ) {
       edges {
         node {
           id
+          queryName
           name
+          rolePermissions(role: $role)
+          fields
         }
         cursor
       }
@@ -227,7 +339,7 @@ export const GET_RESOURCES &#x3D; gql&#x60;
   }
 &#x60;;
 
-/** Model for GetResourcesQueryResponse object */
+/** Interface of Get Resources Query response */
 export interface GetResourcesQueryResponse {
   loading: boolean;
   resources: {
@@ -241,6 +353,40 @@ export interface GetResourcesQueryResponse {
     };
     totalCount: number;
   };
+}
+
+/** GraphQL query to get a single resource */
+export const GET_RESOURCE &#x3D; gql&#x60;
+  query GetResources($id: ID!, $role: ID!) {
+    resource(id: $id) {
+      id
+      queryName
+      name
+      rolePermissions(role: $role)
+      metadata
+      fields
+    }
+  }
+&#x60;;
+
+/** Interface of Get Resource Query response */
+export interface GetResourceQueryResponse {
+  resource: Resource;
+}
+
+/** Graphql request for getting groups */
+export const GET_GROUPS &#x3D; gql&#x60;
+  query GetGroups {
+    groups {
+      id
+      title
+    }
+  }
+&#x60;;
+
+/** Model for GetGroupsQueryResponse object */
+export interface GetGroupsQueryResponse {
+  groups: Group[];
 }
 </code></pre>
     </div>
