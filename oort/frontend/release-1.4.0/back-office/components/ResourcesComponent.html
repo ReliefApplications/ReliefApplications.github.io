@@ -392,8 +392,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="203"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:203</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="204"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:204</a></div>
                 </td>
             </tr>
 
@@ -507,8 +507,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="313"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:313</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="314"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:314</a></div>
                 </td>
             </tr>
 
@@ -547,8 +547,8 @@ Creates a new form on closed if result.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="254"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:254</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:255</a></div>
                 </td>
             </tr>
 
@@ -623,8 +623,8 @@ Creates a new form on closed if result.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="163"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:163</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:164</a></div>
                 </td>
             </tr>
 
@@ -775,8 +775,8 @@ Creates a new form on closed if result.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="193"
-                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:193</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="194"
+                            class="link-to-prism">projects/back-office/src/app/dashboard/pages/resources/resources.component.ts:194</a></div>
                 </td>
             </tr>
 
@@ -1258,6 +1258,7 @@ export class ResourcesComponent implements OnInit {
       if (e.pageSize &gt; this.pageInfo.pageSize) {
         first -&#x3D; this.pageInfo.pageSize;
       }
+      this.pageInfo.pageSize &#x3D; first;
       this.loading &#x3D; true;
       this.resourcesQuery.fetchMore({
         variables: {
@@ -1489,7 +1490,7 @@ export class ResourcesComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;flex gap-8 justify-between mb-8&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;flex gap-8 justify-between mb-8 flex-col sm:flex-row&quot;&gt;
   &lt;!-- FILTERING --&gt;
   &lt;app-filter
     (filter)&#x3D;&quot;onFilter($event)&quot;
@@ -1578,13 +1579,17 @@ export class ResourcesComponent implements OnInit {
     &lt;/table&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;!-- Loading indicator --&gt;
 &lt;safe-skeleton-table
   *ngIf&#x3D;&quot;loading&quot;
   [columns]&#x3D;&quot;[&#x27;common.name&#x27;, &#x27;common.createdOn&#x27;, &#x27;common.record.few&#x27;]&quot;
   [actions]&#x3D;&quot;true&quot;
 &gt;
 &lt;/safe-skeleton-table&gt;
+&lt;!-- Pagination --&gt;
 &lt;mat-paginator
+  [disabled]&#x3D;&quot;loading || updating&quot;
+  [pageIndex]&#x3D;&quot;pageInfo.pageIndex&quot;
   [pageSize]&#x3D;&quot;pageInfo.pageSize&quot;
   [pageSizeOptions]&#x3D;&quot;[10, 25, 50]&quot;
   [length]&#x3D;&quot;pageInfo.length&quot;
@@ -1644,8 +1649,8 @@ export class ResourcesComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="flex gap-8 justify-between mb-8">  <!-- FILTERING -->  <app-filter    (filter)="onFilter($event)"    [loading]="filterLoading"  ></app-filter>  <!-- ACTIONS -->  <div class="flex items-center">    <safe-button      icon="add"      category="secondary"      variant="primary"      (click)="onAdd()"    >      {{ \'models.resource.create\' | translate }}    </safe-button>  </div></div><!-- Table container --><div class="overflow-x-hidden">  <!-- Table scroll container -->  <div class="overflow-auto">    <table      *ngIf="!loading"      mat-table      [dataSource]="resources"      matSort      (matSortChange)="onSort($event)"    >      <ng-container matColumnDef="name">        <th mat-header-cell *matHeaderCellDef>          <span class="headerTitle" mat-sort-header="name">            {{ \'common.name\' | translate }}          </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.name }}</td>      </ng-container>      <ng-container matColumnDef="createdAt">        <th mat-header-cell *matHeaderCellDef>          <span class="headerTitle" mat-sort-header="createdAt">            {{ \'common.createdOn\' | translate }}          </span>        </th>        <td mat-cell *matCellDef="let element">          {{ element.createdAt | safeDate }}        </td>      </ng-container>      <ng-container matColumnDef="recordsCount">        <th mat-header-cell *matHeaderCellDef>          <span class="headerTitle">            {{ \'common.record.few\' | translate }}          </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.recordsCount }}</td>      </ng-container>      <ng-container matColumnDef="actions" [stickyEnd]="true">        <th mat-header-cell *matHeaderCellDef></th>        <td mat-cell *matCellDef="let element">          <safe-button            [isIcon]="true"            icon="more_vert"            [matMenuTriggerFor]="menu"            (click)="$event.stopPropagation()"            [disabled]="!element.canDelete"          >          </safe-button>          <mat-menu #menu="matMenu">            <button mat-menu-item (click)="onDelete(element)">              <mat-icon>delete</mat-icon>              {{ \'common.delete\' | translate }}            </button>          </mat-menu>        </td>      </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr        class="cursor-pointer"        mat-row        *matRowDef="let row; columns: displayedColumns"        [routerLink]="[\'/resources\', row.id]"      ></tr>    </table>  </div></div><safe-skeleton-table  *ngIf="loading"  [columns]="[\'common.name\', \'common.createdOn\', \'common.record.few\']"  [actions]="true"></safe-skeleton-table><mat-paginator  [pageSize]="pageInfo.pageSize"  [pageSizeOptions]="[10, 25, 50]"  [length]="pageInfo.length"  aria-label="Select page of resources"  (page)="onPage($event)"></mat-paginator></div>'
-    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'CalculatedFieldsTabComponent', 'selector': 'app-calculated-fields-tab'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobModalComponent', 'selector': 'app-pull-job-modal'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
+        var COMPONENT_TEMPLATE = '<div><div class="flex gap-8 justify-between mb-8 flex-col sm:flex-row">  <!-- FILTERING -->  <app-filter    (filter)="onFilter($event)"    [loading]="filterLoading"  ></app-filter>  <!-- ACTIONS -->  <div class="flex items-center">    <safe-button      icon="add"      category="secondary"      variant="primary"      (click)="onAdd()"    >      {{ \'models.resource.create\' | translate }}    </safe-button>  </div></div><!-- Table container --><div class="overflow-x-hidden">  <!-- Table scroll container -->  <div class="overflow-auto">    <table      *ngIf="!loading"      mat-table      [dataSource]="resources"      matSort      (matSortChange)="onSort($event)"    >      <ng-container matColumnDef="name">        <th mat-header-cell *matHeaderCellDef>          <span class="headerTitle" mat-sort-header="name">            {{ \'common.name\' | translate }}          </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.name }}</td>      </ng-container>      <ng-container matColumnDef="createdAt">        <th mat-header-cell *matHeaderCellDef>          <span class="headerTitle" mat-sort-header="createdAt">            {{ \'common.createdOn\' | translate }}          </span>        </th>        <td mat-cell *matCellDef="let element">          {{ element.createdAt | safeDate }}        </td>      </ng-container>      <ng-container matColumnDef="recordsCount">        <th mat-header-cell *matHeaderCellDef>          <span class="headerTitle">            {{ \'common.record.few\' | translate }}          </span>        </th>        <td mat-cell *matCellDef="let element">{{ element.recordsCount }}</td>      </ng-container>      <ng-container matColumnDef="actions" [stickyEnd]="true">        <th mat-header-cell *matHeaderCellDef></th>        <td mat-cell *matCellDef="let element">          <safe-button            [isIcon]="true"            icon="more_vert"            [matMenuTriggerFor]="menu"            (click)="$event.stopPropagation()"            [disabled]="!element.canDelete"          >          </safe-button>          <mat-menu #menu="matMenu">            <button mat-menu-item (click)="onDelete(element)">              <mat-icon>delete</mat-icon>              {{ \'common.delete\' | translate }}            </button>          </mat-menu>        </td>      </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr        class="cursor-pointer"        mat-row        *matRowDef="let row; columns: displayedColumns"        [routerLink]="[\'/resources\', row.id]"      ></tr>    </table>  </div></div><!-- Loading indicator --><safe-skeleton-table  *ngIf="loading"  [columns]="[\'common.name\', \'common.createdOn\', \'common.record.few\']"  [actions]="true"></safe-skeleton-table><!-- Pagination --><mat-paginator  [disabled]="loading || updating"  [pageIndex]="pageInfo.pageIndex"  [pageSize]="pageInfo.pageSize"  [pageSizeOptions]="[10, 25, 50]"  [length]="pageInfo.length"  aria-label="Select page of resources"  (page)="onPage($event)"></mat-paginator></div>'
+    var COMPONENTS = [{'name': 'AddApiConfigurationComponent', 'selector': 'app-add-api-configuration'},{'name': 'AddChannelModalComponent', 'selector': 'app-add-channel-modal'},{'name': 'AddFormModalComponent', 'selector': 'app-add-form-modal'},{'name': 'AddPageComponent', 'selector': 'app-add-page'},{'name': 'AddReferenceDataComponent', 'selector': 'app-add-reference-data'},{'name': 'AddResourceModalComponent', 'selector': 'app-add-resource-modal'},{'name': 'AddStepComponent', 'selector': 'app-add-step'},{'name': 'AggregationsTabComponent', 'selector': 'app-aggregations-tab'},{'name': 'ApiConfigurationComponent', 'selector': 'app-api-configuration'},{'name': 'ApiConfigurationsComponent', 'selector': 'app-api-configurations'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ApplicationComponent', 'selector': 'app-application'},{'name': 'ApplicationsComponent', 'selector': 'app-applications'},{'name': 'AppPreviewComponent', 'selector': 'app-app-preview'},{'name': 'CalculatedFieldsTabComponent', 'selector': 'app-calculated-fields-tab'},{'name': 'ChannelsComponent', 'selector': 'app-channels'},{'name': 'ChoseRoleComponent', 'selector': 'app-chose-role'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DuplicateApplicationModalComponent', 'selector': 'app-duplicate-application-modal'},{'name': 'EditChannelModalComponent', 'selector': 'app-edit-channel-modal'},{'name': 'EditPullJobModalComponent', 'selector': 'app-edit-pull-job-modal'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FormAnswerComponent', 'selector': 'app-form-answer'},{'name': 'FormBuilderComponent', 'selector': 'app-form-builder'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormRecordsComponent', 'selector': 'app-form-records'},{'name': 'FormsComponent', 'selector': 'app-forms'},{'name': 'FormsTabComponent', 'selector': 'app-forms-tab'},{'name': 'HistoryComponent', 'selector': 'app-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutsTabComponent', 'selector': 'app-layouts-tab'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PositionAttributesComponent', 'selector': 'app-position'},{'name': 'PositionComponent', 'selector': 'app-position'},{'name': 'PositionModalComponent', 'selector': 'app-position-modal'},{'name': 'PreviewToolbarComponent', 'selector': 'app-preview-toolbar'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PullJobsComponent', 'selector': 'app-pull-jobs'},{'name': 'RecordsTabComponent', 'selector': 'app-records-tab'},{'name': 'ReferenceDataComponent', 'selector': 'app-reference-data'},{'name': 'ReferenceDatasComponent', 'selector': 'app-reference-datas'},{'name': 'ResourceComponent', 'selector': 'app-resource'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'RoleSummaryComponent', 'selector': 'app-role-summary'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'ShareUrlComponent', 'selector': 'app-share-url'},{'name': 'SubscriptionModalComponent', 'selector': 'app-subscription-modal'},{'name': 'SubscriptionsComponent', 'selector': 'app-subscriptions'},{'name': 'UpdateRecordComponent', 'selector': 'app-update-record'},{'name': 'UploadMenuComponent', 'selector': 'app-upload-menu'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'UserSummaryComponent', 'selector': 'app-user-summary'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'},{'name': 'WorkflowComponent', 'selector': 'app-workflow'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ResourcesComponent'};
 </script>

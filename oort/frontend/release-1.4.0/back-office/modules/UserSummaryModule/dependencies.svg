@@ -18,13 +18,13 @@
 <title>cluster_UserSummaryModule_declarations</title>
 <polygon fill="none" stroke="black" points="226,-40.8 226,-92.8 404,-92.8 404,-40.8 226,-40.8"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_UserSummaryModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 218,-92.8 218,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_UserSummaryModule_exports</title>
 <polygon fill="none" stroke="black" points="124,-170.8 124,-222.8 306,-222.8 306,-170.8 124,-170.8"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_UserSummaryModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 218,-92.8 218,-40.8 16,-40.8"/>
 </g>
 <!-- UserSummaryComponent -->
 <g id="node1" class="node">
