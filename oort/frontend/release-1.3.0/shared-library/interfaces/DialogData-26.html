@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widgets/map-settings/map-layers/map-clorophlet-division/map-clorophlet-division.component.ts</code>
+            <code>projects/safe/src/lib/components/widgets/map-settings/map-layers/map-marker-rule/map-marker-rule.component.ts</code>
         </p>
 
 
@@ -226,7 +226,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
 import { FormGroup } from &#x27;@angular/forms&#x27;;
 import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { divisionForm } from &#x27;../../map-forms&#x27;;
+import { markerRuleForm } from &#x27;../../map-forms&#x27;;
 
 /** Interface of dialog data of the component */
 interface DialogData {
@@ -236,26 +236,27 @@ interface DialogData {
 }
 
 /**
- * Single clorophlet configuration component.
+ * Single Marker Rule component.
+ * Used in dialog.
  */
 @Component({
-  selector: &#x27;safe-map-clorophlet-division&#x27;,
-  templateUrl: &#x27;./map-clorophlet-division.component.html&#x27;,
-  styleUrls: [&#x27;./map-clorophlet-division.component.scss&#x27;],
+  selector: &#x27;safe-map-marker-rule&#x27;,
+  templateUrl: &#x27;./map-marker-rule.component.html&#x27;,
+  styleUrls: [&#x27;./map-marker-rule.component.scss&#x27;],
 })
-export class MapClorophletDivisionComponent implements OnInit {
+export class MapMarkerRuleComponent implements OnInit {
   public form!: FormGroup;
 
   public fields: any[] &#x3D; [];
   public query: any;
 
   /**
-   * Single clorophlet configuration component.
+   * Single Marker Rule component.
    *
    * @param data dialog data
    */
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
-    this.form &#x3D; divisionForm(data.value);
+    this.form &#x3D; markerRuleForm(data.value);
     this.fields &#x3D; data.fields;
     this.query &#x3D; data.query;
   }

@@ -14,13 +14,13 @@
 <title>cluster_SafeReadableCronModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 188,-230.8 188,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeReadableCronModule_declarations</title>
-<polygon fill="none" stroke="black" points="30,-40.8 30,-92.8 166,-92.8 166,-40.8 30,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeReadableCronModule_exports</title>
 <polygon fill="none" stroke="black" points="28,-170.8 28,-222.8 168,-222.8 168,-170.8 28,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeReadableCronModule_declarations</title>
+<polygon fill="none" stroke="black" points="30,-40.8 30,-92.8 166,-92.8 166,-40.8 30,-40.8"/>
 </g>
 <!-- ReadableCronPipe -->
 <g id="node1" class="node">

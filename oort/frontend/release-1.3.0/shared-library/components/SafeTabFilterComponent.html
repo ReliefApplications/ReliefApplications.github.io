@@ -201,12 +201,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(queryBuilder: <a href="../injectables/QueryBuilderService.html" target="_self">QueryBuilderService</a>, gridService: <a href="../injectables/SafeGridService.html" target="_self">SafeGridService</a>)</code>
+<code>constructor(queryBuilder: <a href="../injectables/QueryBuilderService.html" target="_self">QueryBuilderService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -243,22 +243,6 @@ created.</p>
 
                                                         </td>
                                                 </tr>
-                                                <tr>
-                                                        <td>gridService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/SafeGridService.html" target="_self" >SafeGridService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <p>Shared grid service</p>
-
-                                                        </td>
-                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -291,7 +275,7 @@ created.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:20</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -312,7 +296,7 @@ created.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:21</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -346,8 +330,8 @@ created.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:35</a></div>
                 </td>
             </tr>
 
@@ -385,8 +369,8 @@ created.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="86"
-                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:86</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:47</a></div>
                 </td>
             </tr>
 
@@ -421,7 +405,7 @@ created.</p>
 
 
                                     <td>
-                                        <p>list of fields</p>
+                                        <p>list of fields.</p>
 
                                     </td>
                                 </tr>
@@ -475,7 +459,7 @@ created.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -507,7 +491,7 @@ created.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/safe/src/lib/components/query-builder/tab-filter/tab-filter.component.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -528,8 +512,6 @@ created.</p>
   ViewChild,
 } from &#x27;@angular/core&#x27;;
 import { FormGroup } from &#x27;@angular/forms&#x27;;
-import { get } from &#x27;lodash&#x27;;
-import { SafeGridService } from &#x27;../../../services/grid/grid.service&#x27;;
 import { QueryBuilderService } from &#x27;../../../services/query-builder/query-builder.service&#x27;;
 
 /**
@@ -553,57 +535,20 @@ export class SafeTabFilterComponent implements OnInit {
    * created.
    *
    * @param queryBuilder This is the service that will be used to build the query.
-   * @param gridService Shared grid service
    */
-  constructor(
-    private queryBuilder: QueryBuilderService,
-    private gridService: SafeGridService
-  ) {}
+  constructor(private queryBuilder: QueryBuilderService) {}
 
   ngOnInit(): void {
-    // TODO: move somewhere else
-    if (this.query) {
-      const sourceQuery &#x3D; this.queryBuilder.getQuerySource(this.query);
-      if (sourceQuery) {
-        sourceQuery.subscribe(async (res: any) &#x3D;&gt; {
-          for (const field in res.data) {
-            if (Object.prototype.hasOwnProperty.call(res.data, field)) {
-              const source &#x3D; get(res.data[field], &#x27;_source&#x27;, null);
-              if (source) {
-                this.queryBuilder.getQueryMetaData(source).subscribe((res2) &#x3D;&gt; {
-                  if (res2.data.form) {
-                    const filterFields &#x3D; get(res2.data.form, &#x27;metadata&#x27;, [])
-                      .filter((x: any) &#x3D;&gt; x.filterable !&#x3D;&#x3D; false)
-                      .map((x: any) &#x3D;&gt; ({ ...x }));
-                    this.setCustomEditors(filterFields);
-                    this.filterFields &#x3D; filterFields;
-                  }
-                  if (res2.data.resource) {
-                    const filterFields &#x3D; get(res2.data.resource, &#x27;metadata&#x27;, [])
-                      .filter((x: any) &#x3D;&gt; x.filterable !&#x3D;&#x3D; false)
-                      .map((x: any) &#x3D;&gt; ({ ...x }));
-                    this.setCustomEditors(filterFields);
-                    this.filterFields &#x3D; filterFields;
-                  }
-                  // await this.gridService.populateMetaFields(this.metaFields);
-                });
-              }
-            }
-          }
-        });
-      } else {
-        this.filterFields &#x3D; [];
-      }
-    } else {
-      // this.gridService.populateMetaFields(this.metaFields);
-      this.filterFields &#x3D; [];
-    }
+    this.queryBuilder.getFilterFields(this.query).then((fields) &#x3D;&gt; {
+      this.setCustomEditors(fields);
+      this.filterFields &#x3D; fields;
+    });
   }
 
   /**
    * Set custom editors for some fields.
    *
-   * @param fields list of fields
+   * @param fields list of fields.
    */
   private setCustomEditors(fields: any[]): void {
     for (const field of fields) {

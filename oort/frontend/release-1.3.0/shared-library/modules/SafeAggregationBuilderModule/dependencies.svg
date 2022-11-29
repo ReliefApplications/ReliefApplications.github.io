@@ -18,13 +18,13 @@
 <title>cluster_SafeAggregationBuilderModule_SafeAggregationBuilderComponent_providers</title>
 <polygon fill="none" stroke="black" points="442,-40.8 442,-204.39 1334,-204.39 1334,-40.8 442,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeAggregationBuilderModule_exports</title>
-<polygon fill="none" stroke="black" points="183,-282.39 183,-334.39 421,-334.39 421,-282.39 183,-282.39"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeAggregationBuilderModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-152.39 16,-204.39 434,-204.39 434,-152.39 16,-152.39"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeAggregationBuilderModule_exports</title>
+<polygon fill="none" stroke="black" points="183,-282.39 183,-334.39 421,-334.39 421,-282.39 183,-282.39"/>
 </g>
 <!-- SafeAggregationBuilderComponent -->
 <g id="node1" class="node">

@@ -14,13 +14,13 @@
 <title>cluster_SafeLeftSidenavModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 506,-230.8 506,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeLeftSidenavModule_exports</title>
-<polygon fill="none" stroke="black" points="134,-170.8 134,-222.8 328,-222.8 328,-170.8 134,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeLeftSidenavModule_declarations</title>
 <polygon fill="none" stroke="black" points="308,-40.8 308,-92.8 498,-92.8 498,-40.8 308,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeLeftSidenavModule_exports</title>
+<polygon fill="none" stroke="black" points="134,-170.8 134,-222.8 328,-222.8 328,-170.8 134,-170.8"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_SafeLeftSidenavModule_imports</title>

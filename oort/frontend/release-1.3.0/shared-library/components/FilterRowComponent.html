@@ -1036,7 +1036,7 @@ export class FilterRowComponent implements OnInit, OnChanges, AfterViewInit {
         ...this.field.filter,
       };
       this.operators &#x3D; FILTER_OPERATORS.filter((x) &#x3D;&gt;
-        type?.operators.includes(x.value)
+        type?.operators?.includes(x.value)
       );
       if (init) {
         this.form.get(&#x27;operator&#x27;)?.setValue(type?.defaultOperator);
