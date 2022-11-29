@@ -143,6 +143,11 @@ Query builder service only performs query on the schema generated on the go from
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFilterFields" >getFilterFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getQueryMetaData" >getQueryMetaData</a>
                             </li>
                             <li>
@@ -926,6 +931,85 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getFilterFields"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getFilterFields</b></span>
+                        <a href="#getFilterFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFilterFields(query: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="424"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:424</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Format fields for filters.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>custom query.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getQueryMetaData"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -944,8 +1028,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="361"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:361</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="362"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:362</a></div>
                 </td>
             </tr>
 
@@ -1023,8 +1107,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="377"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:377</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="378"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:378</a></div>
                 </td>
             </tr>
 
@@ -1102,8 +1186,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="336"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:336</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="337"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:337</a></div>
                 </td>
             </tr>
 
@@ -1276,8 +1360,8 @@ TODO: we should pass directly the query definition, instead of the settings.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="398"
-                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:398</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="399"
+                            class="link-to-prism">projects/safe/src/lib/services/query-builder/query-builder.service.ts:399</a></div>
                 </td>
             </tr>
 
@@ -1854,6 +1938,7 @@ export class QueryBuilderService {
    * @param query custom query
    * @returns apollo query to get source
    */
+  // TO DO - Create interface for query object
   public getQuerySource(query: any): Observable&lt;ApolloQueryResult&lt;any&gt;&gt; | null {
     if (query) {
       const sourceQuery &#x3D; gql&#x60;
@@ -1933,6 +2018,42 @@ export class QueryBuilderService {
     } else {
       return null;
     }
+  }
+
+  /**
+   * Format fields for filters.
+   *
+   * @param query custom query.
+   */
+  // TO DO: Create an interface for this type of field (+ for the one retrieved from graphQL if possible)
+  public async getFilterFields(query: any): Promise&lt;any[]&gt; {
+    if (query) {
+      const sourceQuery &#x3D; this.getQuerySource(query)?.toPromise();
+      if (sourceQuery) {
+        const res &#x3D; await sourceQuery;
+        for (const field in res.data) {
+          if (Object.prototype.hasOwnProperty.call(res.data, field)) {
+            const source &#x3D; get(res.data[field], &#x27;_source&#x27;, null);
+            if (source) {
+              const metaQuery &#x3D; this.getQueryMetaData(source).toPromise();
+              const res2 &#x3D; await metaQuery;
+              const dataset &#x3D; res2.data.form
+                ? res2.data.form
+                : res2.data.resource
+                ? res2.data.resource
+                : null;
+              if (!dataset) return [];
+              return get(dataset, &#x27;metadata&#x27;, [])
+                .filter((x: any) &#x3D;&gt; x.filterable !&#x3D;&#x3D; false)
+                .map((x: any) &#x3D;&gt; ({ ...x }));
+            }
+          }
+        }
+      } else {
+        return [];
+      }
+    }
+    return [];
   }
 }
 </code></pre>

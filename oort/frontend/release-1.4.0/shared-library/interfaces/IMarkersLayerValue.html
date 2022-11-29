@@ -555,10 +555,9 @@ export class SafeMapComponent implements AfterViewInit, OnDestroy {
     /**
      *  Defines the method which will be called when the legend control is added to the map
      *
-     * @param map current leaflet map
      * @returns legend container
      */
-    legendControl.onAdd &#x3D; function (map: any) {
+    legendControl.onAdd &#x3D; function () {
       this.div &#x3D; L.DomUtil.create(&#x27;div&#x27;, &#x27;map-legend-container&#x27;);
       return this.div;
     };

@@ -14,10 +14,6 @@
 <title>cluster_MapMarkersModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 770,-230.8 770,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_MapMarkersModule_exports</title>
-<polygon fill="none" stroke="black" points="262,-170.8 262,-222.8 436,-222.8 436,-170.8 262,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_MapMarkersModule_declarations</title>
 <polygon fill="none" stroke="black" points="592,-40.8 592,-92.8 762,-92.8 762,-40.8 592,-40.8"/>
@@ -25,6 +21,10 @@
 <g id="clust4" class="cluster">
 <title>cluster_MapMarkersModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 584,-92.8 584,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_MapMarkersModule_exports</title>
+<polygon fill="none" stroke="black" points="262,-170.8 262,-222.8 436,-222.8 436,-170.8 262,-170.8"/>
 </g>
 <!-- MapMarkersComponent -->
 <g id="node1" class="node">

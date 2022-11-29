@@ -121,7 +121,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/charts/chart.ts:35</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/charts/chart.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -191,7 +191,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/charts/chart.ts:35</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/charts/chart.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -218,7 +218,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/charts/chart.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/safe/src/lib/components/widgets/chart-settings/charts/chart.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -239,10 +239,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import get from &#x27;lodash/get&#x27;;
-import {
-  createAggregationForm,
-  createMappingForm,
-} from &#x27;../../../ui/aggregation-builder/aggregation-builder-forms&#x27;;
+import { createMappingForm } from &#x27;../../../ui/aggregation-builder/aggregation-builder-forms&#x27;;
 
 /** Default list of colors for series */
 const DEFAULT_PALETTE &#x3D; [
@@ -399,7 +396,7 @@ export class Chart {
       this.form.setControl(&#x27;mapping&#x27;, createMappingForm(mapping?.value, value));
     });
 
-    this.form.get(&#x27;aggregationId&#x27;)?.valueChanges.subscribe((value) &#x3D;&gt; {
+    this.form.get(&#x27;aggregationId&#x27;)?.valueChanges.subscribe(() &#x3D;&gt; {
       this.form.setControl(
         &#x27;mapping&#x27;,
         createMappingForm(null, this.form.get(&#x27;type&#x27;)?.value)

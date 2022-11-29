@@ -18,13 +18,13 @@
 <title>cluster_RoleUsersModule_declarations</title>
 <polygon fill="none" stroke="black" points="206,-40.8 206,-92.8 362,-92.8 362,-40.8 206,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_RoleUsersModule_exports</title>
-<polygon fill="none" stroke="black" points="114,-170.8 114,-222.8 274,-222.8 274,-170.8 114,-170.8"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_RoleUsersModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 198,-92.8 198,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_RoleUsersModule_exports</title>
+<polygon fill="none" stroke="black" points="114,-170.8 114,-222.8 274,-222.8 274,-170.8 114,-170.8"/>
 </g>
 <!-- RoleUsersComponent -->
 <g id="node1" class="node">

@@ -1258,7 +1258,7 @@ export class SafeGridService {
     const formGroup: any &#x3D; {};
     fields
       .filter((x) &#x3D;&gt; !x.disabled)
-      .forEach((field, index) &#x3D;&gt; {
+      .forEach((field) &#x3D;&gt; {
         if (
           field.type !&#x3D;&#x3D; &#x27;JSON&#x27; ||
           MULTISELECT_TYPES.includes(field.meta.type)

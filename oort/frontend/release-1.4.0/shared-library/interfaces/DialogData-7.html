@@ -567,22 +567,16 @@ export class SafeFormModalComponent implements OnInit {
     this.survey.onUpdateQuestionCssClasses.add(
       (survey: Survey.SurveyModel, options: any) &#x3D;&gt; this.onSetCustomCss(options)
     );
-    this.survey.onCurrentPageChanged.add(
-      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
-        survey.checkErrorsMode &#x3D; survey.isLastPage
-          ? &#x27;onComplete&#x27;
-          : &#x27;onNextPage&#x27;;
-        this.selectedTabIndex &#x3D; survey.currentPageNo;
-      }
-    );
+    this.survey.onCurrentPageChanged.add((survey: Survey.SurveyModel) &#x3D;&gt; {
+      survey.checkErrorsMode &#x3D; survey.isLastPage ? &#x27;onComplete&#x27; : &#x27;onNextPage&#x27;;
+      this.selectedTabIndex &#x3D; survey.currentPageNo;
+    });
     this.survey.onPageVisibleChanged.add(() &#x3D;&gt; {
       this.setPages();
     });
-    this.survey.onSettingQuestionErrors.add(
-      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
-        this.setPages();
-      }
-    );
+    this.survey.onSettingQuestionErrors.add(() &#x3D;&gt; {
+      this.setPages();
+    });
     if (this.data.recordId &amp;&amp; this.record) {
       addCustomFunctions(Survey, this.authService, this.apollo, this.record);
       this.survey.data &#x3D; this.isMultiEdition ? null : this.record.data;
@@ -837,7 +831,7 @@ export class SafeFormModalComponent implements OnInit {
     let content: any[] &#x3D; [];
     options.files.forEach((file: any) &#x3D;&gt; {
       const fileReader &#x3D; new FileReader();
-      fileReader.onload &#x3D; (e) &#x3D;&gt; {
+      fileReader.onload &#x3D; () &#x3D;&gt; {
         content &#x3D; content.concat([
           {
             name: file.name,
@@ -1082,7 +1076,7 @@ export class SafeFormModalComponent implements OnInit {
               version: version.id,
             },
           })
-          .subscribe((res) &#x3D;&gt; {
+          .subscribe(() &#x3D;&gt; {
             this.snackBar.openSnackBar(
               this.translate.instant(&#x27;common.notifications.dataRecovered&#x27;)
             );

@@ -4004,7 +4004,7 @@ export class SafeApplicationService {
             id: role.id,
           },
         })
-        .subscribe((res) &#x3D;&gt; {
+        .subscribe(() &#x3D;&gt; {
           this.snackBar.openSnackBar(
             this.translate.instant(&#x27;common.notifications.objectDeleted&#x27;, {
               value: role.title,
@@ -4489,7 +4489,7 @@ export class SafeApplicationService {
             routingKey: subscription,
           },
         })
-        .subscribe((res) &#x3D;&gt; {
+        .subscribe(() &#x3D;&gt; {
           this.snackBar.openSnackBar(
             this.translate.instant(&#x27;common.notifications.objectDeleted&#x27;, {
               value: this.translate.instant(&#x27;common.subscription.one&#x27;),

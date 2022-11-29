@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/record-dropdown/graphql/queries.ts</code>
+            <code>projects/safe/src/lib/components/record-history/graphql/queries.ts</code>
         </p>
 
 
@@ -186,29 +186,18 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import { Record } from &#x27;../../../models/record.model&#x27;;
+import { RecordHistory } from &#x27;../../../models/recordsHistory&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET RECORD BY ID &#x3D;&#x3D;&#x3D;
-
-/** Graphql request for getting a record by its id */
-export const GET_RECORD_BY_ID &#x3D; gql&#x60;
-  query GetRecordById($id: ID!) {
+/** GraphQL query definition for getting record details for history purpose */
+export const GET_RECORD_BY_ID_FOR_HISTORY &#x3D; gql&#x60;
+  query GetRecordByIdForHistory($id: ID!) {
     record(id: $id) {
       id
-      data
-      createdAt
-      modifiedAt
-      createdBy {
-        name
-      }
-      modifiedBy {
-        name
-      }
+      incrementalId
       form {
         id
+        fields
         structure
-        permissions {
-          recordsUnicity
-        }
       }
     }
   }
@@ -220,60 +209,32 @@ export interface GetRecordByIdQueryResponse {
   record: Record;
 }
 
-// &#x3D;&#x3D;&#x3D; GET RECORDS FROM RESOURCE &#x3D;&#x3D;&#x3D;
-
-/** graphql request for getting records of a resource by its id */
-export const GET_RESOURCE_RECORDS &#x3D; gql&#x60;
-  query GetResourceRecords(
-    $id: ID!
-    $afterCursor: ID
-    $first: Int
-    $filter: JSON
-    $display: Boolean
-  ) {
-    resource(id: $id) {
-      records(first: $first, afterCursor: $afterCursor, filter: $filter) {
-        edges {
-          node {
-            id
-            data(display: $display)
-            versions {
-              id
-              createdAt
-              data
-            }
-            form {
-              id
-              name
-            }
-          }
-          cursor
-        }
-        totalCount
-        pageInfo {
-          hasNextPage
-          endCursor
-        }
+/** GraphQL query definition to get record history by id */
+export const GET_RECORD_HISTORY_BY_ID &#x3D; gql&#x60;
+  query GetRecordHistoryByID($id: ID!, $lang: String) {
+    recordHistory(id: $id, lang: $lang) {
+      createdAt
+      createdBy
+      changes {
+        type
+        field
+        displayName
+        old
+        new
+      }
+      version {
+        id
+        createdAt
+        data
       }
     }
   }
 &#x60;;
-/** Modelf for GetResouceRecordsQueryResponse object */
-export interface GetResourceRecordsQueryResponse {
+
+/** Get record history query response interface */
+export interface GetRecordHistoryByIdResponse {
   loading: boolean;
-  resource: {
-    records: {
-      edges: {
-        node: Record;
-        cursor: string;
-      }[];
-      pageInfo: {
-        endCursor: string;
-        hasNextPage: boolean;
-      };
-      totalCount: number;
-    };
-  };
+  recordHistory: RecordHistory;
 }
 </code></pre>
     </div>

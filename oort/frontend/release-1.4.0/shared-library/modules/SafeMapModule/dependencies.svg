@@ -14,13 +14,13 @@
 <title>cluster_SafeMapModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 358,-230.8 358,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeMapModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 350,-92.8 350,-40.8 16,-40.8"/>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_SafeMapModule_exports</title>
 <polygon fill="none" stroke="black" points="115,-170.8 115,-222.8 267,-222.8 267,-170.8 115,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeMapModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 350,-92.8 350,-40.8 16,-40.8"/>
 </g>
 <!-- SafeMapComponent -->
 <g id="node1" class="node">

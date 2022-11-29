@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/ui/core-grid/export/export.component.ts</code>
+            <code>projects/safe/src/lib/components/ui/core-grid/expanded-comment/expanded-comment.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>The data for the dialogs input</p>
+                <p>Data for the dialog inputs</p>
 
             </p>
 
@@ -91,9 +91,22 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#export" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#readonly" 
 >
-                                            export
+                                            readonly
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#title" 
+>
+                                            title
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#value" 
+>
+                                            value
                                         </a>
                                 </li>
                             </ul>
@@ -111,9 +124,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="export"></a>
-                                        <span class="name "><b>export</b>
-                                            <a href="#export">
+                                        <a name="readonly"></a>
+                                        <span class="name "><b>readonly</b>
+                                            <a href="#readonly">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -121,7 +134,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>export:     <code>literal type</code>
+                                        <code>readonly:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -129,7 +142,78 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>literal type</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="title"></a>
+                                        <span class="name "><b>title</b>
+                                            <a href="#title">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="value"></a>
+                                        <span class="name "><b>value</b>
+                                            <a href="#value">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>value:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -146,38 +230,43 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { EXPORT_SETTINGS } from &#x27;../grid/grid.constants&#x27;;
+import { FormBuilder, FormControl } from &#x27;@angular/forms&#x27;;
+import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
 
-/** The data for the dialogs input */
+/** Data for the dialog inputs */
 interface DialogData {
-  export: {
-    records: string;
-    fields: string;
-    format: string;
-    email: boolean;
-  };
+  title: string;
+  value: string;
+  readonly?: boolean;
 }
 
-/** Component for exporting data */
+/** Component for expanded comments */
 @Component({
-  selector: &#x27;safe-export&#x27;,
-  templateUrl: &#x27;./export.component.html&#x27;,
-  styleUrls: [&#x27;./export.component.scss&#x27;],
+  selector: &#x27;safe-expanded-comment&#x27;,
+  templateUrl: &#x27;./expanded-comment.component.html&#x27;,
+  styleUrls: [&#x27;./expanded-comment.component.scss&#x27;],
 })
-export class SafeExportComponent implements OnInit {
-  // &#x3D;&#x3D;&#x3D; EXPORT MENU SELECTION &#x3D;&#x3D;&#x3D;
-  public export &#x3D; EXPORT_SETTINGS;
+export class SafeExpandedCommentComponent implements OnInit {
+  public formControl!: FormControl;
 
   /**
-   * Constructor for the component
+   * Constructor of this component
    *
-   * @param data The dialog data
+   * @param dialogRef The reference to the opened dialog
+   * @param data The data inputs for the dialog
+   * @param fb Angular form builder
    */
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(
+    public dialogRef: MatDialogRef&lt;SafeExpandedCommentComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {
-    this.export &#x3D; this.data.export;
+    this.formControl &#x3D; this.fb.control({
+      value: this.data.value,
+      disabled: this.data.readonly,
+    });
   }
 }
 </code></pre>

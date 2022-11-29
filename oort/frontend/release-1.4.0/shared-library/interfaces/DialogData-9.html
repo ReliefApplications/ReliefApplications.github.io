@@ -286,7 +286,6 @@ import {
   Component,
   ElementRef,
   Inject,
-  OnInit,
   ViewChild,
 } from &#x27;@angular/core&#x27;;
 import {
@@ -449,11 +448,9 @@ export class SafeRecordModalComponent implements AfterViewInit {
     this.survey.onDownloadFile.add((survey: Survey.SurveyModel, options: any) &#x3D;&gt;
       this.onDownloadFile(survey, options)
     );
-    this.survey.onCurrentPageChanged.add(
-      (survey: Survey.SurveyModel, options: any) &#x3D;&gt; {
-        this.selectedTabIndex &#x3D; survey.currentPageNo;
-      }
-    );
+    this.survey.onCurrentPageChanged.add((survey: Survey.SurveyModel) &#x3D;&gt; {
+      this.selectedTabIndex &#x3D; survey.currentPageNo;
+    });
     this.survey.onUpdateQuestionCssClasses.add(
       (survey: Survey.SurveyModel, options: any) &#x3D;&gt; this.onSetCustomCss(options)
     );
@@ -628,7 +625,7 @@ export class SafeRecordModalComponent implements AfterViewInit {
               version: version.id,
             },
           })
-          .subscribe((res) &#x3D;&gt; {
+          .subscribe(() &#x3D;&gt; {
             this.snackBar.openSnackBar(
               this.translate.instant(&#x27;common.notifications.dataRecovered&#x27;)
             );

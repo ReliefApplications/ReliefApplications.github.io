@@ -14,10 +14,6 @@
 <title>cluster_SafeDataSourceTabModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1074,-230.8 1074,-32.8 8,-32.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeDataSourceTabModule_exports</title>
-<polygon fill="none" stroke="black" points="410,-170.8 410,-222.8 622,-222.8 622,-170.8 410,-170.8"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeDataSourceTabModule_declarations</title>
 <polygon fill="none" stroke="black" points="856,-40.8 856,-92.8 1066,-92.8 1066,-40.8 856,-40.8"/>
@@ -25,6 +21,10 @@
 <g id="clust4" class="cluster">
 <title>cluster_SafeDataSourceTabModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 848,-92.8 848,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeDataSourceTabModule_exports</title>
+<polygon fill="none" stroke="black" points="410,-170.8 410,-222.8 622,-222.8 622,-170.8 410,-170.8"/>
 </g>
 <!-- SafeDataSourceTabComponent -->
 <g id="node1" class="node">

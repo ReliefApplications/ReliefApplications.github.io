@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/edit-calculated-field-modal/edit-calculated-field-modal.component.ts</code>
+            <code>projects/safe/src/lib/components/email-preview/email-preview.component.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Interface describing the structure of the data displayed in the dialog</p>
+                <p>Interface of Email Preview Modal Data</p>
 
             </p>
 
@@ -91,16 +91,27 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#calculatedField" 
+                                        <a href="#from" 
 >
-                                            calculatedField
+                                            from
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#resourceFields" 
+                                        <a href="#html" 
 >
-                                            resourceFields
+                                            html
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#subject" 
+>
+                                            subject
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#to" 
+>
+                                            to
                                         </a>
                                 </li>
                             </ul>
@@ -118,9 +129,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="calculatedField"></a>
-                                        <span class="name "><b>calculatedField</b>
-                                            <a href="#calculatedField">
+                                        <a name="from"></a>
+                                        <span class="name "><b>from</b>
+                                            <a href="#from">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -128,7 +139,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>calculatedField:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>from:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -136,16 +147,11 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
@@ -156,9 +162,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="resourceFields"></a>
-                                        <span class="name "><b>resourceFields</b>
-                                            <a href="#resourceFields">
+                                        <a name="html"></a>
+                                        <span class="name "><b>html</b>
+                                            <a href="#html">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -166,7 +172,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>resourceFields:     <code>any[]</code>
+                                        <code>html:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -174,7 +180,73 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>any[]</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="subject"></a>
+                                        <span class="name "><b>subject</b>
+                                            <a href="#subject">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>subject:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="to"></a>
+                                        <span class="name "><b>to</b>
+                                            <a href="#to">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>to:     <code>string[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>string[]</code>
 
                                         </td>
                                     </tr>
@@ -191,54 +263,49 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
-import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material/dialog&#x27;;
-import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
-import { FIELD_EDITOR_CONFIG } from &#x27;../../const/tinymce.const&#x27;;
+import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { MAT_DIALOG_DATA, MatDialogRef } from &#x27;@angular/material/dialog&#x27;;
+import { EMAIL_EDITOR_CONFIG } from &#x27;../../const/tinymce.const&#x27;;
 import { SafeEditorService } from &#x27;../../services/editor/editor.service&#x27;;
-import { getCalcKeys, getDataKeys, getInfoKeys } from &#x27;./utils/keys&#x27;;
-/**
- * Interface describing the structure of the data displayed in the dialog
- */
+
+/** Interface of Email Preview Modal Data */
 interface DialogData {
-  calculatedField?: any;
-  resourceFields: any[];
+  from: string;
+  html: string;
+  subject: string;
+  to: string[];
 }
 
 /**
- * Modal to edit aggregation.
+ * Preview Email component.
+ * Modal in read-only mode.
  */
 @Component({
-  selector: &#x27;safe-edit-calculated-field-modal&#x27;,
-  templateUrl: &#x27;./edit-calculated-field-modal.component.html&#x27;,
-  styleUrls: [&#x27;./edit-calculated-field-modal.component.scss&#x27;],
+  selector: &#x27;safe-email-preview&#x27;,
+  templateUrl: &#x27;./email-preview.component.html&#x27;,
+  styleUrls: [&#x27;./email-preview.component.scss&#x27;],
 })
-export class SafeEditCalculatedFieldModalComponent implements OnInit {
+export class SafeEmailPreviewComponent implements OnInit {
+  /** mail is put in a form to use read-only inputs */
   public form!: FormGroup;
-  public field!: any;
-
-  public resourceFields: any[] &#x3D; [];
 
   /** tinymce editor */
-  public editor: any &#x3D; FIELD_EDITOR_CONFIG;
+  public editor: any &#x3D; EMAIL_EDITOR_CONFIG;
 
   /**
-   * Modal to edit Calculated field.
+   * Preview Email component.
+   * Modal in read-only mode.
    *
-   * @param dialogRef This is the reference of the dialog that will be opened.
-   * @param formBuilder This is the service used to build forms.
+   * @param data injected dialog data
+   * @param dialogRef Dialog reference
+   * @param formBuilder Angular Form Builder
    * @param editorService Editor service used to get main URL and current language
-   * @param data This is the data that is passed to the modal when it is opened.
-   * @param environment Environment specific data
-   * @param translate Translate service
    */
   constructor(
-    public dialogRef: MatDialogRef&lt;SafeEditCalculatedFieldModalComponent&gt;,
-    public formBuilder: FormBuilder,
-    private editorService: SafeEditorService,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    @Inject(&#x27;environment&#x27;) environment: any,
-    private translate: TranslateService
+    public dialogRef: MatDialogRef&lt;SafeEmailPreviewComponent&gt;,
+    private formBuilder: FormBuilder,
+    private editorService: SafeEditorService
   ) {
     // Set the editor base url based on the environment file
     this.editor.base_url &#x3D; editorService.url;
@@ -246,30 +313,15 @@ export class SafeEditCalculatedFieldModalComponent implements OnInit {
     this.editor.language &#x3D; editorService.language;
   }
 
+  /** Create the form from the dialog data, putting all fields as read-only */
   ngOnInit(): void {
-    this.field &#x3D; this.data.calculatedField;
-    this.resourceFields &#x3D; this.data.resourceFields;
     this.form &#x3D; this.formBuilder.group({
-      name: [
-        this.data.calculatedField?.name,
-        [Validators.required, Validators.pattern(/^[a-z]+[a-z0-9_]+$/)],
-      ],
-      expression: [this.data.calculatedField?.expression, Validators.required],
-      // TODO: Add display options
+      from: [{ value: this.data.from, disabled: true }],
+      to: [{ value: this.data.to, disabled: true }],
+      subject: [{ value: this.data.subject, disabled: true }],
+      html: this.data.html,
+      files: [[]],
     });
-    const keys &#x3D; [
-      ...getCalcKeys(),
-      ...getInfoKeys(),
-      ...getDataKeys(this.resourceFields),
-    ];
-    this.editorService.addCalcAndKeysAutoCompleter(this.editor, keys);
-  }
-
-  /**
-   * Closes the modal sending tile form value.
-   */
-  onSubmit(): void {
-    this.dialogRef.close(this.form?.getRawValue());
   }
 }
 </code></pre>

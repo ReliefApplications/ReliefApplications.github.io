@@ -1082,6 +1082,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeCronParserModule.html" data-type="entity-link" >SafeCronParserModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' : 'data-target="#xs-pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' :
+                                            'id="xs-pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' }>
+                                            <li class="link">
+                                                <a href="pipes/CronParserPipe.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CronParserPipe</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeDataSourceTabModule.html" data-type="entity-link" >SafeDataSourceTabModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -1797,13 +1814,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SafePipelineModule.html" data-type="entity-link" >SafePipelineModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' : 'data-target="#xs-components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' }>
+                                            'data-target="#components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' : 'data-target="#xs-components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' :
-                                            'id="xs-components-links-module-SafePipelineModule-e3e0665392531dd832e67566a238354bf9a1126e44b5f7e55df709e5af817a14c80c8a7da8c99a325fbc5c01316611acbe367fee6fd7fbfb78536b0791250678"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' :
+                                            'id="xs-components-links-module-SafePipelineModule-a0f695e1e17bd45019706497c27bdc7dcd68f58a83a5000736ec1f134eae08b8aca2b95f731b078dfdc406334a97f2494ddd80323cd300545212b196e9dd7aa4"' }>
                                             <li class="link">
                                                 <a href="components/SafeAddFieldStageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafeAddFieldStageComponent</a>
                                             </li>
@@ -1818,6 +1835,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/SafePipelineComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafePipelineComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/SafeSortStageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafeSortStageComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -1916,6 +1936,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/SafeTabStyleComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SafeTabStyleComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/SafeReadableCronModule.html" data-type="entity-link" >SafeReadableCronModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-SafeReadableCronModule-36e886be1e2facb9ef935583c533edb65332f0a9ec6d5b6334cfd8145dec91a425f7e5e7d447cfc079ecc0fd685efcfd67c75cbd2f306a93875e79b1ef57656d"' : 'data-target="#xs-pipes-links-module-SafeReadableCronModule-36e886be1e2facb9ef935583c533edb65332f0a9ec6d5b6334cfd8145dec91a425f7e5e7d447cfc079ecc0fd685efcfd67c75cbd2f306a93875e79b1ef57656d"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-SafeReadableCronModule-36e886be1e2facb9ef935583c533edb65332f0a9ec6d5b6334cfd8145dec91a425f7e5e7d447cfc079ecc0fd685efcfd67c75cbd2f306a93875e79b1ef57656d"' :
+                                            'id="xs-pipes-links-module-SafeReadableCronModule-36e886be1e2facb9ef935583c533edb65332f0a9ec6d5b6334cfd8145dec91a425f7e5e7d447cfc079ecc0fd685efcfd67c75cbd2f306a93875e79b1ef57656d"' }>
+                                            <li class="link">
+                                                <a href="pipes/ReadableCronPipe.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ReadableCronPipe</a>
                                             </li>
                                         </ul>
                                     </li>
