@@ -1297,6 +1297,9 @@ video {
 .p-0{
   padding: 0px;
 }
+.pb-1{
+  padding-bottom: 0.25rem;
+}
 .text-center{
   text-align: center;
 }
