@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/add-page/graphql/queries.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/forms/graphql/queries.ts</code>
         </p>
 
 
@@ -187,19 +187,42 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import { Form } from &#x27;@safe/builder&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET FORMS &#x3D;&#x3D;&#x3D;
-
-/** Graphql request for getting forms */
-export const GET_FORMS &#x3D; gql&#x60;
-  query GetFormNames($first: Int, $afterCursor: ID, $filter: JSON) {
-    forms(first: $first, afterCursor: $afterCursor, filter: $filter) {
+/** Graphql query for getting forms with minimum details */
+export const GET_SHORT_FORMS &#x3D; gql&#x60;
+  query GetShortForms(
+    $first: Int
+    $afterCursor: ID
+    $filter: JSON
+    $sortField: String
+    $sortOrder: String
+  ) {
+    forms(
+      first: $first
+      afterCursor: $afterCursor
+      filter: $filter
+      sortField: $sortField
+      sortOrder: $sortOrder
+    ) {
       edges {
         node {
           id
           name
+          createdAt
+          status
+          fields
+          versionsCount
+          recordsCount
           core
+          canSee
+          canCreateRecords
+          canUpdate
+          canDelete
           resource {
             id
+            coreForm {
+              id
+              name
+            }
           }
         }
         cursor

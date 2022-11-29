@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/add-page/graphql/mutations.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/forms/graphql/mutations.ts</code>
         </p>
 
 
@@ -188,7 +188,7 @@
 import { Form } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; ADD FORM &#x3D;&#x3D;&#x3D;
-/** Add form gql mutation */
+/** Add form gql mutation definition */
 export const ADD_FORM &#x3D; gql&#x60;
   mutation addForm($name: String!, $resource: ID, $template: ID) {
     addForm(name: $name, resource: $resource, template: $template) {
@@ -207,6 +207,22 @@ export const ADD_FORM &#x3D; gql&#x60;
 export interface AddFormMutationResponse {
   loading: boolean;
   addForm: Form;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE FORM &#x3D;&#x3D;&#x3D;
+/** Delete form gql mutation definition */
+export const DELETE_FORM &#x3D; gql&#x60;
+  mutation deleteForm($id: ID!) {
+    deleteForm(id: $id) {
+      id
+    }
+  }
+&#x60;;
+
+/** Delete form gql mutation response interface */
+export interface DeleteFormMutationResponse {
+  loading: boolean;
+  deleteForm: Form;
 }
 </code></pre>
     </div>

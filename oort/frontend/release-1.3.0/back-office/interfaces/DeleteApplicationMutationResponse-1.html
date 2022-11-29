@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/dashboard/pages/applications/graphql/mutations.ts</code>
+            <code>projects/back-office/src/app/application/pages/settings/graphql/mutations.ts</code>
         </p>
 
 
@@ -186,93 +186,6 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
 import { Application } from &#x27;@safe/builder&#x27;;
-
-// &#x3D;&#x3D;&#x3D; EDIT APPLICATION &#x3D;&#x3D;&#x3D;
-/** Edit application gql mutation definition */
-export const EDIT_APPLICATION &#x3D; gql&#x60;
-  mutation editApplication(
-    $id: ID!
-    $name: String
-    $status: Status
-    $pages: [ID]
-    $permissions: JSON
-    $description: String
-  ) {
-    editApplication(
-      id: $id
-      name: $name
-      status: $status
-      pages: $pages
-      permissions: $permissions
-      description: $description
-    ) {
-      id
-      description
-      name
-      createdAt
-      modifiedAt
-      status
-      locked
-      lockedByUser
-      pages {
-        id
-        name
-        createdAt
-        type
-        content
-      }
-      settings
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-      canDelete
-    }
-  }
-&#x60;;
-
-/** Edit application gql mutation response interface */
-export interface EditApplicationMutationResponse {
-  loading: boolean;
-  editApplication: Application;
-}
-
-// &#x3D;&#x3D;&#x3D; ADD APPLICATION &#x3D;&#x3D;&#x3D;
-/** Add application gql mutation definition */
-export const ADD_APPLICATION &#x3D; gql&#x60;
-  mutation addApplication {
-    addApplication {
-      id
-      name
-      pages {
-        id
-        name
-        createdAt
-        type
-        content
-      }
-      createdAt
-    }
-  }
-&#x60;;
-
-/** Add application gql mutation response interface */
-export interface AddApplicationMutationResponse {
-  loading: boolean;
-  addApplication: Application;
-}
 
 // &#x3D;&#x3D;&#x3D; DELETE APPLICATION &#x3D;&#x3D;&#x3D;
 /** Delete application gql mutation definition */

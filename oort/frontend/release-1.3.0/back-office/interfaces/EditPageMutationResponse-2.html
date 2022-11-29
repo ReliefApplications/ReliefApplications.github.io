@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/dashboard/pages/dashboard/graphql/mutations.ts</code>
+            <code>projects/back-office/src/app/application/pages/workflow/graphql/mutations.ts</code>
         </p>
 
 
@@ -185,52 +185,40 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import { Step, Page, Dashboard } from &#x27;@safe/builder&#x27;;
+import { Workflow, Step, Page, Form } from &#x27;@safe/builder&#x27;;
 
-// &#x3D;&#x3D;&#x3D; EDIT STEP &#x3D;&#x3D;&#x3D;
-/** Edit step gql mutation definition */
-export const EDIT_STEP &#x3D; gql&#x60;
-  mutation editStep(
-    $id: ID!
-    $name: String
-    $type: String
-    $content: ID
-    $permissions: JSON
-  ) {
-    editStep(
-      id: $id
-      name: $name
-      type: $type
-      content: $content
-      permissions: $permissions
-    ) {
+// &#x3D;&#x3D;&#x3D; EDIT WORKFLOW &#x3D;&#x3D;&#x3D;
+/** Edit workflow gql mutation definition */
+export const EDIT_WORKFLOW &#x3D; gql&#x60;
+  mutation editWorkflow($id: ID!, $name: String, $steps: [ID]) {
+    editWorkflow(id: $id, name: $name, steps: $steps) {
       id
       name
-      type
-      content
-      createdAt
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
     }
   }
 &#x60;;
 
-/** Edit step gql mutation response interface */
-export interface EditStepMutationResponse {
+/** Edit workflow gql mutation response interface */
+export interface EditWorkflowMutationResponse {
   loading: boolean;
-  editStep: Step;
+  editWorkflow: Workflow;
+}
+
+// &#x3D;&#x3D;&#x3D; DELETE STEP &#x3D;&#x3D;&#x3D;
+/** Delete step gql mutation definition */
+export const DELETE_STEP &#x3D; gql&#x60;
+  mutation deleteStep($id: ID!) {
+    deleteStep(id: $id) {
+      id
+      name
+    }
+  }
+&#x60;;
+
+/** Delete step gql mutation response interface */
+export interface DeleteStepMutationResponse {
+  loading: boolean;
+  deleteStep: Step;
 }
 
 // &#x3D;&#x3D;&#x3D; EDIT PAGE &#x3D;&#x3D;&#x3D;
@@ -264,46 +252,26 @@ export interface EditPageMutationResponse {
   editPage: Page;
 }
 
-// &#x3D;&#x3D;&#x3D; EDIT DASHBOARD &#x3D;&#x3D;&#x3D;
-/** Edit dashboard gql mutation definition */
-export const EDIT_DASHBOARD &#x3D; gql&#x60;
-  mutation editDashboard($id: ID!, $structure: JSON, $name: String) {
-    editDashboard(id: $id, structure: $structure, name: $name) {
+// &#x3D;&#x3D;&#x3D; ADD FORM &#x3D;&#x3D;&#x3D;
+/** Add form gql mutation definition */
+export const ADD_FORM &#x3D; gql&#x60;
+  mutation addForm($name: String!, $resource: ID, $template: ID) {
+    addForm(name: $name, resource: $resource, template: $template) {
       id
       name
-      structure
-      modifiedAt
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-      page {
+      createdAt
+      status
+      versions {
         id
-        name
-        application {
-          id
-        }
       }
     }
   }
 &#x60;;
 
-/** Edit dashboard gql mutation response interface */
-export interface EditDashboardMutationResponse {
+/** Add form gql mutation response interface */
+export interface AddFormMutationResponse {
   loading: boolean;
-  editDashboard: Dashboard;
+  addForm: Form;
 }
 </code></pre>
     </div>

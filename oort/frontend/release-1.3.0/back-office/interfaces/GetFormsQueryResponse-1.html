@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/subscriptions/graphql/queries.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/pull-jobs/graphql/queries.ts</code>
         </p>
 
 
@@ -185,18 +185,37 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import { Form, Application } from &#x27;@safe/builder&#x27;;
+import { PullJob, Application, Form, ApiConfiguration } from &#x27;@safe/builder&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET FORMS &#x3D;&#x3D;&#x3D;
+// &#x3D;&#x3D;&#x3D; GET PULL JOBS &#x3D;&#x3D;&#x3D;
 
-/** Graphql query for getting form names */
-export const GET_FORM_NAMES &#x3D; gql&#x60;
-  query GetFormNames($first: Int, $afterCursor: ID, $sortField: String) {
-    forms(first: $first, afterCursor: $afterCursor, sortField: $sortField) {
+/** Graphql queryfor getting multiple pull job objects with a cursor */
+export const GET_PULL_JOBS &#x3D; gql&#x60;
+  query GetPullJobs($first: Int, $afterCursor: ID) {
+    pullJobs(first: $first, afterCursor: $afterCursor) {
       edges {
         node {
           id
           name
+          status
+          apiConfiguration {
+            id
+            name
+            authType
+          }
+          url
+          path
+          schedule
+          convertTo {
+            id
+            name
+          }
+          mapping
+          uniqueIdentifiers
+          channel {
+            id
+            title
+          }
         }
         cursor
       }
@@ -209,12 +228,12 @@ export const GET_FORM_NAMES &#x3D; gql&#x60;
   }
 &#x60;;
 
-/** Model for GetFormsQueryResposne object */
-export interface GetFormsQueryResponse {
+/** Model for GetPullJobsQueryResponse object */
+export interface GetPullJobsQueryResponse {
   loading: boolean;
-  forms: {
+  pullJobs: {
     edges: {
-      node: Form;
+      node: PullJob;
       cursor: string;
     }[];
     pageInfo: {
@@ -258,6 +277,145 @@ export interface GetRoutingKeysQueryResponse {
   applications: {
     edges: {
       node: Application;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    };
+    totalCount: number;
+  };
+}
+
+// &#x3D;&#x3D;&#x3D; GET FORMS &#x3D;&#x3D;&#x3D;
+/** Graphql query for getting form names */
+export const GET_FORM_NAMES &#x3D; gql&#x60;
+  query GetFormNames($first: Int, $afterCursor: ID, $sortField: String) {
+    forms(first: $first, afterCursor: $afterCursor, sortField: $sortField) {
+      edges {
+        node {
+          id
+          name
+        }
+        cursor
+      }
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+&#x60;;
+
+/** Model for GetFormsQueryResposne object */
+export interface GetFormsQueryResponse {
+  loading: boolean;
+  forms: {
+    edges: {
+      node: Form;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    };
+    totalCount: number;
+  };
+}
+
+// &#x3D;&#x3D;&#x3D; GET FORM BY ID &#x3D;&#x3D;&#x3D;
+/** Graphql query for getting a form with minimum details by id */
+export const GET_SHORT_FORM_BY_ID &#x3D; gql&#x60;
+  query GetShortFormById($id: ID!) {
+    form(id: $id) {
+      id
+      name
+      core
+      structure
+      fields
+      status
+      canCreateRecords
+      uniqueRecord {
+        id
+        modifiedAt
+        data
+      }
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
+      }
+      canUpdate
+    }
+  }
+&#x60;;
+
+/** Model for getFormByIdQueryResponse object */
+export interface GetFormByIdQueryResponse {
+  loading: boolean;
+  form: Form;
+}
+
+// &#x3D;&#x3D;&#x3D; GET API CONFIGURATIONS &#x3D;&#x3D;&#x3D;
+
+/** Graphql query for getting multiple api configurations object with a cursor */
+export const GET_API_CONFIGURATIONS &#x3D; gql&#x60;
+  query GetApiConfigurations($first: Int, $afterCursor: ID) {
+    apiConfigurations(first: $first, afterCursor: $afterCursor) {
+      edges {
+        node {
+          id
+          name
+          status
+          authType
+          endpoint
+          pingUrl
+          settings
+          permissions {
+            canSee {
+              id
+              title
+            }
+            canUpdate {
+              id
+              title
+            }
+            canDelete {
+              id
+              title
+            }
+          }
+          canSee
+          canUpdate
+          canDelete
+        }
+        cursor
+      }
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+&#x60;;
+
+/** Model for GetApiConfigurationQueryResponse object */
+export interface GetApiConfigurationsQueryResponse {
+  loading: boolean;
+  apiConfigurations: {
+    edges: {
+      node: ApiConfiguration;
       cursor: string;
     }[];
     pageInfo: {
