@@ -14,13 +14,13 @@
 <title>cluster_SafeRoleSummaryModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1191,-230.8 1191,-32.8 8,-32.8"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeRoleSummaryModule_imports</title>
-<polygon fill="none" stroke="black" points="228,-40.8 228,-92.8 1183,-92.8 1183,-40.8 228,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeRoleSummaryModule_exports</title>
 <polygon fill="none" stroke="black" points="507,-170.8 507,-222.8 713,-222.8 713,-170.8 507,-170.8"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeRoleSummaryModule_imports</title>
+<polygon fill="none" stroke="black" points="228,-40.8 228,-92.8 1183,-92.8 1183,-40.8 228,-40.8"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeRoleSummaryModule_declarations</title>

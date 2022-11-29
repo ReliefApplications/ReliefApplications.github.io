@@ -18,13 +18,13 @@
 <title>cluster_MapClorophletModule_declarations</title>
 <polygon fill="none" stroke="black" points="372,-40.8 372,-92.8 554,-92.8 554,-40.8 372,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_MapClorophletModule_exports</title>
-<polygon fill="none" stroke="black" points="166,-170.8 166,-222.8 352,-222.8 352,-170.8 166,-170.8"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_MapClorophletModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 364,-92.8 364,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_MapClorophletModule_exports</title>
+<polygon fill="none" stroke="black" points="166,-170.8 166,-222.8 352,-222.8 352,-170.8 166,-170.8"/>
 </g>
 <!-- MapClorophletComponent -->
 <g id="node1" class="node">

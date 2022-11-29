@@ -988,6 +988,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                             </li>
                             <li class="link">
+                                <a href="modules/SafeCronParserModule.html" data-type="entity-link" >SafeCronParserModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' : 'data-target="#xs-pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' :
+                                            'id="xs-pipes-links-module-SafeCronParserModule-cc81a6e65b1ca16f89caa0fe2fb6e987c42e1c7b2e3ba57b94d328feb52ae23dd5709b8d8d5ba60aeb3931b91639902a1ad4e4e7c2f502253026dfb750e05931"' }>
+                                            <li class="link">
+                                                <a href="pipes/CronParserPipe.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CronParserPipe</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
                                 <a href="modules/SafeDateModule.html" data-type="entity-link" >SafeDateModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?

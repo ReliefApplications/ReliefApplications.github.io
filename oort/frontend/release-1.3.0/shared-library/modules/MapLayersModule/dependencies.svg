@@ -18,13 +18,13 @@
 <title>cluster_MapLayersModule_imports</title>
 <polygon fill="none" stroke="black" points="186,-40.8 186,-92.8 682,-92.8 682,-40.8 186,-40.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_MapLayersModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 178,-92.8 178,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_MapLayersModule_exports</title>
 <polygon fill="none" stroke="black" points="275,-170.8 275,-222.8 439,-222.8 439,-170.8 275,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_MapLayersModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 178,-92.8 178,-40.8 16,-40.8"/>
 </g>
 <!-- MapLayersComponent -->
 <g id="node1" class="node">

@@ -14,23 +14,23 @@
 <title>cluster_SafeFormsDropdownModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 376,-230.8 376,-32.8 8,-32.8"/>
 </g>
+<g id="clust4" class="cluster">
+<title>cluster_SafeFormsDropdownModule_imports</title>
+<polygon fill="none" stroke="black" points="242,-40.8 242,-92.8 368,-92.8 368,-40.8 242,-40.8"/>
+</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeFormsDropdownModule_exports</title>
 <polygon fill="none" stroke="black" points="81,-170.8 81,-222.8 303,-222.8 303,-170.8 81,-170.8"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_SafeFormsDropdownModule_declarations</title>
-<polygon fill="none" stroke="black" points="150,-40.8 150,-92.8 368,-92.8 368,-40.8 150,-40.8"/>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_SafeFormsDropdownModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 142,-92.8 142,-40.8 16,-40.8"/>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 234,-92.8 234,-40.8 16,-40.8"/>
 </g>
 <!-- SafeFormsDropdownComponent -->
 <g id="node1" class="node">
 <title>SafeFormsDropdownComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="359.88,-84.8 158.12,-84.8 158.12,-48.8 359.88,-48.8 359.88,-84.8"/>
-<text text-anchor="middle" x="259" y="-62.6" font-family="Times,serif" font-size="14.00">SafeFormsDropdownComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="225.88,-84.8 24.12,-84.8 24.12,-48.8 225.88,-48.8 225.88,-84.8"/>
+<text text-anchor="middle" x="125" y="-62.6" font-family="Times,serif" font-size="14.00">SafeFormsDropdownComponent</text>
 </g>
 <!-- SafeFormsDropdownModule -->
 <g id="node2" class="node">
@@ -41,8 +41,8 @@
 <!-- SafeFormsDropdownComponent&#45;&gt;SafeFormsDropdownModule -->
 <g id="edge1" class="edge">
 <title>SafeFormsDropdownComponent&#45;&gt;SafeFormsDropdownModule</title>
-<path fill="none" stroke="black" d="M220.06,-84.91C220.06,-84.91 220.06,-103.79 220.06,-103.79"/>
-<polygon fill="black" stroke="black" points="216.56,-103.79 220.06,-113.79 223.56,-103.79 216.56,-103.79"/>
+<path fill="none" stroke="black" d="M163.94,-84.91C163.94,-84.91 163.94,-103.79 163.94,-103.79"/>
+<polygon fill="black" stroke="black" points="160.44,-103.79 163.94,-113.79 167.44,-103.79 160.44,-103.79"/>
 </g>
 <!-- SafeFormsDropdownComponent  -->
 <g id="node4" class="node">
@@ -59,14 +59,14 @@
 <!-- SafeIconModule -->
 <g id="node3" class="node">
 <title>SafeIconModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="133.8,-84.8 130.8,-88.8 109.8,-88.8 106.8,-84.8 24.2,-84.8 24.2,-48.8 133.8,-48.8 133.8,-84.8"/>
-<text text-anchor="middle" x="79" y="-62.6" font-family="Times,serif" font-size="14.00">SafeIconModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="359.8,-84.8 356.8,-88.8 335.8,-88.8 332.8,-84.8 250.2,-84.8 250.2,-48.8 359.8,-48.8 359.8,-84.8"/>
+<text text-anchor="middle" x="305" y="-62.6" font-family="Times,serif" font-size="14.00">SafeIconModule</text>
 </g>
 <!-- SafeIconModule&#45;&gt;SafeFormsDropdownModule -->
 <g id="edge2" class="edge">
 <title>SafeIconModule&#45;&gt;SafeFormsDropdownModule</title>
-<path fill="none" stroke="black" d="M117.8,-84.91C117.8,-84.91 117.8,-103.79 117.8,-103.79"/>
-<polygon fill="black" stroke="black" points="114.3,-103.79 117.8,-113.79 121.3,-103.79 114.3,-103.79"/>
+<path fill="none" stroke="black" d="M266.2,-84.91C266.2,-84.91 266.2,-103.79 266.2,-103.79"/>
+<polygon fill="black" stroke="black" points="262.7,-103.79 266.2,-113.79 269.7,-103.79 262.7,-103.79"/>
 </g>
 </g>
 </svg>
