@@ -168,13 +168,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ApiConfigurationModule.html" data-type="entity-link" >ApiConfigurationModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ApiConfigurationModule-fefadf8a11bec6013fcc652cab7f4f9b0f480969ab5a263a08f46d5a72a1b3af2555514b52dda6bf38d5eb5314d1eb9838ba203e9db574d8bfe3bbc1517da517"' : 'data-target="#xs-components-links-module-ApiConfigurationModule-fefadf8a11bec6013fcc652cab7f4f9b0f480969ab5a263a08f46d5a72a1b3af2555514b52dda6bf38d5eb5314d1eb9838ba203e9db574d8bfe3bbc1517da517"' }>
+                                            'data-target="#components-links-module-ApiConfigurationModule-f9322859a954991df36e3e705858153d93f1ce96bc542f79ca89c473c87ca993cefb844f3a1affc817f23e366d33b26d7bf661ac7827d664e7bcfcc4f435a62c"' : 'data-target="#xs-components-links-module-ApiConfigurationModule-f9322859a954991df36e3e705858153d93f1ce96bc542f79ca89c473c87ca993cefb844f3a1affc817f23e366d33b26d7bf661ac7827d664e7bcfcc4f435a62c"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApiConfigurationModule-fefadf8a11bec6013fcc652cab7f4f9b0f480969ab5a263a08f46d5a72a1b3af2555514b52dda6bf38d5eb5314d1eb9838ba203e9db574d8bfe3bbc1517da517"' :
-                                            'id="xs-components-links-module-ApiConfigurationModule-fefadf8a11bec6013fcc652cab7f4f9b0f480969ab5a263a08f46d5a72a1b3af2555514b52dda6bf38d5eb5314d1eb9838ba203e9db574d8bfe3bbc1517da517"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ApiConfigurationModule-f9322859a954991df36e3e705858153d93f1ce96bc542f79ca89c473c87ca993cefb844f3a1affc817f23e366d33b26d7bf661ac7827d664e7bcfcc4f435a62c"' :
+                                            'id="xs-components-links-module-ApiConfigurationModule-f9322859a954991df36e3e705858153d93f1ce96bc542f79ca89c473c87ca993cefb844f3a1affc817f23e366d33b26d7bf661ac7827d664e7bcfcc4f435a62c"' }>
                                             <li class="link">
                                                 <a href="components/ApiConfigurationComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ApiConfigurationComponent</a>
                                             </li>
@@ -398,6 +398,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             'id="xs-components-links-module-DuplicateApplicationModalModule-b3f03c94ef745c098a3d5dbe3eeab49e5a963607817a67f0d65db72cbd8a7915975e09f35b43a1751617eadbfdab4170a8018f963e81f4e781123993361fa646"' }>
                                             <li class="link">
                                                 <a href="components/DuplicateApplicationModalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >DuplicateApplicationModalComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/EditPullJobModalModule.html" data-type="entity-link" >EditPullJobModalModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-EditPullJobModalModule-6a4031e5331c05a2d77c715b487046a4f0421c375cad20435e44d233e44bc413c12dc0bacb32b0b1da909a8ce7ed20a71a86938a3f16b2e912fc3e605bb74d72"' : 'data-target="#xs-components-links-module-EditPullJobModalModule-6a4031e5331c05a2d77c715b487046a4f0421c375cad20435e44d233e44bc413c12dc0bacb32b0b1da909a8ce7ed20a71a86938a3f16b2e912fc3e605bb74d72"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-EditPullJobModalModule-6a4031e5331c05a2d77c715b487046a4f0421c375cad20435e44d233e44bc413c12dc0bacb32b0b1da909a8ce7ed20a71a86938a3f16b2e912fc3e605bb74d72"' :
+                                            'id="xs-components-links-module-EditPullJobModalModule-6a4031e5331c05a2d77c715b487046a4f0421c375cad20435e44d233e44bc413c12dc0bacb32b0b1da909a8ce7ed20a71a86938a3f16b2e912fc3e605bb74d72"' }>
+                                            <li class="link">
+                                                <a href="components/EditPullJobModalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >EditPullJobModalComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -712,16 +729,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/PullJobsModule.html" data-type="entity-link" >PullJobsModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' : 'data-target="#xs-components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' }>
+                                            'data-target="#components-links-module-PullJobsModule-fb7358af6957f030feddeade6ec43a91be4c402fe6d27c96917ac05c73f57f20eb0198b531ed9aa5c8bc0431144ffff82e0b8687dd24bc4f6a7a854aca10a484"' : 'data-target="#xs-components-links-module-PullJobsModule-fb7358af6957f030feddeade6ec43a91be4c402fe6d27c96917ac05c73f57f20eb0198b531ed9aa5c8bc0431144ffff82e0b8687dd24bc4f6a7a854aca10a484"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' :
-                                            'id="xs-components-links-module-PullJobsModule-608224edda640cc946757415d58a7ba3342a285db483bee02c50e9080117e0d91cbd1e7383a4bbd60abde440423b5706c952d46c3d8e132caf7f8c1e129fce12"' }>
-                                            <li class="link">
-                                                <a href="components/PullJobModalComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PullJobModalComponent</a>
-                                            </li>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PullJobsModule-fb7358af6957f030feddeade6ec43a91be4c402fe6d27c96917ac05c73f57f20eb0198b531ed9aa5c8bc0431144ffff82e0b8687dd24bc4f6a7a854aca10a484"' :
+                                            'id="xs-components-links-module-PullJobsModule-fb7358af6957f030feddeade6ec43a91be4c402fe6d27c96917ac05c73f57f20eb0198b531ed9aa5c8bc0431144ffff82e0b8687dd24bc4f6a7a854aca10a484"' }>
                                             <li class="link">
                                                 <a href="components/PullJobsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >PullJobsComponent</a>
                                             </li>
