@@ -14,13 +14,13 @@
 <title>cluster_SafeApplicationsSummaryModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-32.8 8,-230.8 1430,-230.8 1430,-32.8 8,-32.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_SafeApplicationsSummaryModule_declarations</title>
-<polygon fill="none" stroke="black" points="715,-40.8 715,-92.8 1422,-92.8 1422,-40.8 715,-40.8"/>
-</g>
 <g id="clust7" class="cluster">
 <title>cluster_SafeApplicationsSummaryModule_exports</title>
 <polygon fill="none" stroke="black" points="193,-170.8 193,-222.8 911,-222.8 911,-170.8 193,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SafeApplicationsSummaryModule_declarations</title>
+<polygon fill="none" stroke="black" points="715,-40.8 715,-92.8 1422,-92.8 1422,-40.8 715,-40.8"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_SafeApplicationsSummaryModule_imports</title>

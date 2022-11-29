@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/safe/src/lib/components/widgets/grid/graphql/queries.ts</code>
+            <code>projects/safe/src/lib/components/widgets/grid-settings/graphql/queries.ts</code>
         </p>
 
 
@@ -73,7 +73,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Interface for getFormByIdQueryResponse object</p>
+                <p>Model for GetFormByIdQueryResponse object</p>
 
             </p>
 
@@ -94,6 +94,12 @@
                                         <a href="#form" 
 >
                                             form
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#loading" 
+>
+                                            loading
                                         </a>
                                 </li>
                             </ul>
@@ -140,97 +146,180 @@
 
                         </tbody>
                     </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="loading"></a>
+                                        <span class="name "><b>loading</b>
+                                            <a href="#loading">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>loading:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
             </section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import { Record } from &#x27;../../../../models/record.model&#x27;;
+import { Channel } from &#x27;../../../../models/channel.model&#x27;;
 import { Form } from &#x27;../../../../models/form.model&#x27;;
+import { Resource } from &#x27;../../../../models/resource.model&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET RECORD BY ID &#x3D;&#x3D;&#x3D;
-/** Graphql request for getting a record by its id */
-export const GET_RECORD_BY_ID &#x3D; gql&#x60;
-  query GetRecordById($id: ID!) {
-    record(id: $id) {
+// &#x3D;&#x3D;&#x3D; GET CHANNELS &#x3D;&#x3D;&#x3D;
+
+/** Graphql request for getting channels (optionnally by an application id) */
+export const GET_CHANNELS &#x3D; gql&#x60;
+  query getChannels($application: ID) {
+    channels(application: $application) {
       id
-      data
-      createdAt
-      modifiedAt
-      createdBy {
-        name
-      }
-      modifiedBy {
-        name
-      }
-      form {
+      title
+      application {
         id
-        structure
-        permissions {
-          recordsUnicity
-        }
+        name
       }
     }
   }
 &#x60;;
 
-/** Model for GetRecordByIdQueryResponse object */
-export interface GetRecordByIdQueryResponse {
+/** Model for GetChannelsQueryResponse object */
+export interface GetChannelsQueryResponse {
   loading: boolean;
-  record: Record;
+  channels: Channel[];
 }
 
-// &#x3D;&#x3D;&#x3D; GET RECORD DETAILS &#x3D;&#x3D;&#x3D;
-/** Graphql request for getting record details by its id */
-export const GET_RECORD_DETAILS &#x3D; gql&#x60;
-  query GetRecordDetails($id: ID!) {
-    record(id: $id) {
+// &#x3D;&#x3D;&#x3D; GET META FIELDS OF A GRID &#x3D;&#x3D;&#x3D;
+
+/** Graphql request for getting the meta fields of a grid by form id */
+export const GET_GRID_FORM_META &#x3D; gql&#x60;
+  query GetFormAsTemplate($id: ID!, $layoutIds: [ID], $first: Int) {
+    form(id: $id) {
       id
-      data
-      createdAt
-      modifiedAt
-      createdBy {
-        name
-      }
-      form {
-        id
-        name
-        createdAt
-        structure
-        fields
-        core
-        resource {
-          id
-          name
-          forms {
+      name
+      queryName
+      layouts(ids: $layoutIds, first: $first) {
+        edges {
+          node {
             id
             name
-            structure
-            fields
-            core
+            createdAt
+            query
+            display
           }
         }
-      }
-      versions {
-        id
-        createdAt
-        data
-        createdBy {
-          name
+        pageInfo {
+          hasNextPage
+          endCursor
         }
+        totalCount
       }
     }
   }
 &#x60;;
 
-/** Model for GetRecordDetailsQueryResponse object */
-export interface GetRecordDetailsQueryResponse {
+// &#x3D;&#x3D;&#x3D; GET RELATED FORMS FROM RESOURCE &#x3D;&#x3D;&#x3D;
+
+/** Graphql request for getting resource meta date for a grid */
+export const GET_GRID_RESOURCE_META &#x3D; gql&#x60;
+  query GetGridResourceMeta(
+    $resource: ID!
+    $layoutIds: [ID]
+    $firstLayouts: Int
+    $aggregationIds: [ID]
+    $firstAggregations: Int
+  ) {
+    resource(id: $resource) {
+      id
+      name
+      queryName
+      forms {
+        id
+        name
+      }
+      relatedForms {
+        id
+        name
+        fields
+        resource {
+          id
+          queryName
+          name
+          fields
+        }
+      }
+      layouts(ids: $layoutIds, first: $firstLayouts) {
+        edges {
+          node {
+            id
+            name
+            query
+            createdAt
+            display
+          }
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        totalCount
+      }
+      aggregations(ids: $aggregationIds, first: $firstAggregations) {
+        edges {
+          node {
+            id
+            name
+            sourceFields
+            pipeline
+            createdAt
+          }
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        totalCount
+      }
+    }
+  }
+&#x60;;
+
+/** Model for GetFormByIdQueryResponse object */
+export interface GetFormByIdQueryResponse {
   loading: boolean;
-  record: Record;
+  form: Form;
+}
+
+/** Model for GetResourceByIdQueryResponse object */
+export interface GetResourceByIdQueryResponse {
+  loading: boolean;
+  resource: Resource;
 }
 
 // &#x3D;&#x3D;&#x3D; GET QUERY TYPES &#x3D;&#x3D;&#x3D;
+
 /** Graphql request for getting query types */
 export const GET_QUERY_TYPES &#x3D; gql&#x60;
   query GetQueryTypes {
@@ -349,21 +438,45 @@ export const GET_QUERY_TYPES &#x3D; gql&#x60;
   }
 &#x60;;
 
-// &#x3D;&#x3D;&#x3D; GET FORM &#x3D;&#x3D;&#x3D;
-/** Graphql query for getting a form by its id */
-export const GET_FORM_BY_ID &#x3D; gql&#x60;
-  query GetFormById($id: ID!) {
-    form(id: $id) {
-      id
-      name
-      fields
+// &#x3D;&#x3D;&#x3D; GET RESOURCES &#x3D;&#x3D;&#x3D;
+/** Graphql query for getting multiple resources with a cursor */
+export const GET_RESOURCES &#x3D; gql&#x60;
+  query GetResources($first: Int, $afterCursor: ID, $sortField: String) {
+    resources(first: $first, afterCursor: $afterCursor, sortField: $sortField) {
+      edges {
+        node {
+          id
+          name
+          forms {
+            id
+            name
+          }
+        }
+        cursor
+      }
+      totalCount
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
 &#x60;;
 
-/** Interface for getFormByIdQueryResponse object */
-export interface GetFormByIdQueryResponse {
-  form: Form;
+/** Model for GetResourcesQueryResponse object */
+export interface GetResourcesQueryResponse {
+  loading: boolean;
+  resources: {
+    edges: {
+      node: Resource;
+      cursor: string;
+    }[];
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    };
+    totalCount: number;
+  };
 }
 </code></pre>
     </div>
