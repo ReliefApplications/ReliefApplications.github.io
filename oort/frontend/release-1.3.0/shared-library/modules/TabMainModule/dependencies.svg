@@ -18,13 +18,13 @@
 <title>cluster_TabMainModule_imports</title>
 <polygon fill="none" stroke="black" points="172,-40.8 172,-92.8 2093,-92.8 2093,-40.8 172,-40.8"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_TabMainModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 164,-92.8 164,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_TabMainModule_exports</title>
 <polygon fill="none" stroke="black" points="915,-170.8 915,-222.8 1067,-222.8 1067,-170.8 915,-170.8"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_TabMainModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 164,-92.8 164,-40.8 16,-40.8"/>
 </g>
 <!-- TabMainComponent -->
 <g id="node1" class="node">

@@ -18,13 +18,13 @@
 <title>cluster_SafeContentChoiceModule_declarations</title>
 <polygon fill="none" stroke="black" points="70,-105.8 70,-157.8 276,-157.8 276,-105.8 70,-105.8"/>
 </g>
-<g id="clust3" class="cluster">
-<title>cluster_SafeContentChoiceModule_SafeContentChoiceComponent_providers</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 330,-92.8 330,-40.8 16,-40.8"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_SafeContentChoiceModule_exports</title>
 <polygon fill="none" stroke="black" points="68,-235.8 68,-287.8 278,-287.8 278,-235.8 68,-235.8"/>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_SafeContentChoiceModule_SafeContentChoiceComponent_providers</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 330,-92.8 330,-40.8 16,-40.8"/>
 </g>
 <!-- SafeContentChoiceComponent -->
 <g id="node1" class="node">

@@ -18,13 +18,13 @@
 <title>cluster_SafeChartSettingsModule_imports</title>
 <polygon fill="none" stroke="black" points="1558,-152.39 1558,-204.39 3079,-204.39 3079,-152.39 1558,-152.39"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_SafeChartSettingsModule_exports</title>
-<polygon fill="none" stroke="black" points="2144,-282.39 2144,-334.39 2346,-334.39 2346,-282.39 2144,-282.39"/>
-</g>
 <g id="clust3" class="cluster">
 <title>cluster_SafeChartSettingsModule_SafeChartSettingsComponent_providers</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-204.39 1550,-204.39 1550,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_SafeChartSettingsModule_exports</title>
+<polygon fill="none" stroke="black" points="2144,-282.39 2144,-334.39 2346,-334.39 2346,-282.39 2144,-282.39"/>
 </g>
 <!-- SafeChartSettingsComponent -->
 <g id="node1" class="node">
