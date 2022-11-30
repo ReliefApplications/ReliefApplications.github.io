@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/dashboard/pages/dashboard/graphql/mutations.ts</code>
+            <code>projects/back-office/src/app/application/pages/form/graphql/mutations.ts</code>
         </p>
 
 
@@ -185,7 +185,38 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import { Step, Page, Dashboard } from &#x27;@safe/builder&#x27;;
+import { Step, Page } from &#x27;@safe/builder&#x27;;
+
+// &#x3D;&#x3D;&#x3D; EDIT PAGE &#x3D;&#x3D;&#x3D;
+/** Edit page gql mutation definition */
+export const EDIT_PAGE &#x3D; gql&#x60;
+  mutation editPage($id: ID!, $name: String, $permissions: JSON) {
+    editPage(id: $id, name: $name, permissions: $permissions) {
+      id
+      name
+      permissions {
+        canSee {
+          id
+          title
+        }
+        canUpdate {
+          id
+          title
+        }
+        canDelete {
+          id
+          title
+        }
+      }
+    }
+  }
+&#x60;;
+
+/** Edit page gql mutation response interface */
+export interface EditPageMutationResponse {
+  loading: boolean;
+  editPage: Page;
+}
 
 // &#x3D;&#x3D;&#x3D; EDIT STEP &#x3D;&#x3D;&#x3D;
 /** Edit step gql mutation definition */
@@ -231,79 +262,6 @@ export const EDIT_STEP &#x3D; gql&#x60;
 export interface EditStepMutationResponse {
   loading: boolean;
   editStep: Step;
-}
-
-// &#x3D;&#x3D;&#x3D; EDIT PAGE &#x3D;&#x3D;&#x3D;
-/** Edit page gql mutation definition */
-export const EDIT_PAGE &#x3D; gql&#x60;
-  mutation editPage($id: ID!, $name: String, $permissions: JSON) {
-    editPage(id: $id, name: $name, permissions: $permissions) {
-      id
-      name
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-    }
-  }
-&#x60;;
-
-/** Edit page gql mutation response interface */
-export interface EditPageMutationResponse {
-  loading: boolean;
-  editPage: Page;
-}
-
-// &#x3D;&#x3D;&#x3D; EDIT DASHBOARD &#x3D;&#x3D;&#x3D;
-/** Edit dashboard gql mutation definition */
-export const EDIT_DASHBOARD &#x3D; gql&#x60;
-  mutation editDashboard($id: ID!, $structure: JSON, $name: String) {
-    editDashboard(id: $id, structure: $structure, name: $name) {
-      id
-      name
-      structure
-      modifiedAt
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-      page {
-        id
-        name
-        application {
-          id
-        }
-      }
-    }
-  }
-&#x60;;
-
-/** Edit dashboard gql mutation response interface */
-export interface EditDashboardMutationResponse {
-  loading: boolean;
-  editDashboard: Dashboard;
 }
 </code></pre>
     </div>

@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/workflow/graphql/mutations.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/resources/graphql/mutations.ts</code>
         </p>
 
 
@@ -185,72 +185,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import { Workflow, Step, Page, Form } from &#x27;@safe/builder&#x27;;
-
-// &#x3D;&#x3D;&#x3D; EDIT WORKFLOW &#x3D;&#x3D;&#x3D;
-/** Edit workflow gql mutation definition */
-export const EDIT_WORKFLOW &#x3D; gql&#x60;
-  mutation editWorkflow($id: ID!, $name: String, $steps: [ID]) {
-    editWorkflow(id: $id, name: $name, steps: $steps) {
-      id
-      name
-    }
-  }
-&#x60;;
-
-/** Edit workflow gql mutation response interface */
-export interface EditWorkflowMutationResponse {
-  loading: boolean;
-  editWorkflow: Workflow;
-}
-
-// &#x3D;&#x3D;&#x3D; DELETE STEP &#x3D;&#x3D;&#x3D;
-/** Delete step gql mutation definition */
-export const DELETE_STEP &#x3D; gql&#x60;
-  mutation deleteStep($id: ID!) {
-    deleteStep(id: $id) {
-      id
-      name
-    }
-  }
-&#x60;;
-
-/** Delete step gql mutation response interface */
-export interface DeleteStepMutationResponse {
-  loading: boolean;
-  deleteStep: Step;
-}
-
-// &#x3D;&#x3D;&#x3D; EDIT PAGE &#x3D;&#x3D;&#x3D;
-/** Edit page gql mutation definition */
-export const EDIT_PAGE &#x3D; gql&#x60;
-  mutation editPage($id: ID!, $name: String, $permissions: JSON) {
-    editPage(id: $id, name: $name, permissions: $permissions) {
-      id
-      name
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-    }
-  }
-&#x60;;
-
-/** Edit page gql mutation response interface */
-export interface EditPageMutationResponse {
-  loading: boolean;
-  editPage: Page;
-}
+import { Resource, Form } from &#x27;@safe/builder&#x27;;
 
 // &#x3D;&#x3D;&#x3D; ADD FORM &#x3D;&#x3D;&#x3D;
 /** Add form gql mutation definition */
@@ -272,6 +207,22 @@ export const ADD_FORM &#x3D; gql&#x60;
 export interface AddFormMutationResponse {
   loading: boolean;
   addForm: Form;
+}
+
+// &#x3D;&#x3D; DELETE RESOURCE &#x3D;&#x3D;
+/** Delete resource gql mutation definition */
+export const DELETE_RESOURCE &#x3D; gql&#x60;
+  mutation deleteResource($id: ID!) {
+    deleteResource(id: $id) {
+      id
+    }
+  }
+&#x60;;
+
+/** Delete resource gql mutation response interface */
+export interface DeleteResourceMutationResponse {
+  loading: boolean;
+  deletedResource: Resource;
 }
 </code></pre>
     </div>

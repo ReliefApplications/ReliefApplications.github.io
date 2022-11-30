@@ -65,7 +65,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/back-office/src/app/application/pages/form/graphql/queries.ts</code>
+            <code>projects/back-office/src/app/dashboard/pages/update-record/graphql/queries.ts</code>
         </p>
 
 
@@ -185,131 +185,52 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { gql } from &#x27;apollo-angular&#x27;;
-import { Step, Page, Form } from &#x27;@safe/builder&#x27;;
+import { Record, Form } from &#x27;@safe/builder&#x27;;
 
-// &#x3D;&#x3D;&#x3D; GET STEP BY ID &#x3D;&#x3D;&#x3D;
-
-/** Graphql query for getting a step by its id */
-export const GET_STEP_BY_ID &#x3D; gql&#x60;
-  query GetStepById($id: ID!) {
-    step(id: $id) {
+// &#x3D;&#x3D;&#x3D; GET RECORD BY ID &#x3D;&#x3D;&#x3D;
+/** Graphql request for getting a record by its id */
+export const GET_RECORD_BY_ID &#x3D; gql&#x60;
+  query GetRecordById($id: ID!) {
+    record(id: $id) {
       id
-      name
+      incrementalId
       createdAt
       modifiedAt
-      content
-      workflow {
+      createdBy {
+        name
+      }
+      modifiedBy {
+        name
+      }
+      data
+      form {
         id
         name
-        page {
-          id
-          application {
-            id
-          }
-        }
+        structure
+        fields
+        metadata
       }
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      canSee
-      canUpdate
-      canDelete
     }
   }
 &#x60;;
 
-/** Model for GetStepByIdQueryResponse object */
-export interface GetStepByIdQueryResponse {
+/** Model for GetRecordByIdQueryResponse object */
+export interface GetRecordByIdQueryResponse {
   loading: boolean;
-  step: Step;
+  record: Record;
 }
 
-// &#x3D;&#x3D;&#x3D; GET PAGE BY ID &#x3D;&#x3D;&#x3D;
+// &#x3D;&#x3D;&#x3D; GET FORM STRUCTURE &#x3D;&#x3D;&#x3D;
 
-/** Graphql query for getting a page data by its id */
-export const GET_PAGE_BY_ID &#x3D; gql&#x60;
-  query GetPageById($id: ID!) {
-    page(id: $id) {
-      id
-      name
-      createdAt
-      modifiedAt
-      type
-      content
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
-      application {
-        id
-      }
-      canSee
-      canUpdate
-      canDelete
-    }
-  }
-&#x60;;
-
-/** Model for GetPagesByIdQueryResponse object */
-export interface GetPageByIdQueryResponse {
-  loading: boolean;
-  page: Page;
-}
-
-// &#x3D;&#x3D;&#x3D; GET FORM BY ID &#x3D;&#x3D;&#x3D;
-/** Graphql query for getting a form with minimum details by id */
-export const GET_SHORT_FORM_BY_ID &#x3D; gql&#x60;
-  query GetShortFormById($id: ID!) {
+/** Graphql request for getting the structure of a form by its id */
+export const GET_FORM_STRUCTURE &#x3D; gql&#x60;
+  query GetFormStructure($id: ID!) {
     form(id: $id) {
       id
       name
-      core
       structure
       fields
-      status
-      canCreateRecords
-      uniqueRecord {
-        id
-        modifiedAt
-        data
-      }
-      permissions {
-        canSee {
-          id
-          title
-        }
-        canUpdate {
-          id
-          title
-        }
-        canDelete {
-          id
-          title
-        }
-      }
       metadata
-      canUpdate
     }
   }
 &#x60;;
