@@ -1165,6 +1165,11 @@ select{
   margin-right: calc(-0.5rem * var(--tw-space-x-reverse)) !important;
   margin-left: calc(-0.5rem * calc(1 - var(--tw-space-x-reverse))) !important;
 }
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0 !important;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse)) !important;
+}
 .self-end{
   align-self: flex-end !important;
 }
