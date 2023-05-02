@@ -1226,6 +1226,9 @@ select{
 .border{
   border-width: 1px !important;
 }
+.border-0{
+  border-width: 0px !important;
+}
 .border-b{
   border-bottom-width: 1px !important;
 }
@@ -49777,6 +49780,11 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
 
 /* === Tailwindcss === */
 
+.placeholder\:text-gray-400::placeholder{
+  --tw-text-opacity: 1 !important;
+  color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
+}
+
 .last\:mb-0:last-child{
   margin-bottom: 0px !important;
 }
@@ -49816,9 +49824,18 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
 }
 
+.focus\:ring-inset:focus{
+  --tw-ring-inset: inset !important;
+}
+
 .focus\:ring-indigo-600:focus{
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity)) !important;
+}
+
+.focus\:ring-primary-600:focus{
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(var(--primary-600) / var(--tw-ring-opacity)) !important;
 }
 
 .group:hover .group-hover\:visible{
