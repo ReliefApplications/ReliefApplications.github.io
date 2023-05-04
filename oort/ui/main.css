@@ -2207,6 +2207,9 @@ video {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity)) !important;
 }
+.bg-inherit{
+  background-color: inherit !important;
+}
 .bg-primary-50{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(var(--primary-50) / var(--tw-bg-opacity)) !important;
@@ -2453,11 +2456,6 @@ video {
 }
 .opacity-70{
   opacity: 0.7 !important;
-}
-.\!shadow-2lg{
-  --tw-shadow: 0 2px 5px 0 rgba(134, 134, 134, 0.2) !important;
-  --tw-shadow-colored: 0 2px 5px 0 var(--tw-shadow-color) !important;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
@@ -8504,8 +8502,6 @@ body {
   height: 40px;
   position: relative;
   z-index: 1001;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   color: black;
   text-align: left;
   line-height: 40px;
@@ -56738,6 +56734,12 @@ mat-tab-group[vertical] > .mat-tab-body-wrapper > .mat-tab-body > .mat-tab-body-
 .hover\:text-white:hover{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:shadow-2lg:hover{
+  --tw-shadow: 0 2px 5px 0 rgba(134, 134, 134, 0.2) !important;
+  --tw-shadow-colored: 0 2px 5px 0 var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 
 .focus\:outline-none:focus{
