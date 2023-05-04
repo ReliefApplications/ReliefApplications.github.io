@@ -2004,6 +2004,28 @@ video {
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.animate-fadeIn{
+  animation: fadeIn 0.5s forwards !important;
+}
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.animate-fadeOut{
+  animation: fadeOut 0.1s forwards !important;
+}
 .cursor-default{
   cursor: default !important;
 }
@@ -2099,6 +2121,9 @@ video {
 }
 .overflow-hidden{
   overflow: hidden !important;
+}
+.overflow-scroll{
+  overflow: scroll !important;
 }
 .overflow-x-auto{
   overflow-x: auto !important;
