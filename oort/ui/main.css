@@ -727,6 +727,12 @@ select{
 .order-2{
   order: 2 !important;
 }
+.order-first{
+  order: -9999 !important;
+}
+.order-last{
+  order: 9999 !important;
+}
 .float-right{
   float: right !important;
 }
@@ -1281,6 +1287,10 @@ select{
   --tw-border-opacity: 1 !important;
   border-color: rgb(107 114 128 / var(--tw-border-opacity)) !important;
 }
+.border-b-gray-300{
+  --tw-border-opacity: 1 !important;
+  border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity)) !important;
+}
 .\!bg-white{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
@@ -1300,6 +1310,10 @@ select{
 .bg-gray-400{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity)) !important;
+}
+.bg-gray-50{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
 }
 .bg-gray-500{
   --tw-bg-opacity: 1 !important;
@@ -1389,6 +1403,10 @@ select{
 .py-0{
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+}
+.py-0\.5{
+  padding-top: 0.125rem !important;
+  padding-bottom: 0.125rem !important;
 }
 .py-1{
   padding-top: 0.25rem !important;
@@ -49881,6 +49899,30 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
   margin-bottom: 0px !important;
 }
 
+.focus-within\:border-b-2:focus-within{
+  border-bottom-width: 2px !important;
+}
+
+.focus-within\:border-b-primary-600:focus-within{
+  --tw-border-opacity: 1 !important;
+  border-bottom-color: rgb(var(--primary-600) / var(--tw-border-opacity)) !important;
+}
+
+.focus-within\:ring-2:focus-within{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+}
+
+.focus-within\:ring-inset:focus-within{
+  --tw-ring-inset: inset !important;
+}
+
+.focus-within\:ring-primary-600:focus-within{
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(var(--primary-600) / var(--tw-ring-opacity)) !important;
+}
+
 .hover\:cursor-pointer:hover{
   cursor: pointer !important;
 }
@@ -49929,6 +49971,12 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
 .focus\:outline-none:focus{
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
+}
+
+.focus\:ring-0:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
 }
 
 .focus\:ring-2:focus{
