@@ -721,6 +721,9 @@ select{
 .z-\[1000\]{
   z-index: 1000 !important;
 }
+.z-\[9999\]{
+  z-index: 9999 !important;
+}
 .order-1{
   order: 1 !important;
 }
@@ -1501,9 +1504,6 @@ select{
 }
 .text-center{
   text-align: center !important;
-}
-.text-justify{
-  text-align: justify !important;
 }
 .text-end{
   text-align: end !important;
