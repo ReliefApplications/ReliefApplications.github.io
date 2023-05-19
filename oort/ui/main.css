@@ -955,9 +955,6 @@ select{
 .h-14{
   height: 3.5rem !important;
 }
-.h-2{
-  height: 0.5rem !important;
-}
 .h-24{
   height: 6rem !important;
 }
@@ -988,6 +985,9 @@ select{
 .h-screen{
   height: 100vh !important;
 }
+.max-h-36{
+  max-height: 9rem !important;
+}
 .max-h-60{
   max-height: 15rem !important;
 }
@@ -1002,6 +1002,9 @@ select{
 }
 .max-h-screen{
   max-height: 100vh !important;
+}
+.min-h-\[32px\]{
+  min-height: 32px !important;
 }
 .min-h-full{
   min-height: 100% !important;
@@ -1023,9 +1026,6 @@ select{
 }
 .w-16{
   width: 4rem !important;
-}
-.w-2{
-  width: 0.5rem !important;
 }
 .w-24{
   width: 6rem !important;
@@ -1405,16 +1405,16 @@ select{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(220 252 231 / var(--tw-bg-opacity)) !important;
 }
-.bg-green-400{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity)) !important;
-}
 .bg-green-400\/10{
   background-color: rgb(74 222 128 / 0.1) !important;
 }
 .bg-indigo-600{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity)) !important;
+}
+.bg-pink-50{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(253 242 248 / var(--tw-bg-opacity)) !important;
 }
 .bg-primary-100{
   --tw-bg-opacity: 1 !important;
@@ -1572,6 +1572,9 @@ select{
 .pr-0{
   padding-right: 0px !important;
 }
+.pr-1{
+  padding-right: 0.25rem !important;
+}
 .pr-10{
   padding-right: 2.5rem !important;
 }
@@ -1702,13 +1705,13 @@ select{
   --tw-text-opacity: 1 !important;
   color: rgb(22 163 74 / var(--tw-text-opacity)) !important;
 }
-.text-indigo-600{
-  --tw-text-opacity: 1 !important;
-  color: rgb(79 70 229 / var(--tw-text-opacity)) !important;
-}
 .text-neutral-400{
   --tw-text-opacity: 1 !important;
   color: rgb(163 163 163 / var(--tw-text-opacity)) !important;
+}
+.text-pink-700{
+  --tw-text-opacity: 1 !important;
+  color: rgb(190 24 93 / var(--tw-text-opacity)) !important;
 }
 .text-primary-400{
   --tw-text-opacity: 1 !important;
@@ -1822,6 +1825,13 @@ select{
 .ring-gray-900\/5{
   --tw-ring-color: rgb(17 24 39 / 0.05) !important;
 }
+.ring-pink-700\/10{
+  --tw-ring-color: rgb(190 24 93 / 0.1) !important;
+}
+.ring-primary-600{
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(var(--primary-600) / var(--tw-ring-opacity)) !important;
+}
 .ring-transparent{
   --tw-ring-color: transparent !important;
 }
@@ -1862,9 +1872,6 @@ select{
 }
 .duration-200{
   transition-duration: 200ms !important;
-}
-.ease-in{
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1) !important;
 }
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -50125,6 +50132,11 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
   background-color: rgb(var(--primary-200) / var(--tw-bg-opacity)) !important;
 }
 
+.hover\:bg-primary-600:hover{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--primary-600) / var(--tw-bg-opacity)) !important;
+}
+
 .hover\:bg-red-200:hover{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity)) !important;
@@ -50133,6 +50145,11 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
 .hover\:text-gray-700:hover{
   --tw-text-opacity: 1 !important;
   color: rgb(55 65 81 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:shadow-xl:hover{
@@ -50176,11 +50193,6 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
 .focus\:ring-gray-200:focus{
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity)) !important;
-}
-
-.focus\:ring-indigo-600:focus{
-  --tw-ring-opacity: 1 !important;
-  --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity)) !important;
 }
 
 .focus\:ring-primary-600:focus{
