@@ -1288,6 +1288,9 @@ select{
 .text-ellipsis{
   text-overflow: ellipsis !important;
 }
+.text-clip{
+  text-overflow: clip !important;
+}
 .whitespace-nowrap{
   white-space: nowrap !important;
 }
@@ -1413,6 +1416,10 @@ select{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(var(--primary-500) / var(--tw-bg-opacity)) !important;
 }
+.bg-primary-600{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--primary-600) / var(--tw-bg-opacity)) !important;
+}
 .bg-rose-400\/10{
   background-color: rgb(251 113 133 / 0.1) !important;
 }
@@ -1483,10 +1490,6 @@ select{
 .py-0{
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-}
-.py-0\.5{
-  padding-top: 0.125rem !important;
-  padding-bottom: 0.125rem !important;
 }
 .py-1{
   padding-top: 0.25rem !important;
@@ -1582,6 +1585,10 @@ select{
 .align-middle{
   vertical-align: middle !important;
 }
+.text-2xl{
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
 .text-base{
   font-size: 1rem !important;
   line-height: 1.5rem !important;
@@ -1629,12 +1636,19 @@ select{
 .leading-6{
   line-height: 1.5rem !important;
 }
+.leading-7{
+  line-height: 1.75rem !important;
+}
 .leading-none{
   line-height: 1 !important;
 }
 .text-gray-100{
   --tw-text-opacity: 1 !important;
   color: rgb(243 244 246 / var(--tw-text-opacity)) !important;
+}
+.text-gray-200{
+  --tw-text-opacity: 1 !important;
+  color: rgb(229 231 235 / var(--tw-text-opacity)) !important;
 }
 .text-gray-300{
   --tw-text-opacity: 1 !important;
@@ -50168,6 +50182,12 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
   }
   .sm\:leading-6{
     line-height: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:justify-between{
+    justify-content: space-between !important;
   }
 }
 
