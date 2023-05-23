@@ -50267,9 +50267,9 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity)) !important;
 }
 
-.focus\:ring-indigo-500:focus{
+.focus\:ring-primary-500:focus{
   --tw-ring-opacity: 1 !important;
-  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity)) !important;
+  --tw-ring-color: rgb(var(--primary-500) / var(--tw-ring-opacity)) !important;
 }
 
 .focus\:ring-primary-600:focus{
