@@ -1329,6 +1329,9 @@ select{
 .overflow-x-hidden{
   overflow-x: hidden !important;
 }
+.overflow-x-scroll{
+  overflow-x: scroll !important;
+}
 .truncate{
   overflow: hidden !important;
   text-overflow: ellipsis !important;
