@@ -1462,6 +1462,10 @@ select{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity)) !important;
 }
+.bg-orange-100{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity)) !important;
+}
 .bg-pink-50{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(253 242 248 / var(--tw-bg-opacity)) !important;
@@ -1761,6 +1765,10 @@ select{
 .text-neutral-400{
   --tw-text-opacity: 1 !important;
   color: rgb(163 163 163 / var(--tw-text-opacity)) !important;
+}
+.text-orange-400{
+  --tw-text-opacity: 1 !important;
+  color: rgb(251 146 60 / var(--tw-text-opacity)) !important;
 }
 .text-pink-700{
   --tw-text-opacity: 1 !important;
@@ -50195,6 +50203,11 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
 .hover\:bg-neutral-200:hover{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:bg-orange-200:hover{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity)) !important;
 }
 
 .hover\:bg-primary-200:hover{
