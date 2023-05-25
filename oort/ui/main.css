@@ -1311,9 +1311,6 @@ select{
 .self-center{
   align-self: center !important;
 }
-.justify-self-end{
-  justify-self: end !important;
-}
 .overflow-auto{
   overflow: auto !important;
 }
@@ -1815,9 +1812,6 @@ select{
 }
 .opacity-50{
   opacity: 0.5 !important;
-}
-.opacity-60{
-  opacity: 0.6 !important;
 }
 .opacity-70{
   opacity: 0.7 !important;
