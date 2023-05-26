@@ -1849,10 +1849,6 @@ select{
   --tw-text-opacity: 1 !important;
   color: rgb(22 163 74 / var(--tw-text-opacity)) !important;
 }
-.text-neutral-400{
-  --tw-text-opacity: 1 !important;
-  color: rgb(163 163 163 / var(--tw-text-opacity)) !important;
-}
 .text-neutral-500{
   --tw-text-opacity: 1 !important;
   color: rgb(115 115 115 / var(--tw-text-opacity)) !important;
@@ -50462,8 +50458,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 @media (min-width: 640px){
+  .sm\:ml-4{
+    margin-left: 1rem !important;
+  }
   .sm\:block{
     display: block !important;
+  }
+  .sm\:flex{
+    display: flex !important;
+  }
+  .sm\:w-auto{
+    width: auto !important;
   }
   .sm\:translate-x-0{
     --tw-translate-x: 0px !important;
