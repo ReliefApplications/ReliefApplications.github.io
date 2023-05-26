@@ -727,14 +727,17 @@ select{
 .z-\[1000\]{
   z-index: 1000 !important;
 }
-.z-\[1034\]{
-  z-index: 1034 !important;
+.z-\[997\]{
+  z-index: 997 !important;
 }
-.z-\[1035\]{
-  z-index: 1035 !important;
+.z-\[998\]{
+  z-index: 998 !important;
 }
 .z-\[9999\]{
   z-index: 9999 !important;
+}
+.z-\[999\]{
+  z-index: 999 !important;
 }
 .order-1{
   order: 1 !important;
@@ -1130,9 +1133,6 @@ select{
 .shrink-0{
   flex-shrink: 0 !important;
 }
-.flex-grow{
-  flex-grow: 1 !important;
-}
 .grow{
   flex-grow: 1 !important;
 }
@@ -1166,6 +1166,10 @@ select{
 }
 .translate-x-5{
   --tw-translate-x: 1.25rem !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+.translate-x-full{
+  --tw-translate-x: 100% !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 .translate-y-0{
@@ -1383,6 +1387,9 @@ select{
 .border-b{
   border-bottom-width: 1px !important;
 }
+.border-r{
+  border-right-width: 1px !important;
+}
 .border-t{
   border-top-width: 1px !important;
 }
@@ -1564,6 +1571,10 @@ select{
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
+.px-\[24px\]{
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
 .py-0{
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -1607,6 +1618,10 @@ select{
 .py-8{
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
+}
+.py-\[32px\]{
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
 }
 .pb-1{
   padding-bottom: 0.25rem !important;
@@ -50316,11 +50331,9 @@ div.k-scrollview.k-scrollview-light .k-scrollview-nav-wrap {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
-@media (prefers-color-scheme: dark){
-  .dark\:bg-zinc-800{
-    --tw-bg-opacity: 1 !important;
-    background-color: rgb(39 39 42 / var(--tw-bg-opacity)) !important;
-  }
+.data-\[sidenav-show\=\'false\'\]\:translate-x-full[data-sidenav-show='false']{
+  --tw-translate-x: 100% !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 @media not all and (min-width: 640px){
