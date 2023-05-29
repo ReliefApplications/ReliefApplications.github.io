@@ -718,6 +718,9 @@ select{
 .top-1\/2{
   top: 50% !important;
 }
+.top-2{
+  top: 0.5rem !important;
+}
 .top-\[-310px\]{
   top: -310px !important;
 }
@@ -747,6 +750,9 @@ select{
 }
 .z-\[1066\]{
   z-index: 1066 !important;
+}
+.z-\[1100\]{
+  z-index: 1100 !important;
 }
 .z-\[997\]{
   z-index: 997 !important;
@@ -1260,6 +1266,9 @@ select{
 }
 .cursor-default{
   cursor: default !important;
+}
+.cursor-grab{
+  cursor: grab !important;
 }
 .cursor-pointer{
   cursor: pointer !important;
@@ -1972,11 +1981,6 @@ select{
 .opacity-80{
   opacity: 0.8 !important;
 }
-.\!shadow-2lg{
-  --tw-shadow: 0 2px 5px 0 rgba(134, 134, 134, 0.2) !important;
-  --tw-shadow-colored: 0 2px 5px 0 var(--tw-shadow-color) !important;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
-}
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
@@ -2171,16 +2175,18 @@ body {
   height: 40px;
   position: relative;
   z-index: 1001;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   color: black;
   text-align: left;
   line-height: 40px;
   padding: 0 40px !important;
-  border-bottom: 1px solid #d8d8d8 !important;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 .widget-header .widget-title {
   overflow: hidden;
@@ -50325,13 +50331,27 @@ input[type=date]::-webkit-calendar-picker-indicator {
   --tw-ring-inset: inset !important;
 }
 
+.focus-within\:ring-indigo-500:focus-within{
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity)) !important;
+}
+
 .focus-within\:ring-primary-600:focus-within{
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(var(--primary-600) / var(--tw-ring-opacity)) !important;
 }
 
+.focus-within\:ring-offset-2:focus-within{
+  --tw-ring-offset-width: 2px !important;
+}
+
 .hover\:cursor-pointer:hover{
   cursor: pointer !important;
+}
+
+.hover\:border-gray-400:hover{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity)) !important;
 }
 
 .hover\:bg-gray-100:hover{
@@ -50402,6 +50422,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .hover\:text-gray-700:hover{
   --tw-text-opacity: 1 !important;
   color: rgb(55 65 81 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:text-gray-900:hover{
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:text-white:hover{
