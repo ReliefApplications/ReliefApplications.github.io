@@ -1282,10 +1282,6 @@ select{
 .cursor-pointer{
   cursor: pointer !important;
 }
-.select-none{
-  -webkit-user-select: none !important;
-          user-select: none !important;
-}
 .resize{
   resize: both !important;
 }
@@ -1583,10 +1579,6 @@ select{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity)) !important;
 }
-.bg-neutral-100{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity)) !important;
-}
 .bg-orange-100{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 237 213 / var(--tw-bg-opacity)) !important;
@@ -1603,6 +1595,10 @@ select{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(var(--primary-200) / var(--tw-bg-opacity)) !important;
 }
+.bg-primary-300{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(var(--primary-300) / var(--tw-bg-opacity)) !important;
+}
 .bg-primary-400{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(var(--primary-400) / var(--tw-bg-opacity)) !important;
@@ -1618,10 +1614,6 @@ select{
 .bg-primary-600{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(var(--primary-600) / var(--tw-bg-opacity)) !important;
-}
-.bg-primary-800{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(var(--primary-800) / var(--tw-bg-opacity)) !important;
 }
 .bg-red-100{
   --tw-bg-opacity: 1 !important;
@@ -1679,10 +1671,6 @@ select{
 }
 .p-4{
   padding: 1rem !important;
-}
-.px-0{
-  padding-left: 0px !important;
-  padding-right: 0px !important;
 }
 .px-1{
   padding-left: 0.25rem !important;
@@ -1806,14 +1794,8 @@ select{
 .pr-3{
   padding-right: 0.75rem !important;
 }
-.pr-4{
-  padding-right: 1rem !important;
-}
 .pr-6{
   padding-right: 1.5rem !important;
-}
-.pr-9{
-  padding-right: 2.25rem !important;
 }
 .pt-0{
   padding-top: 0px !important;
@@ -50441,11 +50423,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .hover\:bg-primary-200:hover{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(var(--primary-200) / var(--tw-bg-opacity)) !important;
-}
-
-.hover\:bg-primary-600:hover{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(var(--primary-600) / var(--tw-bg-opacity)) !important;
 }
 
 .hover\:bg-red-200:hover{
