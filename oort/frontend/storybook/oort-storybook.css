@@ -9,3 +9,18 @@ main {
 .album {
     height: 100%;
 }
+
+.info-section {
+    border-radius: 30px;
+    display: flex;
+    margin: 20px 0;
+    background-color: #e1e6ea	;
+}
+
+.info-icon-container {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    padding-left: 28px;
+    border-right: 4px solid #f8f9fa;
+}
