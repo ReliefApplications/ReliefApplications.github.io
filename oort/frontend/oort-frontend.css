@@ -9,3 +9,7 @@ main {
 .album {
     height: 100%;
 }
+
+.card-text {
+    min-height: 48px;
+}

@@ -11,16 +11,20 @@ main {
 }
 
 .info-section {
-    border-radius: 30px;
+    border-radius: 15px;
+    border: 2px solid lightgray;
     display: flex;
     margin: 20px 0;
-    background-color: #e1e6ea	;
+    /* background-color: #e1e6ea	; */
 }
 
 .info-icon-container {
     display: flex;
     align-items: center;
     padding: 15px 25px;
-    padding-left: 28px;
-    border-right: 4px solid #f8f9fa;
+    border-right: 2px solid lightgray;
+}
+
+.card-text {
+    min-height: 48px;
 }
