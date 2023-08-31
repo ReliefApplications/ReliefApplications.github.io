@@ -130,6 +130,7 @@
 		"modifiedOn": "Modifié le ",
 		"name": "Nom",
 		"next": "Suivant",
+		"noOptions": "Aucun choix disponible",
 		"notifications": {
 			"accessDenied": "Vous n'avez pas la permission pour accéder à cet objet de type {{type}}.",
 			"accessNotProvided": "Pas d'accès fourni à cet objet de type {{type}}. {{error}}",
@@ -260,8 +261,10 @@
 		},
 		"save": "Sauvegarder",
 		"saveChanges": "Sauvegarder les changements",
+		"search": "Recherche",
 		"searchObject": "Rechercher {{name}}",
 		"select": "Sélectionner",
+		"selectStatus": "Sélectionner un statut",
 		"send": "Envoyer",
 		"settings": "Paramètres",
 		"status": "Statut",
@@ -400,7 +403,16 @@
 			"customStyling": "Style personnalisé",
 			"dashboard": {
 				"editFilter": "Modifier le filtre",
-				"empty": "Aucun contenu n'est disponible. Veuillez attendre que votre administrateur en crée."
+				"empty": "Aucun contenu n'est disponible. Veuillez attendre que votre administrateur en crée.",
+				"filter": {
+					"empty": "Aucun filtre n'a été défini par les administrateurs",
+					"info": "Les filtres de tableau de bord peuvent être utilisés entre les pages pour filtrer leur contenu.",
+					"title": "Vous modifiez les filtres du tableau de bord"
+				},
+				"filterSettings": "Paramètres du filtre",
+				"settings": {
+					"defaultPosition": "Position par défaut du filtre"
+				}
 			},
 			"delete": {
 				"confirmationMessage": "Voulez-vous vraiment supprimer cette application ?"
@@ -489,7 +501,8 @@
 			},
 			"dropdown": {
 				"select": "Notifier sur"
-			}
+			},
+			"selectChannel": "Sélectionnez un canal"
 		},
 		"confirmModal": {
 			"cancel": "Annuler",
@@ -545,6 +558,15 @@
 			"subject": "Objet",
 			"withoutRecords": "Sans enregistrements"
 		},
+		"emailPreview": {
+			"errors": {
+				"missingSubject": "L'objet du mail ne peut être vide."
+			},
+			"from": "De",
+			"subject": "Objet",
+			"title": "Prévisualisation de mail",
+			"to": "À"
+		},
 		"floating": {
 			"menuButton": {
 				"ariaLabel": "***"
@@ -565,6 +587,7 @@
 				"template": {
 					"from": "Depuis le modèle",
 					"placeholder": "Choisir un modèle existant",
+					"selectResource": "Sélectionnez une ressource",
 					"title": "Depuis la ressource"
 				},
 				"tooltip": {
@@ -613,6 +636,7 @@
 		},
 		"formBuilder": {
 			"errors": {
+				"duplicatedRelatedName": "Nom lié en double pour la question {{question}} à la page {{page}}. Veuillez fournir un nom lié unique (au format snake_case) pour sauvegarder le formulaire.",
 				"missingGridField": "Champs disponible de table de données manquant pour la question {{question}} à la page {{page}}. Veuillez en sélectionner au moins un dans la propriété Custom Question pour sauvegarder le formulaire.",
 				"missingRelatedName": "Nom lié manquant pour la question {{question}} à la page {{page}}. Veuillez entrer un nom valide pour la valeur de la donnée (au format snake_case) pour sauvegarder le formulaire.",
 				"missingTemplate": "Ressource liée manquante pour la question {{question}} à la page {{page}}. Veuillez sélectionner un modèle pour sauvegarder le formulaire."
@@ -636,6 +660,7 @@
 			}
 		},
 		"header": {
+			"goToApp": "Ouvrir l'application",
 			"goToPlatform": "Naviguer vers",
 			"logout": "Se déconnecter",
 			"sidenav": {
@@ -694,6 +719,7 @@
 				"title": "Supprimer la tâche"
 			},
 			"modal": {
+				"addMappingField": "ajouter un champ de correspondance",
 				"errors": {
 					"schedule": "Entrez une expression cron valide"
 				},
@@ -726,6 +752,7 @@
 			},
 			"fields": {
 				"available": "Champs disponibles",
+				"column": "Largeur de la colonne (px)",
 				"format": {
 					"info": "Laissez vide pour utiliser le mode classique",
 					"title": "Mode d'affichage"
@@ -1063,6 +1090,7 @@
 				},
 				"empty": "Aucun enregistrement détecté pour cette configuration de réseau",
 				"errors": {
+					"autoSaveFailed": "L'exécution de l'action a été stoppé à cause d'enregistrement(s) non valide(s). Veuillez les vérifier avant de lancer une autre action.",
 					"invalid": {
 						"backoffice": "Configuration de grille invalide",
 						"frontoffice": "Configuration de grille non valide, veuillez contacter votre administrateur"
@@ -1157,12 +1185,12 @@
 					},
 					"position": "Position",
 					"series": {
-						"fill": "@TODO",
+						"fill": "Remplissage",
 						"interpolation": {
 							"step": "Étape d'interpolation",
 							"title": "Interpolation"
 						},
-						"showSerie": "Afficher la serie",
+						"showSeries": "Afficher la serie",
 						"stack": {
 							"enable": "Empiler les séries",
 							"usePercentage": "Utiliser des pourcentages"
@@ -1185,6 +1213,10 @@
 				},
 				"close": {
 					"confirmationMessage": "Vos changements vont être perdus si vous fermez la fenêtre d'édition. Voulez-vous continuer ?"
+				},
+				"editor": {
+					"recordSelection": "Sélection d'enregistrement",
+					"title": "Éditeur"
 				},
 				"grid": {
 					"actions": {
@@ -1255,7 +1287,10 @@
 							"showDetails": "L'utilisateur peut afficher les informations des enregistrements affichés",
 							"update": "L'utilisateur peut mettre à jour les enregistrements affichés"
 						},
-						"buttons": "Les boutons d'action rapides apparaîtront dans le widget et vous permettront de réaliser chacune des actions ci-dessous"
+						"attachToRecord": "Si les enregistrements sélectionnés ne sont joints à aucun enregistrement, l'action sera annulée",
+						"buttons": "Les boutons d'action rapides apparaîtront dans le widget et vous permettront de réaliser chacune des actions ci-dessous",
+						"executionOrder": "Les actions seront exécutées dans l'ordre affiché",
+						"prefillForm": "Si aucun enregistrement n'est créé à cette étape, l'action sera annulée"
 					},
 					"layouts": {
 						"add": {
@@ -1263,12 +1298,12 @@
 								"create": "Créer une nouvelle mise en page",
 								"load": "Charger une mise en page existante"
 							},
-							"select": "Sélectionner une mise en page",
 							"title": "Ajouter une nouvelle mise en page"
 						},
 						"edit": {
 							"title": "Configuration de la mise en page"
 						},
+						"select": "Sélectionner une mise en page",
 						"title": "Mise en page de la grille"
 					},
 					"tooltip": {
@@ -1356,8 +1391,11 @@
 								"datasource": "Ajoute un bouton pour afficher la source de données de la carte"
 							}
 						},
-						"preview": {},
+						"preview": {
+							"title": "Prévisualisation"
+						},
 						"textEditor": {
+							"alert": "Vous pouvez ajouter des variables ex: {{data.variable}} et faire des calculs ex: {{calc.round( value ; precision )}}",
 							"title": "Éditeur de texte"
 						},
 						"title": "Paramètres de carte",
@@ -1374,6 +1412,11 @@
 					"dynamic": "Dynamique",
 					"hint": {
 						"dynamic": "Les cartes dynamiques adaptent leur affichage en fonction du nombre d'éléments dans la source de données. Vous devez définir une unique carte qui sera répétée pour chaque élément."
+					},
+					"loadMore": {
+						"infiniteScroll": "Utiliser le défilement infini",
+						"pagination": "Utiliser la pagination",
+						"title": "Déclencheur pour charger plus de données"
 					},
 					"options": {
 						"ariaLabel": "***"
@@ -1392,7 +1435,13 @@
 		}
 	},
 	"kendo": {
+		"combobox": {
+			"noDataText": "No available choice"
+		},
 		"datepicker": {
+			"dateLabel": "Sélectionner une date",
+			"endLabel": "Date de fin",
+			"startLabel": "Date de début",
 			"today": "Aujourd'hui",
 			"toggle": "Sélectionnez une date"
 		},
@@ -1461,6 +1510,7 @@
 			"underline": "Souligner",
 			"undo": "Annuler",
 			"unlink": "Supprimer le lien",
+			"unselectAll": "Tout déselectionner",
 			"viewSource": "Voir la source"
 		},
 		"fileselect": {
@@ -1540,6 +1590,29 @@
 			"unlock": "Déverrouiller",
 			"unstick": "Désépingler"
 		},
+		"multiselect": {
+			"noDataText": "No available choice"
+		},
+		"pager": {
+			"firstPage": "Aller à la première page",
+			"items": "éléments",
+			"itemsPerPage": "éléments par page",
+			"label": "'Navigation de page, page {currentPage} sur {totalPages}'",
+			"lastPage": "Aller à la dernière page",
+			"nextPage": "Aller à la page suivante",
+			"of": "sur",
+			"page": "Page",
+			"pageNumberInputTitle": "Numéro de page",
+			"previousPage": "Aller à la page précédente"
+		},
+		"tilelayout": {
+			"component": {
+				"items": "articles",
+				"itemsPerPage": "Articles par page",
+				"of": "de",
+				"page": "Page"
+			}
+		},
 		"timepicker": {
 			"accept": "Accepter",
 			"acceptLabel": "Accepter",
@@ -1556,11 +1629,13 @@
 	"models": {
 		"apiConfiguration": {
 			"authType": "Type d'authentification",
-			"new": "Nouvelle configuration d'API"
+			"new": "Nouvelle configuration d'API",
+			"selectAuthType": "Sélectionnez le type d'authentification"
 		},
 		"application": {
 			"description": "Description",
 			"id": "ID de l'application",
+			"menu": "Menu latéral",
 			"new": "Nouvelle application",
 			"notifications": {
 				"notPublished": "Candidature non publiée.",
@@ -1582,6 +1657,7 @@
 			"type": "Type"
 		},
 		"dashboard": {
+			"activateFiltering": "Activer le filtre",
 			"context": {
 				"datasource": {
 					"alert": "Sélectionnez une source de données, afin de définir une page par enregistrement de la source de données. Vous pouvez également définir un modèle qui sera chargé par défaut si aucune page spécifique n'est créée pour un enregistrement.",
@@ -1598,8 +1674,11 @@
 				"origin": "Origine du contexte",
 				"refData": {
 					"element": "Élément"
-				}
+				},
+				"selectDisplayField": "Sélectionnez le champ d'affichage",
+				"selectOrigin": "Sélectionnez la source de données"
 			},
+			"deactivateFiltering": "Désactiver le filtre",
 			"share": "Partager le tableau de bord"
 		},
 		"form": {
@@ -1652,7 +1731,8 @@
 				"rowsNotAdded": "Erreur lors de l'ajout de ligne(s).",
 				"uploadSuccessful": "Enregistrements importés avec succès"
 			},
-			"restore": "Restaurer"
+			"restore": "Restaurer",
+			"select": "Sélectionnez un enregistrement"
 		},
 		"referenceData": {
 			"add": "Ajouter une référence de données"
@@ -1689,6 +1769,11 @@
 			"delete": {
 				"confirmationMessage": "Souhaitez-vous supprimer le widget ?",
 				"title": "Supprimer le widget"
+			},
+			"display": {
+				"border": "Afficher la bordure du widget",
+				"searchable": "Autoriser la recherche",
+				"title": "Affichage des widgets"
 			},
 			"map": {
 				"defaultTitle": "Widget Carte",
@@ -1799,6 +1884,10 @@
 				"selectApplication": "Application manquante pour un élément de la page : {{page}}. Veuillez sélectionner au moins une application dans les propriétés de {{question}} pour sauvegarder le formulaire.",
 				"snakecase": "Le nom de valeur {{name}} de la page {{page}} est invalide. Veuillez configurer un nom valide (en format snake_case) pour sauvegarder le formulaire."
 			},
+			"move": {
+				"down": "Descendre la question",
+				"up": "Monter la question"
+			},
 			"questionsCategories": {
 				"core": "Bibliothèque de questions"
 			},
@@ -1833,7 +1922,8 @@
 			},
 			"queryName": "Nom de la requête",
 			"tooltip": {
-				"graphQLFilter": "Entrez un filtre graphQL qui sera utilisé une fois les choix cachés. Vous pouvez utiliser le code {{lastUpdate}} pour insérer dynamiquement la date de la dernière mise à jour des choix dans un format compatible SQL."
+				"graphQLFilter": "Vous pouvez utiliser {{lastUpdate}} pour obtenir dynamiquement la dernière date de récupération au format SQL.",
+				"path": "Utilise la syntaxe JSONPath pour extraire les éléments de la réponse JSON. Exemples: $.data[*].name, $.data..countries, $.data.countries.*"
 			},
 			"type": "Type",
 			"validateCsv": "Valider le CSV",
